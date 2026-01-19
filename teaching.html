@@ -52,25 +52,25 @@
       z-index: 10;
     }
 
-    .course-list.indexed{
-  list-style-position: outside;
-  padding-left: 2.4em;          /* space for numbers */
-  margin: 0 auto;               /* center the whole block */
-  width: max-content;           /* shrink-wrap to content */
+    
+
+.course-list.compact{
+  width: max-content;     /* shrink-wrap to text */
   max-width: 90vw;
+  margin: 0 auto;         /* center the block */
+  display: grid;
+  row-gap: 4px;           /* tight vertical spacing */
+  text-align: left;       /* left-aligned text */
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.45;
 }
 
-.course-list.indexed li{
-  text-align: left;             /* text aligned left */
-  margin: 2px 0;
-}
-
-.course-list.indexed a{
+.course-list.compact a{
+  display: block;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
 
 
     .topbar{
@@ -327,24 +327,25 @@
     <h1 class="page-title">Teaching</h1>
 
 <div class="list-wrap">
-  <ol class="course-list indexed">
-    <li><a href="course-statmech2.html">Statistical Mechanics II, Fall 2025</a></li>
-    <li><a href="course-cft-2025.html">Conformal Field Theory, Spring 2025</a></li>
-    <li><a href="course-gravity-2024.html">Advanced course on Gravity, Fall 2024</a></li>
-    <li><a href="#">Introduction to String Theory, Spring 2024</a></li>
-    <li><a href="#">Differential Geometry and Topology in Physics, Spring 2023</a></li>
-    <li><a href="#">Quantum Field Theory I, Fall 2022</a></li>
-    <li><a href="#">Introduction to 2d Conformal Field Theory, Fall 2021</a></li>
-    <li><a href="#">Introduction to String Theory, Spring 2021</a></li>
-    <li><a href="#">Differential Geometry and Topology in Physics, Spring 2021</a></li>
-    <li><a href="#">Quantum Field Theory II, Spring 2020</a></li>
-    <li><a href="#">Quantum Field Theory I, Fall 2019</a></li>
-    <li><a href="#">Differential Geometry and Topology in Physics, Spring 2019</a></li>
-    <li><a href="#">Introduction to 2d Conformal Field Theory, Fall 2018</a></li>
-    <li><a href="#">Introduction to String Theory, Fall 2017</a></li>
-    <li><a href="#">Differential Geometry and Topology in Physics, Spring 2017</a></li>
-  </ol>
+  <div class="course-list compact">
+    <a href="course-statmech2.html">Statistical Mechanics II, Fall 2025</a>
+    <a href="course-cft-2025.html">Conformal Field Theory, Spring 2025</a>
+    <a href="course-gravity-2024.html">Advanced course on Gravity, Fall 2024</a>
+    <a href="#">Introduction to String Theory, Spring 2024</a>
+    <a href="#">Differential Geometry and Topology in Physics, Spring 2023</a>
+    <a href="#">Quantum Field Theory I, Fall 2022</a>
+    <a href="#">Introduction to 2d Conformal Field Theory, Fall 2021</a>
+    <a href="#">Introduction to String Theory, Spring 2021</a>
+    <a href="#">Differential Geometry and Topology in Physics, Spring 2021</a>
+    <a href="#">Quantum Field Theory II, Spring 2020</a>
+    <a href="#">Quantum Field Theory I, Fall 2019</a>
+    <a href="#">Differential Geometry and Topology in Physics, Spring 2019</a>
+    <a href="#">Introduction to 2d Conformal Field Theory, Fall 2018</a>
+    <a href="#">Introduction to String Theory, Fall 2017</a>
+    <a href="#">Differential Geometry and Topology in Physics, Spring 2017</a>
+  </div>
 </div>
+
 
     </div>
   </main>
