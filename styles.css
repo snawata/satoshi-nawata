@@ -95,29 +95,6 @@ nav.desktop button:hover{ opacity: .8; }
 .active{ font-weight: 700; }
 
 /* Dropdown */
-.dropdown{
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-
-.dropdown > button{
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.chev{
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  border-right: 1.6px solid currentColor;
-  border-bottom: 1.6px solid currentColor;
-  transform: rotate(45deg);
-  margin-top: -2px;
-  opacity: .9;
-}
-/* container */
 .dropdown {
   position: relative;
 }
