@@ -136,21 +136,6 @@ nav.desktop button:hover{ opacity: .8; }
 }
 
 
-/* Search icon */
-.search{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-}
-.search:hover{
-  border-color: rgba(255,255,255,.3);
-  background: rgba(255,255,255,.06);
-}
-.search svg{ width: 16px; height: 16px; }
 
 /* Mobile menu (no JS) */
 details.mobile{
