@@ -107,13 +107,18 @@ nav.desktop button:hover{ opacity: .8; }
 }
 
 /* submenu */
+
+
+
 .dropdown-menu{
   position: absolute;
-  top: 100%;              /* no hover gap */
+  top: 100%;
   right: 0;
-  margin-top: 10px;       /* visual spacing */
-  min-width: 150px;
-  padding: 10px;
+  margin-top: 8px;
+
+  width: 200px;          /* fixed, narrower width */
+  padding: 8px;
+
   background: var(--bg);
   color: var(--fg);
   border: 1px solid var(--border);
@@ -122,6 +127,7 @@ nav.desktop button:hover{ opacity: .8; }
   display: none;
   z-index: 9999;
 }
+
 
 /* IMPORTANT: hover-bridge so moving mouse down doesn't "drop" hover */
 .dropdown-menu::before{
@@ -136,11 +142,13 @@ nav.desktop button:hover{ opacity: .8; }
 /* submenu links */
 .dropdown-menu a{
   display: block;
-  padding: 9px 10px;
-  border-radius: 8px;
+  padding: 6px 8px;
+  border-radius: 6px;
   text-decoration: none;
   color: var(--fg);
-  white-space: nowrap;
+
+  white-space: normal;   /* allow wrapping */
+  line-height: 1.25;
 }
 
 .dropdown-menu a:hover{
