@@ -95,15 +95,23 @@ nav.desktop button:hover{ opacity: .8; }
 .active{ font-weight: 700; }
 
 /* Dropdown */
-.dropdown {
+.dropdown{
   position: relative;
 }
 
+/* the Teaching link */
+.dropdown-toggle{
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+
 /* submenu */
-.dropdown-menu {
+.dropdown-menu{
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;              /* no hover gap */
   right: 0;
+  margin-top: 10px;       /* visual spacing */
   min-width: 240px;
   padding: 10px;
   background: var(--bg);
@@ -112,11 +120,21 @@ nav.desktop button:hover{ opacity: .8; }
   border-radius: 10px;
   box-shadow: var(--shadow);
   display: none;
-  z-index: 1000;
+  z-index: 9999;
+}
+
+/* IMPORTANT: hover-bridge so moving mouse down doesn't "drop" hover */
+.dropdown-menu::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;             /* must match margin-top above */
+  height: 10px;
 }
 
 /* submenu links */
-.dropdown-menu a {
+.dropdown-menu a{
   display: block;
   padding: 9px 10px;
   border-radius: 8px;
@@ -125,13 +143,13 @@ nav.desktop button:hover{ opacity: .8; }
   white-space: nowrap;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu a:hover{
   background: var(--hover);
 }
 
-/* show on hover or keyboard focus */
+/* show menu when hovering anywhere over dropdown OR focusing inside */
 .dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu {
+.dropdown:focus-within .dropdown-menu{
   display: block;
 }
 
