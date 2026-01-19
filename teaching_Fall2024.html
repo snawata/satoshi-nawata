@@ -4,7 +4,157 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Advanced course on Gravity, Fall 2024 — Satoshi Nawata</title>
-  <link rel="stylesheet" href="course.css" />
+
+  <style>
+    :root{
+      --text:#111;
+      --muted:#666;
+      --line: rgba(0,0,0,.12);
+      --bg:#fff;
+
+      --max: 1100px;
+      --pad: 24px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a{
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a:hover{ opacity: .85; }
+
+    /* ===== Header ===== */
+    header{
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
+    }
+    .topbar{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px var(--pad);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand{ font-size: 18px; font-weight: 500; white-space: nowrap; }
+
+    nav{
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      align-items: center;
+    }
+    nav a{ text-decoration: none; }
+    nav a:hover{ opacity: .8; }
+
+    /* tiny search icon link (optional) */
+    .search{
+      display: inline-flex;
+      width: 28px; height: 28px;
+      align-items: center; justify-content: center;
+      border-radius: 999px;
+    }
+    .search:hover{ background: rgba(0,0,0,.03); }
+    .search svg{ width: 16px; height: 16px; }
+
+    /* ===== Main ===== */
+    main{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 40px var(--pad) 90px;
+    }
+
+    .course-title{
+      text-align: center;
+      font-size: clamp(28px, 3.1vw, 40px);
+      font-weight: 500; /* screenshot title is lighter than the bold StatMech title */
+      letter-spacing: .2px;
+      margin: 56px 0 56px;
+    }
+
+    .course-grid{
+      width: min(980px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: clamp(40px, 7vw, 110px);
+      align-items: start;
+    }
+
+    .left-links{
+      display: grid;
+      gap: 10px;
+      margin-bottom: 18px;
+      font-size: 15px;
+    }
+    .left-links a{ font-weight: 600; }
+    .left-links .inline{
+      display: inline;
+      font-weight: 600;
+    }
+
+    /* Lecture list uses "Lecture N: ..." lines (not an ordered list) */
+    .lecture-lines{
+      margin-top: 10px;
+      display: grid;
+      gap: 10px;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+    .lecture-lines a{
+      text-decoration: none; /* matches screenshot look */
+    }
+
+    .note{
+      margin-top: 48px;
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.8;
+      max-width: 56ch;
+    }
+
+    /* Right column: Homework */
+    .right h3{
+      margin: 0 0 12px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .hw-list a{
+      display: block;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    .right p{
+      font-size: 13px;
+      line-height: 1.85;
+      margin: 18px 0 0;
+      max-width: 38ch;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .course-grid{
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+      .right p{ max-width: 100%; }
+      .note{ margin-top: 28px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -12,25 +162,20 @@
     <div class="topbar">
       <div class="brand">Satoshi Nawata</div>
 
-      <nav class="desktop">
+      <nav aria-label="Primary">
         <a href="index.html">Home</a>
-
-        <div class="dropdown">
-          <button type="button" class="active">
-            Teaching <span class="chev"></span>
-          </button>
-          <div class="dropdown-menu">
-            <a href="teaching.html">Courses</a>
-            <a href="notes.html">Lecture notes</a>
-            <a href="resources.html">Resources</a>
-          </div>
-        </div>
-
+        <a href="teaching.html" style="font-weight:600;">Teaching</a>
         <a href="talks.html">Talks</a>
-        <a href="students.html">Potential students</a>
+        <a href="students.html">(Potential) Students</a>
         <a href="others.html">Others</a>
 
-        <a class="search" href="search.html">🔍</a>
+        <a class="search" href="search.html" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.3-4.3"></path>
+          </svg>
+        </a>
       </nav>
     </div>
   </header>
@@ -38,62 +183,58 @@
   <main>
     <h1 class="course-title">Advanced course on Gravity, Fall 2024</h1>
 
-    <div class="grid-inner">
-      <div class="grid">
-        <!-- LEFT -->
-        <section class="left">
-          <div class="quicklinks">
-            <a href="#">Syllabus</a>
-            <a href="#">Lecture notes</a> and <a href="#">Video</a>
+    <section class="course-grid" aria-label="Course content">
+      <!-- Left column -->
+      <div class="left">
+        <div class="left-links">
+          <a href="#">Syllabus</a>
+          <div>
+            <a class="inline" href="#">Lecture notes</a>
+            <span> and </span>
+            <a class="inline" href="#">Video</a>
           </div>
+        </div>
 
-          <ol class="topics">
-            <li>Review of General Relativity</li>
-            <li>Schwarzschild Black Hole and Penrose–Carter diagrams</li>
-            <li>Reissner–Nordström spacetime</li>
-            <li>Exploring Schwarzschild geometry</li>
-            <li>Kerr Black Hole: Causal structure and frame-dragging</li>
-            <li>Kerr Black Hole: Geodesic motions and Penrose process</li>
-            <li>Cosmological solutions: FLRW, dS and AdS solutions</li>
-            <li>Killing Horizons</li>
-            <li>Raychaudhuri equation</li>
-            <li>Singularity Theorem</li>
-            <li>ADM energy</li>
-            <li>Black Hole Thermodynamics</li>
-            <li>Quantum Field Theory in Curved Spacetime: Basics</li>
-            <li>The Unruh Effect and Particle Creation</li>
-            <li>Hawking Radiation and Black Hole Evaporation</li>
-            <li>The Information Paradox</li>
-          </ol>
+        <div class="lecture-lines" aria-label="Lecture list">
+          <a href="#">Lecture 1: Review of General Relativity</a>
+          <a href="#">Lecture 2: Schwarzschild Black Hole and Penrose-Carter diagrams</a>
+          <a href="#">Lecture 3: Reissner-Nordström spacetime</a>
+          <a href="#">Lecture 4: Exploring Schwarzschild geometry</a>
+          <a href="#">Lecture 5: Kerr Black Hole: Causal structure and frame-dragging</a>
+          <a href="#">Lecture 6: Kerr Black Hole: Geodesic motions and Penrose process</a>
+          <a href="#">Lecture 7: Cosmological solutions: FLRW, dS and AdS solutions</a>
+          <a href="#">Lecture 8: Killing Horizons</a>
+          <a href="#">Lecture 9: Raychaudhuri equation</a>
+          <a href="#">Lecture 10: Singularity Theorem</a>
+          <a href="#">Lecture 11: ADM energy</a>
+          <a href="#">Lecture 12: Black Hole Thermodynamics</a>
+          <a href="#">Lecture 13: Quantum Field Theory in Curved Spacetime: Basics</a>
+          <a href="#">Lecture 14: The Unruh Effect and Particle Creation</a>
+          <a href="#">Lecture 15: Hawking Radiation and Black Hole Evaporation</a>
+          <a href="#">Lecture 16: The Information Paradox</a>
+        </div>
 
-          <p class="footnote">
-            Lecture notes are written by referring to various sources without mentioning it.
-          </p>
-        </section>
-
-        <!-- RIGHT -->
-        <aside class="right">
-          <h2 class="homework-title">Homework</h2>
-
-          <div class="homework-text" style="margin-bottom:16px;">
-            <a href="#">homework1</a><br/>
-            <a href="#">homework2</a><br/>
-            <a href="#">homework3</a><br/>
-            <a href="#">homework4</a><br/>
-            <a href="#">homework5</a>
-          </div>
-
-          <div class="homework-text">
-            <p style="margin:0 0 12px;">
-              First, you should try to solve problem sets by yourself.
-            </p>
-            <p style="margin:0;">
-              If you cannot solve a problem, the corresponding solution will be sent on request.
-            </p>
-          </div>
-        </aside>
+        <p class="note">
+          Lecture notes are written by referring to various sources without mentioning it.<br />
+          Comments are welcome.
+        </p>
       </div>
-    </div>
+
+      <!-- Right column -->
+      <aside class="right" aria-label="Homework section">
+        <h3>Homework</h3>
+        <div class="hw-list">
+          <a href="#">homework1</a>
+          <a href="#">homework2</a>
+          <a href="#">homework3</a>
+          <a href="#">homework4</a>
+          <a href="#">homework5</a>
+        </div>
+
+        <p>First, you should try to solve problem sets by yourself.</p>
+        <p>If you cannot solve a problem, the corresponding solution will be sent on request.</p>
+      </aside>
+    </section>
   </main>
 </body>
 </html>
