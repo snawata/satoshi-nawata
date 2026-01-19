@@ -52,6 +52,27 @@
       z-index: 10;
     }
 
+    .course-list.indexed{
+  list-style-position: outside;
+  padding-left: 2.4em;          /* space for numbers */
+  margin: 0 auto;               /* center the whole block */
+  width: max-content;           /* shrink-wrap to content */
+  max-width: 90vw;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.course-list.indexed li{
+  text-align: left;             /* text aligned left */
+  margin: 6px 0;
+}
+
+.course-list.indexed a{
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+
     .topbar{
       max-width: var(--max);
       margin: 0 auto;
