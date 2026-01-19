@@ -266,22 +266,8 @@ main{
   place-items: center;
 }
 
-.course-list.compact{
-  width: max-content;
-  max-width: 90vw;
-  margin: 0 auto;
-  display: grid;
-  row-gap: 4px;       /* tight vertical spacing */
-  text-align: left;   /* left aligned text inside centered block */
-  font-size: 14px;
-  line-height: 1.45;
-}
+ .space-list li{ margin: 3px 0; }
 
-.course-list.compact a{
-  display: block;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
 
 /* =========================
    Responsive: show mobile menu
