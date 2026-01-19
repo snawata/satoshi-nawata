@@ -112,7 +112,7 @@ nav.desktop button:hover{ opacity: .8; }
   top: 100%;              /* no hover gap */
   right: 0;
   margin-top: 10px;       /* visual spacing */
-  min-width: 240px;
+  min-width: 150px;
   padding: 10px;
   background: var(--bg);
   color: var(--fg);
