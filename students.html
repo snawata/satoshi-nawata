@@ -3,203 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>(Potential) Students — Satoshi Nawata</title>
-  <style>
-    :root{
-      --text:#111;
-      --muted:#666;
-      --line: rgba(0,0,0,.12);
-      --bg:#fff;
-
-      --max: 1100px;
-      --pad: 24px;
-
-      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family:var(--font);
-      color:var(--text);
-      background:var(--bg);
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-    a{
-      color:inherit;
-      text-decoration:underline;
-      text-decoration-thickness:1px;
-      text-underline-offset:3px;
-    }
-    a:hover{ opacity:.85; }
-
-    /* ===== Header (same style as other pages) ===== */
-    header{
-      position: sticky;
-      top: 0;
-      background: var(--bg);
-      z-index: 10;
-    }
-    .topbar{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 18px var(--pad);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-    .brand{
-      font-size: 18px;
-      font-weight: 500;
-      letter-spacing: .2px;
-      white-space: nowrap;
-    }
-    nav.desktop{
-      display:flex;
-      align-items:center;
-      gap:22px;
-      font-size:14px;
-    }
-    nav.desktop a,
-    nav.desktop button{
-      font: inherit;
-      color: inherit;
-      background: none;
-      border: 0;
-      padding: 6px 0;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    nav.desktop a:hover,
-    nav.desktop button:hover{ opacity:.8; }
-
-    .dropdown{
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-    }
-    .dropdown > button{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-    }
-    .chev{
-      width:10px;height:10px;
-      display:inline-block;
-      border-right:1.6px solid currentColor;
-      border-bottom:1.6px solid currentColor;
-      transform: rotate(45deg);
-      margin-top:-2px;
-      opacity:.9;
-    }
-    .dropdown-menu{
-      position:absolute;
-      top: calc(100% + 10px);
-      right: 0;
-      min-width: 190px;
-      padding: 10px;
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius: 10px;
-      box-shadow: 0 12px 30px rgba(0,0,0,.08);
-      display:none;
-    }
-    .dropdown-menu a{
-      display:block;
-      padding:9px 10px;
-      border-radius:8px;
-      text-decoration:none;
-      white-space:nowrap;
-    }
-    .dropdown-menu a:hover{ background: rgba(0,0,0,.04); }
-    .dropdown:focus-within .dropdown-menu,
-    .dropdown:hover .dropdown-menu{ display:block; }
-
-    .active{ font-weight: 600; }
-
-    .search{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:28px;height:28px;
-      border-radius:999px;
-      border:1px solid transparent;
-    }
-    .search:hover{
-      border-color: var(--line);
-      background: rgba(0,0,0,.02);
-    }
-
-    /* Mobile menu */
-    details.mobile{ display:none; position:relative; }
-    details.mobile summary{
-      list-style:none;
-      cursor:pointer;
-      padding:8px 10px;
-      border:1px solid var(--line);
-      border-radius:10px;
-      font-size:14px;
-      user-select:none;
-    }
-    details.mobile summary::-webkit-details-marker{ display:none; }
-    details.mobile .mobile-panel{
-      position:absolute;
-      right:0;
-      top: calc(100% + 10px);
-      width: min(80vw, 320px);
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:12px;
-      box-shadow: 0 12px 30px rgba(0,0,0,.08);
-      padding:10px;
-    }
-    .mobile-panel a{
-      display:block;
-      padding:10px 10px;
-      border-radius:10px;
-      text-decoration:none;
-    }
-    .mobile-panel a:hover{ background: rgba(0,0,0,.04); }
-
-    /* ===== Main ===== */
-    main{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 40px var(--pad) 80px;
-    }
-    .page-title{
-      text-align:center;
-      font-size: clamp(44px, 6vw, 70px);
-      font-weight: 500;
-      letter-spacing: .4px;
-      margin: 34px 0 50px;
-    }
-
-    .content{
-      display:grid;
-      place-items:center;
-    }
-    .column{
-      width: min(720px, 100%);
-      font-size: 14px;
-      line-height: 1.9;
-    }
-
-    .links{
-      display:grid;
-      gap: 10px;
-      margin-bottom: 18px;
-      font-weight: 500;
-    }
-
-    @media (max-width: 820px){
-      nav.desktop{ display:none; }
-      details.mobile{ display:block; }
-      .topbar{ padding: 14px var(--pad); }
-      main{ padding-top: 26px; }
-    }
-  </style>
+  <title>Others — Satoshi Nawata</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -207,42 +12,60 @@
     <div class="topbar">
       <div class="brand">Satoshi Nawata</div>
 
-      <nav class="desktop">
+      <!-- Desktop nav -->
+      <nav class="desktop" aria-label="Primary">
         <a href="index.html">Home</a>
 
         <div class="dropdown">
-          <button type="button">
-            Teaching <span class="chev"></span>
+          <button type="button" aria-haspopup="true" aria-expanded="false">
+            Teaching <span class="chev" aria-hidden="true"></span>
           </button>
-          <div class="dropdown-menu">
-            <a href="teaching.html">Courses</a>
-            <a href="notes.html">Lecture notes</a>
-            <a href="resources.html">Resources</a>
+          <div class="dropdown-menu" role="menu" aria-label="Teaching submenu">
+            <a role="menuitem" href="teaching.html">Statistical Mechanics II</a>
+            <a role="menuitem" href="notes.html">Conformal Field Theory </a>
+            <a role="menuitem" href="resources.html">Advanced course on Gravity</a>
           </div>
         </div>
 
         <a href="talks.html">Talks</a>
-        <a class="active" href="potential-students.html">Potential students</a>
+        <a href="students.html">Potential students</a>
         <a href="others.html">Others</a>
-        <a class="search" href="search.html">🔍</a>
+
+        <a class="search" href="search.html" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.3-4.3"></path>
+          </svg>
+        </a>
       </nav>
 
+      <!-- Mobile nav (no JS) -->
       <details class="mobile">
-        <summary>Menu</summary>
-        <div class="mobile-panel">
-          <a href="index.html">Home</a>
-          <a href="teaching.html">Teaching</a>
-          <a href="talks.html">Talks</a>
-          <a href="potential-students.html"><strong>Potential students</strong></a>
-          <a href="others.html">Others</a>
-          <a href="search.html">Search</a>
+        <summary aria-label="Open menu">Menu</summary>
+        <div class="mobile-panel" role="menu" aria-label="Mobile menu">
+          <a role="menuitem" href="index.html">Home</a>
+          <a role="menuitem" href="talks.html">Talks</a>
+          <a role="menuitem" href="students.html">Potential students</a>
+          <a role="menuitem" href="others.html">Others</a>
+
+          <div class="section">
+            <div class="label">Teaching</div>
+            <a role="menuitem" href="teaching.html">Courses</a>
+            <a role="menuitem" href="notes.html">Lecture notes</a>
+            <a role="menuitem" href="resources.html">Resources</a>
+          </div>
+
+          <div class="section">
+            <a role="menuitem" href="search.html">Search</a>
+          </div>
         </div>
       </details>
     </div>
   </header>
 
   <main>
-    <h1 class="page-title">(Potential) Students</h1>
+    <h1 class="page-title">Potential students</h1>
 
     <div class="content">
       <div class="column">
