@@ -4,35 +4,147 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Conformal Field Theory, Spring 2025 — Satoshi Nawata</title>
-  <link rel="stylesheet" href="course.css" />
+
+  <style>
+    :root{
+      --text:#111;
+      --muted:#666;
+      --line: rgba(0,0,0,.12);
+      --bg:#fff;
+
+      --max: 1100px;
+      --pad: 24px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a{
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    header{
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
+    }
+
+    .topbar{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px var(--pad);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand{ font-size: 18px; font-weight: 500; }
+
+    nav{
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+    }
+
+    main{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 40px var(--pad) 90px;
+    }
+
+    .course-title{
+      text-align: center;
+      font-size: clamp(28px, 3.2vw, 40px);
+      font-weight: 700;
+      margin: 56px 0;
+    }
+
+    .course-grid{
+      width: min(980px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: clamp(40px, 7vw, 110px);
+    }
+
+    .left-links a{
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .intro{
+      font-size: 13px;
+      line-height: 1.75;
+      margin: 18px 0;
+      max-width: 64ch;
+    }
+
+    ol.refs, ol.topics{
+      padding-left: 22px;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    ol.refs li, ol.topics li{
+      padding-left: 6px;
+      margin-bottom: 6px;
+    }
+
+    .note{
+      margin: 18px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .right h3{
+      margin: 0 0 12px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .hw-list a{
+      display: block;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .right p{
+      font-size: 13px;
+      line-height: 1.8;
+      margin-top: 16px;
+      max-width: 34ch;
+    }
+
+    @media (max-width: 900px){
+      .course-grid{
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .right p{ max-width: 100%; }
+    }
+  </style>
 </head>
 
 <body>
   <header>
     <div class="topbar">
       <div class="brand">Satoshi Nawata</div>
-
-      <nav class="desktop" aria-label="Primary">
+      <nav>
         <a href="index.html">Home</a>
-
-        <div class="dropdown">
-          <button type="button" class="active">
-            Teaching <span class="chev"></span>
-          </button>
-          <div class="dropdown-menu">
-            <a href="teaching.html">Courses</a>
-            <a href="notes.html">Lecture notes</a>
-            <a href="resources.html">Resources</a>
-          </div>
-        </div>
-
+        <a href="teaching.html"><strong>Teaching</strong></a>
         <a href="talks.html">Talks</a>
-        <a href="students.html">Potential students</a>
+        <a href="students.html">(Potential) Students</a>
         <a href="others.html">Others</a>
-
-        <a class="search" href="search.html" aria-label="Search">
-          🔍
-        </a>
       </nav>
     </div>
   </header>
@@ -40,74 +152,68 @@
   <main>
     <h1 class="course-title">Conformal Field Theory, Spring 2025</h1>
 
-    <div class="grid-inner">
-      <div class="grid">
-        <!-- LEFT -->
-        <section class="left">
-          <div class="quicklinks">
-            <a href="#">Syllabus</a>
-            <a href="#">Lecture videos</a>
-          </div>
+    <section class="course-grid">
+      <!-- Left -->
+      <div>
+        <div class="left-links">
+          <a href="#">Syllabus</a>
+          <a href="#">Lecture videos</a>
+        </div>
 
-          <p style="max-width:520px;font-size:13px;line-height:1.8;">
-            The first part of this course focuses on 2d CFT, based on my
-            <a href="#">lecture note</a>. The latter part will cover CFT in
-            higher dimensions, for which I follow 3 notes:
-          </p>
+        <p class="intro">
+          The first part of this course focuses on 2d CFT, based on my lecture note.
+          The latter part will cover CFT in higher dimensions, for which I follow 3 notes.
+        </p>
 
-          <ol class="topics" style="margin-top:6px;">
-            <li><a href="#">Yu Nakayama, <em>An Invitation to Higher-Dimensional Conformal Field Theory</em> (SGC Library Vol. 153), written in Japanese.</a></li>
-            <li><a href="#">David Simmons-Duffin, Phys 229ab Advanced Mathematical Methods: Conformal Field Theory.</a></li>
-            <li><a href="#">Slava Rychkov, EPFL Lectures on Conformal Field Theory in D ≥ 3 Dimensions.</a></li>
-          </ol>
+        <ol class="refs">
+          <li><a href="#">Yu Nakayama, <em>An Invitation to Higher-Dimensional Conformal Field Theory</em> (SGC Library Vol. 153), written in Japanese.</a></li>
+          <li><a href="#">David Simmons-Duffin, Phys 229ab Advanced Mathematical Methods: Conformal Field Theory.</a></li>
+          <li><a href="#">Slava Rychkov, EPFL Lectures on Conformal Field Theory in D ≥ 3 Dimensions.</a></li>
+        </ol>
 
-          <p class="footnote">
-            Due to copyright restrictions, I will not be uploading the lecture notes publicly for higher-dimensional CFT.
-          </p>
+        <p class="note">
+          Due to copyright restrictions, I will not be uploading the lecture notes publicly for higher-dimensional CFT.
+        </p>
 
-          <ol class="topics">
-            <li>Conformal Symmetry and Universality</li>
-            <li>Conformal Transformations and Radial Quantization</li>
-            <li>Properties of Hilbert Space and Correlation Functions</li>
-            <li>Ward–Takahashi Identities and Primary Fields</li>
-            <li>Operator Product Expansions and Virasoro Algebras</li>
-            <li>Free Bosons and Fermions</li>
-            <li>Minimal Models</li>
-            <li>Ising Models and Onsager’s Exact Results</li>
-            <li>Non-invertible Symmetry in Ising Models and Conformal Blocks</li>
-            <li>Zamolodchikov c-Theorem</li>
-            <li>Landau–Ginzburg Models and Renormalization Group Flow</li>
-            <li>Free Scalar Theory in Higher Dimensions</li>
-            <li>Representation Theory and Primary Fields in Higher Dimensions</li>
-            <li>Operator Product Expansions in Higher Dimensions</li>
-            <li>Conformal Blocks</li>
-            <li>Conformal Bootstrap</li>
-          </ol>
-        </section>
-
-        <!-- RIGHT -->
-        <aside class="right">
-          <h2 class="homework-title">Homework</h2>
-
-          <div class="homework-text" style="margin-bottom:16px;">
-            <a href="#">homework1</a><br/>
-            <a href="#">homework2</a><br/>
-            <a href="#">homework3</a><br/>
-            <a href="#">homework4</a><br/>
-            <a href="#">homework5</a>
-          </div>
-
-          <div class="homework-text">
-            <p style="margin:0 0 12px;">
-              First, you should try to solve problem sets by yourself.
-            </p>
-            <p style="margin:0;">
-              If you cannot solve a problem, the corresponding solution will be sent on request.
-            </p>
-          </div>
-        </aside>
+        <ol class="topics">
+          <li>Conformal Symmetry and Universality</li>
+          <li>Conformal Transformations and Radial Quantization</li>
+          <li>Properties of Hilbert Space and Correlation Functions</li>
+          <li>Ward–Takahashi Identities and Primary Fields</li>
+          <li>Operator Product Expansions and Virasoro Algebras</li>
+          <li>Free Bosons and Fermions</li>
+          <li>Minimal Models</li>
+          <li>Ising Models and Onsager’s Exact Results</li>
+          <li>Non-Invertible Symmetry in Ising Models and Conformal Blocks</li>
+          <li>Zamolodchikov c-Theorem</li>
+          <li>Landau–Ginzburg Models and Renormalization Group Flow<br/>
+              &nbsp;&nbsp;&nbsp;Free scalar theory in Higher Dimensions</li>
+          <li>Representation Theory and Primary Fields in Higher Dimensions</li>
+          <li>Operator Product Expansions in Higher Dimensions</li>
+          <li>Conformal Blocks</li>
+          <li>Conformal Bootstrap</li>
+        </ol>
       </div>
-    </div>
+
+      <!-- Right -->
+      <aside class="right">
+        <h3>Homework</h3>
+        <div class="hw-list">
+          <a href="#">homework1</a>
+          <a href="#">homework2</a>
+          <a href="#">homework3</a>
+          <a href="#">homework4</a>
+          <a href="#">homework5</a>
+        </div>
+
+        <p>
+          First, you should try to solve problem sets by yourself.
+        </p>
+        <p>
+          If you cannot solve a problem, the corresponding solution will be sent on request.
+        </p>
+      </aside>
+    </section>
   </main>
 </body>
 </html>
