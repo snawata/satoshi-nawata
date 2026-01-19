@@ -4,6 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Teaching — Satoshi Nawata</title>
+
+  <!-- Serif display font for the big page title (optional, but matches screenshot well) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --text: #111;
@@ -15,10 +21,12 @@
       --pad: 24px;
 
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --titleFont: "Playfair Display", Georgia, "Times New Roman", Times, serif;
     }
 
     *{ box-sizing: border-box; }
     html, body{ height: 100%; }
+
     body{
       margin: 0;
       font-family: var(--font);
@@ -43,6 +51,7 @@
       background: var(--bg);
       z-index: 10;
     }
+
     .topbar{
       max-width: var(--max);
       margin: 0 auto;
@@ -52,6 +61,7 @@
       justify-content: space-between;
       gap: 16px;
     }
+
     .brand{
       font-size: 18px;
       font-weight: 500;
@@ -65,6 +75,7 @@
       gap: 22px;
       font-size: 14px;
     }
+
     nav.desktop a,
     nav.desktop button{
       font: inherit;
@@ -78,10 +89,7 @@
     nav.desktop a:hover,
     nav.desktop button:hover{ opacity: .8; }
 
-    /* Active nav item like in screenshot */
-    .active{
-      font-weight: 600;
-    }
+    .active{ font-weight: 700; } /* Teaching bold in screenshot */
 
     /* Dropdown (CSS only) */
     .dropdown{
@@ -121,7 +129,6 @@
       padding: 9px 10px;
       border-radius: 8px;
       text-decoration: none;
-      color: var(--text);
       white-space: nowrap;
     }
     .dropdown-menu a:hover{ background: rgba(0,0,0,.04); }
@@ -192,12 +199,14 @@
       padding: 40px var(--pad) 70px;
     }
 
+    /* Serif + thin look like screenshot */
     .page-title{
       text-align: center;
-      font-size: clamp(44px, 6vw, 70px);
-      font-weight: 500;
-      letter-spacing: .4px;
-      margin: 34px 0 56px;
+      font-family: var(--titleFont);
+      font-weight: 400;
+      letter-spacing: .2px;
+      font-size: clamp(52px, 6.2vw, 78px);
+      margin: 42px 0 74px;
     }
 
     .list-wrap{
@@ -205,26 +214,25 @@
       place-items: center;
     }
 
-    /* Centered, narrow column like screenshot */
     .course-list{
-      width: min(520px, 100%);
-      display: grid;
-      gap: 12px;
+      width: min(560px, 100%);
       text-align: center;
-      font-size: 13px;          /* smaller like screenshot */
-      line-height: 1.6;
+      display: grid;
+      gap: 14px;
+      font-size: 14px;
+      line-height: 1.7;
     }
 
-    /* Keep link underline but make spacing feel tight */
+    /* slightly more “Google Sites” underline spacing */
     .course-list a{
-      text-decoration-thickness: 1px;
       text-underline-offset: 2px;
     }
 
     .meta{
       margin-top: 18px;
-      color: var(--muted);
-      font-size: 13px;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.9;
       text-align: center;
     }
 
@@ -233,7 +241,7 @@
       details.mobile{ display: block; }
       .topbar{ padding: 14px var(--pad); }
       main{ padding-top: 26px; }
-      .course-list{ width: min(560px, 100%); }
+      .page-title{ margin: 36px 0 46px; }
     }
   </style>
 </head>
@@ -243,24 +251,22 @@
     <div class="topbar">
       <div class="brand">Satoshi Nawata</div>
 
-      <!-- Desktop nav -->
       <nav class="desktop" aria-label="Primary">
         <a href="index.html">Home</a>
 
-        <!-- Teaching is active in this page -->
         <div class="dropdown">
           <button type="button" class="active" aria-haspopup="true" aria-expanded="false">
             Teaching <span class="chev" aria-hidden="true"></span>
           </button>
           <div class="dropdown-menu" role="menu" aria-label="Teaching submenu">
-            <a role="menuitem" href="teaching.html">Teaching (index)</a>
+            <a role="menuitem" href="teaching.html">Teaching</a>
             <a role="menuitem" href="notes.html">Lecture notes</a>
             <a role="menuitem" href="resources.html">Resources</a>
           </div>
         </div>
 
         <a href="talks.html">Talks</a>
-        <a href="students.html">Potential students</a>
+        <a href="students.html">(Potential) Students</a>
         <a href="others.html">Others</a>
 
         <a class="search" href="search.html" aria-label="Search">
@@ -279,7 +285,7 @@
           <a role="menuitem" href="index.html">Home</a>
           <a role="menuitem" href="teaching.html"><strong>Teaching</strong></a>
           <a role="menuitem" href="talks.html">Talks</a>
-          <a role="menuitem" href="students.html">Potential students</a>
+          <a role="menuitem" href="students.html">(Potential) Students</a>
           <a role="menuitem" href="others.html">Others</a>
 
           <div class="section">
@@ -301,9 +307,9 @@
 
     <div class="list-wrap">
       <div class="course-list" aria-label="Teaching list">
-        <a href="#">Statistical Mechanics II, Fall 2025</a>
-        <a href="#">Conformal Field Theory, Spring 2025</a>
-        <a href="#">Advanced course on Gravity, Fall 2024</a>
+        <a href="course-statmech2.html">Statistical Mechanics II, Fall 2025</a>
+        <a href="course-cft-2025.html">Conformal Field Theory, Spring 2025</a>
+        <a href="course-gravity-2024.html">Advanced course on Gravity, Fall 2024</a>
         <a href="#">Introduction to String Theory, Spring 2024</a>
         <a href="#">Differential Geometry and Topology in Physics, Spring 2023</a>
         <a href="#">Quantum Field Theory I, Fall 2022</a>
@@ -321,8 +327,8 @@
         <a href="#">Field Theory in Particle Physics, Spring 2013</a>
 
         <div class="meta">
-          Chern–Simons theory and Knot invariants<br />
-          in Ph.D. school at University of Amsterdam in Dec-2012
+          Chern-Simons theory and Knot invariants<br/>
+          in <a href="#">Ph.D. school</a> at University of Amsterdam in Dec-2012
         </div>
 
         <a href="#" style="margin-top:10px;">Lecture Notes, Mathematica file</a>
