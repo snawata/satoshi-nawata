@@ -161,6 +161,10 @@ nav.desktop button:hover{ opacity: .8; }
   display: block;
 }
 
+.lec {
+  font-weight: 600;
+  margin-right: 0.3em;
+}
 
 
 /* Mobile menu (no JS) */
