@@ -5,7 +5,7 @@
 
 /* ---- Design tokens ---- */
 :root{
-  --max: 1100px;
+  --max: 950px;
   --pad: 24px;
 
   --bg: #000;
