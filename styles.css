@@ -170,6 +170,7 @@ nav.desktop button:hover{ opacity: .8; }
 .lec {
   font-weight: 600;
   margin-right: 0.4em;
+    margin: 6px 0; 
 }
 
 
