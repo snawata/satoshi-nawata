@@ -164,7 +164,7 @@ nav.desktop button:hover{ opacity: .8; }
 .lecture-list {
   list-style: none;   /* remove bullets */
   padding-left: 0;    /* align with other text */
-  margin: 6px 0; 
+  margin: 8px 0; 
 }
 
 .lec {
