@@ -162,9 +162,16 @@ nav.desktop button:hover{ opacity: .8; }
 }
 
 .lec {
-  font-weight: 600;
-  margin-right: 0.3em;
+.lecture-list {
+  list-style: none;   /* remove bullets */
+  padding-left: 0;    /* align with other text */
 }
+
+.lec {
+  font-weight: 600;
+  margin-right: 0.4em;
+}
+
 
 
 /* Mobile menu (no JS) */
