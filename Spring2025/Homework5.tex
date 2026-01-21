@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+% %\usepackage[UTF8]{ctex}
+% \usepackage{jheppub}
+\usepackage{macros}
+\pdfoutput=1
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 4: Due on May 13}
+\bigskip
+\textbf{Caution:} 
+When solving homework problems, it is important to show your derivation at each step. Nowadays, many online tools make it easy to find answers, but the primary goal of these assignments is to deepen your understanding through hands-on problem-solving. By working through the calculations yourself, you engage more deeply with the material, making the learning process more meaningful, rather than simply copying answers from external sources.
+
+
+
+
+
+
+\section{Derivation}
+\subsection{}
+
+Derive (6.21),  (6.22) and (6.26) of the \textbf{old} lecture note.
+
+\subsection{}
+Derive (7.8) and  (7.9)  of the \textbf{new} lecture note, and show that the action (7.7) is invariant under Weyl transformation only when $\xi=\frac{d-2}{4(d-1)}$. 
+
+
+\section{$\beta$-functions}
+\subsection{}
+Suppose that we perturb the action at a fixed point by an operator $\cO$ of scaling dimension $\Delta$
+$$
+S = S ^ {*} +  \int \frac{d^2x}{2\pi} g\, \cO ( x )~.
+$$
+Let us calculate the sub-leading (one-loop) correction to $\beta$-function of the coupling constant $g$. To this end, we introduce the bare coupling $\wh g=a^{2-\Delta}g$ where $a$ as a length-scale and $g$ is now dimensionless. To find the $\beta$-functions, we shall address the question of how to change the coupling constants $g$ under the infinitesimal scale transformation $a \to (1 + \d \lambda)a$ in such a way that the partition function remains invariant.
+
+The perturbative expansion of the partition function is
+\bea\nonumber
+\cZ& = \int \mathcal { D } \varphi \exp \left[ -  { S }^{* } - \wh g \int \frac{d^2x}{2\pi a^{2-\Delta} } \cO ( x ) \right]\cr
+& =\cZ^{* } \left[ 1 - \wh g \int \frac{d^2x}{2\pi a^{2-\Delta } } \left\langle \cO ( x ) \right\rangle+ \frac { \wh g^2}{2 }  \int _ { \left| x _ { 1 } - x _ { 2 } \right| > a } \left\langle \cO \left( x _ { 1 } \right) \cO \left( x _ { 2 } \right) \right\rangle \frac{d^2x_1}{2\pi a^{2-\Delta } } \frac{d^2x_2}{2\pi a^{2-\Delta } } + \cdots \right]
+\eea
+Here the length-scale $a$ appears both explicitly and implicitly in the integral region.
+
+Under the infinitesimal scale transformation $a \to (1 + \d \lambda)a$, the coupling constant is scaled as
+$$
+\wh g  \rightarrow ( 1 + \d \lambda )^{2-\Delta } \wh g  \simeq \wh g  + (2-\Delta) \wh g  \d \lambda
+$$
+In addition, the integral, after a rescaling of $a$, can be written as
+$$
+\int _ { \left| x _ { 1 } - x _ { 2 } \right| > a ( 1 + \d \lambda ) } [ \cdots ] = \int _ { \left| x _ { 1 } - x _ { 2 } \right| > a } [ \cdots ] - \int _ { a < \left| x _ { 1 } - x _ { 2 } \right| < a ( 1 + \d \lambda ) } [ \cdots ]
+$$
+The first terms produces the original contribution in $\cZ$, and the second term can be computed through the operator expansion of the conformal theory. Suppose that the OPE of the operator $\cO$ with itself is
+$$
+\cO(x_1)\cO(x_2)=\frac{\bfC}{|x_{12}|^\Delta}\cO(x_2)+\cdots ~.
+$$
+Then, derive that the second term is
+\bea
+&- \frac { \wh g^2}{2 }\mathbf { C } a ^ {- \Delta } \int _ { a < \left| x _ { 1 } - x _ { 2 } \right| < a ( 1 + \d \lambda ) } \left\langle \cO  \left( x _ { 2 } \right) \right\rangle \frac{d^2x_1}{2\pi a^{2-\Delta } } \frac{d^2x_2}{2\pi a^{2-\Delta}  }\cr
+=&- \frac12 \d \lambda\,\wh g^2  \mathbf { C }   \int \left\langle \cO  ( x ) \right\rangle \frac{d^2x}{2\pi a^{2-\Delta } }
+\eea
+Therefore, the total effect on the coupling constant under the infinitesimal scaling is
+$$
+\wh g  \rightarrow \wh g  + (2-\Delta) \wh g  \d \lambda - \frac12 \mathbf { C }\wh  g^2  \d \lambda +\cO(\wh g^3)
+$$
+Consequently, we have the one-loop contribution to the $\beta$ function
+$$
+\frac { d \wh g }{d \lambda } \equiv \beta  ( \wh g ) = (2-\Delta) \wh g  -  \frac12 \mathbf { C } \wh g^2 +\cO(\wh g^3)
+$$
+Plot the $\beta$-function with respect to $\wh g$ assuming $\Delta<2$. (A curve $\beta( \wh g )$ depends on the sign of $\bfC$.)
+
+
+\subsection{}
+Suppose that the operator $\cO$ is a marginal operator $\Delta=2$. Solve the differential equation for the $\beta$-function
+$$
+\frac { d \wh   g}{d \lambda } =   - \frac{\bfC\wh g^{2 }}2
+$$
+where we impose the initial condition $\wh g(\lambda=0)=g_\ast$.
+When does  the operator  $\cO$ become marginally relevant or irrelevant?
+
+
+
+
+
+
+\end{document}
