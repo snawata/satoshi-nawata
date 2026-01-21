@@ -1,0 +1,79 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 9: Due at class on May 12}
+
+
+
+
+% \section{1 Cylinder partition function and torus partition function}
+
+% The torus partition function of bosonic string is given by
+% \begin{align}
+%  A_{0,T} = \frac{iV_{26}}{(2\pi l_s)^{26}} \int_F \frac{d^2\tau}{2\tau_2^2}
+%  \tau_2^{-12} |\eta(\tau)|^{-48} \ ,
+% \end{align}
+% where $F$ is the fundamental region of the torus moduli space.
+% \begin{itemize}
+%  \item Consider low energy region in $F$ and show that $\tau_1$ integration ($-\frac{1}{2} \le \tau_1 \le \frac{1}{2}$) leads level matching condition.
+%  \item Again, consider low energy region.
+%        Show that
+%        it can be identified with the cylinder partition function up to constant.
+%  \item Explain why an open string short 1-loop corresponds to
+%        a closed string long propergation.
+% \end{itemize}
+
+
+\section{ Contribution from symplectic representation}
+
+
+Consider
+\begin{align}
+ P \Lambda^T P = \pm \Lambda
+\end{align}
+for $P = i
+\begin{pmatrix}
+ 0 & -\mathbb{1}_{k\times k} \\
+ \mathbb{1}_{k\times k} & 0
+\end{pmatrix}$
+where $n=2k$.
+Derive the dimension(degrees of freedom) of $\Lambda$ for $+$ and $-$, respectively,
+and show that $\tr[\Omega_\Lambda] = -n$.
+
+
+\section{ Orientation flip in superstring}
+
+
+Consider the orientation flip operator $\Omega$ for world-sheet fermions of closed string.
+\begin{itemize}
+ \item Define the action of the orientation operator on the fermions
+       $\psi^\mu(t,\sigma)$, $\overline \psi^\mu(t,\sigma)$ in NS- and R-sector properly,
+       and derive the action on their modes.
+       (Hint: the orientation flip is define for $c$ as $\Omega: c(t,\sigma) \to -\ol c(t,2\pi-\sigma)$.
+       The minus sign in from of $\ol c$ is coming from relative phase of overall coefficient of the mode expansion in cylinder:
+       $c = i \sum c_n e^{in(it+\sigma)}$ and $\ol c = -i \sum \ol c_n e^{in(it+\sigma)}$.
+ \item Consider IIB RR-fields as in Prob. 2 of Homework 8, and show that only the 2-form
+       RR-field survives under the $\Omega$ projection $\frac{1+\Omega}{2}$.
+       (Hint: you have to consider field strength of $n$-form RR-fields because RR-fields themselves
+       are not physical degrees of freedom.
+       Note that RR-fields are real valued object so its complex conjugate is itself.
+       Also note that the complex conjugate of fermions gives minus sign
+       $(\psi^\dagger \chi)^\dagger =-\chi^\dagger\psi$ due to their statistics.
+       You can assume that gamma matrices are invariant under $\Omega$.
+       This is because zero modes are identical in L and R so $\Gamma$ is actually sum of L and R, i.e. $\Gamma = \Gamma^L +\Gamma^R$,
+       which is manifestly invariant under $\Omega$.)
+\end{itemize}
+
+
+\section{SO(32) in Type I}
+
+In the lecture, we evaluate the cylinder, Klein bottle and M\"obius strip amplitude in unoriented bosonic string. Evaluate the cylinder, Klein bottle and M\"obius strip amplitude in the RR-sector of superstring theory. Show the divergence is absent only when the gauge group is SO(32).
+
+
+
+
+\end{document}

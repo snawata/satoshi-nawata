@@ -1,0 +1,148 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{macros}
+
+
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 4: Due at class on April 7}
+
+\section{More on BRST}
+
+\subsection{ BRST charge}
+Using the explicit form of the  BRST current
+\begin{align}
+j_B = c(z)T^X(z) + : b(z)c(z)\partial c(z) : +\frac32:\partial^2c(z):~,\nonumber
+\end{align}
+express the BRST charge in terms of the $X^{\mu}$ Virasoro
+operators and the ghost oscillators as
+$$
+Q_B = \sum_n c_n (L^X_{-n}-\d_{n,0}) + \sum_{m,n} \frac{m-n}{2} : c_m c_n
+b_{-m-n} :  \,.\\
+$$
+Show that the OPE between two BRST currents is given by
+$$
+j_B(z)j_B(w)=-\frac{c^X -18}{ 2(z - w)^3} c\partial c(w)- \frac{c^X -18}{4(z - w)^2} c\partial^2c(w)- \frac{c^X -26}{12(z - w)} c\partial^3c(w)+\cdots,
+$$
+where $c^X$ is the central charge of the $X^\mu$ bosonic string theory.
+Use this OPE to determine the anticommutator of the BRST charge with itself.
+For what value of $c^X$ does this vanish?
+
+
+
+
+
+
+\subsection{ $Tj_B$ OPE}
+Show that the OPE between the total energy momentum tensor $T = T^X + T^g$ and $j_B$ is given by
+$$T(z)j_B(w)=\frac{ c^X -26}{2(z - w)^4} c(w)+ \frac{ j_B(w)}{(z - w)^2}+ \frac{ \partial j_B(w)}{z - w}+\cdots~.$$
+What does the result imply for $j_B$?
+
+\section{BRST quantization of closed string}
+Perform the BRST quantization at level 1 states of closed string. Show that the physical state takes the form
+\be \label{close-massless}
+\e_{\mu \nu} \alpha_{-1}^u \overline{\alpha}_{-1}^\nu|k, \downarrow, \downarrow\rangle ~ ,
+\ee
+where the polarization vectors $\e$ are subject to
+\begin{align}
+&k \cdot \e=0  \label{orthogonal}\\
+&\e_{\mu \nu} \sim \e_{\mu \nu}+\zeta_\mu k_\nu+k_\mu \tilde{\zeta}_\nu .
+\end{align}
+
+Note that the dilaton is the trace part of \eqref{close-massless} so that the naive choice of the polarization vector for the dilaton is $\e_{\mu\nu}=\eta_{\mu\nu}$. However, this choice of the polarization vector clearly does not satisfy $k \cdot \e=0$ in \eqref{orthogonal}. Resolve this puzzle. 
+
+
+
+%
+%\section{Ghost number anomaly}
+%
+%
+%\subsection{Ghost number current}
+%
+%Derive the conserved current for the transformation
+%\begin{align}
+%\delta_{g} c = \epsilon_g c \ , \quad \delta_{g} b = -\epsilon_g b \ .
+%\end{align}
+%Holomorphic part of the ghost action is given by
+%\begin{align}
+%S_{gh} = \frac{1}{2\pi} \int d^2z b \ol\partial c \ .
+%\end{align}
+%(You can forget about the anti-holomorphic part for the problem.)
+%
+%
+%
+%\subsection{OPE of EM tensor and the current}
+%
+%Calculate the OPE between ghost EM tensor and the current derived above.
+%The EM tensor is given as follows.
+%\begin{align}
+%T(z) = -\nord{(2b\partial c +\partial bc)(z)} \ .
+%\end{align}
+%
+%Furthermore, write down an infinitesimal conformal transformation (with parameter $\epsilon(z)$) of the ghost number current
+%from the OPE result. (Only holomorphic part is enough.)
+%
+%
+%\subsection{Ghost number anomaly from curved WS}
+%
+%
+%Use the assumption $\nabla^a j_a = \kappa R^{(2)}$ derive the current $j_z = -4\kappa \partial \omega +j(z)$.
+%(You can assume that $j_{\ol z}=0$.)
+%Metric is given by
+%\begin{align}
+%ds^2 = e^{2\omega} dzd\ol z \ .
+%\end{align}
+%
+%Conformal transformation laws for $j_z$ and $\omega$ are given as follows.
+%\begin{align}
+%\wt{j_z}  = \left(\frac{\partial \wt z}{\partial z}\right)^{-1} j_z \ ,\\
+%\wt \omega = \omega -\frac{1}{2} \log \left| \frac{\partial \wt z}{\partial z} \right|^2 \ ,
+%\end{align}
+%where $\wt z = z -\epsilon(z)$.
+%Using the transformations, derive the infinitesimal transformation for $j(z) = j_z +4\kappa \partial \omega$,
+%and confirm $\kappa = -\frac{3}{4}$ by comparing the infinitesimal transformation derived here
+%and the one derived from the OPE calculation.
+%
+%
+
+%\section{$\b\g$ ghost CFT}
+%Now let us consider the same action as the $bc$ ghost system
+%$$
+%S=\frac{1}{2\pi}\int d^2z \beta\overline \partial \gamma +\overline\beta\partial \overline\gamma~,
+%$$
+%but now $\beta$ and $\gamma$ are bosonic fields. Hence, their OPEs are (pay attention to sign)
+%$$
+%\g(z)\b(w)=-\b(z)\g(w) =\frac{1}{z - w}+\cdots
+%$$
+%If $\beta$ and $\g$ are primary fields of weights $(\lambda,0)$ and $(1-\lambda,0)$ respectively, the form of the stress energy tensor (holomorphic part) is
+%$$
+%T(z) =: (\partial \b) \g : -\lambda\, \partial: \b\g :
+%$$
+%Calculate the  $TT$ OPE to determine the central charge of the CFT in terms of $\lambda$.
+%
+%
+%
+% \section{linear fractional transformations}
+%
+% Let us consider the Riemann sphere $S^2  = \bC \cup \{\infty\}$. The action of $SL(2, \bC)$ defined by
+% $$z  \mapsto w = \frac{az + b}{ cz + d}~,\qquad \begin{pmatrix}a&b\\c&d\end{pmatrix}\in SL(2, \bC)~,$$
+% maps the Riemann sphere onto itself. These transformations are called linear fractional  transformations.
+%
+% \vspace{.3cm}
+% \noindent $\bullet$ Given three points $z_1,z_2,z_3$, find a linear fractional transformation which maps the points
+% to $0, 1, \infty$.
+%
+% \vspace{.3cm}
+% \noindent $\bullet$ Given four points $z_1,z_2,z_3,z_4$, their \textbf{cross ratio} is defined by
+% $$
+% [z_1,z_2,z_3,z_4]= {\frac  {(z_{1}-z_{3})(z_{2}-z_{4})}{(z_{2}-z_{3})(z_{1}-z_{4})}}~.
+% $$
+% Show that the cross ratio is preserved by any linear fractional  transformation
+% $$
+% [z_1,z_2,z_3,z_4]=[w_1,w_2,w_3,w_4] ~.
+% $$
+
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+\usepackage{macros}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 3: Due at class on March 31}
+
+
+\section{$bc$ ghost}
+\subsection{Energy-momentum tensor}
+
+Given the $bc$ ghost action (Euclidian signature)
+$$ S_{g} = \frac{1}{2\pi}\int d^2\sigma \sqrt{h}\ b^{ab}\nabla_a c_b~,$$
+calculate the stress tensor for the $bc$ ghosts by
+$$
+T_{ab}=-\frac{4\pi}{\sqrt{h}}\frac{\d S}{\d h^{ab}}
+$$
+Note that the covariant derivative $\nabla^\alpha$ contains the Christoffel symbol  and $b_{ab}$ is symmetric traceless. Show that it becomes
+\be T^{g}(z) =- 2:b(z)\partial c(z): + :c(z)\partial b(z):\label{ST}\ee
+in the conformally flat metric.
+
+\subsection{Ghost $TT$ OPE}
+
+Compute  the $TT$ OPE in the $bc$ ghost CFT, and find the central charge.
+
+
+
+
+\section{BRST transformation}
+\subsection{}
+Show that the action 
+$$
+S_X+S_g=\frac{1}{2 \pi} \int d^2 z\left(\frac{1}{\alpha^{\prime}} \partial X^\mu \bar{\partial} X_\mu+b \bar{\partial} c+\bar{b} \partial \bar{c}\right) .
+$$
+ is invariant under the BRST transformations:
+\be \label{BRST}
+\begin{aligned}
+& \delta_B X^\mu=i \epsilon(c \partial+\bar{c} \bar{\partial}) X^\mu \\
+& \delta_B c=i \epsilon c \partial c \quad \delta_B \bar{c}=i \epsilon \bar{c} \bar{\partial} \bar{c}, \\
+& \delta_B b=i \epsilon\left(T^X+T^g\right) \quad \delta_B \bar{b}=i \epsilon\left(\bar{T}^X+\bar{T}^g\right)
+\end{aligned}
+\ee
+
+\subsection{}
+Using the explicit form of the  BRST current,
+\begin{align}
+j_B = c(z)T^X(z) + : b(z)c(z)\partial c(z) : +\frac32:\partial^2c(z):~.\nonumber
+\end{align}
+show that the BRST transformations of the fields are given in \eqref{BRST}.
+
+
+
+
+
+\section{Bonus problem (Due at the end of May)}
+
+
+Apply the perturbation theory to the action
+\begin{align}\nonumber
+ &S_{\textrm{closed}} = \frac{1}{4\pi \alpha'} \int d^2\sigma \left( \sqrt h h^{ab} \partial_a X^\mu \partial_b X^\nu G_{\mu\nu}(X)
+ +i \varepsilon^{ab} \partial_a X^\mu \partial_b X^\nu B_{\mu\nu}(X)
+ +\alpha' \sqrt h R^{(2)} \Phi(X)
+ \right) \ .
+\end{align}
+derive the $\beta$-functions
+\begin{align}\nonumber
+ &\beta[G_{\mu\nu}] = \alpha' R_{\mu\nu} +2\alpha' \nabla_\mu \nabla_\nu \Phi
+ -\frac{\alpha'}{4}H_{\mu\lambda\rho}H_\nu^{\ \lambda\rho} +\mathcal O(\alpha'^2) \ , \cr
+ &\beta[B_{\mu\nu}] = -\frac{\alpha'}{2} \nabla^\lambda H_{\lambda\mu\nu}
+ +\alpha' \nabla^\lambda \Phi H_{\lambda\mu\nu} +\mathcal O(\alpha'^2) \ , \cr
+ &\beta[\Phi] = \frac{D-26}{6} -\frac{\alpha'}{2} \nabla^2\Phi
+ +\alpha' \nabla^\lambda\Phi \nabla_\lambda\Phi
+ -\frac{\alpha'}{24}H_{\mu\lambda\rho}H^{\mu\lambda\rho} +\mathcal O(\alpha'^2) \ .
+\end{align}
+
+
+
+
+\end{document}

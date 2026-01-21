@@ -1,0 +1,160 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{macros}
+
+
+
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 10 (Due at class on May 25)}
+
+
+\section{ Fermionization}
+
+\subsection{}
+At the special radius $R =\sqrt{\frac{\a'}{2}}$ of the circle compactification, one can redefine a bosonic field $H(z):=\sqrt{\frac{2}{\a'}}X(z)$ so that the OPE are given by
+$$H(z)H(0) \sim - \ln z~.$$
+Let us also consider two Majorana-Weyl fermions $\psi^1, \psi^2$ with OPE
+$$\psi^i(z)\psi^j(0) \sim \frac{\d^{ij}}{z}~.$$
+We can define the complex fermion $$\psi(z) = 2^{-1/2} (\psi^1(z) +i\psi^2(z))\,,\qquad \overline\psi(z) = 2^{-1/2} (\psi^1(z) -i\psi^2(z))~.$$
+Show the equivalence of operators in boson and fermion
+$$:e^{iH} :\cong\psi\,,\quad :e^{-iH} :\cong\overline \psi\,,\quad i\partial H \cong \psi\overline \psi\,,\quad T_H \cong T_\psi~,$$
+by calculating the OPEs of operators in both theories and comparing.
+
+
+
+
+
+\subsection{}
+At the special radius $R =\sqrt{\frac{\a'}{2}}$, show that the torus partition function can be written as
+$$
+Z^{25}=\frac{1}{2|\eta(q)|^2}\left[\Big| \sum_n q^{n^2/2} \Big|^2+\Big| \sum_n (-1)^n q^{n^2/2} \Big|^2+\Big|\sum_n q^{\frac12(n + 1 / 2)^2}\Big|^2\right]\,.
+$$
+    Verify that this is the torus partition function of a free complex fermion with all the possible boundary conditions (AA, AP, PA, PP).  This is called the \textbf{diagonal modular invariant} partition function.
+
+%
+% \section{Check the central charge}
+% The world-sheet action of Heterotic string theory is given by
+% \begin{align}
+%  S^{\textrm{m}} &= \frac{1}{4\pi} \int d^2 z\ \Big( \frac{2}{\alpha'} \partial X^\mu  \overline\partial X_\mu+\psi^\mu\overline\partial\psi_\mu+\overline \lambda^A\partial\overline\lambda_A\Big)\cr
+% S^{\textrm{gh}}&=\frac{1}{2\pi}\int d^2z \ (b\overline \partial c+\bar b \partial \bar c+\beta\overline \partial \g)\nonumber
+% \end{align}
+% where $\mu$ are 10-dimensional indices and the right-moving sector is supersymmetric. In the lecture, I have explained that if there are 32 left-moving fermions $\overline\lambda^A$, there is no Weyl-anomaly $c^{\textrm{tot}}=0$. Explain in detail the value of each contribution $c^X,c^\psi,c^{bc},c^{\beta\gamma},c^{\lambda}$ in the lecture note.
+%
+%
+
+
+
+\section{Toroidal compactifications}
+
+Let us consider the toroidal compactification in the presence of $B$-field
+$$
+S=-\frac{1}{4\pi\a'}\int d^2\sigma(\d_{IJ}\eta^{\a\b}+ B_{IJ}\e^{\a\b})\partial_\a X^I\partial_\b X^J~,
+$$
+where $\e^{01} =-1$ and $\eta^{\a\b}=\textrm{diag}(-1,1)$. The bosonic field is quantized as in the lecture note
+\begin{align}
+X_R^I(z)&=x^I-i\sqrt{\a'\over2}p_R^I
+\ln z+i\sqrt{\a'\over2}\sum_{m\neq0}{\alpha^I_m\over mz^m}, \nonumber\\
+\overline X_L^I(\bz)&={\overline x}^I-i\sqrt{\a'\over2}{p^I_L}
+\ln \bz+i\sqrt{\a'\over2}\sum_{m\neq0}{{\overline\alpha}^I_m\over m\bz^m}.\nonumber
+\end{align}
+where the bosonic field $X ^I(z,\bz)=X_R^I(z)+\overline X_L^I(\bz)$ is periodically identified on the lattice $W^I\in \Lambda$
+\be\label{bc}
+X ^I( \s+2\pi,\t)=X ^I( \s,\t)+2\pi W^I~.
+\ee
+
+
+
+
+\subsection{} Show that  the center of mass momentum
+$$
+\pi_I:=\int_0^{2\pi} d\sigma ~ \Pi_I~,\qquad  \Pi_I=\frac{\d S}{\d \dot{X}^I}~,
+$$
+together with \eqref{bc} imply that
+$$
+(p_I)_{L,R} :=\d_{IJ}p^J_{L,R} = \sqrt{\frac{\a'}{2}}\Big( \pi_I  \pm \frac1{\a'}(\d_{IJ} \mp B_{IJ})W^J \Big)~.
+$$
+Here left-moving modes get the upper sign and right-moving modes get the lower sign whenever you find the notation $\pm$ and $\mp$.
+
+
+
+\subsection{}  It is $\pi_I$ that generates translations and it must therefore lie on the lattice $\Lambda^*_D$, $\pi_I=e^{*i}_Im_i$ for $m_i\in\bZ$. Writing $\mathbf{g}=g_{ij} = e^I_i \d_{IJ }e^J_j $, $\mathbf{b} = b_{ij} = e^I_i B_{IJ} e^J_j$,
+show that the mass formula and the level-matching condition  for closed strings are modified to (a matrix notation is employed in the expression below)
+\begin{align}\label{mass-level}
+\a' M^2=&{\a'}\bfm^T\bfg^{-1}\bfm+\frac{1}{\a'}\bfn^T(\bfg-\bfb\bfg^{-1}\bfb)\bfn+2\bfn^T\bfb\bfg^{-1}\bfm+2(N +\overline N -2)\cr
+N-\overline N=&{\boldsymbol \pi}\cdot \bfW=\bfm^T \bfn~.
+\end{align}
+
+
+\subsection{}
+Use \eqref{mass-level} to show that the spectrum is invariant under the map
+$$
+\bfm\leftrightarrow\bfn~,\quad \a' \bfg^{-1}\leftrightarrow \frac1{\a'} (\bfg-\bfb\bfg^{-1}\bfb)~, \quad  \bfb\bfg^{-1}\leftrightarrow -\bfg^{-1} \bfb~.
+$$
+The second and the third are indeed equivalent to
+$$
+\frac{1}{\a'}(\bfg+\bfb)\leftrightarrow \a'(\bfg+\bfb)^{-1}~,
+$$
+and this is the T-duality in the presence of $B$-field.
+
+
+\subsection{} A non-trivial instructive example is the 2-torus $T^2= \bR^2/\Lambda$ where $\bfe_1,\bfe_2$ are the two generators of $\Lambda$ and its metric is $g_{ij}=\bfe_i\cdot \bfe_j$.
+The torus has one K\"ahler modulus $\sqrt{\det g_{ij}}$ and one complex structure modulus
+$$
+\tau=\frac{|\bfe_2|}{|\bfe_1|}e^{i \,\textrm{angle}(\bfe_1,\bfe_2)}=\frac{g_{12}+i \sqrt{\det g_{ij} }}{g_{11}}=\tau_1+i\tau_2~.
+$$
+In the presence of $B$-field, the K\"ahler modulus  is complexified
+$$
+\omega=\frac{1}{\a'}(B+i \sqrt{\det g_{ij}})=\omega_1+i\omega_2~.
+$$
+This leads to the expression
+$$
+g_{ij}=\a'\frac{\omega_2}{\tau_2}\begin{pmatrix} 1&\tau_1\\ \tau_1 & |\tau|^2\end{pmatrix}~.
+$$
+Using these expressions, show that the momentum contribution to the mass formula is given by
+\begin{align}
+\bfp_L^2&=\frac{1}{2\omega_2\tau_2}|m_2-\t m_1+\overline{\omega}(n^1 + \t n^2)|^2  \cr
+\bfp_R^2&=\frac{1}{2\omega_2\tau_2}|m_2-\t m_1+{\omega}(n^1 + \t n^2)|^2~.\nonumber
+\end{align}
+Show that, if we transform the momentum and winding numbers appropriately, the string spectrum is then invariant under the following two $\SL(2,\bZ)$ transformations
+
+
+\noindent $\bullet$ T-dualities
+$$
+\omega\to\frac{a\omega+b}{c\omega+d}
+$$
+$\bullet$ Torus modular transformations
+$$
+\tau\to\frac{a\tau+b}{c\tau+d}
+$$
+$\bullet$  \textbf{mirror symmetry} (symmetry between complexified K\"ahler modulus and complex structure modulus)
+$$
+\omega\leftrightarrow \tau
+$$
+How do the momentum and winding numbers transform?
+
+
+%Let us now figure out what is the moduli space of such
+%a compactification.
+%Any nontrivial $O(D,D)$ rotation
+%would map one even self-dual Lorentzian
+%lattice into a different one.
+%The converse is a mathematical fact:
+%any two even self-dual Lorentzian
+%lattices are related by some $O(D,D)$
+%rotation.  Therefore the space of such lattices is simply $O(D,D)$.
+%However, not all of them correspond to different compactifications.
+%The spectrum for the $(26-D)$-dimensional theory is determined
+%by $p_L^2$ and $p_R^2$.  They are left invariant by
+%$O(D)\times O(D)$, the maximal compact subgroup of $O(D,D)$,
+%acting independently on the left and right momenta respectively.
+%Therefore
+%the space of vacua is \textbf{locally} $O(D,D) / (O(D)\times O(D))$,
+%of dimension $D^2$.
+
+
+
+\end{document}

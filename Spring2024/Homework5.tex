@@ -1,0 +1,244 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 5: Due at class on April 14}
+
+
+\section{Ghost number anomaly}
+
+
+\subsection{Ghost number current}
+
+Derive the conserved current for the transformation
+\begin{align}
+\delta_{g} c = \epsilon_g c \ , \quad \delta_{g} b = -\epsilon_g b \ .
+\end{align}
+Holomorphic part of the ghost action is given by
+\begin{align}
+S_{gh} = \frac{1}{2\pi} \int d^2z b \ol\partial c \ .
+\end{align}
+(You can forget about the anti-holomorphic part for the problem.)
+
+
+
+\subsection{OPE of EM tensor and the current}
+
+Calculate the OPE between ghost EM tensor and the current derived above.
+The EM tensor is given as follows.
+\begin{align}
+T(z) = -\nord{(2b\partial c +\partial bc)(z)} \ .
+\end{align}
+
+Furthermore, write down an infinitesimal conformal transformation (with parameter $\epsilon(z)$) of the ghost number current
+from the OPE result. (Only holomorphic part is enough.)
+
+
+\subsection{Ghost number anomaly from curved WS}
+
+
+Use the assumption $\nabla^a j_a = \kappa R^{(2)}$ derive the current $j_z = -4\kappa \partial \omega +j(z)$.
+(You can assume that $j_{\ol z}=0$.)
+Metric is given by
+\begin{align}
+ds^2 = e^{2\omega} dzd\ol z \ .
+\end{align}
+
+Conformal transformation laws for $j_z$ and $\omega$ are given as follows.
+\begin{align}
+\wt{j_z}  = \left(\frac{\partial \wt z}{\partial z}\right)^{-1} j_z \ ,\\
+\wt \omega = \omega -\frac{1}{2} \log \left| \frac{\partial \wt z}{\partial z} \right|^2 \ ,
+\end{align}
+where $\wt z = z -\epsilon(z)$.
+Using the transformations, derive the infinitesimal transformation for $j(z) = j_z +4\kappa \partial \omega$,
+and confirm $\kappa = -\frac{3}{4}$ by comparing the infinitesimal transformation derived here
+and the one derived from the OPE calculation.
+
+
+
+
+
+
+\section{Veneziano amplitude}
+
+
+In this problem, we explore the Veneziano amplitude, which represents the four-point amplitude for open string tachyons scattering on the disk. Unlike its closed-string counterpart, this computation involves summing over the orderings of vertex operator insertions on the disk's boundary. We consider the upper half-plane model, placing vertex operators along the real line.
+
+\subsection{3-point amplitude}
+
+Before going into the Veneziano amplitude, let us consider the 3-point amplitude of the open string tachyons and show it takes the form 
+\be\nonumber
+S_{D_2}\left(k_1 ; k_2 ; k_3\right)=g_o^3 e^{-\lambda} \langle:c e^{i k_1 \cdot X}\left(y_1\right):: c e^{i k_2 \cdot X}\left(y_2\right)::c e^{i k_3 \cdot X}\left(y_3\right):\rangle_{D_2}
++\left(k_2 \leftrightarrow k_3\right)~.
+\ee
+ Show that it is independent of the positions of the operators.
+
+\subsection{Compute the Veneziano Amplitude}
+
+Show  the 4-point amplitude of the open string tachyons takes the form
+$$
+S_{D_2}\left(k_1 ; k_2 ; k_3 ; k_4\right) =g_o^4 e^{-\lambda} \int_{-\infty}^{\infty} d y_4\left\langle\prod_{i=1}^3 : c\left(y_i\right) e^{i k_i \cdot X\left(y_i\right)}::e^{i k_4 \cdot X\left(y_4\right)}:\right\rangle+\left(k_2 \leftrightarrow k_3\right)~.
+$$
+Demonstrate that the scattering amplitude $S(k_1, k_2, k_3, k_4)$ for four open string tachyons can be expressed as:
+$$
+\begin{aligned}
+S\left(k_1, k_2, k_3, k_4\right) = & i g_o^4 C_{D_2}^X(2 \pi)^{26} \delta^{(26)}(\sum_i k_i) \int_{-\infty}^{\infty} d y_4\left|y_4\right|^{-\alpha^{\prime} u-2}\left|1-y_4\right|^{-\alpha^{\prime} t-2} \\
+& +(t \leftrightarrow s)
+\end{aligned}
+$$
+after setting $y_1=0, y_2=1, y_3=\infty$ using $\operatorname{PSL}(2, \mathbb{R})$ invariance. 
+
+\subsection{Analyzing the Integral's Ranges}
+
+Break down the integral for the Veneziano amplitude into three distinct ranges based on the position of $y_4$: $-\infty<y_4<0, 0<y_4<1, 1<y_4<\infty$. Illustrate the corresponding orderings of the vertex operators $1, 2, 3, 4$ for these ranges and for both terms in the amplitude equation.
+
+Discuss how these ranges relate to each other through $\operatorname{PSL}(2, \mathbb{R})$ invariance, leading to the final form of the Veneziano amplitude:
+$$
+S\left(k_1, k_2, k_3, k_4\right)=2 i g_o^4 C_{D_2}(2 \pi)^{26} \delta^{(26)}(\sum_i k_i)(I(s, t)+I(t, u)+I(u, s))
+$$
+where the integral $I(s, t)$ is defined as:
+$$
+I(s, t)=\int_0^1 d y y^{-\alpha^{\prime} s-2}(1-y)^{-\alpha^{\prime} t-2} \equiv B\left(-\alpha^{\prime} s-1,-\alpha^{\prime} t-1\right) .
+$$
+Note that the Euler Beta-function $B(a, b)$ is related to the Euler Gamma-function $\Gamma$ as follows:
+$$
+B(a, b)=\frac{\Gamma(a) \Gamma(b)}{\Gamma(a+b)} .
+$$
+
+
+\subsection{ Residue Analysis of the Veneziano Amplitude}
+
+Focus on the term within the Veneziano amplitude that exhibits poles in $s$ and $t$. Calculate the residue at the pole $t=0$, and compare this residue with the one obtained in field theory from the exchange of a photon between two charged scalars. Utilize this comparison to determine the gauge coupling in terms of $g_{\mathrm{o}}$.
+
+\subsection{Contribution from the $u$ and $t$ Poles}
+
+Analyze the term within the Veneziano amplitude that has poles in $u$ and $t$. Show that this term contributes an equal and opposite residue to that calculated in the previous problem. Discuss the meaning of this contribution in the context of string theory and gauge interactions.
+
+
+
+%
+%\section{Tree amplitude}
+%
+%There are a few approach for derivation of the string amplitude.
+%One is path integral method we discussed in the lecture,
+%Here we use holomorphicity and operator method to derive the string amplitude.
+%
+%
+%\subsection{Conformal Killing Vectors}
+%
+%Show that
+%\begin{align}
+% \left(P\cdot\epsilon\right)_{ab} = 0 \ , \quad \nabla^a \theta_{ab} = 0 \ ,
+%\end{align}
+%reduces to
+%\begin{align}
+% \partial \ol\epsilon = \ol\partial\epsilon = 0 \ , \quad
+% \partial \ol\theta = \ol\partial \theta = 0 \ ,
+%\end{align}
+%for conformal gauge $ds^2 = e^{2\omega}dzd\ol z$,
+%where $\epsilon = \epsilon^z$, $\theta = \theta_{zz}$, and similar for their
+%anti-holomorphic part.
+%Note that the position of the index is determined so because
+%$\epsilon^a$ is a vector and $\theta_{ab}$ is a 2-form.
+%
+%Let us consider sphere case.
+%On sphere we can consider 2 patches,
+%on which the coordinates are $z$ and $u$, respectively,
+%and the metrics are flat.
+%Their transition is defined as
+%\begin{align}
+% u = \frac{1}{z} \ .
+%\end{align}
+%Derive $\epsilon$ and $\theta$ by requiring that they are globally defined
+%holomorphic vector and holomorphic 2-form, respectively.
+%
+%
+%
+%\subsection{Ghost sector}
+%
+%
+%Let us consider the ghost number current $j = \nord{cb}$ on sphere.
+%Finite conformal transformation of $j$ is given by
+%\begin{align}
+% j(z) = \left(\frac{\partial \wt z}{\partial z}\right) \wt j (\wt z)
+% -\frac{3}{2}\partial_z \log \left(\frac{\partial \wt z}{\partial z}\right) \ .
+%\end{align}
+%Show that ghost number operator
+%\begin{align}
+% \int_C \frac{dz}{2\pi i} j(z)
+%\end{align}
+%should be equal to $3$ by considering the other patch $\wt z=u$.
+%
+%
+%Derive the expression for $\langle c(z_1) c(z_2) c(z_3) \rangle$ on sphere up to
+%over all constant, from the features:
+%$c(z)$ is fermionic so $\lim_{z\to w} c(z)c(w) = 0$,
+%and $c(z)$ has weight $-1$.
+%(forget about the anomaly for the anti-holomorphic part otherwise this is zero).
+%
+%
+%
+%
+%
+%\subsection{Matter sector}
+%
+%Here we use operator method to derive tachyon 4pt expectation value:
+%\begin{align}
+% \left\langle \nord{e^{ik_1\cdot X(z_1)}} \nord{e^{ik_2\cdot X(z_2)}} \nord{e^{ik_3\cdot X(z_3)}} \nord{e^{ik_4\cdot X(z_4)}} \right\rangle \ .
+%\end{align}
+%Set $(z_1,z_2,z_3)$ to $(0,1,\infty)$ and then the expectation value simplifies to
+%\begin{align}
+% &\left\langle \nord{e^{ik_3\cdot X(\infty)}} T\left[\nord{e^{ik_4\cdot X(z_4)}} \nord{e^{ik_2\cdot X(1)}}\right] \nord{e^{ik_1\cdot X(0)}} \right\rangle  \nonumber\\
+% &\quad = \left\langle 0,k_3 \left| T\left[\nord{e^{ik_4\cdot X(z_4)}} \nord{e^{ik_2\cdot X(1)}}\right] \right|0;k_1\right\rangle \ ,
+%\end{align}
+%where $T[]$ is a radial ordering, namely,
+%\begin{align}
+% T\left[\nord{e^{ik_4\cdot X(z_4)}} \nord{e^{ik_2\cdot X(1)}}\right]
+% = \nord{e^{ik_4\cdot X(z_4)}} \nord{e^{ik_2\cdot X(1)}} \quad \textrm{if}\ |z_4| > 1 \ .
+%\end{align}
+%Note that $\nord{}$ can be understood as the normal ordering of the operators,
+%namely,
+%\begin{align}
+% \nord{e^{ik\cdot X(z)}} = e^{ik\cdot X_+(z)} e^{ik\cdot X_-(z)} \ ,
+%\end{align}
+%where
+%\begin{align}
+% &X^\mu_+(z) = x^\mu -i\sqrt{\frac{\alpha'}{2}} \sum_{n=1}^\infty \frac{1}{n} \left( \alpha^\mu_{-n} z^n +\wt \alpha^\mu_{-n} \ol z^n\right) \ , \\
+% &X^\mu_-(z) = -i\frac{\alpha'}{2} p^\mu \log|z|^2  +i\sqrt{\frac{\alpha'}{2}} \sum_{n=1}^\infty \frac{1}{n} \left( \alpha^\mu_{n} z^{-n} +\wt \alpha^\mu_{n} \ol z^{-n}\right) \ .
+%\end{align}
+%Assume $|z_4|>1$ and compute
+%\begin{align}
+% \left\langle 0,k_3 \left| \nord{e^{ik_4\cdot X(z_4)}} \nord{e^{ik_2\cdot X(1)}} \right|0;k_1\right\rangle \ .
+%\end{align}
+%Guess what is the result for $|z_4|<1$ case.
+%Campbell-Baker-Hausdorff formula is useful.
+%\begin{align}
+% e^A e^B  = e^B e^A e^{\left[A,B\right]} \ .
+%\end{align}
+%
+%
+%
+%\subsection{Another info from the amplitude}
+%
+%Show that residue of the Shapiro-Virasoro amplitude at $s$-channel pole
+%can be written as a polynomial of $t-u$.
+%What is the relation between the order of the polynomial and
+%the maximum spin of the $s$-channel pole state?
+%What is the slope of the spin versus mass-squared plot?
+%
+
+
+% \section{Prob. 3 (Towards 1-loop string amplitude)}
+
+% \subsection{3.1 Matter partition function}
+
+% \subsection{3.2 Ghost partition function}
+
+% \subsection{3.3 Something}
+
+
+
+
+\end{document}

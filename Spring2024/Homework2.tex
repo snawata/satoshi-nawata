@@ -1,0 +1,137 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{macros}
+
+
+%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 2: Due on Mar 24}
+
+
+%
+% \section{Prob. 2}
+% \begin{enumerate}
+%  \item Start from Green's theorem in Cartesian coordinate and show that the complex version is given by the form given in the lecture.
+%  \item Confirm that $\partial\ol\partial \log |z|^2 = 2\pi \delta^2(z)$.
+%  \item Show that $\oint \frac{d\ol z}{2\pi i} \frac{1}{\ol z} =-1$.
+% \end{enumerate}
+%
+%
+% \section{}
+% You do not have to consider space-time indices in this problem.
+% \begin{enumerate}
+%  \item Express $\nord{X_1X_2X_3X_4}$ in terms of normal products.
+%  \item Using the previous result express $X_1X_2X_3X_4$ in terms of normal-ordered products, and confirm that it can be expressed in the form of
+%        \begin{align}
+%          f[X] = \exp \left[ \frac{1}{2} \int d^2z d^2w\ G(z,w) \frac{\delta}{\delta X(z)} \frac{\delta}{\delta X(w)} \right]
+%  \nord{f[X]} \ .  \nonumber
+%        \end{align}
+% % \item Express $X_1 \partial X_2 \partial^2 X_3$ in terms of normal-ordered products.
+% \end{enumerate}
+
+%
+% \section{}
+% Let us define $T(z) = -\frac{1}{\alpha'}\nord{\partial X^\mu \partial X_\mu}$,
+% and $j(z) = a_\mu \partial X^\mu$.
+% Extract divergent terms from $j(z)X^\nu(w)$, and $T(z)T(w)$.
+
+% %
+% \subsection*{Prob. 5}
+% \begin{enumerate}
+% \item Consider the example given in the lecture $\delta X = \epsilon g(z)$.
+%       Derive $\delta f[x]$ for $f[x]=\partial X(w)$ and $f[x]= \ e^{ik\cdot X(w)}$ using the Ward identity.
+%
+% \item Derive the Noether currents for $\delta X = \epsilon \partial X +\ol\epsilon \ol\partial X$.
+%
+%
+%\section{Vertex operator and OPE}
+%Show that $:e^{ikX}:$ is a primary field of weight $h = \bar h = \a'k^2/4$ in the free scalar theory. In addition, show that $\partial^n X$ ($n\ge 2$) is not a primary field.
+
+\section{Virasoro algebra}
+From the OPE of the stress-energy tensor, derive the Virasoro algebra:
+$$
+T(z)\,T(w) = \frac{c/2}{(z-w)^4} + \frac{2T(w)}{(z-w)^2} +
+\frac{\partial T(w)}{z-w} + \ldots
+$$
+$$\longrightarrow\quad [L_m,L_n] = (m-n)L_{m+n} + \frac{c}{12}m(m^2-1)\delta_{m+n,0}~.$$
+
+\section{Witt algebra}
+A general infinitesimal holomorphic map can be expressed as
+$$z'=z-\e(z)=z-\sum_{n\in\bZ}\e_n z^{n+1} ~,$$
+with the infinitesimal parameters $\e_n$, and therefore one can define generators of the transformation by $\ell_n = -z^{n+1}\frac\partial{\partial z}$.
+Show that they satisfy the Witt algebra
+$$ [\ell_m,\ell_n] = (m-n)\ell_{m+n}~,$$
+so that the Virasoro algebra is the central extension of the Witt algebra.
+
+
+
+\section{Linear fractional transformations}
+
+Let us consider the Riemann sphere $S^2  = \bC \cup \{\infty\}$. The action of $SL(2, \bC)$ defined by
+$$z  \mapsto w = \frac{az + b}{ cz + d}~,\qquad \begin{pmatrix}a&b\\c&d\end{pmatrix}\in SL(2, \bC)~,$$
+maps the Riemann sphere onto itself. These transformations are called linear fractional  transformations.
+
+\vspace{.3cm}
+\noindent $\bullet$ Given three points $z_1,z_2,z_3$, find a linear fractional transformation which maps the points
+to $0, 1, \infty$.
+
+\vspace{.3cm}
+\noindent $\bullet$ Given four points $z_1,z_2,z_3,z_4$, their \textbf{cross ratio} is defined by
+$$
+[z_1,z_2,z_3,z_4]= {\frac  {(z_{1}-z_{3})(z_{2}-z_{4})}{(z_{2}-z_{3})(z_{1}-z_{4})}}~.
+$$
+Show that the cross ratio is preserved by any linear fractional  transformation
+$$
+[z_1,z_2,z_3,z_4]=[w_1,w_2,w_3,w_4] ~.
+$$
+
+
+
+\section{2-point and 3-point function of primary fields}
+\subsection{2-point function}
+
+Let us determine the form of the 2-point function of chiral primary operators $\phi_i(z_i)$ with weight $h_i$ ($i=1,2$).  The 2-point function is invariant under the translation $z\to z+a$ of the coordinate so that it is a function $g(z_1-z_2)$ of their relative coordinate $z_1-z_2$.
+
+Using the property of chiral primary fields under the scaling $z\to \lambda z$, show that the function is of the form
+$$
+g(z_1-z_2) =\frac{d_{12}}{(z_1-z_2)^{h_1+h_2}}~.
+$$
+Furthermore, show that  $h_1$ must be equal to $h_2$ by using the property under the transformations $z\to -1/z$.
+
+
+\subsection{3-point function}
+
+The translation invariance tells us that the 3-point function is also a function $g(z_{12},z_{23},z_{31})$ where $z_{ij}=z_i-z_j$. Applying the same argument above, derive the form of the 3-point function
+$$
+\langle \phi_1(z_1)\phi_2(z_2)\phi_2(z_3)\rangle =\frac{C_{123}}{(z_{12})^{h_1 +h_2 -h_3}(z_{23})^{h_2 +h_3 -h_1}(z_{31})^{h_3 +h_1 -h_2}}~.
+$$
+
+
+
+
+
+
+\section{Derivation}
+The derive (4.5) from (4.4) in the latest lecture note. Namely, start with 
+$$
+\delta_\epsilon T(z)=\delta_\epsilon T_{z z}-2 k\left(\partial \partial \delta_\epsilon \omega-2 \partial \omega \partial \delta_\epsilon \omega\right) .
+$$
+Using (finite) transformations,
+$$
+\begin{aligned}
+& z \rightarrow \widetilde{z}=z-\epsilon(z), \\
+& T_{z z} \rightarrow \widetilde{T}_{\tilde{z} \tilde{z}}=\left(\partial_z \widetilde{z}\right)^{-2} T_{z z}, \\
+& \omega(z) \rightarrow \widetilde{\omega}(\tilde{z})=\omega(z)-\frac{1}{2} \log \left|\partial_z \tilde{z}\right|^2,
+\end{aligned}
+$$
+Show
+$$
+\delta_\epsilon T(z)=\epsilon(z) \partial T(z)+2 \partial \epsilon(z) T(z)-k \partial^3 \epsilon(z) .
+$$
+
+
+\end{document}
