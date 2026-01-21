@@ -1,0 +1,69 @@
+\documentclass[12pt,a4paper]{article}
+
+
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 9: Due at class on May 7}
+
+
+ \vspace{.5cm}
+\noindent 1. Find the fundamental group $\pi_1(\Sigma_g)$ of the Riemann surface of genus $g$.
+
+
+\vspace{.5cm}
+\noindent 2.  Find the fundamental group $\pi_1(K)$ of the 3-dimensional complex $K$ in Problem 5 of Homework 7.
+
+
+ \vspace{.5cm}
+\noindent 3. Show that $\SO(4)\cong  \{\SU(2) \times \SU(2)\}/\{\pm \textrm{Id}\}$, where $\textrm{Id} \hookrightarrow \SU(2) \times \SU(2)$ is the
+diagonal embedding. The hint is given as follows.
+
+
+Let $\bH$ be the quaternion in which an element $x\in\bH$ can be expressed as
+$$x=x_1+x_2i+x_3j+x_4k$$ where $x_a\in\bR$ $( a=1,\cdots,4)$ and
+$$
+i^2=j^2=k^2=-1~,\quad ij=-ji=k~, \quad jk=-kj=i~,\quad ki=-ik=j ~.
+$$
+We define the imaginary part of $x$ as
+$$
+\textrm{Im}~x=x_2i+x_3j+x_4k
+$$
+so that the conjugate $\overline x$ is written as
+$$
+\overline x=x_1-x_2i-x_3j-x_4k
+$$
+Therefore, the multiplication becomes
+$$
+\overline{xy}=\overline y \cdot \overline x
+$$
+The norm of $x$ is
+$$
+|x|^2=x\overline x=\overline x x=x_1^2+x_2^2+x_3^2+x_4^2
+$$
+From this viepoint, $\SU(2)$ can be considered as a group of unit quaternions $\SU(2)=\{x\in\bH|~ |x|=1\} $. Then $\SU(2)\times \SU(2)$ acts on $\mathbb{H}$ by rotations in the following way:
+$$x\mapsto q_1 xq_2^{-1}$$
+is a rotation of $\mathbb{R}^4=\mathbb{H}$ for $q_1$, $q_2\in \SU(2)$.
+Then $(-q_1,-q_2)$ represents the same rotation as $(q_1,q_2)$. Show that these represent all the rotations of $\bR^4=\bH$ so that it is isomorphic to $\SO(4)$.
+
+
+\vspace{.5cm}
+\noindent 4.  Derive the fundamental groups of $\SO(2)$, $\SO(3)$ and $\SO(4)$.
+
+
+%
+%\vspace{.5cm}
+%\noindent 5. Show that $\SL(2,\bR)$ is a deformation retract to $\SO(2)$ in the following way.
+%\begin{itemize}
+%  \item Write an element $A \in \SL(2,\bR)$ as $A=\left(a_{1}, a_{2}\right)$, where the $a_{i}$ are column vectors. The Gram-Schmidt process replaces $A$ to $$\SO(2)\ni U=\left(\frac{a_{1}}{|a_{1}|}, \frac{a_{2}-\frac{\langle a_1,a_2\rangle}{|a_{1}|^2}a_{1}}{|a_{2}-\frac{\langle a_1,a_2\rangle}{|a_{1}|^2}a_{1}|}\right) ~,$$ where $\langle a_1,a_2\rangle$ is the standard inner product of $\bR^2$.  Construct a deformation retract that connects $A$ to $U$ inside $\SL(2,\bR)$.
+%\end{itemize}
+%Do the same exercise for $\SL(2,\bC)$ and which Lie group does it have a deformation retract to? Derive the homology groups and the fundamental group of $\SL(2,\bR)$ and $\SL(2,\bC)$.
+%
+
+
+
+
+
+
+\end{document}

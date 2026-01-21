@@ -1,0 +1,111 @@
+\documentclass[12pt,a4paper]{article}
+
+
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 6: Due at class on April 16}
+
+
+
+\vspace{.5cm}
+\noindent  \textbf{1}. (Kepler's two-body problem)
+
+Let us consider one of the first examples of integrable systems solved by the Liouville theorem: The Kepler two-body problem of planetary motion.
+Taking the center-of-mass frame, the potential $V(r)$ of the system depends only on the radius, and the Hamiltonian is given by
+$$
+H=\frac{1}{2} \sum_{i=1}^{3} p_{i}^{2}+V(r)~.
+$$
+
+\begin{enumerate}\item Show that the angular momentum
+$$
+\vec{J}=\left(J_{1}, J_{2}, J_{3}\right), \quad J_{i j}=x_{i} p_{j}-x_{j} p_{i}=\epsilon_{i j k} J_{k}
+$$
+is conserved.
+
+\item Given the standard symplectic form $\omega=\sum_{i=1}^3dp_i\wedge dx_i$, compute the Poisson brackets
+$$
+\left\{J_{i}, J_{j}\right\}=-\epsilon_{i j k} J_{k}~.
+$$
+Show that the following three physical quantities commute under the Poisson bracket
+$$
+H, \quad J_{3}, \quad J^{2}=J_{1}^{2}+J_{2}^{2}+J_{3}^{2}
+$$
+\item  Rewrite the Liouville 1-form
+\begin{equation}\label{Liouville}
+\alpha=\sum_{i} p_{i} d x_{i}=p_{r} d r+p_{\theta} d \theta+p_{\phi} d \phi
+\end{equation}
+in terms of the polar coordinates
+$$
+x_{1}=r \sin \theta \cos \phi, \quad x_{2}=r \sin \theta \sin \phi, \quad x_{3}=r \cos \theta~.
+$$
+Rewrite the conserved quantities $H$, $J_{3}$, $J^{2}$ in terms of the polar coordinates and $(p_{r},p_{\theta},p_{\phi})$.
+
+\item Without loss of generality, we can rotate our coordinate system such that in a new system $\vec{J}$ has only the third component: $\vec{J}=\left(0,0, J_{3}\right)$. This can be simply done by setting $\theta=\frac{\pi}{2}$. Kepler's 2nd law states that the areal (sectorial) velocity is constant, and in this situation, it is nothing but the conservation of $J_3$ because the areal velocity is
+$$
+\frac{dA}{dt}=\frac12r^2\dot\phi=\frac12J_3~.
+$$
+
+
+
+Under this situation, show that an integral of the Liouville 1-form \eqref{Liouville} becomes
+\begin{equation}
+S=\int\alpha=\pm\int^{r} dr \sqrt{2(H-V)-\frac{J^{2}}{r^{2}}}+\int^{\phi} J_3 d \phi
+\end{equation}
+where the sign $\pm$ is chosen in such a way that it is consistent with $p_r$.
+ Derive the equations of motion for the angle variables $$\psi_{H}=\frac{\partial S}{\partial H}, \quad \psi_{J}=\frac{\partial S}{\partial J}~.$$ Discuss their physical consequence. In particular, under which condition is an orbit of the motion closed?
+
+\item Let us assume that the potential takes the form $$V(r)=-\frac{k}{r}~.$$ Show the Kepler's 1st law: a planet describes an ellipse with the Sun at one focus.
+Let $T$ be the revolution period of a planet and $a$ be the major semi-axes of ellipse. Show the   Kepler's 3rd law:
+$$ T =\frac{2\pi}{\sqrt{k}}a^{\frac 32} ~.$$
+Refer to \href{https://en.wikipedia.org/wiki/Semi-major_and_semi-minor_axes}{Wikipedia page} for the terminolgy.
+
+\end{enumerate}
+
+
+
+
+
+\vspace{.5cm}
+\noindent  \textbf{2}. (Harmonic oscillator)
+
+Let us consider a linear system of $N$ particles that are coupled by springs, given by the Hamiltonian:
+$$
+ H=\frac{1}{2} \sum_{i=1}^N p_i^2+\frac{\omega^2}{2} \sum_{i=1}^N\left(q_i-q_{i+1}\right)^2 \qquad \text { where } q_{N+1}=q_1
+$$
+The Poisson brackets for the canonical variables associated with this Hamiltonian are given by:
+$$
+\left\{q_k, q_l\right\}=0, \quad\left\{p_k, p_l\right\}=0, \quad\left\{p_k, q_l\right\}=-\delta_{k, l}
+$$
+These brackets determine the time evolution of the system.
+\begin{enumerate}\item Write down the Hamiltonian equations  as
+\begin{equation}
+ \dot{\boldsymbol{q}}=\boldsymbol{p}, \qquad
+ \dot{\boldsymbol{p}}=-\omega^2A \boldsymbol{q}
+\end{equation}
+Find the explicit form of the matrix $A$. Find eigenvalues and eigenvectors of $A$.
+\item For the sake of simplicity, let us set $N=2M+1$, and let us define
+\begin{equation}
+ Q_k=\frac{1}{\sqrt{N}} \sum_{i=1}^N e^{\frac{2 \pi \sqrt{-1}}{N} k i} q_i\qquad P_k=\frac{1}{\sqrt{N}} \sum_{i=1}^N e^{\frac{2 \pi \sqrt{-1}}{N} k i} p_i
+\end{equation}
+where $k=-M,\ldots,M$. Write down the Hamiltonian in terms of $ Q_k$ and $P_k$. Solve the Hamiltonian equations.
+\item Let us define  
+\begin{equation}
+a_k=\frac{1}{\sqrt{2}}\left(P_{-k}+\sqrt{-1} \omega(k) Q_{-k}\right), \qquad  \bar{a}_k=\frac{1}{\sqrt{2}}\left(P_k+\sqrt{-1} \omega(k) Q_k\right)
+\end{equation}
+where $\omega(k)=2 \omega \sin \frac{\pi k}{N}=2 \omega \sin \frac{\pi k}{2 M+1}$  ($k= \pm 1, \pm 2, \cdots, \pm M$).
+Write down the Hamiltonian in terms of $P_0$, $a_k$, $\bar{a}_k$. Find the Poisson bracket relations 
+\be
+\left\{a_k, a_l\right\}~, \quad
+\left\{a_k, \bar{a}_l\right\} ~,\quad
+\left\{\bar{a}_k, \bar{a}_l\right\}~.\ee
+Show that the followings are conserved:
+\be I_0=\frac{1}{2} P_0^2, \quad I_k=a_{-k} a_k, \quad I_{-k}=\bar{a}_{-k} \bar{a}_k\ee
+where $k=1,2,\ldots,M$.
+Show also that 
+\begin{equation}
+\left\{I_k, I_l\right\}=0~, \qquad k\neq l.
+\end{equation}
+\end{enumerate}
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass[12pt,a4paper]{article}
+
+
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 10: Due at class on May 14}
+
+
+
+
+
+ \vspace{.5cm}
+\noindent 1.  Derive \textbf{real} dimensions of  Symplectic group $\mathrm { Sp } ( n) $
+%\item Special unitary group $\SU(n) = \{A \in \GL(n,\bC)|A^\dagger A=1,\ \det A = 1\}$
+%\item Special orthogonal group $\SO(n) = \{A \in \GL(n,\bR)|A^TA=1,\ \det A = 1\}$
+%\end{itemize}
+%
+
+
+%
+\vspace{.5cm}
+\noindent 2.  Show that Euler characteristics of a compact Lie group is zero.
+
+
+
+
+\vspace{.5cm}
+\noindent 3. Show that there are matrices \(A, B \in \frakgl(n,\bC)\) such that $$e^A e^B \neq e^{A+B}~.$$ Modify this equation in such a way that the equality holds for those matrices $A,B$.
+
+
+
+
+\vspace{.5cm}
+\noindent 4. We have seen that $\mathrm{PSL}(2,\bR)=\SL(2,\bR)/\{\pm\mathrm{Id}\}$ acts on the upper half plane ($\textbf{H},\frac{dzd\bar z}{(\Im~z)^2}$) as an isometry group:
+$$
+\mathrm{PSL}(2,\bR) \times \textbf{H} \to \textbf{H};\begin{pmatrix}
+a&b\\
+c&d\\
+\end{pmatrix} \cdot z\mapsto \frac{az+b}{cz+d}~.
+$$
+Show that this action is transitive and find the stabilizer subgroup of the point $i\in  \textbf{H}$. Find the fundamental group of $\mathrm{PSL}(2,\bR)$.
+
+
+
+
+\vspace{.5cm}
+\noindent 5. Show that $\SL(2,\bR)$ is a deformation retract to $\SO(2)$ in the following way.
+\begin{itemize}
+  \item Write an element $A \in \SL(2,\bR)$ as $A=\left(a_{1}, a_{2}\right)$, where the $a_{i}$ are column vectors. The Gram-Schmidt process replaces $A$ to $$\SO(2)\ni U=\left(\frac{a_{1}}{|a_{1}|}, \frac{a_{2}-\frac{\langle a_1,a_2\rangle}{|a_{1}|^2}a_{1}}{|a_{2}-\frac{\langle a_1,a_2\rangle}{|a_{1}|^2}a_{1}|}\right) ~,$$ where $\langle a_1,a_2\rangle$ is the standard inner product of $\bR^2$.  Construct a deformation retract that connects $A$ to $U$ inside $\SL(2,\bR)$.
+\end{itemize}
+Do the same exercise for $\SL(2,\bC)$ and which Lie group does it have a deformation retract to? Derive the homology groups and the fundamental group of $\SL(2,\bR)$ and $\SL(2,\bC)$.
+
+
+
+
+ \vspace{.5cm}
+\noindent 6.
+Let us define
+$$
+\sigma_{\mu} \equiv(\mathbf{1}, \vec{\sigma})
+$$
+where $\sigma_{i}$ are the Pauli matrices. Compute that $\operatorname{det} X$ where
+$$
+X:=x^{\mu} \sigma_{\mu}=\left(\begin{array}{cc}
+t+z & x-i y \\
+x+i y & t-z
+\end{array}\right)~.
+$$
+Give the definition of the Lorentz group $\SO(1,3)$. $\SO(1,3)$ is indeed not connected.
+Let us denote a subgroup of Lorentz group by $\mathrm{SO}^{+}(1,3)$ that satisfies the following two properties:
+$$
+\operatorname{det} \Lambda^\mu{}_\nu=1~, \qquad
+\Lambda^{t}{}_{t} \geq 1  \qquad \Lambda^\mu{}_\nu\in \SO(1,3)~.
+$$
+Show that this subgroup $\SO^{+}(1,3)$ is isomorphic to $\SL(2,\bC)/\{\pm\mathrm{Id}\}$. Derive the fundamental group $\pi_1(\SO^{+}(1,3))$.
+
+
+
+
+\end{document}
