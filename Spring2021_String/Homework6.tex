@@ -1,0 +1,173 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 6 (Due at class on April 23)}
+\section{ Partition functions}
+
+\subsection{$S^1$ partition function of bosons}
+
+Consider two harmonic oscillators on $S^1$ (time direction is compactified and its period is $\beta$)
+with the Hamiltonian
+\begin{align}
+ H = a^\dagger a + b^\dagger b \ .
+\end{align}
+Their commutation relations are
+\begin{align}
+ [a,a^\dagger] = 1 \ , \quad  [b,b^\dagger] = 2 \ ,
+\end{align}
+otherwise zero.
+Derive the partition function of this theory:
+\begin{align}
+ Z = \mathrm{tr} \left[ e^{-\beta H} \right]
+\end{align}
+
+
+\subsection{$S^1$ partition function of fermions}
+
+Consider two fermions on $S^1$ with Hamiltonian
+\begin{align}
+ H = d^\dagger d + 2 f^\dagger f \ .
+\end{align}
+Non-trivial anti-commutation relations are
+\begin{align}
+ \{d,d^\dagger\} = 1 \ , \quad  \{f,f^\dagger\} = 1 \ .
+\end{align}
+Derive the partition function of this theory with a periodic boundary condition
+\begin{align}
+ Z = \mathrm{tr} \left[ (-1)^F e^{-\beta H} \right] \ ,
+\end{align}
+as well as an anti-periodic boundary condition
+\begin{align}
+ Z = \mathrm{tr} \left[ e^{-\beta H} \right] \ .
+\end{align}
+Note that
+\begin{align}
+ \{(-1)^F,d\} = 0 , \quad
+ \{(-1)^F,d^\dagger\} = 0 , \quad
+ \{(-1)^F,f\} = 0 , \quad
+ \{(-1)^F,f^\dagger\} = 0 \ ,
+\end{align}
+and assume
+\begin{align}
+ (-1)^F |0 \rangle = - |0 \rangle \ .
+\end{align}
+
+
+
+\subsection{ Torus partition function of $X$}
+
+Derive the torus partition function of the matter sector of the bosonic string
+$\langle 1 \rangle_X$.
+
+\subsection{Torus partition function of ghosts}
+
+Derive the torus partition function of holomorphic ghost sector of the bosonic string
+\begin{align}
+ \mathrm{tr} \left[ (-1)^F b_0 c_0 q^{L_0 -\frac{c_{gh}}{24}} \right] \ ,
+\end{align}
+where $c_{gh} = -26$, and
+\begin{align}
+ L_0 = \left( \sum_{n\in \mathbb Z} n \nord{ b_{-n} c_n } \right) -1 \ .
+\end{align}
+The non-trivial anti-commutation relations are
+\begin{align}
+ \left\{ c_m,b_n \right\} = \delta_{m+n,0} \ .
+\end{align}
+Note that $c_m \ (m \le 0)$ and $b_n \ (n < 0)$ are creation op, and $c_m \ (m > 0)$ and $b_n \ (n \ge 0)$ are anihilation op.
+
+
+\subsection{Torus partition function of the bosonic string}
+
+
+\begin{itemize}
+ \item Derive the number of the second excited states of the bosonic string from an expansion of $|\eta(\tau)|^{-48}$.
+ \item The modular transformations of the $\tau$-function are given by
+       \begin{align}
+        &T: \quad \eta(\tau+1) = e^{i\pi/12} \eta(\tau) \ ,  \\
+        &S: \quad \eta(-1/\tau) = \sqrt{-i\tau} \eta(\tau) \ .
+       \end{align}
+       Show the torus partition function of the bosonic string is modular invariant.
+\end{itemize}
+
+\section{Wold-sheet supersymmetry}
+\subsection{Supersymmetric transformation}
+Show that the action
+\be\label{action}
+ S^{\textrm{m}} = \frac{1}{4\pi} \int d^2 z\ \Big( \frac{2}{\alpha'} \partial X  \overline\partial X+\psi^\mu\overline\partial\psi_\mu+\ol \psi^\mu\partial\ol\psi_\mu\Big)
+\ee
+is invariant under the supersymmetric transformation
+$$
+\delta_{\e,\bar\e} X^\mu=-\sqrt{\frac{\a'}{2}}\,(\e \psi^\mu+\overline \e \ol\psi^\mu)~,\qquad
+\delta_\e \psi^\mu =\sqrt{\frac{2}{\a'}}\, \e \partial X^\mu~, \qquad \delta_{\bar\e} \ol\psi^\mu =\sqrt{\frac{2}{\a'}}\,\overline\e \overline \partial X^\mu~.
+$$
+Also, show that the combination of supersymmetric transformations provides derivatives
+$$
+[\delta_{\e_1,\bar \e_1},\delta_{\e_2,\bar \e_2}]\cO=2\e_1\e_2\partial  \cO+2\overline \e_1\overline \e_2\overline \partial  \cO~.
+$$
+
+\subsection{ Superspace formalism}
+This theory can be formulated in terms of superspace $(z,\bar z,\theta, \bar \theta)$ where $(\theta, \bar \theta)$ are anti-commuting Grassmann coordinates. We can introduce the superfield
+$$
+Y^\mu(z,\bar z,\theta, \bar \theta) = X^\mu(z,\bar z) + i \theta  \psi^\mu(z,\bar z) +i \bar \theta \ol \psi^\mu(z,\bar z) + \frac12 \bar\theta \theta F^\mu(z,\bar z)~,
+$$
+as well as the superderivative
+$$
+D = \frac{\partial}{\partial \theta} + \theta \partial_z~, \quad \overline D = \frac{\partial}{\partial  \bar\theta} +\bar \theta \overline\partial_{\bar z}~.
+$$
+The field $F^\mu$ is called an \textbf{auxiliary field}. Then, show that the action \eqref{action} at $\a'=2$ is equivalent to
+$$
+S=\frac1{4\pi}\int d^2z d^2\theta \  \overline D Y^\mu DY_\mu~,
+$$
+where the superspace integral is defined as $d^2\theta=d\theta d\bar\theta$, and
+$$
+\int d\theta d\bar\theta ~ \bar\theta\theta=1~.
+$$
+
+
+\subsection{Supersymmetric ghost}
+Let us define the ghost superfields as
+$$
+B=\b+\theta b~, \qquad C=c+\theta \g ~.
+$$
+Show that the supersymmetric ghost action can be written as
+$$
+S^{\textrm{gh}} = \frac{1}{2\pi} \int d^2z  d^2\theta ~ B \overline D C~.
+$$
+
+\section{$\cN=1$ superconformal  algebra}
+In general, a 2d superconformal field theory has the following OPEs for the stress-energy tensor $T(z)$ and the supercurrent $G(z)$
+\begin{align}\label{OPE}
+T(z)T(w) &\sim {c/2\over (z-w)^4}+{2\over (z-w)^2}
+  T(w)+{1\over z-w}\partial_w T(w)\cr
+T(z) G(w) &\sim {3/2\over (z-w)^2}G(w)+{1\over
+  z-w}\partial_w G(w)\cr
+G(z)G(w) &\sim {2c/3\over (z-w)^3}+{2\over
+z-w}T(w)\,\,.
+\end{align}
+As in the lecture, we carry out the mode expansion
+$$
+T_B(z)=\sum\limits_{m\in\bZ}\frac{L_m}{z^{m+2}}~,\qquad G(z)=\sum_{r\in \bZ+\nu}\frac{G_r}{ z^{r+3/2}}
+$$
+where $\nu=0$ and $\nu=\frac12$ correspond to Ramond sector and
+Neveu-Schwarz sector, respectively.
+From the OPEs \eqref{OPE}, derive $\cN=1$ superconformal
+algebra
+\begin{align*}
+[L_m,L_n] &=(m-n)L_{m+n}+{c\over
+12}\,m(m^2-1)\delta_{m+n,0}\cr
+[L_m,G_r] &=\left(\frac12\,m-r\right)G_{r+m}\cr
+\{G_r,G_s\} &=2 L_{r+s}+{c\over 3}(r^2-\frac14)
+  \delta_{r+s,0}~.
+\end{align*}
+
+
+
+
+
+
+
+\end{document}

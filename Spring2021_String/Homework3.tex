@@ -1,0 +1,107 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+\usepackage{macros}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 3: Due at class on March 26}
+
+\section{Schwarzian derivative}
+Under a holomorphic transformation $z \rightarrow w(z)$, the stress-energy tensor is indeed transformed as
+$$
+\widetilde{T}(w)=\left(\frac{\mathrm{d} w}{\mathrm{~d} z}\right)^{-2}\left[T(z)-\frac{c}{12}\{w ; z\}\right]
+$$
+where $\{w ; z\}$ is the additional term called the Schwarzian derivative:
+$$
+\{w ; z\}=\frac{\left(\mathrm{d}^{3} w / \mathrm{d} z^{3}\right)}{\mathrm{d} w / \mathrm{d} z}-\frac{3}{2}\left(\frac{\mathrm{d}^{2} w / \mathrm{d} z^{2}}{\mathrm{~d} w / \mathrm{d} z}\right)^{2}
+$$
+\subsection{}Show that its infinitesimal version provides conformal Ward identity.
+
+
+\subsection{Under $\SL(2,\bC)$}
+For an element of $\SL(2,\bC)$
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix} \in \SL(2,\bC)$$
+show that
+$$
+\{w;z\}=0\quad \textrm{for} \ w=\frac{az+b}{cz+d}~,
+$$
+and
+$$
+\left\{\frac{aw+b}{cw+d};z\right\}=\{w;z\}~.
+$$
+
+
+\subsection{Free boson}
+The energy-momentum tensor of the free boson is
+$$
+  T(z) = - \frac12 :\partial_zX \partial_zX:\,
+$$
+where the normal ordering can be defined as
+$$
+:\partial_zX \partial_zX: =\lim_{w\to z} \left( \partial_zX(z) \partial_{w}X(w)+\frac1{(z-w)^2}\right)~.
+$$
+Since $\partial_zX$ is the primary field of conformal dimension one, it transforms as
+$$
+ \partial_zX(z) \partial_{w}X(w)=f'(z)f'(w)\partial_{\wt z}X(\wt z) \partial_{\wt w}X(\wt w)
+$$
+under the conformal transformation $z\to \wt z= f(z)$. Hence we have
+$$
+:\partial_zX (z)\partial_wX(w): -\frac1{(z-w)^2}=f'(z)f'(w)\left[:\partial_{\wt z}X(\wt z) \partial_{\wt w}X(\wt w): -\frac1{(\wt z-\wt w)^2}\right]
+$$
+Taking limit $z\to w$, show that
+$$
+\lim_{z\to w}\left[\frac{f'(z)f'(w)}{(f(z)-f(w))^2} -\frac1{(z-w)^2} \right]=\frac16\{f(w);w\}~.
+$$
+
+
+
+
+\section{2-point and 3-point function of primary fields}
+\subsection{2-point function}
+
+Let us determine the form of the 2-point function of chiral primary operators $\phi_i(z_i)$ with weight $h_i$ ($i=1,2$).  The 2-point function is invariant under the translation $z\to z+a$ of the coordinate so that it is a function $g(z_1-z_2)$ of their relative coordinate $z_1-z_2$.
+
+Using the property of chiral primary fields under the scaling $z\to \lambda z$, show that the function is of the form
+$$
+g(z_1-z_2) =\frac{d_{12}}{(z_1-z_2)^{h_1+h_2}}~.
+$$
+Furthermore, show that  $h_1$ must be equal to $h_2$ by using the property under the transformations $z\to -1/z$.
+
+
+\subsection{3-point function}
+
+The translation invariance tells us that the 3-point function is also a function $g(z_{12},z_{23},z_{31})$ where $z_{ij}=z_i-z_j$. Applying the same argument above, derive the form of the 3-point function
+$$
+\langle \phi_1(z_1)\phi_2(z_2)\phi_2(z_3)\rangle =\frac{C_{123}}{(z_{12})^{h_1 +h_2 -h_3}(z_{23})^{h_2 +h_3 -h_1}(z_{31})^{h_3 +h_1 -h_2}}~.
+$$
+
+
+
+
+
+\section{Free fermion}
+
+Since we have studied the free scalar theory, now let us study the free fermion theory.
+The action for a free Majorana fermion reads
+$$S =\frac1{4\pi}\int d^2x\bar\Psi \gamma^a\partial_a \Psi~,$$
+where  $\overline\Psi = \Psi^\dagger \gamma^0$, and the gamma matrices are given by\
+$$
+\g^0=\begin{pmatrix} 0&1\\1&0\end{pmatrix}~, \quad \g^1=\begin{pmatrix} 0&-i\\i&0\end{pmatrix}~.
+$$
+In Euclidean space-time, they satisfy the relation $\{\g_i, \g_j\} = 2\delta_{ij}$.
+
+\begin{itemize}
+\item Rewrite the action in terms of $\psi(z, \bar z), \bar \psi(z, \bar z)$ where $\Psi = \begin{pmatrix}\psi\\ \bar\psi
+\end{pmatrix}$ where $z = x^0 + ix^1$ and $\bar z = x^0 - ix^1$.
+
+\item Calculate the equations of motion for $\psi(z, \bar z), \bar \psi(z, \bar z)$. Find an explicit expression of the stress-energy tensor. What do they imply?
+\item The OPE takes the form
+$$
+\psi(z, \bar z)\psi(w, \bar w)=\frac1{z - w}+:\psi(z, \bar z)\psi(w, \bar w):$$
+Deduce that $\psi(z, \bar z)$ is a primary field and find its weight.
+\item Calculate the OPE $T(z)T(w)$.
+
+\end{itemize}
+
+\end{document}
