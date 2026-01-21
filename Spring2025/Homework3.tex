@@ -1,0 +1,147 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+% %\usepackage[UTF8]{ctex}
+% \usepackage{jheppub}
+\usepackage{macros}
+\pdfoutput=1
+
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 3: Due on Apr 15}
+\bigskip
+\textbf{Caution:} 
+When solving homework problems, it is important to show your derivation at each step. Nowadays, many online tools make it easy to find answers, but the primary goal of these assignments is to deepen your understanding through hands-on problem-solving. By working through the calculations yourself, you engage more deeply with the material, making the learning process more meaningful, rather than simply copying answers from external sources.
+
+
+
+
+
+\section{Correlation functions of vertex operators}
+A vertex operator $V_k(z)= :e^{ik\varphi}$ defined by using the normal-ordering can be understood as
+$$
+V_k(z):=V_k^+(z)V_k^-(z)
+$$
+where $V_k^+(z)$ (resp. $V_k^-(z)$) consists of creation (resp. annihilation) operators
+\bea\nonumber
+V_k^+(z)&:=\exp\left( k \sum_{n=0}^\infty t_n(z)\right)~, \quad  t_0=i\varphi_0 \qquad t_{n>0} =\frac{a_{-n}}{n}z^n~,\cr
+V_k^-(z)&:=\exp\left( k \sum_{n=0}^\infty u_n(z)\right)~, \quad  u_0=a_0\log z \qquad u_{n>0} =-\frac{a_{n}}{n}z^{-n}~.
+\eea
+Show that their OPE is
+$$
+V_{k_1}(z)V_{k_2}(w)\sim(z-w)^{k_1k_2}:V_{k_1}(z)V_{k_2}(w):~,
+$$
+where
+\bea\nonumber
+V_{k_1}(z)V_{k_2}(w)&=V_{k_1}^+(z)V_{k_1}^-(z)V_{k_2}^+(w)V_{k_2}^-(w) \cr
+:V_{k_1}(z)V_{k_2}(w):&=V_{k_1}^+(z)V_{k_2}^+(w)V_{k_1}^-(z)V_{k_2}^-(w)~.
+\eea
+In addition, show that the two point function of vertex operators is
+$$
+\langle V_{k_1}(z)V_{k_2}(w)\rangle=\frac{\delta_{k_1,-k_2}}{(z-w)^{k_1^2}}~.
+$$
+In a similar fashion, show that multi-point correlation function of vertex operators is given by
+$$
+\langle V_{k_1}(z_1)V_{k_2}(z_2)\cdots V_{k_n}(z_n)\rangle=\delta_{\sum k_i,0}\prod_{1\le i<j\le n}(z_i-z_j)^{k_ik_j}~.
+$$
+
+\section{Linear dilaton CFT}
+In the lecture, we have consider the free boson. Now let us consider another important theory whose action is
+$$
+S=\frac1{8\pi}\int d^2z \sqrt{g} \nabla_\a \varphi \nabla^\a \varphi+\frac{Q}{4\pi} \int d^2z\sqrt{g} R\varphi
+$$
+where $g$ is the metric of the two-dimensional world-sheet and $R$ is the Ricci scalar of $g$. This model is called linear dilaton CFT and $Q$ is called background charge.  Using the definition
+$$
+T_{\a\b}=-\frac{4\pi}{\sqrt{g}}\frac{\delta S}{\delta g^{\a\b}}~,
+$$
+one can show that  the energy-momentum tensor in the flat metric $g_{\a\b}=\d_{\a\b}$ is
+$$T ( z ) = - \frac { 1 } { 2} : \partial \varphi ( z ) \partial \varphi( z ) : +Q \partial ^ { 2 } \varphi( z )~.$$
+(If you derive this, I will give you an extra point.)
+\subsection{}
+Compute $TT$ OPE and find the central charge of the linear dilaton CFT.
+\subsection{}
+Show that $\partial \varphi$ is a primary of conformal dimension
+$h = 1$ only when $Q = 0$. Show that the vertex operator $V_k(z)=: e^{ik\varphi} :$ is primary and compute its conformal dimension. In addition, compute the OPE
+$\partial \varphi(z) V_k(w)$.
+\subsection{}
+Let us define the state $|k\rangle=\lim_{z\to 0}V_k(z)|0\rangle$ that corresponds to the vertex operator $V_k(z)$. Show that
+$$
+a_0|k\rangle=k|k\rangle~, \qquad L_0|k\rangle=\frac{k(k+2iQ)}2|k\rangle~, \qquad L_n|k\rangle=0 \quad\textrm{for} \ n>0.
+$$
+\subsection{}
+When ${\sqrt{2}\a_\pm}=-iQ\pm\sqrt{2-Q^2}$, find that
+$$
+T(z)V_{\sqrt{2}\a_\pm}(w)\sim\frac{\partial}{\partial w} \frac{V_{\sqrt{2}\a_\pm}(w)}{z-w}
+$$
+so that
+$$
+\Big[T(z),\oint \frac{dw}{2\pi i} V_{\sqrt{2}\a_\pm}(w)\Big]=0~.
+$$
+In fact, $\mathbf{S}_\pm=\oint \frac{dw}{2\pi i} V_{\sqrt{2}\a_\pm}(w)$ is called the screening charge.
+
+
+
+
+\section{Feigin-Fuchs representation}
+We shall derive the Kac determinant (5.15) of the lecture note by following Feigin-Fuchs.
+\subsection{Kac determinant}
+Show that the parameters in the Kac determinant (5.15)  obey
+$$
+\a_++\a_-=2\sqrt{-h_0}~,\qquad \a_+\a_-=-1~.
+$$
+
+\subsection{Screening charge}
+ Let us consider the linear dilaton CFT in the previous problem where the background charge is set to
+$$
+Q=\sqrt{2h_0}=i\sqrt{\frac{1-c}{12}}~.
+$$
+Recalling that a vertex operator $V_k(z)=:e^{ik\varphi(z)}:$ in the linear dilaton CFT has conformal dimension $h=k(k+2iQ)/2$, derive that the conformal dimension of the vertex operator $V_{\sqrt{2 }\a_\pm}(w)$ is equal to one. Hence,  $\mathbf{S}_\pm=\oint \frac{dw}{2\pi i} V_{\sqrt{2 }\a_\pm}(w)$ are the screening charge. Show that the state
+$$
+\mathbf{S}_\pm^r|k\rangle \qquad \textrm{for} \ r\in \bZ_{>0}
+$$
+is a singular vector where $|k\rangle=\lim_{z\to 0}V_k(z)|0\rangle$ if it is not zero.
+
+
+
+\subsection{Integral representation}\label{singular}
+It admits the integral representation as
+\bea\nonumber
+\mathbf{S}_+^r|k\rangle &=\frac{1}{(2\pi i)^r} \int d z _ { 1 } \cdots d z _ { r } V _ { \sqrt{2}\a_+  } \left( z _ { 1 } \right) \cdots V _ { \sqrt{2}\a_+  } \left( z _ { r } \right) | k \rangle \cr
+&=\frac{1}{(2\pi i)^r} \int d z _ { 1 } \cdots d z _ { r } \prod _ { 1 \leq i < j \leq r } \left( z _ { i } - z _ { j } \right) ^ {2\a_+^2  } : V _ { \sqrt{2}\a_+  } \left( z _ { 1 } \right) \cdots V _ { \sqrt{2}\a_+  } \left( z _ { r } \right) : | k \rangle~.
+\eea
+Let us recall that
+$$
+a_0|k\rangle =k|k\rangle~,\quad e^{ip\varphi_0}|k\rangle=|k+p\rangle~,\quad a_n|k\rangle=0~, \ (n>0)~.
+$$
+In addition, the normal-ordering can be understood as
+$$
+: V _ { \sqrt{2}\a_+  } \left( z _ { 1 } \right) \cdots V _ { \sqrt{2}\a_+  } \left( z _ { r } \right) : = V^+ _ { \sqrt{2}\a_+  } \left( z _ { 1 } \right) \cdots V^+ _ { \sqrt{2}\a_+  } \left( z _ { r } \right)  V^- _ { \sqrt{2}\a_+  } \left( z _ { 1 } \right) \cdots V^- _ { \sqrt{2}\a_+  } \left( z _ { r } \right) ~.
+$$
+Here we write the creation operator $V_k^+(z)$
+\bea\nonumber
+V_{\sqrt{2}\a_+  }^+(z)&=\exp\left( \sqrt{2}\a_+   \sum_{n=0}^\infty t_n(z)\right)=\left(  \sum_{n=0}^\infty p_mz^m\right)e^{i\sqrt{2}\a_+ \varphi_0}~.\cr
+\eea
+Then, show that the integral expression can be written as
+$$
+\mathbf{S}_+^r|k\rangle =\frac{1}{(2\pi i)^r} \int d z _ { 1 } \cdots d z _ { r } \prod _ { 1 \leq i < j \leq r } \left( z _ { i } - z _ { j } \right) ^ { 2\a_+^2 } \sum _ { m _ { i } \geq 0 } \prod _ { i = 1 } ^ { r } p _ { m _ { i } } z _ { i } ^ { m _ { i } + k  \sqrt{2}\a_+   } | k + r   \sqrt{2}\a_+   \rangle~.
+$$
+
+In order for this state to be non-zero, the integral should be invariant under the scaling $z_i\to \lambda z_i$, which requires
+$$
+r + \frac { r ( r - 1 ) } { 2 } 2\a_+^2 + \sum _ { i = 1 } ^ { r } m _ { i } + r k  \sqrt{2}\a_+ = 0~.
+$$
+If we assume that the level $ \sum _ { i = 1 } ^ { r } m _ { i } $ of the singular vector $\mathbf{S}_+^r|k\rangle $ is equal to $rs$, show that $k$ has to be
+\be\label{momenta}k = \frac { 1 - r } { 2 } \sqrt{2 }\a_+ + \frac { 1 + s } { 2 }\sqrt{2 }\a_-~.\ee
+This implies that $\mathbf{S}_+^r|k\rangle $ is a non-zero singular vector at level $rs$ if $k$ is subject to \eqref{momenta}. Compute the conformal dimension of $\mathbf{S}_+^r|k\rangle$ and show that it is equal to $h_{r,s}$ in the Kac determinant (5.15) of the lecture note.
+
+
+
+
+
+
+\end{document}
