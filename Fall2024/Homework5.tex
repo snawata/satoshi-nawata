@@ -1,0 +1,65 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+% %\usepackage[UTF8]{ctex}
+% \usepackage{jheppub}
+\usepackage{macros}
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 5: Due on Dec 15}
+
+\section{Smarr formula}
+Compute the Smarr integrals in Kerr black hole, and express them as functions of $r_+$ and $a$
+\be 
+\begin{aligned} M_H & =-\frac{1}{8 \pi} \oint_{\cH} \nabla^\alpha t^\beta d S_{\alpha \beta} \\ J_H & =\frac{1}{16 \pi} \oint_{\cH} \nabla^\alpha \phi^\beta d S_{\alpha \beta},\end{aligned}
+\ee 
+where $t^\beta=(\partial_t)^\beta$ and $\phi^\beta=(\partial_\phi)^\beta$ are Killing vectors, and $\cH$ is the outer horizon.
+Show that they are subject to 
+\begin{equation}
+M_H=2 \Omega_H J_H+\frac{\kappa A}{4 \pi}
+\end{equation}
+
+\section{Hawking-Hartle formula}
+Consider a quasi-static process during which the surface area of a black hole changes. (By quasi-static we mean that $d A / d v$ is very small.) Derive the Hawking-Hartle formula,
+\be
+\frac{d A}{d v}=\frac{8 \pi}{\kappa} \oint_{\mathcal{H}(v)}\left(\frac{1}{8 \pi} \sigma^{\alpha \beta} \sigma_{\alpha \beta}+T_{\alpha \beta} \xi^\alpha \xi^\beta\right) d S,
+\ee 
+in which $\xi^\alpha$ is tangent to the null generators of the event horizon and $\sigma_{\alpha \beta}$ is their shear tensor. The second term within the integral represents the effect of accreting matter on the surface area. The first term represents the effect of gravitational radiation flowing across the horizon.
+
+
+\section{Derivations}
+\begin{itemize}
+    \item 
+Consider two sets of functions, $\left\{\phi_I(x)\right\}$ and $\left\{\phi_I^{\prime}(x)\right\}$, related by the Bogoliubov transformations:
+\be 
+\begin{aligned}
+\phi_I^{\prime}(x) & =\sum_I\left[\alpha_{I J} \phi_J(x)+\beta_{I J} \phi_J^*(x)\right], \\
+\phi_I^{\prime *}(x) & =\sum_I\left[\beta_{I J}^* \phi_J(x)+\alpha_{I I}^* \phi_J^*(x)\right] .
+\end{aligned}
+\ee 
+Show the following  conditions
+\be 
+\begin{aligned}
+\alpha \alpha^{\dagger}-\beta \beta^{\dagger} & =1, & \alpha \beta^T-\beta \alpha^T & =0, \\
+\alpha^{\dagger} \alpha-\beta^T \beta^* & =1, & \alpha^{\dagger} \beta-\beta^T \alpha^* & =0,
+\end{aligned}
+\ee
+
+\item 
+We define the (unnormalized) left- and right Rindler wedge $n$-particle states:
+\begin{equation}
+    |^R n, P\rangle = (b_P^{R\dagger})^n |0_{Rd}\rangle, \quad \text{and} \quad |^L n, P\rangle = (b_P^{L\dagger})^n |0_{Rd}\rangle.
+\end{equation}
+Show that the Minkowski vacuum is written as an entangled state
+\begin{equation}
+    |0_M\rangle = \prod_P\left(\cosh \phi_P\right)^{-1} \sum_{n=0}^\infty e^{-n \pi \omega / \kappa} |^R n, P\rangle |^L n, P\rangle,
+\end{equation}
+where $\phi_P$ is defined by $\tanh \phi_P=e^{-\pi \omega / \kappa}$.
+\end{itemize}
+
+\end{document}
