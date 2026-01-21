@@ -278,6 +278,14 @@ main{
 }
 
  .space-list li{ margin: 4px 0; }
+ 
+ .page-date {
+  font-size: 0.85em;
+  color: #aaa;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
 
 
 /* =========================
@@ -289,3 +297,5 @@ main{
   .topbar{ padding: 14px var(--pad); }
   main{ padding-top: 12px; }
 }
+
+
