@@ -1,0 +1,60 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+% %\usepackage[UTF8]{ctex}
+% \usepackage{jheppub}
+\usepackage{macros}
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 3: Due on Nov 10}
+\bigskip
+\textbf{Caution:} 
+When solving homework problems, it is important to show your derivation at each step. Nowadays, many online tools make it easy to find answers, but the primary goal of these assignments is to deepen your understanding through hands-on problem-solving. By working through the calculations yourself, you engage more deeply with the material, making the learning process more meaningful, rather than simply copying answers from external sources.
+
+
+
+\section{Energy Efficiency of Accretion Discs}
+
+Consider an accretion disc as an ensemble of rings of (massive) matter gradually moving from large radii to small ones. In this exercise, we will calculate the energy efficiency associated with the infall of matter from infinity to the Innermost Stable Circular Orbit (ISCO) around a Kerr black hole.
+The binding energy at the ISCO is given by:
+\[
+\e_b = \frac{\e_\infty - \e_{\text{ISCO}}}{\e_\infty}
+\]
+where \( \e_\infty \) is the energy at infinity and \( \e_{\text{ISCO}} \) is the energy at the ISCO.
+
+
+Estimate the binding energy \(\e_b\) for Kerr black hole. Plot \(\e_b\) as a function of the Kerr parameter \(a\) (the dimensionless spin parameter). Evaluate the values of \(\e_b\) for Schwarzschild and the extremal Kerr.
+
+
+
+\section{Gravitational red shift in Kerr spacetime (S. Carroll Problem 6.6)}
+
+Consider a Kerr black hole with a thin accretion disk of negligible mass lying in the equatorial plane. Assume that particles in the disk follow geodesic motion, neglecting any pressure support. Now, suppose the disk contains iron atoms that are excited by a nearby source of radiation. When these atoms de-excite, they emit radiation with a known frequency \( \nu_0 \) in their rest frame. 
+
+You are observing this radiation from a position far from the black hole, also in the equatorial plane. 
+\begin{enumerate}
+    \item  What is the observed frequency of photons emitted from the inner and outer edges of the disk, as well as from the center of the disk?  
+    \item  How do these observed frequencies differ if the disk and black hole are rotating in the same direction versus opposite directions?  
+    \item  Can these frequency measurements be used to determine the mass and angular momentum of the black hole? If so, describe how.
+\end{enumerate}
+
+\section{Energy extract from RN black hole (S. Carroll Problem 6.4)}
+In the presence of an electromagnetic field, a particle of charge $e$ and mass $m$ obeys
+$$
+\frac{d^2 x^\mu}{d \tau^2}+\Gamma_{\rho \sigma}^\mu \frac{d x^\rho}{d \tau} \frac{d x^\sigma}{d \tau}=\frac{e}{m} F_\nu^\mu \frac{d x^\nu}{d \tau}
+$$
+Imagine that such a particle is moving in the field of a Reissner-Nordström black hole with charge $Q$ and mass $M$.
+\begin{enumerate}
+    \item Show that the energy
+$$
+E=m\left(1-\frac{2 G M}{r}+\frac{G Q^2}{r^2}\right) \frac{d t}{d \tau}+\frac{e Q}{r}
+$$
+is conserved.
+\item Will a Penrose-type process work for a charged black hole? What is the change in the black hole mass, $\delta M$, for the maximum physical process?
+\end{enumerate}
+\end{document}
