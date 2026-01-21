@@ -1,0 +1,161 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+% %\usepackage[UTF8]{ctex}
+% \usepackage{jheppub}
+\usepackage{macros}
+\pdfoutput=1
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 4: Due on April 30}
+\bigskip
+\textbf{Caution:} 
+When solving homework problems, it is important to show your derivation at each step. Nowadays, many online tools make it easy to find answers, but the primary goal of these assignments is to deepen your understanding through hands-on problem-solving. By working through the calculations yourself, you engage more deeply with the material, making the learning process more meaningful, rather than simply copying answers from external sources.
+
+
+
+
+
+
+
+
+
+
+\section{Onsager's exact solution}
+Let us consider an $M\times N$ square periodic lattice. At each vertex, one can define fermionic operators
+\begin{equation}\nonumber
+\psi_{i}(x)=\sigma(x) \mu\left(x+a_{i}\right)~,\qquad (i=1,\ldots,4)
+\end{equation}
+where the position is defined as below
+\begin{figure}[h]\centering
+  \includegraphics{lattice}
+\end{figure}
+
+Suppose that the branch cut from the disordered operator $\mu$ runs to the left. Then, we can write
+\begin{equation}\nonumber
+\begin{aligned}
+\psi_{1}(x) &=\sigma(x) \mu\left(x+a_{1}\right) \\
+&=\sigma(x) \mu\left(x+a_{2}\right) e^{-2 K \sigma(x) \sigma\left(x+e_{2}\right)} \\
+&=\sigma(x) \mu\left(x+a_{2}\right)\left(\operatorname{ch}(2 K)-\operatorname{sh}(2 K) \sigma(x) \sigma\left(x+e_{2}\right)\right) \\
+&=\operatorname{ch}(2 K) \psi_{2}(x)-\operatorname{sh}(2 K) \psi_{3}\left(x+e_{2}\right)
+\end{aligned}
+\end{equation}
+Show that
+\begin{equation}\nonumber
+\slashed{D}\Psi=0, \quad \slashed{D}=\left[\begin{array}{cccc}
+-1 & \operatorname{ch}(2 K) & -\operatorname{sh}(2 K) D_{2} & 0\\
+0& -1 & \operatorname{ch}(2 K) & -\operatorname{sh}(2 K) D_{1}^{-1} \\
+\operatorname{sh}(2 K) D_{2}^{-1} &0 & -1 &\operatorname{ch}(2 K)\\
+-\operatorname{ch}(2 K) & \operatorname{sh}(2 K) D_{1} & 0& -1
+\end{array}\right], \quad \Psi=\left[\begin{array}{l}
+\psi_{1} \\
+\psi_{2} \\
+\psi_{3} \\
+\psi_{4}
+\end{array}\right]
+\end{equation}
+where $D_i$ is the shift operator along $e_i$. Essentially, the partition function of fermionic model of Ising model can be understood as
+\begin{equation}\nonumber
+Z_{M N}=\int d\Psi e^{\Psi \slashed{D}\Psi}=(\det \slashed{D})^{1/2}
+\end{equation}
+Show that the free energy of the Ising model is
+\begin{align}\nonumber
+&\lim_{M,N\to\infty} \frac{1}{M N} \log Z_{M N}\cr =&\frac12\log[ 2\operatorname{ch}^{2}(2 K)]+\frac12\int_{0}^{2 \pi} \int_{0}^{2 \pi} \log \left(\operatorname{ch}^{2}(2 K)-\operatorname{sh}(2 K)\left(\cos \theta_{1}+\cos \theta_{2}\right)\right) \frac{d \theta_{1}}{2 \pi} \frac{d \theta_{2}}{2 \pi}
+\end{align}
+which is the Onsager's exact solution.
+
+
+
+
+
+\section{Kramers-Wannier symmetry}
+
+\subsection{Sequential quantum circuit}
+
+The non-invertible Kramers-Wannier operator takes the form
+$$
+\mathsf{D}=\sqrt{2} e^{-\frac{2 \pi i L}{8}} U_{\mathrm{KW}} \frac{1+\prod_{j=1}^L X_j}{2}
+$$
+Here
+$$
+U_{\mathrm{KW}}=\left(\prod_{j=1}^{L-1} \frac{1+i X_j}{\sqrt{2}} \frac{1+i Z_j Z_{j+1}}{\sqrt{2}}\right) \frac{1+i X_L}{\sqrt{2}}
+$$
+is a unitary, sequential linear circuit. Prove that
+$$
+U_{\mathrm{KW}} X_j U_{\mathrm{KW}}^{-1}= \begin{cases}Z_j Z_{j+1}, & j \neq L \\ \left(\prod_{j=1}^L X_j\right) Z_L Z_1, & j=L\end{cases}
+$$
+Therefore, $U_{\mathrm{KW}}$ does not act locally on the $\mathbb{Z}_2$-even local operators. Furthermore, $U_{\mathrm{KW}}$ does not commute with the lattice translation. From this it is clear that the multiplication by the projection factor $\frac{1+\prod_{j=1}^L X_j}{2}$ removes this issue.
+
+\subsection{Self-dual deformation}
+
+Prove that the deformed Hamiltonian
+$$
+H=-\sum_{j=1}^L X_j-\sum_{j=1}^L Z_j Z_{j+1}+\frac{\lambda}{2} \sum_{j=1}^L\left(X_{j-1} Z_j Z_{j+1}+Z_{j-1} Z_j X_{j+1}\right)
+$$
+at $\lambda=1$ has the following three product states
+$$
+|++\ldots+\rangle,|00 \ldots 0\rangle,|11 \ldots 1\rangle
+$$
+as exactly degenerate ground states. (It is more challenging to prove that this Hamiltonian at $\lambda=1$ is gapped and has no other ground states.)
+
+Next, in this three-dimensional ground space, find the simultaneous eigenbasis for $\eta$ and D .
+
+\subsection{Matrix product operator}
+
+The Kramers-Wannier operator admits the following MPO presentation with bond dimension 2:
+$$
+\begin{aligned}
+& \mathsf{D}=\operatorname{Tr}(\mathbb{U}^1 \mathbb{U}^2 \cdots \mathbb{U}^L), \\
+& \mathbb{U}^j=\begin{pmatrix}|0\rangle\langle+|_j & |0\rangle\langle- |_j \\ |1\rangle\langle-|_j& | 1\rangle\langle+|_j \end{pmatrix}
+\end{aligned}
+$$
+
+Prove that
+$$
+\mathbb{U}^j X_j=\mathbb{Z} \mathbb{U}^j \mathbb{Z}, \quad Z_j \mathbb{U}^j=\mathbb{Z} \mathbb{U}^j
+$$
+where $\mathbb{Z}=\left(\begin{array}{cc}1 & 0 \\ 0 & -1\end{array}\right)$. Using the above, show that $\mathsf{D} X_j=Z_j Z_{j+1} \mathsf{D}$. Similarly, compute $X_j \mathbb{U}^j$ and $\mathbb{U}^j Z_j$, and show that $\mathsf{D} Z_j Z_{j+1}=X_{j+1} \mathsf{D}$.
+
+
+\subsection{Non-invertible reflection}
+
+Define
+$$
+\begin{aligned}
+& \mathbb{U}^{j^{\prime}}=\mathbb{H} \mathbb{U}^j 
+\mathbb{H}=\begin{pmatrix}|+\rangle\langle 0|_j &|-\rangle\langle 1|_j\\ |-\rangle\langle 0|_j &|+\rangle\langle 1|_j \end{pmatrix}, \\
+& \mathbb{H}=\frac{1}{\sqrt{2}}\left(\begin{array}{ll}
+1 & 1 \\
+1 & -1
+\end{array}\right)
+\end{aligned}
+$$
+We see that $\mathbb{U}^{j^{\prime}}=\left(\mathbb{U}^j\right)^{T \dagger}$, where the transpose is taken in the virtual/bond space and the dagger is taken in the physical space.
+
+Define the reflection operator $\mathsf{P}$ so that it acts as $\mathsf{P} O_j \mathsf{P}^{-1}=O_{-j}$. Using the MPO presentation of $\mathsf{D}$, show that
+$$
+\mathsf{PDP}^{-1}=\mathsf{D}^{\dagger}
+$$
+Next, define a non-invertible reflection operator
+$$
+\mathsf{D}^{\prime}=\mathrm{PD}
+$$
+Show that
+$$
+\left(\mathsf{D}^{\prime}\right)^2=1+\eta
+$$
+Unlike $\mathsf{D}$, the non-invertible reflection operator does not mix with lattice translations.
+
+
+
+
+% \section{Derivation}
+% Derive (6.21),  (6.22) and (6.26) of the lecture note.
+
+
+\end{document}
