@@ -1,0 +1,1072 @@
+\documentclass[2dCFT-lecture.tex]{subfiles}
+
+\begin{document}
+\section{Entanglement entropy}
+
+In this section, we will learn how 2d CFTs are related to entanglement entropy \cite{Calabrese:2004eu} and holography.  There are nice reviews \cite{Calabrese:2009qy,Nishioka:2009un,Takayanagi:2012kg,Solodukhin:2011gn,Harlow:2014yka,Rangamani:2016dms}. At the end of this section, we will introduce the celebrated Ryu-Takayanagi entanglement entropy formula \cite{Ryu:2006bv,Ryu:2006ef}.
+
+
+\subsection{Introduction to entanglement entropy}\label{sec:EE}
+In this subsection, we briefly introduce some basic concepts
+and properties in entanglement entropy.
+
+
+
+In quantum mechanics, the state of a quantum system is represented by a state vector, denoted $| \psi \rangle$, whose time evolution is governed by the Schr\"odinger equation
+\[
+i \frac{\partial}{\partial t} | \Psi \rangle = H | \Psi \rangle
+\]
+A quantum system with a state vector $ | \psi \rangle$  is called a \textbf{pure state}.
+
+However, it is also possible for a system to be in a statistical ensemble of different state vectors: For example, there may be a 50\% probability that the state vector is $| \psi_1 \rangle$  and a 50\% chance that the state vector is $| \psi_2 \rangle$. This system would be in a \textbf{mixed state}. The density matrix $\rho_{\text{tot}}$ is especially useful for mixed states, because any state, pure or mixed, can be characterized by a single density matrix.
+
+
+
+
+
+A density matrix  $\rho_{\text{tot}}$ is a matrix that describes the statistical state of a system in quantum mechanics. For instance, the density matrix in the canonical ensemble of a system with Hamiltonian $H$ and temperature $T$ is
+\[
+\rho_{\text{tot}}= \frac{e^{- \beta H}}{\cZ}~.
+\]
+Note that we always normalize $\Tr_{\cH_{\text{tot}}} \rho_{\text{tot}}$. Then, the entropy can be expressed in terms of the density matrix
+\be\label{VN-entropy}
+S=\frac{E-F}{T}=\frac{- 1}{\cZ} \left( \operatorname {Tr}_{\mathcal {H}_{\textrm{tot}}} \left[ \beta H e^{- \beta H} \right] + Z \log Z \right)=-\rho_{\text{tot}} \log \rho_{\text{tot}}
+\ee
+which is called \textbf{von Neumann entropy}.
+
+
+
+If we express a pure state by the density operator
+\begin{equation}
+  \rho=\ket{\phi}\bra{\phi} \, ,
+\end{equation}
+the expectation value of operator $\cO$ can be expressed by
+density operator
+\begin{equation}
+ \expval{\cO}_\rho := \Tr(\rho \cO)\, .
+\end{equation}
+
+\begin{figure}[ht]\centering
+\includegraphics[width=8cm]{picture/EE-illustration}
+	\caption{The subsystem $A$ on which we consider entanglement entropy and its complement $B$.}
+	\label{fig:ee-illustration}
+\end{figure}
+
+
+Let us consider the situation in which a system is divided into two subsystems $A$ and $B$ where  the Hilbert space is simply a direct product
+\[
+\mathcal {H}_ {\textrm{tot}} = \mathcal {H}_{A} \otimes \mathcal {H}_{B}
+\]
+Then, we can consider the density operator $\rho_A$  restricted to the subsystem $A$ by taking the trace over $\cH_B$
+\begin{equation}
+ \rho_A := \Tr_{\cH_B}(\rho_{\text{tot}})\, .
+\end{equation}
+Then, the \textbf{entanglement entropy} in the subsystem $A$  is defined as
+\begin{equation}
+  S_A := -\Tr_{\cH_A}(\rho_A \log \rho_A)\, ,
+\end{equation}
+like the von Neumann entropy \eqref{VN-entropy}.
+
+
+For example, let $\cH_A$
+and $\cH_B$ be two Hilbert spaces spanned by $\{\ket{0}_A,\ket{1}_A\}$ and $\{\ket{0}_B,\ket{1}_B\}$, respectively.
+Considering a state
+\begin{equation}
+\label{entanglement-state}
+  \ket{\phi}=\frac{1}{\sqrt{2}}
+  (\ket{1}_A \otimes \ket{0}_B+\ket{0}_A\otimes\ket{1}_B)
+\end{equation}
+However long the subsystems are apart, if measurement in $A$ is $\ket{1}_A$, then
+then the measurement in
+$B$ is bound to measure $\ket{0}_B$. Hence, subsystem $A$ is \textbf{entangled} with  subsystem $B$. This is called \textbf{quantum entanglement}.
+
+
+
+In fact, the density matrix for the state \eqref{entanglement-state},
+\bea
+\rho_{\text{tot}} =& |\phi\rangle \langle \phi|\cr
+=& \frac{1}{2}
+(\ket{0}_A\bra{0}_A\otimes\ket{1}_B\bra{1}_B
++\ket{0}_A\bra{1}_A\otimes\ket{1}_B\bra{0}_B\notag\\
+&+\ket{1}_A\bra{0}_A\otimes\ket{0}_B\bra{1}_B
++\ket{1}_A\bra{1}_A\otimes\ket{0}_B\bra{0}_B)\,,
+\eea
+and the restricted one is
+\begin{equation}
+ \rho_A:=\Tr_{\cH_B}(\rho_{\text{tot}})=\frac{1}{2}
+ (\ket{0}_A\bra{0}_A+ \ket{1}_A\bra{1}_A)\,~.
+\end{equation}
+Thus the entanglement entropy can be evaluated as
+\begin{equation}
+  S_A=\log 2\,.
+\end{equation}
+This is indeed related to the fact that both the Hilbert spaces $\cH_A$ and $\cH_B$ are two-dimensional. In fact, the maximal entanglement entropy is given by $\min(\log \dim \cH_A,\log \dim \cH_B )$. Therefore, the state \eqref{entanglement-state} is maximally entangled.
+
+
+On the other hand,  a state $\ket{\psi}$ is called \textbf{separate} if it can be written as
+the direct product of two pure states, i.e
+\begin{equation}
+ \ket{\psi}=\ket{\phi}_A \otimes \ket{\phi}_B \, ,
+ \qquad
+ \ket{\phi}_A \in \cH_A\, \&
+ \ket{\phi}_B \in \cH_B\, .
+\end{equation}
+In this case, it is easy to check that
+the entanglement entropy  vanishes, which
+means there is no entanglement between both systems.
+
+
+In conclusion, the information lost by the trace over the Hilbert space $\cH_B$ is somehow restored in $S_A$ using quantum entanglement. Hence,
+The entanglement entropy plays a very important role when we cannot observe a subsystem $B$.
+
+
+
+There are some equivalent formulas that will be useful in the later calculations:
+\bea
+S_A=\lim_{n\to 1} \frac{\Tr_{\cH_A} \rho^n_A -1}{1-n}
+=-\pdv{}{n}\Tr_{\cH_A} \rho^n_A|_{n=1}
+=- \pdv{}{n}\log \Tr_{\cH_A} \rho_A^n|_{n=1}\,.
+\eea
+
+
+
+\subsubsection*{Properties of entanglement entropy}
+There are several useful properties that entanglement entropy
+enjoys generally. We summarize some of them as follows.
+\begin{itemize}
+\item
+Suppose that $B$ is the complement of $A$. If the density matrix $\rho_{\text{tot}}$ is constructed from a pure state such as in the
+zero temperature system, then we find the following relation
+\begin{equation}
+\label{complement-prop}
+ S_A=S_B \, .
+\end{equation}
+ The entanglement entropy is thus not an extensive
+quantity. For a mixed state, this relation does not hold.
+
+\item
+For three
+non-intersecting subsystems $A$, $B$, and $C$, the following two inequalities
+hold
+\bea
+\label{strong-subadditivity-property}
+S_{A+B+C}+S_B &\leq S_{A+B}+S_{B+C}\,,\cr
+S_A+S_C &\leq S_{A+B}+S_{B+C}\, ,
+\eea
+which are called \textbf{strong subadditivity} \cite{lieb1973fundamental}.
+
+\item
+If the subsystem $B$ is empty in the above setting, they reduce to the subadditivity relation
+\begin{equation}
+\label{subadditivity relation}
+S_{A+B} \leq S_A+S_B \, .
+\end{equation}
+\item
+We thus are allowed to define a 
+non-negative quantity called \textbf{mutual
+information} $I(A,B)$ by
+\begin{equation}
+  I(A,B)=S_A+S_B-S_{A+B}\geq 0 \, .
+\end{equation}
+\end{itemize}
+
+\subsection{Conformal field theory on \texorpdfstring{$\bZ_n$}{Zn} orbifold}
+Before studying entanglement entropy in conformal field theory, we shall generalize the twist operator discussed in \S\ref{sec:Ising} to the $\bZ_n$ orbifold. In \S\ref{sec:Ising}, the continuum limit of the Ising model is described by the free fermion $\psi$, and the presence of a spin field $\sigma$ introduces the $\bZ_2$ twist condition to the free fermion in the complex plane:
+\begin{equation}
+  \psi(e^{2\pi i}z)=- \psi(z) \, ,
+\end{equation}
+which means the field operator produces a minus sign once being taken around the origin. This is a global effect and the field operator is double-valued in space-time. The $\bZ_2$ twist operator $\sigma$ can be generalized to any finite group. In particular, we
+are interested in the $\bZ_n$ twist, which is defined as follows
+\begin{equation}
+\label{ZN-orbifold-definition}
+ X(e^{2\pi i}z, e^{-2\pi i}\overline{z}) =
+ e^{2\pi k i /N} X(z,\overline{z})\, ,
+\end{equation}
+where $k$ is the integer called monodromy of the field $X$.
+For the definition of \eqref{ZN-orbifold-definition} to make
+sense, $X$ must be complex. Therefore, We combine two copies of free boson $\varphi_1$, $\varphi_2$ to introduce the complex free boson:
+\begin{equation}
+X=\varphi_1(z,\overline{z})+i \varphi_2(z,\overline{z})\, ,
+\qquad
+\overline{X}=\varphi_1(z,\overline{z})-i \varphi_2(z,\overline{z})\, .
+\end{equation}
+$\varphi_1$ $\varphi_2$ are real scalar fields. We have studied
+these fields in Chapter 4. Thus, the properties of complex free
+boson are easy to derive. Let us list some of them in brief.
+First, the holomorphic fields for complex free bosons are as follows:
+\def\pd{\partial}
+\begin{equation}
+  \pd X(z)=\pd \varphi_1(z)+i \pd \varphi_2(z) \, .
+\end{equation}
+The holomorphic energy-momentum tensor is
+\begin{equation}
+ T(z)=\frac{1}{2} \big(
+ :\pd\varphi_1 \pd\varphi_1:
+ +
+ :\pd\varphi_2\pd\varphi_2:
+ \big)
+=-\frac{1}{2}
+ :\pd X \pd \overline{X} : \, ,
+\end{equation}
+which is just the sum of the energy-momentum tensor
+of two real scalar fields. The central charge of this theory
+becomes $2$. The OPE of $\pd X$ and $\pd\overline{X}$ is
+\begin{equation}
+  \pd X(z) \pd X(w) \sim
+  -\frac{2}{(z-w)^2} \, .
+\end{equation}
+In a similar fashion to \eqref{def-EM-tensor 2}, the vacuum expectation value of energy-momentum is
+\begin{equation}
+ \expval{T(z)} := \bigg[
+ \expval{
+ -\frac{1}{2} \pd X(z) \pd \overline{X}(w)
+}
+-\frac{1}{(z-w)^2}
+ \bigg]_{z=w}\,.
+\end{equation}
+To generalize the definition, we need to replace the original vacuum state with the twist
+ground state. The twist ground state
+for the $\bZ_n$ orbifold is defined by acting a twist operator on the vacuum state at the zero point.
+\begin{equation}
+  \sigma_{k/N}(0)\ket{0}=\ket{\sigma_{k/N}}\, .
+\end{equation}
+$\sigma_{k/N}$ is defined to twist the field $X$ by
+$e^{2\pi i k/N}$ when $X$ turns around it counterclockwise.
+The conjugate state then is given by inserting anti-twist
+operator $\sigma_{-k/N}$  at infinity which is denoted by
+$\bra{\sigma_{-k/N}}$. By introducing twist operators, the global ground effect can be illustrated by inserting a local operator \cite[ISZ88-No.47]{Dixon:1986qv}.
+
+\def\sm{\bra{\sigma_{-k/N}}}
+\def\sp{\ket{\sigma_{k/N}}}
+
+The expectation value of energy-momentum in the $\bZ_n$ twist
+ground state now can be evaluated as
+\begin{equation}
+\label{def-vacuum-expectation-e-m-tensor-complex-boson}
+  \frac{\bra{\sigma_{-k/N}} T(z) \ket{\sigma_{k/N}}}
+ {\bra{\sigma_{-k/N}}\ket{\sigma_{k/N}}} :=
+  \bigg[
+  \frac{\sm -\frac{1}{2}\pd X(z)\pd \overline{X}(w) \sp}
+ {\bra{\sigma_{-k/N}}\ket{\sigma_{k/N}}}
+ -\frac{1}{(z-w)^2}
+  \bigg]_{z=w}\, ,
+\end{equation}
+where the normalized factor in the denominator can be adjusted
+to $1$.
+We have calculated this quantity in the R sector of free fermion. To perform the calculation, we need to study the mode expansion of $X$ first.
+
+From \eqref{ZN-orbifold-definition}, we immediately obtain that
+\bea
+ \pd X(e^{2\pi i} z , e^{-2\pi i}\overline{z})
+ &= e^{2\pi i(k/N-1)} \pd X(z,\overline{z})\, ,\\
+ \pd \overline{X} (e^{-2\pi i}\overline{z},e^{2\pi i} z)
+ &= e^{-2\pi i(k/N+1)} \pd \overline{X}(\overline{z},z)\, .
+\eea
+Therefore, the Laurent expansions of $\pd X$ and $\pd \overline{X}$
+must have the form
+\bea
+\label{ZN-twist-mode}
+ i\pd_z X &= \sum_{m\in\mathbb{Z}}
+ \alpha_{m-k/N} z^{-m-1+k/N} \, , \notag\\
+ i\pd_z \overline{X} &=\sum_{m\in\mathbb{Z}}
+ \overline{\alpha}_{m+k/N} z^{-m-1-k/N}\, .
+\eea
+The mode operators have the following canonical commutation
+relations
+\begin{equation}
+ \comm{\overline{\alpha}_{m+k/N}}{\alpha_{n-k/N}}
+ =2(m+k/N)\delta_{m,-n}\, ,
+\end{equation}
+where $2$ comes from the fact that a complex boson field
+consists of two real scalar fields. And the twist ground
+state $\sp$ is annihilated by all the positive frequency
+mode operators
+\bea
+  \alpha_{m-k/N} \sp &= 0\, , \qquad m>0 \,,\\
+  \overline{\alpha}_{m+k/N}\sp &=0\, , \qquad m\geq 0\, .
+\eea
+Using the mode expansion \eqref{ZN-twist-mode} and their
+properties we mentioned above, we can calculate the expectation
+value in the twist ground state
+\begin{equation}
+ -\frac{1}{2}\sm\pd X(z)\overline{\pd}X(w)\sp
+=z^{-(1-k/N)}w^{-k/N}
+ \bigg[
+ \frac{(1-k/N)z+k w/N}{(z-w)^2}
+ \bigg] \, .
+\end{equation}
+From \eqref{def-vacuum-expectation-e-m-tensor-complex-boson},
+we can compute
+\begin{equation}
+\label{T-expval-twist-ground}
+ \sm T(z) \sp =\frac{1}{z^2}\cdot \frac{1}{2}\frac{k}{N}\bigg(1-\frac{k}{N}\bigg)\, .
+\end{equation}
+From the previous study, we know that as a local operator, $T \sigma_{k/N}$ OPE should have the following form
+\begin{equation}
+ T(z)\sigma_{k/N}(0) =\cdots \frac{h \sigma_{k/N}(0)}{z^2}+\cdots\, ,
+\end{equation}
+where $h$ is the conformal dimension for the twist field $\sigma_{k_N}$. Plugging into \eqref{T-expval-twist-ground},
+we immediately obtain the conformal dimension for $\sigma_{k/N}$ is $ \frac{1}{2}\frac{k}{N}\big(1-\frac{k}{N}\big)$. The same analysis can be applied for $\sigma_{-k/N}$ and the anti-holomorphic sector.
+
+\subsection{Entanglement entropy in 2d CFTs}
+Now, we shall study the entanglement entropy in 2d CFTs. We define a subsystem $A$ at fixed time $t=t_0$, 
+with its complement called $B$. We denote the boundary of $A$ by $\pd A$. Noting that we normalize the restricted density matrix as $\Tr \rho_A=1$, we can define the entanglement entropy $S_A$ by the
+following formula:
+\be\label{SA-cal-formula}
+\begin{aligned}
+S_{A} &=\lim _{n \rightarrow 1} \frac{\operatorname{Tr}_{\mathcal{H}_{A}} \rho_{A}^{n}-1}{1-n} \\
+&=-\left.\frac{\partial}{\partial n} \operatorname{Tr}_{\mathcal{H}_{A}} \rho_{A}^{n}\right|_{n=1}=-\left.\frac{\partial}{\partial n} \log \operatorname{Tr}_{\mathcal{H}_{A}} \rho_{A}^{n}\right|_{n=1} .
+\end{aligned}
+\ee
+This is called the \textbf{replica trick}. Therefore, what we need to do is to evaluate $\Tr_{\cH_A}\rho^n_A$ in our 2d system.
+
+To this end, let us recall how a wave function of the ground state can be expressed in the path-integral. Here we consider the Euclidean 2d QFT and we write the coordinates as $(x_0,x_1)$.
+The probability that the field configuration becomes $\phi\left(x_{1}\right)$ at $x_0=0$ is given by the following path-integral expression
+\begin{equation}
+\Psi\left[\phi\left(x_{1}\right)\right] =\frac{1}{\sqrt{\cZ_1}} \int_{x_0=-\infty}^{x_0=0} \mathcal{D} \phi~ e^{-\mathcal{S}(\phi)} \delta\left[\phi\left(0, x_{1}\right)-\phi\left(x_{1}\right)\right]~.
+\end{equation}
+In fact, the integration from $x_0=0$ to $x_0=-\infty$ corresponds to the operation $\lim_{T\to \infty} e^{-TH}$ so that this realizes the ground state wave function. Likewise, we can define its complex conjugate
+\begin{equation}
+\Psi^{*}\left[\phi\left(x_{1}\right)\right] =\frac{1}{\sqrt{\cZ_1}} \int_{x_0=0}^{x_0=\infty} \mathcal{D} \phi~e^{-\mathcal{S}(\phi)} \delta\left[\phi\left(0, x_{1}\right)-\phi\left(x_{1}\right)\right]~.
+\end{equation}
+
+Now, the total density matrix $\rho_{\textrm{tot}}$ is given by the product of two wave functions
+\be \left[\rho_{\textrm{tot}}\right]_{\phi_{-}\left(x_{1}\right), \phi_{+}\left(x_{1}^{\prime}\right)}=\Psi\left[\phi_{-}\left(x_{1}\right)\right] \Psi^{*}\left[\phi_{+}\left(x_{1}^{\prime}\right)\right] ~.\ee
+Using the above path-integral expressions, the density matrix restricted to $A$ can be written as
+\begin{equation}
+\label{reduce-density-matrice}
+\left[\rho_{A}\right]_{\phi_{-} \phi_{+}}=\frac{1}{\cZ_1} \int_{x_0=-\infty}^{x_0=\infty} \mathcal{D} \phi~ e^{-\mathcal{S}(\phi)} \prod_{x \in A} \delta\left(\phi(-0, x)-\phi_{-}(x_{1})\right) \cdot{\delta}\left(\phi(+0, x_{1})-\phi_{+}(x_{1})\right)~,
+\end{equation}
+where $\phi_-$ and $\phi_+$ are both boundary wave functions at $A$. Note that taking the trace over the complement $B$ amounts to the integration over the subsystem $B$ at $x_0=0$. (See Figure \ref{fig:9-1}.)
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.3\linewidth]{picture/9-1}
+\qquad
+		\includegraphics[width=0.3\linewidth]{picture/9-2}
+	\caption{Left: the reduced density matrix $[\rho_A]_{\phi_-\phi_+}$ admits an interpretation of the path-integral over the slit with boundary condition $(\phi_-,\phi_+)$. Right: $\Tr_{\cH_A} \rho^n_A$ can be understood as the path-integral over $n$-sheeted Riemann surface $\mathcal{R}_n$}
+	\label{fig:9-1}
+\end{figure}
+
+
+To evaluate $\Tr_{\cH_A} \rho^n_A$, we just need to multiply the $n$ copies of
+\eqref{reduce-density-matrice} with the same boundary conditions for the adjacent matrices
+\begin{equation}
+\left(\prod_{j=1}^{n}\left[D \phi_{j}\right]\right)\left[\rho_{A}\right]_{\phi_{1} \phi_{2}}\left[\rho_{A}\right]_{\phi_{2} \phi_{3}} \cdots\left[\rho_{A}\right]_{\phi_{n} \phi_{1}} .
+\end{equation}
+This corresponds to gluing $n$-sheets along the subsystem $A$ successively as in Figure \ref{fig:9-1}. Writing the resultant $n$-sheeted Riemann
+surface $\mathcal{R}_n$, the final path-integral expression can be written as
+\begin{equation}
+ \Tr_{\cH_A} \rho^n_A=(\cZ_1)^{-n} \int_{(x_0,x_1)\in\mathcal{R}_n}
+ \mathcal{D}\phi~e^{-\cS(\phi)} \equiv \frac{\cZ_n}{(\cZ_1)^n}\,.
+\end{equation}
+
+
+
+To evaluate this path-integral, we consider that there is a distinct field at each sheet, called \textbf{replica fields},
+and we denote them by $\phi_k(x_0,x_1) (k=1, 2,\cdots n)$. To realize the field on the $n$-sheeted Riemann
+surface $\mathcal{R}_n$, we impose the twisted boundary conditions
+\begin{equation}
+\phi_k (e^{2\pi i}(w-u))=\phi_{k+1}(w-u)\,, \qquad
+\phi_k(e^{2\pi i}(w-v))=\phi_{k-1}(w-v) \, ,
+\end{equation}
+where we write the complex coordinate $w=x_0+ix_1$, and $u$ and $v$ are the endpoints of the subsystem $A$. (See Figure \ref{fig:replica}.)
+Assuming that $\phi$ is a complex scalar field with central charge $c=2$, then we
+can introduce $n$ new fields
+$\wt{\phi}_k=\frac{1}{n}\sum_{l=1}^n e^{2\pi ilk/n} \phi_l$. They obey the boundary condition
+\begin{equation}
+ \wt{\phi}_k(e^{2\pi i}(w-u))=e^{2\pi ik/n}
+ \wt{\phi}_k(w-u)\,,
+ \qquad
+ \wt{\phi}_k(e^{2\pi i}(w-v))=e^{-2\pi i k/n}
+ \wt{\phi}_k(w-v)\, .
+\end{equation}
+As we have learned in the last section, the system is equivalent to $n$-disconnected sheets with two twist operators $\sigma_{k/n}$ and $\sigma_{-k/n}$ inserted in the $k$-th sheet
+for each value of $k$. In the end, we find
+\begin{equation}
+\label{trrhonA}
+ \Tr_{\cH_A} \rho^n_A=\prod_{k=0}^{n-1}
+ \expval{\sigma_{k/n}(u)\sigma_{-k/n}(v)}\sim
+ (u-v)^{-4\sum_{k=0}^{n-1}\Delta_{k/n}}
+ =(u-v)^{-\frac{1}{3}(n-1/n)}\,,
+\end{equation}
+where $\Delta_{k/n}= \frac{1}{2}(\frac{k}{n})^2+\frac{1}{2}\frac{k}{n}$ is the
+conformal dimension of $\sigma_{k/n}$. When we have $m$ such
+complex scalar fields we simply obtain
+\begin{equation}
+\label{trace-rho-A-n}
+ \Tr_{\cH_A} \rho^n_A \sim (u-v)^{-\frac{c}{6}(n-1/n)}\, ,
+\end{equation}
+setting the central charge $c= 2m$.
+Applying the formula \eqref{SA-cal-formula} to \eqref{trace-rho-A-n}, we find that
+\begin{equation}
+ S_A \sim \frac{c}{3}\log \ell\,
+\end{equation}
+where we set $\ell\equiv u-v$. Refine the UV cut-off $\e$ into the expression above we get
+\begin{equation}
+\label{EE-infinite}
+ S_A=\frac{c}{3}\log \frac{\ell}{\e}\, .
+\end{equation}
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\linewidth]{picture/replica}
+	\caption{Twisted boundary condidions on replica fields}
+	\label{fig:replica}
+\end{figure}
+
+
+\subsubsection*{Entanglement entropy of finite size}
+In the previous subsection, we assume the space direction $x$ is
+infinite, while in this section we consider the subsystem
+$A$ is defined in a finite space region.
+\begin{equation}
+ A=\{
+ x| x\in [r, s]
+ \}\, ,
+\end{equation}
+where we assume $-\frac{L}{2} < r < s \leq \frac{L}{2}$.
+The system is related to the previous system via the
+conformal map
+\begin{equation}
+ w=\tan\bigg(
+ \frac{\pi \w '}{L}
+ \bigg)\, .
+\end{equation}
+And $u=\tan \big(
+\frac{\pi r}{L}\big)$ and
+$v=\tan\big(\frac{\pi s}{L}\big)$.
+From \eqref{trrhonA}, we can calculate $\Tr_{\cH_A} \rho^n_{A\omega'} $
+by applying conformal transformation of the local twist field.
+\bea
+\Tr_{\cH_A} \rho^n_{A\omega'}
+&= \prod_{k=0}^{n-1}
+\bigg(
+\dv{w}{w'}
+\bigg)^{2\Delta_{k/n}}_r
+\bigg(
+\dv{w}{w'}
+\bigg)^{2\Delta_{k/n}}_s
+\expval{\sigma_{k/n}(u) \sigma_{-k/n}(v)}\notag\\
+& \sim \bigg[
+\frac{L}{\pi}\cos\bigg(\frac{\pi}{L}r\bigg)
+\cos\bigg(\frac{\pi}{L}s\bigg) (u-v)
+\bigg]^{-\frac{c}{6}(n-1/n)}\notag\\
+& \sim \bigg[
+\frac{L}{\pi} \sin\frac{\pi}{L}(r-s)
+\bigg]^{-\frac{c}{6}(n-1/n)}\,.
+\eea
+Therefore, following the same calculation step, we
+get the entanglement entropy in a finite space region
+\begin{equation}\label{EE-circle}
+S_A=\frac{c}{3} \cdot \log\bigg(
+\frac{L}{\pi \e} \sin\bigg(
+\frac{\pi \ell}{L}
+\bigg)
+\bigg)\, ,
+\end{equation}
+where $\ell= r-s$. It is invariant under the exchange $\ell\to L-\ell$,
+and thus satisfies the property \eqref{complement-prop}.
+
+\subsubsection*{Entanglement entropy at finite temperature}
+Considering in the Euclidean 2-dimension theory, the Euclidean
+time is equivalent to the inverse of temperature. As we saw in \S\ref{Boltzmann}, like statistical mechanics, we can compactify the Euclidean
+time as $t_E \sim t_E+\beta$ at finite temperature $T=\beta^{-1}$. We can map this system
+to the infinite system via the conformal map
+\begin{equation}
+ w=e^{\frac{2\pi}{\beta} w'}\, .
+\end{equation}
+And $u=e^{\frac{2 \pi r}{\beta}}$ ,
+$v=e^{\frac{2\pi s}{\beta}}$. $t_E$ is the imaginary part of
+$w'$. This conformal map will lead to the extra factor
+\begin{equation}
+\bigg[
+  \frac{\beta}{2 \pi} e^{-\frac{\pi}{\beta}}
+\bigg]^{-\frac{c}{6}(n-1/n)}
+\end{equation}
+Following the similar calculation steps, we obtain
+\begin{equation}\label{entropytemp}
+S_A=\frac{c}{3} \log
+\bigg(
+\frac{\beta}{\pi \e}
+\sinh\bigg(
+\frac{\pi \ell}{\beta}
+\bigg)
+\bigg)\, ,
+\end{equation}
+where $\ell= r-s$. In the zero temperature limit $T\to 0$,
+this reduces to the previous result \eqref{EE-infinite}.
+In the high-temperature limit  $T \to \infty$, it
+approaches
+\begin{equation}\label{EE-finite}
+S_A \simeq \frac{\pi c}{3}\ell T+\frac{c}{3} \log \frac{\beta}{2 \pi \epsilon} \,.
+\end{equation}
+The leading term is the thermodynamic entropy, which is proportional to the volume of the subsystem $A$ (extensive property)
+as expected.
+
+\subsection{Zamolodchikov \texorpdfstring{$c$}{c}-theorem revisited}
+
+In \S\ref{sec:Zc}, we have learned Zamolodchikov $c$-theorem stating that in a unitary, rotational (Lorentz) invariant 2d theory, there exists a monotonically decreasing function $C$ with respect to the length scale $R$
+\[
+\frac{d C (R )}{d R} \leq 0
+\]
+where   $C(R=0)$ is the central charge at ultra-violet and $C(R=\infty)$ is the one at infra-red. This theorem can be shown easily by using the strong subadditivity \eqref{strong-subadditivity-property} of entanglement entropy.
+
+
+
+\begin{figure}[ht]\centering
+\includegraphics[width=9cm]{picture/13-1}
+\caption{The black lines represent subsystems and the blue lines express the light cone}\label{fig:subsystem}
+\end{figure}
+
+We consider the subsystems $A$ and $B$ as in Figure \ref{fig:subsystem}. Although $A$ and $B$ do not lie at the constant time slice in Figure \ref{fig:subsystem}, an appropriate Lorentz boost will bring them to the constant time slice so that we can define the Hilbert space $\mathcal{H}_{A} $ and $ \mathcal{H}_{B}$.  The Hilbert spaces $\mathcal{H}_{A} \cup \mathcal{H}_{B}$ and  $\mathcal{H}_{A} \cap \mathcal{H}_{B}$ are defined on $A\cup B$ and $A\cap B$.
+Let us write the Lorentz-invariant length of the subsystem $A$ by $\ell(A)$. Then, a simple computation yields
+\be
+\ell(A ) \cdot \ell(B )=\ell(A \cup B ) \cdot \ell(A \cap B )~.
+\ee
+In particular, when
+\[
+\ell(A )=\ell(B )=e^{\frac{a+b}{2}} , \quad \ell(A \cup B )=e^{a} , \quad \ell(A \cap B )=e^{b}~,
+\]
+the strong subadditivity \eqref{strong-subadditivity-property} implies that
+\[
+2 S \left(\frac{a+b}{2} \right) \geq S (a )+S (b )~.
+\]
+Thus, $S (R)$ is concave and
+\[
+\frac{d^{2}}{d R^{2}} S (R) \leq 0
+\]
+where $\ell =e^R$.
+If we define the function
+\[
+C(R )=3 \frac{d S (R)}{d R}~,
+\]
+then it is monotonically decreasing
+\[
+\frac{dC}{d R}  \leq 0~.
+\]
+Compared with \eqref{EE-infinite}, it is equal to the central charge at the fixed point.  This corresponds to the Zamolodchikov $C$-function \eqref{c-fn}.
+
+
+
+
+
+
+
+
+
+\subsection{Black hole thermodynamics and Bekenstein-Hawking entropy}
+
+
+The aforementioned Ryu-Takayanagi formula evaluates entangle entropy of a CFT from the holographic viewpoint. First, we shall provide a brief introduction to black hole thermodynamics and AdS/CFT correspondence based on which the Ryu-Takayanagi formula is constructed. However, we glimpse only the tip of the iceberg and the subject would actually deserve the entire semester. If you are interested in this fertile subject, we refer to the standard references \cite{wald2010general,Townsend:1997ku,Aharony:1999ti,DHoker:2002nbb,Maldacena:2003nj,Dabholkar:2012zz,Ramallo:2013bua,nuastase2015introduction}.
+
+
+
+Let us recall the Schwarzschild black hole of mass $M$ with metric
+\[
+d s ^{2}=-\left( 1-\frac{r_{H}}{r}\right) c^2d t ^{2}+ \frac{d r ^{2}}{1-\frac{r_{H}}{r}}+r ^{2}d \Omega ^{2}
+\]
+where the radius of the horizon is given by
+\[
+r_{H}= \frac{2 GM}{c^2}~.
+\]
+To see the thermodynamic property of the Schwarzschild black hole, we use the naive trick.
+It turns out that much of the exciting physics having to
+do with the quantum properties of black holes comes from the
+region near the event horizon.
+To examine the region \emph{near the horizon $r_H$}, we analytically continued to the Euclidean metric $t= -it_E$, and we set
+\[
+r-\frac{2GM}{c^2}=\frac{x^2c^2}{8GM}~.
+\]
+Then, the metric near the event horizon $x\ll1$
+\[
+ds^2_{\textrm{E}} \approx  (\kappa  x)^2dt_E^2+dx^2
++\frac{1}{4\kappa^2}d\Omega^2~,
+\]
+where $\kappa=\frac{c^4}{4GM}$ is called the \textbf{surface gravity} because it is indeed the acceleration of a static
+particle near the horizon as measured at spatial infinity.
+The first part of the metric is just $\bR^2$ with polar coordinates if we make the
+{periodic identification}
+\[
+t_E \sim t_E +\frac{2\pi}{\kappa}~.
+\]
+Using the relation between Euclidean periodicity and temperature,
+we can deduce \textbf{Hawking temperature} of the Schwarzschild black hole
+\begin{equation}\label{hawktemp}
+k_BT_H = \frac{\hbar\kappa}{ 2 \pi c}=\frac{\hbar  c^3}{8\pi GM}~,
+\end{equation}
+where $k_B$ is Boltzmann constant. This is a very heuristic way to introduce the Hawking temperature, which was not found originally in this way.
+
+
+If the black hole has temperature, then it should obey the thermodynamics law. Classically, a stationary black hole is characterized by its mass $M$, angular momentum $J$, and charge $Q$. This is called a black hole no hair theorem. However, in \cite{bekenstein1972black}, Bekenstein proposed that a black hole has entropy proportional to the area of the black hole.
+Soon after that, Bardeen, Carter and Hawking point out similarities between the laws of black hole mechanics and the laws of thermodynamics in \cite{Bardeen:1973gs}. More concretely, they find the laws of corresponding to the three laws of thermodynamics.
+\begin{enumerate}
+\item[{(0)}]
+Zeroth Law: In thermodynamics, the zeroth law states that the temperature $T$ of a thermal equilibrium object is constant throughout the body. Correspondingly, for a stationary black hole, its surface gravity $\kappa=1/4GM$ is constant over the event horizon.
+
+\item[{(1)}]
+First Law: The first law of thermodynamics states that energy is conserved, and the variation of energy is given by
+\be dE = TdS + \mu dQ + \Omega dJ \ee
+where $E$ is the energy, $Q$ is the charge with chemical potential $\mu$ and $J$ is the angular momentum with chemical potential
+$\Omega$ in the system.
+Correspondingly, for a black hole, the variation of its mass is given by
+\be dM = \frac{\kappa}{ 8\pi G} dA + \mu dQ + \Omega dJ \ee
+where $A$ is the area of the horizon,  and $\kappa$ is the surface gravity, $\mu$ is the chemical potential conjugate to $Q$, and $\Omega$ is the angular velocity conjugate to $J$.
+
+\item[{(2)}]
+Second Law: The second law of thermodynamics states that the total entropy $S$ never decreases, $\delta S \geq 0$.  Correspondingly, for a black hole, the area theorem states that the total area of a black hole in any process never decreases, $\delta A \geq 0$.
+\end{enumerate}
+
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|c}
+\hline
+\textbf{Laws of thermodynamics} & \textbf{Laws of black hole mechanics}\\
+ \hline
+ Temperature is constant & Surface gravity is constant \\
+ throughout a body at equilibrium. &  on the event horizon.\\
+ $T$=constant. & $\kappa$ =constant.\\
+ \hline
+Energy is conserved.& Energy is conserved. \\
+$dE = T dS + \mu dQ + \Omega dJ. $& $dM = \frac{\kappa c^2}{8\pi G} dA + \mu dQ + \Omega dJ . $\\
+ \hline
+ Entropy never decreases.  & Area never decreases.\\
+ $\delta S \geq 0$. & $ \delta A \geq 0 $. \\
+ \hline
+\end{tabular}
+\caption{\small{Laws of black hole thermodynamics}}
+\label{blackholelaws}
+\end{table}
+
+
+
+
+
+This result can be understood as one of the highlights of general relativity.
+Moreover, Hawking has shown this is indeed more than an analogy \cite{Hawking:1974sw}.
+Hawking has applied techniques of quantum field theories on a curved background to the near-horizon region of a black hole and showed that a black hole indeed radiates \cite{Hawking:1974sw}.
+This can be intuitively understood as follows: in a quantum theory, particle-antiparticle creations constantly occur in the vacuum. Around the horizon, after pairs are created, antiparticles fall into a black hole due to the gravitational attraction whereas particles escape to infinity.  Although we do not deal with Hawking's calculation unfortunately (see \cite{Townsend:1997ku}), it indeed justifies this picture. Moreover, it revealed that the spectrum emitted by the black hole is precisely subject to the thermal radiation with temperature \eqref{hawktemp}. Indeed, a black hole is not black at quantum level.
+Hence, we can treat a black hole as a thermal object, and the analogy of the laws in Table \ref{blackholelaws} can be understood as the natural consequence of the laws of thermodynamics.
+
+
+In fact, because the energy of the Schwarzschild black hole is equal to its mass, the first law of
+thermodynamics can be written as
+\[
+T_{H}d S=c^2d M
+\]
+Using the formula
+for the Hawking temperature \eqref{hawktemp}, the Schwarzschild black hole has the entropy
+\[
+S=4 \pi \frac{k_BGM ^{2}}{c\hbar}~.
+\]
+The entropy is proportional to the area of the horizon
+\be\label{BH-entropy}
+S=\frac{k_B c^3 \operatorname{Area} }{4G\hbar} ~.
+\ee
+This is a universal result for any black hole, and this remarkable relation between the thermodynamic properties
+of a black hole and its geometric properties is called the celebrated \textbf{Bekenstein-Hawking entropy formula} \cite{bekenstein1972black,Bekenstein:1973ur,Hawking:1974sw}.
+This formula involves all four fundamental constants of nature; $(G,c,k_B,\hbar)$. Also, this is the first place where the Newton constant $G$ meets with the Planck constant $\hbar$.
+Thus, this formula shows a deep connection between black hole geometry, thermodynamics and quantum mechanics.
+
+
+
+In thermodynamics, the energy and entropy are examples of \textbf{extensive properties} \textit{i.e.} they are proportional to the size of the system. However, the Bekenstein-Hawking entropy is proportional to the area. Moreover, in general relativity, the maximal entropy in a certain subsystem $R$ is proportional to the area of $\partial R$
+\[
+S\le \frac{\operatorname{Area}(\partial R)}{4G}~,
+\]
+which is called \textbf{entropy bound}. Subsequently, people come up with the idea that a gravity theory in $(d+1)$-dimension is equivalent to a quantum field theory without gravity in $d$-dimension, which is called the \textbf{holographic principle}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{AdS/CFT correspondence}
+
+The AdS/CFT correspondence \cite{Maldacena:1997re} is a special case of the holographic principle, which states that a quantum gravity in an $\AdS_d$ space is equivalent to a CFT in $d$-dimensions. Even though the correspondence was originally proposed in the context of string theory, it is now generalized in broader contexts. This subsection briefly introduces the basics of the  AdS/CFT correspondence to pave the way to the Ryu-Takayanagi formula.
+
+
+
+
+\subsubsection*{AdS space}
+To begin with, let us investigate the geometry of AdS spaces.
+An anti-de Sitter (AdS) space is a maximally symmetric manifold with constant negative scalar curvature.
+It is a solution to Einstein's equations for an empty universe with negative cosmological constant.
+The easiest way to understand it is as follows.
+
+
+A Lorentzian AdS$_{d+1}$ space can be illustrated by the hyperboloid in $(2,d)$ Minkowski space:
+\be
+ X_0^2 +X_{d+1}^2 -\sum_{i=1}^{d} X_i^2 = R^2 \ .
+ \label{embeding}
+\ee
+The metric can be naturally induced from the Minkowski space
+\be
+ ds^2 = -dX_0^2 -dX_{d+1}^2 +\sum_{i=1}^{d} dX_i^2 \ .
+\ee
+By construction, it has $\SO(2,d)$ isometry, which is the first connection to
+the conformal group in $d$-dimensions studied in \S\ref{sec:conf-gen}.
+
+
+\subsubsection*{Global coordinate}
+
+
+
+
+A simple solution to (\ref{embeding}) is given as follows.
+\bea\nonumber
+ &X_0^2 +X_{d+1}^2=R^2 \cosh^2 \rho \ , \cr
+ &\sum_{i=1}^{d} X_i^2=R^2 \sinh^2 \rho \ .
+\eea
+Or, more concretely,
+\bea\nonumber
+ X_{0} &= R \cosh \rho\ \cos \tau \ , \qquad
+ X_{d+1}=R \cosh \rho\ \sin \tau \ ,  \nonumber \cr
+ X_i &= R \sinh \rho\ \Omega_{i} \quad (i=1,\cdots,d,
+ \text{and} \sum_i \Omega_i^2=1).
+\eea
+These are $S^{1}$ and $S^{d-1}$ with radii $R\cosh\rho$ and $R\sinh\rho$, respectively.
+The metric is
+\bea\nonumber
+ ds^2 &= R^2 \left(-\cosh^2 \rho \ d\tau^2 +d\rho^2 +\sinh^2 \rho \ d\Omega_{(d-1)}^2 \right) \ .
+\eea
+Note that $\tau$ is a periodic variable and if we take $0 \le \tau <2\pi$
+the coordinate wraps the hyperboloid precisely once.
+This is why this coordinate is called a \textbf{global coordinate}.
+The manifest sub-isometries are $\SO(2)$ and $\SO(d)$ of $\SO(2,d)$.
+To obtain a causal space-time, we simply unwrap the circle $S^1$,
+namely, we take the region $-\infty < \tau < \infty$ with no identification,
+which is called the \textbf{universal cover} of the hyperboloid.
+
+
+In literature, another global coordinate is also used,
+which can be derived by redefinitions
+$r \equiv R \sinh \rho$ and $dt \equiv R d\tau$:
+\bea\nonumber
+ ds^2 &=-f(r) dt^2 +\frac{1}{f(r)} dr^2+r^2 d\Omega_{(d-1)}^2 \ , \qquad
+ f(r)=1+\frac{r^2}{R^2} \ .
+\eea
+
+
+
+
+\subsubsection*{Poincar\'e coordinates}
+
+There is yet another coordinate, called \textbf{Poincar\'e coordinates}.
+As opposed to the global coordinate, this coordinate covers only half of the hyperboloid.
+It is most easily (but naively) seen in $d=1$ case:
+\bea\nonumber
+ x^2 -y^2=R^2 \ ,
+\eea
+which is the hyperbolic curve.
+The curve consists of two isolated parts in regions $x>R$ and $x<-R$.
+We simply use one of them to construct the coordinate.
+
+
+
+Let us get back to general $d$-dim.
+We define the coordinate as follows.
+\bea
+ X_{0} &= \frac{1}{2u} \left(1+u^2 \left(R^2 +x_i^2-t^2 \right) \right) \ , \cr
+ X_{i} &= R u x_i \qquad (i=1,\cdots,d-1) \ , \cr
+ X_{d} &= \frac{1}{2u} \left(1-u^2 \left(R^2 -x_i^2+t^2 \right) \right) \ , \cr
+ X_{d+1} &= R u t \ ,
+\eea
+where $u > 0$.
+As it is stated
+the coordinate covers half of the hyperboloid; in the region, $X_0 > X_{d}$.
+The metric is
+\bea\label{ads-poincare}
+ ds^2 &= R^2 \left(\frac{du^2}{u^2} +u^2 (-dt^2 +dx_i^2) \right)
+=R^2 \left(\frac{du^2}{u^2} +u^2 dx_\mu^2 \right) \ .
+\eea
+The coordinates $(u,t,x_i)$ are called \textbf{Poincar\'e coordinates}.
+This metric has manifest $ISO(1,d-1)$ and $\SO(1,1)$ sub-isometries of $\SO(2,d)$;
+the former is the Poincar\'e transformation and the latter corresponds to the dilatation
+\bea\label{scaling}
+ (u,t,x_i) \to (\lambda^{-1}u,\lambda t,\lambda x_i) \ .
+\eea
+
+
+If we further define $z=1/u$ ($z>0$), then,
+\bea\label{ads-poincare2}
+ ds^2 &= \frac{R^2}{z^2} \left(dz^2 +dx_\mu^2 \right) \ .
+\eea
+This is called \textbf{the upper (Poincar\'e) half-plane model}.
+The hypersurface given by $z=0$ is called the \textbf{(asymptotic) boundary} of the AdS space,
+which corresponds to $u \sim r \sim \rho=\infty$.
+
+
+\subsubsection*{AdS/CFT correspondence}
+The AdS/CFT correspondence \cite{Gubser:1998bc,Witten:1998qj} is an exact duality between a quantum gravity in an asymptotically $\AdS_{d+1}$ space-time and a $\CFT_d$ without
+gravity.  It is \textbf{holographic} since the gravitational
+theory lives in one extra dimension. It is often useful to think that the CFT lives at the \textbf{boundary} of the \textbf{bulk} AdS space.
+Indeed, the CFT lives in a space-time parameterized by $\vec{x}$ while gravity
+fields are functions of $\vec{x}$ and the radial coordinate $z$.
+For instance,  the scaling transformation of the CFT can be translated into the transformation of the AdS coordinate \eqref{ads-poincare2}
+\[
+x_{\mu} \rightarrow \lambda x_{\mu} , \quad z \rightarrow \lambda z~.
+\]
+Hence, the coordinate $z$ parametrizes the energy scale, and the ultra-violet limit corresponds to the boundary at $z=0$. As $z$ increases, the energy scale decreases.
+
+\begin{figure}[ht]\centering
+\includegraphics[width=6cm]{picture/AdS-CFT}\qquad
+\includegraphics[width=7.5cm]{picture/scaling-transf}
+\caption{}\label{fig:AdS-CFT}
+\end{figure}
+%
+%However, it is not quite accurate to say that the CFT
+%lives on the boundary, for two reasons. First, we should not think about having both
+%theories at once; we either consider a CFT or we have gravity on the AdS space-time, never both at the
+%same time. Second, the CFT is dual to the entire gravity theory so that in a sense it lives
+%everywhere.
+
+The theories are believed to be entirely
+equivalent: any physical (gauge-invariant) quantity that can be computed in one theory
+can also be computed in the dual. As a typical feature of a duality, computation of physical quantity becomes much easier on one side than on the other side.
+More precisely, the gravitational partition function on asymptotically AdS space is equal to the generating function of correlation functions of the corresponding CFT:
+\bea\label{GKPW}
+Z_{\textrm{grav}}[\phi\to \phi_0]
+=
+\Bigg\langle \exp \biggl (\int _{\partial AdS} \overline \phi_0 \cO \biggr)
+\Bigg\rangle_{\textrm{CFT}}
+\eea
+that is called the \textbf{GKPW} relation.
+For any bulk field $\phi$ in gravity theory on AdS, there exists the corresponding operator
+$\cO$ in the CFT. The gravitational partition function can be schematically written as
+\[
+Z_{\textrm{grav}}[\phi\to \phi_0]=\int_{\phi\to \phi_0}\cD\phi ~e^{-S_{\textrm{string}}[\phi]}~.
+\]
+%For instance, in the regime $\lambda\gg1$, we can use the supergravity description
+%\[
+%Z_{\textrm{grav}}[\phi\to \phi_0]=\sum_{\textrm{saddle point}}~e^{-S_{\textrm{SUGRA}}[\phi\to \phi_0]}~.
+%\]
+
+\subsubsection*{Bulk field/boundary operator}
+Each field propagating on AdS space
+is in a one-to-one correspondence with
+an operator in the field theory. The spin of the
+bulk field is equal to the spin of the CFT operator; the mass of the bulk field fixes the
+scaling dimension of the CFT operator. Here are some examples:
+
+\begin{itemize}
+\item  Every theory of gravity has a massless spin-2 particle, the graviton $g_{\m\n}$. This
+is dual to the stress tensor $T_{\m\n}$ in CFT. This makes sense since every CFT has a stress
+tensor. The fact that the graviton is massless corresponds to the fact that the CFT
+stress tensor is conserved.
+\item  If our theory of gravity has a spin-1 vector field $A_\m$, then the dual CFT has a
+spin-1 operator $J_\m$. If $A_\m$ is gauge field (massless), then $J_\m$
+ is a conserved current so that gauge symmetries in the
+bulk correspond to global symmetries in the CFT.
+\item A bulk scalar field is dual to a scalar operator in  the CFT. The boundary
+value of the bulk scalar field
+acts as a source in the CFT.
+\end{itemize}
+For more details, we refer the reader to \cite{Aharony:1999ti}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Ryu-Takayanagi formula}
+The Bekenstein-Hawking entropy encodes the information restored in the interior of the horizon. As explained in \S\ref{sec:EE}, the entanglement entropy can be used when the observer cannot access a certain subsystem like the interior of the horizon. Hence, it is natural to seek the relation between the Bekenstein-Hawking entropy and the entanglement entropy. As the first step to understanding the relation, one can also ask how the $\AdS_{d+1}$ space-time encodes the entanglement entropy in the subsystem $A$ of a $\CFT_d$. The answer to this question is the Ryu-Takayanagi (RT) formula \cite{Ryu:2006bv,Ryu:2006ef}:
+\begin{equation}
+  \label{R-T formula}
+S_{A}=\frac{\operatorname{Area} \left(\gamma_{A} \right)}{4 G^{(d+1 )}}.
+\end{equation}
+The manifold $\gamma_A$ is the $d$-dimensional submanifold with minimal area  in $\mathrm{AdS}_{d+1}$ whose boundary is given by $\pd A$ as shown in Figure \ref{fig:holographicEE}. This minimal submanifold is often called Ryu-Takayanagi (RT) surface. Its area is denoted by $\operatorname{Area}(\gamma_A)$. $G^{(d+1)}_N$ is the $d+1$ dimensional Newton constant. Since $\sqrt{g}$ diverges at the boundary of AdS space $z=0$,
+the area $\gamma_A$ is divergent there. Thus, the result is still divergent of order $\e^{-(d-2)}$
+\[\begin{aligned} S_{A}& \sim \frac{R^{d-1}}{G } \operatorname{Area} \left(\partial{A} \right) \int_{\epsilon} \frac{d z}{z^{d-1}}\\ & \sim \frac{R^{d-1}}{G}\frac{\operatorname{Area} \left(\partial{A} \right)}{\e^{d-2}} \end{aligned}~.\]
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=8cm]{picture/holographicEE}
+	\caption{Holographic entanglement entropy}
+	\label{fig:holographicEE}
+\end{figure}
+
+
+
+As we will see at the end, when the region $A$ is large enough, the minimal surface (submanifold) wraps the horizon of AdS black hole, and the  RT formula can explain the Bekenstein-Hawking entropy as a special case. However, minimal surfaces (submanifolds) are more general so that the RT formula can be interpreted as a generalization of the Bekenstein-Hawking entropy formula. Moreover, the entanglement entropy depends on a CFT and it also encodes the quantum entanglement. Therefore, the entanglement entropy in a CFT can also be understood as the quantum correction to the Bekenstein-Hawking entropy in the context of the AdS/CFT correspondence.
+
+
+
+
+\subsubsection*{Holographic derivation of strong subadditivity}
+
+The RT formula provides a geometric viewpoint to the entanglement entropy. As one of its advantages, the RT formula leads to the straightforward geometric derivation of strong subadditivity  \eqref{strong-subadditivity-property}.
+
+To derive the strong subadditivity, we start with three subsystems $A$, $B$ and $C$ on a spatial slice as in Figure \ref{fig: holographic proof}. The entanglement entropy $S_{A+B}$ and $S_{B+C}$ are given by the minimal surfaces $\gamma_{A+B}$ and $\gamma_{B+C}$. (left panel of (a).) We decompose the total surface of $\gamma_{A+B}$ and $\gamma_{B+C}$ into the surfaces $\gamma'_{B}$ and $\gamma'_{A+B+C}$. (middle panel of (a).) The total area is clearly greater than or equal to that of the minimal surfaces $\gamma_{B}$ and $\gamma_{A+B+C}$. (right panel of (a).)  This gives the first equation of \eqref{strong-subadditivity-property}. For the second equation, we decompose the total surface of $\gamma_{A+B}$ and $\gamma_{B+C}$ into the surfaces $\gamma'_{A}$ and $\gamma'_{B}$.  (middle panel of (b).) The total area is again greater than or equal to that of the minimal surfaces $\gamma_{A}$ and $\gamma_{B}$. (right panel of (b).)  This provides the second equation of \eqref{strong-subadditivity-property}.
+\begin{align*}
+ \textrm{Area}(\gamma_{A+B}) + \textrm{Area}(\gamma_{B+C})
+ &= \textrm{Area}(\gamma'_{B}) + \textrm{Area}(\gamma'_{A+B+C})
+ \geq \textrm{Area}(\gamma_B) + \textrm{Area}(\gamma_{A+B+C})\, ,\\
+ \textrm{Area}(\gamma_{A+B}) + \textrm{Area}(\gamma_{B+C})
+ &= \textrm{Area}(\gamma'_{A}) + \textrm{Area}(\gamma'_{C})
+ \geq \textrm{Area}(\gamma_A) + \textrm{Area}(\gamma_{C})\, .
+\end{align*}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=8cm]{picture/SSA}
+	\caption{Holographic proof of strong subadditivity}
+	\label{fig: holographic proof}
+\end{figure}
+
+
+\subsubsection*{Holographic entanglement entropy}
+We focus our discussion in $\mathrm{AdS}_3/\mathrm{CFT}_2$ case, and the $\mathrm{AdS}_3$ space is
+defined in the Poincare coordinates.
+\[
+d s^{2}=R^{2} \left(\frac{d z^{2}+d x^{2}-d t^{2}}{z^{2}} \right).
+\]
+At the fixed time $t_0$, the whole spatial region of $\mathrm{CFT}_2$ is an infinite line in the $x$ direction.
+We pick up subsystem $A$ along $x$ direction: $-l/2 \leq x \leq l/2$ with its boundary coordinates given by
+\[
+\begin{aligned} P : (t , x , z ) &=\left(t_{0} ,-\frac{\ell}{2} , \epsilon \right), \\
+ Q : (t , x , z ) &=\left(t_{0} , \frac{\ell}{2} , \epsilon \right). \end{aligned}
+\]
+
+Now $\operatorname{Area}(\gamma_A)$ in \eqref{R-T formula} is the length of geodesic line in the AdS space,
+with two fixed points $P$ and $Q$ . Therefore, we can apply the RT formula to compute the entanglement entropy
+for subsystem $A$
+\begin{equation}
+S_{A}=\frac{2 R}{4 G} \int_{\epsilon}^{\ell/ 2} \frac{d z}{z \sqrt{1-4 z^{2} /\ell^{2}}}
+=\frac{R}{2 G} \log \left(\frac{\ell}{\epsilon} \right),
+\end{equation}
+where we have introduced $\epsilon$ as the UV cutoff.
+Since the AdS${}_3$/CFT${}_2$ correspondence identifies the central charge with the Newton constant
+\[
+c=\frac{3 R}{2 G}~,
+\]
+it is equal to \eqref{EE-infinite}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth]{picture/Poincare-half-plane}
+	\caption{Holographic entanglement entropy in the Poincare coordinates}
+	\label{fig:poincare-disk}
+\end{figure}
+
+
+
+\subsubsection*{Holographic entanglement entropy on a circle}
+In the global coordinate of $\mathrm{AdS}_3$, the metric of space-time is written as
+\be\label{ads3-metric}
+d s^{2}=R^{2} \left(- \cosh^{2} \rho d t^{2}+d \rho^{2}+\sinh^{2} \rho d \theta^{2} \right)
+\ee
+The $\mathrm{CFT}_2$ is identified with the cylinder $(t, \theta)$ at the (regularized)
+boundary $\rho = \rho_\infty$. The whole spatial region at a fixed time is a circle.
+The subsystem $A$ corresponds to $0\leq \theta \leq 2\pi \ell/L$.
+In this case, the minimal surface $\gamma_A$ is the geodesic line which connects two
+boundary points at $\theta = 0$ and $\theta = 2\pi l /L$ with $t$ fixed
+The explicit form of the geodesic $\mathrm{AdS}_3$, expressed in the ambient $\vec{X}\in \mathbb{R}^{2,2}$ space, is
+\[
+\vec{X}=\frac{R}{\sqrt{\alpha^{2}-1}} \sinh (\lambda / R ) \cdot \vec{x}+R \left[ \cosh (\lambda / R )-\frac{\alpha}{\sqrt{\alpha^{2}-1}} \sinh (\lambda / R ) \right] \cdot \vec{y},
+\]
+where  $\alpha = 1+ 2 \sinh^2 \rho_0 \sin^2(\pi \ell/L)$ and $x$ and $y$ are defined by
+
+\begin{align*} \vec{x} &=\left(\cosh \rho_{\infty} \cos t , \cosh \rho_{\infty} \sin t , \sinh \rho_{\infty} , 0 \right) \\ \vec{y} &=\left(\cosh \rho_{\infty} \cos t , \cosh \rho_{\infty} \sin t , \sinh \rho_{\infty} \cos (2 \pi\ell/L) , \sinh \rho_{\infty} \sin (2 \pi \ell/L) \right), \end{align*}
+
+The length of geodesic can be found as
+\[ \cosh\left(\frac{\mbox{Length}(\gamma_A)}{R}\right)=1+2 \sinh^{2} \rho_{\infty} \sin^{2} \frac{\pi\ell}{L}\]
+Assuming that the UV cutoff energy is large $e^{\rho_\infty} \geqq 1$,  we can obtain the entropy as follows
+\[
+S_{A} \simeq \frac{R}{4 G} \log \left(e^{2 \rho_{\infty}} \sin^{2} \frac{\pi\ell}{L} \right)=\frac{c}{3} \log \left(\frac{L}{\epsilon} \sin \frac{\pi\ell}{L} \right).
+\]
+This coincides with entanglement entropy in a finite size $L$ \eqref{EE-circle}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\linewidth]{picture/AdS3-CFT2-holographic}
+	\caption{Holographic entanglement entropy on a circle}
+	\label{fig:ads3-cft2-holographic}
+\end{figure}
+
+
+
+\subsubsection*{BTZ black hole}
+We have seen that the AdS space has the scaling symmetry \eqref{scaling}. However, one can also consider an asymptotically AdS space whose dual is a QFT which flows to a CFT at IR $z\to 0$. A typical example of asymptotically AdS spaces is an AdS black hole whose metric can be written as
+\bea\nonumber
+d s^{2} = R^{2}\left(- \frac{f ( z )}{z^{2}} d t^{2} +  \frac{d z^{2}}{z^{2} f ( z )} + \frac{d x^{2}}{z^{2}}  \right) ~,\qquad f ( z ) = 1 - \left( \frac{z}{z_0} \right)^{2}~,\eea
+where the horizon is located at $z=z_0$. It is easy to see that the metric asymptotes to the $\AdS_3$ space as $z\to 0$. By the change $r=R/z$ of the coordinates, the metric is written as
+\[
+d s^{2} = -  (r^{2} - r_{0}^{2})  d t^{2} + \frac{R^{2}}{r^{2} - r_{0}^{2}} d r^{2} + r^{2} d x^{2}~.
+\]
+We can identify the spatial coordinate $x\sim x+2\pi$, which is called the \textbf{BTZ black hole} and it has temperature
+\[
+T=1/\beta=\frac{r_0}{2\pi R}~.
+\]
+Hence, if we use the Euclidean time $\tau=-it$, the time direction is compactified as $\tau\sim \tau+\beta$.
+Therefore, the dual $\CFT_2$ is living on a torus boundary parametrized by $(\tau,x)$ with periodicities $\tau\sim\tau+\beta$ and $x\sim x+2\pi$.
+
+
+
+Let us consider the RT entropy  for the subsystem $A$
+given by $0\leq x\leq 2\pi \ell/R$ at the boundary. To evaluate the length of the geodesic from $x=0$ to $x=2\pi \ell/R$, one can use the fact that the BTZ metric can be changed to the $\AdS_3$ metric \eqref{ads3-metric} by
+\[
+r\to r_0\cosh\rho~, \quad x\to i R  t~,\qquad \tau \to R \theta~.
+\]
+Hence, the same analysis above can be applied to compute the length by exchanging $L\leftrightarrow \beta$
+\[\cosh\left(\frac{\mbox{Length}(\gamma_A)}{R}\right)
+=
+1 + 2 \cosh^{2} \rho_{\infty} \sinh^{2} \left( \frac{\pi \ell}{\beta} \right)
+\]
+The relation between the cut-off $\e$ in CFT and
+the one $ \rho_{\infty}$ of AdS is given by $e^{\rho_{\infty}} =\frac{\beta}{
+\e}$ so that it reproduces the  CFT result \eqref{entropytemp}.
+
+
+Now let us come back to the Bekenstein-Hawking entropy \ref{BH-entropy} of the BTZ black hole from the viewpoint of the AdS/CFT correspondence and the RT formula.  As in Figure \ref{fig:ads_blackhole} (a), when a subsystem $A$ in the dual CFT is small enough, the RT surface is similar to that of the pure AdS space. As the subsystem $A$ becomes larger, the RT surface starts touching the event horizon of the BTZ black hole. Therefore, the RT surfaces of the subsystems $A$ and its complement $B$ are different due to the presence of the event horizon as in Figure \ref{fig:ads_blackhole} (b). When the subsystem $A$ covers the major part of the boundary CFT region, the RT surface splits into the entire horizon and the minimal surface of its complement as in Figure \ref{fig:ads_blackhole} (c).
+Therefore, the  Bekenstein-Hawking entropy of the BTZ black hole is given by
+\[S_{A} - S_{B} = S_{\textrm{BH}}~.\]
+Consequently, when $A$ is the entire boundary, the RT formula \eqref{R-T formula} reproduces the Bekenstein-Hawking entropy \eqref{BH-entropy}.
+As we see in \eqref{EE-finite}, the leading term of the entangle entropy in the CFT is given by thermodynamic entropy in the high-temperature limit.
+Therefore, the viewpoint of the AdS/CFT correspondence and the RT formula provides a natural interpretation to the area law of the black hole entropy \eqref{BH-entropy}.
+
+
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=\textwidth]{picture/ads_blackhole}
+\end{center}
+\caption{(a) As the subsystem $A$ gets larger, the minimal surface starts bent due to the presence of the black hole. (b) Due to the horizon, the minimal surfaces of the subsystems $A$ and its complement $B$ are different. (c) When the subsystems $A$ occupies most of the boundary region, the minimal surface consists of two separate parts: the entire horizon and the minimal surface of its complement.} \label{fig:ads_blackhole}
+\end{figure}
+
+
+
+
+\end{document}

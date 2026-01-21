@@ -1,0 +1,73 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{verbatim}
+\begin{document}
+	\usetikzlibrary{arrows,positioning} 
+	\tikzset{
+		%Define standard arrow tip
+		>=stealth',
+		% Define arrow style
+		pil/.style={
+			->,
+			thick,
+			shorten <=2pt,
+			shorten >=2pt,}
+	}
+\begin{tikzpicture}[
+x                = 30,
+scale            = 2.5,
+]
+\draw (0,0)--(0.5,0);
+\draw (0,0)--(0.25,0.375);
+\draw (0.25,0.375)--(0.75,0.375);
+\draw (0.75,0.375)--(0.5,0);
+\draw(0.075,0.25) node{$A$};
+\draw(0.28, -0.07) node{$A$};
+\draw[->,pil,blue]
+(-0.1,0)..controls(-0.4,0.1)and(-0.35,-0.4)..(-0.05,-0.1);
+\draw[blue] (-0.35,-0.25) node{$S$};
+\begin{scope}[xshift=1.1cm]
+\draw (0,0)--(0.5,0);
+\draw (0,0)--(0.25,0.375);
+\draw (0.25,0.375)--(0.75,0.375);
+\draw (0.75,0.375)--(0.5,0);
+\draw(0.075,0.25) node{$P$};
+\draw(0.28, -0.07) node{$A$};
+\end{scope}
+\begin{scope}[xshift=0.5cm,yshift= -0.75cm]
+\draw (0,0)--(0.5,0);
+\draw (0,0)--(0.25,0.375);
+\draw (0.25,0.375)--(0.75,0.375);
+\draw (0.75,0.375)--(0.5,0);
+\draw(0.075,0.25) node{$A$};
+\draw(0.28, -0.07) node{$P$};
+\draw[->,pil,blue]
+(-0.1,0)..controls(-0.4,0.1)and(-0.35,-0.4)..(-0.05,-0.1);
+\draw[blue] (-0.35,-0.25) node{$T$};
+\end{scope}
+\draw[<->,blue] (0.7,0.17)--(1.01,0.17);
+\draw[blue] (0.85,0.25) node{$T$};
+\draw[<->,blue] (1.2,-0.1)--(1.0,-0.3);
+\draw[blue] (0.9,-0.2) node{$S$};
+
+\begin{scope}[xshift = 2.4cm]
+\draw[font =\Large] (0.1,0.1) node{$\vartheta_3$};
+\draw[->,pil,blue]
+(-0.1,0)..controls(-0.4,0.1)and(-0.35,-0.4)..(-0.05,-0.1);
+\draw[blue] (-0.35,-0.25) node{$S$};
+\begin{scope}[xshift=0.8cm]
+\draw[font =\Large] (0.1,0.1) node{$\vartheta_4$};
+\end{scope}
+\begin{scope}[xshift=0.3cm,yshift= -0.75cm]
+\draw[font =\Large] (0.1,0.1) node{$\vartheta_2$};
+\draw[->,pil,blue]
+(-0.1,0)..controls(-0.4,0.1)and(-0.35,-0.4)..(-0.05,-0.1);
+\draw[blue] (-0.35,-0.25) node{$T$};
+\end{scope}
+\draw[<->,blue] (0.24,0.1)--(0.74,0.1);
+\draw[blue] (0.5,0.25) node{$T$};
+\draw[<->,blue] (0.75,-0.1)--(0.4,-0.45);
+\draw[blue] (0.45,-0.2) node{$S$};
+\end{scope}
+\end{tikzpicture}
+\end{document}
