@@ -1,0 +1,177 @@
+\documentclass[12pt,a4paper]{article}
+\pdfoutput=1
+%\usepackage{hyperref} % Use the Charter font for the document text
+% %\usepackage[UTF8]{ctex}
+% \usepackage{jheppub}
+\usepackage{macros}
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 5: Due on Dec 14}
+\bigskip
+\textbf{Caution:} 
+When solving homework problems, it is important to show your derivation at each step. Nowadays, many online tools make it easy to find answers, but the primary goal of these assignments is to deepen your understanding through hands-on problem-solving. By working through the calculations yourself, you engage more deeply with the material, making the learning process more meaningful, rather than simply copying answers from external sources.
+
+
+
+
+\section{Microscopic Derivation of the GL Gradient Term from BCS Theory}
+
+In the standard BCS treatment of superconductivity, one assumes that Cooper 
+pairs form only with zero center-of-mass momentum, i.e.
+\[
+\langle c_{-\mathbf{k},\downarrow} c_{\mathbf{k},\uparrow} \rangle .
+\]
+In this problem you will relax this assumption and derive the 
+Ginzburg--Landau gradient term by allowing the Cooper pair to carry a small 
+center-of-mass momentum.
+
+\paragraph{Modified order parameter.}
+Consider the momentum-dependent superconducting order parameter
+\begin{equation}
+\Delta_{\mathbf{q}}
+=
+v_0 \sum_{\mathbf{k}}
+\left\langle
+c_{-\mathbf{k}+\frac{\mathbf{q}}{2},\downarrow}\,
+c_{\mathbf{k}+\frac{\mathbf{q}}{2},\uparrow}
+\right\rangle .
+\end{equation}
+
+\begin{enumerate}
+
+\item
+Write down the mean-field BCS Hamiltonian $H_{\mathbf{q}}$ corresponding to 
+this order parameter.  
+Show that its Bogoliubov quasiparticle energies take the form
+\begin{equation}
+E_{\mathbf{k}}^{(\mathbf{q})}
+=
+\sqrt{
+\left(
+\frac{
+\xi_{\mathbf{k}+\frac{\mathbf{q}}{2}}
++
+\xi_{\mathbf{k}-\frac{\mathbf{q}}{2}}}{2}
+\right)^2
++
+|\Delta_{\mathbf{q}}|^2
+}
++
+\frac{
+\xi_{\mathbf{k}+\frac{\mathbf{q}}{2}}
+-
+\xi_{\mathbf{k}-\frac{\mathbf{q}}{2}}
+}{2}.
+\label{eq:E-kq}
+\end{equation}
+
+\item
+Assuming $|\mathbf{q}| \ll k_F$, expand 
+$\xi_{\mathbf{k}\pm\frac{\mathbf{q}}{2}}$ to second order in $q$.  
+Obtain
+\begin{equation}
+E_{\mathbf{k}}^{(\mathbf{q})}
+=
+E_{\mathbf{k}}
++\frac{\hbar^2 (\mathbf{k}\cdot\mathbf{q})}{2m}+
+\frac{\hbar^2 q^2}{8m}\,
+\frac{\xi_k}{E_k}
++
+O(q^3),
+\end{equation}
+and show that the linear term in $q$ vanishes when summing over $\mathbf{k}$.
+
+\item
+The mean-field free energy is
+\begin{equation}
+\Omega(\Delta_{\mathbf{q}})
+=
+\frac{|\Delta_{\mathbf{q}}|^2}{v_0}
++
+\sum_{\mathbf{k}} 
+\bigl( \tilde{\xi}_{\mathbf{k}}^{(\mathbf{q})} - E_{\mathbf{k}}^{(\mathbf{q})} \bigr)
+- 
+2 k_B T
+\sum_{\mathbf{k}}
+\ln \!\left( 1 + e^{-\beta E_{\mathbf{k}}^{(\mathbf{q})}} \right),
+\end{equation}
+where $\tilde{\xi}_{\mathbf{k}}^{(\mathbf{q})}=\xi_{\mathbf{k}}+\hbar^2q^2/8m$. Show that the difference
+\[
+\delta \Omega
+=
+\Omega(\Delta_{\mathbf{q}}) - \Omega(\Delta_0)
+\]
+has no term linear in $q$, and that the leading term is proportional to 
+$q^2$.  
+Show that
+\begin{equation}
+\delta\Omega
+=
+\frac{\hbar^2 q^2}{4m}\,\frac{n_s(T)}{2V}
++
+O(q^4)
+\label{eq:GL-gradient}
+\end{equation}
+which reproduces the gradient term of the Ginzburg--Landau free energy.
+Explain physically why this corresponds to the kinetic energy of a gas 
+of Cooper pairs of mass $2m$.
+
+\end{enumerate}
+
+
+
+\section{Jordan-Wigner transformation in Ising model}
+The transverse one-dimensional field Ising model provides the simplest example of a quantum phase transition: a phase transition induced by quantum zero-point motion. This model is written
+$$
+H=-J \sum_j S^z_j S^z_{j+1}-h \sum_j S^x_j,
+$$
+where $S_z$ is the $z$ component of a spin $\frac{1}{2}$, while the the magnetic field $h$ acts in the transverse (x) direction. (For convenience, one can assume periodic boundary conditions with $L$ sites, so that $j \equiv j \bmod \left(L\right)$.) At $h=0$, the model describes a one-dimensional Ising model, with long-range ferromagnetic order associated with a two-fold degenerate ferromagnetic ground state:
+$$
+\left|\Psi_{\uparrow}\right\rangle=\left|\uparrow_1\right\rangle\left|\uparrow_2\right\rangle \cdots\left|\uparrow_{L}\right\rangle
+$$
+or
+$$
+\left|\Psi_{\downarrow}\right\rangle=\left|\downarrow_1\right\rangle|\downarrow 2\rangle \cdots\left|\downarrow_{L}\right\rangle .
+$$
+
+A finite transverse field mixes "up" and "down" states, and, for infinitely large $h$, the system has a single ground state, with the spins all pointing in the $x$ direction:
+$$
+\left|\Psi_{\rightarrow}\right\rangle=\prod_{j=1, L}\left(\frac{\left|\uparrow_j\right\rangle+\left|\downarrow_j\right\rangle}{\sqrt{2}}\right) .
+$$
+In other words, there is a quantum phase transition - a phase transition driven by quantum fluctuations between the doubly degenerate ferromagnet at small $h$ and a singly degenerate state polarized in the $x$ direction at large $h$.
+
+\begin{enumerate}
+    \item  By rotating the above model so that the magnetic field acts in the $+x$ direction and the Ising interaction acts on the spins in the $x$ direction, show that the transverse-field Ising model can be rewritten as
+$$
+H=-J \sum_j S^x_j S^x_{j+1}-h \sum_j S_z(j) .
+$$
+
+\item Use the Jordan-Wigner transformation to show that the "fermionized" version of this Hamiltonian can be written
+$$
+H=\frac{J}{4} \sum_j\left(f_j-f_j^{\dagger}\right)\left(f_{j+1}+f_{j+1}^{\dagger}\right)-h \sum_j f_j^{\dagger} f_j .
+$$
+
+\item Writing $f_j=\frac{1}{\sqrt{L}} \sum_k d_k e^{i k R_j}$, where $R_j=a j$, show that $H$ can be rewritten in momentum space as
+$$
+H=\sum_{k \in[0, \pi / a]}\left[\epsilon_k\left(d_k^{\dagger} d_k-d_{-k} d_k^{\dagger}\right)+i\Delta_k\left( d_k^{\dagger} d_{-k}^{\dagger}-d_{-k} d_k\right)\right]
+$$
+where the sum over $k=\frac{2 \pi}{L a}\left(1,2, \ldots L / 2\right) \in\left[0, \frac{\pi}{a}\right]$ is restricted to half the Brillouin zone, while $\epsilon_k=-\frac{J}{2} \cos k a-h$ and $\Delta_k=-\frac{J}{2} \sin k a$.
+
+\item  Show that the spectrum of the excitations is described by Dirac fermions with a dispersion
+$$
+E_k=\sqrt{\epsilon_k^2+\Delta_k^2}=\sqrt{2 J h \sin ^2(k a/2)+(h-J / 2)^2},
+$$
+so that the gap in the excitation spectrum closes at $h=h_c= J/2$. What is the significance of this field?
+\end{enumerate}
+
+
+
+
+
+\end{document}
