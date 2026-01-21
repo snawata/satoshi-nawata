@@ -1,0 +1,104 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{macros} 
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 1: Due at class on Sep 21}
+\section{Lagrangian and symmetry}
+\subsection{}Let us consider the Lagrangian of the electromagnetic field
+$$
+\mathcal{L}_{\textrm{EM}}=-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}-A_\mu J^\mu
+$$
+where $F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu$ and $J_\mu$ is a 4-vector.  Derive the Euler-Lagrange equations for \(A_{\mu}(x)\). Write the equations in
+standard form of the Maxwell's equations by identifying \(E^{i}=-F^{0 i}\) and \(\epsilon^{i j k} B^{k}=-F^{i j} .\)
+
+\subsection{}\label{complex-scalar} Show that the Lagrangian of a complex scalar field
+$$
+\mathcal{L}_{\textrm{cpx scalar}}=\partial_{\mu} \phi^{*}(x) \partial^{\mu} \phi(x)-m^{2} \phi^{*}(x) \phi(x)
+$$
+is invariant under the global \(\U(1)\) symmetry
+$$
+\phi(x) \rightarrow e^{i \alpha} \phi(x), \quad \phi^{*}(x) \rightarrow e^{-i \alpha} \phi^{*}(x), \quad \alpha \in \mathbb{R}
+$$
+Find the corresponding Noether current.
+
+
+
+\subsection{} Let us consider the Lagrangian of a complex scalar field coupled to electromagnetic field
+$$
+\mathcal{L}=\left(D_{\mu} \phi\right)^{*} D^{\mu} \phi-m^{2} \phi^{*} \phi-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}
+$$
+ where \(D_{\mu}=\partial_{\mu}+i e A_{\mu} .\) Find the energy momentum \(T^{\mu \nu}\).
+
+ Show that \(\mathcal{L}\) is invariant under the $\U(1)$ gauge (sometimes called \textbf{local}) symmetry
+\begin{align}\nonumber
+\phi(x) & \rightarrow e^{i \alpha(x)} \phi(x) \\ A_{\mu}(x) & \rightarrow A_{\mu}(x)-\frac1e \partial_{\mu} \alpha(x)\nonumber
+\end{align}
+Note that $\alpha$ for the \textbf{global} \(\U(1)\) symmetry in Problem \ref{complex-scalar} does not depend on \(x .\)
+
+
+
+
+
+\section{Complex scalar field}
+
+Let us consider quantum theory of a complex scalar field in Problem \ref{complex-scalar}.
+
+\subsection{} The mode expansion of the complex scalar  field \(\phi(\boldsymbol{x})\) is
+$$
+\begin{aligned} \phi(\boldsymbol{x}) &=\int \frac{d^{3} p}{(2 \pi)^{3}} \frac{1}{\sqrt{2 E_{\boldsymbol{p}}}}\left(a_{\boldsymbol{p}} e^{i \boldsymbol{p} \cdot \boldsymbol{x}}+b_{\boldsymbol{p}}^{\dagger} e^{-i \boldsymbol{p} \cdot \boldsymbol{x}}\right) \\ \phi^*(\boldsymbol{x})&=\int \frac{d^{3} p}{(2 \pi)^{3}} \frac{1}{\sqrt{2 E_{\boldsymbol{p}}}}\left(b_{\boldsymbol{p}} e^{i \boldsymbol{p} \cdot \boldsymbol{x}}+a_{\boldsymbol{p}}^{\dagger} e^{-i \boldsymbol{p} \cdot \boldsymbol{x}}\right) \end{aligned}~.
+$$
+Imposing the canonical commutation relations
+$$[\phi(\boldsymbol{x}), \pi(\boldsymbol{y})]=i \delta^{(3)}(\boldsymbol{x}-\boldsymbol{y})=[\phi^*(\boldsymbol{x}), \pi^*(\boldsymbol{y})]~,$$
+and the others vanish, derive the commutation relations of the creation and annihilation operators \(a_{\boldsymbol{p}}, a_{\boldsymbol{p}}^{\dagger}, b_{\boldsymbol{p}}, b_{\boldsymbol{p}}^{\dagger}~.\)
+
+\subsection{}
+Show that the Noether charge \(Q\) for the global \(\U(1)\) symmetry in Problem \ref{complex-scalar} can be expressed as follows in terms of the
+modes of \(\phi :\)
+$$
+Q=-\int \frac{d^{3} p}{(2 \pi)^{3}}\left(a^{\dagger}_{\boldsymbol{p}} a_{\boldsymbol{p}}-b^{\dagger}_{\boldsymbol{p}} b_{\boldsymbol{p}}\right)
+$$
+after dropping a constant term.
+Show that the state \(a^{\dagger}_{\boldsymbol{p}}|0\rangle\) has the $\U(1)$ charge \(- 1\) and the state \(b^{\dagger}_{\boldsymbol{p}}|0\rangle\) has the $\U(1)$ charge \(+1\).
+
+
+
+\subsection{}
+Let us consider the operators in the Heisenberg picture
+$$
+\begin{aligned} \phi(x) &=\phi(\boldsymbol{x},t) =\int \frac{\mathrm{d}^{3} p}{(2 \pi)^{3}} \frac{1}{\sqrt{2 E_{\boldsymbol{p}}}}\left(a_{\boldsymbol{p}} e^{-i p \cdot x}+b_{\boldsymbol{p}}^{\dagger} e^{i p \cdot x}\right) \\ \phi^{*}(x) &=\phi^{*}(\boldsymbol{x},t)=\int \frac{\mathrm{d}^{3} p}{(2 \pi)^{3}} \frac{1}{\sqrt{2 E_{\boldsymbol{p}}}}\left(b_{\boldsymbol{p}} e^{-i p x}+a_{\boldsymbol{p}}^{\dagger} e^{i p \cdot x}\right) \end{aligned}
+$$
+Using the commutation relations of the creation and annihilation operators to calculate
+\(\langle 0|T[\phi(x) \phi(y)]| 0\rangle,\left\langle 0\left|T\phi^{*}(x) \phi^{*}(y)\right| 0\right\rangle\), and \(\left\langle 0\left|T\phi(x) \phi^{*}(y)\right| 0\right\rangle\).
+Compare with the Feynman propagator the real scalar field.
+
+
+\section{Propagator}
+The Feynman propagator of a real scalar field in momentum space is given by
+$$
+D_{F}(x-y)=\langle 0|T \phi(x) \phi(y)| 0\rangle=\int \frac{d^{4} p}{(2 \pi)^{4}} \frac{i}{p^{2}-m^{2}+i \epsilon} e^{-i p \cdot(x-y)}
+$$
+where the \(i \epsilon\) is there to ensure that the correct poles are included in the \(p_{0}\) integral.
+Compute \(D_{F}\) explicitly and write it as a function of the Lorentz-invariant length \(s^{2}=\)
+\((x-y)_{\mu}(x-y)^{\mu}\) in terms of the modified Hankel and
+Bessel functions in the limit \(\epsilon \rightarrow 0\):
+\bea
+H_{n}^{(1)}(z)&= \frac{-2i}{\sqrt{\pi}\left(n-\frac{1}{2}\right) !} \left(-\frac{1}{2} z\right)^{n}\int_{1}^{\infty-i \varepsilon} e^{-i z x}\left(x^{2}-1\right)^{n-1 / 2} dx\cr
+K_{n}(z)&=\frac{\sqrt{\pi}}{\left(n-\frac{1}{2}\right) !}\left(\frac{1}{2} z\right)^{n} \int_{1}^{\infty} e^{-z x}\left(x^{2}-1\right)^{n-1 / 2} d x \nonumber
+\eea
+where \(K_{n}(z)=i^{n+1}(\pi / 2) H_{n}^{(1)}(i z)\).
+
+Discuss the behaviors of the propagator in the following regimes by using the properties of the modified Hankel and
+Bessel functions. (See \href{https://en.wikipedia.org/wiki/Bessel_function}{Wikipedia}.)
+\begin{itemize}
+    \item  \(s \rightarrow 0 \)
+    \item \(s^{2}\) is large and positive (timelike separation)
+    \item  \(s^{2}\) is large and negative (spacelike separation)
+    \item \(m^{2} \rightarrow 0\)
+    \end{itemize}
+
+
+
+
+
+
+\end{document}

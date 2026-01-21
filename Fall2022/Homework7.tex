@@ -1,0 +1,56 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 6: Due at class on Dec 21}
+
+\section{Dimensional regularization}
+Using dimensional regularization \(d=4-\epsilon,\) and Wick rotation \((p^{0} \rightarrow i p_{E}^{0})\),
+show
+$$
+\int \frac{d^{d} k}{(2 \pi)^{d}} \frac{k^{2 a}}{\left[k^{2}-\Delta+i \tilde{\epsilon}\right]^{b}}=\frac{i}{16 \pi^{2}}(-\Delta)^{a-b+2}\left(\frac{4 \pi}{\Delta}\right)^{\frac{\epsilon}{2}} \frac{\Gamma(2+a-\frac{\epsilon}{2}) \Gamma(b-a-2+\frac{\epsilon}{2})}{\Gamma(b) \Gamma(2-\frac{\epsilon}{2})}
+$$
+The integral over the solid angle
+in \(d\)-dimensional euclidean space is given by $$\int d \Omega_{d}=\frac{2 \pi^{d / 2}}{\Gamma(\frac d2)}~.$$
+
+
+
+\section{Optical theorem in massless QED}
+Let us consider the optical theorem in the massless QED. Show that the unpolarized cross-section $\sigma$ of the scattering\(A(k_{1}) B(k_{2}) \rightarrow C(p_{1}) D(p_{2})\) in CM-frame namely
+\begin{equation}\nonumber
+\sigma=\frac{1}{s} \operatorname{Im}(\mathcal{M})
+\end{equation}
+where \(i \mathcal{M}\) the unpolarized (average) Feynman amplitude of the process \(A(k_{1}) B(k_{2}) \rightarrow A(k_{1}) B(k_{2})\).
+
+In the lecture, we have seen that the vacuum polarization takes the form
+\begin{equation}\nonumber
+\Pi^{\mu \nu}(q)=\left(q^{2} g^{\mu \nu}-q^{\mu} q^{\nu}\right) \Pi(q^{2})
+\end{equation}
+Also, the dimensional regularization $d=4-\epsilon$ provides
+\begin{equation}\nonumber
+\Pi(q^{2})=-\frac{2 \alpha}{\pi} \int_{0}^{1} d x x(1-x)\left(\frac{2}{\epsilon}-\gamma+\log (4 \pi)-\log \frac{-x(1-x) q^{2}-i \tilde{\epsilon}}{\mu^{2}}\right)
+\end{equation}
+where we replace the electric charge $e$ by $e\mu^\epsilon$.
+
+Show that in the case of \(e^{-} e^{+} \rightarrow \mu^{-}\mu^{+}\) scattering in CM-frame (\(m_{e}=m_{\mu}=0\)) the unpolarized
+cross-section (order \(\mathcal{O}(\alpha^{2}))\) is given by
+$$
+\sigma=\frac{4 \pi \alpha^{2}}{3 s}
+$$
+using the optical theorem and the expression for \(\operatorname{Im}(\Pi(q^{2}))\).
+
+
+
+
+\section{Vacuum polarization in scalar QED}
+
+In the scalar QED, find the diagrams which contribute to the 1PI diagrams of the photon propagator in the order ${\cal O}(e^2)$  and write down the integral expression  for $\Pi^{\mu\nu}_{\textrm{1-loop}}({k})$
+\bea
+i\Pi^{\mu\nu}(k)\equiv \tiny{\mu}{\raisebox{-.3cm}{\includegraphics[width=2.5cm]{photon-1PI}}}{\tiny \nu}=e^2\Pi^{\mu\nu}_{\textrm{1-loop}}({k}) + {\cal O}(e^4)~,
+\eea
+ and perform momentum integration by using the dimensional regularization.
+
+
+
+\end{document}

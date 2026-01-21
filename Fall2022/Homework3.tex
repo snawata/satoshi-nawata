@@ -1,0 +1,148 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 3: Due at class on Oct 26}
+
+
+\section{More practice with gamma matrices}
+Show the following identities without using explicit representation of the matrices:
+$$
+\operatorname{Tr}\left(\gamma^{\mu} \gamma^{\nu}\right)=4 g^{\mu \nu}
+$$
+
+$$
+\operatorname{Tr}\left(\gamma^{\mu} \gamma^{\nu} \gamma^{\kappa} \gamma^{\lambda}\right)=4 (g^{\mu \nu} g^{\kappa \lambda}-g^{\mu \kappa} g^{\nu \lambda}+g^{\mu \lambda} g^{\nu \kappa})$$
+
+$$ \operatorname{Tr}\left(\gamma^{5} \gamma^{\mu} \gamma^{\nu} \gamma^{\kappa} \gamma^{\lambda}\right)=-4 i \epsilon^{\mu \nu \kappa \lambda}
+$$
+
+
+$$
+\operatorname{Tr}\left(\gamma^{\mu_{1}} \gamma^{\mu_{2}} \ldots \gamma^{\mu_{2 n+1}}\right)=0
+$$
+
+
+
+
+\section{Feymann diagrams for simple integrals (Alex Maloney's homework)}
+
+In this problem we will consider a toy version of version of scalar $\phi^{4}$ theory, where instead of
+computing a full path integral we compute a single integral:
+\be \label{partition-fn}
+Z(\lambda)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} d \phi \exp \left\{-\frac{1}{2} \phi^{2}-\frac{\lambda}{4 !} \phi^{4}\right\}
+\ee
+where $\phi$ is just a real number, rather than a field. This is the path integral for ``0 -dimensional scalar $\phi^{4}$
+field theory".
+
+\subsection{}\label{a}
+Compute $Z(0)$, $Z(0.01)$, $Z(0.1)$, $Z(0.4)$, $Z(1)$, $Z(5)$ numerically by using your favourite numerical computing program. Ask or collaborate with your friends if you don't have one.
+
+\subsection{}
+Replace $\exp \left(-\lambda \phi^{4} / 24\right)$
+with its series expansion in $\lambda$. Find the complete series expansion
+in $\lambda$ in closed form:
+\be\label{eqn1}
+Z(\lambda)=\sum_{n=0}^{\infty} c_{n} \lambda^{n}
+\ee
+and find an explicit expression for $c_{n}$. (Do this by expanding the exponent, exchanging
+orders of summation and integration, and doing the integral for each term in the series.)
+
+\subsection{}\label{b}
+Let us now develop the Feynman diagram expansion for $Z(\lambda)$.
+Explain how each $c_{n}$ could be computed by using (appropriately modified) Feynman
+rules for our simple theory. Describe the Feynman rules for this theory and draw the
+appropriate ``Feynman Diagrams" for the first few terms $c_{n}$. Check that this matches
+the answer you got in Problem \ref{b} for the first few $c_{n}$. Note that we are computing
+the analog of ``vacuum" diagrams in QFT.
+
+\subsection{}
+Evaluate the order $\lambda^{0}$ and $\lambda^{1}$ terms in this series numerically for the values of $\lambda$ given in
+Problem \ref{a}. For which values of $\lambda$ does the order $\lambda^{1}$ term help improve the accuracy of our
+perturbative expansion for $Z(\lambda) ?$
+
+
+
+\subsection{}
+What happens to the integral $Z(\lambda)$ when $\lambda$ is negative? Conclude from your answer that
+the radius of convergence (in $\lambda$) of the series you developed in Problem \ref{b} must be zero.
+
+\subsection{}\label{c}
+Using Stirling's approximation, find the asymptotic form of the $c_{n}$ for large $n$.
+
+\smallskip
+
+Now consider the individual terms $\lambda^{n} c_{n}$ in the series for $Z(\lambda)$. Show that, for fixed $\lambda$,
+these terms will decrease as function of $n$ until they reach a minimum at some critical
+value of $n$  (call it $n_{o}(\lambda)$), after which they start increasing until they diverge at $n \rightarrow \infty$.
+Use your approximate form for $c_{n}$ to estimate $n_{0}(\lambda)$ for small $\lambda$. This shows explicitly
+that the radius of convergence of this series is zero.
+
+\smallskip
+
+Now, show that the smallest term in the series is
+$$
+\lambda^{n_{0}} c_{n_{0}} \sim e^{f(\lambda)}
+$$
+where $f(\lambda)$ is a function you should determine. You need only determine the leading
+behaviour of $f(\lambda)$ at small $\lambda$.
+
+\subsection{}
+Based on this, you might conclude that the series in Problem \ref{b} is useless. But that is not
+the case at all; it still contains lots of useful information about $Z(\lambda) !$
+The expansion
+$$
+e^{-x}=\sum_{m=0}^{\infty} \frac{(-1)^{m}}{m !} x^{m}=1-x+\frac{x^{2}}{2}-\frac{x^{3}}{6}+\ldots
+$$
+has the following property for $x>0:$ the partial sums
+$$
+f_{n}(x) \equiv \sum_{m=0}^{n} \frac{(-1)^{m}}{m !} x^{m}
+$$
+are alternately strict over-estimates and strict under-estimates of the actual function;
+that is, for $x>0, f_{0}(x)=1>e^{-x}, f_{1}(x)=(1-x)<e^{-x}, f_{2}(x)=\left(1-x+x^{2} / 2\right)>e^{-x}$
+and so forth with the $<,>$ alternating.
+
+\smallskip
+
+Use this property to show that the partial sums found above (i.e. \eqref{eqn1} with $n$ cut off at
+$0,1,2,3, \ldots),$ are alternately over-estimates and under-estimates of $Z(\lambda)$. Therefore, the
+true answer $Z(\lambda)$ always lies between neighbouring terms in the series of partial sums.
+Use this property to find a bound for $Z(\lambda)$ at $\lambda=1,$ by evaluating alternating terms
+until they start to diverge. How tight is the bound? Repeat for $Z(0.4)$ and $Z(0.1)$. How
+does this compare with your numerical answer for $Z$?
+
+\smallskip
+
+
+Argue that, as $\lambda$ gets smaller and smaller, one can use the Feynman diagram expansion
+to place tighter and tighter bounds on $Z(\lambda)$. Estimate for how tight the bound will be
+(i.e. how big the error terms will be) as a function of $\lambda,$ when $\lambda$ is small. You may find
+the function $f(\lambda)$ in Problem \ref{c} useful.
+
+\smallskip
+
+
+We conclude that, while the series does not converge, it gives us very good information
+about the value of $Z(\lambda)$. A series with this property - zero radius of convergence but the
+ability to give good information near the origin - is called an \emph{asymptotic series}. Feynman
+diagram expansions in QFT typically only give asymptotic series, rather than convergent
+series.
+
+
+\subsection{}
+Show that the Borel transform $$\mathcal{B} \mathcal{Z}(\lambda)=\sum_{\ell=0}^{\infty} \frac{c_{\ell} \lambda^{\ell}}{\ell!} $$ converges provided $|\lambda|<\frac{3}{2}$ and that in this case
+$$
+\mathcal{Z}(\lambda)=\int_{0}^{\infty} \mathrm{d} z \mathrm{e}^{-z} \mathcal{B} Z(z \lambda)
+$$
+so that $\mathcal{Z}(\lambda)$ may be recovered from its Borel transform.
+
+\subsection{}
+By expanding $\mathrm{e}^{-\frac{1}{2} \phi^{2}}$ in the integral \eqref{partition-fn} obtain the strong coupling expansion
+$$
+\mathcal{Z}(\lambda)=\frac{1}{2 \sqrt{\pi}} \sum_{L=0}^{\infty} \frac{(-1)^{L}}{L !} \Gamma\left(\frac{L}{2}+\frac{1}{4}\right)\left(\frac{6}{\lambda}\right)^{\frac{L}{2}+\frac{1}{4}}
+$$
+for $\mathcal{Z}(\lambda)$ as a series in $1 / \sqrt{\lambda}$. For $\lambda=0.1$, how many terms does one need to obtain the value at which the weak coupling expansion appeared to converge?
+
+
+\end{document}

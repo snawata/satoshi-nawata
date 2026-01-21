@@ -1,0 +1,164 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{macros} 
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 2: Due at class on Oct 12}
+
+
+
+
+
+
+\section{Lorentz group}
+
+
+\subsection{}\label{1.1}
+
+
+
+Show that the generators
+$$
+J^{\mu \nu}=i\left(x^{\mu} \partial^{\nu}-x^{\nu} \partial^{\mu}\right)
+$$
+obey the Lorentz algebra
+\be\label{Lorentz-algebra}\left[J^{\mu \nu}, J^{\rho \sigma}\right]=i\left(g^{\nu \rho} J^{\mu \sigma}-g^{\mu \rho} J^{\nu \sigma}-g^{\nu \sigma} J^{\mu \rho}+g^{\mu \sigma} J^{\nu \rho}\right)~.\ee
+
+
+Find the commutation relations of $J^{\mu \nu}$ with the generators of translations $P^\rho=-i\partial^\rho$. These define the Lie algebra of
+the Poincare group (Lorentz $+$ translations).
+
+\subsection{}
+A 4-vector $V$ is transformed as $V\to \exp (-\frac{i\omega_{\mu\nu}J^{\mu\nu}}{2})V$ under a Lorentz transformation.
+Show that an infinitesimal Lorentz transformation can be written as
+$$
+-\frac{i\omega_{\mu\nu}J^{\mu\nu}}{2}=-\sum_ai\left(\theta_a L_a+\beta_a K_a\right)=\left(\begin{array}{cccc}{0} & {-\beta_{1}} & {-\beta_{2}} & {-\beta_{3}} \\ {-\beta_{1}} & {0} & {-\theta_{3}} & {\theta_{2}} \\ {-\beta_{2}} & {\theta_{3}} & {0} & {-\theta_{1}} \\ {-\beta_{3}} & {-\theta_{2}} & {\theta_{1}} & {0}\end{array}\right)
+$$
+where $K_a$ and $L_a$ generate Lorentz boosts and space-rotations, respectively.
+Rewrite the Lorentz algebra in terms of $K_a$ and $L_a$.
+
+\subsection{} Show that the matrices
+$$
+J_{a}^{+} \equiv \frac{1}{2}\left(L_{a}+i K_{a}\right), \quad J_{a}^{-} \equiv \frac{1}{2}\left(L_{a}-i K_{a}\right)
+$$
+satisfy the commutation relations
+$$
+\left[J_{a}^{+}, J_{b}^{+}\right] =i \epsilon_{abc} J_{c}^{+}~, \quad \left[J_{a}^{-}, J_{b}^{-}\right] =i \epsilon_{abc} J_{c}^{-}~, \quad \left[J_{a}^{+}, J_{b}^{-}\right] =0~.
+$$
+Therefore, the Lorentz algebra can be understood as two copies of the $\mathfrak{su}(2)$ algebra
+$$\left[s^{a}, s^{b}\right]=i \epsilon^{a b c} s^{c} $$
+where \(s^{a}=\sigma^{a} / 2,\) $(a=1,2,3)$ are a half of the Pauli matrices.
+
+
+
+
+
+\section{Derivations}
+
+
+
+\subsection{}
+Derive the canonical anticommutation relations
+\begin{equation}
+\begin{gathered}
+\left\{\psi_a(\boldsymbol{x}), \psi_b^{\dagger}(\boldsymbol{y})\right\}=\delta^{(3)}(\boldsymbol{x}-\boldsymbol{y}) \delta_{a b} \\
+\left\{\psi_a(\boldsymbol{x}), \psi_b(\boldsymbol{y})\right\}=\left\{\psi_a^{\dagger}(\boldsymbol{x}), \psi_b^{\dagger}(\boldsymbol{y})\right\}=0
+\end{gathered}
+\end{equation}
+from the following relations
+\begin{equation}
+\left\{a_{\boldsymbol{p}}^r, a_{\boldsymbol{q}}^{s \dagger}\right\}=\left\{b_{\boldsymbol{p}}^r, b_{\boldsymbol{q}}^{s \dagger}\right\}=(2 \pi)^3 \delta^{(3)}(\boldsymbol{p}-\boldsymbol{q}) \delta^{r s},
+\end{equation}
+and others anti-commutes. Or the other way around, namely derive from $\psi$-$\psi^\dagger$ anticommutation relations to $a$-$b$ anticommutation relations.
+
+
+\subsection{}
+Derive the expression of the Hamiltonian
+$$
+H=\int \frac{d^3 p}{(2 \pi)^3} E_p \sum_s\left[a_{\boldsymbol{p}}^{s \dagger} a_{\boldsymbol{p}}^s+b_{\boldsymbol{p}}^{s \dagger} b_{\boldsymbol{p}}^s-(2 \pi)^3 \delta(0)\right]
+$$
+from
+\begin{equation}
+\mathcal{H}=\overline{\psi}\left(-i \gamma^i \partial_i+m\right) \psi~.
+\end{equation}
+
+
+\subsection{}
+Show that when $m=0$, $\psi \rightarrow e^{i \theta \gamma^{5}} \psi$ is a symmetry of the Dirac Lagrangian, which is called the \textbf{axial symmetry}. Find the corresponding Noether  current.
+
+
+\section{Magnetic moment from Dirac equation}
+The Dirac equation in the presence of the electromagnetic field is
+$$
+(i \slashed{D}-m) \psi=0
+$$
+where $D_\mu=\partial_\mu+ieA_\mu$. Using the convention of the gamma matrices in Peskin-Schroeder, show that non-relativistic limit of the equation for the plane wave
+$$\psi(x)=\begin{pmatrix}u_L(p)\\ u_R(p)\end{pmatrix} e^{-ip\cdot x}$$
+is
+$$
+H_{\textrm{nr}}=\frac{1}{2 m} \boldsymbol{\sigma} \cdot(\boldsymbol{p}-e \boldsymbol{A}) \boldsymbol{\sigma} \cdot(\boldsymbol{p}-e \boldsymbol{A})+e A^0
+$$
+Rewrite this Hamiltonian in the following form
+$$
+H_{\textrm{nr}}=\frac{1}{2 m}(\boldsymbol{p}-e \boldsymbol{A})^{2}-g \frac{e}{2 m} \boldsymbol{s} \cdot \boldsymbol{B}+e A^0
+$$
+and read off the $g$-factor. Here $\boldsymbol{s}=\boldsymbol{\sigma}/2$.
+
+
+
+\section{Spinor identities}
+
+\subsection{}
+In the lecture, we see that the plane wave solutions to the Dirac equation are given by
+$$
+\psi=u_s(p) e^{-i p\cdot x}~, \quad \psi=v_s(p) e^{i p\cdot x}~,
+$$
+where
+$$
+u_s(p)=\begin{pmatrix}
+\sqrt{ p \cdot \sigma} \xi_s \\ \sqrt{ p \cdot\overline  \sigma} \xi_s
+\end{pmatrix}~, \quad  v_s(p)=\begin{pmatrix}
+\sqrt{ p \cdot \sigma} \xi_s \\ -\sqrt{ p \cdot\overline  \sigma} \xi_s
+\end{pmatrix}~.
+$$
+Taking the Weyl spinor basis as $\xi^\dagger_s \xi_{s'}=\delta_{ss'}$, show that if we sum over polarization states of the spinor, we have
+$$
+\sum_{s} u_{s}(p) \overline{u}_{s}(p)=\slashed{p}+m ~,\qquad \sum_{s} v_{s}(p) \overline{v}_{s}(p)=\slashed{p}-m ~.$$
+Note that the formulas implicitly involves the spinor indices, which can be explict as
+$$
+\sum_{s} u_{s a}(p) \overline{u}_{s b}(p)=\gamma_{a b}^{\mu} p_{\mu}+m \delta_{ab}~.
+$$
+
+\subsection{}
+Show
+$\overline u_{s}(p) \gamma^{\mu} u_{s^{\prime}}(p)=2 p^{\mu} \delta_{s s^{\prime}}$.
+This is a simple version of the \textbf{Gordon identity}.
+
+\section{Bonus problems}
+\subsection{}
+The gamma matrices form the Clifford algebra
+\be\label{Clifford}\left\{\gamma^{\mu}, \gamma^{\nu}\right\}=2 g^{\mu \nu}~.\ee
+Show that the generators of Lorentz transformations in the Dirac spinor representation
+$$
+S^{\mu \nu}=\frac{i}{4}\left[\gamma^{\mu}, \gamma^{\nu}\right]
+$$
+satisfy the Lorentz algebra \eqref{Lorentz-algebra}. Compute the commutation relation $[S^{\mu\nu},\gamma^\rho]$, and compare it with Problem \ref{1.1}.
+
+\subsection{}
+Use the Clifford algebra \eqref{Clifford} to show that \(\gamma^{5}=i \gamma^{0} \gamma^{1} \gamma^{2} \gamma^{3}\) obeys
+$$
+\left\{\gamma^{5}, \gamma^{\mu}\right\}=0, \quad\left(\gamma^{5}\right)^{2}=1~.
+$$
+Show that the chirality projection operators
+$$P_{-}=\frac{1-\gamma^{5}}{2}, \quad P_{+}=\frac{1+\gamma^{5}}{2}$$
+satisfy \(P_{-}^{2}=P_{-}, \quad P_{+}^{2}=P_{+}, \quad P_{-} P_{+}=P_{+} P_{-}=0\).
+
+\subsection{}
+Check that the basis of the gamma matrices chosen in Peskin-Schroeder
+\be\label{gamma-convention}
+\gamma^{0}=\left(\begin{array}{cc}0&1 \\ 1&0\end{array}\right) \quad \gamma^{i}=\left(\begin{array}{cc}{0} & {\sigma^{i}} \\ {-\sigma^{i}}&0\end{array}\right)
+\ee
+obey the Clifford algebra \eqref{Clifford}. Express $\gamma^5$ in this basis.
+
+
+\end{document}

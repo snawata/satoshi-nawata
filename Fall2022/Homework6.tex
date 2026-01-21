@@ -1,0 +1,62 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 6: Due at class on Dec 14}
+
+
+
+
+\section{Bremsstrahlung}
+In the lecture, the IR divergence of the electron vertex is given by
+\begin{equation}
+\begin{aligned} \delta F_{1}^{\textrm{ren}}(q^{2}) &=\delta F_{1}(q^{2})-\delta F_{1}(0)=\frac{\alpha}{2 \pi} f_{\mathrm{IR}}(q^{2}) \times \log \left(\frac{-q^{2}}{\mu^{2}}\right)+\text { regular terms } \\ f_{\mathrm{IR}}(q^{2}) &=-1+\int_{0}^{1} d \xi\left(\frac{m^{2}-q^{2} / 2}{m^{2}-q^{2} \xi(1-\xi)}\right) ~.\end{aligned}
+\end{equation}
+This cancels with the infrared singularity in the \(\mathcal{O}(\alpha)\) cross-section for a single photon emission,
+$$
+d \sigma\left[e^{-}(p) \rightarrow e^{-}\left(p^{\prime}\right)+\gamma\right]=d \sigma_{0}\left[e^{-}(p) \rightarrow e^{-}\left(p^{\prime}\right)\right] \times \frac{\alpha}{\pi} I(\beta, \beta^{\prime}) \times \frac{d E_{\gamma}}{E_{\gamma}}
+$$
+where
+$$
+I(\beta, \beta^{\prime})=\int \frac{d \Omega_{\boldsymbol{k}}}{4 \pi}|\boldsymbol{k}|^{2}\left[\frac{2 p \cdot p^{\prime}}{(k \cdot p)\left(k \cdot p^{\prime}\right)}-\frac{m^{2}}{(k \cdot p)^{2}}-\frac{m^{2}}{\left(k \cdot p^{\prime}\right)^{2}}\right]~.
+$$
+Show that \(2 f_{\mathrm{IR}}(q^{2})=I(\beta, \beta^{\prime})\).
+
+\section{1-loop correction in scalar QED}
+The Lagrangian of the scalar QED is given by
+\begin{equation}\label{lag2}
+{\cal L}_{\rm scalar}=-\frac14F_{\mu\nu}F^{\mu\nu}+(D_\mu \phi)^*D^\mu \phi-m^2 \phi^*\phi
+\end{equation}
+where the covariant derivative is expressed by $D_\mu=\partial_\mu+ieA_\mu$.
+%
+% \subsection{}
+% Find Feynman rules for the scalar QED.
+% \subsection{}
+% Find the diagrams which contribute to the 1PI diagrams of the scalar vertex in  the order ${\cal O}(e^3)$  and write down the integral expression  for
+% \bea
+% -ie K^\mu(p,p')\equiv{\raisebox{-1.2cm}{\includegraphics[width=3cm]{vertex}}}=-ie (p+p')^\mu+e^3K_{\textrm{1-loop}}^\mu(p,p')+ {\cal O}(e^5)~.
+% \eea
+% Perform momentum integration by using the Pauli-Villars regularization.
+%
+% \subsection{}
+Find the diagrams which contribute to the 1PI diagrams of the scalar propagator in the order ${\cal O}(e^2)$  and write down the integral expression  for $\Pi_{\phi}^{\textrm{1-loop}}({k})$
+\bea
+i\Pi_{\phi}(k)\equiv{\raisebox{-.3cm}{\includegraphics[width=2.5cm]{phi-1PI}}}=e^2\Pi_{\phi}^{\textrm{1-loop}}({k}) + {\cal O}(e^4)~.
+\eea
+Perform momentum integration by using the dimensional regularization.
+
+\section{Vacuum polarization in scalar QED}
+
+In the scalar QED, find the diagrams which contribute to the 1PI diagrams of the photon propagator in the order ${\cal O}(e^2)$  and write down the integral expression  for $\Pi^{\mu\nu}_{\textrm{1-loop}}({k})$
+\bea
+i\Pi^{\mu\nu}(k)\equiv \tiny{\mu}{\raisebox{-.3cm}{\includegraphics[width=2.5cm]{photon-1PI}}}{\tiny \nu}=e^2\Pi^{\mu\nu}_{\textrm{1-loop}}({k}) + {\cal O}(e^4)~,
+\eea
+ and perform momentum integration by using the dimensional regularization. Show that
+\be
+i\Pi^{\mu\nu}(k)\propto \left(k^2 g^{\mu \nu}-k^\mu k^\nu\right)
+\ee
+so that $k_\mu \delta \Pi^{\mu \nu}=0$. (Hint: there are 2 diagrams, and you have add them together to show the Ward identity.)
+
+
+\end{document}

@@ -1,0 +1,99 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 5: Due at class on Nov 23}
+
+\section{Derivation}
+Derive the equation (7.36) and (7.37) of the lecture note.
+
+
+
+\section{Bhabha scattering}
+In this probelm, we consider the process of electron-positron \(\left(e^{+} e^{-} \rightarrow e^{+} e^{-}\right)\) scattering in QED.
+
+\subsection{}
+Compute the amplitude for this process by summing two Feynman diagrams. Your
+answer will depend on the polarizations of the initial and final electrons and positrons.
+Note that, unlike the \(e^{+}e^-\rightarrow \mu^{+} \mu^{-}\) process considered in class, your answer will be the
+sum of two Feynman diagrams. The overall sign is not too important, but make sure to
+get the relative sign between these two Feynman diagrams correct!
+\subsection{}
+Imagine that we do not measure the polarizations of the initial or final states. Compute
+the scattering probability \(\frac{1}{4} \sum|\mathcal{M}|^{2},\) where we average over initial polarizations and sum
+over final polarizations. Write your answer as a function of the momenta of the incoming
+and outgoing particles. You may make the approximation where \(E_{c m}\gg m,\) so that we
+can just ignore the electron mass.
+\subsection{}
+
+Now compute the differential cross section in centre of mass frame, and write it as a
+function of the Mandelstam variables as
+$$
+\frac{d \sigma}{d \cos \theta}=\frac{\pi \alpha^{2}}{s}\left(u^{2}\left(\frac{1}{s}+\frac{1}{t}\right)^{2}+\left(\frac{t}{s}\right)^{2}+\left(\frac{s}{t}\right)^{2}\right)
+$$
+Take the reference frame as in Peskin-Schroeder above Eqn(5.11), write this formula as a function of \(E_{c m}\) and \(\theta\).
+Note that the result diverges at \(\theta \rightarrow 0 .\) Can you explain why?
+
+
+
+
+
+\section{Integral}
+Perform the following integral and show the identity
+$$ \int \frac{d^{4} k}{(2 \pi)^{4}} \frac{1}{\left[k^{2}-\Delta+i \epsilon\right]^{n}} =(-1)^{n} \frac{i}{16 \pi^{2}} \frac{1}{(n-1)(n-2)} \frac{1}{\Delta^{n-2}}~,$$
+in the following two ways, and check both give the same answer:
+\begin{itemize}
+    \item Start with the calculation of the \(d k^{0}\) integral via Cauchy's theorem and then
+    integrate over \(d^{3} k\).
+    \item Alternatively the \(k^{0}\) integration can be done via a Wick
+   rotation and afterwards substituting \(k^{0}=i k_{E}^{0},(\boldsymbol{k} \equiv \boldsymbol{k}_{E}) .\) Then the integral
+   can be done in the four-dimensional Euclidean space (with \(\left.k^{2}=-((k_{E}^{0}\right)^{2}+\boldsymbol{k}^{2}))\)
+   For that purpose you will need the integral over the four-dimensional solid angle
+   \(\int d \Omega_{4}=2 \pi^{2} .\)
+\end{itemize}
+
+
+
+
+\section{1-loop correction in scalar QED}
+The Lagrangian of the scalar QED is given by
+\begin{equation}\label{lag2}
+{\cal L}_{\rm scalar}=-\frac14F_{\mu\nu}F^{\mu\nu}+(D_\mu \phi)^*D^\mu \phi-m^2 \phi^*\phi
+\end{equation}
+where the covariant derivative is expressed by $D_\mu=\partial_\mu+ieA_\mu$.
+%
+% \subsection{}
+% Find Feynman rules for the scalar QED.
+% \subsection{}
+Find the diagrams which contribute to the 1PI diagrams of the scalar vertex in  the order ${\cal O}(e^3)$  and write down the integral expression  for
+\bea
+-ie K^\mu(p,p')\equiv{\raisebox{-1.2cm}{\includegraphics[width=3cm]{vertex}}}=-ie (p+p')^\mu+e^3K_{\textrm{1-loop}}^\mu(p,p')+ {\cal O}(e^5)~.
+\eea
+Perform momentum integration by using the Pauli-Villars regularization.
+
+% \subsection{}
+% Find the diagrams which contribute to the 1PI diagrams of the scalar propagator in the order ${\cal O}(e^2)$  and write down the integral expression  for $\Pi_{\phi}^{\textrm{1-loop}}({k})$
+% \bea
+% i\Pi_{\phi}(k)\equiv{\raisebox{-.3cm}{\includegraphics[width=2.5cm]{phi-1PI}}}=e^2\Pi_{\phi}^{\textrm{1-loop}}({k}) + {\cal O}(e^4)~.
+% \eea
+% Perform momentum integration by using the Pauli-Villars regularization.
+%
+%
+%
+%
+% \section{Bremsstrahlung}
+% In the lecture, the IR divergence of the electron vertex is given by
+% \begin{equation}
+% \begin{aligned} \Delta F_{1}(q^{2}) &=F_{1}(q^{2})-F_{1}(0)=\frac{\alpha}{2 \pi} C_{\mathrm{IR}}(q^{2}) \times \log \left(\frac{-q^{2}}{\mu^{2}}\right)+\text { regular terms } \\ C_{\mathrm{IR}}(q^{2}) &=-1+\int_{0}^{1} d \xi\left(\frac{m^{2}-q^{2} / 2}{m^{2}-q^{2} \xi(1-\xi)}\right) ~.\end{aligned}
+% \end{equation}
+% This cancels with the infrared singularity in the \(\mathcal{O}(\alpha)\) cross-section for the single photon emission,
+% $$
+% d \sigma\left[e^{-}(p) \rightarrow e^{-}\left(p^{\prime}\right)+\gamma\right]=d \sigma_{0}\left[e^{-}(p) \rightarrow e^{-}\left(p^{\prime}\right)\right] \times \frac{\alpha}{\pi} I\left(\beta, \beta^{\prime}\right) \times \frac{d E_{\gamma}}{E_{\gamma}}
+% $$
+% where
+% $$
+% I\left(\beta, \beta^{\prime}\right)=\int \frac{d \Omega_{\boldsymbol{k}}}{4 \pi}|\boldsymbol{k}|^{2}\left[\frac{2 p \cdot p^{\prime}}{(k \cdot p)\left(k \cdot p^{\prime}\right)}-\frac{m^{2}}{(k \cdot p)^{2}}-\frac{m^{2}}{\left(k \cdot p^{\prime}\right)^{2}}\right]~.
+% $$
+% Show that \(2 C_{\mathrm{IR}}(q^{2})=I\left(\beta, \beta^{\prime}\right)\).
+\end{document}
