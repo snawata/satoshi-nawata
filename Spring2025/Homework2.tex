@@ -1,0 +1,96 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+% %\usepackage[UTF8]{ctex}
+% \usepackage{jheppub}
+\usepackage{macros}
+\pdfoutput=1
+
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 2: Due on Apr 1}
+\bigskip
+\textbf{Caution:} 
+When solving homework problems, it is important to show your derivation at each step. Nowadays, many online tools make it easy to find answers, but the primary goal of these assignments is to deepen your understanding through hands-on problem-solving. By working through the calculations yourself, you engage more deeply with the material, making the learning process more meaningful, rather than simply copying answers from external sources.
+
+
+\section{Vertex operator and OPE}
+Show that $:e^{ik\varphi}:$ is a primary field in the free boson theory and find its conformal dimension. In addition, show that $\partial^n \varphi$ ($n\ge 2$) is not a primary field.
+
+
+
+
+\section{Schwarzian derivatives}
+In the lecture note (3.87), we have learned that,  under the conformal transformation
+$z \rightarrow w(z)$, the energy-momentum tensor transforms
+$$
+  T(w) = \bigg(\frac{dw}{dz}\bigg)^{-2}
+  \big[
+       T(z) -\frac{c}{12}\{w;z\}
+  \big]\, ,
+$$
+where $\{w;z\}$ is the additional term
+called the {Schwarzian derivative}:
+$$
+  \{w;z\} = \frac{w^{'''}}{w'}
+  - \frac{3}{2}
+  \bigg(
+  \frac{w^{''}}{w'}
+  \bigg)^2
+  \, .
+$$
+\subsection{}
+Derive the infinitesimal transformation (3.86) from the finite version (3.87).
+
+\subsection{Under $\SL(2,\bC)$}
+For an element of $\SL(2,\bC)$
+$$\begin{pmatrix}a&b\\c&d\end{pmatrix} \in \SL(2,\bC)$$
+show that
+$$
+\{w;z\}=0\quad \textrm{for} \ w=\frac{az+b}{cz+d}~,
+$$
+and
+$$
+\left\{\frac{aw+b}{cw+d};z\right\}=\{w;z\}~.
+$$
+Show that the energy-momentum tensor $T(z)$ is a quasi-primary but not primary.
+
+
+
+
+
+\section{Boson-Fermion correspondence}
+We have learnt that the OPE of the free boson is
+$$\varphi(z)\varphi(0) \sim - \ln z~.$$
+Let us also consider two Majorana-Weyl fermions $\psi^1, \psi^2$ with OPE
+$$\psi^i(z)\psi^j(0) \sim \frac{\d^{ij}}{z}~.$$
+We can define the complex fermion $$\psi(z) = 2^{-1/2} (\psi^1(z) +i\psi^2(z))\,,\qquad \overline\psi(z) = 2^{-1/2} (\psi^1(z) -i\psi^2(z))~.$$
+Show the equivalence of operators in boson and fermion
+$$:e^{i\varphi} :\cong\psi\,,\quad :e^{-i\varphi} :\cong\overline \psi\,,\quad i\partial \varphi \cong :\psi\overline \psi:\,,\quad T_\varphi \cong T_\psi~,$$
+by calculating the OPEs of operators in both theories and comparing. Note that the energy-momentum tensor of the complex fermion is
+$$
+T_\psi:=-\frac12: \psi\partial \overline \psi: -\frac12 :\overline \psi\partial  \psi :~.
+$$
+
+
+
+\section{Derivation}
+
+\subsection{}
+Show (5.28) and find the fusion rule $\phi_{1,2} \times \phi_{r, s}=\left[\phi_{r, s-1}\right]+\left[\phi_{r, s+1}\right]$.
+
+\subsection{}
+Following (5.30) of the lecture note, find the explicit fusion rule of the product
+$$
+\phi_{1,3}\times \phi_{2,2}
+$$
+
+
+
+
+\end{document}
