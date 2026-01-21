@@ -1,0 +1,109 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+
+
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 7: Due at class on Nov 2}
+
+
+
+\section{Derivation}
+
+\subsection{}
+Show (5.26) and find the fusion rule $\phi_{1,2} \times \phi_{r, s}=\left[\phi_{r, s-1}\right]+\left[\phi_{r, s+1}\right]$
+
+\subsection{}
+Show (5.29)
+\subsection{}
+Following (5.34) of the lecture note, find the explicit fusion rule of the product
+$$
+\phi_{1,3}\times \phi_{2,2}
+$$
+
+
+\section{Feigin-Fuchs representation}
+We shall derive the Kac determinant (5.18) of the lecture note by following Feigin-Fuchs.
+\subsection{Kac determinant}
+Show that the parameters in the Kac determinant (5.18)  obey
+$$
+\a_++\a_-=2\sqrt{-h_0}~,\qquad \a_+\a_-=-1~.
+$$
+
+\subsection{Screening charge}
+ Let us consider the linear dilaton CFT in Problem 3 of Homework 5 where the background charge is set to
+$$
+Q=\sqrt{2h_0}=i\sqrt{\frac{1-c}{12}}~.
+$$
+Recalling that a vertex operator $V_k(z)=:e^{ik\varphi(z)}:$ in the linear dilaton CFT has conformal dimension $h=k(k+2iQ)/2$, derive that the conformal dimension of the vertex operator $V_{\sqrt{2 }\a_\pm}(w)$ is equal to one. Hence,  $\mathbf{S}_\pm=\oint \frac{dw}{2\pi i} V_{\sqrt{2 }\a_\pm}(w)$ are the screening charge. Show that the state
+$$
+\mathbf{S}_\pm^r|k\rangle \qquad \textrm{for} \ r\in \bZ_{>0}
+$$
+is a singular vector where $|k\rangle=\lim_{z\to 0}V_k(z)|0\rangle$ if it is not zero.
+
+
+
+\subsection{Integral representation}\label{singular}
+It admits the integral representation as
+\bea\nonumber
+\mathbf{S}_+^r|k\rangle &=\frac{1}{(2\pi i)^r} \int d z _ { 1 } \cdots d z _ { r } V _ { \sqrt{2}\a_+  } \left( z _ { 1 } \right) \cdots V _ { \sqrt{2}\a_+  } \left( z _ { r } \right) | k \rangle \cr
+&=\frac{1}{(2\pi i)^r} \int d z _ { 1 } \cdots d z _ { r } \prod _ { 1 \leq i < j \leq r } \left( z _ { i } - z _ { j } \right) ^ {2\a_+^2  } : V _ { \sqrt{2}\a_+  } \left( z _ { 1 } \right) \cdots V _ { \sqrt{2}\a_+  } \left( z _ { r } \right) : | k \rangle~.
+\eea
+Let us recall that
+$$
+a_0|k\rangle =k|k\rangle~,\quad e^{ip\varphi_0}|k\rangle=|k+p\rangle~,\quad a_n|k\rangle=0~, \ (n>0)~.
+$$
+In addition, the normal-ordering can be understood as
+$$
+: V _ { \sqrt{2}\a_+  } \left( z _ { 1 } \right) \cdots V _ { \sqrt{2}\a_+  } \left( z _ { r } \right) : = V^+ _ { \sqrt{2}\a_+  } \left( z _ { 1 } \right) \cdots V^+ _ { \sqrt{2}\a_+  } \left( z _ { r } \right)  V^- _ { \sqrt{2}\a_+  } \left( z _ { 1 } \right) \cdots V^- _ { \sqrt{2}\a_+  } \left( z _ { r } \right) ~.
+$$
+Here we write the creation operator $V_k^+(z)$
+\bea\nonumber
+V_{\sqrt{2}\a_+  }^+(z)&=\exp\left( \sqrt{2}\a_+   \sum_{n=0}^\infty t_n(z)\right)=\left(  \sum_{n=0}^\infty p_mz^m\right)e^{i\sqrt{2}\a_+ \varphi_0}~.\cr
+\eea
+Then, show that the integral expression can be written as
+$$
+\mathbf{S}_+^r|k\rangle =\frac{1}{(2\pi i)^r} \int d z _ { 1 } \cdots d z _ { r } \prod _ { 1 \leq i < j \leq r } \left( z _ { i } - z _ { j } \right) ^ { 2\a_+^2 } \sum _ { m _ { i } \geq 0 } \prod _ { i = 1 } ^ { r } p _ { m _ { i } } z _ { i } ^ { m _ { i } + k  \sqrt{2}\a_+   } | k + r   \sqrt{2}\a_+   \rangle~.
+$$
+
+In order for this state to be non-zero, the integral should be invariant under the scaling $z_i\to \lambda z_i$, which requires
+$$
+r + \frac { r ( r - 1 ) } { 2 } 2\a_+^2 + \sum _ { i = 1 } ^ { r } m _ { i } + r k  \sqrt{2}\a_+ = 0~.
+$$
+If we assume that the level $ \sum _ { i = 1 } ^ { r } m _ { i } $ of the singular vector $\mathbf{S}_+^r|k\rangle $ is equal to $rs$, show that $k$ has to be
+\be\label{momenta}k = \frac { 1 - r } { 2 } \sqrt{2 }\a_+ + \frac { 1 + s } { 2 }\sqrt{2 }\a_-~.\ee
+This implies that $\mathbf{S}_+^r|k\rangle $ is a non-zero singular vector at level $rs$ if $k$ is subject to \eqref{momenta}. Compute the conformal dimension of $\mathbf{S}_+^r|k\rangle$ and show that it is equal to $h_{r,s}$ in the Kac determinant (5.18) of the lecture note.
+
+
+
+\section{Descendant of the identity operator (Bonus problem)}
+The vacuum $|0\rangle$ corresponds to the identity operator $\textbf{1}(w)$ whose OPE with the energy-momentum tensor is
+$$
+T ( z ) \mathbf { 1 } ( w ) = \frac { 0 } { ( z - w ) ^ { 2 } } \mathbf { 1 } ( w )+ \frac { 1 } { z - w } \frac { \partial } { \partial w } \mathbf { 1 } ( w ) + L _ { - 2 } \mathbf { 1 } ( w )+\ldots
+$$
+where the conformal dimension of $\textbf{1}(w)$ is zero and $\partial_w \mathbf { 1 } ( w )=0$. Therefore, by the state-operator correspondence identifies
+$$
+ L_{-2}|0\rangle\ \leftrightarrow\ T(w)~,
+$$
+so that the energy-momentum tensor can be understood as the descendant of the identity operator $\textbf{1}(w)$.
+Furthermore, we have the correspondence
+$$
+L _ { - n - 2 } |0\rangle \ \leftrightarrow\  \frac { 1 } { n ! } \left( \frac { \partial } { \partial w } \right) ^ { n } T ( w ) \quad \textrm{for} \ n \ge 0 ~.
+$$
+Zamolodchikov has introduced the following descendant
+$$
+\Lambda(w)\equiv :T(w)T(w):-\frac{3}{10}\frac{\partial^2}{\partial w^2}T(w)~.
+$$
+Compute the OPE $T(z)\Lambda(w)$ by using generalized Wick theorem in Appendix 6.B of \cite{francesco2012conformal}. Find the value of the central charge when $\Lambda(w)$ becomes a primary field. From the value of the central charge, find which minimal model is related to $\Lambda(w)$.
+
+\bibliography{conformal-ref}
+\bibliographystyle{hyperamsalpha}
+
+
+
+
+
+\end{document}
