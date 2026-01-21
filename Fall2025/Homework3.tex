@@ -1,0 +1,247 @@
+\documentclass[12pt,a4paper]{article}
+\pdfoutput=1
+%\usepackage{hyperref} % Use the Charter font for the document text
+% %\usepackage[UTF8]{ctex}
+% \usepackage{jheppub}
+\usepackage{macros}
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 3: Due on Nov 2}
+\bigskip
+\textbf{Caution:} 
+When solving homework problems, it is important to show your derivation at each step. Nowadays, many online tools make it easy to find answers, but the primary goal of these assignments is to deepen your understanding through hands-on problem-solving. By working through the calculations yourself, you engage more deeply with the material, making the learning process more meaningful, rather than simply copying answers from external sources.
+
+
+\section{Path Integral Representation Using Coherent States}
+Consider the quantum harmonic oscillator with Hamiltonian
+\begin{equation}
+\hat{H} = \hbar \omega \left( \hat{a}^{\dagger} \hat{a} + \frac{1}{2} \right),
+\end{equation}
+where the annihilation and creation operators $\hat{a}$ and $\hat{a}^{\dagger}$ satisfy
+\begin{equation}
+[\hat{a}, \hat{a}^{\dagger}] = 1.
+\end{equation}
+
+\begin{enumerate}
+\item 
+Define the \emph{coherent state} $|\alpha\rangle$ as the eigenstate of the annihilation operator:
+\begin{equation}
+\hat{a}|\alpha\rangle = \alpha|\alpha\rangle, \qquad 
+\langle\alpha|\hat{a}^{\dagger} = \langle\alpha|\alpha^{*}.
+\end{equation}
+Show that the coherent states form an (overcomplete) basis with the completeness relation
+\begin{equation}
+\int \frac{d^{2}\alpha}{\pi} \, |\alpha\rangle\langle\alpha| = \hat{1},
+\end{equation}
+where $d^{2}\alpha = d(\Re \alpha)\, d(\Im \alpha)$.
+
+\item 
+Starting from the partition function
+\begin{equation}
+Z = \operatorname{Tr}\, e^{-\beta \hat{H}},
+\end{equation}
+insert the completeness relation for the coherent states at $N$ time slices and take the limit $N \to \infty$ to express $Z$ as a functional integral:
+\begin{equation}
+Z = \int \mathcal{D}[\alpha^{*}, \alpha] \,
+\exp\!\left\{
+- \int_{0}^{\beta \hbar} d\tau
+\left[
+\alpha^{*}(\tau) \frac{d\alpha(\tau)}{d\tau}
++ \omega \alpha^{*}(\tau)\alpha(\tau)
+\right]
+\right\}.
+\end{equation}
+
+\item 
+Show that the above functional integral can be interpreted as the Euclidean path integral for a complex field $\alpha(\tau)$ satisfying the periodic boundary condition
+\begin{equation}
+\alpha(0) = \alpha(\beta \hbar),
+\end{equation}
+and identify the corresponding Euclidean Lagrangian $\mathcal{L}_{E}[\alpha^{*}, \alpha]$.
+
+\item 
+Using this path integral representation, evaluate $Z$ explicitly and show that it reproduces the known result for the harmonic oscillator:
+\begin{equation}
+Z = \frac{1}{2\sinh(\tfrac{1}{2}\beta \hbar \omega)}.
+\end{equation}
+\end{enumerate}
+
+
+
+
+\section{Path Integral Representation for Fermions}
+Consider a system of noninteracting fermions described by the Hamiltonian
+\begin{equation}
+\hat{H} = \sum_{k} \varepsilon_{k}\, \hat{c}_{k}^{\dagger} \hat{c}_{k},
+\end{equation}
+where the operators satisfy the canonical anticommutation relations
+\begin{equation}
+\{\hat{c}_{k}, \hat{c}_{k'}^{\dagger}\} = \delta_{k k'}, 
+\qquad
+\{\hat{c}_{k}, \hat{c}_{k'}\} = 
+\{\hat{c}_{k}^{\dagger}, \hat{c}_{k'}^{\dagger}\} = 0.
+\end{equation}
+
+\begin{enumerate}
+\item 
+Define the \emph{fermionic coherent state} $|\xi\rangle$ by
+\begin{equation}
+\hat{c}|\xi\rangle = \xi|\xi\rangle,
+\qquad
+\langle\xi|\hat{c}^{\dagger} = \langle\xi|\, \xi^{*},
+\end{equation}
+where $\xi$ and $\xi^{*}$ are Grassmann variables satisfying
+$\{\xi, \xi^{*}\}=0$ and $\xi^{2}=(\xi^{*})^{2}=0$.
+Show that the completeness relation takes the form
+\begin{equation}
+\int d\xi^{*} d\xi\, e^{-\xi^{*}\xi}\, |\xi\rangle \langle\xi| = \hat{1}.
+\end{equation}
+
+\item 
+Starting from the partition function
+\begin{equation}
+Z = \operatorname{Tr}\, e^{-\beta \hat{H}},
+\end{equation}
+insert the completeness relation of fermionic coherent states at $N$ time slices and take the limit $N \to \infty$.
+Show that $Z$ can be expressed as the Grassmann path integral
+\begin{equation}
+Z = \int \mathcal{D}[\xi^{*}, \xi]\,
+\exp\!\left\{
+-\int_{0}^{\beta \hbar} d\tau
+\left[
+\xi^{*}(\tau) \frac{d\xi(\tau)}{d\tau}
++ \varepsilon_{k}\, \xi^{*}(\tau)\xi(\tau)
+\right]
+\right\}.
+\end{equation}
+
+\item 
+Demonstrate that, unlike the bosonic case, the Grassmann fields obey
+\emph{anti-periodic} boundary conditions:
+\begin{equation}
+\xi(0) = -\, \xi(\beta \hbar),
+\qquad
+\xi^{*}(0) = -\, \xi^{*}(\beta \hbar).
+\end{equation}
+
+\item 
+By expanding $\xi(\tau)$ in terms of the fermionic Matsubara frequencies 
+$\omega_{n} = (2n + 1)\pi / (\beta \hbar)$,
+\begin{equation}
+\xi(\tau) = \frac{1}{\sqrt{\beta \hbar}} \sum_{n} \xi_{n}\, e^{-i\omega_{n}\tau},
+\end{equation}
+evaluate the Gaussian integral and show that the partition function becomes
+\begin{equation}
+Z = \prod_{k} \left(1 + e^{-\beta \varepsilon_{k}}\right),
+\end{equation}
+which is the familiar result for noninteracting fermions.
+\end{enumerate}
+
+
+\section{Green's function}
+Graphene is a material in which carbon atoms form a two-dimensional honeycomb lattice.  
+The $\pi$-electron system on graphene can be described near the Fermi energy by a massless Dirac equation (Weyl equation).  
+The Hamiltonian can be written as a $2 \times 2$ matrix:
+\begin{equation}
+\mathscr{H}
+= \sum_{\alpha} \int d^{2}\boldsymbol{r}\,
+\hat{\psi}_{\alpha}^{\dagger}(\boldsymbol{r})\,
+\gamma \left(
+\hat{p}_{x} \sigma_{x} + \hat{p}_{y} \sigma_{y}
+\right)
+\hat{\psi}_{\alpha}(\boldsymbol{r}),
+\end{equation}
+where $\sigma_{x}$ and $\sigma_{y}$ are Pauli matrices.  
+In momentum space, this becomes
+\begin{equation}
+\mathscr{H}
+= \sum_{k, \alpha}
+\left(
+c_{\mathrm{A} k \alpha}^{\dagger},
+c_{\mathrm{B} k \alpha}^{\dagger}
+\right)
+\begin{pmatrix}
+0 & \gamma \hbar (k_{x} - i k_{y}) \\
+\gamma \hbar (k_{x} + i k_{y}) & 0
+\end{pmatrix}
+\begin{pmatrix}
+c_{\mathrm{A} k \alpha} \\
+c_{\mathrm{B} k \alpha}
+\end{pmatrix}.
+\end{equation}
+Here, $\mathrm{A}$ and $\mathrm{B}$ denote the two sublattices of the honeycomb lattice.  
+Show that the temperature Green’s function in this case is given by
+\begin{equation}
+\begin{aligned}
+\begin{pmatrix}
+\mathscr{G}_{\mathrm{AA}}^{(0)}(k, i\omega_{n}) &
+\mathscr{G}_{\mathrm{AB}}^{(0)}(k, i\omega_{n}) \\
+\mathscr{G}_{\mathrm{BA}}^{(0)}(k, i\omega_{n}) &
+\mathscr{G}_{\mathrm{BB}}^{(0)}(k, i\omega_{n})
+\end{pmatrix}
+= 
+\frac{1}{
+(i\omega_{n} + \mu)^{2} - \gamma^{2} \hbar^{2} k^{2}
+}
+\begin{pmatrix}
+i\omega_{n} + \mu &
+\gamma \hbar (k_{x} - i k_{y}) \\
+\gamma \hbar (k_{x} + i k_{y}) &
+i\omega_{n} + \mu
+\end{pmatrix}.
+\end{aligned}
+\end{equation}
+
+\section{}
+
+\subsection{}
+The momentum distribution function is defined as
+\begin{equation}
+n_{k, \alpha} \equiv \left\langle
+\hat{c}_{k, \alpha}^{\dagger} \hat{c}_{k, \alpha}
+\right\rangle.
+\end{equation}
+Show that this can be expressed in terms of the spectral function or the retarded Green’s function (see Eq.~{(6.64)} of the lecture note) as
+\begin{equation}
+n_{\boldsymbol{k}, \alpha}
+= \int_{-\infty}^{\infty} d\omega
+\frac{\rho(\boldsymbol{k}, \omega)}{e^{\beta \hbar \omega} \pm 1}
+= -\frac{\hbar}{\pi}\, \Im \int_{-\infty}^{\infty} d\omega
+\frac{G^{R}(\boldsymbol{k}, \omega)}{e^{\beta \hbar \omega} \pm 1},
+\end{equation}
+where the upper sign $(+)$ corresponds to fermions and the lower sign $(-)$ corresponds to bosons.  
+Furthermore, in the zero-temperature limit $T \to 0$, show that
+\begin{equation}
+n_{\boldsymbol{k}, \alpha}
+= \pm \int_{-\infty}^{0} d\omega\, \rho(\boldsymbol{k}, \omega)
+= \mp \frac{\hbar}{\pi}\, \Im \int_{-\infty}^{0} d\omega\, G^{R}(\boldsymbol{k}, \omega).
+\end{equation}
+
+\subsection{}
+Show that the time-ordered Green’s function satisfies the following relation:
+\begin{equation}
+\Re G(\boldsymbol{k}, \omega)
+= \Re G^{R}(\boldsymbol{k}, \omega)
+= \Re G^{A}(\boldsymbol{k}, \omega).
+\end{equation}
+Using Eq.~{(6.73)}  of the lecture note, prove that
+\begin{equation}
+\Re G(\boldsymbol{k}, \omega)
+= -\frac{\mathscr{P}}{\pi}
+\int_{-\infty}^{\infty} d\omega^{\prime}\,
+\frac{\Im G(\boldsymbol{k}, \omega^{\prime})}
+{\omega - \omega^{\prime}}
+\left(\tanh \frac{\beta \hbar \omega^{\prime}}{2}\right)^{\mp 1},
+\end{equation}
+where $\mathscr{P}$ denotes the Cauchy principal value, and the upper (lower) sign corresponds to fermions (bosons).
+
+
+
+
+\end{document}
