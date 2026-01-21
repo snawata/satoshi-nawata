@@ -1,0 +1,170 @@
+\documentclass[12pt,a4paper]{article}
+\pdfoutput=1
+
+\usepackage{macros}
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{exercise}
+
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 2: Due on Oct 19}
+\bigskip
+\textbf{Caution:} 
+When solving homework problems, it is important to show your derivation at each step. Nowadays, many online tools make it easy to find answers, but the primary goal of these assignments is to deepen your understanding through hands-on problem-solving. By working through the calculations yourself, you engage more deeply with the material, making the learning process more meaningful, rather than simply copying answers from external sources.
+
+
+
+\section{Heat Capacity for $T \gtrsim T_0$ for Bosonic Ideal Gas}
+
+Let $T_0$ be the critical temperature for Bose-Einstein condensate. 
+Determine the explicit temperature dependence of the heat capacity in the regime of \( \tilde{T} \gtrsim \tilde{T}_0 \), where \( \tilde{\mu} \lesssim 0 \) and $|\tilde\mu|\ll1$.
+
+
+\section{Equivalence of the Microcanonical and Gibbs Ensembles for Large Systems}
+
+In a microcanonical ensemble, the density matrix can be written as
+\begin{equation}
+\hat{\rho}_M = \frac{1}{W} \delta(E - \hat{H}) \, \delta(N - \hat{N}),
+\end{equation}
+where \( E \) and \( N \) are the energy and particle number, respectively, while
+\begin{equation}
+W \equiv W(E, N) = \operatorname{Tr}\bigl[\delta(E - \hat{H}) \, \delta(N - \hat{N})\bigr]
+\end{equation}
+is the density of states at energy \( E \) and particle number \( N \). This normalizing factor plays a role similar to the partition function in the Gibbs ensemble.
+
+\paragraph{(a)} By rewriting the delta functions inside the trace \( W \) as inverse Laplace transforms, such as
+\begin{equation}
+\delta(x - \hat{H}) = \int_{\beta_0 - i\infty}^{\beta_0 + i\infty} \frac{d\beta}{2\pi i} e^{-\beta(x - \hat{H})},
+\end{equation}
+and evaluating the resulting integrals at the saddle point of the integrand, one finds that, for a large system, \( W \) is related to the entropy by Boltzmann's relation
+\begin{equation}
+S(E, N) = k_B \ln W(E, N).
+\end{equation}
+
+\paragraph{(b)} Using this result, show that in a large system the expectation value of an operator is the same for the corresponding Gibbs and microcanonical ensembles, namely
+\begin{equation}
+\langle \mathcal{O} \rangle = \operatorname{Tr}\left[\rho_M \mathcal{O}\right] = \operatorname{Tr}\left[\rho_B \mathcal{O}\right],
+\end{equation}
+where the Boltzmann density matrix
+\begin{equation}
+\hat{\rho}_B = \left. Z^{-1} e^{-\beta(\hat{H} - \mu \hat{N})}\right|_{\beta = \beta_0, \mu = \mu_0}
+\end{equation}
+is evaluated at the saddle point values
+\begin{equation}
+\beta_0 = \frac{\partial \ln W}{\partial E},
+\qquad
+\mu_0 = \beta_0^{-1} \frac{\partial \ln W}{\partial N}.
+\end{equation}
+
+
+
+
+\section{Shannon Entropy and Information Content}
+
+Claude Shannon’s definition of information entropy connects probability distributions of signals to measures of uncertainty or ``information.'' In this problem, we will explore Shannon’s entropy in detail for simple binary and multi-letter systems.
+
+\subsection{Binary Shannon Entropy}
+
+Consider a binary signal of \( N \) bits, consisting of 0s and 1s, where the probability of a 0-bit is \( p_0 \) and the probability of a 1-bit is \( p_1 = 1 - p_0 \).
+\[
+\cdots 0001101111000110000 \cdots
+\]
+
+\begin{enumerate}
+    \item \textbf{Multiplicity} \\
+    Show that the number of possible signals consistent with these probabilities is
+    \begin{equation}
+    \Omega = \frac{N!}{(p_0 N)!\,(p_1 N)!}.
+    \end{equation}
+    Use Stirling’s approximation \( \ln N! \simeq N \ln N - N \) to express \(\ln \Omega\) in terms of \(p_0\), \(p_1\), and \(N\).
+
+    \item \textbf{Shannon Entropy per Bit} \\
+    Show that the entropy per bit, defined as
+    \begin{equation}
+    S = N^{-1} \log_2 \Omega,
+    \end{equation}
+    reduces to
+    \begin{equation}
+    S = - p_0 \log_2 p_0 - p_1 \log_2 p_1.
+    \end{equation}
+
+    \item \textbf{Extrema of \( S \)} \\
+    Determine the value of \(p_0\) for which \(S\) is maximized. Interpret the result physically.
+\end{enumerate}
+
+\subsection{Multi-Letter Generalization}
+
+Now consider a signal with \( m \) possible letters \( a_1, a_2, \ldots, a_m \), appearing with probabilities \( p_1, p_2, \ldots, p_m \).
+
+\begin{enumerate}
+    \item \textbf{General Shannon Entropy} \\
+    Derive the generalization of the entropy formula to
+    \begin{equation}
+    S = - \sum_{i=1}^m p_i \log_2 p_i.
+    \end{equation}
+
+    \item \textbf{Uniform Distribution} \\
+    Show that for the uniform distribution \( p_i = \frac{1}{m} \), the entropy becomes
+    \begin{equation}
+    S = \log_2 m.
+    \end{equation}
+\end{enumerate}
+
+\section{Entanglement Entropy in Quantum Systems}
+
+Consider a closed quantum mechanical system described by a normalized pure state \(|\Psi\rangle\) with the density matrix \(\hat{\rho} = |\Psi\rangle\langle\Psi|\). The von Neumann entropy of the full system vanishes:
+\[
+S = -k_B \operatorname{Tr}[\hat{\rho} \ln \hat{\rho}] = 0,
+\]
+indicating the system is in a pure state.  
+
+However, dividing the system into subsystems \(A\) and \(B\), the reduced density matrix for subsystem \(A\) is obtained by tracing out degrees of freedom in \(B\):
+\[
+\hat{\rho}_A = \operatorname{Tr}_B[\hat{\rho}].
+\]
+The *entanglement entropy* of \(A\) is defined as
+\[
+S_E = -k_B \operatorname{Tr}[\hat{\rho}_A \ln \hat{\rho}_A].
+\]
+This measures quantum correlations between \(A\) and \(B\). In this problem, you will compute \(S_E\) explicitly for simple systems and explore its properties.
+
+\subsection{Reduced Density Matrix}
+
+\begin{enumerate}
+    \item Consider a bipartite system \(A+B\) with basis states \(|\psi_A\rangle\) for \(A\) and \(|\psi_B\rangle\) for \(B\).  
+    Show explicitly that the reduced density matrix \(\hat{\rho}_A\) satisfies
+    \[
+    \rho_{\sigma_A \sigma_A'} = \langle \sigma_A | \hat{\rho}_A | \sigma_A' \rangle
+    = \sum_{\psi_B} \langle \sigma_A, \psi_B | \hat{\rho} | \sigma_A', \psi_B \rangle.
+    \]
+\end{enumerate}
+
+\subsection{Pure vs. Mixed States}
+
+\begin{enumerate}
+    \item Show that for a product state \(|\Psi\rangle = |\psi_A\rangle |\psi_B\rangle\), the reduced density matrix \(\hat{\rho}_A\) is pure, i.e.,
+    \[
+    \operatorname{Tr}[\hat{\rho}_A^2] = 1, 
+    \quad S_E = 0.
+    \]
+    \item Show that for an entangled state, \(\operatorname{Tr}[\hat{\rho}_A^2] < 1\), implying \(S_E > 0\).
+\end{enumerate}
+
+\subsection{Two-Spin Singlet}
+
+For the singlet state
+\[
+|\Psi\rangle = \frac{1}{\sqrt{2}} \bigl(|\uparrow\rangle_A |\downarrow\rangle_B 
+- |\downarrow\rangle_A |\uparrow\rangle_B \bigr),
+\]
+\begin{enumerate}
+    \item Compute the reduced density matrix \(\hat{\rho}_A\).  
+    \item Show that \(S_E = k_B \ln 2\), and interpret the result physically.
+\end{enumerate}
+
+\end{document}
