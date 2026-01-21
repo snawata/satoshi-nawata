@@ -1,0 +1,120 @@
+\documentclass[12pt,a4paper]{article}
+\pdfoutput=1
+%\usepackage{hyperref} % Use the Charter font for the document text
+% %\usepackage[UTF8]{ctex}
+% \usepackage{jheppub}
+\usepackage{macros}
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 4: Due on Nov 23}
+\bigskip
+\textbf{Caution:} 
+When solving homework problems, it is important to show your derivation at each step. Nowadays, many online tools make it easy to find answers, but the primary goal of these assignments is to deepen your understanding through hands-on problem-solving. By working through the calculations yourself, you engage more deeply with the material, making the learning process more meaningful, rather than simply copying answers from external sources.
+
+
+
+% \section{Green's functions}
+Equation numbers below are as in the lecture notes. 
+% \begin{enumerate}
+%     \item 
+% The momentum distribution function is defined as 
+% \[
+% n_{\boldsymbol{k},\alpha} \equiv \langle {c}_{\boldsymbol{k},\alpha}^\dagger {c}_{\boldsymbol{k},\alpha} \rangle .
+% \]
+% Show that it can be expressed in terms of the spectral function or the retarded Green's function, as in Eq.~(6.64),
+% \[
+% n_{\boldsymbol{k},\alpha}
+% = \int_{-\infty}^{\infty} d\omega \, 
+% \frac{\rho(k,\omega)}{e^{\beta \hbar \omega} \pm 1}
+% = -\frac{\hbar}{\pi} \, \Im 
+% \int_{-\infty}^{\infty} d\omega \,
+% \frac{G^R(k,\omega)}{e^{\beta \hbar \omega} \pm 1},
+% \]
+% where the upper sign corresponds to fermions and the lower sign to bosons.
+
+% Furthermore, show that in the zero-temperature limit $T \to 0$, the momentum distribution becomes
+% \[
+% n_{\boldsymbol{k},\alpha}
+% = \pm \int_{-\infty}^{0} d\omega \, \rho(k,\omega)
+% = \mp \frac{\hbar}{\pi} \, \Im 
+% \int_{-\infty}^{0} d\omega \, G^R(k,\omega).
+% \]
+
+% \item 
+% Show that the time-ordered Green's function satisfies the relation
+% \[
+% \Re G(k,\omega) = \Re G^R(k,\omega) = \Re G^A(k,\omega).
+% \]
+% Then, using Eq.~(6.73), prove that
+% \[
+% \Re G(\boldsymbol{k},\omega)
+% = -\frac{\mathscr{P}}{\pi} 
+% \int_{-\infty}^{\infty} d\omega' \,
+% \frac{\Im G(\boldsymbol{k},\omega')}{\omega - \omega'}
+% \left( \tanh \frac{\beta \hbar \omega'}{2} \right)^{\mp 1},
+% \]
+% where $\mathscr{P}$ denotes the Cauchy principal value, and the upper (lower) sign corresponds to fermionic (bosonic) statistics.
+% \end{enumerate}
+
+
+\section{Landau Parameters and Fermi Surface Stability}
+Consider a three-dimensional Fermi liquid with short-range two-body interactions.  
+The effective interaction potential is given by
+\[
+V(\boldsymbol{x}-\boldsymbol{x}')
+\]
+and the Landau parameters $F_\ell$ characterize the interaction between quasiparticles on the Fermi surface.
+
+\begin{enumerate}
+\item For a contact interaction
+\[
+V(\boldsymbol{x}-\boldsymbol{x}') = \lambda_1 \, \delta^{(3)}(\boldsymbol{x}-\boldsymbol{x}'),
+\]
+compute the Landau parameters $F_\ell$ to leading order in $\lambda_1$.
+
+\item The stability condition of a Fermi liquid is given by 
+\[
+1 + \frac{F_\ell}{2\ell + 1} > 0
+\quad \text{for all } \ell.
+\] 
+Using the results of 1 and 2, analyze qualitatively the stability of the Fermi surface.  
+Sketch the regions in the $(\lambda_1, \lambda_2)$ phase diagram where the system becomes unstable.
+\end{enumerate}
+
+
+
+\section{Quasi-particles in BCS states}
+Show that the operators defined in Eq.~(8.37) satisfy the anticommutation relations
+\begin{equation}\nonumber
+\left\{ {A}_{\boldsymbol{k}}, {A}_{\boldsymbol{k}'}^{\dagger} \right\}
+= \left\{ {B}_{\boldsymbol{k}}, {B}_{\boldsymbol{k}'}^{\dagger} \right\}
+= \delta_{\boldsymbol{k}, k'} ,
+\end{equation}
+and verify that
+\begin{equation}\nonumber
+\left\{ {A}_{\boldsymbol{k}}, {B}_{\boldsymbol{k}} \right\} = 0 .
+\end{equation}
+Furthermore, show that for the BCS wave function given in Eq.~(8.22),
+\begin{equation}\nonumber
+{A}_{\boldsymbol{k}} |\Psi_{\mathrm{BCS}}\rangle
+= {B}_{\boldsymbol{k}} |\Psi_{\mathrm{BCS}}\rangle = 0 .
+\end{equation}
+This means that $|\Psi_{\mathrm{BCS}}\rangle$ is the ``vacuum'' of the quasiparticles
+represented by ${A}_{\boldsymbol{k}}$ and ${B}_{\boldsymbol{k}}$.
+In addition, show that the following state is proportional to $|\Psi_{\mathrm{BCS}}\rangle$:
+$$\prod_{\boldsymbol{k}}  A_{\boldsymbol{k}} B_{\boldsymbol{k}}|\textbf{vac}\rangle$$
+As a result, the quasiparticle excited states can be constructed as
+\begin{equation}\nonumber
+{A}_{\boldsymbol{k}}^{\dagger} |\Psi_{\mathrm{BCS}}\rangle,
+\qquad
+{B}_{\boldsymbol{k}}^{\dagger} |\Psi_{\mathrm{BCS}}\rangle .
+\end{equation}
+
+
+\end{document}
