@@ -1,0 +1,42 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+% %\usepackage[UTF8]{ctex}
+% \usepackage{jheppub}
+\usepackage{macros}
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 1: Due on Sep 29}
+\bigskip
+\textbf{Caution:} 
+When solving homework problems, it is important to show your derivation at each step. Nowadays, many online tools make it easy to find answers, but the primary goal of these assignments is to deepen your understanding through hands-on problem-solving. By working through the calculations yourself, you engage more deeply with the material, making the learning process more meaningful, rather than simply copying answers from external sources.
+
+\section{TOV Equation}
+\begin{enumerate}
+    \item Solve the Tolman-Oppenheimer-Volkoff (TOV) equation assuming the density \(\rho\) is constant, \(\rho = \rho_0\), and that the pressure at the boundary of the star vanishes, \(P(R) = 0\). Plot $P(r)$.
+    \item Solve the TOV equation again, but this time assuming the equation of state is given by \(P(\rho) = \rho^\gamma\) so that numerical solution is sufficient. Discuss how the solutions differ from those with constant density and plot pressure versus radius for different values of \(\gamma\).
+\end{enumerate}
+
+\section{Explorations with the Schwarzschild Metric}
+\begin{enumerate}
+    \item Using the coordinates \((u,v)\) defined in (2.24) of the lecture notes, write the Schwarzschild spacetime metric in terms of the ingoing Eddington-Finkelstein coordinates \((v, r, \theta, \varphi)\).
+    \item Write the Schwarzschild spacetime metric in terms of the outgoing Eddington-Finkelstein coordinates \((u, r, \theta, \varphi)\).
+    \item Demonstrate that the singularity at \(r = r_g\) is removed in both coordinate systems.
+    \item Find the coordinate transformation between the Kruskal–Szekeres coordinates \((cT, X)\) and the standard coordinates \((ct, r)\). Show that although the spatial coordinate \(T = 0\) where \(X\) ranges from \(-\infty\) to \(\infty\), the \(r\) coordinate only covers the region \(X \geq 0\).
+    \item For the embedding of a 3D hypersurface into a flat 4D space with the line element:
+    \[
+    dl^2 = dz^2 + dr^2 + r^2 (d\theta^2+\sin^2\theta d\phi^2)
+    \]
+    and the hypersurface given by \(z^2 = 4 r_g (r - r_g)\):
+    \begin{enumerate}
+        \item Derive the induced metric on the hypersurface and compare it with the Schwarzschild spacetime metric.
+        \item Sketch the embedding diagram for \(z(r)\), and explain how this relates to the concept of the Einstein-Rosen bridge.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
