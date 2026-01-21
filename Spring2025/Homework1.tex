@@ -1,0 +1,86 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+% %\usepackage[UTF8]{ctex}
+% \usepackage{jheppub}
+\usepackage{macros}
+\pdfoutput=1
+
+%%% Yokoyama def %%%
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 1: Due on Mar 11}
+\bigskip
+\textbf{Caution:} 
+When solving homework problems, it is important to show your derivation at each step. Nowadays, many online tools make it easy to find answers, but the primary goal of these assignments is to deepen your understanding through hands-on problem-solving. By working through the calculations yourself, you engage more deeply with the material, making the learning process more meaningful, rather than simply copying answers from external sources.
+
+\section{Primary state}
+Show explicitly that the primary state defined by
+\be\label{7.5}
+[K_{\mu}, O_i(x)] = -i(2x_{\mu}x^{\rho}\partial_{\rho} - x^{2}\partial_{\mu})O_i(x) - 2i\Delta_ix_{\mu}O_i(x) + 2ix^{\nu}(S_{\mu\nu})_{i}^{j}O_j(x).
+\ee
+satisfies the Jacobi identity
+\be
+i[[P_{\mu}, K_{\nu}], O_{i}(x)] = -i[[O_{i}(x), P_{\mu}], K_{\nu}] - i[[K_{\nu}, O_{i}(x)], P_{\mu}]. \label{7.16}
+\ee
+
+
+
+
+\section{CFT on a cylindrical space}
+\begin{enumerate}
+\item Construct a conformal map between $\bR^{d}$ and $S^{d-1}\times \bR$.
+    \item Using the conformal map constructed above, show that vector fields for a translation and a special conformal transformation on the cylinder spacetime
+\bea
+P_\mu = -ie^{-i\tau}\left[ -in_\mu \partial_\tau + (\delta_{\mu\nu} - n_\mu n_\nu) \frac{\partial}{\partial n_\nu} \right], \cr
+K_\mu = -ie^{i\tau}\left[ +in_\mu \partial_\tau + (\delta_{\mu\nu} - n_\mu n_\nu) \frac{\partial}{\partial n_\nu} \right]. \label{7.25}
+\eea 
+where $\partial_\tau$ generate the time translation, and $ n_\mu$ are orthonormal vectors on $S^{d-1}$.
+\end{enumerate}
+
+\section{Correlation functions}
+Let us consider the correlation functions of a CFT in arbitrary dimensions.
+\begin{enumerate}
+    \item Using the invariance under conformal transformations, show a 3-point function takes the form:
+    \begin{equation}
+\langle O_1(x_1)O_2(x_2)O_3(x_3)O_4(x_4)\rangle = \frac{c_{123}}{x_{12}^{\Delta_1+\Delta_2-\Delta_3} x_{23}^{\Delta_2+\Delta_3-\Delta_2} x_{31}^{\Delta_1+\Delta_2-\Delta_2}}
+\end{equation}
+\item Show cross-ratios 
+\begin{equation}
+u = \frac{x_{12}^2 x_{34}^2}{x_{13}^2 x_{24}^2}, \quad v = \frac{x_{14}^2 x_{23}^2}{x_{13}^2 x_{24}^2} \label{8.19}
+\end{equation}
+are dimensionless and invariant not only under translations, rotations, and dilatations as well as under special conformal transformations
+\item  Using the invariance under conformal transformations, show a 4-point function takes the form:
+\begin{equation}
+\langle O_1(x_1)O_2(x_2)O_3(x_3)O_4(x_4)\rangle = \frac{g(u,v)}{x_{12}^{\Delta_1 + \Delta_2} x_{34}^{\Delta_3 + \Delta_4}} \left( \frac{x_{24}}{x_{14}} \right)^{\Delta_1 - \Delta_2} \left( \frac{x_{14}}{x_{13}} \right)^{\Delta_3 - \Delta_4} \label{8.20}
+\end{equation}
+\end{enumerate}
+
+
+
+
+\section{M\"obius transformation}
+
+Consider the Riemann sphere $S^2  = \bC \cup \{\infty\}$. The action of $\SL(2, \bC)$ defined by
+$$z  \mapsto w = \frac{az + b}{ cz + d}~,\qquad \begin{pmatrix}a&b\\c&d\end{pmatrix}\in \SL(2, \bC)~,$$
+maps the Riemann sphere onto itself. These transformations are called fractional linear transformations.
+
+\begin{enumerate}
+    \item  Given three points $z_1,z_2,z_3$, find a fractional linear transformation thatmaps the points
+to $0, 1, \infty$.
+\item Given four points $z_1,z_2,z_3,z_4$, their \textbf{cross ratio} is defined by
+$$
+[z_1,z_2,z_3,z_4]= {\frac  {(z_{1}-z_{3})(z_{2}-z_{4})}{(z_{2}-z_{3})(z_{1}-z_{4})}}~.
+$$
+Show that the cross-ratio is preserved by any fractional linear transformation
+$$
+[z_1,z_2,z_3,z_4]=[w_1,w_2,w_3,w_4] ~.
+$$
+\end{enumerate}
+
+
+\end{document}
