@@ -35,12 +35,15 @@ body{
 }
 
 a{
-  color: var(--fg);
-  text-decoration: underline;
+  color: #7fbfff;
+  text-decoration: none;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
-a:hover{ opacity: .85; }
+a:hover{ 
+  color: #a8d4ff;
+  text-decoration: underline;
+}
 
 /* =========================
    Header / Navigation
