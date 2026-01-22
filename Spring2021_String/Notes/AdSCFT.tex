@@ -1,0 +1,529 @@
+\documentclass[String-lecture-21.tex]{subfiles}
+
+\begin{document}
+\section{Introduction to AdS/CFT correspondence}\label{sec:AdSCFT}
+
+The study of black holes in string theory by using D-branes has led to the celebrated AdS/CFT correspondence \cite{Maldacena:1997re}. The AdS/CFT correspondence is the equivalence between a string theory or M-theory on an anti-de Sitter background and a conformal field theory. It has shed new light on quantum gravity as well as strongly coupled quantum field theories. Although it was proposed in the framework of string theory, it has already been studied beyond string theory, influencing other physical theories. It has attracted a large number of researchers, and it is connected to many branches of physics. For the basics of the AdS/CFT correspondence, the most famous review is \cite{Aharony:1999ti}, and there are many other reviews and books, \textit{e.g.} \cite{DHoker:2002nbb,Maldacena:2003nj,Ramallo:2013bua,nuastase2015introduction}.
+
+We shall first study the basic properties of conformal field theories in general dimensions and geometry of anti-de Sitter space. Then, we will deal with the most famous example, Type IIB on AdS$_5\times S^5$/ 4d $\cN=4$ SYM.
+
+
+\subsection{Conformal field theory}\label{sec:conformal}
+
+\subsubsection*{Conformal group}
+
+A conformal field theory (CFT) is a quantum field theory that is invariant under conformal transformations.
+In \S\ref{sec:2dcft}, we have studied the conformal transformation for two dimensions, which is a special case.
+Here, we study a conformal group for arbitrary dimensions (assume $d \ge 3$).
+
+
+A conformal group is defined by transformations that preserve the metric up to a local scale factor:
+\begin{align*}
+ g_{\mu\nu}(x) \to g_{\mu\nu}'(x') = \Omega^2(x) g_{\mu \nu}(x) \ .
+\end{align*}
+In an infinitesimal form (${x'}^\mu = x^\mu +\epsilon^\mu$) it is (compare with \eqref{infinitesimal2dconformal}
+\begin{align}
+ \partial_\mu \epsilon_\nu +\partial_\nu \epsilon_\mu = \frac{2}{d} \eta_{\mu\nu} \partial \cdot \epsilon \ .
+ \label{eq:def1}
+\end{align}
+Applying $\partial^\mu$ to \eqref{eq:def1} we have
+\begin{align*}
+ \left(1-\frac{2}{d}\right) \partial_\nu \partial\cdot\epsilon +\Box \epsilon_\nu = 0 \ ,
+\end{align*}
+where $\Box = \partial\cdot\partial$.
+From this expression, we can see that $d=2$ is quite special, and it leads
+$\partial^2 \epsilon = \partial_- \partial_+ \epsilon$,
+which gives infinitely many transformations.
+We further apply $\partial^\nu$ and reach
+\begin{align*}
+ (d-1) \Box \partial\cdot\epsilon = 0 \ .
+\end{align*}
+This expression implies $\epsilon_\mu$ is up to quadratic order of $x$:
+\begin{align*}
+ \epsilon_\mu = a_\mu + b_{\mu\nu} x^\nu +c_{\mu\nu\rho} x^\nu x^\rho \ .
+\end{align*}
+Plugging these expressions back to the definition equations above (and its variant), we have the following constraints
+\begin{align*}
+ &b_{\mu\nu} = \alpha \eta_{\mu\nu} +M_{\mu\nu} \qquad (M_{\mu\nu} = -M_{\nu\mu}) \ ,  \\
+ &c_{\mu\nu\rho} = \eta_{\mu\nu} f_\rho +\eta_{\mu\rho} f_\nu -\eta_{\nu\rho} f_\mu \qquad (f_\mu = \frac{1}{d} c^\rho_{\;\rho\mu}) \ .
+\end{align*}
+Parameters above correspond to transformations you are familiar with except $f_\mu$,
+which is called special conformal transformation (SCT). See Table~\ref{table:conformal-group} for the summary.
+\begin{table}[htbp]
+ \begin{center}
+  \label{table:conformal-group}
+\begin{tabular}{lllr}
+\hline
+ Names & Finite transf. & Generators & Dim. \\
+\hline
+\hline
+ Translation & $x'^\mu = x^\mu +a^\mu$ & $P_\mu=-i\partial_\mu$ & $+1$ \\
+ Dilat(at)ion & $x'^\mu = \alpha x^\mu$ & $D = -ix\cdot\partial$ & $0$ \\
+ Lorentz/Rotation & $x'^\mu = M^\mu_{\ \nu} x^\nu$ & $L_{\mu\nu} = i \left(x_\mu\partial_\nu -x_\nu\partial_\mu\right)$ & $0$ \\
+ SCT & $x'^\mu = \frac{x^\mu -(x\cdot x) f^\mu}{1-2f\cdot x +(f\cdot f)(x\cdot x)}$
+     & $K_\mu = -i \left(2x_\mu x\cdot \partial -(x\cdot x) \partial_\mu\right)$ & $-1$ \\ \hline
+\end{tabular}  \caption{Generators of the conformal group.}
+\end{center}
+\end{table}
+
+The generators summarized in the table form conformal group commutation relations
+\begin{align}\label{conformal-group}
+ &[J_{ab},J_{cd}]=i\left(\eta_{ad}J_{bc} +\eta_{bc}J_{ad} -\eta_{ac}J_{bd} -\eta_{bd}J_{ac}\right) \ , \cr
+ &\begin{array}{ll}
+  J_{\mu\nu} = L_{\mu\nu} \ , \quad & J_{(d+1)d} = D \ , \\
+  J_{\mu d} = \frac{1}{2}\left( K_\mu -P_\mu \right) \ , \quad & J_{\mu (d+1)} = \frac{1}{2}\left( K_\mu +P_\mu \right) \ ,
+ \end{array}
+\end{align}
+where note that $a,b,c,d=0,1,\ldots d+1$ and $\mu,\nu=0,1,\ldots,d-1$, and $\eta_{ab}$ is
+$\mathrm{diag}(-,+,\ldots,+,-)$ for Lorentzian spacetime and $\mathrm{diag}(+,+,\ldots,+,-)$ for Euclidean space.
+The algebras are isomorphic to those of $\SO(2,d)$ and $\SO(1,d+1)$, respectively.
+Note that the SCT can be understood as an inversion ($x^\mu \to \frac{x^\mu}{x \cdot x}$)
+with translation $\frac{x'^\mu}{x' \cdot x'} = \frac{x^\mu}{x \cdot x} -f^\mu$.
+However, the inversion is not included in the algebra (since the inversion is a discrete transformation).
+Among others, we write down non-trivial commutation relations that involve $D$
+\begin{align}
+ [D,P_\mu] = -iP_\mu \ , \quad
+ [D,K_\mu] = iK_\mu \ , \quad
+ [P_\mu,K_\nu] = 2i \left( M_{\mu\nu} -\eta_{\mu\nu} D \right) \ ,
+ \label{eq:commD}
+\end{align}
+which characterize representation of the conformal group.
+By the way, the other non-trivial ones are
+\begin{align*}
+ &[M_{\mu\nu},P_\rho]=-i(\eta_{\mu\rho}P_\nu -\eta_{\nu\rho}P_\mu) \ , \qquad
+ [M_{\mu\nu},K_\rho]=-i(\eta_{\mu\rho}K_\nu-\eta_{\nu\rho}K_\mu) \ , \nonumber\\
+ &[M_{\mu\nu},M_{\rho\sigma}]=-i\eta_{\mu\rho}M_{\nu\sigma} \pm (\textrm{permutations}) \ .
+\end{align*}
+
+
+
+\subsubsection*{Primary fields}
+
+
+In $2$-dimensions, we defined the primary field by using OPE \eqref{Tprimary-OPE} with energy-momentum tensor (it leads to a representation of the conformal group).
+For general dimensions, we define it by a formal representation of the conformal group.
+It is known that the representation is characterized by an eigenvalue of the dilatation operator $-i\Delta$
+($\Delta$ is called the \textbf{scaling dimension} of the field, rather than \textbf{weight}),
+and representation of the Lorentz group.
+The former statement means that $\Phi(x) \to \Phi^\prime(\lambda x) = \lambda^{-\Delta} \Phi(x)$.
+The commutation relations \eqref{eq:commD}) tell us that $P_\mu$ is the raising operator, while $K_\mu$ is the lowering operator.
+Therefore, there are operators annihilated by $K_\mu$ in each finite-dimensional representation of the conformal group.
+Such an operator is called \textbf{primary operator/field} (we use operator and field interchangeably).
+The action of the conformal group on the primary field is
+\begin{align*}
+ [P_\mu, \Phi(x)] &= i\partial_\mu \Phi(x) \ , \cr
+ [M_{\mu\nu}, \Phi(x)] &= [i(x_\mu \partial_\nu - x_\nu \partial_\mu) +
+ \Sigma_{\mu\nu}] \Phi(x) \ , \cr
+ [D,\Phi(x)] &= i(-\Delta + x^\mu \partial_\mu) \Phi(x) \ , \cr
+ [K_\mu, \Phi(x)] &= [i(x^2\partial_\mu - 2x_\mu x^\nu \partial_\nu + 2x_\mu
+ \Delta) - 2x^\nu \Sigma_{\mu\nu}] \Phi(x) \ ,
+\end{align*}
+where $\Sigma_{\mu\nu}$ are the matrices of a finite-dimensional
+representation of the Lorentz group, acting on the indices of the
+$\Phi$ field (e.g. it is $\frac{i}{2}\gamma_{\mu\nu}$ for a spinor).
+There are some comments on primary fields and others:
+\vspace{-4pt}
+\begin{itemize}
+ \setlength{\itemsep}{0pt}
+ \item Fields created by acting $P_\mu$ on a primary field are called \textbf{descendant fields}.
+ \item Fields are not, in general, by eigenfunctions of the Hamiltonian $P^0$, or the mass operator $-P\cdot P$,
+       and hence, they have a continuous spectrum.
+ \item In unitary field theories the scale dimension is bounded from below (\textbf{unitary bound}).
+       It is $\Delta \ge (d-2)/2$ for scalars, $\Delta \ge (d-1)/2$ for spinors, and $\Delta \ge d+s-2$ for spin-$s$ fields for $s\ge1$.
+       (We refer to the derivation of the bounds and other details to \cite[Sec. 2]{Qualls:2015qjb}.)
+\end{itemize}
+\vspace{-4pt}
+
+
+
+\subsection{Anti-de Sitter space}
+
+
+An anti-de Sitter(AdS) space is a maximally symmetric manifold with constant negative scalar curvature.
+It is a solution of Einstein's equations for an empty universe with negative cosmological constant.
+The easiest way to understand it is as follows.
+
+
+A Lorentzian AdS$_{d+1}$ space can be illustrated by the hyperboloid in $(2,d)$ Minkowski space:
+\begin{align}
+ X_0^2 +X_{d+1}^2 -\sum_{i=1}^{d} X_i^2 &= R^2 \ .
+ \label{embedding}
+\end{align}
+The metric can be naturally induced from the Minkowski space
+\begin{align}\nonumber
+ ds^2 &= -dX_0^2 -dX_{d+1}^2 +\sum_{i=1}^{d} dX_i^2 \ .
+\end{align}
+By construction, it has $\SO(2,d)$ isometry, which is the first connection to
+the conformal group in $d$-dim.
+
+
+\subsubsection*{Global coordinate}
+
+
+
+
+A simple solution to \eqref{embedding} is given as follows.
+\begin{align}\nonumber
+ &X_0^2 +X_{d+1}^2 = R^2 \cosh^2 \rho \ , \cr
+ &\sum_{i=1}^{d} X_i^2 = R^2 \sinh^2 \rho \ .
+\end{align}
+Or, more concretely,
+\begin{align}\nonumber
+ X_{0} &= R \cosh \rho\ \cos \tau \ , \qquad
+ X_{d+1} = R \cosh \rho\ \sin \tau \ ,  \nonumber \cr
+ X_i &= R \sinh \rho\ \Omega_{i} \quad (i=1,\ldots,d,
+ \text{ and } \sum_i \Omega_i^2 = 1).
+\end{align}
+These are $S^{1}$ and $S^{d-1}$ with radii $R\cosh\rho$ and $R\sinh\rho$, respectively.
+The metric is
+\begin{align}\nonumber
+ ds^2 &= R^2 \left( -\cosh^2 \rho \ d\tau^2 +d\rho^2 +\sinh^2 \rho \ d\Omega_{(d-1)}^2 \right) \ .
+\end{align}
+Note that $\tau$ is a periodic variable and if we take $0 \le \tau <2\pi$,
+the coordinate wraps the hyperboloid precisely once.
+This is why this coordinate is called the \textbf{global coordinate}.
+The manifest sub-isometries are $\SO(2)$ and $\SO(d)$ of $\SO(2,d)$.
+To obtain a causal spacetime, we simply unwrap the circle $S^1$,
+namely, we take the region $-\infty < \tau < \infty$ with no identification,
+which is called the \textbf{universal cover} of the hyperboloid.
+
+
+In literature, another global coordinate is also used,
+which can be derived by redefinitions
+$r \equiv R \sinh \rho$ and $dt \equiv R d\tau$:
+\begin{align}\nonumber
+ ds^2 &= - f(r) dt^2 +\frac{1}{f(r)} dr^2 + r^2 d\Omega_{(d-1)}^2 \ , \qquad
+ f(r) = 1+\frac{r^2}{R^2} \ .
+\end{align}
+
+
+
+
+\subsubsection*{Poincar\'e coordinates}
+
+There is yet another coordinate system, called the \textbf{Poincar\'e coordinates}.
+As opposed to the global coordinate, this coordinate covers only half of the hyperboloid.
+It is most easily (but naively) seen in $d=1$ case:
+\begin{align}\nonumber
+ x^2 -y^2 = R^2 \ ,
+\end{align}
+which is the hyperbolic curve.
+The curve consists of two isolated parts in regions $x>R$ and $x<-R$.
+We simply use one of them to construct the coordinate.
+
+
+
+Let us get back to general $d$-dim.
+We define the coordinate as follows.
+\begin{align}\nonumber
+ X_{0} &= \frac{1}{2u} \left( 1+u^2 \left( R^2 +x_i^2-t^2 \right) \right) \ , \cr
+ X_{i} &= R u x_i \qquad (i=1,\ldots,d-1) \ , \cr
+ X_{d} &= \frac{1}{2u} \left( 1-u^2 \left( R^2 -x_i^2+t^2 \right) \right) \ , \cr
+ X_{d+1} &= R u t \ ,
+\end{align}
+where $u > 0$.
+As it is stated, the coordinate covers half of the hyperboloid; in the region, $X_0 > X_{d}$.
+The metric is
+\begin{align}\label{ads-poincare}
+ ds^2 &= R^2 \left( \frac{du^2}{u^2} +u^2 (-dt^2 +dx_i^2) \right)
+ = R^2 \left( \frac{du^2}{u^2} +u^2 dx_\mu^2 \right) \ .
+\end{align}
+The coordinates $(u,t,x_i)$ are called the \textbf{Poincar\'e coordinates}.
+This metric has manifest $ISO(1,d-1)$ and $\SO(1,1)$ sub-isometries of $\SO(2,d)$;
+the former is the Poincar\'e transformation and the latter corresponds to the dilatation
+\begin{align}\nonumber
+ (u,t,x_i) \to (\lambda^{-1}u,\lambda t,\lambda x_i) \ .
+\end{align}
+
+
+If we further define $z=1/u$ ($z>0$), then,
+\begin{align}\label{ads-poincare2}
+ ds^2 &= \frac{R^2}{z^2} \left( dz^2 +dx_\mu^2 \right) \ .
+\end{align}
+This is called \textbf{the upper(Poincar\'e) half-plane model}.
+The hypersurface given by $z=0$ is called the \textbf{(asymptotic) boundary} of the AdS space,
+which corresponds to $u \sim r \sim \rho = \infty$.
+
+
+
+
+
+
+\subsection{Introduction to \texorpdfstring{AdS${}_5$/CFT${}_4$}{AdS5/CFT4} correspondence}
+
+Now let us study the most well-studied example of AdS/CFT correspondence, which is the equivalence between 4d $\U(N)$ $\cN=4$ super-Yang-Mills (SYM) and Type IIB string theory on AdS${}_5\times S^5$, which arises from the large number of D3-branes. Type IIB string theory with D3-branes contains two kinds of perturbative excitations, closed strings and open strings.
+ If we consider the system at low energies, energies lower than the string scale $1/\ell_s$, then only the massless string states
+can be excited. The closed string massless states give a gravity supermultiplet in $D=10$ in Type IIB supergravity as in \S\ref{sec:IIB-SUGRA}. The open string massless
+states give an $\cN=4$ vector multiplet in $D=4$, and their low-energy effective theory is $\cN=4$ $\U(N)$
+SYM. Therefore, the duality can be also understood as \textbf{open/closed duality}.
+
+
+
+
+\subsubsection*{$\cN=4$ super-Yang-Mills theory}
+
+The low-energy effective theory of $N$ D3-branes is 4d $\cN=4$ $\U(N)$ SYM theory so we describe the basic properties of the $\cN=4$ SYM. The action can be obtained by the dimensional reduction from the 10d $\cN=1$ SCFT on $\bR^{1,3} \times T^6$ where the 10d Lorentz group $\SO(1,9)$ is decomposed to $ \SO(1,3)\times \SO(6)\subset \SO(1,9) $:
+\bea
+{S}&=-\frac{1}{g_{YM}^2}
+\int d^{10} x\textrm{Tr}\left[\frac{1}{4} F_{MN}^2+\frac i2\bar{\lambda}\Gamma^MD_M\lambda\right]\cr
+&=-\frac{1}{g_{YM}^2}\int d^4x  \;  \textrm{Tr}\Big[
+\frac{1}{4} F_{\mu\nu}^2+\frac{1}{2}(D_{\mu}X_m)^2+  \frac{i}{2} \bar{\lambda}\Gamma^\mu D_\mu\lambda -\frac{g_{YM}}{2}\bar{\lambda}\Gamma^m[X_m,\lambda]-\frac{g_{YM}^2}{4}[X_m,X_n]^2\Big]
+\label{YMaction}
+\eea
+where the ten-dimensional gauge fields $A_M$, $M=0,\ldots,9$  split the 4d gauge field $A_\mu$, $\mu=0,\ldots,3$ and 6 scalars $X_m$, $m=1,\ldots,6$, and $\lambda$ is a 10d Majorana-Weyl spinor dimensionally reduced to 4d. We can also add the topological term
+\[
+S_{\textrm{top}}=\frac{i\theta}{32\pi^2}\int d^4x~ \e^{\m\n\rho\sigma} \Tr(F_{\mu\nu} F_{\rho\sigma})
+\]
+The action is invariant under the supersymmetry transformation
+\bea
+\delta X^m&=-\bar\e \G^m\lambda \cr
+\delta A^\m&=-\bar\e \G^\m\lambda \cr
+\d \lambda&=\Big(\frac12F_{\m\n}\G^{\m\n}+D_\mu X_m \G^{\m m}+\frac i2 [X_m,X_n]\Big)\e~.
+\eea
+
+
+It is easy to see that 4d $\cN=4$ SYM is classically \textbf{conformal invariant}. because the mass dimensions of the fields
+\be
+[A_\mu ]=[X^i] =1~, \qquad
+[\lambda _a] = \frac{3 }{ 2} ~,
+\ee
+so that the coupling constant is dimensionless: $[g]=[\theta]=0$. However, one has to be careful at quantum level because quantum correction generally breaks the conformal invariance. To be conformal invariant at quantum level, the beta function of the coupling constant has to vanish $\b=0$. It turns out that 4d $\cN=4$ SYM is the case and hence it is quantum mechanically conformal.
+The $\cN=4$ supersymmetry combined with conformal symmetry forms the superconformal group $\SU(2,2|4)$ which consists of the following generators
+
+\begin{itemize}
+\item \textbf{Conformal Symmetry} is $\SO(2,4) \cong \SU(2,2)$ in $d=4$, as we have seen in \S\ref{sec:conformal}. The generators consist of translations $P^\mu$, Lorentz transformations $L_{\mu\nu}$, dilations $D$ and special conformal transformations $K^\mu$ with the relations \eqref{conformal-group};
+
+\item \textbf{R-symmetry} is $\SO(6)_R \cong \SU(4)_R$ which is manifest from the 10d viewpoint, and R-symmetry rotates the 6 scalar $X^m$ ($m=1,\ldots ,6$);
+
+\item \textbf{Poincar\' e supersymmetries} are generated  by the supercharges $Q^I_\alpha,\bar Q _{\dot \alpha }^I$,
+$I=1,\ldots,4$ that  transform under
+the {\bf 4} of $\SU(4)_R$. They can be understood as a ``square root'' of $P_\mu$. Type IIB string theory has 32 supercharges and D3-branes break a half of the supersymmetries. Consequently, the 16 preserved supercharges are indeed $Q^I_\alpha,\bar Q _{\dot \alpha }^I$, which form
+$\cN=4$ Poincar\' e supersymmetry;
+
+\item \textbf{Conformal supersymmetries}: are generated by the fermionic generators
+$S_{\alpha }^I$ and  $\bar S ^I _{\dot \alpha}$ that are superconformal partners of $Q^I_\alpha,\bar Q _{\dot \alpha }^I$. They can be understood as a ``square root'' of $K_\mu$.
+\end{itemize}
+
+Therefore, there are 32 supercharges $Q,\overline Q, S, \overline S$ in total and they obey the anti-commutation relations
+\bea\label{susy-algebra}
+&\{Q^{\alpha}_A, {\overline Q}^{\dot \alpha B} \} = P^{\alpha {\dot \alpha}} \delta_A^B, \cr
+&\{ S_{\alpha }^A , {\overline S}_{\dot \alpha B}\} = K_{\alpha {\dot \alpha}} \delta^A_B,  \cr
+& \{S_{\alpha }^A,Q^{\beta }_B \} = \delta^{A}_{B} M^{~\beta}_{\alpha} +\delta^{\beta}_{\alpha} R^{A}_{B}+ \delta^{A}_{B}\delta^{\beta}_{\alpha} \frac{D}{2}  , \cr
+  &\{\overline S_{\dot\alpha A},\overline Q^{\dot\beta B} \} = \delta_{A}^{B} \overline M^{\dot\beta}_{~\dot\alpha} -\delta^{\dot\beta}_{\dot\alpha} R_{A}^{B} + \delta_{A}^{B}\delta^{\dot\beta}_{\dot\alpha} \frac{D}{2} ~.
+\eea
+
+
+
+The $\cN=4$ SYM enjoys \textbf{S-duality}  \cite{Goddard:1976qe,Montonen:1977sn} that is the $\SL(2,\bZ)$ action on the complexified coupling constant $\tau \equiv \frac{\theta}{2 \pi} + \frac{ 4 \pi i}{g_{YM}^2}$
+\be\label{SL2-SYM}
+\tau \to \frac{a \tau + b}{c \tau + d}
+\qquad \begin{pmatrix}a&b\\ c&d\end{pmatrix} \in \SL(2,\bZ)~.
+\ee
+The $\cN=4$ SYM is the world-volume theory on a stack of D3-branes, and D3-branes are invariant under the $\SL(2,\bZ)$ symmetry of Type IIB theory as seen in \S\ref{sec:Sdual}. In fact, this is the origin of the  $\SL(2,\bZ)$ symmetry \eqref{SL2-SYM}.
+
+There is another way to realize the $\cN=4$ SYM from string theory. Indeed, the M5-branes wrapped on a torus with complex structure $\tau$ give rise to the  $\cN=4$ SYM with the complexified coupling constant $\tau$. Here, $\tau$ manifestly admits a geometric origin as the complex structure of a torus.
+Note that when $\theta =0$, the S-duality transformation amounts to
+$g_{YM}\to 1/g_{YM}$, thereby exchanging strong and weak coupling.\footnote{Precisely speaking, the electromagnetic duality of the $\cN=4$ SYM depends on a choice of gauge groups, and the duality group is usually a congruence subgroup of $\SL(2,\bZ)$. For more detail, we refer to \cite{Aharony:2013hda}.}
+
+\subsubsection*{Near-horizon geometry of D3-branes}
+
+Now let us study the closed string side of the system.
+A system of $N$ coincident D$3$-branes is a classical solution of the
+low-energy string effective action:
+\bea
+\label{D3metric}
+ds^2 = H(y) ^{-\frac12} \eta _{\mu\nu} dx^\mu dx^\nu +H(y) ^{\frac12} (dy^2 +y^2 d\Omega _5
+^2)
+\eea
+with R-R field
+\[
+C_{(4)}=H(y) ^{-1}dx^0\wedge \cdots \wedge dx^3
+\]
+where
+\bea\label{acca}
+H(y)=1 + \frac{R^4}{y^4}~,\qquad R^4 = 4 \pi g_s N (\alpha ')^2~.
+\eea
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=10cm]{picture/throat}
+\caption{Minkowski region and near-horizon region}
+\label{fig:throat}
+\end{figure}
+
+
+To study this geometry more closely, we consider its limit in two regimes.
+As $y \gg R$, we recover flat spacetime $\bR^{1,9}$. When $y<
+R$, the geometry is often referred to as the \textbf{throat} and would at first
+appear to be singular as $y\ll R$. More precisely, the near-horizon geometry becomes apparent
+in the region
+\be
+y \rightarrow 0 \hspace{2cm} \alpha ' \rightarrow 0 \hspace{2cm} u \equiv  y/R^2
+\label{lim}
+\ee
+in which also the Regge slope is taken to zero, while $u$ is kept fixed. In this limit, we can neglect the factor $1$ in the function $H(y)$ in \eqref{acca} and the metric in \eqref{D3metric} becomes:
+\bea\label{nmet}
+ds^2 = R^2 \biggl [ u^2 \eta _{\mu\nu} dx^\mu dx^\nu  + \frac{du^2}{u^2}  + d\Omega _5 ^2  \biggr ]
+\eea
+As we have seen in \eqref{ads-poincare}, the first part of the metric is  AdS$_5$, and the other part is  $S^5$. In conclusion, the
+geometry close to the brane ($y\sim 0$ or $u\sim 0$) is regular and
+highly symmetrical AdS$_5\times S^5$ with the same radii
+\[
+R_{\textrm{AdS}_5}^{2} = R_{S^5}^{2}= \alpha' \sqrt{4 \pi N g_{s}} ~.
+\]
+
+
+In the limit \eqref{lim},  only the AdS region of the
+D3-brane geometry survives while the dynamics in the asymptotically
+flat region decouples from the theory. Furthermore, it turns out that the interaction between bulk and brane dynamics becomes negligible.  Therefore, it is called the \textbf{decoupling limit}.
+
+
+\subsubsection*{The AdS/CFT correspondence}
+
+
+As mentioned, the world volume theory of $N$ coincident D3-branes is 4d ${\cal{N}} =4$
+SYM with $\U(N)$ gauge group. On the other hand, the classical solution in \eqref{nmet} is a good
+approximation when the radii of AdS$_5$ and $S^5$ are very big:
+\be \label{same-radii}
+\frac{R^{2}}{\alpha^{\prime}} \gg 1 \ \Longrightarrow \  N g_{Y M}^{2} \equiv \lambda \gg 1
+\ee
+The fact that those two descriptions are simultaneously consistent for
+large values of the coupling constant $\lambda$ brought Maldacena
+to formulate the conjecture that the strongly interacting
+${\cal{N}}=4$ SYM with gauge group $\U(N)$ at large $N$ is equivalent
+to Type IIB supergravity compactified on AdS$_5 \times S^5$. However, supergravity is not a consistent quantum theory and it is just a low-energy effective theory of string theory. Hence, the natural way to extend the equivalence at any value of $\lambda$ is therefore  that ${\cal{N}}=4$ SYM is equivalent to Type IIB string theory on
+AdS$_5 \times S^5$~\cite{Maldacena:1997re}. Namely, the following two theories are dual to each other:
+\begin{itemize}
+\item $\cN=4$ super-Yang-Mills theory in 4-dimensions with gauge group
+$\U(N)$.
+\item Type IIB superstring theory on  AdS$_5\times S^5$
+with the same radius $R$ as in \eqref{same-radii}, where the 5-form $G^+_5$ has integer flux $N=\int _{S^5} G_5^+$ on $S^5$.
+\end{itemize}
+The coupling constants in the two theories are related by $g_s = g_{YM}^2$. The precise formulation of this duality will follow in the next subsection.
+In these two theories, we can immediately find the following correspondence as in Table~\ref{table:dictionary}.
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{c|c}
+4d $\cN=4$ SYM & Type IIB on AdS$_{5}\times S^5$ \\
+\hline
+32 supercharges & 32 supercharges \\
+$\SO(2,4)$ conformal group& $\SO(2,4)$ isometry of AdS$_{5}$ \\
+$\SU(4)_R$ symmetry & $\SO(6)$ isometry of $S^5$\\
+SL(2,\bZ) symmetry of coupling constants & SL(2,\bZ) symmetry of axio-dilaton
+\end{tabular}
+\end{center}
+\caption{Dictionary for the AdS${}_5$/CFT${}_4$ correspondence}
+\label{table:dictionary}
+\end{table}
+
+
+This conjecture is the most general statement, which is valid at any values of coupling constant $g_s = g_{YM}^2$ and rank $N$. However, it is still difficult to quantize string theory at any value of $g_s$ on a general manifold including asymptotic AdS space. Hence, it is still an open problem to prove this general statement of the conjecture. Nevertheless, taking various limits of the conjecture, we can show a variety of non-trivial evidence for the conjecture, providing new physical insight.
+
+
+
+\vspace{.5cm}
+
+\noindent\textbf{The `t~Hooft Limit}: The `t~Hooft limit \cite{tHooft:1973alw} is the limit in which we keep the \textbf{`t~Hooft coupling} $\lambda \equiv g_{YM}^2 N = g_s N$ fixed and letting $N\to \infty$, $g_s\to 0$. As in Figure \ref{fig:planar-non}, the planar
+diagrams become dominant in this limit on the Yang-Mills side. On the AdS side, since the string coupling can be re-expressed in terms of the `t~Hooft coupling as $g_s = \lambda /N$, the `t~Hooft limit corresponds to the regime where weak coupling string perturbation theory is valid.
+Put differently, this limit of the AdS/CFT correspondence can be understood as the incarnation of the idea of `t~Hooft \cite{tHooft:1973alw}.
+
+\begin{figure}[ht]\centering
+\includegraphics[width=8cm]{picture/planar-non}
+\caption{Planar and non-planar diagram}\label{fig:planar-non}
+\end{figure}
+
+\vspace{.5cm}
+
+\noindent\textbf{Supergravity limit}: While we take $N\to\infty$, in the regime that
+'t Hooft coupling is large $\lambda=g_s N \gg 1$, supergravity description becomes reliable.
+On the gauge theory side, the theory is strongly-coupled so that perturbation techniques cannot be applied.  The two theories are conjectured to be the same, but when one side is weakly coupled, the other is strongly coupled.
+This is a salient feature of \textbf{duality}. Thus, using the AdS/CFT correspondence, analyses of supergravity provide new insights to strongly-coupled SYM theory, such as quark confinement and mass gap.
+
+
+
+\subsection{GKPW relation}
+
+
+Soon after Maldacena's proposal \cite{Maldacena:1997re}, a more precise formulation was given in \cite{Gubser:1998bc,Witten:1998qj}. The gravitational partition function on asymptotically AdS space is equal to the generating function of correlation functions of the corresponding CFT:
+\bea\label{GKPW}
+Z_{\textrm{grav}}[\phi\to \phi_0]
+=
+\Bigg\langle \exp \biggl (\int _{\partial AdS} \bar \phi_0 \cO \biggr)
+\Bigg\rangle_{\textrm{CFT}}
+\eea
+that is called the \textbf{GKPW} relation.
+For any bulk field $\phi$ in gravity theory on AdS, there exists the corresponding operator
+$\cO$ in the CFT. The gravitational partition function can be schematically written as
+\[
+Z_{\textrm{grav}}[\phi\to \phi_0]=\int_{\phi\to \phi_0}\cD\phi ~e^{-S_{\textrm{string}}[\phi]}~.
+\]
+For instance, in the regime $\lambda\gg1$, we can use supergravity description
+\[
+Z_{\textrm{grav}}[\phi\to \phi_0]=\sum_{\textrm{saddle point}}~e^{-S_{\textrm{SUGRA}}[\phi\to \phi_0]}~.
+\]
+
+
+\subsubsection*{Bulk field/boundary operator}
+The GKPW relation tells us that each field propagating in the bulk AdS space is in one-to-one correspondence with an operator in CFT. Also, the spin of the
+bulk field is equal to that of the CFT operator. Moreover, the mass of the bulk field fixes the scaling dimension of the CFT operator. Here are some examples:
+\begin{itemize}
+\item  By definition, every gravitational theory has the graviton $g_{\m\n}$, a massless spin-2 particle. The dual operator must be the universal one with spin-2 in CFT. In fact, there is a natural candidate for it: the energy-momentum tensor $T_{\mu\nu}$ in CFT.  The fact that the graviton is massless corresponds to the fact that the CFT stress tensor is conserved.
+\item  If our theory of gravity has a spin-1 vector field $A_\m$, then the dual operator is also a spin-1 operator $J_\m$ in CFT. In particular, if $A_\m$ is a gauge field, then $J_\m$ is a conserved current. In fact, the GKPW relation provides the natural coupling $e^{i\int A_\mu J^\mu}$. This implies that gauge symmetries in the bulk correspond to global symmetries in the CFT.
+\item A bulk scalar field is dual to a scalar operator in the CFT. The boundary value of the bulk scalar field acts as a source in the CFT.
+\end{itemize}
+
+
+There is a relation between the mass of the field $\phi$ and the scaling dimension of the corresponding operator in CFT.
+If we write the AdS$_{d+1}$ metric  as in \eqref{ads-poincare2} the wave equation (for instance, Klein-Gordon equation for the scalar field) in the AdS$_{d+1}$ space for a field of mass $m$ has
+two independent solutions, which behave like $z^{d-\Delta}$ (\textbf{non-normalizable}) and $z^{\Delta}$ (\textbf{normalizable})
+for small $z$ (close to the boundary of AdS) where
+\be\label{dimenmass}
+\Delta=\frac{d}{2}+\sqrt{\frac{d^{2}}{4}+R^{2} m^{2}}~.
+\ee
+Therefore, as the massive field approaches the boundary $\epsilon \to 0$, the field on the right-hand side of \eqref{GKPW} behaves as
+\be
+\phi(\vec{x}, \epsilon)=\epsilon^{d-\Delta} \phi_{0}(\vec{x})~.
+\ee
+ This means that $\phi_{0}$ has conformal dimension $d-\Delta$ so that the dual operator ${\cal  O}$ in \eqref{GKPW}
+has conformal dimension $\Delta$ \eqref{dimenmass}.
+This is consistent with the fact that the radial direction $z$ in \eqref{ads-poincare2} of the bulk AdS space corresponds to the scaling of the boundary CFT.
+
+
+\subsubsection*{Examples}
+
+
+Let us now consider this correspondence in a massless scalar field in AdS$_5\times S^5$. The Klein-Gordon equation of the massless field in AdS$_5\times S^5$ can be written as
+\[
+\nabla^2 \phi=\nabla^2_{\textrm{AdS}_5}+\nabla^2_{S^5} \phi=0~.
+\]
+The eigenfunctions of the Laplacian $\nabla^2_{S^5}$ on a sphere are known as the spherical harmonics $Y_l(\Omega)$ (like the theory of angular momenta in quantum mechanics) so that
+\be \label{spherical-harmonics}
+\nabla_{S^{5}}^{2} Y_{l}(\Omega)=-\frac{l(l+4)}{R^{2}} Y_{l}(\Omega), \quad l=0,1,2, \ldots~.
+\ee
+Writing the ten-dimensional field $\phi=\sum_l\phi_lY_l$, the AdS$_5$ fields $\phi_l$ satisfy the massive Klein-Gordon equation
+\be
+\nabla_{\mathrm{AdS}_{5}}^{2} \phi_{l}=m_{l}^{2} \phi_{l}~, \qquad m_{l}^{2}=\frac{l(l+4)}{R^{2}}~.
+\ee
+This can be understood that the compactification on $S^5$ leads to a tower of the field with Kaluza-Klein (KK) masses $m_l$. The AdS/CFT correspondence predicts that there exist operators in the  $d=4$ $\cN=4$ SYM dual to these fields.
+
+
+
+To see that, we read off the conformal dimension of the corresponding operator in $d=4$ from \eqref{dimenmass}
+\be\label{Delta-mass-4d}
+\Delta_l=2+\sqrt{4+(m_l R)^2}=2+\sqrt{4+l(l+4)}=4+l~.
+\ee
+First, we consider a massless scalar $l=0$ in AdS${}_5$ where the conformal dimension of the dual operator is $\Delta_0=4$. Also, the spherical harmonics \eqref{spherical-harmonics} at $l=0$ corresponds to the s-wave, which is transformed trivially under the $\SO(6)$ symmetry. Therefore, the dual operators are also singlet under the $\SU(4)$ $R$-symmetry so that it does not contain the scalars $X_i$ of the  $d=4$ $\cN=4$ SYM. Consequently, the only operator with these properties is the gauge-invariant glueball operator
+\[
+\mathcal{O}=\operatorname{Tr}\left[F_{\mu \nu} F^{\mu \nu}\right]~.
+\]
+Note that the conformal dimension is $\Delta=4$ since  dim$[\partial]$=dim$[A]=1$. For higher KK modes $l>0$, the dual operator transforms non-trivially under the $\SU(4)$ $R$-symmetry so that it involves the scalar $X_i$. The natural candidate dual to the $l^{\textrm{th}}$ KK mode is
+\be
+\mathcal{O}_{i_{1}, \ldots, i_{l}}=\operatorname{Tr}\left[X_{\left(i_{1}, \ldots, i_{l}\right)} F_{\mu \nu} F^{\mu v}\right]~,
+ \ee
+where $X_{(i_1,\ldots, i_l)}$ being the traceless symmetric product of $l$ scalar fields $X_i$ of the $\cN=4$ SYM. It is easy to see that the conformal dimension of this operator is $4+l$, which is consistent with \eqref{Delta-mass-4d}. In fact, the field/operator matching of this kind has been extended to all the fields of 10d supergravity on AdS$_5\times S^5$.
+
+
+
+
+\end{document}

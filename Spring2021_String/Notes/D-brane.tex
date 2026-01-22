@@ -1,0 +1,500 @@
+\documentclass[String-lecture-21.tex]{subfiles}
+
+\begin{document}
+\section{D-brane dynamics}\label{sec:D-brane}
+So far, D-branes are treated as static rigid objects that are associated to boundary conditions of an open string.
+Actually, it has dynamics like a fundamental string, and this section introduces the dynamics of D-branes.
+After we derive the action for the world-volume theory of D$p$-branes in the first half, we discuss the dynamics of D-branes. Branes control non-perturbative dynamics in string theory, which reveals the richness and depth of string theory.
+Therefore, the study of D-branes is remarkably broad and we cover a tiny part of it. The reader is referred to \cite{johnson2006d} for more detail.
+
+\subsection{D-brane action}\label{sec:DBI}
+
+When we quantize a world-sheet in \S\ref{sec:bosonic}, we use the string sigma action \eqref{string-sigma} instead of the Nambu-Goto action \eqref{NG-action} to avoid the complexity of the square root.
+There, the dimension of a world-sheet to be two is crucial for quantization, and we cannot simply follow the same procedure for the fundamental string to quantize a D$p$-brane, in general.
+Thus, we will first learn the effective action of a D-brane in this section.
+
+
+Let us summarize the properties the D-brane action should be endowed with:
+\vspace{-4pt}
+\begin{enumerate}
+ \setlength{\itemsep}{0pt}
+ \item it contains scalars as the spacetime coordinates of the world-volume of a D-brane
+ \item it includes gauge fields living on a D-brane, which arises from an open string massless spectrum
+ \item it involves $B$-field because open stings can end on a D-brane
+ \item it couples to the R-R-field $C_{(p)}$ via \eqref{RR-coupling}
+ \item it can possess supersymmetry (though we focus only on the bosonic part in this section)
+\end{enumerate}
+\vspace{-4pt}
+
+The first point will be addressed by the Nambu-Goto action \eqref{NG-action} for a D-brane, namely the volume of the D-brane. We write the world-volume coordinates of D$p$-branes by $\sigma^a (a=0,1,\ldots,p)$, and $X^\mu(\sigma^a)$ maps from the world-sheet to the spacetime. Then, the Nambu-Goto action \eqref{NG-action} for a D-brane can be written as
+\begin{align*}
+ S_\textrm{D$p$} &= -T_\textrm{D$p$}^\mathrm{eff} \int d^{p+1}\sigma
+ \sqrt{-\det \left( G_{\mu\nu} \frac{\partial X^\mu}{\partial \sigma^a} \frac{\partial X^\nu}{\partial \sigma^b} \right)} \
+\end{align*}
+where $T_\textrm{D$p$}^\mathrm{eff}$ is an effective D$p$-brane tension which we will discuss shortly. Starting the Nambu-Goto action with the R-R coupling \eqref{RR-coupling}, we will generalize the action by using the T-duality and gauge invariance. In this way, we will incorporate the second and third point.
+
+
+
+Let us consider the simple setup as in Figure \ref{fig:D1-D2-T-dual} where D1 and D2-brane are related by the T-duality. Here we are interested in a part $\RR_t \times \RR \times S^1$ of the spacetime where the D-brane is located, and we assume that its metric is flat  $ds^2 = \eta_{\mu\nu} dx^\mu dx^\nu$ (i.e. $G_{\mu\nu} = \eta_{\mu\nu}$). As explained in \S\ref{sec:Tdual-open}, the position $X_2$ ($\sim X_2 +2\pi R$) of the D$1$-brane, and the gauge field  $A_2$ ($\sim A_2 +1/R$) on the D$2$-brane are related under the T-duality by
+\begin{align*}
+ X_2 = 2\pi \alpha' A_2 \ .
+\end{align*}
+Now let us consider a situation in which the D$1$-brane has dynamics, namely it vibrates as $X^2 = X^2(X^1)$ (see Figure \ref{fig:vibD1}).
+\begin{figure}[htb]
+\centerline{\includegraphics[width=7cm]{picture/vibD1}}
+\caption{Vibrating D$1$-brane.}
+\label{fig:vibD1}
+\end{figure}
+Then, the vibration of the D1-brane is translated as non-trivial field strength $F_{12} = \partial_1 A_2(X^1) \neq 0$ on the D2-brane. Parametrizing the world-volume coordinates as $X^0 = \sigma^0$ , $X^1 = \sigma^1$, the Nambu-Goto action of the D$1$-brane becomes
+\begin{align*}
+ S_\textrm{D1} &= -T_\textrm{D1}^\mathrm{eff} \int d^2\sigma \sqrt{-\det \left( G_{\mu\nu} \frac{\partial X^\mu}{\partial \sigma^a}
+ \frac{\partial X^\nu}{\partial \sigma^b} \right)} \quad\textrm{with}\ , \cr
+ &= -T_\textrm{D1}^\mathrm{eff} \int d\sigma^0 d\sigma^1 \sqrt{1 +\left(\frac{\partial X^2}{\partial \sigma^1} \right)^2} \ .
+\end{align*}
+In order for the D-brane action to be invariant under the T-duality, we incorporate the field strength of the gauge field in such a way that
+\begin{align*}
+ S_\textrm{D2} &= -T_\textrm{D2}^\mathrm{eff} \int d^3\sigma \sqrt{-\det \left( G_{\mu\nu} \frac{\partial X^\mu}{\partial \sigma^a}
+ \frac{\partial X^\nu}{\partial \sigma^b} +2\pi \alpha' F_{ab} \right)}  \cr
+ &= -T_\textrm{D2}^\mathrm{eff} \cdot 2\pi \wt R\cdot \int d\sigma^0 d\sigma^1 \sqrt{1 +\left(2\pi\alpha'F_{12} \right)^2} \ .
+\end{align*}
+
+
+\subsubsection*{D-brane tension}
+
+The dimension analysis tells us that a D-brane tension should be proportional to
+\begin{align*}
+ T_{\mathrm Dp} \sim \frac{\mathrm{mass}}{p\textrm{-dim vol}} \quad\Rightarrow\quad
+ T_{\mathrm Dp} \sim \frac{1}{\ell_s^{p+1}} \ .
+\end{align*}
+From the argument above in order for the two actions to coincide
+we need $T_\textrm{D1}^\mathrm{eff} = 2\pi \wt R T_\textrm{D2}^\mathrm{eff}$.
+On the other hand,
+$T_{\textrm{D}p}$ should be independent of the spacetime geometry including the radius $R$.
+Note that D-brane effective theory is supposed to reproduce open string amplitude,
+whose leading contribution is the disk amplitude $\sim e^{-\langle \Phi \rangle}$. % \DY{homework ? see Lec. 4}
+Thus, we reach the following form
+\begin{align}\label{DBI-pre}
+ S_{\textrm{D}p} &= -T_{\textrm{D}p} \int d^{p+1}\sigma\, e^{-\Phi(X)} \sqrt{-\det \left( G_{\mu\nu}
+ \partial_a X^\mu \partial_b X^\nu +2\pi \alpha' F_{ab} \right)} \ .
+\end{align}
+Then, the ratio of the tensions of D1 and D2-brane is
+\begin{align*}
+ 2\pi \wt R= \frac{T_{\textrm{D}1}^\mathrm{eff}}{T_{\textrm{D}2}^\mathrm{eff}}
+ = \frac{T_{\textrm{D}1} e^{-\Phi}}{T_{\textrm{D}2} e^{-\wt\Phi}}
+ =  \frac{T_{\textrm{D}1}}{T_{\textrm{D}2}} \cdot \frac{\wt R}{\ell_s}
+ \quad\Rightarrow\quad T_{\textrm{D}1} = 2\pi \ell_s \cdot T_{\textrm{D}2} \ .
+\end{align*}
+Note that the dilation field transforms under the T-duality as $e^{-\wt\Phi} = e^{-\Phi} \frac{\wt R}{\ell_s}$ (exercise).
+For a D-brane in superstring theory, the correct normalization is
+\be\label{Dbrane-tension} T_{\textrm{D}p} = \frac{2\pi}{(2\pi \ell_s)^{p+1}} ~.\ee % \DY{Homework ? heavy calculation}
+
+
+\subsubsection*{The $B$-field}
+
+In \eqref{NLSM-general}, we see the action of the bosonic closed string. For an open string, we need to add a boundary term in order for the action to be invariant under gauge transformations:
+\begin{align}\label{NLSM-open}
+ S_{\textrm{open}} =& \frac{1}{4\pi \alpha'} \int_\Sigma d^2\sigma \left( \sqrt h h^{ab} \partial_a X^\mu \partial_b X^\nu G_{\mu\nu}(X)
+ +i \varepsilon^{ab} \partial_a X^\mu \partial_b X^\nu B_{\mu\nu}(X)
+ +\alpha' \sqrt h R^{(2)} \Phi(X)
+ \right) \cr
+ &\qquad +i\int_{\partial\Sigma} d\sigma^0 \partial_0 X^\mu A_\mu  \cr
+ &= \cdots +\frac{1}{2\pi\alpha'} \int_{\Sigma} B_{(2)} +\int_{\partial\Sigma} A_{(1)} \ .
+\end{align}
+Here the gauge transformation  \eqref{B-gauge} of the $B$-field $\delta_B B_{(2)} = d \Lambda_{(1)}$
+is compensated by that of the gauge field $A_{(1)}$, which is
+\begin{align*}
+ \delta_B A_{(1)} = -\frac{\Lambda_{(1)}}{2\pi\alpha'} \ .
+\end{align*}
+
+Therefore, \eqref{DBI-pre} can be generalized by incorporating the $B$-field as
+\be
+S_{\textrm{D}p} = -T_{\textrm{D}p} \int d^{p+1}\sigma\, e^{-\Phi(X)} \sqrt{-\det \left( G_{ab}
++2\pi \alpha' F_{ab} +B_{ab} \right)}~.
+\ee
+This is called the \textbf{Dirac-Born-Infeld (DBI) action}.
+
+
+
+
+
+\subsubsection*{Generalization of R-R coupling and the DBI action}
+
+
+In addition, a D$p$-brane couples to the R-R field $C_{(p+1)}$ via the action \eqref{RR-coupling}, which can be written in terms of local coordinates as
+\begin{align*}
+ S_{\textrm{R-R D}p}= \mu_{p} \cdot \int_{\textrm{D}p}  C_{(p+1)}   =  \mu_{p} \cdot \int d^{p+1}\sigma\,
+ C_{\mu_1\cdots\mu_{p+1}}(X) \frac{\partial X^{\mu_1}}{\partial \sigma^1 } \cdots
+ \frac{\partial X^{\mu_{p+1}}}{\partial \sigma^{p+1} }\ .
+\end{align*}
+As above, let us consider the T-duality for the vibrating D$1$-brane in the R-R coupling.
+Recalling that R-R fields are transformed under the T-duality by \eqref{RR-Tduality}, the T-duality connects the following two expressions
+\begin{align*}
+ &S_{\textrm{R-R D}1} =
+ \mu_{1} \cdot \int d\sigma^0 d\sigma^1
+ \left( C_{01} +C_{02} \frac{\partial X^2}{\partial \sigma^1}\right) \ , \\
+ &S_{\textrm{R-R D}2} =\mu_{2} \cdot \int d\sigma^0 d\sigma^1 d\sigma^2
+ \left( \wt C_{012} +\wt C_{0} \cdot 2\pi\alpha' F_{12} \right) \ ,
+\end{align*}
+where $C_{01} \lra \wt C_{012}$, $C_{02} \lra \wt C_{0}$, and $X^2 \lra 2\pi\alpha' A_2$.
+This can be understood as follows. The vibrating D$1$-brane consists of a straight D$1$-brane along $X^1$
+and local vibration along $X^2$.
+After T-duality along $X^2$, the vibration part gives
+non-trivial flux $F_{12}\neq 0$ or equivalently gives D$0$-branes. (See left Figure \ref{fig:Myers}.)
+Therefore, the generalization of the R-R coupling \eqref{RR-Tduality} is
+\begin{align}\label{RR-general}
+ S_{\textrm{D}p} =\mu_{p} \cdot \int C_\mathrm{RR} \wedge \exp(2\pi\alpha' F_{(2)}+B_{(2)}) \ ,
+\end{align}
+where $C_{RR} = \sum_{n} C_{(n)}$.
+Note that the $B$-field appears with $F_{(2)}$ due to the gauge invariance.
+
+
+Finally, the fully general form of D$p$-brane action is given as follows:
+\begin{align}
+ S_{\textrm{D}p} &= -T_{\textrm{D}p} \int d^{p+1}\sigma\, e^{-\Phi(X)} \sqrt{-\det \left( G_{ab}
+ +2\pi \alpha' F_{ab} -B_{ab} \right)} \cr
+ &\qquad +\mu_{p} \cdot \int C_{RR} \wedge \exp(2\pi\alpha' F_{(2)}+B_{(2)}) \ ,
+\end{align}
+where $G_{ab} = G_{\mu\nu} \partial_a X^\mu \partial_b X^\nu$ and
+$B_{ab} = B_{\mu\nu} \partial_a X^\mu \partial_b X^\nu$.
+
+Though we focused on the bosonic part so far, there is a fermionic part
+so that they form spacetime supersymmetry.
+Here we only write down the leading fluctuation:
+\begin{align*}
+ -i\int d^{p+1}\sigma\, \Tr \left( \ol\psi \Gamma^a D_a \psi \right) \ .
+\end{align*}
+For the full nonlinear supersymmetric form, one should consult with, for example, \cite{Tseytlin:1999dj}.
+
+So far, we consider the world-volume effective action of a single D-brane, and non-Abelian generalization for multiple D-branes remains an open problem although there is a proposal \cite{Tseytlin:1997csa,Myers:1999ps}.
+
+
+
+
+
+
+\subsubsection*{D-brane tensions and charges}
+
+
+As seen in \eqref{Dirac-quantization}, D-brane charges satisfy the Dirac quantization condition. It is easy to see that the D-brane tension \eqref{Dbrane-tension} is also subject to the Dirac quantization condition.
+Hence, we can set $\mu_{p} = \frac{2\pi}{(2\pi \ell_s)^{p+1}} = T_{\textrm{D}p}$. % \DY{Homework ?}
+The tension induces gravitational force (graviton \& dilaton) between D$p$-branes, which is attractive whereas the R-R charge induces repulsive force. Thus, the equality of the charge and the tension is crucial for multiple D$p$-branes to exist stably.
+
+
+\begin{figure}[ht]\centering
+  \includegraphics[width=8cm]{picture/1loop}
+  \caption{}
+  \label{fig:1loop}
+\end{figure}
+
+Let us evaluate the gravitational force between two D$p$-branes. As Figure \ref{fig:openClosedAmp} illustrates, a closed string amplitude between the D$p$-branes can be interpreted as the one-loop amplitude of an open string between the D$p$-branes. The contribution of a particle with mass $m$ at one-loop to the free energy can be evaluated as
+\begin{equation}
+\begin{aligned}
+F &=-V_{p+1}\frac12\int \frac{d^{p+1} k}{(2 \pi)^{p+1}} \log \left(k^{2}+m^{2}\right) \\
+&=-V_{p+1}\int \frac{d t}{2t} \int \frac{d^{p+1} k}{(2 \pi)^{p+1}} e^{-2\pi \alpha^{\prime}\left(k^{2}+m^{2}\right) t} \\
+&=-iV_{p+1}\int \frac{d t}{2t}(8\pi^2\ell_{s}^{2} t)^{-\frac{p+1}{2}} e^{-2\pi \alpha^{\prime} m^{2} t}
+\end{aligned}
+\end{equation}
+Since the mass of an open string mode between the branes at distant $K$ is given by
+\begin{equation}
+\alpha^{\prime} m^{2}=L_0+\frac{K^{2}}{\ell_{s}^{2}}~,
+\end{equation}
+the free energy takes the form
+\begin{equation}
+F=-iV_{p+1}\int \frac{d t}{2t}(8\pi^2\ell_{s}^{2} t)^{-\frac{p+1}{2}} q^{\frac{K^{2}}{\ell_{s}^{2}}} \Tr (q^{L_0})~.
+\end{equation}
+where
+\begin{equation}
+\Tr (q^{L_0}) =q^{-\frac12} \prod_{m=1}^{\infty} \frac{(1-q^{m-1 / 2})^8}{\left(1-q^{m}\right)^{8}}=\frac{\eta(i t/2)^{8}}{\eta(i t )^{16}}~.
+\end{equation}
+Note that the denominator is the bosonic and the numerator is the fermionic contribution. As we learn in \eqref{cylinder2}, the leading contribution from a closed string can be read off in the limit $t\to0$ when the cylinder becomes a thin tube. Therefore, we make the modular transformation \eqref{S-T} and we take the leading order
+\bea\label{openclosed}
+F &=-iV_{p+1}\frac{1}{(2\pi\ell_{s})^{p+1}} \int \frac{d t}{2t} (2t)^{\frac{7-p}{2}} e^{-2\pi \frac{K^2}{\ell_{s}^{2}} t} \\
+&=-iV_{p+1}\frac{1}{(2\pi\ell_{s})^{p+1}}\left(\frac{\ell_{s}^{2}}{\pi K^2}\right)^{\frac{7-p}{2}} \int \frac{d x}{x} x^{\frac{7-p}{2}} e^{-x}\cr
+&=-iV_{p+1}\frac{1}{(2\pi\ell_{s})^{p+1}}\left(\frac{\ell_{s}^{2}}{\pi K^2}\right)^{\frac{7-p}{2}} \Gamma\left(\frac{7-p}{2}\right)\cr
+&=\textrm{const}\cdot  \ell_s^{6-2p}G_{9-p}(K^2)
+\eea
+where $G_d(K)$ is the massless scalar Green’s function in $d$ dimensions, the inverse of $-\nabla^2$. In the $D=10$ supergravity \S\ref{sec:supergravity}, the Newton constant is given by $2\kappa_{10}^2=(2\pi \ell_s)^8/2\pi$ so that the Newton's potential is given by
+\begin{equation}\label{Newton}
+V_{\mathrm{G}}=-\textrm{const}\cdot\kappa_{10}^2 T_{\mathrm{D} p}^{2} G_{9-p}(r)~.
+\end{equation}
+Therefore, we can conclude that $T_{\mathrm{D} p} \propto \ell_s^{-(p+1)}$, which justifies \eqref{Dbrane-tension}.
+
+
+
+For the $B$-field, the normalization of the quantization condition is different from \eqref{Dirac-quantization}
+\begin{align*}
+ T_\mathrm{F1} \cdot T_\mathrm{NS5} \cdot 2\kappa_{10}^2 g_s^2 \in 2\pi \ZZ \ .
+\end{align*}
+Since $T_\mathrm{F1} = \frac{2\pi}{(2\pi \ell_s)^2}$, we have
+\begin{align*}
+ T_\mathrm{NS5} = \frac{2\pi}{T_\mathrm{F1} \cdot 2\kappa_{10}^2 g_s^2}
+ = \frac{2\pi}{(2\pi \ell_s)^6 g_s^2} \ .
+\end{align*}
+See also Table \ref{table:tension}.
+
+
+
+\subsection{Branes and strings ending on branes}
+
+Now we consider D-brane systems in Type IIA theory. Let us recall that Maxwell equations lead to the charge conservation law:
+\begin{align*}
+ \begin{array}{l}
+  d *\!F_{(2)} = J_e \\
+  d F_{(2)} = J_m
+ \end{array} \qquad\Rightarrow\qquad
+ \begin{array}{l}
+  d J_e = 0 \\
+  d J_m = 0
+ \end{array} \ .
+\end{align*}
+Because of the charge conservation, a world-line of a charged particle cannot have an endpoint and therefore it must be either a closed path or an infinitely long line.
+If we apply this logic to branes, we may find the same result for branes.
+However, the charge conservation in supergravity is quite non-trivial due to the non-linearity of the equation of motions. In this subsection, we will study the physics of D-branes from the equation of motions in (massive) Type IIA supergravity.
+
+
+\subsubsection*{Massive IIA supergravity}
+
+When Type IIA supergravity action is introduced in \eqref{IIA-SUGRA}, we do not include the R-R field corresponding to D$8$-brane. As explained in \S\ref{sec:intro-Dbrane}, D8-branes are non-dynamical, and its R-R field is a $9$-form so that its field strength is $10$-form $G_{(10)}$. Consequently, $d *\! G_{(10)} = 0$ leads to $*G_{(10)} = G_{(0)} \equiv m$), which clearly shows that D8-brane is non-dynamical. However, it actually has a constant but non-trivial contribution to the action, called \textbf{massive IIA supergravity}. Since it is a constant, it contributes as a mass term, called \textbf{Romans mass} to the action \cite{Romans:1985tz}.
+
+
+Let us write the massive IIA supergravity action (we omit the wedge product $\wedge$ and the Hodge star $*$ here):
+\begin{align*}
+ &S_\mathrm{A,NS} = \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G} e^{-2\Phi} \left[
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2} H_{(3)}^{2} \right] \ ,  \\
+ &S_\mathrm{A,R} = \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G} \left[
+ -\frac{1}{2} m^{2} -\frac{1}{2} G_{(2)}^{2} -\frac{1}{2} G_{(4)}^{2} \right] \ ,  \\
+ &S_\mathrm{A,CS} = \frac{1}{2\kappa_{10}^2} \int \left[
+ -\frac{1}{2} B_{(2)} G_{(4)} G_{(4)}
+ +\frac{1}{2} B_{(2)}^2 G_{(2)} G_{(4)}
+ -\frac{1}{6} B_{(2)}^3 G_{(2)}^2 \right. \cr
+ &\hspace{100pt} \left.
+ -\frac{m}{6} B_{(2)}^3 G_{(4)}
+ +\frac{m}{8} B_{(2)}^4 G_{(2)}
+ -\frac{m^2}{40} B_{(2)}^5
+ \right] \ ,
+\end{align*}
+where
+\begin{align}
+ \begin{array}{l}
+  H_{(3)} = dB_{(2)} \ , \\
+  G_{(2)} = dC_{(1)} + m B_{(2)} \ , \\
+  % &\wt G_{(4)} = G_{(4)} +C_{(1)} \wedge H_{(3)} \ , \\
+  % &G_{(4)} =dC_{(3)} +\frac{1}{2} m B_{(2)} \wedge B_{(2)} \ .
+  G_{(4)} =dC_{(3)} +dC_{(1)} B_{(2)} +\frac{1}{2} m B_{(2)}^2 \ .
+ \end{array} \label{eq:fsGf}
+\end{align}
+
+
+% \subsubsection{Branes that have boundaries}
+
+% \subsubsection*{R-R  fields}
+
+From this action, we obtain the following equations of motions for $C_{(1)}$ and $C_{(3)}$
+\begin{align}\label{EOM}
+ -d*\!G_{(2)} &= H_{(3)} *\!G_{(4)} \ , \\
+ d*\!G_{(4)} &= H_{(3)} G_{(4)} \ .
+\end{align}
+Since we know the relation between the field strengths and their gauge fields \eqref{eq:fsGf},
+we obtain the following Bianchi identities
+\begin{align}\label{Bianchi}
+ d G_{(2)} &= m H_{(3)} \ , \\
+ d G_{(4)} &= H_{(3)} G_{(2)} \ .
+\end{align}
+If we relabel $m$ by $G_{(0)}$ and define the dual field strengths:
+\begin{align*}
+ G_{(10)} = * G_{(0)} \ , \qquad
+ G_{(8)} = -*\! G_{(2)} \ , \qquad
+ G_{(6)} = * G_{(4)} \ ,
+\end{align*}
+then the equations of motions \eqref{EOM} and the Bianchi identities \eqref{Bianchi} can be repackaged into
+\begin{align*}
+ d G_\mathrm{even} =  H_{(3)} G_\mathrm{even} \ .
+\end{align*}
+where
+\begin{align}
+   C_\mathrm{odd} =& C_{(1)} +C_{(3)} +C_{(5)} +C_{(7)} +C_{(9)} \ ,\cr
+ G_\mathrm{even} =& G_{(0)} +G_{(2)} +G_{(4)} +G_{(6)} +G_{(8)} +G_{(10)} \ .
+\end{align}
+This equation can be solved as follows:
+\begin{align*}
+ G_\mathrm{even} = e^{B_{(2)}} \left( m +dC_\mathrm{odd} \right) \ .
+\end{align*}
+
+The equation of motion for the $B$-field is given as follows
+\begin{align*}
+ d \left(e^{-2\Phi}*\!  H_{(3)} \right) = m *\!G_{(2)} +*G_{(4)}G_{(2)} -\frac{1}{2} G_{(4)}^2 \ .
+\end{align*}
+If we define the dual field strength $H_{(7)} = e^{-2\Phi}*\!  H_{(3)}$,
+then, the equation of motion becomes
+\begin{align}
+ dH_{(7)} = \frac{1}{2} \left[ (* G_\mathrm{even}) G_\mathrm{even} \right]_{(8)}
+\end{align}
+The Bianchi identity is trivial $d  H_{(3)} = 0$.
+Note that those field strengths are invariant under the gauge transformations of $B$-field as well as R-R fields:
+\begin{align*}
+ &\delta_B B_{(2)} = d \lambda_{(1)} \ , \qquad \delta_B C_\mathrm{odd} = -\lambda_{(1)} \left(m+dC_\mathrm{odd}\right) \ , \\
+ &\delta_C B_{(2)} = 0 \ , \qquad \delta_C C_\mathrm{odd} = d \lambda_\mathrm{even} \ ,
+\end{align*}
+where we introduced a formal sum of gauge parameters
+\begin{align*}
+ \lambda_\mathrm{even} = \lambda_{(0)} +\lambda_{(2)} +\lambda_{(4)} +\lambda_{(6)} +\lambda_{(8)} \ .
+\end{align*}
+
+% \subsubsection*{Brane currents}
+
+Now let us introduce brane currents $J_{(8)}^\mathrm{F1}$, $J_{(4)}^\mathrm{NS5}$, and
+\begin{align}
+ J_\mathrm{odd} = J_{(1)}^\mathrm{D8} +J_{(3)}^\mathrm{D6} +J_{(5)}^\mathrm{D4} +J_{(7)}^\mathrm{D2} +J_{(9)}^\mathrm{D0} \ .
+\end{align}
+Then, we can include them to the equations of motions:
+\begin{align*}
+ d H_{(3)} &= J_{(4)}^\mathrm{NS5} \ , \\
+ d H_{(7)} &= J_{(8)}^\mathrm{F1} +\frac{1}{2} \mathcal (* G_\mathrm{even}) G_\mathrm{even} \ , \\
+ d G_\mathrm{even} &= J_\mathrm{odd} +H_{(3)} G_\mathrm{even} \ .
+\end{align*}
+Now we can derive the following ``conservation'' laws:
+\begin{align*}
+ d J_{(4)}^\mathrm{NS5} &= 0 \ , \\
+ d J_{(8)}^\mathrm{F1} &= -\left[ J_\mathrm{odd} (* G_\mathrm{even}) \right]_{(9)} \ , \\
+ d J_\mathrm{odd} &= -J_{(4)}^\mathrm{NS5} G_\mathrm{even} -J_\mathrm{odd} H_{(3)} \ .
+\end{align*}
+From these equations, we can deduce several facts:
+\vspace{-4pt}
+\begin{itemize}
+ \setlength{\itemsep}{0pt}
+ \item NS$5$-brane cannot have boundaries,
+ \item F$1$ string can end on any D-branes,
+ \item D$p$-brane can end on NS$5$-brane up to $p=6$ (D$8$ cannot),
+ \item D$p$-brane can end on D$(p+2)$-brane.
+\end{itemize}
+
+A similar analysis can be performed in Type IIB supergravity, or we can take the T-duality suitably. The results are summarized in Table \ref{table:branes-branes}.
+
+\begin{table}[htbp]
+ \begin{center}
+  \label{table:branes-branes}
+\begin{tabular}{c|c}
+ Brane & Branes end on \\\hline
+ F1 & nothing \\
+ NS5-brane & D0, D2, D4, D6 \\
+ D0-brane & F1 \\
+ D2-brane & F1, D0 \\
+ D4-brane & F1, D2 \\
+ D6-brane & F1, D4 \\
+ D8-brane & F1, D6
+\end{tabular}
+\hspace{3cm}
+\begin{tabular}{c|c}
+ Brane & Branes end on \\\hline
+ F1 & nothing \\
+ NS5-brane & D1, D3, D5 \\
+ D1-brane & F1 \\
+ D3-brane & F1, D1 \\
+ D5-brane & F1, D3 \\
+ D7-brane & F1, D5 \\
+\end{tabular}
+\caption{Which branes can end on a brane in Type IIA (left) and IIB (right).}
+\end{center}
+\end{table}
+
+% The fact that a D-brane is coupled to an R-R field requires that
+% the brane action should include $S = \int C_\mathrm{odd}$.
+% However, it is invariant under the gauge transformations.
+% The invariant form is
+% \begin{align*}
+%  S = \int \left( e^{2\pi\alpha' F_{(2)} +B_{(2)}} C_\mathrm{odd} +m\omega\right) \ ,
+% \end{align*}
+% where
+% \begin{align*}
+%  \omega = \sum_{n} \frac{1}{(n+1)!} A_{(1)} F_{(2)}^n \ .
+% \end{align*}
+% This is consistent with the previous analysis.
+
+\subsubsection*{D0-D2 bound states and Myers effect}
+
+The general R-R coupling \eqref{RR-general} includes all possible R-R fields $ C_\mathrm{RR}$ in the theory. This implies that D$p$-branes can include lower-dimensional D$(p-2n)$-branes ($n \in \ZZ_{\ge0}$), forming a bound state.
+
+Let us consider a concrete example of a D$2$-brane supported on $\Sigma$ where the R-R coupling at $B_{(2)}=0$ is
+\begin{align*}
+ S \sim \frac{1}{2\pi} \int_{\RR_t \times \Sigma} \left( C_{(3)} + F_{(2)} C_{(1)}\right) \ ,
+\end{align*}
+Note that the $F_{(2)}$ flux needs to be quantized
+\begin{align*}
+ \frac{1}{2\pi}\int_{\Sigma} F_{(2)} =  n \in \ZZ \ .
+\end{align*}
+If $C_{(3)}$ is zero, the D2-brane tries to shrink to a point due to its tension.
+On the other hand, $C_{(1)}$ part remains finite because the flux $F_{(2)}$ is quantized as
+\begin{align*}
+ S \sim \frac{1}{2\pi} \int_{\RR_t \times \Sigma} \left( F_{(2)} C_{(1)}\right) \to n \int_{\RR_t} C_{(1)} \ .
+\end{align*}
+This is equivalent to $n$ D$0$-branes.
+Namely, when the D$2$-brane with $n$ flux shrinks to a point, $n$ D$0$-branes remain. This can be understood as a bound state of D$2$- and D$0$-branes (see Figure \ref{fig:Myers}).
+
+
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=\textwidth]{picture/Myers}}
+\caption{Myers effect: transition from D$0$-branes to D$0$-D$2$ .}
+\label{fig:Myers}
+\end{figure}
+
+
+
+Let us consider the opposite process of the previous argument.
+When there are $n$ D$0$-branes in the non-trivial $C_{(3)}$ background flux, they can become a D$2$-brane with the $F_{(2)}$ flux.
+Due to the non-trivial $C_{(3)}$ flux, being a D$2$-brane is energetically more preferable than being the D$0$-branes (see Figure \ref{fig:Myers}).
+This is similar to the polarization phenomenon in electromagnetism,
+and in this case, it is called \textbf{Myers effect} \cite{Myers:1999ps}.
+
+
+% \subsubsection*{Other s}
+%
+% I left it for homework.
+%
+
+
+\subsection{Brane creations/annihilations}\label{sec:HW}
+
+In fact, the last two Type IIB D-brane configurations in Table \ref{tab:Tdual} preserve a quarter of supersymmetries, and they give rise to 3d $\cN=4$ theories in $X^{012}$. Let us first consider the third configuration of Table \ref{tab:Tdual}. As in Figure \ref{fig:quiver}, $N$ D3-branes suspended by NS5-branes give rise to $\U(N)$ gauge group (or vector multiplet), and F1-strings between D3- and D5-branes give rise to matters (hypermultiplet) in the fundamental representation. Also, bifundamental matter (hypermultiplet) arises from F1-strings between two adjacent D3-branes. The resulting theory is often represented by a quiver diagram.
+3d $\cN=4$ supersymmetry is endowed with $\SU(2)_C\times \SU(2)_H$ R-symmetry where $\SU(2)_C$ acts on the $X^{345}$ direction and  $\SU(2)_H$ acts on the $X^{789}$ direction in the Type IIB setup. Also, 3d $\cN=4$ supersymmetric theories have moduli spaces of vacua, called Coulomb and Higgs branch. Both are hyper-K\"ahler manifolds.
+In the brane realization, the Coulomb branch corresponds to the motion of D3-branes along $X^{345}$ and the Higgs branch corresponds to the motion of D3-branes along $X^{789}$. Therefore, a large class of 3d $\cN=4$ theories can be studied by using Type IIB brane configurations in the third configuration of Table \ref{tab:Tdual}.
+
+
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=8cm]{picture/quiver}}
+\caption{Type IIB brane system where NS5/D5/D3-branes are colored by black/blue/red,  and the corresponding 3d $\cN=4$ quiver theory where circles/squares represent unitary gauge/flavor groups.}
+\label{fig:quiver}
+\end{figure}
+
+What makes this system very intriguing is a brane creation/annihilation process called \textbf{Hanany-Witten transition} \cite{Hanany:1996ie}. As a D5-brane crosses an NS5-brane, a D$3$-brane is created or annihilated. See Figure \ref{fig:HW}. In the Hanany-Witten transition, the s-rule constrains that at most one D3-brane can be suspended between an NS5 and a D5-brane.
+
+% Another example is that D$p$ and D$p'$ for $p+p'=8$ create/annihilate F$1$-string.
+% Crossing two M$5$-branes creates/annihilates M$2$-brane etc (look it up on the web if you are interested in it).
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=8cm]{picture/HW}}
+\caption{The crossing of NS5 and D5-brane leads to D3-brane creation/annihilation.}
+\label{fig:HW}
+\end{figure}
+
+As in Table \ref{tab:Tdual}, Type IIB theory enjoys the S-duality which exchanges NS5 and D5-branes.  The combination of the S-duality and the Hanany-Witten transition predicts non-trivial duality in 3d $\cN=4$ theories, called the 3d $\cN=4$ \textbf{mirror symmetry} \cite{Intriligator:1996ex}. One example of mirror symmetry is illustrated in Figure \ref{fig:MS}. Since the S-duality exchanges NS5 and D5-branes, so does the roles of the Coulomb and Higgs branch (namely the roles of $X^{345}$ and $X^{789}$). Therefore, 3d $\cN=4$ supersymmetric theories can be studied from many perspectives such as branes, dualities, geometry of moduli spaces,  and quantum field theories. They also admit mathematically very deep interpretations in representation theory, the geometry of hyper-Kahler manifolds, and equivalences of categories.
+
+
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=\textwidth]{picture/MS}}
+\caption{The S-duality maps from the left to middle brane configuration. Moving the two D5-branes into the middle involves the Hanany-Witten transition, and D3-branes are annihilated. The 3d $\cN=4$ theories from the left and the right brane configuration are dual to each other.}
+\label{fig:MS}
+\end{figure}
+
+
+
+
+
+
+The study of supersymmetric theories by D-branes is very fruitful and successful. Brane dynamics provides profound insights into supersymmetric theories. Since the subject is very rich and broad, the reader is referred to, for instance,  \cite{Hanany:1996ie,Douglas:1996sw,Witten:1997sc,Aharony:1997bh,Giveon:1998sr,Johnson:2000ch} as a starting point.
+
+
+
+\end{document}

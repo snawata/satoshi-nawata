@@ -1,0 +1,194 @@
+\documentclass[geometry-lectures-21.tex]{subfiles}
+
+\begin{document}
+
+
+
+
+
+\section{Characteristic classes}
+
+As we (will) see in homework, principal $U(1)$-bundles on $S^2$ are classified by the monopole number $n$ which tells us how the $U(1)$ fibers over the upper hemisphere and the lower hemisphere are glued together. The generalization of this notion for a vector bundle $\pi:E\to M$ leads to a \term{characteristic class} associated to a cohomology class of $M$. Characteristic classes were introduced to extract topological information of a base manifold of vector bundles or principal $G$-bundles from curvature forms. This is called \term{Chern-Weil theory}, on which \cite[\S6]{morita2001geometry} is a wonderful exposition.
+
+
+
+
+Characteristic classes are constructed as \term{invariant polynomials} of the curvature $F = dA+A\wedge A$. As we see in \eqref{gauge-trans2}, $F$ transforms as $F\to g^{-1}Fg$ under the gauge transformation where $g\in \mathscr{G}_E$. To construct characteristic classes, we need to introduce invariant polynomials $P(X)$ of matrixes, that is invariant under the conjugation, $P(g^{-1}F g) = P(F)$. Examples of invariant polynomials are $\Tr F^k$ ($k = 1,2,\cdots$) and $\det F$. In fact, we can use these to construct nice bases of invariant polynomials as follows:
+
+
+(1) $\sigma_k(F)$ defined by
+$$\det(1 + tF) = 1 + t\sigma_1(F) + t^2\sigma_2(F) + \cdots + t^r\sigma_r(F)~.$$
+
+(2) $s_k(F)$ defined by
+ $$s_k(F) = \Tr F^k~, \qquad (k = 1, \cdots, r)~.$$
+They are related to each other by Newton's formula,
+$$s_1 = \sigma_1~ , \quad s_2 = \sigma_1^2 -2\sigma_2 ~, \quad s_3 = \sigma_1^3 - 3 \sigma_1 \sigma_2 + 3 \sigma_3 ~, \cdots$$
+We can also express the invariant polynomials in terms of eigenvalues. If $F$ is a hermitian matrix, we can diagonalize it with eigenvalues $x_1,\cdots,x_k$. Then,
+$$\prod_{k=1}^r (1 + tx_k) = 1 + t\sigma_1(x) + \cdots + t^r\sigma_r(x). $$
+Similarly,
+$s_k(F) = \sum_{j=1}^r (x_j)^k$.
+
+
+If $P_k(F)$ is an invariant polynomial of degree $k$, we can use the curvature 2-form $F$ to define a $2k$-form $P_k(F)$ so that it is invariant under the gauge transformation, $F\to g^{-1}F g$. It is also a closed-form because the Bianchi identity
+$$
+dF+[A\wedge F]=0
+$$
+tells us
+\begin{align}\nonumber
+d\; \Tr F^k &= \Tr (dF\;F^{k-1} +F\;dF \;F^{k-1} +\cdots + F^{k-1}dF ) \cr
+&= -\Tr (([A\wedge F])F^{k-1} +\cdots+F^{k-1}([A\wedge F]) ) \cr
+&=-\Tr(A\wedge F^k -F^k\wedge A)=0
+\end{align}
+Thus, we find $P_k(F)\in H^{2k}(M)$.
+
+Moreover, $P_k(F)$ is invariant under continuous deformation of the gauge field $A$ as an element of $H^{2k}(M)$. Suppose that we change $A \to A + \eta$ with $\eta$ being an infinitesimal one-form.
+Under this deformation, $F$ changes by $\delta F = d\eta + A\wedge \eta+\eta\wedge A$. Therefore,
+\begin{align}
+\delta \Tr F^k &=\Tr( (d\eta + A\wedge \eta+\eta\wedge A)F^{k-1} +\cdots+F^{k-1}(d\eta + A\wedge \eta+\eta\wedge A) )\cr
+&=k\Tr ((d\eta + A\wedge \eta+\eta\wedge A)F^{k-1}) \cr
+&=k\Tr ( d\eta F^{k-1} -\eta dFF^{k- 2} -\cdots-\eta F^{k- 2}dF )\cr
+&= k \;d\Tr ( \eta F^{k-1} )~.\nonumber
+\end{align}
+Since both $\eta$ and $F$ transform homogeneously under the gauge transformation, $\Tr(\eta F^{k-1})$ is a well-defined ($2k-1$)-form. Thus, under any infinitesimal deformation, $P_k(F)$ changes by an exact form. Thus, $P_k(F)$ depends only on the type of the bundle $E$ and not on a choice of the connection $A$ on $E$. For a more complete proof, please refer to \cite[Proposition 5.28]{morita2001geometry}.
+
+\subsection{Pontryagin classes}
+Let us consider a vector bundle $\pi:E\to M$ of rank $r$. One can always put a metric $g$ on $E$ and consider a connection $A$ which is compatible with the metric $g$. Therefore, we can consider the curvature form $F$ takes its value on $\mathfrak{so}(r)$. Namely it is an anti-symmetric $(F^i{}_j+F^j{}_i=0)$ 2-form so that $\Tr F^k=0$ if $k$ is odd. Therefore, for the invariant polynomial $P_k$ of odd degree, we have
+$$
+P_k(F)=0~.
+$$
+As a result, the \term{Pointryagin class} is defined as
+$$
+p_k(E):=\frac1{(2\pi)^{2k}}\sigma_{2k}(F)\in H^{4k}(M;\bR)
+$$
+They may be written as
+$$p(E)=\det \left(1+\frac{1}{2\pi} F \right)=1+p_1(E)+p_2(E)+\cdots+p_{[r/2]}(E)~.$$
+
+
+
+\bthm[Hirzebruch signature theorem]\label{Hirzebruch}
+Let $M$ be an oriented compact 4-dimensional manifold. Since the Hodge star $\ast:H^2(M)\to H^2(M)$ satisfies $\ast^2=1$ on $H^2(M)$, we can decompose it into $H^2(M)=H^2_+(M)\oplus H^2_-(M)$ with eigenvalues $\pm1$ of $\ast$. Let us define the signature of $M$ by
+$$
+\tau(M)=\dim H^2_+(M) - \dim H^2_-(M)~.
+$$
+Then, the signature can be expressed by
+$$
+\tau(M)=\frac13\int_M p_1(TM)~.
+$$
+\ethm
+
+
+
+
+
+
+\subsection{Chern classes}
+Now let us consider complex vector bundle $\pi:E\to M$ of rank $r$. Similarly, one can always put a Hermitian metric $g$ on $E$ and consider a connection $A$ which is compatible with the metric $g$. Then, the curvature form $F$ takes its value $\mathfrak{u}(r)$. Namely it is a skew-Hermitian $(F^i{}_j+\overline F^j{}_i=0)$ 2-form so that $\Tr \left(\frac{F}{2\pi i} \right)^k$ is a real $2k$-form.
+
+Then, \term{Chern class} is defined as
+$$c_k(E):=\left(\frac{-1}{2\pi i}\right)^k\sigma_k(F) \in H^{2k}(M;\bR)~.$$
+This can be written as
+$$c(E)=\det \left(1 - \frac{1}{2\pi i} F \right) = 1 + c_1 (E)+ c_2 (E)+ \cdots +c_r(E)~.$$
+ For example, we can explicitly write
+$$ c_1=\frac{-1}{2\pi i} \Tr F~, \quad c_2=-\frac1{8\pi^2} (\Tr F\wedge \Tr F-\Tr F\wedge F), \cdots $$
+ If the structure group is in $\SU(r)\in\U(r)$, we have a trivial first Chern class $c_1 = 0$ because $\mathfrak{su}(r)$ is traceless.
+
+
+
+Instead of $\sigma_k$, we can use $s_k$ for invariant polynomials, which defines the \term{Chern characters}
+\be\label{Chern-character} ch_k(E) = \frac{1}{k!}\Tr \left(-\frac{F}{2\pi i}\right)^k \in H^{2k}(M) ~. \ee
+We can also write it as
+$$ch(E)=1 +ch_1 (E)+\cdots=\Tr\exp \left(-\frac{F}{2\pi i}\right) ~.$$
+
+
+\subsection*{Some properties}
+
+
+
+The Pontryagin class and Chern class are related by
+\be\label{p-c}
+p_k(E)=(-1)^kc_{2k}(E\otimes\bC)\in H^{4k}(M;\bR)
+\ee
+where $E\otimes \bC$ is the complexification of a real bundle $E\to M$. Since $\sigma_k=0$, we have
+\be\label{odd-vanish}
+c_k(E\otimes \bC)=0~, \quad \textrm{for} \ k \ \textrm{odd}
+\ee
+
+  One of the important properties of the Pontryagin and Chern classes is that it behaves nicely when we take a direct sum $E_1 \oplus E_2$ of vector bundles $E_1, E_2$ as,
+\begin{align}\nonumber
+p(E_1 \oplus E_2) &= p(E_1) \wedge p(E_2)~,\cr
+c(E_1 \oplus E_2) &= c(E_1) \wedge c(E_2)~.
+\end{align}
+On the other hand, it does not behave nicely under the direct product $E_1 \otimes E_2$.
+
+
+
+
+The Chern characters behave nicely under both the direct sum and direct product as,
+\begin{align}\nonumber
+ch(E_1 \oplus E_2) = ch(E_1) + ch(E_2)~,\cr
+ch(E_1 \otimes E_2) = ch(E_1) \wedge ch(E_2)~.
+\end{align}
+This property plays an important role in \term{K-theory}.
+
+\subsection{Euler class}
+Let us turn to a real vector bundle $\pi:E\to M$ of even rank $2r$. In this case, in addition to $\Tr$ and $\det$, we can consider one more way to construct an invariant polynomial, which is called the \term{Pfaffian},
+$$
+Pf(F) = \frac{1}{2^r r!} \sum_{\sigma\in S_{2r}}\textrm{sgn}(\sigma)~ F_{\sigma(1)\sigma(2)}F_{\sigma(3)\sigma(4)} \cdots F_{\sigma(2r-1)\sigma(2r)}~.
+$$
+Note that, for antisymmetric matrices, the Pfaffian is a square root of the determinant,
+$\det F = Pf(F)^2$.
+If $F$ is real and anti-symmetric, we can block diagonalize it by $\SO(2r)$ as
+\be\label{anti-symm}
+F=\left( \begin{array}{ccccccc}
+ 0& x_1 &0& 0& \cdots & 0& 0\\
+-x_1& 0& 0& 0&\cdots &0& 0\\
+ 0& 0& 0& x_2 &&& \\
+0 &0& -x_2& 0 &&&\\
+\cdot&\cdot&&&\cdots&\cdot&\cdot\\
+0&0 &&&\cdots& 0 &x_r\\
+0 &0&&&\cdots& -x_r&0\\
+\end{array}\right)
+\ee
+ We can then write the Pfaffian as
+$$Pf(F) = \prod_{i=1}^r x_k.$$
+Under the conjugation $F \to g^TFg$, the Pfaffian transforms as $Pf( g^T Fg) = \det g \cdot Pf(F)$.
+
+Thus, if $g\in\SO(2r)$, the Pfaffian is invariant.
+We can now define the \term{Euler class} by
+$$e(E) = \frac{1}{(2\pi)^r}Pf(E)\in H^{2r}(M;\bR)~.$$
+In fact, the Euler class can be understood as the square root of the highest Pontryagin class $p_r(E)$
+$$p_r(E) = e(E)^2~.$$
+In particular, let us consider the tangent bundle $TM$ of an closed orientable Riemannian manifold $(M,g)$ of dimensions
+ $n = 2r$. Then $TM$ is an $\SO(2r)$ bundle, and its Euler form can be written in terms of the Riemann curvatures
+\begin{align}\nonumber
+n=2:&\quad e(TM)= \frac{1}{4\pi} \epsilon_{ab}\Omega^{ab}~, \cr
+n=4:&\quad e(TM)= \frac{1}{32\pi^2} \epsilon_{abcd}\Omega^{ab}\wedge \Omega^{cd}~,
+\end{align}
+where the Riemann curvatures are regarded as the 2-forms as in \eqref{Riemann-2-form}
+$$\Omega^a{}_b =\textbf{R}^a{}_{bcd} e^c\wedge e^d=R^a{}_{b\mu\nu} dx^\mu\wedge dx^\nu~.$$
+The integral of the Euler class $e(TM)$ over $M$ is indeed equal to the Euler characteristic
+$$\chi(M) = \int_M e(TM)~,$$
+which can be considered as the higher dimensional version of the Gauss-Bonnet theorem \eqref{Gauss-Bonnet}.
+
+
+ \subsection{Todd, $L$- and $\widehat A$-classes}
+
+Here we introduce other characteristic classes, such as \term{Todd classes, Hirzebruch $L$-class}, and \term{$\widehat A$-class} \cite{Eguchi:1980jx}. These classes are just defined by a different basis of invariant polynomials. However, there are very important since these classes will show up in the index theorem.
+
+To describe Todd class, let $x_1,\cdots,x_k$ be eigenvalues of curvature form $\frac{-F}{2\pi i}$ of a complex vector bundle. For example, the total Chern classes can
+ be expressed as
+$$ c(F)=\det \left(1-\frac{F}{2\pi i}\right)= \prod_{i=1}^r(1+x_k).$$
+It is worth mentioning that the right-hand side takes the form $\prod_k c(L_k)$, where $L_k$ is a line bundle with a curvature given by $x_k$ and $c(L_k) = 1+x_k$. Thus, as far as the Chern classes are concerned, the vector bundle $E$ behaves like a Whitney (direct) sum of the line bundles $L_1 \oplus L_2 \oplus \cdots\oplus L_k$ although they are not isomorphic as bundles. This phenomenon is called the \term{splitting principle}, and $x_i$ are called \term{Chern roots}.
+Using this notation, the Todd class is defined by,
+\be \label{Todd}Td(E) =\prod_k\frac{ x_k}{1-e^{-x_k}}=1+\frac12c_1+\frac1{12}(c_2+c_1^2)+\cdots~.\ee
+
+Furthermore, for a real vector bundle $E$, \eqref{odd-vanish} tells you that the Chern roots
+of its complexification \(E\otimes \bC\) come in opposite pairs \(x,-x\). Moreover, the relation \eqref{p-c} tells us that Pontryagin classes of $E$ are written as
+$$p(E)=\prod_{j}\left(1+x_{j}^{2}\right)$$
+where $x_j$ are Chern roots of \(E\otimes \bC\) with the positive sign in each pair. With this notation, the Hirzebruch $L$-classes for the real vector bundle $E$ are defined by
+$$ L(E)=\prod_{k} \frac{ x_k}{\tanh{x_k}}=1+\frac13 p_1+\frac1{45}(7p_2-p_1^2)+\cdots~.$$
+Indeed Hirzebruch has introduced this class for the signature theorem \ref{Hirzebruch} of a $4k$-dimensional closed oriented manifolds.
+The $\widehat A$-classes for the real vector bundle $E$ are defined by,
+$$ \widehat A(E)=\prod_{k} \frac{ x_k/2}{\sinh{x_k/2}}=1+\frac{1}{24}p_1+\frac{1}{5760}(7p_1^2-4p_2)+\cdots~,$$
+which appears in the index theorem of a Dirac operator.
+\end{document}

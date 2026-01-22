@@ -1,0 +1,122 @@
+\documentclass[12pt,a4paper]{article}
+
+
+
+\usepackage{macros}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 2: Due at class on March 18}
+
+
+
+\vspace{.5cm}
+\noindent \textbf{1}.  Show that an open ball $B_n=\{x\in \bR^n| ~|x|<1\}$ is diffeomorphic to $\bR^n$ by constructing a smooth bijection map.
+
+
+
+
+ \vspace{.5cm}
+
+
+\noindent \textbf{2}. Let $(x,y)$ be the Cartesian coordinate of $\bR^2$ and $(r,\theta)$ be the polar coordinate of $\bR^2$. Write a vector field $X$ in terms of the Cartesian coordinate that generate a flow $\varphi_t:\bR^2\to\bR^2$
+$$
+\left(\begin{array}{c}
+x\\y
+\end{array}\right) \to\left(\begin{array}{cc}
+\cos t& -\sin t\\
+\sin t&\cos t
+\end{array}\right) \left(\begin{array}{c}
+x\\y
+\end{array}\right)~.
+$$
+This is the rotation in $\bR^2$. In addition, draw the schematic picture of the vector field $X$.
+
+
+
+\vspace{.5cm}
+
+\noindent \textbf{3}.  Write down vector fields that generate the rotation along $x$-, $y$-, $z$-axis in $\bR^3$. Find the commutation relations of these vector fields. Compare the theory of angular momenta in quantum mechanics.
+
+
+
+%
+% \vspace{.5cm}
+% \noindent \textbf{3}.  For a positive integer $d$, we define a map $f^{(d)}:\bC\to \bC; ~z\mapsto z^d$. Let $z=x+iy$ \((x, y \in \mathbb{R}),\) and consider \(f^{(d)}\) as a function of \(x\) and \(y .\) Compute the Jacobian matrix of \(f^{(d)}\).
+
+
+
+%
+% \vspace{.5cm}
+%
+% \noindent \textbf{3}.   Are there zeros of the vector fields in Example 3.11 of the lecture note?
+%
+
+%
+% \vspace{.5cm}
+%
+% \noindent \textbf{5}.    Construct a smooth vector field on $S^2$ which vanishes only at one point explicitly in terms of local coordinates.
+%
+%
+
+%
+% \vspace{.5cm}
+%
+% \noindent \textbf{6}.
+% Show that the Lie bracket satsfies the Jacobi identity.
+% Show that, for $X_1,X_2\in \mathfrak{X}(M)$ and $f\in C^\infty(M)$,
+% $$
+% [fX_1,X_2]=f[X_1,X_2]-X_2(f) X_1~,\qquad [X_1,fX_2]=f[X_1,X_2]+X_1(f) X_2~.
+% $$
+%
+
+
+
+\vspace{.5cm}
+\noindent \textbf{4}. Let $e$ be the identity element of $SO(3)$. Show that the tangent space $T_e SO(3)$ at $e$ is spanned by tangent vectors of curves in $SO(3)$
+$$
+\exp(t J_i)=1+tJ_i+\frac12 (tJ_i)^2 +\cdots
+$$
+at $t=0$  where $J_i$ $(i=x,y,z)$ are defined by
+$$
+J_x=\left(
+\begin{array}{ccc}
+0&0&0\\
+0&0&-1\\
+0&1&0\\
+\end{array}
+\right) \qquad
+J_x=\left(
+\begin{array}{ccc}
+0&0&1\\
+0&0&0\\
+-1&0&0\\
+\end{array}
+\right) \qquad
+J_x=\left(
+\begin{array}{ccc}
+0&-1&0\\
+1&0&0\\
+0&0&0\\
+\end{array}
+\right) ~.
+$$
+Let us define the commutator by $[X, Y ] = XY - Y X$. Then, show that
+$$
+[J_x,J_y]=J_z~, \qquad [J_y,J_z]=J_x~, \qquad [J_z,J_x]=J_y~.
+$$
+
+
+
+\vspace{.5cm}
+\noindent \textbf{5}. Show that the tangent space $T_e SU(2)$ is spanned by $i\sigma_x$, $i\sigma_y$ and $i\sigma_z$ (the Pauli matrices by $i$).
+
+
+\vspace{.5cm}
+
+\noindent \textbf{6}.
+Show that $\bR P^n$ is non-orientable for even $n$. In addition, construct an example of unorientable manifolds except the M\"obius strip and even-dimensional real projective space.
+
+
+\end{document}

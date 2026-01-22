@@ -1,0 +1,403 @@
+\documentclass[geometry-lectures-21.tex]{subfiles}
+
+%\title{ Lecture 4}
+\begin{document}
+
+\section{Manifolds}
+
+\subsection{Manifolds}
+
+The modern concept of \textbf{manifolds} has been first introduced by Riemann \cite{riemann1854hypothesen} in his inaugural lecture at G\"ottingen University where he defines a manifold by gluing local patches. Furthermore, he has introduced a Riemann metric and curvature on a manifold.
+
+\bdefn[Manifold]\label{def:manifold}
+Let $M$ be a Hausdorff space (See Definition \ref{def:Hausdorff}). $M$ is called an $n$-dimensional smooth (differentiable) manifold if it has the following structure:
+  \begin{enumerate}
+    \item Let $M = \bigcup_{\alpha} U_\alpha$ be an open covering.
+    \item   There is a continuous and invertible map $\varphi_\alpha: U_\alpha \to \varphi_\alpha(U_\alpha) \subseteq \bR^n$, where $\varphi(U_\alpha)$ is open in $\bR^n$.
+    \item For all $\alpha, \beta$, we have $\varphi_\alpha(U_\alpha \cap U_\beta)$ is open in $\bR^n$, and the transition function
+      \[
+        \varphi_\alpha \circ \varphi_\beta^{-1}: \varphi_\beta(U_\alpha \cap U_\beta) \to \varphi_\alpha(U_\alpha \cap U_\beta)
+      \]
+      is smooth  ($C^\infty$-function).
+  \end{enumerate}
+\edefn
+\begin{center}
+  \begin{tikzpicture}
+    \draw plot [smooth cycle] coordinates {(-1.2, -0.7) (0, -0.7) (0.7, -1) (1.3, -0.9) (1.4, 0.4) (0.3, 1) (-1.7, 0.6)};
+
+    \draw (-0.3, 0) [fill=mgreen, opacity=0.5] circle [radius=0.4];
+    \draw (0.3, 0) [fill=mblue, opacity=0.5] circle [radius=0.4];
+
+    \node [left] at (-0.7, 0) {$U_\beta$};
+    \node [right] at (0.7, 0) {$U_\alpha$};
+
+    \begin{scope}[shift={(-4.75, -4)}]
+      \draw (0, 0) -- (3, 0) -- (3.5, 1.5) -- (0.5, 1.5) -- cycle;
+
+      \draw (1.75, 0.75) [fill=morange, opacity=0.5] circle [radius=0.4];
+      \begin{scope}
+        \clip (1.75, 0.75) circle [radius=0.4];
+        \draw (2.35, 0.75) [fill=mred, opacity=0.5] circle [radius=0.4];
+      \end{scope}
+    \end{scope}
+
+    \draw [->] (-0.7, -0.5) -- (-2.5, -2.6) node [pos=0.5, left] {$\varphi_\beta$};
+    \draw [->] (0.7, -0.5) -- (2.5, -2.6) node [pos=0.5, right] {$\varphi_\alpha$};
+
+    \begin{scope}[shift={(1.25, -4)}]
+      \draw (0, 0) -- (3, 0) -- (3.5, 1.5) -- (0.5, 1.5) -- cycle;
+
+      \draw (1.75, 0.75) [fill=mred, opacity=0.5] circle [radius=0.4];
+      \begin{scope}
+        \clip (1.75, 0.75) circle [radius=0.4];
+        \draw (1.15, 0.75) [fill=morange, opacity=0.5] circle [radius=0.4];
+      \end{scope}
+    \end{scope}
+    \draw [->] (-2, -3.25) -- (2, -3.25) node [pos=0.5, above] {$\varphi_\alpha \varphi_\beta^{-1}$};
+  \end{tikzpicture}
+\end{center}
+$(U_\alpha, \varphi_\alpha)$  is called a \textbf{coordinate chart} and $\{(U_\alpha, \varphi_\alpha)\}_\alpha$ is called an \textbf{atlas}.  We can write
+  \[
+    \varphi_\alpha = (x^1, \cdots, x^n)
+  \]
+  where each $x^i: U_\alpha \to \bR$. We call these the \textbf{local coordinates}.
+
+An important point of the definition of a smooth manifold is the following.  If $(U_\alpha, \varphi_\alpha)$ and $(U_\beta, \varphi_\beta)$ are charts in some atlas, and $f: M \to \bR$, then $f \circ \varphi_\alpha^{-1}$ is smooth at $\varphi_\alpha(p)$ if and only if $f \circ \varphi_\beta^{-1}$ is smooth at $\varphi_\beta (p)$ for all $p \in U_\alpha \cap U_\beta$.
+
+
+\bexample
+Let us consider the $n$-dimensional sphere
+  \[
+    S^n = \{u=(u^0, \cdots, u^n)\in \bR^{n+1}: |u|^2 = 1\} .
+  \]
+  We define an atlas as follows. We define an open covering
+  \[
+    U^+ = S^n \backslash \{\textrm{south pole}\},\quad U^- = S^n \backslash \{\textrm{north pole}\}~.
+  \]
+  where the south pole is $u^0=-1$ and the north pole is $u^0=1$, and continuous maps
+  \begin{align*}
+&    \varphi^+: U^+ \to \bR^n; (u^0, \cdots, u^n) \mapsto \frac{1}{1+u^0}(u^1 , \cdots, u^n)\cr
+  &  \varphi^-: U^- \to \bR^n; (u^0, \cdots, u^n) \mapsto \frac{1}{1-u^0}(u^1, \cdots, u^n)~.
+  \end{align*}
+  This is called the \textbf{stereographic projection}.
+Then, their inverse maps are
+$$
+(\varphi^\pm)^{-1}:\bR^n\to U^\pm;(x^1,\dots,x^n)\mapsto \frac{1}{1+|x|^2}(\pm(1-|x|^2),2x^1,\dots,2x^n)~.
+$$
+The transition functions are given by
+$$
+\varphi^+ \circ (\varphi^-)^{-1}(x)=\frac{x}{|x|^2}    \quad \varphi^- \circ(\varphi^+)^{-1}(x)=\frac{x}{|x|^2}~.
+$$
+In fact, the $n$-dimensional sphere is a compact manifold.
+\eexample
+
+\begin{figure}[ht]\centering
+\includegraphics[width=10cm]{pictures/stereographic}
+\end{figure}
+
+
+\bdefn
+Let $M$ be an $n$-dimensional manifold. A subset $M'\subset M$ is called a \textbf{submanifold} if it satisfies the following property: for each $p\in M'$, there exists a local coordinate $(U;x^1,\ldots,x^n)$ such that
+$$M'\bigcap U=\{q\in U| x^{n'+1}(q)=\cdots=x^n(q)=0\}~.$$
+In fact, $M'$ is itself an $n'$-dimensional manifold because we can take a local coordinate $M'\bigcap U;x^1,\ldots,x^{n'})$ around $p\in M'$. Sometimes $M'$  is called a submanifold of \textbf{codimension} $n-n'$ in $M$.
+\edefn
+
+
+
+\bexample
+$S^n\supset S^{n'} = \{x=(x^0, \cdots, x^n)\in \bR^{n+1}: |x|^2 = 1~,\quad x^{n'+1}=\cdots=x^n=0\}$ is a submanifold of $S^n$.
+\eexample
+
+
+Let $M$ and $N$  be smooth manifolds, and let $\{(U_\alpha, \varphi_\alpha)\}_\alpha$ and $\{(V_\beta, \psi_\beta)\}_\beta$ be their  atlas. We usually consider smooth maps between manifolds.
+
+\bdefn[Smooth map]
+Let $M$ and $N$ be $m$- and $n$-dimensional manifolds, respectively.
+  A map $f: M \to N$ is \textbf{smooth} if, for a chart $(U_\alpha, \varphi_\alpha)$ of $p\in M$ and $(V_\beta, \psi_\beta)$ of $f(p)\in N$, a map
+  $ \psi_\beta \circ f \circ ( \varphi_\alpha)^{-1}: \varphi_\alpha(U_\alpha \cap f^{-1} (V_\beta)) \to \psi_\beta(V_\beta )$ is smooth.
+If it has the smooth inverse (in that case $m=n$), it is called a \textbf{diffeomorphism}.
+\edefn
+
+\begin{center}
+  \begin{tikzpicture}
+    \draw plot [smooth cycle] coordinates {(-1.2, -0.7) (0, -0.7) (0.7, -1) (1.3, -0.9) (1.4, 0.4) (0.3, 1) (-1.7, 0.6)};
+
+    \draw [fill=mgreen, opacity=0.5] circle [radius=0.4];
+
+    \begin{scope}[shift={(-1.75, -4)}]
+      \draw (0, 0) -- (3, 0) -- (3.5, 1.5) -- (0.5, 1.5) -- cycle;
+
+      \draw (1.75, 0.75) [fill=morange, opacity=0.5] circle [radius=0.4];
+    \end{scope}
+
+    \draw [->] (0, -1) -- +(0, -1.3) node [pos=0.5, right] {$\varphi$};
+    \begin{scope}[shift={(5, 0)}]
+      \draw plot [smooth cycle] coordinates {(1.4, -0.4) (-0.8, -0.9) (-1.5, -0.3) (-1.6, 0.5) (-0.2, 1.3) (1.8, 0.7)};
+
+      \draw [fill=mblue, opacity=0.5] circle [radius=0.4];
+
+      \begin{scope}[shift={(-1.75, -4)}]
+        \draw (0, 0) -- (3, 0) -- (3.5, 1.5) -- (0.5, 1.5) -- cycle;
+
+        \draw (1.75, 0.75) [fill=mred, opacity=0.5] circle [radius=0.4];
+      \end{scope}
+
+      \draw [->] (0, -1) -- +(0, -1.3) node [pos=0.5, right] {$\psi$};
+    \end{scope}
+
+    \draw [->] (1, 0) -- (4, 0) node [above, pos=0.5] {$f$};
+
+    \draw [->] (1, -3.25) -- (4, -3.25) node [above, pos=0.5] {$\psi \circ f \circ \varphi^{-1}$};
+  \end{tikzpicture}
+\end{center}
+Equivalently, $f$ is smooth at $p$ if $\psi \circ f \circ \varphi^{-1}$ is smooth at $\varphi(p)$ for \textbf{any} such charts $(U, \varphi)$ and $(V, \psi)$.
+
+
+\bexample
+Let $M$ and $N$ be smooth manifolds. Then, a projection $M\times N\to N$ is a smooth map.
+\eexample
+
+
+\bexample
+A rotation of $S^n$ is a diffeomorphism.
+\eexample
+
+
+
+
+\bexample
+Let $M$ and $N$ be  be smooth manifolds, and $f:M\to N$ be a smooth map. Then, $\Gamma_f=\{(x,f(x))\in M\times N \}$ is a submanifold of $M\times N$. It is called the \textbf{graph} of $f$.
+\eexample
+
+
+
+
+
+\subsubsection*{Manifolds with boundary}
+In a similar fashion, one can define a manifold with boundary. To this end, we introduce the upper half space
+\(\bfH^{n}=\left\{x=\left(x^{1}, \cdots, x^{n}\right) \in \mathbb{R}^{n} ; x^{n} \geq 0\right\}\)
+and its boundary
+\(\partial \bfH^{n}=\left\{x \in \bfH^{m} ; x^{n}=0\right\}~.\)
+The definition of a manifold with boundary is given by just replacing $\bR^n$ by $\bfH^n$ in Definition \ref{def:manifold}. For a Hausdorff space $M$, let $\{U_\alpha\}$ be an open covering of $M$. There is a homeomorphism \(\varphi_{\alpha} : U_{\alpha} \rightarrow \varphi_{\alpha}(U_{\alpha})\) from \(U_{\alpha}\) onto an open set \(\varphi_{\alpha}(U_{\alpha})\) of \(\bfH^{n}\). For all $\alpha,\beta$,
+$$\varphi_{\beta} \circ \varphi_{\alpha}^{-1} : \varphi_{\alpha}\left(U_{\alpha} \cap U_{\beta}\right) \rightarrow \varphi_{\beta}\left(U_{\alpha} \cap U_{\beta}\right)$$
+is a  $C^\infty$-function. We denote by $\partial M$ the set
+of all the points \(p\) in \(U_{\alpha}\) that are mapped by \(\varphi_{\alpha}\) to \(\partial \bfH^{n}\) for any $\alpha$. If $\partial M\neq \emptyset$, then $M$ is called a manifold with boundary $\partial M$. The boundary $\partial M$ itself is an $(n-1)$-dimensional manifold.
+A compact smooth manifold without boundary is called a \textbf{closed} manifold.
+
+\bexample
+The $n$-dimensional disk \(D^{n}=\{x \in \mathbb{R}^{n}| ~|x|<1\) is a manifold with boundary $\partial D^n=S^{n-1}$.
+\eexample
+
+
+
+
+
+
+
+\subsection{Tangent space}
+
+
+
+
+\bdefn[Tangent vector]\index{Tangent vector}
+A \textbf{tangent vector} $X_p$ at $p\in M$ is a map $X_p:C^\infty(M)\to \bR$, which is subject to
+
+(1) \textbf{linearity} $X_p(\alpha f+\beta g)=\alpha X_p(f)+\beta X_p(g)$,  for  $\alpha,\beta \in \bR$
+
+(2) \textbf{Leibniz rule} $X_p(fg)=f(p)X_p(g)+X_p(f) g(p)$
+
+\edefn
+Namely, a  \textbf{tangent vector} $X_p$  behaves like a first derivative on $C^\infty(M)$. Then, the set of tangent vectors at $p$ become a vector space
+$$
+(X_p+Y_p)(f)=X_p(f)+Y_p(f) \qquad (\alpha X_p)(f)=\alpha (X_p(f))~,
+$$
+and we call it the \textbf{tangent space} $T_pM$ at $p\in M$.
+
+
+\begin{figure}[ht]\centering
+\includegraphics[width=8cm]{pictures/Tangentialvektor}
+\end{figure}
+
+
+
+There is another way to think about tangent vectors. Let us consider a \term{curve}, which is a smooth map $\gamma:I \to M$ with $\gamma(0)=p$ where $I=(-1,1)$ is a non-empty open interval. Two curves $\gamma_1,\gamma_2$ are \textbf{tangent} at $p$ if
+$$
+\gamma_1(0)=p=\gamma_2(0)~, \qquad  \frac{d}{dt}\varphi(\gamma_1(t))\Big|_{t=0}= \frac{d}{dt}\varphi(\gamma_2(t))\Big|_{t=0}
+$$
+where $(U,\varphi)$ is a chart around $p$. We write  two tangent curves $\gamma_1\sim \gamma_2$, which forms an equivalence class (See Definition \ref{def:equiv}.).
+\begin{figure}[ht]\centering
+\includegraphics[width=5cm]{pictures/tangent-curve}
+\end{figure}
+For ${}^\forall f\in C^\infty(M)$, We can then take the derivative of $f$ along $\gamma$
+\[
+  X_p(f) = \left.\frac{\d}{\d t}\right|_{t = 0} f(\gamma(t))~.
+\]
+It is easy to see that $X_p$ satisfies the definition of a tangent vector. So we can provide the definition of the tangent space at $p$
+$$
+T_pM=\{ \gamma:I\to M | \gamma(0)=p\}/\!\!\sim
+$$
+Given a local coordinate $\varphi=( x^1, \cdots, x^n)$, the tangent vector along a curve $\gamma$ can be written as
+$$
+X_p=\sum_{i=1}^n X_p^i\frac{\partial}{\partial x^i}\Big|_p   \quad \textrm{where} \quad X_p^i=\frac{d}{dt}x^i(\gamma(t))\Big|_{t=0}~.
+$$
+Therefore, $(\frac{\partial}{\partial x^1}\Big|_p,\cdots,\frac{\partial}{\partial x^n}\Big|_p)$ can be considered as a basis of $T_pM$.
+Suppose that we also have coordinates $y^1, \cdots, y^n$ near $p$ given by some other chart. Then, we can write
+\[
+  \left.\frac{\partial}{\partial y^i}\right|_p = \sum_{j = 1}^n \frac{\partial x^j}{\partial y^i}(p)\left.\frac{\partial}{\partial x^j}\right|_p~,
+\]
+where $\frac{\partial x^j}{\partial y^i}(p)$ is called the \term{Jacobian} at $p$.
+
+
+
+
+
+
+
+\subsection{Tangent bundles}
+Let us consider a collection of tangent spaces over every point $p$ on $M$
+\[
+  TM = \bigcup_{p \in M} T_p M=\{(p,X_p)|p\in M ~, X_p\in T_pM\}~.
+\]
+into a manifold. There is then a natural map $\pi: TM \to M$ sending $X_p \in T_pM$ to $p$ for each $p \in M$, and this is smooth.
+
+We can consider $TM$ as a manifold of dimension $2 \dim M$, which is called the \textbf{tangent bundle} of $M$.
+  Let $x^1, \cdots, x^n$ be coordinates on a chart $(U, \varphi)$. Then for any $p \in U$ and $X_p \in T_p M$, there are some $\alpha^1, \cdots, \alpha^n \in \bR$ such that
+  \[
+    X_p = \sum_{i = 1}^n \alpha^i \left.\frac{\partial}{\partial x^i}\right|_{p}.
+  \]
+  This gives a bijection
+\bea
+  \widetilde{\varphi}:  \pi^{-1}(U) &\to \varphi(U) \times \bR^n\\
+    X_p &\mapsto (x^1(p), \cdots, x^n(p), \alpha^1, \cdots, \alpha^n),
+\eea
+  If $(V, \psi)$ is another chart on $M$ with coordinates $y^1, \cdots, y^n$, then
+  \[
+    \left.\frac{\partial}{\partial x^i}\right|_p = \sum_{j = 1}^n \frac{\partial y^j}{\partial x^i}(p) \left.\frac{\partial}{\partial y^j}\right|_p.
+  \]
+  So we have $\widetilde{\psi} \circ \widetilde{\varphi}^{-1}: \varphi(U \cap V) \times \bR^n \to \psi(U \cap V) \times \bR^n$ given by
+  \[
+    \widetilde{\psi} \circ \widetilde{\varphi}^{-1} (x^1, \cdots, x^n, \alpha^1, \cdots, \alpha^n) = \left(y^1, \cdots, y^n, \sum_{i = 1}^n \alpha^i \frac{\partial y^{1}}{\partial x^i}, \cdots, \sum_{i = 1}^n \alpha^i \frac{\partial y^n}{\partial x^i}\right),
+  \]
+  and is smooth (and in fact fiberwise linear).
+
+
+
+\subsection{Vector fields}
+
+
+A smooth map $X:M\to TM$ is called a \textbf{section} of $\pi:TM\to M$ if $\pi\cdot X=id_M$:
+$$\begin{tikzcd}
+TM \arrow[d,"\pi"]\\
+M\arrow[u, bend left=50,"X" ]
+\end{tikzcd}$$
+ Since it is actually a smooth assignment $X:p \mapsto X(p)$, it is called a \term{vector field}.
+
+\bexample
+Let $S^n\subset \bR^{n+1}$ be an $n$-sphere. We have a vector field
+$$
+Y=\sum Y^i\frac{\partial}{\partial x^i}
+$$
+where
+$$
+Y^i=\left\{ \begin{array}{ll} (-x^1,x^0,-x^3,x^2,\cdots,-x^{2k+1},x^{2k}) & n=2k+1\\ (-x^1,x^0,-x^3,x^2,\cdots,-x^{2k+1},x^{2k},0) & n=2k+2\end{array}\right.~.
+$$
+\eexample
+
+\begin{figure}[ht]\centering
+\includegraphics[width=5cm]{pictures/vector-field}
+\end{figure}
+
+We write a set of vector fields by $\mathfrak{X}(M)=\Gamma(TM)$. In fact, a vector field $X\in \mathfrak{X}(M)$ is a map $C^\infty(M)\to C^\infty(M)$, which satisfies
+\bea
+& X(\alpha f+\beta g)=\alpha X(f)+\beta X(g),  \quad \textrm{for} \quad \alpha,\beta \in \bR\cr
+&X(fg)=fX(g)+X(f) g~.
+\eea
+Let $X, Y \in \mathfrak{X}(M)$, and $f \in C^\infty(M)$.   Then we have $X + Y, fX \in \mathfrak{X}(M)$. Therefore, $\mathfrak{X}(M)$ is a $C^\infty(M)$-module.
+
+
+
+Note that the product of two vector fields $X,Y\in \mathfrak{X}(M)$ is not a vector field:
+\bea
+  XY(fg) &= X(Y(fg)) \cr
+  &= X(fY(g) + gY(f)) \cr
+  &= X(f) Y(g) + fXY(g) + X(g) Y(f) + g XY(f).
+\eea
+ However, that $XY - YX$ is a vector field and we denote it as $[X, Y]$, called the \term{Lie bracket}. In fact, $\mathfrak{X}(M)$ with Lie bracket satisfies
+  \begin{enumerate}
+    \item $[\ph, \ph]$ is bilinear.
+    \item $[\ph, \ph]$ is antisymmetric, i.e.\ $[X, Y] = -[Y, X]$.
+    \item The \term{Jacobi identity} holds
+      \[
+        [X, [Y, Z]] + [Y, [Z, X]] + [Z, [X, Y]] = 0.
+      \]
+  \end{enumerate}
+
+
+
+\subsection{Flows}
+ An \term{integral curve} of a vector field $X \in \mathfrak{X}(M)$ is a smooth $\gamma: I \to M$ such that $I$ is an open interval in $\bR$ and
+\be\label{flow-eq}
+    \dot{\gamma}(t) = X_{\gamma(t)}.
+\ee
+\bexample
+A vector field $X=\alpha \frac{\partial }{\partial x} +\beta  \frac{\partial }{\partial y}$ in $\bR^2$. Then, the integral curve is a translation
+$$
+\gamma_t(x,y)=(x+t\alpha,y+t\beta)~.
+$$
+\eexample
+Suppose that the vector field can be written in terms of a local coordinate $(x^1,\ldots,x^N)$ on an open neighborhood $U$ around $p\in M$
+$$
+X=\sum_{i=1}^n \alpha^i\frac{\partial}{\partial x^i}~.
+$$
+ Then, \eqref{flow-eq} can be expressed as
+$$
+\frac{dx^i}{dt}=\alpha^i(x^1(t),\ldots,x^n(t))~.
+$$
+These are merely differential equations and $\gamma(t)$ is their integral curve. Moreover, there is a theorem stating that there exists a unique solution $\gamma:(-\epsilon,\epsilon)\to M$ for a sufficiently small $\epsilon>0$ such that $\gamma(0)=p$.
+
+\bthm[Existence of integral curves]
+  Let $X \in \mathfrak{X}(M)$ and $p \in M$. Then there exists some open interval $I \subseteq \bR$ with $0 \in I$ and an integral curve $\gamma: I \to M$ for $X$ with $\gamma(0) = p$.
+
+  Moreover, if $\widetilde{\gamma}: \widetilde{I} \to M$ is another integral curve for $X$, and $\widetilde{\gamma}(0) = p$, then $\widetilde{\gamma} = \gamma$ on $I \cap \widetilde{I}$.
+\ethm
+
+If $\gamma(t)$ is defined for any $t\in \bR$ on $M$, then $X$ is called \textbf{complete}.
+If $M$ be a compact smooth manifold, any vector field is complete. In this situation, a smooth map
+$$
+\gamma:\bR\times M \to M ; (t,p)\mapsto \gamma_t(p)
+$$
+is called \textbf{flow} (or one-parameter group of diffeomorphisms) generated by a vector $X$ which satisfies
+$$
+\gamma_{t+s}(p)=\gamma_t(\gamma_s(p))~, \quad \frac{d\gamma_t(p)}{dt}=X_{\gamma_t(p)}~.
+$$
+
+
+
+
+\subsection{Orientation}
+Suppose that we pick two ordered bases $(e_1, \cdots, e_n)$ and $(\widetilde{e}_1, \cdots, \widetilde{e}_n)$ of $T_pM$.  Then, we define an equivalence class  $(e_1, \cdots, e_n)\sim (\widetilde{e}_1, \cdots, \widetilde{e}_n)$ iff
+\[
+  e_i = \sum_j B_{ij} \widetilde{e}_j \qquad  \det B > 0~.
+\]
+We call the two ordered bases have the \term{same orientation} if they are the same equivalence class. Therefore, for $p\in M$, we can assign an orientation $\mathcal{O}_p$. If we can give continuous assignment $p\mapsto \mathcal{O}_p$, then $M$ is called \term{orientable}.
+
+
+
+A smooth manifold $M$ is orientable iff there exists an atlas  $\{(U_\alpha, \varphi_\alpha)\}_\alpha$ of $M$ such that the determinant of the Jacobian is positive on any $U_\alpha\cap  U_\beta$.
+
+
+\begin{figure}[ht]\centering
+\includegraphics[width=4.5cm]{pictures/orientation-strip}
+\caption{The M\"obius strip is not orientable.}
+\end{figure}
+
+
+%
+%
+%
+% \bibliography{all-ref}
+% \bibliographystyle{hyperamsalpha}
+%
+%
+
+\end{document}

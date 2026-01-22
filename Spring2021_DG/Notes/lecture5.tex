@@ -1,0 +1,268 @@
+\documentclass[geometry-lectures-21.tex]{subfiles}
+
+\begin{document}
+
+
+\section{Riemannian geometry}\label{sec:Riemann}
+On a Riemann manifold $(M,g)$, one can introduce the concept of curvature of a manifold, and the idea dates back to the Riemann's epoch-making augural speech \cite{riemann1854hypothesen}. Einstein's theory of gravity has been constructed based on these concepts. In this section, we study the basics of Riemannian geometry following \cite[Part II]{milnor1963morse}. In this section, we use the Einstein summation convention.
+
+\subsection{Covariant derivative and parallel transport}
+
+\bdefn[Connection]
+Let $X$ and $Y$ be vector fields on $M$.
+The symbol $\nabla_XY$ denotes the derivative of the vector field $Y$ along the flow of the vector field $X$. In fact, it is a map
+$$
+\nabla:\frakX(M)\times \frakX(M)\to \frakX(M); (X,Y)\mapsto \nabla_XY
+$$
+which satisfies the following conditions:
+
+1. $\nabla$ is linear in the first variable and additive in the second: $$\nabla_{fX+hY}Z=f\nabla_XZ+h\nabla_YZ$$
+    $$\nabla_X(Y+Z)=\nabla_XY\,+\,\nabla_XZ$$ where $f,h\in \bC^\infty(M)$ are functions and $X,Y,Z\in\frakX(M)$ are vector fields.
+
+2. $\nabla$ obeys the Leibnitz rule in the second variable: $$\nabla_X(fY)=X(f)Y\,+\,f\nabla_XY~.$$
+
+The operator $\nabla$ is called a \textbf{connection}.
+\edefn
+
+
+Let $(U,\{x^i\})$ be a local coordinate on $M$.
+Since $\nabla_{\frac{\partial}{\partial{x^j}}}\frac{\partial}{\partial{x}^k}$ is a vector field, it can be expressed as a linear combination of the coordinate fields on $U$:
+$$
+  \nabla_{\frac{\partial}{\partial x^j}} \frac{\partial}{\partial x^k} :=  \Gamma_{jk}^i \frac{\partial}{\partial x^i}.
+$$
+where $\Gamma_{jk}^i$ are called the \textbf{Christoffel symbols}. If we write the vector fields $X=X^i\frac{\partial}{\partial x^i}, ~ Y=Y^i\frac{\partial}{\partial x^i}$ in terms of these basics, then the covariant derivative is expressed as
+$$
+\nabla_{x} Y= X^{i}\left(\frac{\partial Y^{k}}{\partial x^{i}}+ \Gamma_{i j}^{k} Y^{j} \right)\frac{\partial}{\partial x^{k}}~.
+$$
+
+
+Let $\gamma: I \to M$ be a curve on $M$ and we define
+  \[
+    J(\gamma) = \{\text{vector fields along $\gamma$}\}.
+  \]
+Then, given a connection $\nabla$, we define the \textbf{covariant derivative} along $\gamma$, which is a map $\frac{D}{dt}: J(\gamma) \to J(\gamma)$ such that
+  \begin{itemize}
+      \item $\frac{D(X+Y)}{dt} = \frac{DX}{dt}+\frac{DY}{dt}$
+    \item $\frac{D(fX)}{dt} = \frac{df}{dt} X + f \frac{DX}{dt}$ for all $f \in C^\infty(I)$
+    \item If $X\in J(\gamma)$  is induced by  a vector field $\tilde X$  ($\tilde{X}|_{\gamma(t)} = X(t)$ for all $t \in I$), then
+      \[
+        \frac{DX}{dt}\Big|_{t=0} = \nabla_{\dot{\gamma}(0)} \tilde{X}.
+      \]
+  \end{itemize}
+In terms of the local coordinate, we can write it as
+$$
+\frac{DX}{dt}=\left(\frac{d{X}^k}{dt}\,+\,\frac{dx^i}{dt}X^j\Gamma_{ij}^k\right)\frac{\partial}{\partial{x}^k}~.
+$$
+where $\gamma(t)=(x^1(t),\ldots,x^n(t))$.
+
+Given a path $\gamma(t)$ (not necessarily a geodesic), a vector field $X$ is called a \textbf{parallel vector field} along $\gamma$ if
+$$
+\frac{DX}{dt}=0~.
+$$
+The Christoffel symbols $\Gamma_{ij}^k$, the path $\gamma$, and the derivatives $\frac{dx^i}{dt}$ are known.
+Therefore it is a system of $n$ first order linear differential equations in terms of a local coordinate:
+$$
+ \frac{d{X}^k}{dt}\,+\,X^j\frac{dx^i}{dt}\Gamma_{ij}^k=0 \quad {\rm for}    k=1,\ldots,n~.
+$$
+Since this is a set of ordinary differential equations, there exists a unique solution $X(t)$ given an initial condition  $X(0)\in{T}_{\gamma(0)}M$. The vector field $X(t)$ is said to be obtained from $X(0)$ by  \textbf{parallel transportation} along the curve $\gamma$.
+
+
+
+
+
+
+
+\subsubsection*{Levi-Civita Connection}
+
+
+There are an infinitely many connections on a manifold $M$. However, given a Riemannian metric $g$ on $M$,
+ there is the natural choice for the connection, which is called the \textbf{Levi-Civita connection}.
+\bdefn[Levi-Civita connection]\index{Levi-Civita connection}
+  Let $(M, g)$ be a Riemannian manifold. The Levi-Civita connection is the connection $\nabla$ on $M$ satisfying the following conditions:
+  \begin{itemize}
+    \item Compatibility with metric:\index{compatible connection}\index{connection!compatible with metric}
+      \[
+        Z g(X, Y) = g(\nabla_Z X, Y) + g(X, \nabla_Z Y),
+      \]
+    \item Symmetry/torsion-free:\index{symmetric connection}\index{torsion-free connection}\index{connection!symmetric}\index{connection!torsion-free}
+      \be\label{torsion-free}
+        \nabla_X Y - \nabla_Y X = [X, Y].
+      \ee
+  \end{itemize}
+\edefn
+The condition of the compatibility can be expressed as
+$$
+  d (g(X, Y)) = g(\nabla X, Y) + g(X, \nabla Y)~.
+$$
+The second property can be expressed in a local coordinate by
+$$
+  \Gamma_{jk}^i = \Gamma_{kj}^i~.
+$$
+
+
+On a Riemannian manifold $(M,g)$, there exists the \textbf{unique} Levi-Civita connection $\nabla$.
+Using a local coordinate, the metric compatibility condition is
+$$
+\frac{\partial}{\partial x^i}g_{jk}=g\left(\nabla_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^k}\right)+g\left(\frac{\partial}{\partial x^j},\nabla_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^k}\right)~,
+$$
+which leads to
+\be\label{Christoffel}
+\Gamma_{ij}^k=\frac12\left(\frac{\partial{g}_{jl}}{\partial{x}^i}\,+\,\frac{\partial{g}_{il}}{\partial{x}^j}\,-\,\frac{\partial{g}_{ij}}{\partial{x}^l}\right)g^{lk}.
+\ee
+
+
+\bdefn[Geodesic]\index{geodesic}
+  A curve $\gamma(t)$ on a Riemannian manifold $(M, g)$ is called a \textbf{geodesic} if its tangent vectors are parallel transported along the curve itself with respect to the Levi-Civita connection:
+  \be\label{geodesic}
+    \frac{D \dot{\gamma}}{d t} = 0~.
+  \ee
+\edefn
+In terms of a local coordinate, it can be written as
+  \[
+  \frac{d^2x^i}{dt^2} + \Gamma^i_{jk}\frac{dx^j}{dt} \frac{dx^k}{dt} = 0 \ \textrm{for} \ i=1,\ldots,n~.
+  \]
+This equation is indeed the Euler-Lagrange equation of the action
+$$
+S=\int dt\sqrt{g_{ij}\frac{dx^i}{dt}\frac{dx^j}{dt}}~.
+$$
+Given an initial conditions $p = \gamma(0)$ and $v = \dot{\gamma}(0)$, there exists a unique geodesic $\gamma:(-\epsilon,\epsilon)\to M$ on a sufficiently small open neighborhood $U\ni p$.
+
+
+
+
+\subsection{Riemann curvature}
+
+
+We can consider doing some parallel transports on $S^n$ along the loop counterclockwise:
+\begin{figure}[ht]\centering
+\includegraphics[width=5cm]{pictures/parallel}
+\end{figure}
+We see that after the parallel transport around the loop, we get a different vector. The Riemann curvature is introduced to measure this difference.
+
+\bdefn[Curvature]
+Let $\nabla$ is a connection on $M$. Then, the curvature of $\nabla$ is a map
+$$
+R:\frakX(M)\times \frakX(M)\times \frakX(M)\to \frakX(M);(X,\,Y,\,Z)\mapsto R(X,\,Y)\,Z
+$$
+where $R(X,\,Y)\,Z$ is defined as follows:
+\be \label{curvature}
+R(X,\,Y)\,Z:=\nabla_X\nabla_YZ-\nabla_Y\nabla_XZ-\nabla_{[X,Y]}Z~,
+\ee
+for $X,Y,Z\in \frakX(M)$.
+\edefn
+
+The curvature satisfies the following properties:
+\bea
+R(X,\,Y)\,Z&=-R(Y,\,X)\,Z~,\cr
+R(f X, g Y)(h Z)&=f g h R(X, Y)(Z)
+\eea
+for ${}^\forall X,Y,Z\in \frakX(M)$ and $f,g,h\in C^\infty(M)$.
+The Riemann tensor is also called the \textbf{curvature tensor}.
+
+In terms of a local coordinate, the curvature is written as
+$$
+R\left(\frac{\partial}{\partial{x}^i},\,\frac{\partial}{\partial{x}^j}\right)\,\frac{\partial}{\partial{x}^k}={R^l{}_{kij}}\frac{\partial}{\partial{x}^l}.
+$$
+where $R$ is expressed by the Christoffel symbols
+\be\label{curvature2}
+{R^l{}_{kij}}=\Gamma_{jk}^s\Gamma_{is}^l-\Gamma_{ik}^s\Gamma_{js}^l+\frac{\partial\Gamma_{jk}^l}{\partial{x}^i}-\frac{\partial\Gamma_{ik}^l}{\partial{x}^j}~.
+\ee
+
+
+Roughly speaking, a curvature measures the failure of commutativity of two derivatives when applied to vector fields.
+\begin{figure}[ht]\centering
+\includegraphics[width=8cm]{pictures/parallelogram}
+\end{figure}
+Let us take infinitesimal parallelogram as in the figure, which is parametrized as $(t,s)\mapsto \gamma(t,s)$. Then, the difference between the two vectors is indeed given by the curvature
+$$
+\frac{D}{d {t}} \frac{D}{d {s}} X-\frac{D}{d {s}} \frac{D}{d {t}} X=R\left(\frac{d \gamma}{d {t}}, \frac{d \gamma}{d {s}}\right) X~.$$
+
+Let $(M,g)$ be a Riemann manifold and $\nabla$ is the Levi-Civita connection. The corresponding curvature is called the \textbf{Riemann curvature tensor}, and we assume that the curvature in the following is always the Riemann curvature tensor. If we introduce the notation
+\bea
+R(X,\,Y,\,Z,\,W)&:=g(R(X,Y)Z,\,W)\\
+R(\partial_k,\,\partial_\ell,\,\partial_j,\,\partial_i)=R_{ijk\ell}&:={R^s{}_{jk\ell}}g_{si}~,
+\eea
+then the Riemann curvature tensor satisfies the following identities:
+\bea
+&R(X,\,Y,\,Z,\,W)=-R(Y,\,X,\,Z,\,W)&\\
+&R(X,\,Y,\,Z,\,W)=-R(X,\,Y,\,W,\,Z)&\\
+&R(X,\,Y,\,Z,\,W)=R(Z,\,W,\,X,\,Y)&\\
+&R(X,\,Y)Z\,+\,R(Y,\,Z)X\,+\,R(Z,\,X)Y=0 & {\rm (first}\,{\rm Bianchi}\,{\rm identity)}\\
+&\nabla_WR(X,\,Y)Z\,+\,\nabla_XR(Y,\,W)Z\,+\,\nabla_YR(W,\,X)Z=0& {\rm (second}\,{\rm Bianchi}\,{\rm identity)}
+\eea
+In terms of a local coordinate, they can be read off
+\bea
+&R_{ijkl}=-R_{ijlk}\\
+&R_{ijkl}=-R_{jikl}\\
+&R_{ijkl}=R_{klij}\\
+&R_{lijk}\,+\,R_{ljki}\,+\,R_{lkij}=0\\
+&R_{lijk;s}\,+\,R_{ljsk;i}\,+\,R_{lsik;j}=0~.
+\eea
+
+Contracting the first and final indices of the Riemann curvature tensor gives the \textbf{Ricci curvature tensor}
+\be
+R_{ij}={\textrm{Ric}}_{ij}:={R^s{}_{isj}}=R_{kijl}g^{kj}.
+\ee
+If there is a constant $\Lambda$ such that $R_{ij}=\Lambda g_{ij}$, then $(M,g)$ is called an \textbf{Einstein manifold}.
+Contracting the indices again, we get the \textbf{scalar curvature}
+\be
+R:={\textrm{Ric}}_{ij}g^{ij}.
+\ee
+
+
+
+\subsection{Gauss-Bonnet theorem}
+
+Let $(M,g)$ be a two-dimensional oriented closed manifold and let vol be the volume form. Then, the Gauss curvature $\kappa$ is defined by the Riemann curvature tensor
+$$
+\kappa:=\frac{R_{1212}}{\det g} ~.
+$$
+Then, the Gauss-Bonnet theorem is
+\be\label{Gauss-Bonnet}
+\frac{1}{2\pi} \int_M\kappa~ \textrm{vol}=\chi(M)~.
+\ee
+It is remarkable in the sense that the RHS is independent of the choice of a metric $g$ although the Gauss curvature $\kappa$  depends on the metric $g$. This formula connects differential geometry to topology.
+
+\subsection{Einstein equations}
+
+
+The celebrated Einstein equations \cite{einstein1915feldgleichungen} can be expressed
+\be\label{Einstein-eq}
+R_{\mu \nu }-{\frac {1}{2}}Rg_{\mu \nu }+\Lambda g_{\mu \nu }={\frac {8\pi G}{c^{4}}}T_{\mu \nu }~,
+\ee
+where $\Lambda$ is called the cosmological constant, $G$ is the Newton constant, $c$ is the speed of light and $T_{\mu\nu}$ is the stress-energy tensor. These are the Euler-Lagrange equations for the Einstein-Hilbert action
+$$
+S=\int \left[\frac {c^{4}}{16\pi G}\left(R-2\Lambda \right)+{\mathcal  {L}}_{{\mathrm  {M}}}\right]{\sqrt  {-g}}\,{\mathrm  {d}}^{4}x~.
+$$
+Note that the metric $g$ has a Minkowski signature in physics so that a coordinate transformation can bring $g=\textrm{diag}(-1,1,1,1)$ at a point.
+In this equation, a metric becomes a dynamical variable and, roughly speaking, the curvature tensor of the spacetime is determined by the stress-energy tensor of matter. The equation is highly non-linear so that it can be solved analytically only in very special situations. Most of the cases require numerical simulations to solve the Einstein equations. Remarkably, this equation describes nature at a terrestrial scale, and predicts the gravitational wave, which was detected by LIGO. It also describes the history of the universe \cite{weinberg1977first,weinberg1972gravitation}.
+\begin{figure}[ht]\centering
+  \includegraphics[width=3.5cm]{geodesics}
+  \caption{A one-parameter family of geodesics $\gamma(t;s)$, with tangent $T^{a}$ and deviation vector $X^a$}
+  \label{}
+\end{figure}
+
+
+For example, the physical meaning of the Riemann curvature can be seen in the gravitational tidal force. Let us consider a one-parameter family of geodesics $\gamma(t;s)$, so that for each $s=s_{0}=$const, it satisfies \eqref{geodesic}. In a local coordinate $(x^1,\ldots,x^n)$, we write tangent vectors as
+$$T^{i}=\frac{\partial x^{i}(t ; s)}{\partial t}~,\qquad X^{i}=\frac{\partial x^{i}(t;s)}{ \partial s}~,$$
+respectively. We consider the tangent vector $T^i$ is timelike and $X^i$ is spacelike. Moreover, we parametrize the family in such a way that
+$$
+\frac{d}{ds}g\Bigl(\frac{d\gamma}{dt},\frac{d\gamma}{dt}\Bigr)=\frac{d}{ds}(g_{ij}T^iT^j)=0~.
+$$
+ From the definition of $T^{i}$ and $X^{i}$, it follows that they satisfy the relation $\partial T^{i} / \partial s=\partial X^{i} / \partial t$. Then it can be easily shown from \eqref{torsion-free} that $$X^{j} \nabla_{j} T^{i}=T^{j} \nabla_{j} X^{i}~.$$
+Then, the relative acceleration of an infinitesimally nearby geodesic in the family is measured by the Riemann curvature tensor \eqref{curvature2}
+$$
+\begin{aligned}
+\frac{D^{2} X^{i}}{d t^{2}} &=T^{k} \nabla_{k}\left(T^{j} \nabla_{j} X^{i}\right) \\
+&=T^{k} \nabla_{k}\left(X^{j} \nabla_{j} T^{i}\right) \\
+&=\left(T^{k} \nabla_{k} X^{j}\right)\left(\nabla_{j} T^{i}\right)+X^{j} T^{k} \nabla_{k} \nabla_{j} T^{i} \\
+&=\left(X^{k} \nabla_{k} T^{j}\right)\left(\nabla_{j} T^{i}\right)+X^{j} T^{k} \nabla_{j} \nabla_{k} T^{i}+R_{~ lkj}^{i} X^{j} T^{k} T^{l} \\
+&=X^{k} \nabla_{k}\left(T^{j} \nabla_{j} T^{i}\right)+R_{~ lkj}^{i} X^{j} T^{k} T^{l} \\
+&=R_{~ lkj}^{i} X^{j} T^{k} T^{l}~.
+\end{aligned}
+$$
+This is the gravitational tidal force.
+
+
+
+\end{document}

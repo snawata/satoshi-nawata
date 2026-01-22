@@ -1,0 +1,198 @@
+\documentclass[String-lecture-21.tex]{subfiles}
+\begin{document}
+\section{Supergravity}\label{sec:supergravity}
+
+String theory includes massless states as well as massive states.
+However, in the energy regions much lower than $1/\ell_s$, we do not see the stringy massive states
+because the mass $M^2 \sim \frac{1}{\alpha'} \sim \frac{1}{\ell_s^2}$ is assumed to be very heavy.
+Therefore, in the low-energy region, we can describe the theory by an \textbf{effective theory},
+which only contains the massless particles (lightest states).
+The effective theory, of course, does not contain all the information of the original theory,
+however, it does give us some information about the original theory.
+
+
+For the bosonic string theory, the low-energy effective action for the massless fields is given in \eqref{NLSM-general}.
+Below we deal with its supersymmetric versions, type \textbf{IIA/IIB supergravity},
+that are low-energy effective theories of IIA/IIB superstring theory. In \S\ref{sec:typeI-HO}, we will deal with the low-energy effective actions of Type I and Heterotic string theory. The theory of supergravity is very broad, and we refer to \cite{freedman2012supergravity} for more detail.
+
+
+\subsection{Local supersymmetry}
+
+Before going to Type IIA/IIB supergravity,
+let us see the basic idea of supergravity.
+
+
+Roughly speaking, a global supersymmetry algebra takes the form
+\be
+\{\e_2 Q, \overline \e_1 \overline Q\}=i \overline\e_1 \Gamma^\mu \e_2 P_\mu~.
+\ee
+(For instance, see \eqref{susy-algebra}.) The key idea in supergravity is that supersymmetry holds locally so that the spinor parameters $\epsilon$ are arbitrary functions of the spacetime coordinates $\epsilon \rightarrow \epsilon(x)$. The supersymmetry algebra will then involve local translation parameters $\bar{\epsilon}_{1} \gamma^{\mu} \epsilon_{2}$ which must be viewed as diffeomorphisms. Thus local supersymmetry requires gravity. Note that we use $x^\mu$ for local coordinates of the spacetime instead of $X^\mu$, which has been adopted in the previous sections.
+
+
+First of all, in order to define spinors in a curved space,
+we need to introduce vielbeins $e_\mu^a(x^\rho)$. The metric can be the orthonormal one at one point by coordinate transformations, and  vielbeins transforms a local coordinate $x^\mu$
+into the orthonormal coordinate at the point:
+\begin{align*}
+ x^a = e^a_\mu x^\mu \ , \quad x^\mu = e^\mu_a x^a \ ,
+\end{align*}
+which is defined through spacetime metric $G_{MN}$ by
+\begin{align*}
+ G_{\mu\nu}(x^\rho) = \eta_{ab} e_\mu^a(x^\rho) e_\nu^b(x^\rho)  \ .
+\end{align*}
+Now we can use spinor representations and gamma matrices thanks to the vielbeins:
+\begin{align*}
+ \{\Gamma^a,\Gamma^b\} = 2\eta^{ab} \ .
+\end{align*}
+
+
+
+If we include gravity in a theory, the translational invariance is promoted to invariance under general coordinate transformations.
+Similarly, global Lorentz symmetry is promoted to local Lorentz symmetry (this is done by the vielbeins):
+\begin{align*}
+ \Lambda^a_{\ b} e_a^\mu(x^\rho) e_\nu^b(x^\rho) \equiv \Lambda^\mu_{\ \mu}(x^\rho) \ .
+\end{align*}
+Gravity can be interpreted as the gauge field for general coordinate transformations.
+Since the gauge transformation of a spin-1 gauge field can be generally written as
+\begin{align*}
+ \delta A_\mu = D_\mu \lambda \ ,
+\end{align*}
+the gauge transformation of the gravity field will take the form
+\begin{align}
+ \delta e_\mu^a = D_\mu \lambda^a \ ,
+\end{align}
+where $\lambda^a$ is a general coordinate transformation, and $D_\mu$ is a covariant derivative.
+Similarly, we need to introduce a gauge field for local supersymmetry in supergravity, and the corresponding gauge field is a \textbf{gravitino}. (Recall that gravitino appears as a massless field in superstring theory.)
+Then, the supersymmetry transformations for the gravitino and vielbeins are given by
+\begin{align}\label{local-susy}
+ \delta \psi_\mu^\alpha = D_\mu \epsilon^\alpha \ ,\qquad \delta_\epsilon e^a_\mu = i\ol\epsilon \Gamma^a \psi_\mu~.
+\end{align}
+Then, the square of the supersymmetry transformation is as we want:
+\bea
+\left[\delta_{1}, \delta_{2}\right] e_{\mu}^{a}=&iD_\mu ( \bar{\epsilon}_{1} \Gamma^{a} \epsilon_{2})  \cr
+\left[\delta_{1}, \delta_{2}\right] \psi_{\mu}=&i\bar{\epsilon}_{1} \Gamma^{\rho} \epsilon_{2}(D_{\rho} \psi_{\mu}-D_\mu \psi_\rho)~.
+\eea
+
+Supergravity theory always includes the two gauge fields, $e^a_\mu$ and $\psi^\alpha_\mu$,
+and the action is given by
+\begin{align*}
+ S = \frac{1}{2\kappa_D^2}\int d^D x\ e\ \left[ R -2i \psi_\mu \Gamma^{MNP} D_\nu \psi_P \right] \ ,
+\end{align*}
+where $e = \det e_\mu^a$. It is straightforward to check that the action is invariant under local supersymmetry transformation \eqref{local-susy}. This action can be regarded as the supersymmetric version of the Einstein-Hilbert action.
+
+
+
+\subsection{\texorpdfstring{$D=11$}{D=11} supergravity}
+
+Supersymmetry puts a strong constraint on the spacetime dimension.
+If we limit ourselves to consider fields up to spin-$2$,
+then it is known that the highest dimension is $D=11$ \cite{Nahm:1977tg}.
+Roughly speaking, this is because the degrees of freedom for fermions grow exponentially as $2^{[D/2]}$ whereas
+those of bosons grow by the power law of $D$
+(for instance, $\frac{(D-1)(D-2)}{2}-1$ for gravitons).
+Therefore, to balance fermions and bosons with spin less than two, we cannot go arbitrarily higher.
+
+The $D=11$ supergravity \cite{Cremmer:1978km} consists of three fields;
+\begin{itemize}
+  \item one is the graviton $G_{MN}$ (44 states)
+\item three-form field $M_{(3)}$ (84 states)
+  \item    gravitino $\psi_M$ (128 states)
+\end{itemize}
+We can see that the numbers of fermions and bosons are balanced.
+Although the existence of fermions is crucial,
+we write the bosonic part of the action of the $D=11$ supergravity:
+\begin{align}
+ 2\kappa_{11}^2 S_{11} = \int d^{11}x \sqrt{ -G} \left[R -\frac{1}{2} K_{(4)}^{2}\right]
+ -\frac{1}{6}\int d^{11}x\ M_{(3)} \wedge K_{(4)} \wedge K_{(4)} \ ,\label{11dsugra}
+\end{align}
+where $K_{(4)} = d M_{(3)}$ is the field strength,
+and $K_{(4)}^{2} = K_{(4)} \wedge * K_{(4)}$. The fermionic part of the action follows from supersymmetry in principle.
+Note that there is only one parameter $\kappa_{11}$ defined as
+\be\label{11dcoupling}\frac{1}{2\kappa_{11}^2} = \frac{2\pi}{(2\pi \ell_p)^9}~,\ee
+which is written in terms of Planck length
+\[\ell_{\mathrm{P}}=\sqrt{\frac{\hbar G}{c^{3}}}~.\]
+
+The critical dimension of superstring theory is $D=10$. Nonetheless, Type IIA $D=10$ supergravity can be obtained from the dimensional reduction of the $D=11$ supergravity on $S^1$, as we see below. Furthermore, the $D=11$ supergravity gives an important clue to the strong coupling behavior of superstring theory.
+%
+% You may wonder why we looked into such a non-interesting theory
+% in a sense that what we want is $10$ dimension, rather than $11$ dimension.
+% One reason is that the interesting $10$d supergravity can be derived by
+% dimensional reduction from the $11$ supergravity.
+% Other reason, which is rather surprising, will be clear later.
+
+
+\subsection{\texorpdfstring{$D=10$}{D=10} IIA supergravity}
+
+Now we compactify the $D=11$ supergravity on $S^1$ of radius $R$. In the following, $C_{(p+1)}$ is the R-R $(p+1)$-form and $B_{(2)}$ is the $B$-field. Also, $G_{(p+2)}$ and $H_{(3)}$ are their field strengths. On the reduction,
+the three-form field $M_{(3)}$ decomposes into the massless fields of Type IIA string theory in Table \ref{tab:masslessII}:
+ \be M_{(3)} = C_{(3)} +B_{(2)} \wedge d\theta \ , \quad K_{(4)} = \wh G_{(4)} +H_{(3)} \wedge (d\theta +C_{(1)}) \ ,\ee
+ where
+ \be
+\wh G_{(4)} = G_{(4)} -C_{(1)} \wedge H_{(3)}~.
+\ee
+Like \eqref{KK-metric}, the metric takes the form
+\begin{align*}
+ ds_{11}^2 = G_{MN} dx^M dx^N = G_{\mu\nu} dx^\mu dx^\nu +R^2 (d\theta+C_{(1)})^2 \ ,
+\end{align*}
+where the compactified direction is denoted as $\theta$.
+
+
+
+Now we rewrite the action \eqref{11dsugra} in terms of the massless fields of Type IIA theory. However, we want to obtain the action of the form \eqref{bosonic-NS} in the NS-NS sector. For this purpose, we consider the radius of the circle depends on the spacetime coordinate and it can be written as the Dilaton fields as
+\be\label{11d-radius}
+R=\ell_p e^{\frac23\Phi}~.
+\ee
+Then, the action \eqref{11dsugra} is written as
+\begin{align}\label{IIA-SUGRA}
+ &S_\mathrm{A,NS} = \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G} e^{-2\Phi} \left[
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2} H_{(3)}^{2} \right] \ ,  \cr
+ &S_\mathrm{A,R} = -\frac{1}{4\kappa_{10}^2} \int d^{10}x \sqrt{ -G} \left[
+G_{(2)}^{2} +\wh G_{(4)}^{2} \right] \ ,  \cr
+ &S_\mathrm{A,CS} = -\frac{1}{4\kappa_{10}^2} \int B_{(2)} \wedge G_{(4)} \wedge G_{(4)} \ ,
+\end{align}
+where the coupling constants are related by
+\be\label{kappa-11-10}
+ \frac{2\pi R}{2\kappa_{11}^2} = \frac{e^{-2\Phi}}{2\kappa_{10}^2}~.
+ \ee
+Since it is the low-energy effective action of Type IIA string theory, the dimensional analysis of the coupling constant yields
+\be
+\frac{1}{2\kappa_{10}^2} = \frac{2\pi}{(2\pi \ell_s)^8}~.
+\ee
+Recalling that an expectation value of the dilaton is the string coupling $g_s=e^\Phi$, \eqref{11d-radius} gives
+\be
+ \left(\frac{R}{\ell_p}\right)^3 = g_s^2~. \ee
+Also,
+\eqref{kappa-11-10} provides the relation
+\be
+\frac{R}{\ell_p^3} = \frac{1}{\ell_s^2}\ee
+Combining these two relations, we have
+\be\label{Mcircle-radius} R = g_s \ell_s~.\ee
+
+
+\subsection{\texorpdfstring{$D=10$}{D=10} IIB supergravity}\label{sec:IIB-SUGRA}
+
+As seen in \S\ref{sec:Tdual}, Type IIA and IIB are T-dual to each other so that the action of Type IIB supergravity is consistent with the T-duality. In fact, the action takes a very similar form
+\begin{align}\label{IIB-SUGRA}
+ &S_\mathrm{B,NS} = \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G}  e^{-2\Phi} \left[
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2} H_{(3)}^{2} \right] \ ,  \cr
+ &S_\mathrm{B,R} = -\frac{1}{4\kappa_{10}^2} \int d^{10}x \sqrt{ -G} \left[
+ G_{(1)}^{2}+ \wh G_{(3)}^{2} +\frac{1}{2} \wh G_{(5)}^{2} \right] \ ,  \cr
+ &S_\mathrm{B,CS} = -\frac{1}{4\kappa_{10}^2} \int C_{(4)} \wedge H_{(3)} \wedge G_{(3)} \ ,
+\end{align}
+where
+\bea
+\wh G_{(3)} &= G_{(3)} -C_{(0)} H_{(3)}~,\cr
+\wh G_{(5)} &=G_{(5)} -\frac{1}{2}C_{(2)} \wedge H_{(3)} +\frac{1}{2} B_{(2)} \wedge G_{(3)}~.
+\eea
+Note that the action for the NS sector is the same as that of Type IIA.
+
+As in \eqref{SD-5form}, Type IIB supergravity has the self-dual 5-form $G_{(5)}$. In the notation here,
+the self-dual condition is \[* \wh G_{(5)} = \wh G_{(5)}~,\]
+which does not follow from the action.
+In fact, if the field satisfies the self-dual condition, its kinetic action becomes trivial
+\[
+\int \wh G_{(5)}\wedge \ast \wh G_{(5)}=0~.
+\]
+Therefore, the self-duality condition needs to be imposed by hand.
+
+
+\end{document}

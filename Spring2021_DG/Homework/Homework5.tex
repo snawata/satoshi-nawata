@@ -1,0 +1,100 @@
+\documentclass[12pt,a4paper]{article}
+
+
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 5: Due at class on April 11}
+
+
+\vspace{.5cm}
+\noindent \textbf{1}. Derive all the curvature identities in either (6.8) or (6.9) of the lecture note.
+
+\begin{figure}[ht]
+\centering
+ \includegraphics[width=6.5cm]{Poincare-upper}
+ \caption{Hyperboloid and Poincare disk}
+\end{figure}
+
+
+\begin{figure}[ht]
+\centering
+ \includegraphics[width=\textwidth]{triangle-upper}
+ \caption{triangle in the upper half plane}
+\end{figure}
+
+
+\vspace{.5cm}
+\noindent  \textbf{2}. Let $\mathbf{H}=\{(x,y)|y>0\}$ be the upper half plane (Yellow area in Figure 1). We invert the upper half plane $\mathbf{H}$ to $\mathbf{D}$ in terms of the circle with radius $\sqrt{2}$ around the center $(0,-1)$, and take the reflection with respect to $x$-axis (Figure 1). This gives a map $J:\mathbf{H}\to \mathbf{D};(x,y)\mapsto(u,v)$
+$$
+u=\frac{2x}{x^2+(y+1)^2}~,\qquad v=1-\frac{2(y+1)}{x^2+(y+1)^2}~.
+$$
+\begin{enumerate}
+\item Find the induced metric on the upper half plane by this map.
+\item Find geodesics on $\mathbf{H}$ and compute its Riemann, Ricci and scalar curvature.
+\item Find the area of the triangle with angles $(\alpha, \beta,\gamma)$ bounded by half-circles with respect to the metric (Figure 2). Here, we can use the fact that the area of the triangle in the left of Figure 2 is the same as that of the triangle in the right of Figure 2. Compare with the area of a triangle on the 2-sphere (Homework 1).
+\item  Do parallel transport of a vector along the triangle with respect to the Levi-Civita connection of the metric and find the angle difference when it comes back. Describe the difference between the sphere and the upper half plane.
+\item The \textbf{M\"obius transformation} of the upper half plane $\mathbf{H}=\{z=x+iy~|~y>0\}$  is a rational function of the form
+$$f(z) = \frac{a z + b}{c z + d}~,$$
+where $ad-bc=1$ with $a,b,c,d\in \bR$.  If $f_1$ and $f_2$ are M\"obius transformations, prove
+that $f_1 \circ f_2$ is also a M\"obius transformation. Show that this is an isometry group for the metric.
+\end{enumerate}
+
+
+
+\vspace{.5cm}
+\noindent  \textbf{3}. (Kepler's two-body problem)
+
+Let us consider one of the first examples of integrable systems solved by the Liouville theorem: The Kepler two-body problem of planetary motion.
+Taking the center-of-mass frame, the potential $V(r)$ of the system depends only on the radius, and the Hamiltonian is given by
+$$
+H=\frac{1}{2} \sum_{i=1}^{3} p_{i}^{2}+V(r)~.
+$$
+
+\begin{enumerate}\item Show that the angular momentum
+$$
+\vec{J}=\left(J_{1}, J_{2}, J_{3}\right), \quad J_{i j}=x_{i} p_{j}-x_{j} p_{i}=\epsilon_{i j k} J_{k}
+$$
+is conserved.
+
+\item Given the standard symplectic form $\omega=\sum_{i=1}^3dp_i\wedge dx_i$, compute the Poisson brackets
+$$
+\left\{J_{i}, J_{j}\right\}=-\epsilon_{i j k} J_{k}~.
+$$
+Show that the following three physical quantities commute under the Poisson bracket
+$$
+H, \quad J_{3}, \quad J^{2}=J_{1}^{2}+J_{2}^{2}+J_{3}^{2}
+$$
+\item  Rewrite the Liouville 1-form
+\begin{equation}\label{Liouville}
+\alpha=\sum_{i} p_{i} d x_{i}=p_{r} d r+p_{\theta} d \theta+p_{\phi} d \phi
+\end{equation}
+in terms of the polar coordinates
+$$
+x_{1}=r \sin \theta \cos \phi, \quad x_{2}=r \sin \theta \sin \phi, \quad x_{3}=r \cos \theta~.
+$$
+Rewrite the conserved quantities $H$, $J_{3}$, $J^{2}$ in terms of the polar coordinates and $(p_{r},p_{\theta},p_{\phi})$.
+
+\item Without loss of generality, we can rotate our coordinate system such that in a new system $\vec{J}$ has only the third component: $\vec{J}=\left(0,0, J_{3}\right)$. This can be simply done by setting $\theta=\frac{\pi}{2}$. Kepler's 2nd law states that the areal (sectorial) velocity is constant, and in this situation, it is nothing but the conservation of $J_3$ because the areal velocity is
+$$
+\frac{dA}{dt}=\frac12r^2\dot\phi=\frac12J_3~.
+$$
+
+
+
+Under this situation, show that an integral of the Liouville 1-form \eqref{Liouville} becomes
+\begin{equation}
+S=\int\alpha=\pm\int^{r} dr \sqrt{2(H-V)-\frac{J^{2}}{r^{2}}}+\int^{\phi} J_3 d \phi
+\end{equation}
+where the sign $\pm$ is chosen in such a way that it is consistent with $p_r$.
+ Derive the equations of motion for the angle variables $$\psi_{H}=\frac{\partial S}{\partial H}, \quad \psi_{J}=\frac{\partial S}{\partial J}~.$$ Discuss their physical consequence. In particular, under which condition is an orbit of the motion closed?
+
+\item Let us assume that the potential takes the form $$V(r)=-\frac{k}{r}~.$$ Show the Kepler's 1st law: a planet describes an ellipse with the Sun at one focus.
+Let $T$ be the revolution period of a planet and $a$ be the major semi-axes of ellipse. Show the   Kepler's 3rd law:
+$$ T =\frac{2\pi}{\sqrt{k}}a^{\frac 32} ~.$$
+Refer to \href{https://en.wikipedia.org/wiki/Semi-major_and_semi-minor_axes}{Wikipedia page} for the terminolgy.
+
+\end{enumerate}
+
+\end{document}

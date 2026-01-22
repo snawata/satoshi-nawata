@@ -1,0 +1,484 @@
+\documentclass[String-lecture-21.tex]{subfiles}
+
+\begin{document}
+\section{Superstring theories}\label{sec:sperstring}
+
+
+
+
+We have seen so far that bosonic strings suffer from two major problems:
+
+\vspace{.3cm}
+\noindent $\bullet$  Their spectrum always contains a tachyon. In that respect, their vacuum is unstable.
+
+\vspace{.3cm}
+\noindent $\bullet$    They do not contain spacetime fermions. This lack of fermionic states is in
+contrast to observations and makes the bosonic string unrealistic.
+\vspace{.3cm}
+
+
+Both of these challenges are remedied in superstring theory.
+Supersymmetry is a symmetry that exchanges bosons and fermions. The world-sheet superstring theory consists of a bosonic and a fermionic sector. The bosonic sector is identical to the world-sheet theory of the bosonic string. Therefore, we can view our efforts up to now as a preliminary study of one-half of the superstring theory.
+In fact, we will see that the presence of fermions resolves the problem of Tachyon. Moreover, we will learn that the critical dimension of superstring theory is $D=10$.
+
+There are five superstring theories as follows, and we will study them in this order.
+
+\begin{description}
+\item{\textbf{Type IIA \& IIB}}
+
+Oriented string theories that can incorporate open strings if there are D-branes. IIA: Ramond ground states with opposite chirality, and D$p$-branes ($p$ even). IIB: Ramond ground states with the same chirality, and D$p$-branes ($p$ odd).
+
+\item{\textbf{Type I}}
+
+An open and closed unoriented string theory, including Yang-Mills degrees of freedom with $\SO(32)$ gauge group, that can incorporate D1, D5, D9-branes.
+
+\item{\textbf{Heterotic $\SO(32)$ \& $E_8\times E_8$}}
+
+Type II right-movers \& bosonic left-movers, including Yang-Mills degrees of freedom with either $\SO(32)$ or
+$E_8\times E_8$ gauge group.
+\end{description}
+
+
+There exist two major formulations of superstring theory. Both formulations enjoy supersymmetry on the world-sheet and in spacetime, but they differ in the following respect:
+
+\vspace{.3cm}
+\noindent $\bullet$  In the \textbf{Ramond-Neveu-Schwarz (RNS) formulation}, supersymmetry is manifest on the world-sheet, but not in spacetime.
+
+\vspace{.3cm}
+\noindent $\bullet$  In the \textbf{Green-Schwarz (GS) formulation} \cite[\S5]{GSW} \cite[\S5]{BBS}, supersymmetry is manifest in spacetime, but not on the world-sheet .
+\vspace{.3cm}
+
+
+More recently, the pure-spinor formalism \cite{Berkovits:2004px} has been developed as yet another approach to the superstring.
+In this course, we will only discuss RNS formalism.
+
+\subsection{RNS formulation}
+
+
+
+With the complex coordinate convention, the action becomes
+\begin{align}\label{action}
+ S^{\textrm{m}} = \frac{1}{4\pi} \int d^2 z\ \Big( \frac{2}{\alpha'} \partial X^\mu  \overline\partial X_\mu+\psi^\mu\overline\partial\psi_\mu+\ol\psi^\mu\partial\ol\psi_\mu\Big)
+ \end{align}
+where the equations of motion tell us $\psi^\mu(z)$ (resp. $\ol\psi^\mu(\bar z)$) is chiral (resp. anti-chiral). The action is invariant under \textbf{supersymmetric transformation} (Exercise)
+\be\label{susy-trans}
+\delta X^\mu=-\sqrt{\frac{\a'}{2}}\,(\e \psi^\mu+\overline \e \ol\psi^\mu)~,\qquad
+\delta \psi^\mu =\sqrt{\frac{2}{\a'}}\, \e \partial X^\mu~, \qquad \delta \ol\psi^\mu =\sqrt{\frac{2}{\a'}}\,\overline\e \overline \partial X^\mu~.
+\ee
+The Noether theorem implies that there are currents for the supersymmetry
+\be
+T_F(z)=i\sqrt{\frac{2}{\a'}}\psi^{\mu}\partial X^{\mu}\;,\qquad \ol T_F(z)=i\sqrt{\frac{2}{\a'}}\ol
+\psi^{\mu}
+\bar \partial X^{\mu}\,.\label{274}\ee
+which is called \textbf{supercurrents}. Indeed, $X^\mu$, $\psi^\mu$ and $\ol\psi^\mu$  are primary fields of conformal dimension (0,0), $(\frac12,0)$ $(0,\frac12)$, respectively, and therefore  their OPEs are
+\be\label{OPE}
+X^\mu(z,\bar z)X^\nu(0,0)\sim -\sqrt{\frac{\a'}{2}} \eta^{\mu\nu}\ln |z|^2~,\quad \psi^\mu(z) \psi^\nu(0)\sim \frac{\eta^{\mu\nu}}{z}~,\quad \ol\psi^\mu(\bar z) \ol\psi^\nu(0)\sim \frac{\eta^{\mu\nu}}{\bar z}~.
+\ee
+Using the OPEs, one can show the supersymmetric transformation \eqref{susy-trans} (exercise).
+
+The energy-momentum tensor of the action \eqref{action} is
+\begin{align}
+T_B(z) =-\frac1{\a'}\,\partial_z X^\mu \partial X_\mu-\frac12
+\psi^\mu\partial\psi_\mu
+\end{align}
+along with their complex conjugates $\ol T_B$, $\ol T_F$.
+Their OPEs can be computed by using  \eqref{OPE}
+\begin{align}
+T_B(z)T_B(w) &\sim \frac{3D}{ 4(z-w)^4}+\frac{2T_B(w)}{ (z-w)^2}
+  +\frac{\partial_w T_B(w)}{z-w}\cr
+T_B(z) T_F(w) &\sim \frac{3T_F(w)}{ 2(z-w)^2}+\frac{\partial_w T_F(w)}{
+  z-w}\cr
+T_F(z)T_F(w) &\sim \frac{D}{ (z-w)^3}+\frac{2T_B(w)}{z-w}\,\,.
+\end{align}
+and similarly for the anti-chiral part. The central charge of the theory is
+\be \label{c}c^{\textrm{m}}=\frac32D\ee
+where each scalar and fermion contributes 1 and 1/2, respectively.
+
+\subsubsection*{Ramond vs Neveu-Schwarz}
+
+In superstring theory, the fermionic fields on the closed string may be either periodic or anti-periodic on the circle around the string, corresponding to two different spinor bundles.
+It is conventional to denote these spin structures by \textbf{Ramond (R)} and \textbf{Neveu-Schwarz (NS)}, defined as follows.
+\begin{align}
+\psi^\mu(t,\sigma+2\pi)=+\psi^\mu
+  (t,\sigma) &\qquad\qquad\textrm{ R: periodic
+on cylinder}\cr
+\psi^\mu(t,\sigma+2\pi)=-\psi^\mu
+  (t,\sigma) &\qquad\qquad\textrm{ NS:
+anti-periodic on cylinder}
+\end{align}
+As in Figure \ref{fig3}, the mapping $z=e^{-iw}$ from the cylinder $w=\sigma+it$ to the 2-plane $z\in \bC$ is a conformal map (Figure above). Under the conformal map, the primary field $\psi^\mu$ with conformal dimension $(\frac12,0)$ is transformed as
+\[
+\psi^\mu(z) =\Big(\frac{dz}{dw}\Big)^{-\frac12}\psi^\mu(w)=\textrm{const}\times e^{-i\frac{w}{2}}\psi^\mu(w)~.
+\]
+Hence the (anti-)periodicity assignments are reversed
+between the cylinders and the plane:
+\begin{align}
+\psi^\mu(e^{2\pi i}z)=-\psi^\mu(z)
+ &\null\qquad\qquad\hbox{\rm R: anti-periodic on plane}\cr
+\psi^\mu(e^{2\pi i}z)=+\psi^\mu(z)
+  &\null\qquad\qquad \hbox{\rm NS: periodic on plane}
+  \end{align}
+The boundary conditions for anti-chiral fields $\ol\psi^\mu$ are defined in a similar fashion.
+
+As in the bosonic string, one can  decompose $\psi^\mu$ and $\ol\psi^\mu$ in
+modes
+\[
+%\left\{
+\psi^\mu(z) =\sum\limits_{n\in\bZ+\nu}\frac{\psi_n^\mu}{  z^{n+1/2}}~,\qquad
+\ol\psi^\mu(\bar{z}) =\sum\limits_{n\in\bZ+\nu}\frac{\ol{\psi}_n^\mu}{ \bar{z}^{n+1/2}}
+\]
+where $\nu$ takes the values 0 (R) and $\frac12$ (NS). The canonical quantization leads to the algebra
+\be \label{canonical-fermion}
+\{\psi_m^\mu,\psi_n^\nu\}
+  =\eta^{\mu\nu}\delta_{m+n,0}\qquad
+\{\ol{\psi}_m^\mu,\ol{\psi}_n^\nu\}
+ =\eta^{\mu\nu}\delta_{m+n,0}\,\,.
+\ee
+
+
+
+
+The mode expansion must be carried out with care
+here since we must distinguish between Ramond and
+Neveu-Schwarz sectors.
+\begin{align}
+T_B(z)=\sum\limits_{m\in\bZ}\frac{L_m}{z^{m+2}}~,\qquad T_F(z)=\sum_{r\in \bZ+\nu}\frac{G_r}{ z^{r+3/2}}~,
+\end{align}
+where the generators can be written in terms of the modes (exercise)
+\begin{align}
+L_m^{\textrm{m}}&=\frac12\sum_{n\in \bZ}:\a_{m-n}\a_n:+\frac14\sum_{r\in \bZ+\nu} (2r-m):\psi_{m-r}\psi_r:+a^{\textrm{m}}\delta_{m,0} \cr
+G_r^{\textrm{m}}&=\sum_{n\in \bZ}\a_n\psi_{r-n}~.
+\end{align}
+The normal ordering constant $a$ can be determined like in the bosonic string theory. Each periodic
+boson contributes $-\frac1{24} $. The fermionic contributions are
+\begin{align}\label{RNS-normalordering}
+-\tfrac12\sum_{r=0}^\infty r=\tfrac1{24} & \qquad \textrm{R-sector}\cr
+-\tfrac12\sum_{r=0}^\infty (r+\tfrac12)=-\tfrac1{48} & \qquad \textrm{NS-sector}~.
+\end{align}
+Including the shift $\tfrac1{24}c=\tfrac{1}{16}D$ gives
+\begin{align}\label{zero-m}
+a^{\textrm{m}}=\tfrac1{24}c^{\textrm{m}}+\Big(-\tfrac1{24}+\tfrac1{24}\Big)D=\tfrac{1}{16}D& \qquad \textrm{R-sector}\cr
+a^{\textrm{m}}=\tfrac1{24}c^{\textrm{m}}+\Big(-\tfrac1{24}-\tfrac1{48}\Big)D=0 & \qquad \textrm{NS-sector}~.
+\end{align}
+In fact,  the generators $L_m$ and $G_r$ form the algebra called the
+\textbf{ $\cN=1$ superconformal
+algebra} with central charge \eqref{c} (exercise).
+
+
+
+\subsubsection*{Ghost CFT}
+
+In the bosonic string theory, we study the BRST quantization with the Faddeev-Popov $bc$ ghost. In superstring theory, ghost fields also appear with their supersymmetric partners:
+\[
+S^{\textrm{gh}}=\frac{1}{2\pi}\int d^2z (b\overline \partial c+\beta\overline \partial \g)
+\]
+where $b,c$ are fermionic and $\beta,\gamma$ are bosonic fields.  Hence, the standard method tells us the $\beta\g$ OPEs
+\[
+  \g(z)\b(w)=-\b(z)\g(w)\sim\frac{1}{z - w}
+\]
+We have seen that the conformal dimensions of $X$ and $\psi$ differ by $\frac12$. This is the same for the ghost fields. Since the $b$ and $c$ ghosts have conformal dimensions $2$ and $-1$ respectively, $\beta$ and $\g$ are primary fields of conformal dimensions $(\frac32,0)$ and $(-\frac12,0)$ respectively. Hence the form of the energy-momentum tensor and the supercurrent are
+\begin{align}
+T_B^{\textrm{gh}}(z) &=: (\partial b) c : -2\, \partial: bc :+ : (\partial \b) \g : -\frac32\, \partial: \b\g :\cr
+T_G^{\textrm{gh}}(z) &= (\partial\b)c+\frac32\b\partial c-2b \g~.
+\end{align}
+Then, the $TT$ OPE determines the central charge of the ghost SCFT. The $bc$ system contributes $-26$ to the central charge as we know, while  the
+$\beta\gamma$
+system contributes $+11$. Hence the total central charge
+\[
+c^{\textrm{tot}}=c^{\textrm{m}}+c^{\textrm{gh}}=\tfrac{3}{2} D-26+11~.
+\]
+Then, we happily obtain the critical dimension $D=10$ of superstring theory if we impose the Weyl-anomaly-free condition $c^{\textrm{tot}}=0$. In the following, we assume $D=10$.
+
+Now let us write the Virasoro generators of the ghost SCFT. The $\b\g$ ghosts have the same boundary condition as the fermionic fields $\psi^\mu\ol\psi^\mu$ so that we have the mode expansions
+\[
+\beta(z)=\sum_{r\in \bZ+\nu}\frac{\beta_r}{z^{r+\frac32}}~,\quad \g(z)=\sum_{r\in \bZ+\nu}\frac{\g_r}{z^{r-\frac12}}~,
+\]
+which satisfy the commutation relation
+\[
+[\b_r,\g_s]=\delta_{r,-s}~.
+\]
+Using these modes, we express the Virasoro generator of the ghost SCFT as
+\begin{align}
+L_m^{\textrm{gh}}&=\sum_{n\in \bZ}(2m-n):b_nc_{m-n}:+\frac12\sum_{r\in\bZ+\nu}(m+2r):\b_{m-r}\g_r:+a^{\textrm{gh}}\d_{m,0}\cr
+G_r^{\textrm{gh}}&=\sum_{n\in \bZ}\Big[\frac12(n+2r)\b_{r-n}c_n +2b_{n}\g_{r-n}\Big]
+\end{align}
+Again, using the commutation relations of the ghost modes, one can determine the normal ordering constant
+\begin{align}\nonumber
+a^{\textrm{gh}}=\tfrac{-15}{24}+\Big(\tfrac1{12}-\tfrac1{12}\Big)=-\tfrac58& \qquad \textrm{R-sector}\cr
+a^{\textrm{gh}}=\tfrac{-15}{24}+\Big(\tfrac1{12}+\tfrac1{24}\Big)=-\tfrac12 & \qquad \textrm{NS-sector}~.
+\end{align}
+Combining them with \eqref{zero-m} at $D=10$, we have the total vacuum energy
+\begin{align}\nonumber
+a^{\textrm{tot}}=0& \qquad \textrm{R-sector}\cr
+a^{\textrm{tot}}=-\tfrac12 & \qquad \textrm{NS-sector}~.
+\end{align}
+In the R sector, the vacuum energy is zero so that the Tachyon is absent. On the other hand, there is still the Tachyon in the NS sector. This will be projected out by the GSO projection, as we will see below.
+
+
+
+
+\subsection{Physical spectrum and the GSO Projection}
+Before discussing the GSO projection, let us study the fermionic spectrum generated by fermionic modes $\psi^\mu_r$.  We first consider the NS spectrum since it's simpler. Since $r$ takes half integers, we can define the ground state of the NS sector as
+\[
+\psi^\mu_r|0;k\rangle_{\textrm{NS}}=0 \quad \textrm{for} \ r>0~.
+\]
+When we include the ghost part of the vertex operator, it contributes to the total fermion number $F$, so that the matter plus ghost ground state has the odd fermion number
+\be\label{NS-vac}
+(-1)^{F}|0;k\rangle_{\textrm{NS}}=-|0;k\rangle_{\textrm{NS}}~.
+\ee
+Because there exist the zero modes $\psi^\mu_0$, R-sector is more subtle. In fact, the canonical commutation relation \eqref{canonical-fermion} of the zero modes satisfies the \textbf{Clifford algebra}
+\[
+\{\sqrt{2}\psi_0^\mu,\sqrt{2} \psi_0^\nu\}=2\eta^{\mu\nu}~.
+\]
+Therefore, we can identify them with Gamma matrices $\Gamma^\mu=\sqrt{2}\psi_0^\mu$, and the ground state of R-sector becomes the spin representation of $\SO(1,D-1)$. For mathematics of Clifford algebra, spin group, and spin representations, we refer to \cite[Appendix B]{Polchinski}. However, we can heuristically understand the spin representation as follows. The following basis for this representation is often convenient:
+\begin{align}\label{raising-lowering}
+\Gamma^{\pm}_i &= \frac{1}{\sqrt 2}\left ( \psi^{2i}_0\pm i \psi^{2i+1}_0\right
+) \qquad i=1,\ldots,4 \cr
+ \Gamma^{\pm}_0 &= \frac{1}{\sqrt 2}\left ( \psi^{1}_0 \pm \psi^{0}_0\right )
+\end{align}
+In this basis, the Clifford algebra takes the form
+\be
+\{ \Gamma^{+}_i, \Gamma^{-}_j \}=\delta_{ij}~,\qquad  \{ \Gamma^{+}_i, \Gamma^{+}_j \}=0=\{ \Gamma^{-}_i, \Gamma^{-}_j \}~.
+\ee
+The $\Gamma^{\pm}_i$, $i = 0,\ldots, 4$ act as raising and lowering
+operators, generating the $2^5= 32$ Ramond ground states:
+\be\label{Ramond-32}
+|s_0,s_1,s_2,s_3,s_4 ;k\rangle = |\mathbf{s};k\rangle
+\ee
+where each of the $s_i$ is $\pm\frac12$, and where
+\be
+\Gamma^{-}_{i} | -\tfrac12 , -\tfrac12 , -\tfrac12 , -\tfrac12 , -\tfrac12 ;k\rangle = 0
+\ee
+while $\Gamma^{+}_i$ raises $s_i$ from $-\frac12$ to $\frac12$. One can further define the chirality operator
+\be\label{Gamma11}
+\Gamma_{11}=(2)^{5} \psi_0^0\psi_0^1\psi_0^2\cdots\psi_0^9~,
+\ee
+which acts on $|\mathbf{s}\rangle$ as
+\[
+\Gamma_{11}|\mathbf{s};k\rangle=(-1)^{ F}|\mathbf{s};k\rangle =\left\{\begin{array}{ll}+|\mathbf{s};k\rangle &\qquad\textrm{even \# of}\ -\frac12 \cr -|\mathbf{s};k\rangle &\qquad \textrm{odd \# of} \ -\frac12 \end{array} \right.~.
+\]
+Hence, the Dirac representation $\bf 32$ decomposes into a
+$\bf 16_s$ with an even number of $-\frac12$'s and $\bf 16_c$ with an odd number.
+\be\label{32}
+\bf 32=16_s\oplus16_c~.
+\ee
+
+
+
+Now let us study the physical spectrum of superstring theories including the GSO projection. In principle, we can apply the BRST quantization scheme. However, we do not need the full use of BRST quantization, indeed. To take a shortcut, we can first impose to a physical state $|\psi\rangle$
+\be\label{physical-cond}
+L_n^\textrm{m}|\psi\rangle=0 \quad (n>0)~,\qquad G_r^\textrm{m}|\psi\rangle=0 \quad (r\ge 0)~.
+\ee
+Since one can check (See \cite[(10.5.23)]{Polchinski})
+\[
+\{Q_B,b_n\}=L_n~,\qquad [Q_B,\b_r]=G_r~,
+\]
+the physical states are defined modulo
+\be\label{QB-exact}
+L_n^\textrm{m}|\chi\rangle\cong 0~,\qquad G_r^\textrm{m}|\chi\rangle\cong 0 ~,\qquad \textrm{for}\ \ n,r<0~.
+\ee
+Note that the BRST current is defined
+\[
+j_{B}=cT_B^{\rm m}+\gamma T_F^{\rm m}+\frac{1}{2}\left(
+cT_B^{\rm gh}+\gamma T_F^{\rm gh} \right)~.
+\]
+Furthermore, in the RNS theory, we need to impose the \textbf{GSO (Gliozzi-Scherk-Olive)  projection} in order to have an equal number of bosonic and fermionic states at each mass level.
+
+In the NS sector, the GSO projection is just to remove states with odd fermion number so that the GSO projection operator on the NS sector is expressed as
+\be\label{GSO-NS}
+ P_{\textrm{GSO}}^{\textrm{NS}}=\frac{1+(-1)^F}{2} \qquad \textrm{NS sector}~.
+\ee
+ At  level 0, we have the Tachyon $|0;k\rangle_{\textrm{NS}}$. However, the GSO projection removes this state because it has an odd fermion number as in \eqref{NS-vac}. At level $\frac12$, we have a massless state with vector polarization
+\[
+|\zeta;k\rangle_{\textrm{NS}}=\zeta\cdot \psi_{-\frac12}|0;k\rangle_{\textrm{NS}}~,
+\]
+with even fermion number so we need to keep it in the spectrum. The physical state conditions \eqref{physical-cond} are
+\begin{align}
+0&=L_0|\zeta;k\rangle_{\textrm{NS}}=\a'k^2 |\zeta;k\rangle_{\textrm{NS}}\cr
+0&=G_{\frac12}^\textrm{m}|\zeta;k\rangle_{\textrm{NS}}=\sqrt{2\a'}~ k\cdot \zeta|0;k\rangle_{\textrm{NS}}~.
+\end{align}
+while there is a $Q_B$-exact condition \eqref{QB-exact}
+\[
+G_{-\frac12}^\textrm{m}|0;k\rangle_{\textrm{NS}}=\sqrt{2\a'}~ k\cdot \psi_{-\frac12}|0;k\rangle_{\textrm{NS}}~.
+\]
+Therefore, we have
+\[
+k^2=0~,\quad  k\cdot \zeta=0~,\quad \zeta^\mu\cong \zeta^\mu+k^\mu~.
+\]
+Thus, there are degrees of freedom for 8 spacelike polarizations which form the vector representation ${\bf 8_v}$ of $\SO(8)$.
+
+
+
+A Ramond ground state that is massless can be expressed with spinor polarization
+\[
+|u;k\rangle_{\textrm{R}}= u_{\mathbf{s}}|\mathbf{s};k\rangle_{\textrm{R}}~.
+\]
+The physical state conditions \eqref{physical-cond}
+\[
+0=G_{0}^\textrm{m}|u;k\rangle_{\textrm{R}}=\sqrt{\a'}~  u_{\mathbf{s}} k\cdot\G_{\mathbf{s}\mathbf{s}'} |\mathbf{s}';k\rangle_{\textrm{R}}
+\]
+leads to the Dirac equation
+\[
+u~ k\cdot\G=0~.
+\]
+By choosing the momentum vector $k^\mu=(k,k,0,\ldots,0)$, this amounts to
+\be \label{fermon-light-cone}
+\G_0^+u=0 \quad  \longrightarrow \quad s_0 =+ \tfrac12~,
+\ee
+giving 16 degeneracies $|+,s_1,s_2,s_3,s_4\rangle$ for the physical
+Ramond vacuum.  This is a representation $\bf 16$ of $\SO(8)$ which again
+decomposes into ${\bf 8_s}$ with an even number of $-\frac12$'s and ${\bf
+8_c}$ with an odd number:
+\begin{equation}\label{8spin}
+  \bf 16=8_s\oplus 8_c~.
+\end{equation}
+In the R sector, the GSO projections will pick one of these two irreducible representations, and therefore the GSO projection operators can be written as
+\be\label{GSO-R}
+P^{\textrm{R}\pm}_{\textrm{GSO}}=\frac{1\pm(-1)^F}{2}\qquad \textrm{R sector}~.
+\ee
+Indeed, the two choices
+$\bf 8_s$ and $\bf 8_c$ differ by the spacetime parity redefinition.
+
+
+
+
+
+\subsection{Torus partition functions for superstring theory}
+
+Let us see the role of the GSO projections in the
+torus (one-loop) partition function of superstring theory. Although the computation is very similar to that in \S\ref{sec:1-loop}, fermionic torus partition functions are more interesting due to boundary conditions along circles.
+
+Since the critical dimension of superstring theory is $D=10$, the bosonic contribution can be read off from \eqref{Boson-torus}. Consequently, the torus partition function for superstring theory can be written as follows
+\begin{align*}
+ Z = \frac{iV_{10}}{(2\pi \ell_s)^{10}} \int \frac{d^2\tau}{2\tau_2^2} \
+ \frac{1}{\tau_2^4 |\eta(\tau)|^{16}} Z_\mathrm{F}(\tau) \ol Z_\mathrm{F}(\ol\tau) \ ,
+\end{align*}
+where $Z_F$ is $\psi$ contribution and $\ol Z_F$ is $\ol\psi$ contribution.
+
+
+As usual, we will focus on the holomorphic sector $Z_F$ and we sum over all the possible boundary conditions for fermions.
+Since the NS \& R boundary conditions give rise to disconnected Fock spaces, we can introduce a relative phase $e^{i\theta}$ between them. Hence, the partition function in the Hamilton formalism is written as follows.
+\begin{align*}
+ &Z_\mathrm{F}(\tau) = Z_\mathrm{NS}^{+} +Z_\mathrm{NS}^{-} +e^{i\theta} Z_\mathrm{R}^{+} +e^{i\theta} Z_\mathrm{R}^{-} \ , \cr
+ &Z_\mathrm{S}^{\pm} = \Tr \left[ (\pm)^F e^{2\pi i \tau H_\mathrm{S}}\right] \ ,
+\end{align*}
+where S is either NS or R,
+ and the superscript is an option for
+periodicity of world-sheet time $t$ direction ($-$ is periodic).
+In the light-cone gauge, the ``Hamiltonian''s for fermions  are
+\begin{align}\label{Hamiltonian-fermion}
+ H_\mathrm{NS} &= L_0 -\frac{c}{24} = \sum_{r=\frac{1}{2}}^\infty r \psi_{-r} \cdot \psi_r -\frac{D-2}{48} \ , \cr
+ H_\mathrm{R} &= L_0 -\frac{c}{24} = \sum_{r=1}^\infty r \psi_{-r} \cdot \psi_r +\frac{D-2}{24} \ ,
+\end{align}
+where $D$ should be $10$ for superstring, and the light-cone gauge means that the spacetime indices $i$ run from $2$ to $9$,
+namely \[\psi \cdot \psi = \sum_{i=2}^9 \psi^i \psi^i.\]
+
+
+
+Although the ground state of the NS sector is unique, the R sector has vacuum degeneracies as in \eqref{Ramond-32} before imposing any physical condition.
+However, the physical state condition requires $s_0=+\frac{1}{2}$ \eqref{fermon-light-cone} so that
+there are $2^4 = 16$ degeneracies on which the operator $(-1)^F$ acts as
+\[
+(-1)^F |\bfs ; k \rangle =(-1)^{\sum_{i=0}^4 \left(\frac{1}{2} +s_i\right)}|\bfs ; k \rangle
+\]
+Therefore, we have
+\begin{align*}
+\sum_{\bfs} \langle \bfs; k| (\pm 1)^F |\bfs ; k \rangle =
+ \begin{cases}
+  16 \qquad &\textrm{for $+$ sign}   \cr
+  0 \qquad &\textrm{for $-$ sign,}
+ \end{cases} ,
+\end{align*}
+where sum over $s_i\ (i=1,2,3,4)$ is understood.
+In the presence of the fermion zero modes, the index $\Tr (-1)^F$ vanishes because $s_i=\pm\frac12$ gives the opposite sign. (This is the generic feature of the index.)
+
+
+Counting the eigenvalues of \eqref{Hamiltonian-fermion} in the fermionic Fock spaces with a given boundary condition, the torus partition functions are therefore written as
+\begin{align*}
+ &Z_\mathrm{NS}^{+} = \Tr \left[ e^{2\pi i \tau H_\mathrm{NS}}\right] = q^{-\frac{1}{6}} \prod_{n=1}^\infty (1+q^{n-\frac{1}{2}})^8
+ = \left(\frac{\vartheta_3(\tau)}{\eta(\tau)}\right)^4 \ , \cr
+ &Z_\mathrm{NS}^{-} = \Tr \left[ (-1)^F e^{2\pi i \tau H_\mathrm{NS}}\right] = - q^{-\frac{1}{6}} \prod_{n=1}^\infty (1-q^{n-\frac{1}{2}})^8
+ = - \left(\frac{\vartheta_4(\tau)}{\eta(\tau)}\right)^4 \ , \cr
+ &Z_\mathrm{R}^{+} = \Tr \left[ e^{2\pi i \tau H_\mathrm{R}}\right] = 16 q^{\frac{1}{3}} \prod_{n=1}^\infty (1+q^{n})^8
+ = \left(\frac{\vartheta_2(\tau)}{\eta(\tau)}\right)^4 \ , \cr
+ &Z_\mathrm{R}^{-} = \Tr \left[ (-1)^F e^{2\pi i \tau H_\mathrm{R}}\right] =0 q^{\frac{1}{3}} \prod_{n=1}^\infty (1-q^{n})^8
+ = \left(\frac{\vartheta_1(\tau)}{\eta(\tau)}\right)^4 = 0 \ ,
+\end{align*}
+where $q = e^{2\pi i \tau}$, and modular functions are summarized in \S\ref{sec:modular}. Remarkably, we obtain the Jacobi theta functions $\vartheta_i(\tau)$ ($i=1,\ldots,4$) depending on boundary conditions. Moreover, the $\SL(2,\bZ)$ action on the boundary condition over a torus easily tells us their modular properties as in Figure \ref{fig:modular-theta}.
+Note that the minus sign in $Z_\mathrm{NS}^{-}$ comes from the fact  \eqref{NS-vac} that the NS vacuum is fermionic.
+
+Therefore, the torus partition function for fermions is given by
+\begin{align*}
+ Z_\mathrm{F}(\tau) = \frac{1}{\eta^4(\tau)} \left\{  \vartheta_3(\tau))^4 - (\vartheta_4(\tau))^4 +e^{i\theta} (\vartheta_2(\tau))^4 \right\}
+\end{align*}
+In order for $ Z_\mathrm{F}(\tau)$ to be modular invariant, the relative phase factor is uniquely determined as $e^{i\theta}=-1$ so that
+\begin{align*}
+ Z_\mathrm{F}(\tau) = \frac{1}{\eta^4(\tau)} \left\{  \vartheta_3(\tau))^4 - (\vartheta_4(\tau))^4 -(\vartheta_2(\tau))^4 \right\} = 0 \ .
+\end{align*}
+In fact, the partition function is zero due to supersymmetry and this is called the Jacobi-Riemann identity \eqref{Jacobi-Riemann}. The partition function is zero so that it is trivially modular invariant.
+
+The combination derived above is indeed expressed by using the GSO projection operators \eqref{GSO-NS} \eqref{GSO-R}:
+\begin{align*}
+ Z_\mathrm{F}(\tau) =  &2 \Tr \left[ \frac{1+(-1)^F}{2} e^{2\pi i \tau H_\mathrm{NS}}\right]
+ -2 \Tr \left[ \frac{1\pm(-1)^F}{2} e^{2\pi i \tau H_\mathrm{R}}\right]  \nonumber\cr
+ =  &2 \Tr \left[ P^\mathrm{NS}_\mathrm{GSO} e^{2\pi i \tau H_\mathrm{NS}}\right]
+ -2 \Tr \left[ P^{\mathrm{R},\pm}_\mathrm{GSO} e^{2\pi i \tau H_\mathrm{R}}\right] \ .
+\end{align*}
+and the minus sign in the R sector indeed comes from spacetime spin-statistics.
+Note that a choice of the GSO projections $\pm$ in the R sector does not affect the result due to the fermion zero modes. In other words, the GSO projection is compatible with the modular-invariance of the torus partition function.
+
+
+
+
+
+\subsection{Modular functions}\label{sec:modular}
+It is quite amusing to see that the modular functions such as the Dedekind eta function and Jacobi theta functions defined in the 19th century naturally arise in string theory.
+Here we summarize the definition and the basic properties of the modular functions describing torus partition functions.
+The reader may also refer to \cite[\S 7.2]{Polchinski} and \cite[\S 4.2]{Blumenhagen:2009zz}.
+
+The infinite product form of them are
+\begin{align}\label{eta-theta}
+ &\eta(\tau) = q^{\frac{1}{24}} \prod_{n=1}^\infty (1-q^n) \ , \cr
+ &\vartheta_2(\tau) = 2 q^{\frac{1}{8}} \prod_{n=1}^\infty (1-q^n) (1+q^n)^2 \ , \cr
+ &\vartheta_3(\tau) = \prod_{n=1}^\infty (1-q^n) (1+q^{n-\frac{1}{2}})^2 \ , \cr
+ &\vartheta_4(\tau) = \prod_{n=1}^\infty (1-q^n) (1-q^{n-\frac{1}{2}})^2 \ ,
+\end{align}
+where $q=e^{2\pi i \tau}$.
+The first one is called the \textbf{Dedekind eta function}, and
+the others are the \textbf{Jacobi theta functions}.
+
+
+Their $T$- and $S$-transformations are read off
+\begin{align}\label{S-T}
+ &\eta(\tau+1) = e^{i\pi/12} \eta(\tau) \ ,   &\eta(-1/\tau) = \sqrt{-i\tau} \eta(\tau) \ ,\cr
+ &\vartheta_2(\tau+1) = e^{i\pi/4} \vartheta_2(\tau) \ ,  &\vartheta_2(-1/\tau) = \sqrt{-i\tau} \vartheta_4(\tau) \cr
+ &\vartheta_3(\tau+1) = \vartheta_4(\tau) \ , &\vartheta_3(-1/\tau) = \sqrt{-i\tau} \vartheta_3(\tau)  \cr
+ &\vartheta_4(\tau+1) = \vartheta_3(\tau) \  , &  \vartheta_4(-1/\tau) = \sqrt{-i\tau} \vartheta_2(\tau) \ .
+\end{align}
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\linewidth]{picture/modular-theta}
+	\caption{the $T$ and $S$ transformations of $\vartheta$-functions. $A$ and $P$ represent anti-periodic and periodic boundary conditions of fermions.}
+	\label{fig:modular-theta}
+\end{figure}
+
+
+There are two important identities. One is
+called the \textbf{Jacobi-Riemann identity}:
+\begin{equation}\label{Jacobi-Riemann}
+ (\vartheta_3(\tau))^4 = (\vartheta_2(\tau))^4 +(\vartheta_4 (\tau))^4 \ .
+\end{equation}
+The other is \textbf{Jacobi triple product identity}:
+\begin{equation}
+ \vartheta_2(\tau) \vartheta_3(\tau) \vartheta_4(\tau) = 2 \eta^3(\tau) \ ,
+\end{equation}
+from which the modular property of the Dedekind eta function follows.
+
+
+
+
+
+
+\end{document}

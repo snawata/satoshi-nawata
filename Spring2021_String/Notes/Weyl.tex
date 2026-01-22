@@ -1,0 +1,346 @@
+\documentclass[String-lecture-21.tex]{subfiles}
+
+\begin{document}
+\section{Weyl anomaly}\label{sec:Weyl}
+
+
+The classical action \eqref{string-sigma} of the string sigma model is invariant under the Weyl symmetry, and the Weyl invariance implies the traceless condition \eqref{traceless1} of the energy-momentum tensor. However, we will see that there can be an anomaly in the Weyl symmetry if the string world-sheet is curved. As we will see, it is characterized by the central charge $T^a_{~a} = -\frac{c}{12} R^{(2)}$ where $R^{(2)}$ is the world-sheet Ricci scalar curvature.
+
+Moreover, in string theory, a target space can also be a non-trivial curved spacetime where the action becomes
+\begin{align}\nonumber
+ S = \frac{1}{4\pi \alpha'}\int \sqrt h d^2z\ h^{ab} \partial_a X^\mu \partial_{\ b} X^\nu G_{\mu\nu}(X) +\cdots \ .
+\end{align}
+This is no longer a free theory, and it describes an interacting non-linear theory, called the \textbf{(string) non-linear sigma model}. In an interacting quantum field theory,
+the breakdown of scale invariance is described in terms of a $\beta$ function. In the non-linear sigma model, the anomaly of the Weyl invariance due to the curved target spacetime is also characterized by $\beta$-functions.
+
+
+
+\subsection{Weyl anomaly from curved world-sheet}
+Although the string sigma model is classically Weyl-invariant, in quantum theory, the trace of the energy-momentum tensor can be nonzero due to anomaly.
+Nonetheless, it is
+\begin{itemize}\setlength\itemsep{.1pt}
+ \item world-sheet diff invariant,
+ \item zero on a flat world-sheet $\bR^2$,
+ \item world-sheet mass dimension two.
+\end{itemize}
+Hence, they constrain the form of the trace of the energy-momentum tensor as
+\begin{align}\nonumber
+ T^a_{~a} = k R^{(2)} \ ,
+\end{align}
+where $R^{(2)}$ is the world-sheet Ricci scalar curvature. In this subsection, we shall determine the coefficient $k$.
+
+
+Given a curved world-sheet Riemann surface $(\Sigma,h_{ab})$ with non-trivial metric, we can always take a local coordinate (called \textbf{conformal gauge}) of the world-sheet Riemann surface in which the metric is a conformally flat
+\begin{align}\label{conformal-gauge}
+ ds^2 = e^{2\omega(\sigma^1,\sigma^1)} (d\sigma^1d\sigma^1+d\sigma^2d\sigma^2) = e^{2\omega(z,\ol z)} dzd\ol z \ .
+\end{align}
+This local coordinate is called an \textbf{isothermal coordinate}.
+In the isothermal coordinate, the scalar curvature and non-trivial Christoffel symbols are expressed as
+\begin{align}\label{conformal-gauge2}
+ R^{(2)} = -8 e^{-2 \omega} \partial \bar{\partial} \omega \ , \qquad \Gamma_{z z}^{z}=2 \partial \omega, \quad \Gamma_{\bar{z}\bar{z}}^{\bar{z}}=2 \bar{\partial} \omega
+\end{align}
+and the other Christoffel symbols are zero $\Gamma^a_{bc}=0$.
+Therefore, the diagonal element of the energy-momentum tensor becomes
+\begin{align}\nonumber
+ T_{z\ol z} = \frac{1}{4} e^{2\omega}\ T^a_{~a} = -2k \partial\ol\partial \omega \ .
+\end{align}
+Also, the conservation $\nabla_a T^a_{~ b} = 0$ of the energy-momentum tensor now becomes
+\begin{align}\nonumber
+ 0 =& \nabla^z T_{zz} +\nabla^{\ol z} T_{\ol zz} = \nabla_{\ol z} T_{zz} +\nabla_{z} T_{\ol zz}\cr
+ =&\ol\partial  T_{z z}+(\partial -2 \partial \omega)(-2 k \partial \bar{\partial} \omega)\cr
+ =& \ol\partial \left( T_{zz} -2k\left( \partial\partial\omega -\partial\omega\partial\omega \right) \right)
+\end{align}
+This implies that $T_{zz}$ deviates from a holomorphic operator $T(z)$
+\be\label{T-curved}
+T_{zz} = 2k\left( \partial\partial\omega -\partial\omega\partial\omega \right)+T(z) ~.
+\ee
+
+On a curved world-sheet, the conformal Ward-Takahashi identity \eqref{CWT} becomes
+\begin{align}\nonumber
+ \delta_{\epsilon,\ol\epsilon} \mathcal O (w,\ol w) &= \oint_{M} \frac{d^2z}{2\pi }
+ \left\{\left(\nabla_{\bar{z}}\epsilon(z) T_{z z}+\nabla_{z} \epsilon(z)T_{\bar{z} z}\right)+\left(\nabla_{z} \ol\epsilon(\ol z)T_{\bar{z}\bar{z}}+\nabla_{\bar{z}} \ol\epsilon(\ol z)T_{z\bar{z}}\right) \right\} \mathcal O (w,\ol w) \nonumber\cr
+ &= \int_{M}\frac{d^2z}{2\pi }
+ \left\{ \ol\partial\left(\epsilon(z)T(z)\right) +\partial\left(\ol\epsilon(\ol z) \ol T(\ol z)\right) \right\} \mathcal O (w,\ol w) \ ,
+\end{align}
+where we use the current conservation \[T_{z\bar z}(\nabla^z \e^{\bar z}+\nabla^{\bar z} \e^{z})=0\] from the first and second line.
+This gives the transform property of $T(z)$ as in the flat space \eqref{inf-T-variation}
+\begin{align}\nonumber
+ \delta_\epsilon T(z) = \epsilon(z)\partial T(z) +2\partial\epsilon(z) T(z) +\frac{c}{12} \partial^3 \epsilon(z) \ .
+\end{align}
+On the other hand, \eqref{T-curved} yields
+\begin{align}
+ \delta_\epsilon T(z) = \delta_\epsilon T_{zz} -2k\left( \partial\partial\delta_\epsilon\omega -2\partial\omega\partial\delta_\epsilon\omega \right) \ .
+ \label{eq:curvedTransfT}
+\end{align}
+Using (finite) transformations,
+\begin{align}\nonumber
+ &z \to \wt z = z -\epsilon(z) \ , \cr
+ &T_{zz}  \to \wt T_{\wt z\wt z} = \left( \partial_{z} \wt z \right)^{-2} T_{zz} \ , \cr
+ &\omega(z) \to \wt \omega (\wt z) = \omega(z) -\frac{1}{2} \log \left| \partial_z \wt z \right|^2 \ ,
+\end{align}
+(\ref{eq:curvedTransfT}) can be expressed as
+\begin{align}\nonumber
+ \delta_\epsilon T(z) = \epsilon(z)\partial T(z) +2\partial\epsilon(z) T(z) -k \partial^3 \epsilon(z) \ .
+\end{align}
+Finally, we see that the Weyl anomaly is proportional to the central charge
+\begin{align}\label{Weyl-anomaly}
+ T^a_{~a} = kR^{(2)} = -\frac{c}{12} R^{(2)}  ~.
+\end{align}
+We have seen in \eqref{cX} that the central charge of the string sigma model is equal to the dimension $D$ of the target space. Hence, naively looking, the bosonic string theory would suffer from the Weyl anomaly. However, as we will see in \S\ref{sec:ghost}, we introduce ``ghost CFT'' to fix gauge in the world-sheet path integral, and the ghost CFT has $c^{\rm gh}=-26$.
+As a result, the bosonic string theory is Weyl invariant at quantum level only if $D=26$.
+
+
+\subsection{Non-linear sigma model}
+
+
+In \S\ref{sec:bosonic}, we start with a flat $D$-dimensional target space, and the quantization of bosonic string naturally leads to the graviton \eqref{massless}.
+Therefore, in general, we can consider that the target spacetime is curved with a non-trivial metric so that the action is
+\begin{align}\nonumber
+ S[X^\mu, h_{ab}] = \frac{1}{4\pi \alpha'} \int d^2\sigma \left( \sqrt h h^{ab} \partial_a X^\mu \partial_b X^\nu G_{\mu\nu}(X)
+ \right) \ .
+\end{align}
+This is called the non-linear sigma model.
+If we consider a perturbation from the flat-metric in this action
+\begin{align}\nonumber
+ G_{\mu\nu}(X) = \eta_{\mu\nu} + f_{\mu\nu} (X) \ ,
+\end{align}
+then the partition function becomes
+\begin{align}\nonumber
+ Z &= \int \cD h_{ab} \cD X^\mu e^{-S} \nonumber\cr
+ &= \int \cD h_{ab} \cD X^\mu e^{-S_0} \left(
+ 1+\frac{1}{4\pi \alpha'} \int d^2\sigma \left( \sqrt h h^{ab} \partial_a X^\mu \partial_b X^\nu f_{\mu\nu}(X) \right) +\cdots
+ \right) \ .
+\end{align}
+Notice that the perturbative part is the graviton operator
+with wave function $f_{\mu\nu}(X) = \zeta_{\mu\nu} e^{ik\cdot X}$.
+
+
+In a curved target, the theory is no longer free, so that we need to take into account various quantum effects. We will see that $\beta$-functions encode the anomaly of scaling invariance at quantum level.
+Note that the discussion here is brief, and the reader is referred to \cite{Callan:1989nz} for the details.
+As a 2d field theory, we can consider the vacuum expectation value (VEV) for $X$,
+which we set to $X_0$:
+\begin{align}\nonumber
+ \wh X(\sigma,\tau) = X_0 +X(\sigma,\tau) \ .
+\end{align}
+On the other hand, $X_0$ is a certain point in spacetime and
+we will expand the metric around this point:
+\begin{align}\nonumber
+ G_{\mu\nu} (X) = G_{\mu\nu} -\frac{1}{3} R_{\mu\lambda\nu\rho} X^\lambda X^\rho +\mathcal O(X^3) \ ,
+\end{align}
+where $G_{\mu\nu}$ and $R_{\mu\lambda\nu\rho}$ are a metric and a Riemann curvature tensor of the target spacetime at $X_0$, respectively.
+In a field-theoretic sense, these can be understood as coupling constants
+\begin{align}\nonumber
+ S &= \frac{1}{4\pi \alpha'} \int d^2\sigma \ \partial^a X^\mu \partial_a X^\nu
+ \left( G_{\mu\nu} -\frac{1}{3} R_{\mu\lambda\nu\rho} X^\lambda X^\rho +\cdots
+ \right)  \nonumber\cr
+ &\to \frac{1}{2} \int d^2\sigma \ \partial^a X^\mu \partial_a X^\nu
+ \left( G_{\mu\nu} -\frac{2\pi \alpha'}{3} R_{\mu\lambda\nu\rho} X^\lambda X^\rho +\mathcal O(\alpha'^2)
+ \right) \ .
+\end{align}
+Here we rescale the field $X \to \sqrt{2\pi \alpha'} X$ so that
+the expansion looks like a ``stringy expansion''.
+
+
+
+
+
+
+\subsubsection*{Perturbation theory for non-linear sigma model}
+
+
+
+
+
+We want to check if the theory (non-linear sigma model) has Weyl anomaly.
+As we briefly saw, it is an interacting theory, and
+interacting theories have generally non-trivial $\beta$-functions:
+\begin{align}\nonumber
+ \beta[g] \equiv E \frac{\partial}{\partial E} g(E) = \frac{\partial}{\partial (\log E)} g(E) \ ,
+\end{align}
+where $g$ is a coupling constant and $E$ is a characteristic energy scale.
+When we consider a global scaling of coordinate:$z \to \wt z = \lambda z = (1-\epsilon) z = e^{-\epsilon} z$,
+energy scales oppositely: $E \to \wt E = \frac{1}{ \lambda} E = e^{\epsilon} E$.
+So the $\beta$-function can be written as
+\begin{align}\nonumber
+ \beta[g] = \frac{\partial}{\partial \epsilon} g(\epsilon) \ .
+\end{align}
+The variation of the action is expressed in two ways:
+\begin{align}\nonumber
+ &\delta_\epsilon S =
+ \begin{cases}
+  \int \frac{d^2\sigma}{2\pi} \sqrt{h} \delta_\epsilon h^{ab}  T_{ba} = -\epsilon \int \frac{d^2\sigma}{2\pi} T^a_{~a} \ , \\[2pt]
+  \frac{1}{4\pi \alpha'} \int d^2\sigma \ \partial^a X^\mu \partial_a X^\nu
+  \left( \epsilon \frac{\partial}{\partial \epsilon} G_{\mu\nu}(\epsilon) +\cdots \right) \ ,
+ \end{cases}
+\end{align}
+where the first variation is a formal transformation of the theory, and in quantum regime,
+it should be proportional to the trace part of the energy-momentum tensor.
+On the other hand, the second variation is the actual theory with an assumption that
+$\epsilon$ dependence of the theory is only in the coupling constants.
+Identifying them, we have
+\begin{align}\nonumber
+ T^a_{~a} = -\frac{1}{2\alpha'} \beta[G_{\mu\nu}] \partial^b X^\mu \partial_b X^\nu +\cdots \ .
+\end{align}
+This shows that the anomaly is parametrized by $\beta$-functions.
+
+
+Let us consider perturbation theory, namely
+loop corrections to two-point function etc, so that we can see if the theory is anomalous.
+\begin{align}\nonumber
+ &\langle X^\mu (\sigma_1) X^\nu (\sigma_2) \rangle \nonumber\cr & \qquad =
+ \int \frac{d^2k}{(2\pi)^2} \frac{2\pi \alpha'}{k^2} e^{ik\cdot (\sigma_1-\sigma_2)}
+ \left\{ G^{\mu\nu} +\frac{2\pi \alpha'}{3} R^{\mu\nu} \left(
+ \int \frac{d^2p}{(2\pi)^2} \frac{1}{p^2} + \frac{1}{k^2}\int \frac{d^2p}{(2\pi)^2}
+ \right)+\cdots \right\} \ .
+\end{align}
+Among terms proportional to $R^{\mu\nu}$ in the integrand, the first integral provides a logarithmic and the second does quadratic divergence.
+Since the quadratic divergence is discarded by dimensional regularization, we focus on the logarithmic divergence and introduce regularization parameters:
+\begin{align}\nonumber
+ \int_E^\Lambda \frac{d^2p}{(2\pi)^2} \frac{1}{p^2} = \frac{1}{2\pi} \log
+ \left( \frac{\Lambda}{E} \right) \ ,
+\end{align}
+where $\Lambda$ is an ultra-violet (UV) energy scale supposed to be $\infty$,
+and $E$ is an infra-red (IR) energy scale supposed to be our life energy scale, which is very low ($\sim 0$).
+
+The divergence can be subtracted by counter terms as follows.
+The bare action $\wh S, = S +S_\mathrm{ct}$ describes UV physics of energy scale $\Lambda$ whereas the physical action is $S$  describes IR physics of energy scale $E$. They are related by renormalization
+\begin{align}\nonumber
+ \wh S = \frac{1}{4\pi \alpha'} \int d^2\sigma \ \partial^a \wh X^\mu \partial_a \wh X^\nu
+ \left( \wh G_{\mu\nu} -\frac{1}{3} \wh R_{\mu\lambda\nu\rho} \wh X^\lambda \wh X^\rho +\cdots
+ \right)
+\end{align}
+with
+\begin{align}\nonumber
+ &\wh X^\mu = Z^\mu_\nu X^\nu \ , \quad Z^\mu_\nu = \delta^\mu_\nu +
+ \sum_{n=1}^\infty \alpha'^n Z_{\nu,(n)}^\mu (\Lambda/E) \ , \cr
+ &\wh G^{\mu\nu} = G^{\mu\nu} +\sum_{n=1}^\infty \alpha'^n G_{(n)}^{\mu\nu} (\Lambda/E) \ ,
+ \textrm{etc.}
+\end{align}
+Note that the bare action only depends on $\Lambda$ (not on $E$), and hence,
+the bare coupling constants ($\wh G_{\mu\nu}$ etc) only depend on high energy $\Lambda$.
+The counter terms lead to other contributions
+\begin{align}
+ \langle X^\mu (\sigma_1) X^\nu (\sigma_2) \rangle  \sim
+ \left\{ G^{\mu\nu} +\frac{\alpha'}{3} R^{\mu\nu} \log \left( \frac{\Lambda}{E} \right)
+ -\alpha' \left(G_{(1)}^{\mu\nu} +Z_{(1)}^{\mu\nu} +Z_{(1)}^{\nu\mu}
+ \right)+\cdots \right\} \ .
+ \label{eq:renom2pt}
+\end{align}
+Unfortunately, the equation above cannot fix the ratio between $G_{(1)}$ and $Z_{(1)}$.
+We need further information like a 4-point function to determine the ratio.
+We simply list the result:
+\begin{align}\nonumber
+ &G^{\mu\nu}_{(1)} = R^{\mu\nu} \log \left( \frac{\Lambda}{E} \right) \ , \quad
+ Z^{\mu\nu}_{(1)} =  -\frac{1}{3} R^{\mu\nu} \log \left( \frac{\Lambda}{E} \right) \ ,
+\end{align}
+which does cancel the divergent term in (\ref{eq:renom2pt}).
+From the result we can derive the $\beta$-function:
+\begin{align}\nonumber
+ &G_{\mu\nu} (E,\Lambda) = \wh G_{\mu\nu} (\Lambda) - \alpha' R_{\mu\nu} \log \left( \frac{\Lambda}{E} \right) \ , \cr
+ &\beta[G_{\mu\nu}] = \frac{\partial}{\partial (\log E)} G_{\mu\nu} (E,\Lambda) = \alpha' R_{\mu\nu} \ .
+\end{align}
+Therefore, for the theory to be anomaly-free, the spacetime is required to be Ricci-flat ($R_{\mu\nu}=0$).
+
+
+
+
+\subsubsection*{Non-linear sigma model (general)}
+
+If we incorporate all the massless states \eqref{massless}, we can write the most general form of the non-linear sigma model for a closed string as
+\begin{align}\label{NLSM-general}
+ &S_{\textrm{closed}} = \frac{1}{4\pi \alpha'} \int d^2\sigma \left( \sqrt h h^{ab} \partial_a X^\mu \partial_b X^\nu G_{\mu\nu}(X)
+ +i \varepsilon^{ab} \partial_a X^\mu \partial_b X^\nu B_{\mu\nu}(X)
+ +\alpha' \sqrt h R^{(2)} \Phi(X)
+ \right) \ .
+\end{align}
+Note that the $B$-field is a higher dimensional analogue of gauge fields (mathematically called ``gerbe'').
+       Its gauge transformation is given by
+  \begin{align}\label{B-gauge}
+   \delta B_{\mu\nu} = \partial_\mu \Lambda_\nu -\partial_\nu \Lambda_\mu \ ,
+  \end{align}
+       and the field strength $H_{\mu\nu\lambda}$ is defined as
+   \begin{align}\nonumber
+    H_{\mu\nu\lambda} = \partial_\mu B_{\nu\lambda}
+    +\partial_\nu B_{\lambda\mu} +\partial_\lambda B_{\mu\nu} \ .
+   \end{align}
+The $B$-field often is the source of ``stringy'' effects, and it plays an important role on many occasions.
+
+
+Again, the Weyl anomaly is characterized by $\beta$-functions for the massless fields
+\begin{align}\nonumber
+ T^a_{~a} = -\frac{1}{2\alpha'} \beta[G_{\mu\nu}] \partial_a X^\mu \partial^a X^\nu
+ -\frac{i}{2\alpha'} \beta[B_{\mu\nu}] \varepsilon^{ab} \partial_a X^\mu \partial_b X^\nu
+ -\frac{1}{2} \beta [\Phi] R^{(2)}
+\end{align}
+where $\beta$-functions are expressed as
+\begin{align}\nonumber
+ &\beta[G_{\mu\nu}] = \alpha' R_{\mu\nu} +2\alpha' \nabla_\mu \nabla_\nu \Phi
+ -\frac{\alpha'}{4}H_{\mu\lambda\rho}H_\nu^{\ \lambda\rho} +\mathcal O(\alpha'^2) \ , \cr
+ &\beta[B_{\mu\nu}] = -\frac{\alpha'}{2} \nabla^\lambda H_{\lambda\mu\nu}
+ +\alpha' \nabla^\lambda \Phi H_{\lambda\mu\nu} +\mathcal O(\alpha'^2) \ , \cr
+ &\beta[\Phi] = \frac{D-26}{6} -\frac{\alpha'}{2} \nabla^2\Phi
+ +\alpha' \nabla^\lambda\Phi \nabla_\lambda\Phi
+ -\frac{\alpha'}{24}H_{\mu\lambda\rho}H^{\mu\lambda\rho} +\mathcal O(\alpha'^2) \ .
+\end{align}
+In order for the theory to be non-anomalous, all the $\beta$-functions must be zero, and the vanishing of $\beta[\Phi]$ again requires $D=26$.
+The perturbative quantum field theory on the world-sheet can describe the classical gravity from the vanishing of $\beta$ function.
+\begin{enumerate}
+\item   The equation
+$\beta[G_{\mu\nu}]=0$
+is analogous to Einstein's equation
+    with source terms from the
+    $B$-field
+    and the dilaton.
+\item
+    The equation $\beta[B_{\mu\nu}]=0$ is the generalization of the Maxwell's equation.
+\end{enumerate}
+
+
+The condition that $\beta$-functions vanish ($\beta=0$) is equivalent to the equation of motion for the following spacetime effective action
+\footnote{
+ We are in the regime where the perturbation theory works well. Namely, the length scale of the target space is long compared to the string scale. We thus can ignore the internal structure of the string and write the following
+low energy effective theory for quantum gravity.}
+  \begin{align}\label{bosonic-NS}
+   S_\mathrm{eff} = \frac{1}{2\kappa_D^2} \int d^D X \sqrt{-G} e^{-2\Phi} \left[
+   \frac{2(D-26)}{3\alpha'} +R -\frac{1}{12} H_{\mu\lambda\rho}H^{\mu\lambda\rho}
+   +4 \nabla^\lambda\Phi \nabla_\lambda\Phi +\mathcal O(\alpha'^2)
+   \right] \ .
+  \end{align}
+
+The action \eqref{NLSM-general} tells us another important fact in string theory. The dilaton field is coupled to the world-sheet Ricci scalar.
+If the dilaton takes an expectation value $\langle \Phi(X)\rangle=\Phi$, the dilaton action gives the Euler characteristic of the world-sheet Riemann surface
+  \begin{align}\nonumber
+   S_\mathrm{dilaton} &= \frac{1}{4\pi \alpha'} \int d^2\sigma \left( \alpha' \sqrt{h} R^{(2)} \Phi(X) \right)  \nonumber\cr
+   &\to \frac{1}{4\pi} \int d^2\sigma \left( \sqrt{h} R^{(2)} \Phi \right)
+   = \Phi (2-2g)
+  \end{align}
+  In other words, the 2d gravity is topological with no physical degrees of freedom.
+       Defining $g_s = e^\Phi$, and the dilaton part of the action becomes
+  \begin{align}\nonumber
+   e^{-S_\mathrm{dilaton}} = g_s^{2g-2} \ .
+  \end{align}
+  This implies that $g_s$ can be understood as a string coupling.
+An $n$-point string tree amplitude can be understood as $n-2$ cylinders attaching to a cylinder.
+       Hence, the amplitude should be proportional to $g_s^{n-2}$.
+A higher loop (higher genus) amplitude can be derived by attaching $g$ cylinders to the tree amplitude,
+       and the amplitude should be $\wh A_{n,g} \propto g_s^{n-2+2g}$. (See Figure \ref{stringCoupling2.eps}.)
+       Usually, vertex operators are re-normalized so that $g_s^n$ is included in the definition of $V_1 \cdots V_n$.
+       Therefore, the re-normalized amplitude should be
+  \begin{align}\nonumber
+   A_{n,g} \propto g_s^{2g-2} \ ,
+  \end{align}
+       which coincide with the dilaton action. In conclusion, the string coupling $g_s$ is just the expectation value of the dilaton field.
+
+
+
+
+
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=400pt]{picture/stringCoupling2}}
+ \caption{4-point amplitude example. The upper one is a construction of 4pt tree amplitude from cylinders. The lower one is a construction of 4-point 1-loop amplitude from the tree amplitude.}
+\label{stringCoupling2.eps}
+\end{figure}
+
+
+\end{document}

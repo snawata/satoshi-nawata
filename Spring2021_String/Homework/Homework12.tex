@@ -1,0 +1,114 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+\usepackage{macros}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 12 (Due at class on June 6)}
+
+
+\section{S-duality}
+
+In the lecture, the low-energy effective action of Type I string is given by
+\begin{align}\label{TypeI}
+S_{\textrm{I}}&=S_{\textrm{grav}}+S_{\textrm{YM}}\cr
+S_{\textrm{grav}}&= \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G}   \,\left[
+e^{-2\Phi}( R +4 \partial_\mu \Phi \partial^\mu \Phi )-\frac{1}{2}| \wt G_{(3)}|^{2} \right] \cr
+S_{\textrm{YM}}&=- \frac{1}{2g_{10}^2} \int d^{10}x \sqrt{ -G}\,  e^{-\Phi} \Tr_{V} |F_{(2)}|^2~.
+\end{align}
+Also, the low-energy effective action of
+Heterotic $\SO(32)$ is given by
+\begin{align}\label{Het}
+S_{\textrm{Het}}&=S_{\textrm{grav}}+S_{\textrm{YM}}\cr
+S_{\textrm{grav}}&= \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G}   \,e^{-2\Phi}\left[
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2}| \wt H_{(3)}|^{2} \right] \cr
+S_{\textrm{YM}}&=- \frac{1}{2g_{10}^2} \int d^{10}x \sqrt{ -G}\,  e^{-2\Phi} \Tr_{V} |F_{(2)}|^2
+\end{align}
+
+\subsection{} Explain why the Yang-Mills action $S_{\textrm{YM}}$ in Type I \eqref{TypeI} has $e^{-\Phi}$ whereas $S_{\textrm{YM}}$ in Heterotic $\SO(32)$  \eqref{Het} has $e^{-2\Phi}$.
+
+\subsection{}  Show that Type I \eqref{TypeI} and Heterotic SO(32) \eqref{Het} actions are related by the following the field definitions
+\begin{align}
+G_{\m\n}^{I} = e^{-\Phi^{H}} G_{\m\n}^{H} ~,&\qquad  \Phi^I = -\Phi^{H} \cr
+\wt G_{(3)}^I = \wt  H_{(3)}^{H}~ ,&\qquad  A^I = A^{H} ~.\nonumber
+\end{align}
+
+
+\section{Heterotic M-theory}
+\subsection{}
+Show that the length of a line interval $S^1/\bZ_2$ in Heterotic M-theory is $R=g_{\textrm{Het}}^{\frac23}\ell_p$ by using the following duality chain in the lecture note:
+$$\textrm{HE} \xrightarrow{T} \textrm{HO} \xrightarrow{S} \textrm{Type I} \xrightarrow{T}  \textrm{Type I'}  \xrightarrow{\textrm{strong coupling}} \textrm{M-theory}  $$
+Note that T-duality on a circle $S^1$  relate radii and string coupling constants as
+$$
+\wt R= \ell_s^2/R~,\qquad \wt g_s=\ell_s g_s/R~,
+$$
+whereas S-duality on a circle $S^1$ relate them as
+$$
+\wt R=R/\sqrt{g_s}~,\qquad \wt g_s=1/ g_s~,
+$$
+where $\ell_s=\sqrt{\a'}$ and the definition of $\ell_p$ is as in the lecture note. Note that tilde denotes parameters in the dual theory.
+
+\subsection{}
+Give an explanation how Heterotic strings and fivebranes are related to M2 and M5-branes in Heterotic M-theory up on the compactification on a segment $S^1/\bZ_2$. Namely, argue how Heterotic strings and fivebranes become M2 and M5-branes in the strong coupling regime and vice versa.
+
+
+\section{Type I with D1-brane}
+Let us consider the massless spectrum of string excitations in the D1-D1 and the D1-D9 sector of a D1-brane along directions $X^0, X^1$ in Type I string theory and compare this to the massless fields on the worldsheet of the SO(32) heterotic string.
+
+\subsection{}
+Let us first consider  the D1-D1 strings.
+Here $X^I,\psi^I_{\pm}$, $I=2,\ldots,9$ have DD boundary
+conditions while $X^{\m},\psi^{\m}_{\pm}$, $\m=0,1$ have NN
+boundary conditions.
+
+
+
+As in the bosonic open string, the NN boundary condition identifies the right  and left fermion modes $\psi_n^\mu=\wt\psi_n^\mu$ so that
+$$
+\psi^\mu(\t, \s)=\sum\limits_{n\in\bZ+\nu}\psi_n^\mu  ( e^{-in(\t-\s)}+e^{-in(\t+\s)})~,
+$$
+where $\nu$ takes the values 0 (R) or $\frac12$ (NS). On the other hand,  the DD boundary condition identifies the right  and left fermion modes by sign $\psi_n^I=-\wt\psi_n^I$ so that
+$$
+\psi^I(\t, \s)=\sum\limits_{n\in\bZ+\nu}\psi_n^I  ( e^{-in(\t-\s)}-e^{-in(\t+\s)})~.
+$$
+Show that worldsheet parity $\Omega:\s\to \pi-\s$ acts on the modes as
+$$\Omega \psi_n  \Omega^{-1}  = \pm e^{i\pi n} \psi_n  ~, \qquad +/-:\textrm{NN/DD}~.$$
+
+The actions of the orientifold $\Omega$ on the vacua of the D1-string  given by
+$$\Omega |0\rangle_{NS} =-i|0\rangle_{NS}~,\qquad \Omega |s_0=\tfrac12, \mathbf{s}\rangle_{R} =- e^{i\pi(s_1+s_2+s_3+s_4)}|s_0=\tfrac12,  \mathbf{s}\rangle_{R}$$
+with $s_0$ the spin in directions $X^0, X^1$ and $s_1,\cdots, s_4$ the spin in the normal directions. Then, show that the orientifold projection $(1+\Omega)/2$ keeps $\psi_{-\frac12}^I |0\rangle$ for the normal directions and removes  $\psi_{-\frac12}^\mu |0\rangle$ for the tangent directions in the NS sector. In the R sector, show that the ground states $\textbf{16}$ spanned by $|s_0=\tfrac12,  \mathbf{s}\rangle$ are projected  onto $\bf 8_c$ by the orientifold action.
+
+
+%
+%
+%Consider now the DN fluctuations. In this case, the boundary conditions for the transverse bosons and
+%fermions become
+%\be
+%{\rm DN~~NS~~sector}~~~~~~~~~\left.\psi_++\psi_-\right|_{\s=0}=\left.
+%\psi_++\psi_-\right|_{\s=\pi}=0
+%\,,\label{590}\ee
+%\be
+%{\rm DN~~R~~sector}~~~~~~~~~\left.\psi_+-\psi_-\right|_{\s=0}=
+%\left.\psi_++\psi_-\right|_{\s=\pi}=0
+%\,,\label{591}\ee
+%while they are NN in the longitudinal directions.
+%
+%
+%
+%
+
+
+\subsection{}  Next, let us consider D1-D9 string. Here $X^I,\psi^I_{\pm}$, $I=2,\ldots,9$ have DN boundary
+conditions while $X^{\m},\psi^{\m}_{\pm}$, $\m=0,1$ have NN
+boundary conditions as before.  The bosonic open string with DN boundary condition admits the following mode expansion
+$$
+ X = c+i\sqrt{\frac{\alpha'}{2}} \sum_{n \in \mathbb Z+1/2} \frac{\alpha_{n}}{n}
+ \left( e^{-i{n}\sigma^-} -e^{-i{n}\sigma^+}  \right) \,.
+$$
+In fact, the supersymmetry requires the periodicity of fermion $\psi(\t,\s)$ (or mode $\psi_n$) in the R sector to be the same as for  $X(\t,\s)$ (or mode $\a_n$). In the NS sector, it is the opposite (modes differ by $\frac12$). Using this fact, compute the zero point energy in the NS and R sector. In addition, find the massless spectrum in the D1-D9 string after the GSO projection.
+Note that since Chan-Paton factors are allowed in the free string end, there are 32 of
+them.
+
+
+
+\end{document}

@@ -1,0 +1,381 @@
+
+
+
+\documentclass[geometry-lectures-21.tex]{subfiles}
+
+\begin{document}
+
+
+
+
+\section{Introduction to Donaldson theory}
+
+
+
+
+$(M, \mathrm{~g})$ is a oriented Riemannian manifold. $P \stackrel{\pi}{\rightarrow} M$ is a principal $G$ -bundle ( $G \subset G L(n, \mathbb{C}))$ and $H P \subset T P$ a connection with connection 1 -form $\omega(\operatorname{ker}(\omega)=H P)$. The space of connection is a affine space $\mathcal{A}$ model at $\Omega^{1}(M ; \operatorname{Ad} P)$ where $\operatorname{Ad} P=P \times_{\text {Ad }} \mathfrak{g}$
+The metric $\mathbf{g}$ induce the inner product $\langle\cdot, \cdot\rangle$ for differential forms and $\alpha \wedge \star \beta=\langle\alpha, \beta\rangle d$ vol with $\alpha, \beta \in \Omega^{k}(M)$. For associated vector bundle $P \times_{G} V, G$ acting on vector space by representation $\rho: G \rightarrow G L(V)$, If $G$ compact then one can always construct a $G$ -invariant via averaging any positivedefinite inner product of $V$ over $G$ w.r.t. Haar measure. In the case of $\operatorname{Ad} P$, the inner product on $\mathfrak{g}$ is required to be invariant under adjoint action from $G .$ If $\mathfrak{g}$ is semisimple, then the Killing form is one of such options. Moreover, for reductive Lie algebra, such an invariant inner product also exists. Assuming the existence of invariant inner product, the inner product for differential forms with bundle-valued is well defined.
+The (global) gauge group is $\mathcal{G}=\left\{\phi \in \operatorname{Aut}(P) \mid \phi_{M}=\mathrm{id}_{M}, \pi \circ \phi=\pi\right\} \cong \operatorname{Diff}(P)^{G} \cong C^{\infty}\left(M ; P \times_{G} G\right) \cong C^{\infty}(P ; G)^{G}$ and
+the Lie algebra $\operatorname{Lie}(\mathcal{G}) \cong \Gamma(\mathrm{A} \mathrm{d} P) \cong C^{\infty}(P ; \mathfrak{g})^{G}$. All $\phi \in \mathcal{G}$ act on connection as $H P^{\phi}=\phi_{*} H P$,
+$\omega^{\phi}=\phi^{*} \omega=\operatorname{Ad}\left(g_{\phi}^{-1}\right) \circ \omega+g_{\phi}^{*} \theta_{G}, \theta_{G} \in \Omega^{1}(G ; \mathfrak{g})^{G}$ is the Maurer-Cartan form. For curvature 2 -form
+$\Omega=d \omega=\frac{1}{2}[\omega, \omega] \in \Omega^{1}(P ; g): \Omega^{\phi}=\phi^{*} \Omega=\operatorname{Ad}\left(g_{\phi}^{-1}\right) \circ \Omega$ where $g_{\phi} \in C^{\infty}(P ; G)^{G}$ is the
+corresponding equivairant function s.t. $\phi(p)=p \cdot g_{\phi}(p), p \in P$. For trivial principal bundle $M \times G$, $\mathcal{G} \cong C^{\infty}(M ; G)$. Then pick any local trivializations $\left(U_{i}, \varphi_{i}\right)$ for generic pricnipal bundle, the local 1forms $A_{i}=s_{i}^{*} \omega \in \Omega^{1}\left(U_{i} ; g\right)\left(s_{i}: x \mapsto \varphi^{-1}(x, e)\right)$ obey local gauge transformation
+$A_{i}^{\phi}=\operatorname{Ad}\left(g_{i}^{-1}\right) \circ A_{i}+g_{i}^{*} \theta_{G}$ where $g_{i} \in C^{\infty}\left(U_{i} ; G\right) .$ And $F_{i}^{\phi}=\operatorname{Ad}\left(g_{i}^{-1}\right) \circ F_{i}$ where
+$F_{i}=s_{i}^{*} \Omega=d A_{i}+\frac{1}{2}\left[A_{i}, A_{i}\right]$ define $F_{\omega} \in \Omega^{2}(M ; \operatorname{Ad} P)$
+A smooth curve $\tilde{\gamma}:[0,1] \rightarrow P$ is horizontal if $\dot{\tilde{\gamma}}(t) \in H P_{\tilde{\gamma}(t)} \forall t \Leftrightarrow \omega(\dot{\bar{\gamma}}(t))=0 \quad \forall t .$ Let $\gamma=\pi \circ \tilde{\gamma}$
+then inside trivializing neighborhood $\left(U_{i}, \varphi_{i}\right), \varphi_{i}(\tilde{\gamma}(t))=(\gamma(t), g(t)) \in U_{i} \times G .$ The horizontal condition can be translated into ODE for curve $g(t)$ :
+$$
+\operatorname{Ad}\left(g(t)^{-1}\right) \circ A_{i}(\dot{\gamma}(t))+g^{*} \theta_{G}(\dot{\gamma}(t))=0
+$$
+For matrix Lie group, this becomes
+$$
+\dot{g}(t)+A_{i}(\dot{\gamma}(t)) g(t)=0
+$$
+
+The unique solution for this ODE defines a map $\mathcal{P}_{\gamma}: P_{\gamma(0)} \rightarrow P_{\gamma(1)}$ called paralllel transport and conversely there is always a unique horizontal lift $\tilde{\gamma}$ w.r.t. $H P$ for any curve $\gamma$ on the base.
+Flat connection 1 -forms $\omega$ are those with vanishing curvature $\Omega=0 .$ A connection $H P$ is flat iff. it is integrable as subbundle. There is an important classification of flat connections:
+$$
+\mathcal{A}_{\text {flat }} / \mathcal{G} \stackrel{1: 1}{\longleftrightarrow} \operatorname{Hom}\left(\pi_{1}(M), G\right) / G
+$$
+where $G$ acts by conjugation. When $M$ is orientable surface, this is called the Jacobian variety.
+
+\subsection*{Yang-Mills connections}
+
+Connection 1-form $\omega \in \Omega^{1}(P ; \mathfrak{g})$ determined a curvature 2 -form on base $F_{\omega} \in \Omega^{2}(M ; \mathrm{Ad} P)$. The Yang-Mills action functional is defined as
+$$
+\mathrm{YM}(\omega)=\int_{M}\left|F_{\omega}\right|^{2} d \mathrm{vol}
+$$
+where $\left|F_{\omega}\right|^{2} d \mathrm{vol}=\left\langle F_{\omega}, F_{\omega}\right\rangle d \mathrm{vol}=-\operatorname{tr}\left(F_{\omega} \wedge \star F_{\omega}\right)$ (for semisimple Lie algebra, e.g.
+$\mathfrak{s u}(n), \mathfrak{s o}(n), \mathfrak{s} \mathfrak{p}(n)$, this bilinear form with minus sign convention is positive definite). If $M$ is compact, the integral is globally defined, then $\mathrm{YM}: \mathcal{A} \rightarrow \mathbb{R}$. If $M$ non-compact, we must restrict to the connections for which the integral exists.
+The Yang-Mills functional is conformal invariant and gauge invairant. The latter is due to the invariance of inner product on $\mathfrak{g}$, i.e. $\left|F_{\omega}^{\phi}\right|^{2}=\left|F_{\omega}\right|^{2}$. Hence for $M$ compact, Yang-Mills functional descends to quotient space $\mathcal{A} / \mathcal{G} \rightarrow \mathbb{R}$. Consider $\omega+t a \in \mathcal{A}$ with any $a \in \Omega^{1}(M ; \mathrm{Ad} P)$, the critical point of YangMills functional is gicen by $\left.\frac{d}{d t}\right|_{t=0} Y M(\omega+t a)=0$, using $F_{\omega+t a}=F_{\omega}+t(d a+[\omega, a])+\frac{1}{2} t^{2}[a, a]=F_{\omega}+t d_{\omega} a+\frac{1}{2} t^{2}[a, a]$ we get
+$$
+0=\left.\frac{d}{d t}\right|_{t=0} \mathbf{Y M}(\omega+t a)=2 \int_{M}\left\langle d_{\omega} a, F_{\omega}\right\rangle d v o l=2 \int_{M}\left\langle a, d_{\omega}^{\star} F_{\omega}\right\rangle d v o l
+$$
+$\Rightarrow$ Yang-Mills equation
+$$
+d_{\omega}^{*} F_{\omega}=0 \Leftrightarrow d_{\omega} \star F_{\omega}=0 \quad\left(\star d_{\omega}^{*} F_{\omega}=d \star F_{\omega}\right)
+$$
+Together with Bianchi identity $d_{\omega} F_{\omega}=0$, the solutions are harmonic 2 -forms. These connection 1 -forms (critical points of Yang-Mills functional) are called Yang-Mills connections. $\mathcal{G}$ acts on $\mathcal{A}_{\mathrm{YM}}$ transitviely. Denote $\mathcal{M}=\mathcal{A}_{\mathrm{YM}} / \mathcal{G}$ the moduli space of Yang-Mills connections.
+
+On a oriented 4 -dimensional Riemannian manifold $(M, \mathrm{~g})$, any 2 -form $\alpha$ can be decomposed into selfdual and anti-self-dual part $\star \alpha_{\pm}=\pm \alpha_{\pm}$, hence there is vector space decomposition $\Omega^{2}(M)=\Omega_{+}^{2}(M) \oplus \Omega_{-}^{2}(M) \cdot\left\langle\alpha_{+}, \alpha_{-}\right\rangle=\left\langle\alpha_{-}, \alpha_{+}\right\rangle=0$. Apply to curvature
+$F_{\omega}=F_{\omega}^{+}+F_{\omega}^{-} \in \Omega^{2}(M ; \mathrm{A} \mathrm{d} P)$, the Yang-Mills functional splits into two terms:
+$$
+\mathbf{Y M}(\omega)=\int_{M}\left|F_{\omega}\right|^{2} d \mathrm{vol}=\int_{M}\left(\left|F_{\omega}^{+}\right|^{2}+\left|F_{\omega}^{-}\right|^{2}\right) d \mathrm{vol}
+$$
+Consider for instance connected compact Lie group $G$, by the classification theorem, connected compact Lie group is basically classified by connected semisimple compact Lie group, whose complexified Lie algebra $\mathfrak{g}_{\mathrm{C}}$ is complex semisimple Lie algebra. Excluding the exceptional case, there are basic types $\operatorname{su}(n+1), \mathfrak{s o}(2 n+1), \mathfrak{s} \mathfrak{p}(n), \mathfrak{s o}(2 n)$. So the second Chern number for $P$ via Chern-Weil theory is given by
+$$
+-k=\left\langle c_{2}(P),[M]\right\rangle=\frac{1}{8 \pi^{2}} \int_{M} \operatorname{tr}\left(F_{\omega} \wedge F_{\omega}\right)=-\frac{1}{8 \pi^{2}} \int_{M}\left(\left|F_{\omega}^{+}\right|^{2}-\left|F_{\omega}^{-}\right|^{2}\right) d v o l
+$$
+It can be equivalently expressed in terms of the first Pontrjagin class $p_{1}\left(\operatorname{Ad} P_{\mathbb{C}}\right)=c_{1}\left(\mathrm{Ad} P_{\mathrm{C}}\right)^{2}-2 c_{2}\left(\mathrm{Ad} P_{\mathrm{C}}\right)=2 p_{1}(\mathrm{Ad} P)$ for complex vector bundle $\mathrm{Ad} P_{\mathrm{C}}$ (in above case
+of compact connected Lie group the first Chern class vanishes).
+\begin{tabular}{c|c}
+$G$ & $\left\langle p_{1}(\operatorname{Ad} P),\left[M^{4}\right]\right\rangle$ \\
+\hline$S U(n)$ & $2 n k$ \\
+$\operatorname{Spin}(n)$ & $2(n-2) k$ \\
+$S p(n)$ & $2(n+1) k$
+\end{tabular}
+This gives a lower bound for Yang-Mills functional $\mathrm{YM}(\omega) \geq 8 \pi^{2}|k|$. If $F_{\omega}^{\pm}=0$, then $\mathrm{YM}(\omega)=\mp 8 \pi^{2} k$, which is solution for Yang-Mills equation resp. by Bianchi identity. The connections with $F_{\omega}=F_{\omega}^{+}$ or $F_{\omega}^{-}$ are called self-dual or anti-self-dual instantons. $k$ is called the instanton number.
+
+
+
+\subsection*{Gauge fixing}
+A choice of gauge is a choice of bundle (local) trivialization. It is natural to ask whether a connection with small curvature can be represented by a correspondingly small connection in an appropriate gauge (small in the sense of suitable norm,e.g. $L^{2}$ -norm). Consider for example ASD equation over orientable Riemannian 4 -manifold $F_{\omega}^{+}=0 \Leftrightarrow d^{+} \omega+(\omega \wedge \omega)^{+}=0$. For an elliptic operator, the elliptic estimate result would yield some controls on the $L^{2}$ -norm of all derivatives leading to compactness, i.e. a sequence of bounded solutions in a domain has a $C^{\infty}$ -converging subsequence in the interior of the domain. However, ADS equation is in general non-linear (despite $U(1)$ -bundle or line bundle) and $d^{+}$ is not elliptic (we can always make solutions $\omega=-d \phi \cdot \phi^{-1}$ gauge equivalent to $\omega=0$ whose highest derivatives are not controlled by $L^{2}$ -norm). So we want to remove the gauge invariance during solving the equation. Regarding the PDE theory of Yang-Mills equation, it turns out the Coulomb gauge is a very convenient choice: Suppose $\omega_{0}$ is a fixed principal connection (called background), we say a point $\omega$ in a gauge orbit $\mathcal{O}$ of another connection different from the background is in Coulomb gauge relative to $\omega_{0}$ if $d_{\omega_{0}}^{*}\left(\omega-\omega_{0}\right)=0$. This is the first variantion of the functional on $\mathcal{O}$ given by $\omega \mapsto\left\|\omega-\omega_{0}\right\|^{2}$ :
+$$
+\begin{aligned}
+\left.\frac{d}{d t}\right|_{t=0}\left\|e^{t \xi_{\omega}-\omega_{0}}\right\|^{2} &=\left.\frac{d}{d t}\left\|\left(\omega-t d_{\omega} \xi\right)-\omega_{0}\right\|^{2}\right|_{t=0}, \quad \xi \in \Omega_{c}^{0}(M ; \operatorname{Ad} P) \\
+&=-\left\langle\xi, d_{\omega}^{*}\left(\omega-\omega_{0}\right)\right\rangle=-\left\langle\xi, d_{\omega_{0}}^{*}\left(\omega-\omega_{0}\right)\right\rangle
+\end{aligned}
+$$
+Similarly we obtain for the second variation
+$$
+\left.\frac{d^{2}}{d t^{2}}\right|_{t=0}\left\|e^{t \xi} \omega-\omega_{0}\right\|^{2}=2\left\langle d_{\omega_{0}} \xi, d_{\omega} \xi\right\rangle=-2\left\langle\xi, d_{\omega_{0}}^{*} d_{\omega} \xi\right\rangle
+$$
+This is Hessian of the variation called Faddeev-Popov operator $\Delta_{\mathrm{FP}}=-d_{\omega_{0}}^{*} d_{\omega} .$ Its determinant is the Faddeev-Popov determinant, which is closely related to a natural Riemannian metric on $\mathcal{A} / \mathcal{G}$.
+
+The following existence result of Coulomb gauge is an application of the implicit function theorem on Banach space.
+
+Proposition: There is a constant $c$ spends on $\omega$ s.t. if $\widetilde{\omega}$ is another connection and $a=\widetilde{\omega}-\omega$ satisfies $\left\|d_{\omega}^{2} a\right\|^{2}+\|a\|^{2}<c$, then there is a gauge transformation $\phi$ so that $\phi^{*} \widetilde{\omega}$ is in Coulomb gauge relative to $\omega$.
+For trivial $G$ -bundle over $D^{4}$, Uhlenbeck shows a fundamental lemma on the existence of Coulomb
+gauge.
+Theorem (Uhlenbeck): There are constants $\varepsilon, C_{1}>0$ s.t. any connnection $\omega=\omega_{0}+a\left(\omega_{0}\right.$ is the flat connection) on the trivial $G$ -bundle over $D^{4}$ with $\left\|F_{\omega}\right\|_{L^{2}}<\varepsilon$ is gauge equivalent to a connection $\phi^{*} \omega=\omega_{0}+b$ via $\phi \in \mathcal{G}^{2,2}$ with
+
+(i) $d_{\omega_{0}}^{*} b=0$ (Coulomb gauge condition)
+(ii) $\left.\star b\right|_{\partial D^{4}}=0$
+(iii) $\|b\|_{W^{1,2}}^{2} \leq C_{1}\left\|F_{\omega}\right\|_{L^{2}}^{2}\left(\|b\|_{W^{1,2}}^{2}=\int_{D^{4}}\left(\left|d_{\omega} b\right|^{2}+|b|^{2}\right) d \mathrm{vol}\right)$
+One can use the Weitzenböck formula to show a useful lemma before the theorem: On $P=D^{4} \times G$ there are constant $\varepsilon, C_{1}>0$ s.t. for all $\omega_{0}+b$ with $\|b\|_{L^{4}} \leq \varepsilon, d^{*} b=0,\left.\star b\right|_{\partial D^{4}}=0$, we have $\|b\|_{W^{2,2}}^{2} \leq C_{1}\left\|F_{\omega_{0}+b}\right\|_{L^{2}}^{2}$
+The proof of Uhlenbeck's fundamental lemma also involves the so-called big-slice theorem: Consider the space $L^{p}$ -connection $\mathcal{A}^{p}$ and $W^{1, p}$ -gauge transformation $\mathcal{G}^{1, p}$ ( $p>n=\operatorname{dim} M$ ). Denote $S_{\omega, \varepsilon}^{\text {big }}=\left\{a \in L^{p}\left(M, T^{*} M \otimes \operatorname{Ad} P\right): d_{\omega} a,\left.\star a\right|_{\partial M}=0,\|a\|_{L^{n}}<\varepsilon\right\}$ the big-slice around $\omega \in \mathcal{A}^{p}$ of
+radius $\varepsilon$. There is a $\mathcal{G}^{1, p}$ -equivariant map $\mathcal{G}^{1, p} \times S_{\omega, \varepsilon}^{\text {big }} / \operatorname{Stab}_{\mathcal{G}^{1} p}(\omega) \rightarrow \mathcal{A}^{p}$ given by
+$(\phi, \omega+a) \mapsto \omega+\phi a \phi^{-1}+\phi d_{\omega} \phi^{-1}$, if $\varepsilon \ll 1$, then the map is injective and diffeomorphic onto its image. Moreover its image contains a $L^{n}$ -neighborhood of $\omega$, namely there exists $\delta_{\varepsilon}>0$ s.t. for any $\omega^{\prime} \in \mathcal{A}^{p}$ with $\left\|\omega^{\prime}-\omega\right\|_{L^{n}}<\delta_{\varepsilon}$ one can find a gauge transformation $\phi \in \mathcal{G}^{1, p}$ with $\phi^{*} \omega^{\prime} \in S_{\omega, \varepsilon}^{\text {big }}$.
+
+
+\subsection*{ Irreducible and reducible connections }
+On a $G$ -principal bundle $P \rightarrow G$, for a given connection $\omega$, the corresponding holonomy group at $a$ point $x \in M$ denotes as $\mathrm{Hol}_{x}(\omega)=\left\{\mathcal{P}_{\gamma} \mid \gamma:[0,1] \rightarrow M, \gamma(1)=\gamma(0)=x\right\}$ where $\mathcal{P}_{\gamma}$ is the parallel
+transport along closed curve $\gamma$ given by unique horizontal lift. If $M$ connected, then holonomy group of connection is well-defined as conjugacy class of subgroups of $G$
+A connection is irreducible if the holonomy group is precisely $G$ rather than proper subgrup. Let $\phi \in \mathcal{G}$, $\mathcal{P}_{\gamma}$ is the parallel transport along a curve $\gamma$ w.r.t. connection $H P$ and similarly $\mathcal{P}_{\gamma}^{\phi}$ for $H P^{\phi}$. Then $\phi_{\gamma(0)} \circ \mathcal{P}_{\gamma}=\mathcal{P}_{\gamma}^{\phi} \circ \phi_{\gamma(1)} .$ Suppose $H P$ is fixed by a $\phi$, then $\mathcal{P}_{\gamma}=\mathcal{P}_{\gamma}^{\phi}$ for all curves $\gamma$ and for all
+closed curves $\phi_{\gamma(0)} \circ \mathcal{P}_{\gamma}=\mathcal{P}_{\gamma} \circ \phi_{\gamma(0)} .$ If the connection is irreducible, then every elements in $G$ can be representaed by some $\mathcal{P}_{\gamma}$ and $\phi_{\gamma(0)}$ commutes with $G$, i.e. the stablizer of a irreducible conection in $\mathcal{G}$ is isomorphic to the center of $G$. Moreover, the stablizer of a reducible connection (whose holonomy group is proper subgroup of $G)$ in $\mathcal{G}$ is isomorphic to the centralizer of the holonomy group for the connection in $G$
+Let $x \in M$ be any fixed point and consider gauge transformation $\phi$ s.t. $\phi_{x}=\mathrm{id}$. These gauge transformations form a isotropy subgroup $\mathcal{G}_{0} \subset \mathcal{G}$ so that $\mathcal{G} / \mathcal{G}_{0} \cong G \cdot \mathcal{G}_{0}$ acts freely on $\mathcal{A}:$ suppose $\phi \in \mathcal{G}_{0}$ fixing $H P$, then $\mathcal{P}_{\gamma}=\mathcal{P}_{\gamma}^{\phi}$ for all $\gamma$ starting at $\gamma(0)=x$ and using $\phi_{\gamma(0)}=$ id one conclude $\phi_{\gamma(1)} \circ \mathcal{P}_{\gamma}=\mathcal{P}_{\gamma} \Rightarrow \phi_{\gamma(1)}=\mathrm{id} .$ Thus $\phi=\mathrm{id}$ everywhere due to arbitrainess of $\gamma$
+$\mathcal{G}$ acts almost freely on $\mathcal{A}_{\mathrm{irr}}$ while the restricted gauge group $\mathcal{G}_{0}$ (the isotropy subgroup discussed above) acts freely on $\mathcal{A}$. Let $\mathcal{A}^{\pm}$ denote the space of self-dual/anti-self-dual connections, $\mathcal{A}_{\mathrm{irr}}^{\pm}=\mathcal{A}^{\pm} \cap \mathcal{A}_{\mathrm{irr}}$ the space of irreducible self-dual/anti-self-dual connections. $\mathcal{G}$ preserves $\mathcal{A}_{\mathrm{irr}}^{\pm}$, the quotient space $\mathcal{M}_{\mathrm{irr}}^{\pm}=\mathcal{A}_{\mathrm{irr}}^{\pm} / \mathcal{G}$ is called the moduli space of instantons. Consider $\mathcal{G}_{0}$ and $\widehat{\mathcal{M}}_{\text {irr }}^{\pm}=\mathcal{A}_{\text {irr }}^{\pm} / \mathcal{G}_{0}$ is called the moduli space of framed instantons. There is fibration $G \hookrightarrow \widehat{\mathcal{M}}_{\mathrm{irr}}^{\pm} \rightarrow \mathcal{M}_{\mathrm{irr}}^{\pm}$
+$\mathcal{A} / \mathcal{G}$ is a connected, separable and Hausdorff space with the structure of stratified variety. The set of orbits of reducible connections is a nowhere dense closed subset in this variety. Each stratum carries the structure of a Hilbert manifold whose preimage under the quotient map is a $G$ -invariant submanifold in
+A. Each stratum consists of all orbits of connections with their stabilizers are conjugate subgroups of $\mathcal{G}$ as discussed above. In particular, the stabilizers of all connections in the same stratum are all isomorphic as Lie groups. For the so-called main stratum which consists of the orbits of irreducible connections, the stabilizer is just the set of constant gauge transformations with values in $Z(G) .$ Thus the strata of $\mathcal{A} / \mathcal{G}$ can be labeled by conjugacy classes of closed subgroups of the gauge group $\mathcal{G}$ that are isomorphic to Lie subgroups of $G .$ The set of strata of $\mathcal{A} / \mathcal{G}$ is countable and depending on the topological properties of the $M$ and $G$, the number of strata may be finite; The inclusion relation among conjugacy classes of stabilizers in $\mathcal{G}$ induces a partial ordering of the stabilizers which are used to label the strata so that this carries over to a partial ordering of strata. The stratum with stabilizers conjugated to some given stabilizer is dense in the union of all strata that have stabilizers containing this given stabilizer. In particular, the main stratum, which has merely trivial stabilizer, is dense in $\mathcal{A} / \mathcal{G}$, so that the singular strata can be approximated arbitrarily well by irreducible connections.
+
+
+\subsection*{Local structure of moduli space}
+Let $P \rightarrow M$ be a principal $G$ -bundle on oriented Riemannian 4 -manifold and $\omega$ be a self-dual connection. The tangent space $T_{\omega} \mathcal{A}^{+} \subset T_{\omega} \mathcal{A}$ defined by linearized self-duality equation consits of tangential directions to tge gauge orbit $\mathcal{G} \cdot \omega \cdot$ If $\omega$ is irreducible, then the orthogonal complement of $T_{\omega}(\mathcal{G} \cdot \omega)$ w.r.t. suitable inner product in $T_{\omega} \mathcal{A}^{+}$ is isomorphic to $T_{\omega} \mathcal{M}_{\mathrm{irr}}^{+} .$ In order to recognize the directions tangent to gauge orbit, we need to look into infinitesimal gauge transfomration. Consider a curve $\phi_{t} \in \mathcal{G}$ with $\phi_{0}=\mathrm{id}$, its dierivative w.r.t. $t$ is an element in $T_{\mathrm{id}} \mathcal{G} \cong C^{\infty}(M ; \mathrm{Ad} P)$. We can define a map exp: $C^{\infty}(M ; \operatorname{Ad} P) \rightarrow \mathcal{G}$ via applying exponential map fiberwise (in contray to finite dimensional Lie algebra, there may be gauge transformation arbitrarily close to id but not in the image of exponential map). If $\xi \in C^{\infty}(M ; \operatorname{Ad} P)$ is determined by a family of local functions $\left\{\xi_{i}: U_{i} \rightarrow g\right\}$, then $\phi_{t}:=\exp (t \xi) \in \mathcal{G}$ is determined by $\left\{\exp \left(t \xi_{i}\right): U_{i} \rightarrow G\right\}$, meanwhile the connection $\omega$ is determined
+by $\left\{A_{i} \in \Omega^{1}\left(U_{i} ; g\right)\right\}$ on which the gauge transformation acts as $A_{i}^{\phi_{t}}=\exp \left(t \xi_{i}\right) A_{i} \exp \left(-t \xi_{i}\right)-d \exp \left(t \xi_{i}\right) \cdot \exp \left(-t \xi_{i}\right) .$ The infinitesimal gauge transformation is given
+by $\left.\frac{d}{d t}\right|_{t=0} A_{i}^{\phi_{t}}=\xi_{i} A_{i}-A_{i} \xi_{i}-d \xi_{i}=-d_{A_{i}} \xi_{i}$ which are local local representative of
+$d_{\omega} \xi \in \Omega^{1}(M ; \mathrm{A} \mathrm{d} P)$. This gives raise the following twisted half de Rham complex (also called deformation complex)
+$$
+0 \rightarrow \Omega^{0}(M ; \mathrm{Ad} P) \stackrel{d_{\omega}}{\rightarrow} \Omega^{1}(M ; \mathrm{Ad} P) \stackrel{d_{\omega}^{-}}{\longrightarrow} \Omega_{-}^{2}(M ; \mathrm{Ad} P) \rightarrow 0
+$$
+where $d_{\omega}^{-}=\mathrm{pr}_{-} \circ d_{\omega}, \mathrm{pr}_{-}$ means projection onto anti-self-dual part. Since $\omega$ is self-dual, then $d_{\omega}^{-} \circ d_{\omega}=\mathrm{pr}_{-} \circ d_{\omega} \circ d_{\omega}=\mathrm{pr}_{-} \circ F_{\omega}=F_{\omega}^{-}=0 .$ In fact, $a \in T_{\omega} \mathcal{A}$ is tangent to $\mathcal{A}^{+}$ iff.
+$a \in \operatorname{ker}\left(d_{\omega}^{-}\right)$ while it is tangent to the gauge orbit iff. $a \in \operatorname{im}\left(d_{\omega}\right):$ For a fix $\omega \in \mathcal{A}$, $\underset{\phi \rightarrow \phi^{*} \omega}{\text { evu: }}$ and
+$D_{\text {id }} e v_{\omega}: \Gamma($ Ad $P) \rightarrow \Omega^{1}(M ; A d P)$ where $\nabla$ is the covariant derivative on $A d P$ induced from $\omega$ and $\xi \rightarrow \nabla \xi$
+$\Gamma(\operatorname{Ad} P) \cong T_{\mathrm{id}} \mathcal{G}, T_{\omega} \mathcal{A} \cong \Omega^{1}(M ; \mathrm{Ad} P) .$ This implies $\operatorname{ker}\left(d_{\omega}\right)=\operatorname{ker}(\nabla)=\operatorname{Lie}\left(\operatorname{Stab}_{g}(\omega)\right)$ and
+$\operatorname{im}\left(d_{\omega}\right)=\operatorname{im}(\nabla)=T_{\omega}(\mathcal{G} \cdot \omega) .$ If $\omega$ is irreducible, then $T_{[\omega]} \mathcal{M}_{\mathrm{irr}}^{+}=\frac{\operatorname{ker}\left(d_{\omega}^{-}\right)}{\operatorname{im}\left(d_{\omega}\right)}=H_{\omega}^{1}$, this can be further
+identified as $\left.\left.\operatorname{ker}\left(d_{\omega}^{-}\right)\right|_{\operatorname{im}\left(d_{\omega}\right)} \cong \operatorname{ker}\left(d_{\omega}^{-}\right)\right|_{\operatorname{ker}\left(d_{\nu}^{*}\right)}$, which somehow convinces that it is right to work with
+Coulomb gauge. Also for an irreducible connection $\operatorname{dim} H_{\omega}^{0}=0: \operatorname{dim} H_{\omega}^{0} \neq 0$ iff. there is $\xi \in \Omega^{0}(M ; \operatorname{Ad} P)$ s.t. $d_{\omega} \xi=0$, such $\xi$ is invariant under parallel transport hence commutes with the holonomy group of the connection and lies in the $Z(\operatorname{Lie}(\mathrm{Hol}(\omega)))$. Since the connection is irreducible, this Lie algebra is acutually $\mathfrak{g}$, which has no non-trivial center in the semisimple case. The second cohomology $H_{\omega}^{2}=\frac{\Omega_{-}^{2}(M ; \mathrm{Ad} P)}{\operatorname{im}\left(d_{2}^{-}\right)} \cong \operatorname{coker}\left(d_{\omega}^{-}\right) \cong \operatorname{coker}\left(\left.d_{\omega}^{-}\right|_{\operatorname{ker}\left(d_{\omega}^{*}\right)}\right)$
+
+
+A priori, we don't know whether the moduli space of instanton is Hausdorff or a smooth finite-dimensional manifold. Thus this tangent space is also called virtual tangent space by this virtue. Now define the socalled anti-self-dual curvature map $f: A \rightarrow \Omega_{-}^{2}\left(M_{;} \mathrm{Ad} P\right)$
+$\omega \rightarrow F_{\mathrm{w}}^{-}$ and
+$d f_{\omega}: T_{\omega} \mathcal{A} \cong \Omega^{1}(M ; \mathrm{Ad} P) \stackrel{d_{\omega}}{\longrightarrow} T_{F_{\omega}^{-}} \Omega_{-}^{2}(M ; \operatorname{Ad} P) \cong \Omega_{-}^{2}(M ; \operatorname{Ad} P) .$ Its kernel $\operatorname{ker}\left(d f_{\omega}\right)$ is the
+(vitural) tangent space to the solution of $f(\omega)=0$, which is exactly the self-dual Yang-Mills equation. This can be thought of as the space of solutions to linearized Yang-Mills equation. This map further descends to $f: \mathcal{A} / \mathcal{G} \rightarrow \Omega_{-}^{2}(M ; \mathrm{Ad} P)$ with differential $d f_{[\omega]}: T_{[\omega]} \mathcal{A} / \mathcal{G} \cong T_{\omega} \mathcal{A} / T_{\omega}(\mathcal{G} \cdot \omega) \rightarrow \Omega_{-}^{2}(M ; \mathrm{Ad} P)$
+Suppose $\omega$ solves $f(\omega)=0, \omega$ is a regular point and 0 is a regular value of $f$ iff. $\operatorname{coker}\left(d f_{\omega}\right)=0$ (surjectivity). Here we simply make this as an additional assumption, which is indeed true in some meaningful cases to be demonstrated latter. If $f$ is a Fredhom map, then by the implicit function theorem for Fredholm map between Banach manifolds, which provide a Banach manifold version of regular value theorem, $f^{-1}(0)=\mathcal{A}^{+}$ would be a smooth manifold. However, $f$ can not be Fredholm in general because $f^{-1}(0)$ carries free action of $\mathcal{G}^{3,2}$ (gauge transformations of $W^{3,2}$ class) on irreducible connections in $\mathcal{A}^{2,2}$ (connections of class $W^{2,2}$ ), which is infinite dimensional, $f^{-1}(0)$ thus can not be isomorphic to any finite dimensional manifold. One can also see this from the fact $\operatorname{im}\left(d_{\omega}\right) \subset \operatorname{ker}(f)$ and $\mathrm{im}\left(d_{\omega}\right)$ is infinite dimensional, hence $f$ has infinite dimensional kernel in general. We can resolve of this issue by restricting $d f_{\omega}$ to the tangent space of a slice $\mathcal{S}$ around $\omega$ is given as $\left.d_{\omega}^{-}\right|_{\operatorname{ker}\left(d_{\omega}^{*}\right)}$ where $\operatorname{ker}\left(d_{\omega}^{*}\right)$ is identified with $T_{\omega+a} \mathcal{S}$ with $a \in \operatorname{ker}\left(d_{\omega}^{*}\right)$ sufficiently small (this is called the Coulomb gauge slice), then $\left.d f\right|_{T_{\mathrm{w}+a}} s=\left.d_{\omega}^{-}\right|_{\mathbf{k e r}\left(d_{\omega}^{*}\right)}$ has $H_{\omega}^{1}$ as kernel and $H_{\omega}^{2}$ as cokernel as discussed above. Once we show $H_{\omega}^{1}$ and $H_{\omega}^{2}$ are finite dimensional, the job is done. For this purpose, we need the theory of elliptic complex, at the moment we just take it for granted. To capture the local picture of the moduli space, the so-called Kuranishi model is very helpful: Let $f: X \rightarrow Y$ be a Fredholm map between Banach spaces. Pick a point $p \in f^{-1}(0)$, since $\operatorname{ker}\left(d f_{p}\right)$ and $\operatorname{im}\left(d f_{p}\right)$ are closed subspaces in $X$ resp. $Y$, one can choose appropriate completements $\operatorname{ker}\left(d f_{p}\right)^{\perp}$ resp. $\operatorname{im}\left(d f_{p}\right)^{\perp} \cong \operatorname{coker}\left(d f_{p}\right)$. Then there is a diffeomorphism $\varphi$ of a neighborhood of $0 \in X$ onto a neighborhood $V$ of $x \in f^{-1}(0) \subset X$ s.t. in the neighborhood of the origin there is $f \circ \varphi=T+K$ where $T: \operatorname{ker}\left(d f_{p}\right)^{\perp} \rightarrow \mathrm{im}\left(d f_{p}\right)$ is a linear isomorphism and $K: X \rightarrow \operatorname{coker}\left(d f_{p}\right)$. The restriction of $K$ to the kernel $\kappa: \operatorname{ker}\left(d f_{p}\right) \rightarrow \operatorname{coker}\left(d f_{p}\right)$
+is called the Kuranishi map, then a neighborhood of $p \in f^{-1}(0)$ is homeomorphic to a neighborhood of origin in $\kappa^{-1}(0)$. This is saying $\kappa^{-1}(0)$ is a finite-dimensional model of $f^{-1}(0)$. More generally, "Kuranishi structures" are a formalism in which the moduli space is everywhere locally given as the zeros of maps like $\kappa .$ In the case here, the curvature map $f: \mathcal{A} \rightarrow \Omega_{-}^{2}(M ; \mathrm{Ad} P)$ has a Kuranishi map $\kappa: H_{\omega}^{1} \rightarrow H_{\omega}^{2} .$ The fact that $d_{\omega}$ commutes with the action of $\operatorname{Stab}_{\mathcal{g}}(\omega)$ yields a well-defined action $\operatorname{Stab}_{\mathcal{G}}(\omega) \times H_{\omega}^{p} \rightarrow H_{\omega}^{p}$, the Kuranishi map $\kappa$ is equivariant under this action. In the end we come to the important consequence: $\mathcal{M}_{\mathrm{irr}}^{+}=\mathcal{A}_{\mathrm{irr}}^{+} / \mathcal{G}$ is finite dimensional smooth manifold. Moreover, the dimension of the moduli space can be computed explicitly using the profound Atiyah-Hitchin-Singer formula.
+
+\subsection*{Elliptic complex}
+Now we introduce the elliptic complex. First denote the space of germs (i.e. the stalk) of function at $x \in M$ as $\mathscr{F}_{x}:=C^{\infty}(M)_{x}$ which is a local ring. Its maximal ideal is $m_{x}=\left\{f \in \mathscr{F}_{x} \mid f(x)=0\right\}$. The space of products of $k$ germs $m_{x}^{k}=\left\{f \in \mathscr{F}_{x} \mid f(x)=0, d f(x)=0, \ldots, d^{k-1} f(x)=0\right\}$ is the space of germs vanishing up to order $k-1$ at $x .$ We have $\mathscr{F}_{x} / m_{x} \cong \mathbb{R}, T_{x}^{*} M=m_{x} / m_{x}^{2}$ $\mathrm{m}_{x}^{k-1} / \mathrm{m}_{x}^{k} \cong S^{k-1} T_{x}^{*} M .$ There is a short exact sequence
+$$
+0 \rightarrow \mathrm{m}_{x}^{k} / \mathrm{m}_{x}^{k+1} \rightarrow \mathscr{F}_{x} / \mathrm{m}_{x}^{k+1} \rightarrow \mathscr{F}_{x} / \mathrm{m}_{x}^{k} \rightarrow 0
+$$
+$E \rightarrow M$ is a vector bundle, denote the space of germs of smooth sections of $E$ at $x$ as $\mathscr{E}_{x}:=\Gamma(E)_{x}$ which is a rank $E$ free module over $\mathscr{F}_{x}$ and we have the $\mathscr{F}_{x}$ -modules $\mathrm{m}_{x}^{k+1} \otimes_{\mathscr{F}_{x}} \mathscr{E}_{x}$ such that $\left(\mathrm{m}_{x}^{k} \otimes_{\mathscr{F}_{x}} \mathscr{E}_{x}\right) /\left(\mathrm{m}_{x}^{k+1} \otimes_{\mathscr{F}_{x}} \mathscr{E}_{x}\right) \cong S^{k} T_{x}^{*} M \otimes E_{x}$ where $E_{x}=\mathscr{E}_{x} /\left(\mathfrak{m}_{x} \otimes_{\mathscr{F}_{x}} \mathscr{E}_{x}\right)$ and
+$\left(T^{*} M \otimes E\right)_{x}=\left(\mathrm{m}_{x} \otimes_{\mathscr{F}_{2}} \mathscr{E}_{x}\right) /\left(\mathfrak{m}_{x}^{2} \otimes_{\mathscr{F}} \mathscr{E}_{x}\right)$. Tensoring $\mathscr{F}_{x}$ with $\mathscr{E}_{x}$ and obtain a short exact
+sequence
+Let $E$ and $F$ be voctor bundles over $M$. A linear differential operator from $E$ to $F$ of order at most $k$ is a linear map $D: \Gamma(E) \rightarrow \Gamma(F)$ s.t. $D(f)_{x}=0 \forall f \in \mathrm{m}_{x}^{k+1} \otimes_{\mathscr{F}_{x}} \mathscr{E}_{x}$ at any $x \in M .$ The induced
+linear map $\sigma(D): S^{k} T_{x}^{*} M \otimes E_{x} \rightarrow F_{x}$ given by
+$\sigma(D)\left(d f_{1}(x) \odot \cdots \odot d f_{k}(x) \otimes v\right):=D\left(f_{1} \cdots f_{k} \cdot s\right)_{x} \forall f_{1}, \ldots, f_{k} \in \mathfrak{m}_{x}$ and $s \in \mathscr{E}_{x}, s(x)=v$ is
+called the symbol of $D$. We say $D$ is of order $k$ if it is of order at most $k$ and its symbol is not identically zero. $D$ is called elliptic iff. $\sigma_{\alpha}(D):=\sigma(D)(\alpha \odot \cdots \odot \alpha): E_{x} \rightarrow F_{x}$ is an isomorphism $\forall x \in M$ and $\forall \alpha \in T_{x}^{*} M \backslash\{0\}$
+A sequence of linear differential operators between vector bundles
+$$
+\cdots \rightarrow \Gamma\left(E_{k}\right) \stackrel{D_{k}}{\longrightarrow} \Gamma\left(E_{k+1}\right) \stackrel{D_{k+1}}{\longrightarrow} \Gamma\left(E_{k+2}\right) \rightarrow \cdots
+$$
+is a complex iff. $D_{k+1} \circ D_{k}=0 \quad \forall k \in \mathbb{Z}$. Such a complex is called elliptic iff. the corresponding symbol sequence
+$$
+\cdots \longrightarrow E_{k} \stackrel{\sigma_{\alpha}\left(D_{k}\right)}{\longrightarrow} E_{k+1} \stackrel{\sigma_{\alpha}\left(D_{k+1}\right)}{\longrightarrow} E_{k+1} \longrightarrow \cdots
+$$
+is exact $\forall \alpha \in T^{*} M \backslash 0_{M} .$ When the sequence contains only two vector bundles, the complex is elliptic iff. the linear differential operator is elliptic in the usual sense.
+Examples:
+- covariant derivative on a vector bundle $E$ is a first-order linear differential operator $\nabla: \Gamma(E) \rightarrow \Gamma\left(T^{*} M \otimes E\right)$ with symbol equal to the identity map of $T_{x}^{*} M \otimes E_{x} .$ It is elliptic only in the case of 1-dim. manifold, otherwise $\operatorname{dim} E_{x}<\operatorname{dim}\left(T_{x}^{*} M \otimes E_{x}\right)$, the symbol map defined above can't be isomorphism.
+- The exterior differential $d: \Omega^{k}(M) \rightarrow \Omega^{k+1}(M)$ is a first-order differential operator with the symbol map $\sigma_{\alpha}(d): \Lambda^{k} T_{x}^{*} M \rightarrow \Lambda^{k+1} T_{x}^{*} M$ given by $\beta \mapsto \alpha \wedge \beta .$ Similarly on Riemannian manifold, the
+codifferential $d^{*}: \Omega^{k}(M) \rightarrow \Omega^{k-1}(M)$ is also a first-order linear differential operator with symbol map $\sigma_{\alpha}\left(d^{*}\right): \Lambda^{k} T_{x}^{*} M \rightarrow \Lambda^{k-1} T_{x}^{*} M$ given by $\beta \mapsto \star(\alpha \wedge \star \beta) .$ These are not elliptic.
+- The Laplacian operator $\Delta:=d d^{*}+d^{*} d: \Omega^{k}(M) \rightarrow \Omega^{k}(M)$ is a second-order linear differential operator and its symbol map $\sigma_{\alpha}(\Delta): \Lambda^{k} T_{x}^{*} M \rightarrow \Lambda^{k} T_{x}^{*} M$ is given by $\beta \mapsto\langle\alpha, \alpha\rangle \beta$. The Laplacian
+operator is elliptic iff. the metric $\langle\cdot, \cdot\rangle$ is positive definite, i.e. in the case of Riemannian manifold.
+- The de Rham complex $\cdots \stackrel{d}{\rightarrow} \Omega^{k}(M) \stackrel{d}{\rightarrow} \Omega^{k+1}(M) \stackrel{d}{\rightarrow} \cdots$ is elliptic with exact symbol sequence
+$\cdots \stackrel{\alpha \wedge^{*}}{\longrightarrow} \Lambda^{k} T_{x}^{*} M \stackrel{\alpha \wedge \cdot}{\rightarrow} \Lambda^{k+1} T_{x}^{*} M \stackrel{\alpha \wedge}{\longrightarrow} \cdots$
+- The twisted half de Rham complex is also elliptic. The symbol map $\sigma_{\alpha}\left(d_{\omega}\right)=\sigma_{\alpha}(\nabla): \operatorname{Ad} P_{x} \rightarrow T_{x}^{*} M \otimes \operatorname{Ad} P_{x}, v \mapsto \alpha \otimes v$ is injective for $\alpha \neq 0 .$ One can check the
+symbol sequence
+$$
+0 \longrightarrow \mathrm{Ad} P_{x} \stackrel{\otimes \alpha}{\rightarrow} T_{x}^{*} M \otimes \mathrm{Ad} P_{x} \stackrel{\mathrm{pr_{- }}(\alpha \wedge \cdot)}{\longrightarrow} \Lambda_{-}^{2} T_{x}^{*} M \otimes \mathrm{Ad} P_{x} \longrightarrow 0
+$$
+is exact $\left(\mathrm{Ad} P_{x} \cong g\right) .$ The twisted half de Rham complex is equivalent to $\Omega^{1}(M ; \mathrm{Ad} P) \stackrel{d^{*} \oplus d_{2}^{-\prime}}{\longrightarrow} \Omega^{0}(M ; \operatorname{Ad} P) \oplus \Omega_{-}^{2}(M ; \mathrm{Ad} P)$, this shows $d_{\omega}^{*} \oplus d_{\omega}^{-}$ is an elliptic operator.
+
+Recall $D=d+d^{*}: \Gamma\left(\Lambda^{\mathrm{even}} T^{*} M\right) \rightarrow \Gamma\left(\Lambda^{\mathrm{odd}} T^{*} M\right)$ is self-adjoint elliptic operator. On even-
+dimensional Riemannian manifold $M^{2 n},\left.\star^{2}\right|_{\Lambda^{l} T^{*} M}=(-1)^{l}$ id. A Clifford involution $\tau:=\mathbf{i}^{l(l+1)+n} \star$ is defined on $\Lambda^{l} T_{\mathbb{C}}^{*} M$ such that $D \circ \tau=-\tau \circ D$ on $\Gamma\left(\Lambda^{*} T_{\mathbb{C}}^{*} M\right)$ (so now $D$ is an untwisted usual Dirac operator on $\left.\Gamma\left(\Lambda^{*} T_{\mathbb{C}}^{*} M\right)\right)$. Denote $\Lambda^{\pm} T_{\mathrm{C}}^{*} M$ the eigenspaces of $\tau$ for eigenvalues $\pm 1$, then $D$ splits into two parts $D^{\pm}: \Gamma\left(\Lambda^{\pm} T_{\mathbb{C}}^{*} M\right) \rightarrow \Gamma\left(\Lambda^{\mp} T_{\mathrm{C}}^{*} M\right)$. Twsited objects are defined analogously. Here in our case of 4-manifold, the twisted coefficient system is $\Lambda^{-} T_{\mathrm{C}}^{*} M \otimes \mathrm{Ad} P_{\mathrm{C}}=\left(T_{\mathrm{C}}^{*} M\right)_{-} \otimes \mathrm{Ad} P_{\mathrm{C}}$. The $\hat{A}$ -
+genus is given by $\hat{A}(M)=1-\frac{1}{24} p_{1}(M)$.
+By Hodge theorem, $H_{\mathrm{dR}}^{2}(M) \cong \mathcal{H}^{2}(M):=\operatorname{ker}(\Delta)$ (space of harmonic 2-forms). $\star \Delta=\Delta \star \Rightarrow$
+$\mathcal{H}^{2}(M)=\mathcal{H}_{+}^{2}(M) \oplus \mathcal{H}_{-}^{2}(M)$ (space of SD/ASD harmoic 2 -form). By Poincaré duality ( $M$ is assumed to be compact), the intersection form
+$$
+\begin{aligned}
+Q_{M}: \mathcal{H}^{2}(M) \times \mathcal{H}^{2}(M) & \rightarrow \mathbb{R} \\
+(\omega, \eta) & \mapsto \int_{M} \omega \wedge \eta
+\end{aligned}
+$$
+is a non-degenrate symmetric bilinear quadratic form. $\left.Q_{M}\right|_{\mathcal{H}_{+}^{2}}$ is positive definite while $\left.Q_{M}\right|_{\mathcal{H}^{2}}$ is negative definite. Deinfe $b_{2}^{\pm}(M)=\operatorname{dim} \mathcal{H}_{\pm}^{2}(M)$, they are the maximal dimension of positive/negative definite subspace in $H_{\mathrm{dR}}^{2}(M)$ for $Q_{M}$. There are relation:
+Thus the dimension formula can also be expressed as
+$$
+\operatorname{dim} \mathcal{M}_{\mathrm{irr}}^{+}=2\left\langle p_{1}(\mathrm{Ad} P),[M]\right\rangle-\operatorname{dim} G \cdot\left(1-b_{1}(M)+b_{2}^{-}(M)\right)
+$$
+
+
+
+
+\subsection*{Dimension of moduli space}
+Let $M$ be a compact manifold and $D: \Gamma(E) \rightarrow \Gamma(F)$ is an elliptic operator. Then its kernel and cokernel are finite-dimensional (namely $D$ is a Fredholm operator) and denote by ind $D=\operatorname{dim} \operatorname{ker}(D)-\operatorname{dim} \operatorname{coker}(D)$ its Fredholm index. For a finite elliptic complex over a compact manifold $\left(\mathscr{E}_{\bullet}, D_{\bullet}\right)$, the quotient space $H^{i}\left(\mathscr{E}_{\bullet}, D_{\bullet}\right)=\operatorname{ker}\left(D_{i}\right) / \operatorname{im}\left(D_{i-1}\right)$ are finite dimensional. The
+index of the elliptic complex is dfined as the Euler characteristic $\operatorname{ind}\left(D_{\bullet}\right)=\sum_{i \in \mathbb{Z}}(-1)^{i} \operatorname{dim} H^{i}\left(\mathscr{E}_{\bullet}, D_{\bullet}\right)$
+Theorem (Atiyah-Hitchin-Singer): Let $M$ be a compact Riemannian 4-manifold of self-dual type (i.e. admits self-dual Weyl curvature) with positive scalar curvature. Then the moduli space $\mathcal{M}_{\mathrm{irr}}^{+}$ of irreducible self-dual connections (SD instantons) on a given principal $G$ -bundle ( $G$ is compact semisimple Lie group) $P \rightarrow M$ is either empty or it is a smooth manifold with real dimension
+$$
+\operatorname{dim} \mathcal{M}_{\mathrm{irr}}^{+}=\left\langle p_{1}\left(\mathrm{Ad} P_{\mathrm{C}}\right),[M]\right\rangle-\frac{1}{2} \operatorname{dim} G \cdot(\chi(M)-\operatorname{sign}(M))
+$$
+Reminder:
+- A compact semisimple Lie group is a compact Lie group with trivial or discrete center. In this case a connection is irreducible iff. $\operatorname{Ad} P$ admits no parallel section (if $G$ has a non-trivial center, then $\mathfrak{g}$ would contain non-trivial Ad -invariant elements giving raise non-trivial global parallel sections for every principal connection).
+- The Riemann curvature tensor is symmetric map $R: \Lambda^{2} T^{*} M \rightarrow \Lambda^{2} T^{*} M .$ On 4-manifold, it admits a block decomposition $R: \Lambda_{+}^{2} T^{*} M \oplus \Lambda_{-}^{2} T^{*} M \rightarrow \Lambda_{+}^{2} T^{*} M \oplus \Lambda_{-}^{2} T^{*} M$
+$$
+R=\left(\begin{array}{ll}
+A & B \\
+B^{*} & C
+\end{array}\right)
+$$
+where $\operatorname{tr} A=\operatorname{tr} C=\frac{\text { Scal }}{4}, B=$ Ric $-\frac{\text { Scal }}{4} \mathrm{~g}, A-\frac{\text { Scal }}{12} \mathrm{id}=W_{+}$ (self-dual Weyl curvature), $C-\frac{\text { Scal }}{12} \mathrm{id}=W_{-}$ (anti-self-dual Weyl curvature). By definition, a manifold is self-dual if the component of $R$ in $+$ sector reduces to its diagonal part.
+- The proof involves the Atiyah-Singer index theorem for the twisted Dirac operator $D_{\omega}=d_{\omega}+d_{\omega}^{*}$ :
+$$
+\begin{aligned}
+\operatorname{ind}\left(D_{\omega}\right) &=\int_{M} \operatorname{ch}\left(\left(T_{\mathrm{C}}^{*} M\right)_{-} \otimes \mathrm{Ad} P_{\mathrm{C}}\right) \hat{A}(T M) \\
+&=\int_{M} \operatorname{ch}\left(\mathrm{Ad} P_{\mathrm{C}}\right) \operatorname{ch}\left(\left(T_{\mathrm{C}}^{*} M\right)_{-}\right) \hat{A}(T M)
+\end{aligned}
+$$
+
+Recall $D=d+d^{*}: \Gamma\left(\Lambda^{\mathrm{even}} T^{*} M\right) \rightarrow \Gamma\left(\Lambda^{\mathrm{odd}} T^{*} M\right)$ is self-adjoint elliptic operator. On even-
+dimensional Riemannian manifold $M^{2 n},\left.\star^{2}\right|_{\Lambda^{l} T^{*} M}=(-1)^{l} \mathrm{id} .$ A Clifford involution $\tau:=\mathbf{i}^{l(l+1)+n} \star$ is defined on $\Lambda^{l} T_{\mathbb{C}}^{*} M$ such that $D \circ \tau=-\tau \circ D$ on $\Gamma\left(\Lambda^{\bullet} T_{\mathbb{C}}^{*} M\right)$ (so now $D$ is an untwisted usual Dirac operator on $\left.\Gamma\left(\Lambda^{*} T_{\mathrm{C}}^{*} M\right)\right)$. Denote $\Lambda^{\pm} T_{\mathrm{C}}^{*} M$ the eigenspaces of $\tau$ for eigenvalues $\pm 1$, then $D$ splits into two parts $D^{\pm}: \Gamma\left(\Lambda^{\pm} T_{\mathbb{C}}^{*} M\right) \rightarrow \Gamma\left(\Lambda^{\mp} T_{\mathrm{C}}^{*} M\right)$. Twsited objects are defined analogously. Here in our case of 4-manifold, the twisted coefficient system is $\Lambda^{-} T_{\mathrm{C}}^{*} M \otimes \mathrm{Ad} P_{\mathrm{C}}=\left(T_{\mathrm{C}}^{*} M\right)_{-} \otimes \mathrm{Ad} P_{\mathrm{C}} .$ The $\hat{A}$ -
+genus is given by $\hat{A}(M)=1-\frac{1}{24} p_{1}(M)$.
+By Hodge theorem, $H_{\mathrm{dR}}^{2}(M) \cong \mathcal{H}^{2}(M):=\operatorname{ker}(\Delta)$ (space of harmonic 2-forms). $\star \Delta=\Delta \star \Rightarrow$
+$\mathcal{H}^{2}(M)=\mathcal{H}_{+}^{2}(M) \oplus \mathcal{H}_{-}^{2}(M)$ (space of SD/ASD harmoic 2 -form). By Poincaré duality $(M$ is assumed to be compact), the intersection form
+$$
+\begin{aligned}
+Q_{M}: \mathcal{H}^{2}(M) \times \mathcal{H}^{2}(M) & \rightarrow \mathbb{R} \\
+(\omega, \eta) & \mapsto \int_{M} \omega \wedge \eta
+\end{aligned}
+$$
+is a non-degenrate symmetric bilinear quadratic form. $\left.Q_{M}\right|_{\mathcal{H}_{+}^{2}}$ is positive definite while $\left.Q_{M}\right|_{\mathcal{H}^{2}}$ is negative definite. Deinfe $b_{2}^{\pm}(M)=\operatorname{dim} \mathcal{H}_{\pm}^{2}(M)$, they are the maximal dimension of positive/negative definite subspace in $H_{\mathrm{dR}}^{2}(M)$ for $Q_{M} .$ There are relation:
+Thus the dimension formula can also be expressed as
+$$
+\operatorname{dim} \mathcal{M}_{\mathrm{irr}}^{+}=2\left\langle p_{1}(\mathrm{Ad} P),[M]\right\rangle-\operatorname{dim} G \cdot\left(1-b_{1}(M)+b_{2}^{-}(M)\right)
+$$
+
+
+\subsection*{Compactness of moduli space}
+We start with some local perspective. Denote the curvature slice as $S C_{\varepsilon}:=\left\{\omega=\omega_{0}+a: d^{*} a=0,\left.\star b\right|_{\partial D^{4}}=0,\left\|F_{\omega}\right\|<\varepsilon / 2\right\}$ with $\omega_{0}$ flat connection. The curvature
+map on the curvature slice $S C_{\varepsilon} \rightarrow L^{2}\left(M, \Lambda^{2} T^{*} M \otimes \operatorname{Ad} P\right)$ is proper for $\varepsilon \ll 1$.
+Consider ASD instantons on a principal $G$ -bundle $P$ over a closed Riemannian 4 -manifold $M$. All the following discussions work exactly the same for SD instantons, i.e. for any YM connections over 4 -manifold
+in general.
+Let $\left\{\omega_{i}\right\}$ be a sequence of ASD connections, $\|\omega\|_{L^{2}}^{2}=8 \pi^{2}\left\langle c_{2}(P),[M]\right\rangle=-8 \pi^{2} k$ is constant indepednent of $\omega$. Pick a cover $X=\bigcup_{i \in I} D_{\delta}^{4}\left(x_{i}\right)$ s.t. for any $x \in M$ at most $N$ balls contain $x$. Then we can find a subsequence of ASD connections $\left\{\omega_{j}\right\}$ so that the $\left\|F_{\omega_{j}}\right\|_{L^{2}\left(D_{b}^{4}\left(x_{i}\right)\right)}^{2}<\varepsilon$ in $M$ except for $\frac{N}{\varepsilon}\|\omega\|_{L^{2}}^{2}$ balls. Iterating this process we get a cover of $M^{c}:=M \backslash\left\{x_{1}, \ldots, x_{l}\right\}$ s.t. for any balls in this cover, the $L^{2}$ -bound for the curvatures holds for the subsequence and we can apply Uhlenbeck's fundamental lemma to patch connections over these balls. After proper gauge fixing, there is strong convergence $\left.\left[\omega_{i}\right]\right|_{M^{c}} \stackrel{C_{b e}^{\infty}}{\longrightarrow}[\omega] .$ However if $\left\|F_{\omega}\right\|_{L^{2}\left(M^{\epsilon}\right)}^{2}<\left\|F_{\omega_{i}}\right\|_{L^{2}(M)}^{2}=-8 \pi^{2} k$, we only have weak
+convergence $F_{\omega_{i}} \stackrel{L^{2}}{\rightarrow} F_{\omega}$.
+Theorem (Uhlenbeck's removable singularities): Suppose $\omega$ be an ASD connection on $D^{4} \backslash\{0\} \times G$. If $\left\|F_{\omega}\right\|_{L^{2}}^{2}<\infty$, then there is an ASD connection $\omega^{\prime}$ over $D^{4}$ gauge equivalent to $\omega$ over $D^{4} \backslash\{0\}$ via a gauge transforamtion $\phi \in C^{\infty}\left(D^{4} \backslash\{0\} ; G\right)$.
+The point is that the topology of the bundle might change if $0 \neq \phi \in \pi_{3}(G)$. This theorem allows us to extend the limit $\omega$ to a connection $\omega^{\prime}$ no a possibly different bundle $P^{\prime} \rightarrow M$. If $\pi_{1}(G) \neq\{0\}$ then $P$ might have non-trivial characteristic classes in degree 2, which are unaffected under $\phi$, while only those degree-4 classes could be changed.
+$\mathcal{M}^{-}\left(D_{r}^{4}(0)\right)$ is the moduli space of ASD connections over $D_{r}^{4}(0) \subset \mathbb{R}^{4}$, while $\mathcal{M}_{\varepsilon}^{-}\left(D_{1}^{4}(0)\right):=\left\{[\omega] \in \mathcal{M}^{-}\left(D_{1}^{4}(0)\right):\left\|F_{\omega}\right\|_{L^{2}}^{2}<\varepsilon\right\} .$ Uhlenbeck shows the restraction map (restrcting
+connections to a smaller ball) $\mathcal{M}_{\varepsilon}^{-}\left(D_{1}^{4}(0)\right) \rightarrow \mathcal{M}^{-}\left(D_{r<1}^{-}(0)\right)$ is compact when $\varepsilon \ll 1$. This is local compactness for moduli space.
+
+Now come to global compactness. Let $\left[\omega_{i}\right] \in \mathcal{M}$ be a sequence of gaueg equivalent classes of ASD connections on $P \rightarrow M .$ As before, we can find a fintie collectino of points $\left\{x_{1}, \ldots, x_{l}\right\} \subset M$ and a cover of $M^{c}=M \backslash\left\{x_{1}, \ldots, x_{l}\right\}=\bigcup_{\alpha \in \Lambda} D_{r_{\alpha}}^{4}\left(x_{\alpha}\right)$ s.t. for any $x \in M^{c}$ there are at most $N$ balls that
+contains $x .$ For each $\omega_{i},\left\|F_{\omega_{i}}\right\|_{L^{2}}^{2} \leq \varepsilon$ so that we can apply Uhlenbeck fundamental lemma. Using the Iocal compactness theorem, $\mathcal{M}_{\varepsilon}^{-}\left(D_{r_{\alpha}}^{4}\left(x_{\alpha}\right)\right) \rightarrow \mathcal{M}^{-}\left(D_{r_{\alpha} / 2}^{4}\left(x_{\alpha}\right)\right)$ is compact. Passing to a subsequence, $\left.\left[\omega_{i}\right]\right|_{D_{r \alpha / 2}\left(x_{\alpha}\right)}$ converge for all $\alpha \in \Lambda .$ Using patching argument to get $\phi_{i}$ on $\left.P\right|_{M^{c}}$ s.t. $\phi_{i}^{*} \omega_{i} \stackrel{W_{\mathrm{loc}}^{1,2}}{\longrightarrow} \omega$
+strongly on $\left.P\right|_{M^{e}}$. To extend $\omega$ to a connection on $M$, we apply the Uhnlenbeck's removable singularites theorem. Therefore, by applying a gauge transformaition on $\left.P\right|_{M^{e}}, \omega$ becomes a smooth ASD connection $\omega^{\prime}$ on $P^{\prime} \rightarrow M$, which is not necessarily the same bundle as $P$. Since $8 \pi^{2}\left\langle c_{2}\left(P^{\prime}\right),[M]\right\rangle=\left\|F_{\omega^{\prime}}\right\|_{L^{2}(M)}^{2}<\lim \left\|F_{\omega_{i}}\right\|_{L^{2}(M)^{2}}=8 \pi^{2}\left\langle c_{2}(P),[M]\right\rangle$, there must be
+$c_{2}\left(P^{\prime}\right)<c_{2}(P)$. For each distinguised point $x_{j} \in\left\{x_{1}, \ldots, x_{l}\right\}$, there is a positive lower bound for $\left\|F_{\omega_{i}}\right\|_{L^{2}\left(D_{r_{i}}^{4}\left(x_{j}\right)\right)}$ with a sequence of radius $\left\{r_{i}\right\}$ and as $r_{i} \rightarrow 0$ the $L^{2}$ -norm approaches the lower bound. We rescale the ball $\mathfrak{R}_{1 / r_{i}}: D_{r_{i}}^{4}\left(x_{j}\right) \rightarrow D_{1}^{4}\left(x_{j}\right) \subset T_{x_{j}} M$. The metric $\mathbf{g}_{i}=\left(\mathfrak{R}_{1 / r_{i}}^{-1}\right)^{*} \mathbf{g}$ on $D_{1}^{4}\left(x_{j}\right)$
+converges to the Euclidean metric. The connection $\left(\Re_{1 / r_{i}}\right)_{*} \omega_{i}$ on $D_{1}^{4}\left(x_{j}\right)$ is ASD w.r.t. $\mathrm{g} .$ Fix $R>0$, then under the rescaling $\Re_{1 / r_{i}}: D_{R}^{4}\left(x_{j}\right) \rightarrow D_{R / r_{i}}^{4}\left(x_{j}\right) \subset T_{x_{j}} M$ and at the limit
+$\lim _{r_{i} \rightarrow 0} \Re_{1 / r_{j}}\left(D_{R}^{4}\left(x_{j}\right)\right)=T_{x_{j}} M \cong \mathbb{R}^{4}$. Thus away from a finite collection of points
+$\left\{y_{1}^{(j)}, y_{2}^{(j)}, \ldots, y_{m}^{(j)}\right\} \subset \mathbb{R}^{4}$, there is strong convergence $\left(\Re_{1 / r_{i}}\right)_{*} \omega_{i} \stackrel{W_{\text {be }}^{1,2}}{\longrightarrow} \omega^{(j)}$ for some smooth ASD
+$\omega^{(j)}$ over $\mathbb{R}^{4}$ with
+$$
+\left\|F_{\omega^{\omega} j}\right\|_{L^{2}\left(\mathbb{R}^{4}\right)}^{2}=\lim _{i \rightarrow \infty}\left\|F_{\omega^{6} \|}\right\|_{L^{2}\left(D_{R / r_{i}}^{4}\left(x_{j}\right)\right)}^{2} \leq \lim _{i \rightarrow \infty}\left\|F_{\omega_{i}}\right\|_{L^{2}\left(D_{R}^{4}\left(x_{j}\right)\right)}^{2} \leq-8 \pi^{2} k
+$$
+Here $\mathbb{R}^{4}$ is regared as $S^{4} \backslash\{S\}$. By Uhlenbeck's remoable singularities theorem, $\omega^{(j)}$ extends to a smooth ADS connection on $S^{4}$ for some bundle $P^{(j)} \rightarrow S^{4}$. This phenomenon is called instanton bubbling.
+The topology of the new bundle can be viewed as $P^{\prime}=P \# P^{(j)} \rightarrow M^{4} \# S^{4} \cong M^{4}$ with fiber sum of bundles $P \rightarrow M^{4}$ and $P^{(j)} \rightarrow S^{4}$.
+In general, assuming $M$ and $G$ compact, the Uhlenbeck's compactness reulsts state:
+Weak Uhlenbeck Compactness : Let $\left(\omega_{i}\right)_{i \in I} \in \mathcal{A}^{1, p}$ be a sequence of connections such that $\left\|F_{\omega_{i}}\right\|_{L^{p}}$ is uniformly bounded. Then there exists a subsequence $\left(\omega_{j}\right)_{j \in I}$ and a sequence $\phi_{j} \in \mathcal{G}^{2, p}$ of gauge transformations such that $\phi_{j}^{*} \omega_{j}$ weakly converges in $\mathcal{A}^{1, p}$.
+Strong Uhlenbeck Compactness : Let $\left(\omega_{i}\right)_{i \in I} \in \mathcal{A}^{1, p}$ be a sequence of weak Yang-Mills connections and suppose that $\left\|F_{\omega_{i}}\right\|_{L}$ is uniformly bounded. Then there exists a subsequence $\left(\omega_{j}\right)_{j \in I}$ and a sequence $\phi_{j} \in \mathcal{G}_{\text {loc }}^{2, p}$ of gauge transformations such that $\phi_{j}^{*} \omega_{j}$ converges uniformly with all derivatives to a smooth connection in $\mathcal{A}$.
+Finally, iterating above construction we can obtain a bubble tree compactification of the moduli space, which is finer than Uhlenbeck's compactification and it is called Kontsevich's compactification nowadays.
+
+
+
+\subsection{$U(1)$ -instanton}
+Let $P \stackrel{\pi}{\rightarrow} M$ be a principal $U(1)$ -bundle. Since $u(1)=\mathbf{i} \mathbb{R}$, we have:
+- $T_{\omega} \mathcal{A}=\Omega^{1}(M ; \operatorname{Ad} P) \cong \Omega^{1}(M ; \mathbb{i} \mathbb{R})$ due to $\mathrm{Ad} P \cong P \times \mathfrak{u}(1)$
+- $\mathcal{G} \cong C^{\infty}(M ; U(1)), T_{\mathrm{id}} \mathcal{G} \cong C^{\infty}(M ; \mathrm{iR}) .$
+$\left[M, S^{1}\right]=\pi_{0}(\mathcal{G})$ is the set of connected components of $\mathcal{G}$, which is in bijection to $H^{1}(M ; \mathbb{Z})$. There is a short exact sequence
+$$
+\mathbf{0} \rightarrow \boldsymbol{G}_{0} \rightarrow \mathcal{G} \rightarrow \boldsymbol{H}^{1}(\boldsymbol{M} ; \mathbb{Z}) \rightarrow 0
+$$
+Then for a principal connection $\omega \in \Omega^{1}(P ; \mathbf{i} \mathbb{R}), \Omega_{\omega}=d \omega \in \Omega^{2}(P ; \mathbb{R}), \mathbf{i} F_{\omega} \in \Omega^{2}(M)([\omega, \omega]=0$
+since the Lie algebra is Abelian) and $d F_{\omega}=0$ (Bianchi idenity). The Euler class of $P$ is given by $e(P)=\frac{1}{2 \pi}\left[\mathbf{i} F_{\omega}\right]$
+Let $f: \mathcal{A} \rightarrow \Omega^{2}(M ; \mathrm{iR})$ and $Z_{P}^{2}(M) \subset Z^{2}(M) \subset \Omega^{2}(M)$ be the subspace of closed 2 -forms represent the Euler class of $P$.
+Lemma: $f$ induces a surjective map $A / \mathcal{G}_{-} Z_{p}^{2}$
+$[\omega] \mapsto \mathrm{i} F_{\omega}$
+$P \rightarrow P$
+Proof: This map is well-defined on $\mathcal{A} / \mathcal{G} .$ Pick any smooth map $g: M \rightarrow U(1)$ and $p \rightarrow p-g(\pi(p))$ corresponding gauge transformation., then $\phi^{*} \omega=\operatorname{Ad}\left(g^{-1}\right) \circ \omega+g^{*} \theta_{U(1)}=\omega+g^{-1} d g$
+$d\left(\phi^{*} \omega\right)=d \omega+d\left(g^{-1} g\right)=d \omega$
+surjectivity: Let $\sigma \in Z_{P}^{2} .$ For any principal connection $\omega,\left[\mathbf{i} F_{\omega}\right]=[\sigma]=2 \pi e(P) \in H_{\mathrm{dR}}^{2}(M) \Rightarrow$
+$\exists \eta \in \Omega^{1}(M)$ s.t. $\sigma=\mathbf{i} F_{\omega}+d \eta=\mathbf{i} F_{\omega+i \eta} .$ Hence $\sigma$ lies in the image of the map. $\square$
+Proposition: Every fiber of $\mathcal{A} / \mathcal{G} \rightarrow Z_{P}^{2}$ is naturally $T^{b_{1}(M)} .$ In particular, this map is 1:1 if $b_{1}(M)=0$
+Proof: Let $\omega, \omega^{\prime}$ be connection 1-forms on $P$ s.t. $F_{\omega}=F_{\omega^{\prime}}$. Then $\mathbf{i}\left(\omega-\omega^{\prime}\right)$ is a closed 1 -form by applying a gauge transformation $\phi \in \mathcal{G}_{0}$, we can modify this closed 1 -form by any exact 1 -form: for $\phi \in \mathcal{G}_{0}$, the corresponding $g: M \rightarrow S^{1}$ admits lifting
+$\mathbb{R}$
+$\downarrow \exp$
+$$
+M \stackrel{g}{\rightarrow} \quad S^{1}
+$$
+so that $g(x)=\exp (2 \pi \mathrm{i} \tilde{g}(x)) \forall x \in M \cdot \phi^{*} \omega=\omega+g^{-1} d g=\omega+g^{-1} g \cdot 2 \pi \mathrm{i} d \tilde{g}=\omega+2 \pi \mathrm{i} d \tilde{g}$
+We consider $\left[\mathbf{i}\left(\omega-\omega^{\prime}\right)\right] \in H_{\mathrm{dR}}^{1}(M) .$ The map $\mathcal{A} / \mathcal{G}_{0} \rightarrow Z_{P}^{2}$ is surjective with fiber $H_{\mathrm{dR}}^{1}(H)$ (
+$\mathcal{A} / \mathcal{G}_{0} \cong \mathbf{i} \Omega^{1}(M) / d \Omega^{0}(M)$ and we drop the factor $\mathbf{i}$ ). Dividing the residual action $\mathcal{G} /{\mathcal{G}}_{0} \cong H^{1}(M ; \mathbb{Z})$
+(by short exact sequence), the fiber of $\mathcal{A} / \mathcal{G} \rightarrow Z_{P}^{2}$ is $H_{\mathrm{dR}}^{1}(M) / H^{1}(M ; \mathbb{Z}) \cong H^{1}(M ; \mathbb{R}) / H^{1}(M ; \mathbb{Z})$
+(de Rham isomorphism) which is $\mathbb{R}^{b_{1}} / \mathbb{Z}^{b_{1}}=T^{b_{1}} . \square$
+Pick a Riemannian metric, the Yang-Mills equation $d^{*} F_{\omega}=0$ and the Bianchi identity $d F_{\omega}=0$ together imply that $\Delta F_{\omega}=0 \Rightarrow \omega$ is a Yang-Mills connection iff. $F_{\omega}$ is a harmonic 2 -form. Hodge theorem implies that on any compact oriented Riemannian manifold $M$, every cohomology class has a unique harmonic representative. In conclusion, the gauge equivalent classes of Yang-Mills connections on $U(1)-$ bundle $P$ are parameterized by $T^{b_{1}}$ (it is the torus fiber over the unique harmonic 2 -form). This torus is called the Picard torus.
+
+An alternative way to show above result is fixing gauge. Denote $\mathcal{S}:=\left\{\omega+\mathrm{i} \alpha: d^{*} \alpha=0, \alpha \in \Omega^{1}(M)\right\}$ the Coulomb gauge slice, this is also an affine Fréchet space. Since $\Omega^{1}(M) / d \Omega^{0}(M)=\operatorname{ker}\left(d^{*}\right)$, $\mathcal{S} \cong \mathcal{A} / \mathcal{G}_{0} . \pi_{0}(\mathcal{G})$ acts on $\mathcal{S}: \phi^{*} \omega=\omega-d \phi \cdot \phi^{-1}=\omega-d \log \phi .$ The closed 1-form i $d \log \phi$
+represents a class in $H^{1}(M ; \mathbb{Z})$. There is unique class $\mathbf{i}(d \log \phi+d \xi) \in \mathcal{H}^{1}(M)$ (it lies in $\left.\operatorname{ker}(d) \cap \operatorname{ker}\left(d^{*}\right)\right)$ with $\omega+d \log \phi+d \xi \in \mathcal{S}\left(\exists e^{\xi} \in \mathcal{G}_{0}, \xi \in C^{\infty}(M ; \mathbf{i} \mathbb{R}),\left(e^{\xi}\right)^{*} \omega=\omega-d \xi\right)$
+Thus we have $\mathcal{A} / \mathcal{G} \cong \mathcal{S} / \pi_{0}(\mathcal{G}) \cong H^{1}(M ; \mathbb{R}) / H^{1}(M ; \mathbb{Z}) \times \operatorname{im}\left(d^{*}\right) \cong T^{b_{1}} \times \operatorname{im}\left(d^{*}\right)$
+The curvature is gauge invariant here and defines a map $S \rightarrow\left\{\mathrm{i} F_{\omega}\right\}+\operatorname{im}(d) \subset \Omega^{2}(M)$
+$\omega+\mathrm{i} \alpha \mapsto \mathrm{i} F_{\omega+\mathrm{la}}=\mathrm{i} F_{\omega}-d \alpha$ . Consider the gauge orbits
+in which the connections have the same curvature as $\omega$ does. These form the subset $T^{b_{1}} \times\{0\} \subset T^{b_{1}} \times \operatorname{im}\left(d^{*}\right)$ since $\operatorname{im}\left(d^{*}\right) \cap \operatorname{ker}(d)=0 .$ Thus the gauge orbits of $U(1)$ connections of
+the prescribed curvature (any representative of $-2 \pi i e(P))$ form an affine copy of the Picard torus.
+On compact orientable Riemannian 4 -manifold, a self-dual Yang-Mills connection for $U(1)$ -bundle $P$ exists iff. $e(P) \in \mathcal{H}_{+}^{2}(M)$ while an anti-self-dual Yang-Mills connection exists iff. $e(P) \in \mathcal{H}_{-}^{2}(M)$. More precisely, consider ASD instanton for instance, $e(P)$ lies in $\mathcal{H}_{-}^{2}(M) \cap H^{2}(M ; \mathbb{Z}) /$ torsion $=: \mathcal{H}_{[\mathrm{g}]}^{-}(\mathbb{Z})([\mathrm{g}]$ is a conformal structure class). Conversely, if
+$e(P) \in \mathcal{H}_{[\mathrm{g}]}^{-}(\mathbb{Z})$ then the harmonic representative $\sigma$ of $e(P)\left(\sigma^{+}=0\right)$, one can find a connection $\omega$ with $F_{\omega}=-2 \pi i \sigma$
+Suppose $\omega$ is an ASD instanton, then $\omega+\mathrm{i} \alpha$ is an instanton iff. $\alpha \in \operatorname{ker}\left(d^{+}: \Omega^{1}(M) \rightarrow \Omega_{-}^{2}(M)\right)$
+There is similar half de Rham complex (untwisted coefficient)
+$$
+0 \rightarrow \Omega^{0}(M) \stackrel{d}{\rightarrow} \Omega^{1}(M) \stackrel{d^{+}}{\longrightarrow} \Omega_{+}^{2}(M) \rightarrow 0
+$$
+so that $\operatorname{ker}\left(d^{+}\right) / \operatorname{im}(d)=\operatorname{ker}(d) / \operatorname{im}(d)=H_{\mathrm{dR}}^{1}(M)$ and $\mathcal{M}^{-} \cong T^{b_{1}} .$ Working on the Coulomb gauge
+slice $\mathcal{S}$, the linearzed instanton equation is $\left(d^{*} \oplus d^{+}\right) \alpha=0$ with $\operatorname{dim} \operatorname{ker}\left(d^{*} \oplus d^{+}\right)=b_{1}(M)$, $\operatorname{im}\left(d^{*}\right)=\operatorname{ker}\left(\int_{M} \cdot d v o l\right)=: \Omega_{0}^{0}(M) \subset \Omega^{0}(M)$. Then $d^{*} \oplus d^{+}: \Omega^{1}(M) \rightarrow \Omega_{0}^{0}(M) \oplus \Omega_{+}^{2}(M)$, under
+Hodge decomposition $\Omega^{1}(M)=\mathcal{H}^{1}(M) \oplus \operatorname{im}(d) \oplus \operatorname{im}\left(d^{*}\right)$, maps $\operatorname{im}(d) \stackrel{d^{*}}{\rightarrow} \Omega_{0}^{0}(M)$ and
+$\operatorname{im}\left(d^{*}\right) \stackrel{d^{+}}{\longrightarrow} \Omega_{+}^{2}(M)$. Hence $\operatorname{coker}\left(d^{*} \oplus d^{+}\right)=\Omega_{+}^{2}(M) / \operatorname{im}\left(d^{+}\right)=\mathcal{H}_{+}^{2}(M)$
+$\operatorname{dim} \operatorname{coker}\left(d^{*} \oplus d^{+}\right)=b_{2}^{+}(M) .$ Moreover, since $d^{*} \oplus d^{+}$ is an elliptic operator, the ellptic estimate yields
+$$
+\|\omega\|_{W^{s, 2}} \leq C_{s}\left(\left\|d^{*} \omega\right\|_{W^{s-1,2}}+\left\|d^{+} \omega\right\|_{W^{s-1,2}}\right)=C_{s}\left\|d^{*} \omega\right\|_{W^{s-1,2}}
+$$
+is constant)
+This shows that the Coulomb gauge fixing minimizes $L^{2}$ -norm (or Sobolev norm) of $\omega$ over the Coulomb gauge slice.
+Below is a generic non-existence result for ASD instanton.
+Theorem: For any family of conformal structure $\left\{\left[\mathrm{g}_{t}\right]\right\}_{t \in T}$ parameterized by a smooth compact $n-$ manifold with $n<b^{+}(M)$, there are perutrbations $\left[\hat{\mathrm{g}}_{t}\right]$ to this family arbitrary $C^{r}$ -close to $\left[\mathrm{g}_{t}\right]$ ( $C^{r}$ norm induced by metric on $T$ and $M$ ) s.t. $\mathcal{H}_{ \left.\mid \mathbf{g}_{t}\right]}^{-}(\mathbb{Z})=0 \quad \forall t \in T$.
+Now we come to the SD instanton. The half de Rham complex (with normal coefficient $\mathbb{R}$, namely untwisted) is
+$$
+0 \rightarrow \Omega^{0}(M) \stackrel{d}{\rightarrow} \Omega^{1}(M) \stackrel{d^{-}}{\longrightarrow} \Omega_{-}^{2}(M) \rightarrow 0
+$$
+The corresponding symbol sequence is
+$$
+0 \longrightarrow \mathbb{R} \stackrel{\alpha \wedge}{\longrightarrow} T_{x}^{*} M \stackrel{\mathrm{pr}_{-}(\alpha \wedge \cdot)}{\longrightarrow} \Lambda_{-}^{2} T_{x}^{*} M \longrightarrow 0
+$$
+The cohomology groups of the half de Rham complex are
+$$
+\begin{array}{l}
+H^{0}=\{\text { constant fucntions } M \rightarrow \mathbb{R}\}=\mathbb{R} \\
+H^{1}=\operatorname{ker}\left(d^{-}\right) / \operatorname{im}(d)=H_{\mathrm{dR}}^{1}(M) \\
+H^{2}=\operatorname{coker}\left(d^{-}\right)=\mathcal{H}_{-}^{2}(M)
+\end{array}
+$$
+The index $\operatorname{ind}\left(d^{*} \oplus d^{-}\right)=\operatorname{dim} \operatorname{ker}\left(d^{*} \oplus d^{-}\right)-\operatorname{dim} \operatorname{coker}\left(d^{*} \oplus d^{-}\right)=b_{1}(M)-\left(1+b_{2}^{-}(M)\right)$.
+Hence on self-dual compact 4 -manifold $\operatorname{dim} \mathcal{M}_{\text {irr }}^{+}=-\left(1-b_{1}(M)+b_{2}^{-}(M)\right)$.
+
+\subsection*{$S U(2)$ -instanton}
+Let $P \rightarrow M$ be a $S U(2)$ -bundle over closed smooth 4 -manifold with $-\left\langle c_{2}(P),[M]\right\rangle=k \geq 0$ and we consider the $S U(2)$ SD connections here.
+
+The Uhlenbeck's compactness theorem states: On closed 4 -manifold, any sequence of SD connections $\left[\omega_{i}\right] \in \mathcal{M}_{k}^{+}(M)$ has a convergent subsequence whose limit is
+$\left([\omega],\left(x_{1}, \ldots, x_{l}\right)\right) \in \mathcal{M}_{k-l}^{+}(M) \times \operatorname{Sym}^{l} M$ where $\operatorname{Sym}^{l} M:=\underbrace{M \times \cdots \times M}_{l \text { -times }} / \mathfrak{S}_{l}$ is the symmetric
+product of $M$ for some $0 \leq l \leq k$. By the Atiyah-Hitchin-Singer formula, the moduli space of non-flat and irreducible SD connections is smooth and has dimension $8 k-3\left(1-b_{1}+b_{2}^{-}\right)$. However, we should remember that the 4-manifold in the work of Atiyah-Hitchin-Singer is quite special (namely it is halfconformally flat and in such case the twistor theory can be used to convert Yang-Mills problem into a problem in algebraic geometry). On arbitrary 4 -manifold (even it is closed) it might turn out the moduli space of irreducible SD connections is empty. Such an issue is resolved by Clifford Taubes using a socalled instanton grafting procedure to show the existence of SD connections on any 4-manifolds: This is an analytic technique to build SD connections on $M$ (a generic 4-manifold) from those on $S^{4}$. The SDYM equations are well understood on $S^{4}$, although the topology of the moduli space for $k>2$ is not completely known. In particular, the $k=1$ instantons on $S^{4}$ have a center position $y \in S^{4}$ and a scale $\lambda \in \mathbb{R}_{+}$ s.t. as $\lambda \rightarrow 0$ the instanton becomes localized round $y$, which gives a limit of a sequence of connections at $\lambda=0$ whose curvature is supported at $y$.
+
+By grafting the localized SD connections onto $M$ (roughly looks like an inverse procedure of instanton bubbling), where they pick up a small ASD curvature (these intermediate objects are called almost SD connections), and for $\lambda$ sufficiently small Taubes performs small perturbations to them and obtain SD connections. There results in a family of SD instantons on $M$ parameterized by $\left(0, \lambda_{0}\right) \times M$ essentially forming a collar neighborhood of $M$ in the compactified moduli space of 1 -instanton with the accumulation points at $\lambda=0$ forming the boundary of the shape $M .$ This is later proven by Donaldson.
+For general moduli space (containing flat and reducible connections), the Uhlenbeck's compactification
+sits inside a larger space:
+$$
+\overline{\mathcal{M}_{k}^{+}(M)} \subset \mathcal{M}_{k}^{+}(M) \cup \bigcup_{l=1}^{k} \mathcal{M}_{k-l}^{+}(M) \times \operatorname{Sym}^{l} M
+$$
+where the dimension of the $l$ -th stratum is $8 k-3\left(1-b_{1}+b_{2}^{-}\right)-4 l(l \neq k)$ or $4 k(l=k)$. Suppose $b_{2}^{-}(M)=0, \pi_{1}(M)=\{0\}$ and $k=1$, then $b_{1}=0$ and
+$$
+\operatorname{dim} \mathcal{M}_{1}^{+}=8 \cdot 1-3 \cdot(1-0+0)=5
+$$
+Note that $\mathcal{M}_{0}^{+}$ consist of flat connections, since $\pi_{1}(M)=\{0\}$, the flat connection is unique with stabilizer $S U(2)$. Hence the virtual dimension of $\mathcal{M}_{0}^{+}$ is $-3$ while the actual dimension is vir- $\operatorname{dim} \mathcal{M}_{0}+\operatorname{dim} S U(2)=-3+3=0$.
+Theorem (Donaldson): For any closed smooth 4-manifold $M$ with $\pi_{1}(M)=\{0\}$ and $b_{2}^{-}(M)=0$, then $\overline{\mathcal{M}_{1}^{+}(M)}=\mathcal{M}_{1}^{+}(M) \cup M$ and $M$ has a collar neighborhood $[0,1) \times M \subset \overline{\mathcal{M}_{1}^{+}(M)}$, i.e.
+$\partial \overline{\mathcal{M}_{1}^{+}(M)}=M$
+$b_{2}^{-}=0$ means for every metric we have $\mathcal{H}_{-}^{2}(M)=0 .$ The space $\mathcal{H}_{-}^{2}(M)$ is actually an obstruction to carry out the grafting procedure. For $S U(2)$ -bundle $P \rightarrow M$ with $k=1$, we have the linearized SDYM equation fitting into the twisted de Rham complex and we know that $\operatorname{Lie}\left(\operatorname{Stab}_{\mathcal{g}}(\omega)\right)=H_{\omega}^{0}$ for SD connection $\omega$. If $H_{\omega}^{0}=0$, then a neighborhood of $[\omega] \in \mathcal{M}_{1}^{+}$ is given by the preimage of Kuranishi map $\kappa^{-1}(0)$. Assuming $H_{\omega}^{2}=0$, then $\mathcal{M}_{1}^{+}$ is smooth near $[\omega]$ with tangent space $H_{\omega}^{1}$. If $\omega$ has non-trivial stabilizer (namely it is a reducible connection), then its only non-trival reduction is the $U(1)$ -connection because if the holonomy group is a proper Lie subgroup of $S U(2)$, it must have the homotopy type of a circle subgroup and the centralizer can only be $U(1)$ in $S U(2) .$ On the other hand, $\mathcal{G} / \mathbb{Z}_{2}$ acts on $\mathcal{A}$ effectively and almost everywhere free implying: $\operatorname{Stab}_{\mathcal{G}}(\omega) \neq 1 \Leftrightarrow \omega$ reduces to a $U(1)$ -connenction. Thus $H_{\omega}^{0}=\mathbb{R}$ and $\operatorname{Stab}_{\mathcal{G}}(\omega)=S^{1} .$ In this case, $H_{\omega}^{1}, H_{\omega}^{2}$ are representation space of $S^{1}$ and $\kappa$ is $S^{1}$ -equivariant. The local model for $\mathcal{M}_{1}^{+}$ at $[\omega]$ is given by $\kappa^{-1}(0) / S^{1}=H_{\omega}^{1} / S^{1} .$ For above reason we say the reducible strata is a $\mathbb{Z}_{2}$ -orbifold. We can compute the dimension of first cohomology group as $\operatorname{dim} H_{\omega}^{1}=\operatorname{ind}\left(d_{\omega}^{*} \oplus d_{\omega}^{-}\right)+1$. For this consider the decomposition of $\operatorname{su}(2):$
+
+\subsection*{Donaldson}
+The signature of a compact oriented 4 -manifold is invariant under oriented cobordisms $\Omega_{4}^{S O} \cong \mathbb{Z} .$ Thus $\operatorname{sign}\left(\sqcup_{i=1}^{s} \pm \mathbb{C} \mathbb{P}^{2}\right)=\operatorname{sign}(M)=b_{2}(M) .$ But $\operatorname{sign}\left(\sqcup_{i=1}^{s} \pm \mathbb{C} \mathbb{P}^{2}\right) \leq s \Rightarrow s=r=b_{2}(M)$ implying
+that $Q_{M}$ is diagonal. This finishes the proof of the theorem. $\square$
+From the theorems of Freedman, Serre, and Donaldson, we can conclude that any simply connected compact orientable smooth 4 -manifold $M$ is homeomorphic to either $m \mathbb{C P}^{2} \# n \overline{\mathbb{C P}^{2}}$ or $\pm m M_{E_{8}} \# n\left(S^{2} \times S^{2}\right)$ for appropriate $m, n \in \mathbb{N}$. There are topological 4-manifold among the list such as $M_{E_{8}}$ that can not carry a smooth structure (while $-2 M_{E_{8}} \# 3\left(S^{2} \times S^{2}\right) \cong \mathrm{K} 3$ does carry a smooth structure). It is still an open question which manifolds on that list precisely carry smooth structures.
+
+\end{document}

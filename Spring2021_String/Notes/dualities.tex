@@ -1,0 +1,506 @@
+\documentclass[String-lecture-21.tex]{subfiles}
+
+\begin{document}\section{String dualities}\label{sec:dualities}
+
+
+
+
+We have introduced superstring theories of five types: Type IIA, IIB, I, and Heterotic $\SO(32)$ and $E_8\times E_8$.
+In fact, the seminal paper \cite{Witten:1995ex} reveals that these string theories are related by dualities, which led to the second string revolution. Indeed, we have already learned
+
+\vspace{.3cm}
+\noindent $\bullet$ Type IIA and IIB are T-dual to each other
+
+\vspace{.3cm}
+\noindent $\bullet$ Type I is the orientifold projection of Type IIB
+
+\vspace{.3cm}
+\noindent In this section, we will learn string dualities extensively studied in the second string revolution after \cite{Witten:1995ex}.
+
+\vspace{.3cm}
+\noindent $\bullet$  Type IIB has $\SL(2,\bZ)$ symmetry so that it is self-dual under S-duality
+
+\vspace{.3cm}
+\noindent $\bullet$  The strong coupling regime of Type IIA is described by M-theory on $S^1$
+
+
+\vspace{.3cm}
+\noindent $\bullet$  Heterotic $\SO(32)$ and $E_8\times E_8$ are T-dual to each other
+
+\vspace{.3cm}
+\noindent $\bullet$  Heterotic $\SO(32)$ is S-dual to Type I
+
+\vspace{.3cm}
+\noindent $\bullet$ The strong coupling regime of  Heterotic $E_8\times E_8$ is described by M-theory on $S^1/\bZ_2$
+
+\vspace{.3cm}
+\noindent $\bullet$  Heterotic string on $T^4$ is dual to Type IIA on K3
+
+\begin{figure}[ht]\centering
+\includegraphics[width=\textwidth]{picture/duality-web}
+\caption{Duality web of string theory}
+\end{figure}
+
+Even for these dualities, we can cover only key points in this section. More details can be found in  \cite{Polchinski,BBS}. Moreover, we just see the tip of the iceberg, and there are much more string dualities. Thus, we refer to good reviews  \cite{Aspinwall:1996mn,Forste:1996yd,Ooguri:1996ik,Polchinski:1996nb,Polchinski:1996na,Townsend:1996xj,Schwarz:1996bh,Sen:1996yy,Dijkgraaf:1997ip,Vafa:1997pm,Sen:1998kr,Johnson:2000ch} written during the second string revolution for this rich subject. All in all, these dualities tell us that quantum strings somehow see geometry from drastically different viewpoints. I hope you will get some feeling of it in this section.
+
+
+
+
+\subsection{S-duality of Type IIB supergravity}\label{sec:Sdual}
+
+The electromagnetic duality seen in \eqref{Maxwell} and \eqref{Maxwell2} is a basic example of duality. The generalization to the Yang-Mills theory is proposed by Goddard-Nuyts-Olive \cite{Goddard:1976qe} and Montonen-Olive \cite{Montonen:1977sn}. The Montonen-Olive duality exchanges the Yang-Mills coupling by
+\be
+g_{\textrm{YM}}\leftrightarrow 1/g_{\textrm{YM}}~,
+\ee
+and it also exchanges a fundamental particle into a soliton. Thus, this duality is also called the \textbf{strong-weak duality} or \textbf{$S$-duality}.
+Although standard techniques in quantum field theory cannot be applied to the strong coupling regime, the $S$-duality provides new insights into non-perturbative dynamics in the strong-coupling regime. One of the reasons why string theory sheds new light on physical theories is that the strong-weak dualities show up in string theory \cite{Sen:1994fa,Duff:1994zt}, which often have geometric origins.
+
+
+
+In fact, Type IIB string theory enjoys the $S$-duality. To see it,
+let us rewrite the action by rescaling the metric $G_{E,\mu\nu} = e^{-\Phi/2} G_{\mu\nu}$, and by introducing
+\be\label{axiodilaton}\tau = C_{(0)} +ie^{-\Phi}~,\ee
+and
+\begin{align*}
+ \mathbb M = \frac{1}{\Im \tau}
+ \begin{pmatrix}
+  |\tau|^2 & -\Re \tau \\ -\Re \tau & 1
+ \end{pmatrix} \ , \qquad
+ \mathbb F_{(3)} =
+ \begin{pmatrix}
+  H_{(3)} \\ G_{(3)}
+ \end{pmatrix} \ ,
+\end{align*}
+Then, the action \label{IIB-supergravity} is rewritten as
+\begin{align*}
+ S_\mathrm{B} =& \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G_E} \left[
+ R_E - \frac{\partial_\mu \tau \partial^\mu \ol\tau}{2(\Im \tau)^2}
+ -\frac{1}{2} \mathbb F_{(3)} \cdot \mathbb M \cdot \mathbb F_{(3)}-\frac{1}{4} \wt G_{(5)}^2
+ \right]\cr
+&  -\frac{1}{4\kappa_{10}^2} \int C_{(4)} \wedge \mathbb F_{(3)}^T \wedge \epsilon \mathbb F_{(3)} \ ,
+\end{align*}
+where $\epsilon = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$. Remarkably,
+this action is invariant under the $\SL(2,\mathbb R)$ transformation:
+\begin{align*}
+ \tau' = \frac{a\tau +b}{c\tau +d} \ , \quad
+ \mathbb M' = (\Lambda^{-1})^T \mathbb M \Lambda^{-1} \ , \quad
+ \mathbb F_{(3)}' = \Lambda \mathbb F_{(3)} \ , \quad
+ \Lambda =
+ \begin{pmatrix}
+  d & c \\ b & a
+ \end{pmatrix}\in \SL(2,\bR)\ .
+\end{align*}
+On the other hand, the metric $G_E$ and $C_{(4)}$ are invariant under the transformation.
+
+Let us consider its physical implications.
+Since  $C_{(4)}$ is invariant, a D$3$-brane is invariant. On the other hand, since the  2-form fields $B_{(2)}$ and $C_{(2)}$ are transformed by $\SL(2,\bR)$, the extended objects coupled to these fields are transformed accordingly. Namely, F$1$ and D$1$-branes are electrically coupled to the 2-form fields whereas
+NS$5$ and D$5$-branes are magnetically coupled to them, respectively.
+Thus, they are transformed under $\SL(2,\bR)$ as
+\be  \begin{pmatrix}
+  \mathrm{F1}' & \mathrm{D1}'
+ \end{pmatrix} =
+ \begin{pmatrix}
+  \mathrm{F1} & \mathrm{D1}
+ \end{pmatrix} \Lambda^{-1} ~,\qquad
+\begin{pmatrix}
+ \mathrm{NS5}' \\ \mathrm{D5}'
+\end{pmatrix} = \Lambda
+\begin{pmatrix}
+ \mathrm{NS5} \\ \mathrm{D5}
+\end{pmatrix} \ ,\qquad \textrm{as}\quad    \begin{pmatrix}
+  B_{(2)}' \\ C_{(2)}'
+  \end{pmatrix} = \Lambda
+  \begin{pmatrix}
+  B_{(2)} \\ C_{(2)}
+ \end{pmatrix}\nonumber
+\ee
+Due to the Dirac quantization condition, the electric and the magnetic charges of D-branes
+must be integers so that the true symmetry in Type IIB string theory is indeed $\SL(2,\ZZ)$ \cite{Hull:1994ys}.
+
+In particular, if we choose \[\Lambda = S =
+\begin{pmatrix}
+ 0 & 1 \\ -1 & 0
+\end{pmatrix}~,\]
+the fields transform as
+$\tau \leftrightarrow -1/\tau$, and the extended objects are exchanged as \[\mathrm{F1} \leftrightarrow \mathrm{D1}~, \qquad \mathrm{NS5} \leftrightarrow \mathrm{D5}~.\]
+Assuming that $\langle C_0 \rangle = 0$, this results in the S-duality of the string coupling constant, $g_s \leftrightarrow 1/g_s$.
+Other elements of $\SL(2,\ZZ)$ lead to infinitely many bound states of F$1$ and D$1$: $(p,q)$-string,
+and those of NS$5$ and D$5$: $(p,q)$ 5-branes.
+
+The combination \eqref{axiodilaton} of the fields behaves as a complex structure of a torus and the theory enjoys the modular transformations
+\eqref{eq:ModularTra} and \eqref{eq:ModularTra2} of a torus. Hence, a $D=12$ dimensional theory, called \textbf{F-theory}, is proposed in \cite{Vafa:1996xn,Morrison:1996na,Morrison:1996pp} by considering a torus fibration over ten-dimensional spacetime of Type IIB theory, which can be interpreted as the geometric origin of the field combination \eqref{axiodilaton}.
+
+
+\subsection{M-theory}
+
+We would also like to understand the strong coupling region of Type IIA theory.
+As we obtain Type IIA supergravity by compactification of the $D=11$ supergravity on $S^1$, the radius is proportional to the string coupling constant  \eqref{Mcircle-radius} in the unit of the string length.
+This suggests that in the strong coupling region $g_s\gg1$ of Type IIA string theory, another spacetime direction
+emerges (dimensional decompactification).
+Although the strong coupling behavior may look rather bizarre, it turns out that a number of phenomena in string theory can be explained ``more naturally'' from the  $D=11$ strongly-coupled Type IIA ``string theory''.
+Witten calls the $D=11$ ``string theory'' \textbf{M-theory} where M stands for Magic, Mystery, or Membrane according to him.
+% Some people also include Matrix, etc. so why not come up with your own M!
+
+
+Since the $D=11$ supergravity is endowed with the 3-form fields $M_{(3)}$,
+there must be corresponding objects coupled to the field electrically and magnetically.
+They are called \textbf{M2-brane} and \textbf{M5-brane},
+which are $(1+2)$- and $(1+5)$-dimensional objects, respectively.
+Let us assume that they have the following tensions and charges
+\begin{align*}
+ T_{M2} = \mu_{M2} = \frac{2\pi}{(2\pi \ell_p)^3} \ , \qquad
+ T_{M5} = \mu_{M5} = \frac{2\pi}{(2\pi \ell_p)^6} \ .
+\end{align*}
+
+The compactification of M-theory on a circle $S^1$ leads to
+the IIA superstring theory. Since it is compactified on $S^1$, the momenta of a particle along $S^1$ are quantized as $n/R$ $(n\in \bZ)$, and it can be identified with D0-branes. An M2-brane on $S^1$ becomes a fundamental string whereas an M2-brane in $D=10$ reduces to a D2-brane. Similarly, an M5-brane on $S^1$ becomes a D4-brane whereas an M5-brane in $D=10$ reduces to an NS5-brane. A D6-brane arises geometrically as a Kaluza-Klein monopole, which we do not deal with in this lecture note. (See \cite[\S15.2]{johnson2002d} for instance.)
+Let us see this by comparing the branes and their tensions in Table~\ref{table:tension}. One can convince oneself that the tensions of extended objects perfectly agree. Note that the tensions and charges of D-branes in Type IIA theory are related by the string coupling constant
+\be
+g_sT_{\textrm{D}p}^\textrm{eff}=\mu_p~.
+\ee
+In fact, charges of a D$p$ and D$(6-p)$-brane can be read off from Table~\ref{table:tension}, and it is easy to check that they are subject to the Dirac quantization condition \eqref{Dirac-quantization}. We will come back to this relation in \S\ref{sec:DBI}.
+
+
+Note that M-theory is \emph{not} even defined in a sense that we do not know how to quantize
+the M-branes. For instance, the world-volume theory on M5-branes is endowed with $\operatorname{OSp}(2,6|2)$ superconformal symmetry, called 6d $\cN=(2,0)$ superconformal field theory \cite{Witten:1995zh}. The field contents are as follows
+\begin{itemize}\setlength{\parskip}{0.0cm}
+ \item 2-form tensor field $B$ with self-dual field strength $dB=H=-* H$
+\item spinors $\psi_{\alpha,a}$ with $\psi_{\alpha,a}=J_{\alpha \beta} J_{a b} \bar{\psi}^{\beta,b}$ ($\alpha,a=1,2,3,4$)
+\item 5 scalars $\phi_{i}$ $(i=1,\ldots,5)$
+\end{itemize}
+The source for the tensor field is an M2-brane ending on the M5-brane, called self-dual string, $*dH=J$. However,
+we do not know how to write down Lagrangian of the theory for nonabelian cases because of the self-dual 3-form $H$:
+\begin{equation}
+  \frac{1}{g^2}\int d^6x~ H\wedge *H = - \frac{1}{g^2}\int d^6x ~H\wedge H=0~.
+\end{equation}
+It is believed that 6d $\cN=(2,0)$ SCFTs are classified by $A_{n}, D_{n}, E_{6,7,8}$ root system.
+
+Nevertheless, the existence of such theories tells us a lot.
+Especially, even though no effective description of M$5$-branes in flat space is known,
+M$5$-branes wrapped on manifolds give rise to surprising dualities between
+a $d$-dim topological theory and $(6-d)$-dim supersymmetric gauge theories.
+A salient example is the AGT relation \cite{Alday:2009aq} where M$5$-branes are wrapped on Riemann surface. Also, the highest dimension of SCFTs is $D=6$ \cite{Nahm:1977tg}, and string theory is indispensable for the study of 6d SCFTs. The reader is referred to \cite{Heckman:2018jxk} for this subject.
+
+
+
+\begin{table}[htbp]
+ \begin{center}
+\begin{tabular}{c|cccccc}
+ Dimension & $0$ & $1$ & $2$ & $4$ & $5$ & $6$ \\
+ \hline
+ M on $S^1$ & KK-mom. & M2/$S^1$ & M2 & M5/$S^1$ & M5 & KK-mono. \\
+ & $\frac{1}{R}$ & $\frac{2\pi\cdot2\pi R}{(2\pi \ell_p)^3}$ & $\frac{2\pi}{(2\pi \ell_p)^3}$ & $\frac{2\pi\cdot2\pi R}{(2\pi \ell_p)^6}$ & $\frac{2\pi}{(2\pi \ell_p)^6}$ & $\frac{2\pi(2\pi R)^2}{(2\pi \ell_p)^9}$ \\
+ \hline
+ IIA & D$0$ & F$1$ & D$2$ & D$4$ & NS$5$ & D$6$ \\
+ & $\frac{2\pi}{g_s (2\pi \ell_s)}$ & $\frac{2\pi}{(2\pi \ell_s)^2}$ & $\frac{2\pi}{g_s (2\pi \ell_s)^3}$ & $\frac{2\pi}{g_s (2\pi \ell_s)^5}$ & $\frac{2\pi}{g_s^2 (2\pi \ell_s)^6}$ & $\frac{2\pi}{g_s (2\pi \ell_s)^7}$ \\
+\end{tabular}
+\end{center}
+\caption{Wrapped/unwrapped M-branes and the corresponding extended objects in Type IIA theory
+with their effective tensions.}
+\label{table:tension}
+\end{table}
+
+
+\subsection{Heterotic T-duality} \label{sec:HeteroticT}
+
+Let us consider the T-duality in Heterotic strings on a circle $S^1$ in \cite{Narain:1985jj,Narain:1986am,Ginsparg:1986bx}. In the bosonic construction, the bosonic left-moving sector is compactified on an even self-dual Euclidean lattice of 16-dimensions. There are only two such lattices: the weight lattice $\G_{\SO(32)}$ of $\SO(32)$ and the root lattice $\G_{E_8}\oplus \G_{E_8}$ of $E_8\times E_8$ as we have seen in \S\ref{sec:Heterotic-bosonic}.
+
+
+One may also describe the compactification on a circle $S^1$ in terms of lattices. As we have seen, the left-moving and right-moving momenta compactified boson takes the value on the lattice $\Gamma^{1,1}$ of the Lorentzian signature. Hence, the circle compactification results in adding ($\oplus$) the lattice $\Gamma^{1,1}$ to the original lattice.
+
+
+
+It is a useful mathematical fact that for Lorentzian
+lattices, there is
+only unique even unimodular Lorentzian lattice for each rank. Therefore, the theorem implies
+\[\G_{\SO(32)}\oplus \Gamma^{1,1} \cong\G^{1,17}
+\cong  \G_{E_8}\oplus \G_{E_8}\oplus \Gamma^{1,1}~.\]
+Together with the metric $G$ and the $B$-field,
+they parameterize the
+moduli space
+\begin{equation}\label{eq:Mhettoroidal}
+{\cal M}=\left. \frac{\mathrm{O}(1,17)}{\mathrm{O}(1)\times \mathrm{O}(17)}\right/ \mathrm{O}(1,17; \bZ) ,
+\end{equation}
+where $\mathrm{O}(1,17; \bZ)$ is the T-duality group. It is called \textbf{Narain moduli space}.
+Different points in the moduli space correspond to physically distinct compactifications, e.g. the gauge groups can be different, although always of rank 18. At generic points, it is $\U(1)^{18}$ that corresponds to the fact that Wilson loops generically break the 10d gauge group to $\U(1)^{18}$.
+
+
+
+However, there are special subspaces of the moduli space where it is enhanced.
+This moduli space has exactly two asymptotic boundary points, one associated to the
+decomposition $\G^{1,17}\cong \G_{E_8}\oplus \G_{E_8}\oplus\G^{1,1}$,
+and the other to the decomposition $\G^{1,17}
+\cong \G_{\SO(32)}\oplus\G^{1,1}$.
+Therefore, these boundary points are associated to Type HE and HO string, or large and small radii.
+T-duality will relate these boundary points.
+
+
+
+In fact, starting from either Heterotic theory, there is a simple choice of
+Wilson line which breaks the gauge group to
+$\SO(16)\times \SO(16) \times \U(1)\times  \U(1)$.   If we leave this
+group unbroken, then the only remaining parameter is the radius. An analysis of the massive states shows
+that if we map $R\to 1/R$ while exchanging KK momenta
+and winding modes, then the two Heterotic theories are exchanged \cite[\S11.6]{Polchinski}.
+
+
+
+More generally, upon a compactification of Heterotic strings on a $D$-dimensional torus $T^D$, momenta take the values on an even self-dual Lorentzian lattice $\G^{D,D+16}$. Therefore, the Narain moduli space becomes
+\be\label{Narain}
+{\cal M}=\left. \frac{\mathrm{O}(D,D+16)}{\mathrm{O}(D)\times \mathrm{O}(D+16)}\right/ \mathrm{O}\left(D,D+16; \bZ\right)~.
+\ee
+which is  $D(D+16)$-dimensional.
+
+
+
+
+
+\subsection{S--duality between Type I and Heterotic \texorpdfstring{$\SO(32)$}{SO(32)} }\label{sec:typeI-HO}
+
+
+Now let us see S-duality between Type I theory  and Heterotic  $\SO(32)$ theory  \cite{Witten:1995ex,Dabholkar:1995ep,Hull:1995nu,Polchinski:1995df} from low-energy effective actions.
+
+
+
+One can obtain Type I supergravity action from Type IIB by setting to zero the IIB fields $C_0$, $B_{(2)}$, and $C_4$ that are removed by the $\O$ projection. In addition, we include $\SO(32)$ gauge fields with appropriate dilaton dependence
+\begin{align}\label{TypeI}
+S_{\textrm{I}}&=S_{\textrm{grav}}+S_{\textrm{YM}}\cr
+S_{\textrm{grav}}&= \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G}   \,\left[
+e^{-2\Phi}( R +4 \partial_\mu \Phi \partial^\mu \Phi )-\frac{1}{2}| \wt G_{(3)}|^{2} \right] \cr
+S_{\textrm{YM}}&=- \frac{1}{2g_{10}^2} \int d^{10}x \sqrt{ -G}\,  e^{-\Phi} \Tr  |F_{(2)}|^2
+\end{align}
+where $F_{(2)}$ is the $\SO(32)$ field strength and the trace is in the adjoint representation. Here $G_{(3)}$ is the field strength of the R-R 2-form $C_{(2)}$
+\[
+\wt G_{(3)}=dC_{(2)}-\frac{\kappa_{10}^2}{g_{10}^2}\omega_3
+\]
+with  the Chern-Simons 3-form
+\[
+\omega_3=\Tr \Big(AdA-\frac{2i}3 A^3\Big)~.
+\]
+The gauge coupling constant $g_{10}$ and the gravitational constant $\kappa_{10}$ are related by $\kappa_{10}^2/g_{10}^2 = \a'/4$, which is determined by anomaly cancellation. Under the gauge transformation $\delta A=d\lambda-i[A,\lambda]$, the Chern-Simons term transforms as
+\[
+\delta \omega_3=d \Tr(\lambda A)
+\]
+Hence, it comes with
+\[
+\d C_{(2)} = \frac{\kappa_{10}^2}{g_{10}^2} \Tr(\lambda dA)~.
+\]
+
+Heterotic strings have the same supersymmetry as Type I string and so we expect the same action. However, in the absence of open strings or R-R fields the dilaton dependence should be $e^{-2\Phi}$ throughout:
+\begin{align}\label{Het}
+S_{\textrm{Het}}&=S_{\textrm{grav}}+S_{\textrm{YM}}\cr
+S_{\textrm{grav}}&= \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G}   \,e^{-2\Phi}\left[
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2}| \wt H_{(3)}|^{2} \right] \cr
+S_{\textrm{YM}}&=- \frac{1}{2g_{10}^2} \int d^{10}x \sqrt{ -G}\,  e^{-2\Phi} \Tr  |F_{(2)}|^2
+\end{align}
+where the 3-form $\wt H_3$ is the field strength of the $B$-field equipped with Chern-Simons form
+\[
+\wt H_{(3)}=dB_{(2)}-\frac{\kappa_{10}^2}{g_{10}^2}\omega_3~.
+\]
+
+Indeed the low-energy effective actions of Type I \eqref{TypeI} and Heterotic $\SO(32)$ \eqref{Het} are related by the following field definitions (Homework)
+\begin{align}
+G_{\m\n}^{I} = e^{-\Phi^{H}} G_{\m\n}^{H} ~,&\qquad  \Phi^I = -\Phi^{H} \cr
+\wt G_{(3)}^I = \wt  H_{(3)}^{H}~ ,&\qquad  A^I = A^{H} ~.
+\end{align}
+ Recalling that the vacuum expectation value of the dilaton is the string coupling $g_s=e^{\Phi}$, we see that the strong coupling limit of one theory is related to the weak coupling limit of the other theory and vice versa.
+
+In Type I theory, D1-branes and
+D5-branes are electrically and magnetically charged under $C_{(2)}$, respectively. In Heterotic $\SO(32)$ theory, fundamental strings and NS5-branes are electrically and magnetically charged under $B_{(2)}$, respectively. The S-duality
+maps them as \cite{Polchinski:1995df}
+\begin{table}[ht]\centering
+\begin{tabular}{ccc}
+Type I&$\leftrightarrow$& Heterotic SO(32)\\ \hline
+D1-branes&$\leftrightarrow$&F-strings\\
+D5-branes&$\leftrightarrow$&NS5-branes
+\end{tabular}\end{table}
+
+One can provide another evidence of this duality by looking at the massless spectrum. We have seen that Heterotic $\SO(32)$ has massless fields:
+\begin{enumerate}\setlength{\parskip}{-0.1cm}
+\item $\bf 8_v$ of SO(8): bosonic right-moving  $X^i(z)$
+\item $\bf 8_c$ of SO(8):   fermionic right-moving $\psi^i(z)$
+\item $\bf 32$ of SO(32):   left-moving Majorana-Weyl fermion $\wt\lambda^a(\bar z)$
+\end{enumerate}
+Correspondingly, one can see the massless BPS excitations from D1-strings stretched in the $x_1$-direction in Type I theory (Homework):
+\begin{enumerate}\setlength{\parskip}{-0.1cm}
+\item $\bf 8_v$ of SO(8): normal bosonic excitations of D1-D1 strings
+\item $\bf 8_c$ of SO(8):  right-moving fermionic  excitations of D1-D1 strings
+\item $\bf 32$ of SO(32):   left-moving fermionic  excitations of D1-D9 strings
+\end{enumerate}
+
+Further evidence of
+this duality has been assembled by comparing tensions, $F_{(2)}^4$ interactions, and so on \cite[\S14.3]{Polchinski}.
+
+
+\subsection{Heterotic \texorpdfstring{$E_8\protect\times E_8$}{E8xE8} string from M-theory}
+
+Now we shall consider the strong-coupling behavior of Heterotic $E_8\times E_8$ theory. Taking T-duality and S-duality, Heterotic $E_8\times E_8$ theory is dual to Type I theory. As seen in \S\ref{sec:TypeI'}, the T-dual to Type I theory is the Type I' theory, which is Type IIA theory on a line segment $S^1/\bZ_2$ where O8${}^-$-planes sit at the two ends, and $(16+16)$ D8-branes are distributed on  $S^1/\bZ_2$. In the strong coupling regime, the M-theory circle will emerge, and it is described as M-theory on $S^1\times S^1/\bZ_2$.
+
+
+\begin{figure}[ht]\centering
+\includegraphics[width=15cm]{picture/HE-duality}
+\caption{Duality web for Heterotic M-theory}
+\end{figure}
+
+
+Interestingly enough, the relative position of O8${}^-$-planes and D8-branes in Type I' string theory may be adjusted. This freedom goes away in the M-theory limit; the D8-branes have to be stuck at the O8${}^-$-planes, and they become the domain walls of M-theory, which are called \textbf{Ho\v{r}ava-Witten domain wall} or \textbf{M9-branes} \cite{Horava:1995qa,Horava:1996ma}.
+
+
+Its low-energy effective description is given by $D=11$ supergravity on $S^1/\bZ_2$ which gives rise to gravitational anomaly \cite{AlvarezGaume:1983ig}. In order to cancel such
+anomaly, non-Abelian gauge fields have to be present at the boundaries
+in order to employ a Green-Schwarz mechanism \cite{Green:1984sg}. (Homework) This mechanism that bulk anomaly cancels with boundary anomaly is called \textbf{anomaly inflow}. Indeed the low-energy effective theory at the Ho\v{r}ava-Witten domain wall is described by 10d $\cN=1$ SYM with $E_8$ gauge group that cancels anomaly.
+
+
+
+As in Type IIA, the distance between the two boundaries is related to Heterotic coupling $R = g_{\rm het}^{\frac{3}{2}}\ell_p$.
+Hence, the line segment $S^1/\bZ_2$ shrinks at the weak coupling regime, leading to Heterotic $E_8\times E_8$ string theory.
+The reason to pick $E_8 \times E_8$ is that the anomalies must be canceled on both boundaries, and there is no way to distribute $\SO(32)$ between two boundaries (it's a simple group with no factors). Using the previous terminology Heterotic $E_8\times E_8$
+string theory can be viewed as M-theory compactified
+on $S_1/\bZ_2$. This setup is called \textbf{Ho\v{r}ava-Witten M-theory}  or \textbf{Heterotic M-theory}  \cite{Horava:1995qa,Horava:1996ma}.
+
+
+
+
+
+
+
+\begin{figure}[ht]\centering
+\includegraphics[width=13cm]{picture/Horava-Witten}
+\caption{Low-energy effective description of Heterotic M-theory. Ho\v{r}ava-Witten domain walls at the two boundaries give rise to $\cN=1$ SYM with $E_8$ gauge group and they cancel bulk anomaly.}
+\end{figure}
+
+
+\subsection{Duality between Heterotic on \texorpdfstring{$T^4$}{T4} and Type IIA on K3}
+Let us now see one more non-trivial duality. Although we have studied only toroidal compactifications, we have seen a rich web of dualities. In string theory, a theory is consistent if we compactify it on a Calabi-Yau manifold. Since there are wide varieties of Calabi-Yau manifolds, string dualities involving them are much richer. It has still been an active research area both in physics and mathematics. Here, we deal with the next simplest Calabi-Yau manifold called \textbf{K3 surface}.
+
+\subsubsection*{K3 surface}
+
+A K3 surface is a resolution of $T^4/\bZ_2$.  We write a 4-torus as
+\[
+T^4=\bR^4/\bZ^4=\{\bfx=(x_1,x_2,x_3,x_4)\in\bR^4| x_i\sim x_i+1\}
+\]
+and  the $\bZ_2$ action is a reflection $x_i\rightarrow -x_i$.
+Note that this action has $2^4=16$ fixed points given by choice of midpoints or the origin in any of the four $x_i$.
+Thus, the resulting space $T^4/\bZ_2$ is singular at any of these 16 fixed points. The neighborhood of a singular point is indeed a cone of $\bR P^3$.
+To make it smooth,  let us consider the set of vectors of length $\le 1$ in the tangent bundle of $TS^2$
+\[
+V=\{ (v_1,v_2)\in S^2\times T_{v_1}S^2| ~|v_2|\le 1\}~.
+\]
+Then the boundary of $V$  is $\partial V=\bR P^3$ so that you can replace the neighborhood of each singular point by $V$. Since $V$ is a smooth manifold, the resulting space is smooth, and it is a K3 surface. This smoothing procedure is called \textbf{resolution} or \textbf{blow-up}.
+
+Although the construction of a K3 surface is rather simple, its geometry is surprisingly fertile. First of all, it is a Calabi-Yau manifold, namely a Ricci-flat K\"ahler manifold.
+In real four dimensions, there are only two topologically equivalent compact closed Calabi-Yau manifolds, $T^4$ and K3.  Moreover, it is a hyper-K\"ahler manifold. (Let us not go into detail about hyper-K\"ahler manifolds.)
+
+Let us now briefly look at the topological property of K3 surfaces. The resolution of the 16 singular points provides 16 elements of $H^2(K3,\bZ)$ in addition to $6={}_4C_{2}$ tori in $T^4$. Therefore, we have $H^2(K3;\bZ)\cong \bZ^{22}$. Moreover, the Hodge diamond as a complex manifold turns out to be
+\[
+\begin{array}{ccccc}
+            &              &  h^{0,0} &            &            \\
+            & h^{1,0}\! &              &\! h^{0,1}\!&            \\
+  h^{2,0}\! & \!             & h^{1,1} & \!            &\! h^{0,2}\\
+            & h^{2,1} &              &h^{1,2}&             \\
+             &              &h^{2,2}&              &
+\end{array} =
+\begin{array}{cccccc}
+\ &\ &\ 1\ &\ &\\
+\ &\ 0\ &\ & \ 0\ &\\
+\ 1\ &\ &\ 20\ &\ &\ 1\\
+\ &\ 0\ &\ &\ 0\ &\\
+\ &\ &\ 1\ &\ &
+\end{array}\  .
+\]
+Since it is a real 4-dimensional manifold, one can consider the intersection matrix of rank 22
+\[
+Q(\a_i,\a_j) =\a_i \cap  \a_j \qquad \a_i\in H_2(K3;\bZ)
+\]
+In fact, in a certain nice basis,  the intersection  matrix can be written as follows
+\[
+Q(\a_i,\a_j) \sim 2(-E_8)\oplus 3\begin{pmatrix} 0&1\\1&0\end{pmatrix}
+\]
+where $-E_8$ denotes the $8\times8$ matrix given by minus the Cartan
+matrix of the Lie algebra $E_8$. Hence, we may decompose
+\[
+  H^2(K3,\bR) = H^+\oplus H^-,
+\]
+where $H^\pm$ represents the cohomology of the space of
+(anti-)self-dual 2-forms. We then see that
+\[
+  \dim H^+=3,\quad\dim H^-=19~.
+\]
+
+The moduli
+space of non-trivial metric deformations on a K3
+is 58-dimensional and given by the coset space \cite{Aspinwall:1996mn}
+\[
+{\cal M}_{\textrm{K3}}\ =\  \bR^+\ \times\
+\left.\frac{\mathrm{O}(3,19)}{\mathrm{O}(3)\times \mathrm{O}(19)}\right/ \mathrm{O}(3,19,\bZ)\ ,
+\]
+where the second factor is the Teichm\"uller space
+for Ricci-flat metrics of
+volume one on a K3 surface and
+the first factor is associated with the
+size of the K3.
+
+
+This is not the end of the story if we consider string propagation
+on $K3$. For each element of $H_2(K3,\bZ)$, we can turn
+on the $B$-field. Because of $H_2(K3,\bZ)=\bZ^{22}$, we have 22 additional real parameters and that makes the total
+dimension of moduli space $58+22=80$.  It turns out that this moduli
+space is isomorphic to
+\begin{equation}
+{\cal M}_{\textrm{K3}}^{\textrm{stringy}} =
+\left. \frac{\mathrm{O}(4,20)}{\mathrm{O}(4)\times \mathrm{O}(20)}\right/
+\mathrm{O}(4,20,\bZ)\ .
+\end{equation}
+Substituting $D=4$ into \eqref{Narain}, one can see that this is exactly the same as the Narain moduli space for Heterotic string on $T^4$!
+
+
+
+\subsubsection*{Heterotic on $T^4$/Type IIA on K3}
+The relations between Heterotic on $T^4$ and Type IIA on K3 can be seen by comparing the effective actions in $D= 6$. On the Heterotic side, for generic Wilson lines the $E_8 \times  E_8$ or $\SO(32)$ gauge symmetry is broken to $\U(1)^{16}$. Including the KK gauge bosons from $T^4$ compactification, the gauge group becomes $\U(1)^{24}$ and the effective 6d supergravity action of Heterotic string is
+\[
+S_{\textrm{Het}}= \frac{1}{2\kappa_{6}^2} \int d^{6}x \sqrt{ -G}   \,e^{-2\Phi}\left[
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2}| \wt H_{(3)}|^{2}- \frac{\kappa_{6}^2}{2g_{6}^2} \sum_{I=1}^{24} |F_{(2)}^I|^2 \right] ~.
+\]
+
+Type IIA superstring theory compactified on K3 breaks a half of supersymmetries so that there are 16 supercharges as in Heterotic string. It also gives rise to $\U(1)^{24}$ gauge fields which, via KK-reduction, all arise from the R-R sector. One comes from the one-form $C_{(1)}$  with indices in the 6d non-compact spacetime, and another one from the three-form $C_{(3)}$, which is Hodge-dual to a massless vector in 6d. Because of $H_2(K3,\bZ)=\bZ^{22}$, the three-form $C_{(3)}$ on two-cycles of K3 gives 22 vectors. (Thus, we have $1+1+22=24$ $\U(1)$ gauge fields.) As a result, the effective Type IIA action compactified on K3 is
+\[
+S_{\textrm{IIA}}= \frac{1}{2\kappa_{6}^2} \int d^{6}x \sqrt{ -G}   \left[e^{-2\Phi}\Big(
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2}| \wt H_{(3)}|^{2} \Big)- \frac{\kappa_{6}^2}{2g_{6}^2} \sum_{I=1}^{24} |F_{(2)}^I|^2 \right] ~.
+\]
+
+ It is straightforward to show that the two actions are equivalent via the following field redefinition
+ \begin{align}\nonumber
+\Phi^{\textrm{H}}=-\Phi^{\textrm{IIA}}~,&\qquad G^{\textrm{H}}=e^{-2\Phi^{\textrm{IIA}}}G^{\textrm{IIA}}\cr
+A^{\textrm{H}}=A^{\textrm{IIA}}~,&\qquad \wt H^{\textrm{H}}=e^{-2\Phi^{\textrm{IIA}}}\ast \wt H^{\textrm{IIA}}~.
+\end{align}
+
+
+
+
+
+\subsubsection*{More dualities}
+
+
+
+Of course, what we have glimpsed are merely a few representative examples of string dualities. For instance,  compactifications of M-theory on tori with orbifold actions, one can find many dualities.
+These dualities have been discovered at by using similar arguments above. Some
+examples of such conjectured dualities are given
+below \cite{Dasgupta:1995zm,Witten:1995em,Sen:1996zq}:
+\begin{eqnarray}
+\hbox{M-theory on} && \nonumber \\
+\textrm{K3} \qquad  &\leftrightarrow& \qquad\hbox{Heterotic/Type I on $T^3$} \nonumber
+\\
+T^5/\bZ_2 \qquad
+&\leftrightarrow&\qquad \hbox{IIB on K3} \nonumber \\
+T^8/\bZ_2 \qquad &\leftrightarrow&\qquad \hbox{Type I/Heterotic on $T^7$}
+\nonumber \\
+T^9/\bZ_2 \qquad &\leftrightarrow&\qquad \hbox{Type IIB on
+$T^8/\bZ_2$}\nonumber
+\end{eqnarray}
+In each case, $\bZ_2$ acts as reversing the sign of all the coordinates of $T^D$.
+These dualities have been checked by taking Type IIA limit of M-theory.
+
+
+
+
+\end{document}

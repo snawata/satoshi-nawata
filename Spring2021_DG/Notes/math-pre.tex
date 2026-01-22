@@ -1,0 +1,340 @@
+\documentclass[geometry-lectures-21.tex]{subfiles}
+
+%\title{ Lecture 4}
+\begin{document}
+
+\section{Mathematical preliminary}
+
+\subsection{Basic definitions}
+
+
+
+\bdefn[Equivalence relation]\label{def:equiv}
+We say \(\sim\) is an equivalence relation on a set \(A\) if it satisfies the following three properties:
+
+(1) reflexivity: for all \(a \in A, a \sim a\)
+
+(2) symmetry: for all \(a, b \in A,\) if \(a \sim b\), then \(b \sim a\)
+
+(3) transitivity: for all \(a, b, c \in A,\) if \(a \sim b\) and \(b \sim c\), then \(a \sim c\)
+\edefn
+
+
+\bexample\label{ex:equiv}
+Let $V$ be a vector space and $W\subset V$ is a subspace. For $u,v\in V$, we define an equivalence relation $u\sim v$ by $u-v\in W$:
+
+(1) reflexivity: $v\sim v$ since $v-v=0\in W$.
+
+(2) symmetry: if $u\sim v$, then $u-v\in W$ so that $v-u\in W$. Hence $v\sim u$.
+
+(3) transitivity: if \(u \sim v\) and \(v \sim w\), then $u-v\in W$ and $v-w\in W$ so that $u-w\in W$. Hence $u\sim w$.
+
+\eexample
+
+
+\bdefn\label{def:quotient}
+The \textbf{quotient set} of \(S\) with respect to the equivalence relation \(\sim\) is
+the collection of all equivalence classes:
+\(S/\!\!\sim=\{[a] : a \in S\}\)
+In Example \ref{ex:equiv}, the addition $[u]+[v]=[u+v]$ and scalar multiplication $\alpha[v]=[\alpha v]$ are well-defined in $V/\!\!\sim$. We denote $V/\!\!\sim$ by $V/W$, which is called the \textbf{quotient (vector) space} of $V$ by $W$.
+\edefn
+
+
+
+\bdefn[Group]\label{def:group}
+A group is a set, $G$, together with an operation $\ast$ such that for ${}^\forall a,b\in G$, the group operation combines them into another element $a \ast b\in G$ or $ab$. Moreover,  $(G,\ast)$ satisfies the following properties
+
+(1) associativity: For ${}^\forall a,b,c\in G$, $(a \ast b) \ast c = a \ast (b \ast c)$.
+
+(2) identity element: There exists an element $e$ in $G$ such that, for ${}^\forall a\in G$, $e \ast a = a \ast e = a$. Such an element is unique, and thus one speaks of the \textbf{identity element}.
+
+(3) inverse element: For each $a \in G$, there exists an element $a^{-1} \in G$ such that $a \ast a^{-1} =  a^{-1} \ast a = e$, where $e$ is the identity element.
+\edefn
+
+ If $a \ast  b = b \ast a$ for ${}^\forall a,b\in G$, then $G$ is called an \textbf{abelian group}.
+
+ \bexample
+ $(\bZ,+)$ is an abelian group.
+ \eexample
+
+ \bexample
+A \textbf{finite cyclic group} with order $n$ is an abelian group $\bZ_n = \{e, g, g^2, \ldots , g^{n-1}\}$, where $e$ is the identity element and $g^j=g^k$ whenever $j \equiv k$ modulo $n$. It is isomorphic to the abelian group $(\bZ/n\bZ,+)$ or simply $(\bZ_n,+)$, formed by integers modulo $n$ with addition $+$.
+ \eexample
+
+ \bexample
+The \textbf{symmetric group} $S_n$ on a finite set $X=\{1,\ldots,n\}$ is the group whose elements are all bijective maps from $X$ to $X$, and its group operation is a composition of maps. $S_{n>2}$ is non-abelian group.
+ \eexample
+
+
+ \bdefn[Quotient group]\label{def:quotient-group}
+ A subgroup $N \triangleleft G$ of a group $G$ is called a \textbf{normal subgroup} if it is invariant under conjugation:
+$$ N\triangleleft G\Leftrightarrow \forall n\in N,\forall g\in G\colon gng^{-1}\in N.$$
+For a normal subgroup $N \triangleleft G$,  the set $G/N=\{ aN \mid a \in G \}$ is endowed with the natural group operation $ (aN)(bN) = (ab)N$, which does not depend on the choice of the representatives. We call $G/N$ the \textbf{quotient group} of $G$ by $N$.
+ \edefn
+
+ \bdefn
+A \textbf{group homomorphism} from $(G,\ast)$ to $(H,\cdot)$ is a map $h : G \to H$ such that for all $u,v \in G$ it holds that
+$$ h(u\ast v)=h(u)\cdot h(v)~.$$
+From this property, the identify $e_G$ in $G$ is mapped to the identity $e_H$ in $H$, $h(e_G)=e_H$. The \textbf{kernel} is defined as $\Ker(h)=\{g\in G| ~h(g)=e_H\}$, which is a normal subgroup of $G$.
+\edefn
+
+\bexample
+Given an integer $n\in \bZ$, $\times n:\bZ\to \bZ~;~ x\mapsto n x$ is a group homomorphism of $(\bZ,+)$.
+\eexample
+
+\bdefn[Ring]\label{def:ring}
+ A ring is a set $R$ equipped with two binary operations $+$ and $\ast$ satisfying the following three sets of axioms
+
+ (1) $(R,+)$ is an abelian group under addition: the identity element under addition is denoted by $0$.
+
+ (2) $(R,\ast)$ is a monoid under multiplication; $(a \ast b) \ast c = a \ast (b \ast c)$ for ${}^\forall a, b, c \in R$ and  ${}^\exists 1 \in R$ such that $a \ast 1 = a= 1 \ast a $ for ${}^\forall a \in R$
+
+ (3) distributivity of multiplication over addition: $a \ast (b + c) = (a \ast b) + (a \ast c)$  and $(b + c) \ast a = (b \ast a) + (c \ast a)$ for ${}^\forall a,b,c\in R$
+
+\edefn
+
+ \bexample
+ $(\bZ,+,\times)$ are  $(\bZ_n,+,\times)$ are rings.
+ \eexample
+
+
+
+\bexample
+A set $\bR[x]=\{a_0+a_1x+\cdots+a_nx^n| a_i\in\bR \}$ of polynomials with one variable $x$ over $\bR$ is a ring under natural addition $+$ and multiplication $\times$.
+\eexample
+
+\bdefn[Ideals and quotient ring]
+A subset $I$ is called a \text{(two-sided) ideal} of a ring $R$ if it satisfies the following two conditions:
+
+(1) $(I,+)$ is a subgroup of $(R,+)$,
+
+(2) For every $r\in R$ and every $x\in I$, the product $rx, xr\in I$.
+
+For an idel $I$ of $R$, we can define an equivalent relation by $a \sim b$ if and only if $a - b \in I$.
+The set of all such equivalence classes is denoted by $R/I$ becomes a ring by
+\bea\nonumber &(a + I) + (b + I) = (a + b) + I;\cr
+&(a + I)(b + I) = (a b) + I~,\eea
+and it is called the \textbf{quotient ring} of $R$ modulo $I$
+\edefn
+
+
+\bdefn
+For rings $R$ and $S$, a \textbf{ring homomorphism} is a function $f : R\to S$ which satisfies the following properties:
+
+(1)  $f(a+b)=f(a)+f(b)$ for all $a, b \in R$
+
+(2)  $f(ab)=f(a)f(b)$ for all $a, b \in R$
+
+(3) $f(1_{R})=1_{S}$.
+
+The kernel of $f$, defined as $\Ker(f) = \{a \in R \mid f(a) = 0_S\}$, is an ideal in $R$.
+\edefn
+
+\bexample
+$\textrm{mod} ~n:\bZ\to\bZ_n~;~ x\mapsto [x]=x~\textrm{mod} ~n$ is a ring homomorphism. The kernel  of this map is an ideal $n\bZ=\{nx\mid x\in \bZ\} $ of a ring $\bZ$.
+\eexample
+
+
+\bdefn[Field]\label{def:field}
+ A field is a set $F$ equipped with two binary operations $+$ and $\ast$ satisfying the following two sets of axioms
+
+ (1) $(F,+,\ast)$ is a ring.
+
+ (2) Multiplicative inverses: for ${}^\forall a\neq 0$ in $F$, ${}^\exists a^{-1}$ such that $a\ast a^{-1}=1=a^{-1}\ast a$.
+
+\edefn
+
+ \bexample
+ $(\bR,+,\times)$ is a field.
+ \eexample
+
+In this lecture, we consider $\bR$ (or $\bC$) for the ground field.
+
+\bdefn[Algebra over a field]\label{def:algebra}
+Let $F$ be a field, and let $(A,+)$ be a vector space over $F$ equipped with an additional binary operation $\ast$ satisfying the following axioms
+
+ (1) distributivity: $a \ast (b + c) = (a \ast b) + (a \ast c)$  and $(b + c) \ast a = (b \ast a) + (c \ast a)$ for ${}^\forall a,b,c\in A$
+
+ (2) Compatibility with scalars: $(\xi a) \ast (\eta b) = (\xi\eta) (a \ast b)$ for ${}^\forall a,b\in R$ and ${}^\forall\xi,\eta\in F$.
+
+\edefn
+
+An algebra is \textbf{unital} or \textbf{unitary} if it has an identity element $1$ with respect to the multiplication $\ast$. An algebra is \textbf{associative} if  $(a \ast b) \ast c = a \ast (b \ast c)$ for ${}^\forall a, b, c \in A$.
+
+\bdefn
+A homomorphism between two unital associative algebras, $A$ and $B$, over a field $F$, is a map $f: A\to B$ such that for all $\xi\in F$ and $x, y \in A$
+\bea
+& f(1_A)=1_B\cr
+& f(kx)=kf(x)\cr
+& f(x+y)=f(x)+f(y)\cr
+& f(xy)=f(x)f(y)
+\eea
+\edefn
+
+ A module over a ring is a generalization of the notion of vector space over a field.
+
+
+\bdefn[Module]\label{def:module}
+
+Suppose that $R$ is a ring and $1_R$ is its multiplicative identity. A left $R$-module $M$ consists of an abelian group $(M, +)$ and an operation $\cdot : R \times M \to M$ such that for all $r, s \in R$ and $x, y \in M$, we have:
+
+(1) $r\cdot (x+y)=r\cdot x+r\cdot y$
+
+(2) $(r+s)\cdot x=r\cdot x+s\cdot x$
+
+(3) $(rs)\cdot x=r\cdot (s\cdot x)$
+
+(4) $1_{R}\cdot x=x $.
+
+\edefn
+
+A right $R$-module $M$ is defined in a similar fashion.
+
+\bexample\label{ex:Z-mod}
+$\bZ_{n_1}\oplus \cdots\oplus\bZ_{n_k}$ with positive integers $n_i>1$ $(i=1,\ldots,k)$ is a $\bZ$-module.
+\eexample
+
+
+\bthm\label{thm:module}
+A finitely generated $\bZ$-module $M$ is isomorphic to a direct sum
+$$
+M\cong \bZ\oplus \cdots\oplus \bZ \oplus \bZ_{m_1}\oplus \cdots \oplus\bZ_{m_k}
+$$
+where $m_i$ is a divisor of $m_{i+1}$. Moreover, this representation is unique. The part $\bZ_{m_1}\oplus \cdots \bZ_{m_k}$ of elements of finite order is called the \textbf{torsion submodule} of $M$.
+\ethm
+
+
+
+ A free $R$-module is a module that is isomorphic to a direct sum of copies of the ring $R$. These are the modules that behave very much like vector spaces. More precisely,
+\bdefn[Free module]
+A free $R$-module is a module with a basis $E$
+
+(1) $E$ is a generating set for $M$: every element of$M$ is a finite sum of elements of $E$ multiplied by coefficients in $R$
+
+(2) $E$ is linearly independent: $ r_{1}e_{1}+r_{2}e_{2}+\cdots +r_{n}e_{n}=0_{M}$ for distinct elements $e_{1},e_{2},\ldots ,e_{n}$ of $E$ implies  $r_{1}=r_{2}=\cdots =r_{n}=0_{R}$.
+
+ \edefn
+
+A free $\bZ$-module is a $\bZ$-module without a torsion submodule so that Example \ref{ex:Z-mod} is not a free $\bZ$-module.
+
+
+\bdefn[Words]
+Let $S = \{s_\alpha: \alpha \in \Lambda\}$ be a set, and we have an extra set of symbols $S^{-1} = \{s_\alpha^{-1}: \alpha \in \Lambda\}$. We assume that $S\cap S^{-1} = \emptyset$.
+ We define $S^*$ to be the set of \textbf{words} over $S\cup S^{-1}$, i.e.\ it contains $n$-tuples $x_1 \cdots x_n$ for any $0 \leq n < \infty$, where each $x_i \in S \cup S^{-1}$.
+\edefn
+
+\bexample
+  Let $S = \{a, b\}$. Then words could be the empty word $\emptyset$, or $a$, or $aba^{-1}b^{-1}$, or $aa^{-1}aaaaabbbb=aa^{-1}a^5 b^4$.
+\eexample
+
+When we see things like $s_\alpha s_\alpha^{-1}$, we would want to cancel them.
+  An \textbf{elementary reduction} takes a word $us_\alpha s_\alpha^{-1}v$ and gives $uv$, or turn $us_\alpha^{-1}s_\alpha v$ into $uv$.
+  A word is \textbf{reduced} if it does not admit an elementary reduction. For example,
+  $\emptyset$, $a$, $aba^{-1}b^{-1}$ are reduced words, while $aa^{-1}aaaaabbbb$ is not.
+
+\bdefn[Free group]\label{def:free-group}
+  The \textbf{free group} on the set $S$, written $F(S)$, is the set of reduced words on $S^*$ together with some operations:
+
+    (1)  A multiplication $X\ast Y$ of $X=x_1\cdots x_n$ and $Y=y_1\cdots y_m$ is given by the reduced word of $x_1\cdots x_ny_1\cdots y_m$ after elementary reductions.
+
+    (2) The identity is the empty word $\emptyset$.
+
+    (3) The inverse of $x_1\cdots x_n$ is $x_n^{-1}\cdots x_1^{-1}$.
+
+\edefn
+
+
+
+\bdefn[Presentation of a group]\label{def:presentation}
+  Let $S$ be a set, and let $R \subseteq F(S)$ be a subset of the free group $F(S$. We denote by $\langle \langle R\rangle\rangle$ the normal subgroup generated by $R$:
+$$\langle\! \langle R\rangle\! \rangle = \left\{\prod_{i = 1}^n x_i r_i x_i^{-1}\Bigg|  r_i \in R, ~x_i \in F(S)\right \}.$$
+  Then we write the quotient subgroup by $\langle\! \langle R\rangle\! \rangle$ as
+$$\langle S \mid R\rangle = F(S)/\langle\!\langle R\rangle\!\rangle~.$$
+\edefn
+
+\bexample
+$\langle a, b\mid b \rangle \cong \langle a\rangle \cong \Z$.
+\eexample
+
+Note that a presentation of a group $G$ is not unique.
+
+
+\bexample
+For the finite cyclic group of order $5$, we can have two presentations $\langle a\mid a^5 \rangle \cong (\bZ_5,+)$, and $\left\langle a b \mid a b^{-3}, b a^{-2}\right\rangle\cong (\bZ_5,+)$
+\eexample
+
+
+
+\bdefn[Free product]\label{def:free-product}
+ Given the presentation $G_1 = \langle S_1 \mid R_1\rangle, G_2 = \langle S_2 \mid R_2\rangle$ of two groups, where we assume $S_1 \cap S_2 = \emptyset$. The \textbf{free product} $G_1 * G_2$ is defined as
+  \[
+    G_1 * G_2 = \langle S_1 \cup S_2 \mid R_1 \cup R_2\rangle.
+  \]
+\edefn
+
+The free product is well-defined though the groups $G_1$ and $G_2$ can have many different presentations.
+
+
+\subsection{Topological spaces}
+
+
+The notion of manifolds is constructed based on \textbf{topological spaces}. Learning the basics of topological spaces requires several sets of lectures, but we will avoid it in this lecture. Here, basics definitions and their rough meanings will be given. The rigorous introduction is given in \cite{munkres1975topology}, and brief explanation is given in \cite[\S2]{nakahara2003geometry}.
+
+The notation of topological spaces essentially provides open and closed sets that allow for the definition of concepts such as continuity, connectedness, and convergence.
+
+\bdefn\label{def:topology}
+Let $X$ be a set and $\cT$ be a collection of subsets of $X$ which satisfies the following properties
+
+(1) $\varnothing$  and  $X$ are in  $\mathcal{T}$
+
+(2) For a subcollection $\{U_i\in\cT |i\in  I\}$, $\bigcup U_i\in \cT$.
+
+(3) If $U_1,U_2\in\cT$, then $U_1\bigcap U_2\in\cT$.
+
+Then, $\cT$ is called \textbf{topology} and $(X,\cT)$ is called a \textbf{topological space}. Often we denote a topological space by $X$ for the sake of brevity. An element of $\cT$ is called an \textbf{open set}.
+\edefn
+
+
+
+Let \((X,\cT)\) and \((X',\cT')\) be topological spaces. Given a map \(f : X \rightarrow X'\), it is called a \textbf{continuous map} if $f^{-1}(V)\in \cT$ for $V\in \cT'$. If f is a bijection, and both $f$ and $f^{-1}$ are continuous, then $f$ is called a \textbf{homeomorphism}.
+
+
+
+Let \((X, \mathcal{T})\) be a topological space. A subset \(V\) of \(X\) is \textbf{closed} if its complement
+in \(X\) is an open set, that is \(X-V \in \mathcal{T} .\) According to the definition, \(X\) and \(\emptyset\) are closed. For a collection $\{V_i |i\in  I\}$ of closed subsets, $\bigcap_i V_i$ is also closed. For $V_1,V_2$ closed sets, $V_1\bigcup V_2$ is closed.
+
+
+A family \(\left\{U_{i}\right\}\) of open subsets of \(X\) is called an open
+covering of \(X,\) if \(\bigcup_{i \in I} U_{i}=X\).
+\bdefn\label{def:compact}
+A topological space \(X\) is \textbf{compact} if every open cover of \(X\) has a finite
+subcover, i.e. if \(X=\bigcup_{i \in I} U_{i},\) for a collection of open sets \(\left\{U_{i} | i \in I\right\}\), then we can find finitely many $U_{i_k}$ ($k=1,\ldots,n$) such that $X=\bigcup_{k=1}^nU_{i_k}$.
+\edefn
+The compactness is the notation of closed and bounded subsets in the Euclidean space $\bR^n$.
+
+\bdefn\label{def:connected}
+A topological space \(X\) is \textbf{connected} if it cannot be written as
+\(X=X_{1} \cup X_{2},\) where \(X_{1}\) and \(X_{2}\) are both open and \(X_{1} \cap X_{2}=\emptyset .\) Otherwise \(X\)
+is called disconnected.
+\edefn
+
+
+\bdefn
+A topological space  $X$ is \textbf{path-connected} if, for every pair of points  $x$ and $x^{\prime}$ in  $X$, there is a path in  X  from  $x$ to $x^{\prime}$: there's a continuous function $p :[0,1] \rightarrow X$ such that \(p(0)=x\) and \(p(1)=x^{\prime}\).
+\edefn
+
+Every path-connected space is connected, but the converse is not true. (Can you find an example that is connected, but not path-connected?)
+
+\bdefn\label{def:quotient2}
+Let $(X,\cT)$ be a topological space and $\sim$ is an equivalence relation in $X$. We can  define a topology on the quotient set $X/\!\!\sim$ by $\cT'=\{U|U\subset X/\!\!\sim~, \quad p^{-1}(U)\in \cT\}$ where $p:X\to X/\!\!\sim$ is the natural projection. Then, $(X/\!\!\sim,\cT')$ is the quotient space of $(X,\cT)$.
+\edefn
+
+Suppose \(\mathcal{T}\) gives a topology to \(X . \quad N\) is a neighborhood of a point \(x \in X\) if \(N\) is a subset of \(X\) and \(N\) contains some (at least one) open set \(U_{i}\)
+to which \(x\) belongs.
+\bdefn\label{def:Hausdorff}
+A topological space $X$ is called a \textbf{Hausdorff space} if for each pair $x_1,x_2\in M$ of distinct points of $X$, there exist neighborhoods \(U_{1},\) and \(U_{2}\) of \(x_{1}\) and \(x_{2},\) respectively, that are disjoint.
+\edefn
+Roughly speaking,  two distinguished points can be ``separated'' in a Hausdorff space. It may sound obvious to you, but mathematicians are smart enough to find examples of topological spaces that cannot ``separate'' two points.
+
+
+\end{document}

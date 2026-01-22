@@ -1,0 +1,664 @@
+\documentclass[String-lecture-21.tex]{subfiles}
+
+
+
+\begin{document}
+\section{Two-dimensional conformal field theory}\label{sec:2dcft}
+
+
+Conformal field theories (CFTs) play a distinctive role in quantum field theories, string theory, statistical mechanics, and condensed matter physics. Moreover, 2d CFTs are particularly rich because of infinite-dimensional symmetry \cite{belavin1984infinite}.
+We will learn operator analysis of 2d conformal field theory (CFT), including OPE, Ward-Takahashi identity, etc.
+Moreover, we will see Virasoro algebra, which is associated to conformal symmetry. However, we glimpse only the tip of the iceberg, and the subject would actually deserve the entire semester. If the reader is interested in this fertile subject, we refer to the standard references \cite{ginsparg1988applied,francesco2012conformal,Blumenhagen:2009zz}.
+
+
+\subsection{Conformal transformations}
+
+
+ A CFT in any dimension is a quantum field theory invariant under conformal maps at quantum level.
+A conformal map between two Riemannian manifolds $(\Sigma,h)$ and $(\wt\Sigma,h')$ is a diffeomorphism $f:\Sigma\to \wt\Sigma$ such that the pull-back metric $f^* h'$ and the original metric $h$ are related by an arbitrary function $e^{2\omega}$ of $\Sigma$ \[f^* h' =e^{2\omega} h~.\] In terms of local coordinates $(\sigma,h_{ab})$ and $(\wt\sigma,h'_{ab})$,
+a \textbf{conformal transformation} $\sigma^a\rightarrow \wt{\sigma}^a(\sigma)$ relates the metrics by
+%
+\be \frac{\partial\wt\sigma^c}{\partial\sigma^a}\frac{\partial\wt\sigma^d}{\partial \sigma^b} h'_{cd}(\wt{\sigma}(\sigma)) = e^{2\omega(\sigma)} h_{ab}(\sigma)~.\label{cft}\ee
+%
+Roughly speaking, a conformal transformation is a coordinate transformation that leaves the metric invariant up to scale and thus preserves angles.  This means that the theory behaves the same at
+all length scales.
+
+A conformal transformation is a diffeomorphism under which the pull-back metric is related to the original metric by a Weyl transformation. Since the string sigma model \eqref{string-sigma} is invariant under diffeomorphisms and Weyl transformations of the world-sheet, it is conformal-invariant. Hence, we will study conformal field theory of the string world-sheet.
+
+Note that a conformal transformation is a diffeomorphism between two Riemannian manifolds, and a Weyl transformation changes the metric
+ keeping a manifold fixed. (Keep in mind the difference!) Therefore, if the metrics $(\Sigma,h)$ and $(\Sigma, e^{2\omega}h)$ are related by a Weyl transformation, then the identity map of $\Sigma$ is a conformal transformation.
+\footnote{Let us clarify two terminologies at this moment.
+A conformal
+transformation is a diffeomorphism under which
+the metric is scaled but the infinitesimal distance $d s^2$ is fixed.
+While in the previous section,
+the conformal
+symmetry appears as
+a residual symmetry after
+gauge fixing.
+This is a conformal
+transformation along with
+a Weyl transformation that
+fixes the metric but
+scales the infinitesimal
+distance $d s^2$.
+Now the Weyl transformation is only used to undone the scaling factor due to the conformal transformation, and thus
+does not introduce extra
+degrees of freedom.
+These two concepts are just
+different ways that describe
+the same symmetry of our theory.
+}
+
+
+\begin{figure}[ht]
+	\centering
+	\subfigure[$z$]{
+	\includegraphics[width=0.3\textwidth]{picture/2dcft-1}}
+    \subfigure[$z'=z^2$]{
+	\includegraphics[width=0.3\textwidth]{picture/2dcft-2}}
+    \subfigure[$z'=1/z$]{
+	\includegraphics[width=0.3\textwidth]{picture/2dcft-3}}
+    \subfigure[$z'=z|z|$]{
+    \includegraphics[width=0.3\textwidth]{picture/2dcft-4}}
+    	\caption{Coordinate transformation:
+		The transformation from
+		square lattice (a),
+		onto the lattice in (b) and (c)
+		is conformal,
+		while the transformation
+		onto the lattice in (d) is not.}
+	\label{fig:2dcft-ill}
+\end{figure}
+\subsubsection*{2d flat space}
+In complex coordinates, the 2d flat metric can be written as $ds^2 = dz d\bar{z}$. Under a holomorphic map,
+\[
+z\rightarrow f(z)~,
+\]
+the metric is transformed as
+\[
+ds^2 = dz d\bar{z}\quad  \rightarrow\quad  ds^2 =\frac{\partial {z}}{\partial {f}} \frac{\partial \bar{z}}{\partial \bar{f}} df d\bar{f}~.
+\]
+% {\color{red} (Runkai: here the Weyl transformation is used so $\dd s^2 \to
+% \dd s^{'2}$)}
+
+Therefore, all the holomorphic maps are conformal transformations where  $\left| \frac{\partial z}{\partial f} \right|^2$ is a conformal factor (corresponding to $e^{2\omega(\sigma)}$ in \eqref{cft}). Moreover, it is easy to show that all 2d conformal transformations are indeed holomorphic functions (Exercise).  This set is infinite-dimensional, corresponding to the coefficients of the Laurent series of holomorphic functions. Due to the infinite dimensionality, the conformal symmetry becomes so powerful in two dimensions.
+
+%To consider an infinitesimal conformal transformation, we right $f(z)=z+\epsilon(z)$. Because $f(z)$ is a holomorphic function, so too is $f(z)=z+\epsilon(z)$. The same statements hold true for the variable $\bar{z}$. These facts mean that metric tensor transforms as
+%\[
+%ds^2 = dz d\bar{z} \rightarrow \frac{\partial {f}}{\partial {z}} \frac{\partial \bar{f}}{\partial \bar{z}} dz d\bar{z}.
+%\]
+%We can also read off the scale factor for these 2d conformal transformations as $\Lambda = \left| \frac{\partial f}{\partial z} \right|^2$.
+%
+
+
+% As we have learned in the last lecture, the conformal transformations are arbitrary holomorphic/anti-holomorphic local translations.
+% The action is invariant under the transformation
+
+
+
+
+\subsection{State-operator correspondence}
+
+
+As we have seen, the action \eqref{string-sigma} of the string sigma model is invariant under diffeomorphisms. Therefore, it is automatically invariant under conformal transformations.
+We can use this freedom to set the world-sheet to be $\bR^2$ (recall that the topology of a propagating string is a cylinder).
+\begin{align}\nonumber
+ \bR^2:  \quad ds^2 &= d\sigma^1d\sigma^1+d\sigma^2d\sigma^2= dr^2 +r^2 d\theta^2 \cr
+ &= r^2 \left[ d\left(\log r\right)^2 +d\theta^2 \right] \ ,\cr
+ \textrm{Cylinder} : \quad ds^2 &= dt^2 +d\sigma^2 \ ,
+\end{align}
+where the overall factor $r^2$ in $\bR^2$ is identified with the conformal factor $e^{2\omega(\sigma)}$.
+So we can identify
+\begin{align}\nonumber
+ t = \log r \ ,  \qquad  \sigma = -\theta \ ~,
+\end{align}
+and the reason for the minus sign will be clear later.
+This identification tells us that there is a correspondence between
+\begin{itemize} \setlength\itemsep{.1em}
+ \item CFT on a cylinder and
+ \item CFT on  $\bC^\times=\bC\backslash\{0\}$  ,
+\end{itemize}
+provided that we choose the boundary conditions to be the same.
+In particular, the initial \textbf{state} of the string ($t = -\infty$) corresponds to a \textbf{local operator}
+inserted at the origin, which is called vertex operator (Figure \ref{fig3}).
+\begin{figure}[htb]
+ \centerline{\includegraphics[width=14cm]{picture/fig3}}
+ \caption{State-operator correspondence. The initial state (red circle) is mapped to a local operator (red dot) at the origin.}
+ \label{fig3}
+\end{figure}
+This is the state-operator correspondence in a CFT, which plays a crucial role.  We can express string states by the vertex operators
+(Figure \ref{fig2}).
+
+
+Now the reader may wonder if there is any way to express commutation relations in terms of operators
+so that we can do parallel procedures of the canonical quantization in terms of operators.
+
+
+\subsection{Operator product expansions in free scalar theory}\label{sec:OPE}
+
+
+We study massless free scalar fields as the easiest example.
+Here we adopt the Euclidean metric $\delta_{ab} = \textrm{diag}(+,+)$ though the procedure is parallel for the Lorentz metric.
+We write the action in complex coordinates
+\begin{align}\label{free-scalar}
+ S_X = \frac{1}{2\pi\alpha'} \int d^2 z\ \partial X^\mu  \ol\partial X_\mu~.
+\end{align}
+Then, the equation of motion is given by $\partial\ol\partial X^\mu = 0$, which implies that $X$ is holomorphically factorized
+\begin{align}\label{mode-exp}
+ X^\mu(z,\ol z) &= X^\mu (z) +\ol X^\mu (\ol z)   ,   \cr
+ X^\mu (z) &= \frac{1}{2}x^\mu -i \frac{\alpha'}{2} p^\mu \log z +i \sqrt{ \frac{\alpha'}{2} } \sum_{n \neq 0} \frac{1}{n} \frac{\alpha_n^\mu}{z^n} \ , \cr
+ \ol X^\mu (\ol z) &=\frac{1}{2}x^\mu -i \frac{\alpha'}{2} p^\mu \log \overline z +i \sqrt{ \frac{\alpha'}{2} } \sum_{n \neq 0} \frac{1}{n} \frac{\ol \alpha_n^\mu}{\overline z^n} \ ,
+\end{align}
+where
+\begin{align}\nonumber
+ z = r e^{i\theta} = e^{\log r +i\theta} = e^{i\tau -i\sigma} = e^{i\sigma^-} \ ,  \qquad \ol z &= e^{i\sigma^+} \ .
+\end{align}
+This is the Euclidean version of \eqref{mode}. The (anti-)holomorphic part corresponds to the right (left) movers.
+
+
+
+
+
+Let us consider a quantum version of the equation of motion by using a path integral formulation.
+% Correlation function of an operator $\mathcal O$ is given by a path integral
+% \begin{align}\nonumber
+%  \langle \mathcal O \rangle = \int \mathcal D \Phi e^{-S[\Phi]} \mathcal O[\Phi]  .
+% \end{align}
+Like a normal integral, we assume that the ``total derivative'' vanishes in the path integral.
+For example, in the massless free scalar case, we have
+\begin{align}\nonumber
+ 0 = \int \mathcal D X \ \frac{\delta}{\delta X} e^{-S[X]} = \int \mathcal D X \ e^{-S[X]} \frac{1}{\pi\alpha'}\partial\ol\partial X
+ = \frac{1}{\pi\alpha'} \langle \partial\ol\partial X \rangle \ ,
+\end{align}
+which is Ehrenfest's theorem.
+The equation of motion is satisfied as an operator equation if there is no other operator nearby.
+
+
+Furthermore, the same procedure can be done with operator insertion:
+\begin{align}\nonumber
+ 0 = \int \mathcal D X \ \frac{\delta}{\delta X_\mu (z,\ol z)} \left(e^{-S[X]} X^\nu (w,\ol w) \right)
+ = \Bigl\langle \frac{1}{\pi\alpha'}\partial_z\partial_{\ol z} X^\mu (z,\bar z) X^\nu(w,\bar w) + \eta^{\mu\nu}\delta^2(z-w) \Bigr\rangle \ ,
+\end{align}
+yielding
+\begin{align}\label{operator-eom}
+\Bigl\langle  \partial\ol\partial X^\mu (z,\bar z) X^\nu(w,\bar w) \Bigr\rangle= -\pi\alpha' \eta^{\mu\nu}\delta^2(z-w) \ .
+\end{align}
+Now we can use the
+\textbf{Stokes' theorem}
+\begin{align}\nonumber
+ \int_D d^2z \left( \partial \ol V + \ol\partial V\right)
+ = \frac{1}{i} \oint_{\partial D} \left( V dz - \ol V d\ol z \right) \ ,
+\end{align}
+where $D$ is an arbitrary domain (typically a disk) and $\partial D$ is its boundary.
+Using Stokes' theorem, we obtain
+\begin{align}
+ \partial\ol\partial \log |z|^2 =2\pi \delta^2(z) \ .
+ \label{eq:deltaFunc}
+\end{align}
+This allows us to rewrite \eqref{operator-eom} into
+\begin{align}\nonumber
+ X^\mu(z,\bar z) X^\nu(w,\bar w) = -\frac{\alpha'}{2} \eta^{\mu\nu} \log |z-w|^2 + \nord{X^\mu(z,\bar z)X^\nu(w,\bar w)} \ ,
+\end{align}
+where we introduced a normal ordering $\nord{\mathcal O}$.
+This is an operator equation, and we simply omit $\langle \quad \rangle$ symbols. This expression describes the singular behavior when $ X^\mu(z,\bar z)$ approaches to $ X^\nu(w,\bar w)$.
+
+
+We also write it as follows:
+\begin{align}\nonumber
+ \nord{X^\mu(z,\bar z)X^\nu(w,\bar w)} = X^\mu(z,\bar z)X^\nu(w,\bar w) -\eta^{\mu\nu}G(z,w) \ ,
+\end{align}
+where $G(z,w) = -\frac{\alpha'}{2} \log|z-w|^2$.
+Notice that
+\begin{align}
+ \partial \overline\partial \nord{X(z,\bar z)X(w,\bar w)} = 0 \ .
+ \label{eq:normalEOM}
+\end{align}
+As we will see later, the divergent term is important and meaningful.
+This is the reason why it is convenient to introduce the normal ordering so that we can separate divergent terms from the other.
+
+
+
+The normal ordering of an arbitrary functional of operators in the free scalar theory can be expressed as follows:
+\begin{align}\nonumber
+ \nord{f[X]} = \exp \left[ -\frac{1}{2} \int d^2z d^2w\ G(z,w) \frac{\delta}{\delta X^\mu(z,\bar z)} \frac{\delta}{\delta X_\mu(w,\bar w)} \right]
+ f[X] \ .
+\end{align}
+For example,
+\begin{align}\nonumber
+ \nord{X_1X_2X_3X_4X_5} =& X_1X_2X_3X_4X_5 -\left( G_{12}X_3X_4X_5 +\cdots \right)_\textrm{10 terms}  \cr
+ &+\left( G_{12}G_{34}X_5 +\cdots \right)_\textrm{15 terms} \ ,
+\end{align}
+where $X_i=X(z_i)$ and $G_{ij} = G(z_i,z_j)$.\footnote{
+Here the normal ordering is used to
+cut off UV divergence in
+a particular renormalization scheme.
+It is not necessarily
+equivalent to the normal
+ordering
+defined by the creation
+and annihilation operators in the previous
+section.}
+
+Moreover, a product of normal ordered operators is given as follows:
+\begin{align}\label{OPE-general}
+ \nord{f[X]} \nord{g[X]} = \exp \left[ \int d^2z d^2w\ G(z,w) \left. \frac{\delta}{\delta X^\mu(z,\bar z)} \right|_{f} \left. \frac{\delta}{\delta X_\mu(w,\bar w)} \right|_{g} \right] \nord{fg[X]} \ .
+\end{align}
+For instance, we have
+\begin{align}\nonumber
+ \nord{ \partial X(z,\bar z)} \nord{ X(w,\bar w)} = \nord{\partial X(z,\bar z) X (w,\bar w)} +\partial_z G(z,w)
+ = \nord{\partial X (z,\bar z) X (w,\bar w)} -\frac{\alpha'}{2} \frac{1}{z-w} \ .
+\end{align}
+As another example, we can consider the OPE of vertex operators (See \S\ref{sec:vertex-operator})
+\begin{align}\nonumber
+ \nord{e^{ik\cdot X(z,\bar z)}} \nord{e^{ik'\cdot X(w,\bar w)}} &= \exp\left[ (ik) \cdot (ik') \left( -\frac{\alpha'}{2} \log|z-w|^2 \right)\right]
+ \nord{e^{ik\cdot X(z,\bar z) +ik'\cdot X(w,\bar w)}} \cr &= |z-w|^{\alpha'k\cdot k'} \nord{e^{ik\cdot X(z,\bar z) +ik'\cdot X(w,\bar w)}} \ .
+\end{align}
+
+
+
+In a general field theory, a product of a pair of fields can be expanded by a single operator
+\begin{align}\nonumber
+ \Phi^i (z) \Phi^j (w) = \sum_{k} C^{ij}_k(z-w) \Phi^k (w) \ .
+\end{align}
+This is called \textbf{operator product expansion (OPE)}, and it describes the behavior when the two operators approach each other.
+
+
+Typically, for a massless free scalar field theory, we have
+\begin{align}\label{XXOPE}
+ &X^\mu (z,\ol z) X^\nu (w,\ol w) =  -\frac{\alpha'}{2} \eta^{\mu\nu} \log |z-w|^2 +\nord{X^\mu X^\nu (w,\ol w)}  \cr
+ &\qquad +\sum_{k=1}^\infty \frac{1}{k!} \left\{ (z-w)^k  \nord{\partial^k X^\mu X^\nu (w, \ol w)}
+ +(\ol z-\ol w)^k  \nord{\ol\partial^k X^\mu X^\nu (w, \ol w)}\right\} \ .
+\end{align}
+The second and the third terms of RHS can be understood as the Taylor expansions of $\nord{X(z)X(w)}$ in terms of $z$. Note that mixing terms ($\nord{\partial^m\overline\partial^n X X}$) vanish due to the ``equation of motion'' (\ref{eq:normalEOM}).
+
+
+
+As we will see below, divergent terms in OPE are important. Thus, we write
+\begin{align}\nonumber
+ X^\mu (z,\ol z) X^\nu (w,\ol w) \sim  -\frac{\alpha'}{2} \eta^{\mu\nu} \log |z-w|^2 \ .
+\end{align}
+The symbol $\sim$ means the regular terms are ignored.
+
+
+\subsection{Conformal Ward-Takahashi identity}\label{sec:Noether}
+
+When an action is invariant under a certain transformation $\delta$ (namely, $\delta S = 0$)
+we say the theory has a (classical) symmetry.
+Furthermore, the measure of the path integral is also invariant under the
+transformation, the theory has the symmetry at quantum level.
+On the other hand, if the measure is not invariant, then the symmetry is anomalous.
+It is non-trivial to see if the theory has an anomaly or not.
+
+If the theory has a symmetry, Noether's theorem states that there is the corresponding conserved current $j^a$.
+The space integral of its time component is the conserved charge $Q=\int_\textrm{space} j^0$, which generates the symmetry $\delta \phi = [Q, \phi]$.
+Let $\delta$ be a symmetry $\delta S = 0$ and assume it acts on a field as follows: $\delta \phi (z) = \epsilon (\cdots) $, where $\epsilon$ is a small parameter.
+If we promote the parameter $\epsilon$ to be world-sheet coordinate dependent (i.e. $\wh \delta \phi = \epsilon(z,\ol z) (\cdots)$), then $\wh \delta S$ is no longer zero but has to take the following form:
+\begin{align}\nonumber
+ \wh\delta S = \int \frac{d^2 \sigma}{2\pi} \epsilon(x,y) \partial_a j^a
+ = \int \frac{d^2z}{2\pi} \epsilon(z, \ol z)
+ \left( \partial \ol j +\ol\partial j \right) \ ,
+\end{align}
+where we introduced $j = j_{z}$ and $\ol j = j_{\ol z}$.
+If the parameter is constant, $\delta S = (\textrm{total derivative}) = 0$ so that $j^a$ is \textbf{the Noether current}.
+The conservation of the Noether current $\partial_a j^a = 0$ in the flat 2d implies that $j$ ($\ol j$) is a holomorphic (anti-holomorphic) function of $z$.
+
+
+
+\subsubsection*{Ward-Takahashi identity}
+
+Now let us study the transformation of  a point operator $\mathcal{O}(w,\ol w)$ under the symmetry $\delta$. For this purpose,
+we set
+\begin{align}\nonumber
+ \epsilon(z,\ol z) =
+ \begin{cases}
+  \epsilon \quad (\textrm{const.}) \quad &\textrm{for}\ z \in D_w \ ,  \cr
+  0                                      &\textrm{for}\ z \not\in D_w \ , \cr
+ \end{cases}
+\end{align}
+where $D_w$ is a disk containing $w$. Then, the variation of the path integral
+\begin{align}\nonumber
+ 0 = \int \cD X \ \wh \delta \left[ e^{-S} \mathcal{O}(w,\ol w) \right]
+ = \int \cD X e^{-S}\  \left[ \delta \mathcal{O}(w,\ol w) -\wh \delta S \cdot \mathcal{O}(w,\ol w) \right]  .
+\end{align}
+Therefore, we have
+\begin{align}\nonumber
+ \delta \mathcal{O}(w,\ol w) &= \int \frac{d^2z}{2\pi} \epsilon(z, \ol z)
+ \left( \partial \ol j(\ol z) +\ol\partial j(z) \right) \mathcal{O}(w, \ol w)  \cr
+ &= \frac{\epsilon}{2\pi i} \oint_{\partial D_w} \Big( dz\ j(z) -d\ol z\ \ol j(\ol z) \Big) \mathcal{O}(w,\ol w) \ ,
+\end{align}
+This is called the \textbf{Ward-Takahashi identity}.
+
+
+Let us see an example of the free scalar field \eqref{free-scalar}.
+It is easy to see that the action of the free scalar field is invariant under the transformation $X^\mu\to X^\mu+\e^\mu$. If $\e^\mu(z,\bar z)$ has a function, then we have
+\begin{align}\label{U1-current}
+\wh \delta S &= \frac{-1}{2\pi \alpha'} \int d^2z\ \epsilon_\mu(z,\ol z) \Bigl[\ol\partial \left( \partial X^\mu\right) +\partial \left( \ol\partial X^\mu\right)\Bigl] \cr
+ &j^\mu = -\frac{1}{\alpha'} \partial X^\mu \ , \qquad  \ol j^\mu =-\frac{1}{\alpha'} \ol\partial X^\mu  ~.
+\end{align}
+It is straightforward from \eqref{XXOPE} to check that \[\delta X^\mu(w) = \epsilon_\nu \oint_{\partial D} \frac{dz}{2\pi i}\ j^\nu(z) X^\mu(w) \] is consistent.
+
+
+
+Now, let us consider the Ward-Takahashi identity for conformal symmetry.
+For an infinitesimal conformal transformation $\sigma^a\rightarrow \sigma^a + \epsilon^a(\sigma)$, the metric is transformed as
+\[
+\delta_{ab}\to \delta_{ab} +\partial_a\e_b+\partial_b\e_a~.
+\]
+Since this is a conformal transformation, it is proportional to $\delta_{ab}$ so that we have
+\be \label{infinitesimal2dconformal}
+\partial_a\e_b+\partial_b\e_a = (\partial_\rho \e^\rho)\delta_{ab}~.
+\ee
+A solution to this equation is called a \textbf{conformal Killing vector}.
+The current for the conformal transformation can be written as \[j_a=T_{ab}\epsilon^b~,\]
+where the straightforward calculation provides the energy-momentum tensor
+\be\label{se}
+T_{ab}=-2\pi\Big[\frac{\partial L}{\partial(\partial^a \phi)} \partial_b \phi -\delta_{ab} L\Big]~.
+\ee
+If we assume $\epsilon$ is constant, it is easy to see that the conservation of the current implies the conservation of the energy-momentum tensor:
+\be\label{conservation}
+\partial_a j^a=0 \quad \to\quad \partial^a T_{ab}=0~.
+\ee
+For general $\epsilon^a(\sigma)$, the conservation of the current gives the traceless condition of $T_{ab}$:
+\begin{equation}\label{traceless}
+0=\partial^a j_a=\frac12 T_{ab}(\partial^a\e^b+\partial^b\e^a )=\frac12T^a{}_a(\partial_\rho \e^\rho)\quad \to \quad T^a{}_a=0~.
+\end{equation}
+In the complex coordinate $z=x^1+ix^2$, the traceless condition can be written as
+\[
+T_{z\bar{z}} = T_{\bar{z}z} = 0
+\]
+and the conservation of the energy-momentum tensor can be written as
+\[
+\partial_{\bar{z}}T_{zz}= 0~,\qquad \partial_{z}T_{\bar{z}\bar{z}}= 0~.
+\]
+Thus, the non-vanishing components of the energy-momentum tensor factorize to a chiral and anti-chiral field,
+\[T(z):=T_{zz} \quad \textrm{and} \quad  \bar{T}(\bar{z}):=T_{\bar{z}\bar{z}} ~.\] As a result, the Noether currents for conformal transformations $z \to z + \e(z)$ and $\bar z \to\bar  z + \bar \e(\bar z)$ are
+\[
+j(z)=  \epsilon(z) T(z)~,\quad \overline j(\overline z)=\overline \epsilon(\overline z)  \overline T(\overline z)  ~.
+\]
+The application to the Ward-Takahashi identity leads to \textbf{conformal Ward-Takahashi identity}
+\begin{equation}\label{CWT}
+\delta_{\epsilon.\overline \epsilon} \mathcal{O}(w,\bar{w}) = \frac{1}{2\pi i}\oint_{C_w} dz\;  \epsilon(z)T(z) \mathcal{O}(w,\bar{w})+
+ \frac{1}{2\pi i}\oint_{C_{\bar w}} d\bar{z}\; \bar{\epsilon}(\bar{z}) \bar{T}(\bar{z})\mathcal{O}(w,\bar{w}) ~,
+\end{equation}
+where the contour integral is taken as a counter-clockwise circle both in $z$ and in $\bar z$ (thereby explaining the sign difference of the second term).
+
+
+
+\subsection{Primary fields}
+
+Let us first introduce some terminologies in 2d CFT.
+ Fields  depending  only on $z$, i.e. $\phi(z)$, are called \textbf{chiral or holomorphic fields}  and fields $\overline \phi (\bar z)$ only depending on $\bar z$ are called \textbf{anti-chiral or anti-holomorphic  fields}.
+If a field $\phi$ transforms under the scaling transformation $z\rightarrow\lambda z$ as
+\begin{equation}
+\phi(z,\bar{z})\rightarrow\phi'(\lambda z,\bar{\lambda}\bar{z} )=\lambda^{-h} \bar{\lambda}^{-\bar{h}} \phi( z, \bar{z})~,
+\end{equation}
+it is said to have \textbf{conformal dimension} $(h, \bar{h})$.
+If a field transforms under a conformal transformation $z\rightarrow f(z)$ as
+\begin{equation}\label{primary}
+\phi(z,\bar{z})\rightarrow\phi'(f(z),\bar{f} (\bar{z}))=\left(  \frac{\partial f}{\partial z} \right)^{-h} \left( \frac{\partial \overline f}{\partial \overline z}\right)^{-\bar{h}}\phi( z,\bar{z})
+\end{equation}
+ it is called a \textbf{primary field} of conformal dimensions  $(h,\overline h)$. If \eqref{primary} is true only for $f\in\SL(2,\bC)/\bZ_2$, then it is called a \textbf{quasi-primary field}. Note that $\SL(2,\bC)/\bZ_2$ group acts on the holomorphic coordinate as
+\[
+z \mapsto \frac{a z+b}{c z+d} \qquad \begin{pmatrix}a&b\\ c&d\end{pmatrix}\in\SL(2,\bC)/\bZ_2 ~.\]
+
+
+
+How do primary fields transform infinitesimally? Under the infinitesimal conformal transformation $z\rightarrow f(z)= z-\epsilon(z)$, we know that
+\begin{align}
+\left( \frac{\partial f}{\partial z} \right)^{-h}& = 1 + h \partial_z \epsilon(z) + O(\epsilon^2)~, \cr
+\phi(z-\epsilon(z),\bar{z}) &= \phi(z) - \epsilon(z)\partial_z \phi(z,\bar{z}) + O(\epsilon^2)~.
+\end{align}
+Hence, under an infinitesimal conformal transformation, the variation of a primary field is given by
+\begin{equation}
+\delta_\epsilon \phi(z,\bar{z}) = \left( h\partial_z \epsilon + \epsilon \partial_z + \bar{h}\partial_{\bar{z}}\bar{\epsilon} +\bar{\epsilon} \partial_{\bar{z}} \right)  \phi(z,\bar{z}) \label{eq:threetwothree}.
+\end{equation}
+
+Consequently, using simple complex analysis
+\begin{align}
+(\partial_w \e(w))\phi(w,\bar w)&=\frac1{2\pi i}\oint_{C_w} dz~ \frac{\e(z) \phi(w,\bar w)}{(z-w)^2}\cr
+\e(w)(\partial_w\phi(w,\bar w))&=\frac1{2\pi i}\oint_{C_w} dz ~\frac{\e(z)\partial_w \phi(w,\bar w)}{z-w}~,
+\end{align}
+one can read off the OPE of a primary operator $\phi$ of conformal dimension $(h,\tilde{h})$ with the energy-momentum tensor $T$ (anti-chiral part $\overline  T$ can be obtained by complex conjugate)
+\be\label{Tprimary-OPE} T(z)\,\phi(w,\overline w) =h\frac{\phi(w,\overline w)}{(z-w)^2} + \frac{\partial_w \phi(w,\overline w)}{z-w} + \textrm{regular terms}
+\cdots \ee
+In general, the OPE of an operator $\cO$ of conformal dimension $(h,\tilde{h})$ with the energy-momentum tensor $T$ and $\overline  T$ takes the form
+%
+\[ T(z)\,{\cal O}(w,\overline w) =\quad \cdots + h\frac{{\cal O}(w,\overline w)}{(z-w)^2} + \frac{\partial{\cal O}(w,\overline w)}{z-w} +
+\cdots \]
+%
+
+One of the main interests in a CFT is to calculate correlation functions of primary fields. Indeed, the conformal Ward-Takahashi identity can be applied to a correlation function of primary fields
+\[
+\langle T(z) \phi_1(w_1,\bar{w}_1)\cdots \phi_n(w_n,\bar{w}_n)\rangle=\sum_{i=1}^n \Big(\frac{h_i}{(z-w_i)^2} + \frac{\partial_{w_{i}}}{z-w_i} \Big)\langle\phi_1(w_1,\bar{w}_1)\cdots \phi_n(w_n,\bar{w}_n)\rangle~.
+\]
+Moreover, conformal symmetry is so powerful that it determines the forms of two-point and three-point functions of primary fields (Exercise).
+
+\vspace{.4cm}
+
+\noindent $\bullet$ \textbf{2-point function}
+
+For chiral primary operators $\phi_i$ with conformal dimension $h_i$ ($i=1,2$), their 2-point function  is of form
+\be\label{2-pt}
+\langle \phi_1(z_1)\phi_2(z_2)\rangle =\delta_{h_1h_2}\frac{d_{12}}{(z_1-z_2)^{2h_1}}
+\ee
+If $d_{12}$ is non-degenerate, the fields can be normalized such that $d_{12}=\delta_{12}$.
+
+\vspace{.4cm}
+\noindent $\bullet$ \textbf{3-point function}
+
+A 3-point function is also completely fixed by conformal invariance up to the appearance of a \textbf{structure constant} $C_{123}$ (exercise)
+ $C_{ijk}$,
+\[
+\langle \phi_1(z_1)\phi_2(z_2)\phi_3(z_3)\rangle =\frac{C_{123}}{(z_1-z_2)^{h_1 +h_2 -h_3}(z_2-z_3)^{h_2 +h_3 -h_1}(z_3-z_1)^{h_3 +h_1 -h_2}}
+\]
+The structure constant depends on a CFT and, in general, it is not easy to determine it.
+
+
+\vspace{.4cm}
+\noindent $\bullet$ \textbf{Multi-point function}
+
+The computation of multi-point functions involves \textbf{conformal blocks} with the 3-point function. The details are explained in \cite{francesco2012conformal,Blumenhagen:2009zz}.
+
+\subsection*{Free scalar field}
+
+Now let us study conformal Ward-Takahashi identity in the simplest example, the free scalar field \eqref{free-scalar}.
+Let us recall that the energy-momentum tensor in 2d free scalar  theory  is
+\be T_{a b}^{X}=-\frac{1}{\alpha^{\prime}}\left(\partial_{a} X^{\mu} \partial_{b} X_{\mu}-\frac{1}{2} \delta_{a b}\left(\partial_{c} X^{\mu} \partial^{c} X_{\mu}\right)\right)\ ,\label{classicalt}\ee
+As in \eqref{+-}, since the equation of motion for $X^\mu$ is $\partial_z \overline \partial_{\bar z} X^\mu=0$, the classical solution holomorphically factorizes as
+\[X^{\mu}(z, \bar{z})=X^{\mu}(z)+\bar{X}^{\mu}(\bar{z})~.\]
+In \eqref{U1-current}, we find the conserved holomorphic and anti-holomorphic $\U(1)$ current
+\be j^\mu(z) := -\partial X^\mu(z)/\alpha' ~,\quad \textrm{and} \quad \bar{j}^\mu(\bar{z}) := -\overline \partial \overline X^\mu(\overline z)/\alpha' ~.\ee
+Moreover, the energy-momentum tensor becomes much simpler in complex coordinates. It is simple to check that $T^X_{z\bar z}=0$ while
+\be \label{TX} T^X(z) = -\frac{1}{\a'}\,\partial X^\mu(z)\partial X_\mu(z)~, \quad   \overline T^X(\overline z) = -\frac{1}{\a'}\,\overline \partial \overline X^\mu(\overline z)\overline \partial \overline X_\mu(\overline z)~.\ee
+
+From the definition \eqref{primary}, one can see that $X(z,\overline z)$ is a primary field of conformal dimension $(0,0)$. However, since the conformal dimension is of $(0,0)$, the two-point function does not exactly take the form \eqref{2-pt}. Indeed, the OPE $XX$ tells us that the propagator takes the form
+\[
+\langle X^\mu(z,\overline z)X^\nu(w,\overline w) \rangle=-\frac{\a'}{2}\eta^{\mu\nu}\log|z-w|^2~.
+\]
+Also, for each $\mu$, the currents $j^\mu(z)$, $\overline j^\mu(\overline z)$ are primary fields of conformal dimension (1,0) and (0,1),
+respectively. Focusing only on the holomorphic part, an immediate check is their correlation function
+\[
+\langle \partial X^\mu(z) \partial X^\nu(w) \rangle =-\frac{\a'}{2}\frac{\eta^{\mu\nu}}{(z-w)^2}~,
+\]
+which takes the form \eqref{2-pt}. To convince ourselves completely, we need to compute the OPE with the energy-momentum tensor by Wick's theorem %
+\begin{align}
+T^X(z)\,\partial X^\mu(w) &= -\frac{1}{\a'}: \partial X^\nu(z)\partial X_\nu(z): \partial X^\mu(w)\cr
+&= \frac{\partial X^\mu(w)}{(z-w)^2}
++\frac{\partial^2 X^\mu(w)}{z-w} + \textrm{regular terms} \cdots
+\end{align}
+This is indeed the OPE for a primary operator of conformal dimension $h=1$.
+
+
+
+
+
+Finally, let us check to see the $TT$ OPE of the energy-momentum tensors. This can be done by applying the Wick contractions, and the result is
+\begin{align}\label{scalartt} T^X(z)\,T^X(w) &= \frac{1}{\alpha^{\prime\,2}}\ :\partial X^\mu(z)\,\partial X_\mu(z):\ :\partial X^\nu(w)\,\partial X_\nu(w): \cr
+&= \frac{D/2}{(z-w)^4} + \frac{2T^X(w)}{(z-w)^2} +
+\frac{\partial T^X(w)}{z-w} + \ldots \end{align}
+ Therefore, the energy-momentum tensor is an operator of conformal dimension $(h,\overline{h})=(2,0)$. Because there is a higher singular term proportional to $(z-w)^{-4}$, the energy-momentum tensor is not a primary field. In fact, this is a general property of the $TT$ OPE in all 2d CFTs.
+
+
+
+
+\subsection{Virasoro algebra}
+
+For the free scalar field, we have already seen that $T$ has
+conformal dimension $(h,\tilde{h})=(2,0)$. This remains true in any CFT. The reason for this is simple:
+ $T_{ab}$ has dimension  $\Delta =2$ because we obtain the energy by integrating over space.
+It has spin $s=2$ because it is a symmetric two-tensor. However, these two pieces of information
+are equivalent to the statement that $T$ is an
+operator of conformal dimension $(2,0)$. This means that the
+$TT$ OPE takes the form,
+%
+\[ T(z)\,T(w) = \ldots + \frac{2T(w)}{(z-w)^2} + \frac{\partial T(w)}{z-w} + \ldots \]
+%
+and a similar one for $\bar{T}\bar{T}$. What other terms could we have in this expansion? Since
+each term has dimension $\Delta=4$, the unitarity indeed tells us that the singular part of the OPE takes
+\[T(z)\,T(w) = \frac{c/2}{(z-w)^4}+ \frac{2T(w)}{(z-w)^2} + \frac{\partial T (w)}{z-w}
++\ldots \]
+
+
+
+
+From the OPE of the energy-momentum tensor, one can see its variation under an infinitesimal conformal transformation $z\to z -\e(z)$
+\begin{align}\label{inf-T-variation}
+\delta_\e T(w)&= \frac{1}{2\pi i}\oint_{C_w} dz~ \e(z)T(z)T(w)\cr
+&=\e(w)\partial T(w)+2\e'(w)T(w)+\frac{c}{12}\e{'''}(w)
+\end{align}
+One can verify by a straightforward computation that this is the infinitesimal version of
+ the following transformation under finite transformation $z\to w(z)$:
+\begin{equation}
+T'(w) = \left( \frac{\partial w}{\partial z} \right)^{-2} \left[T(z) - \frac{c}{12} S\left( w,z \right) \right], \label{eq:finitettransform}
+\end{equation}
+where the \textbf{Schwarzian derivative} $S$ is defined as
+\begin{equation}
+S(w,z) := \frac{1}{(\partial_z w)^2} \left((\partial_z w)(\partial_z^3 w)-\frac32(\partial_z^2 w)^2  \right).
+\end{equation}
+% \begin{figure}\centering
+% \includegraphics[width=10cm]{plane-cylinder}
+% \end{figure}
+Using the mapping from the plane to the cylinder $z=e^{-iw}$ ($w=\sigma+it$) as in Figure \ref{fig3}, the energy-momentum tensor is transformed as
+\begin{equation}
+T_{cyl}(w) =- z^2 T(z) + \frac{c}{24}.
+\end{equation}
+The Laurent mode expansion of the energy-momentum tensor on the cylinder is therefore
+\begin{equation}\label{Casimir2}
+T_{cyl}(w) =- \sum_{n\in \mathbb{Z}} \left( L_n - \frac{c}{24}\delta_{n,0} \right) e^{inw}~.
+\end{equation}
+Including the contribution from the anti-holomorphic sector, the Hamiltonian is defined by
+%
+\[ H\equiv \int d\sigma\ T_{\tau\tau} = -\int d\sigma\, (T_{ww} + \bar{T}_{\bar w\bar  w})=L_0+\overline L_0-\frac{c}{12}~.\]
+%
+This tells us that the ground state energy on the cylinder is
+%
+\[ E = -\frac{c}{12}~.\]
+%
+This is indeed the (negative) Casimir energy on a cylinder. In the string sigma model, each coordinate $X^\mu$ of the target space gives rise to a free scalar theory, and it is easy to see from the computation  \eqref{scalartt} that each coordinate $X^\mu$ contributes to the central charge by
+$c=1$. Thus, each target dimension yields the energy density $E= -1/12$ as we have seen in the quantization of bosonic string theory \eqref{Casimir}. Moreover, we have the central charge \be\label{cX} c^X=D\ee for the string sigma model with the target space $\bR^{1,D-1}$.
+
+
+
+\begin{figure}\centering
+\includegraphics[width=10cm]{picture/OPE-com-relation}\caption{}\label{OPE-com-relation}
+\label{Contours are chosen according to the radial ordering}
+\end{figure}
+
+In the Euclidean flat space, the mode expansion of the energy-momentum tensor is expressed as
+\[
+T(z)= \sum_{n\in \mathbb{Z}}\frac{L_n}{{z}^{n+2}}~,
+\]
+where the shift by two in the exponent of $z$ is due to the conformal dimension of the energy-momentum tensor.
+It is natural to find the commutation relation of the generators $L_m$.  The commutator can be computed by
+%
+\[ [L_m,L_n] = \left(\oint\frac{dz}{2\pi i}\oint\frac{dw}{2\pi i}\ -\ \oint\frac{dw}{2\pi i}\oint\frac{dz}{2\pi i}\right)\,z^{m+1}w^{n+1}\,T(z)\,T(w)\]
+%
+Here we impose the radial ordering
+\[R(A(z) B(w)):=\begin{cases}A(z) B(w) &\text { for }|z|>|w| \\ B(w) A(z) &\text { for }|w|>|z|\end{cases}\]
+according to which the contour is chosen as in Figure \ref{OPE-com-relation}.
+Clever manipulation of the contour makes life easier
+\begin{align}
+[L_m,L_n] &= \oint \frac{dw}{2\pi i}\oint_w\frac{dz}{2\pi i} \ z^{m+1}w^{n+1}\,T(z)\,T(w) \\
+&= \oint\frac{dw}{2\pi i}\,\textrm{Res}\left[z^{m+1}w^{n+1}\left(\frac{c/2}{(z-w)^4}+\frac{2T(w)}{(z-w)^2}
++\frac{\partial T(w)}{z-w} + \ldots\right)\right]    \nonumber
+\end{align}
+A simple computation (Exercise) leads to the \textbf{Virasoro algebra}
+\[ [L_m,L_n] = (m-n)L_{m+n} + \frac{c}{12}m(m^2-1)\delta_{m+n,0}\]
+For instance, the Virasoro generators of the free scalar theory are expressed in terms of the modes as in  \eqref{Virasoro}.
+
+
+
+
+
+\subsection{Vertex operators}\label{sec:vertex-operator}
+
+We shall connect 2d conformal field theory to string theory, considering vertex operators.
+The state-operator correspondence tells us that there are corresponding local operators for the tachyon and the massless states
+\eqref{massless} in the bosonic closed string theory.
+The tachyon state is just a vacuum state with a certain momentum $k^\mu$. Therefore, the corresponding operator is
+\be\label{tachyon-vertex}
+|0;k \rangle \quad \leftrightarrow \quad : e^{ik X(0,0)}:~.
+\ee
+This can be easily verified from the operator analogue of $p^{\mu} |0;k \rangle = k^{\mu} |0;k \rangle$, namely,
+\begin{align}\nonumber
+\partial X^{\mu}(z): e^{i k \cdot X(0)}: \ \sim \   \frac{-i\alpha'k^{\mu}}{2z}: e^{i k \cdot X(0)}:~.
+\end{align}
+The first excited states are obtained by acting $ \alpha^\mu_{-1}\tilde\alpha^\nu_{-1}$ on the vacuum $|0;k \rangle$. Each mode in \eqref{mode-exp} can be extracted by the Fourier transformation of $\partial X^\mu(z)$ and the corresponding operator is
+\begin{align}\nonumber
+ \alpha^\mu_{-m} = i\sqrt{\frac{2}{\alpha'}} \oint \frac{dz}{2\pi i} z^{-m} \partial X^\mu(z)
+ \quad \to \quad
+ i\sqrt{\frac{2}{\alpha'}} \frac{1}{(m-1)!} \partial^m X(0)  ~.
+\end{align}
+Thus, we have operators corresponding to the massless states
+\[
+\zeta_{\mu\nu}\alpha^\mu_{-1}\ol \alpha^\nu_{-1} |0;k\rangle \quad \leftrightarrow \quad  \zeta_{\mu\nu} \partial X^\mu \ol\partial X^\nu :e^{ikX}:
+\]
+where $\zeta_{\mu\nu}$ are the polarization tensors subject to $k^\mu \zeta_{\mu\nu} = 0$.
+
+
+% ($\zeta_{\mu\nu}^{G} = \zeta_{\nu\mu}^{G}$ and $\zeta_{\mu}^{G,\mu} = 0$ etc.).
+% At the last replacement, we forgot the ``classical'' mode expansion and regarded $\partial X(z)$ as a local operator.
+% Now we have the correspondence of tachyon, graviton etc. as follows.
+% \begin{align}\nonumber
+%  &|0;k\rangle  \quad \to \quad  e^{ikX}  \\[2pt]
+% %  &\alpha^\mu_{-n} |0;k\rangle  \to   \partial^n X^\mu e^{ik\cdot X}  \cr
+%  &\zeta_{\mu\nu}\alpha^\mu_{-1}\ol \alpha^\nu_{-1} |0;k\rangle \quad \to \quad \zeta_{\mu\nu} \partial X^\mu \ol\partial X^\nu e^{ikX}
+% \end{align}
+
+
+The string amplitude is
+\begin{align}\label{amplitude}
+ A_n = \sum_g \int \left(\cD h_{ab}\right)_{g,n} \int \cD X^\mu e^{-S_\sigma [X^\mu,h_{ab}]} \prod_{i=1}^n \int d^2z \sqrt h V_i  \ .
+\end{align}
+Here $\hat V_i =\int d^2z \sqrt h V_i$ is an operator corresponding to a string state. It is integrated out over the world-sheet to be Diff$\times$Weyl invariant.
+
+
+\subsubsection*{Mass from vertex operator}
+Now, let us consider a constant scaling $z \to \lambda z$ and $\ol z \to \ol\lambda \ol z$.
+Under the scaling, a field transforms as $\phi(z,\ol z) \to \lambda^{-h}\ol\lambda^{-\ol h} \phi(z,\ol z)$,
+which should compensate for the scaling of the measure $dzd\ol z \to \lambda\ol\lambda dzd\ol z$.
+Namely, $h=\ol h=1$.
+Conformal dimensions of the vertex operators are
+\begin{align}\nonumber
+\renewcommand\arraystretch{1.2}
+ \begin{array}{lll}
+  \textrm{Name} & \mathcal O & (h, \ol h) \\\hline
+  \textrm{Tachyon} & e^{ik\cdot X} & (\frac{\alpha'k^2}{4},\frac{\alpha'k^2}{4}) \\
+  \textrm{1st excited states} & \zeta_{\mu\nu} \partial X^\mu \ol\partial X^\nu e^{ikX} & (1+\frac{\alpha'k^2}{4},1+\frac{\alpha'k^2}{4}) \\
+ \end{array}
+\end{align}
+The consistency condition for the tachyon leads to
+\begin{align}\nonumber
+ M^2 = -k^2_\textrm{Tachyon} = -\frac{4}{\alpha'} \ .
+\end{align}
+Similarly,  the first excited states lead to the massless condition
+\begin{align}\nonumber
+ M^2 = -k^2_\textrm{1st} = 0 \ .
+\end{align}
+Both results are consistent with the analysis in \eqref{closed-vaccuum} and \eqref{massless}.
+Here one may consider that one can obtain the string spectrum
+in arbitrary spacetime dimensions.
+However, as we will show in the next section, the on-shell condition only holds in $D=26$ where the Weyl transformation is a quantum symmetry.
+
+\end{document}

@@ -1,0 +1,840 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{CDLOGP91}
+
+\bibitem[ABJM08]{Aharony:2008ug}
+O.~Aharony, O.~Bergman, D.~L. Jafferis, and J.~Maldacena, \emph{{N=6
+  superconformal Chern-Simons-matter theories, M2-branes and their gravity
+  duals}}, \href{http://dx.doi.org/10.1088/1126-6708/2008/10/091}{JHEP
+  \textbf{10} (2008) 091},
+\href{http://arxiv.org/abs/0806.1218}{{ arXiv:0806.1218 [hep-th]}}.
+%%CITATION = ARXIV:0806.1218;%%.
+
+\bibitem[AGM{\etalchar{+}}00]{Aharony:1999ti}
+O.~Aharony, S.~S. Gubser, J.~M. Maldacena, H.~Ooguri, and Y.~Oz, \emph{{Large N
+  field theories, string theory and gravity}},
+  \href{http://dx.doi.org/10.1016/S0370-1573(99)00083-6}{Phys. Rept.
+  \textbf{323} (2000) 183--386},
+\href{http://arxiv.org/abs/hep-th/9905111}{{ arXiv:hep-th/9905111}}.
+%%CITATION = HEP-TH/9905111;%%.
+
+\bibitem[AGT10]{Alday:2009aq}
+L.~F. Alday, D.~Gaiotto, and Y.~Tachikawa, \emph{{Liouville Correlation
+  Functions from Four-dimensional Gauge Theories}},
+  \href{http://dx.doi.org/10.1007/s11005-010-0369-5}{Lett. Math. Phys.
+  \textbf{91} (2010) 167--197},
+\href{http://arxiv.org/abs/0906.3219}{{ arXiv:0906.3219 [hep-th]}}.
+%%CITATION = ARXIV:0906.3219;%%.
+
+\bibitem[AGW84]{AlvarezGaume:1983ig}
+L.~Alvarez-Gaume and E.~Witten, \emph{{Gravitational Anomalies}},
+\href{http://dx.doi.org/10.1016/0550-3213(84)90066-X}{Nucl. Phys. \textbf{B234}
+  (1984) 269}.
+%%CITATION = NUPHA,B234,269;%%.
+
+\bibitem[AHK98]{Aharony:1997bh}
+O.~Aharony, A.~Hanany, and B.~Kol, \emph{{Webs of (p,q) five-branes,
+  five-dimensional field theories and grid diagrams}},
+  \href{http://dx.doi.org/10.1088/1126-6708/1998/01/002}{JHEP \textbf{01}
+  (1998) 002}, \href{http://arxiv.org/abs/hep-th/9710116}{{
+  arXiv:hep-th/9710116}}.
+
+\bibitem[Asp96]{Aspinwall:1996mn}
+P.~S. Aspinwall, \emph{{K3 surfaces and string duality}}, {Fields, strings and
+  duality. Proceedings, Summer School, Theoretical Advanced Study Institute in
+  Elementary Particle Physics, TASI'96, Boulder, USA, June 2-28, 1996}, 1996,
+  pp.~421--540.
+\href{http://arxiv.org/abs/hep-th/9611137}{{ arXiv:hep-th/9611137}}.
+%%CITATION = HEP-TH/9611137;%%.
+
+\bibitem[AST13]{Aharony:2013hda}
+O.~Aharony, N.~Seiberg, and Y.~Tachikawa, \emph{{Reading between the lines of
+  four-dimensional gauge theories}},
+  \href{http://dx.doi.org/10.1007/JHEP08(2013)115}{JHEP \textbf{08} (2013)
+  115}, \href{http://arxiv.org/abs/1305.0318}{{ arXiv:1305.0318 [hep-th]}}.
+
+\bibitem[BBS06]{BBS}
+K.~Becker, M.~Becker, and J.~H. Schwarz, \emph{{String theory and M-theory: A
+  modern introduction}}, Cambridge University Press,
+2006.
+%%CITATION = INSPIRE-744404;%%.
+
+\bibitem[BCH73]{Bardeen:1973gs}
+J.~M. Bardeen, B.~Carter, and S.~W. Hawking, \emph{{The Four laws of black hole
+  mechanics}},
+\href{http://dx.doi.org/10.1007/BF01645742}{Commun. Math. Phys. \textbf{31}
+  (1973) 161--170}.
+%%CITATION = CMPHA,31,161;%%.
+
+\bibitem[Bek72]{Bekenstein:1972tm}
+J.~D. Bekenstein, \emph{{Black holes and the second law}},
+  \href{http://dx.doi.org/10.1007/BF02757029}{Lett. Nuovo Cim. \textbf{4}
+  (1972) 737--740}.
+
+\bibitem[Bek73]{Bekenstein:1973ur}
+J.~D. Bekenstein, \emph{{Black holes and entropy}},
+\href{http://dx.doi.org/10.1103/PhysRevD.7.2333}{Phys. Rev. \textbf{D7} (1973)
+  2333--2346}.
+%%CITATION = PHRVA,D7,2333;%%.
+
+\bibitem[Ber04]{Berkovits:2004px}
+N.~Berkovits, \emph{{Multiloop amplitudes and vanishing theorems using the pure
+  spinor formalism for the superstring}},
+  \href{http://dx.doi.org/10.1088/1126-6708/2004/09/047}{JHEP \textbf{09}
+  (2004) 047},
+\href{http://arxiv.org/abs/hep-th/0406055}{{ arXiv:hep-th/0406055}}.
+%%CITATION = HEP-TH/0406055;%%.
+
+\bibitem[BL07]{Bagger:2006sk}
+J.~Bagger and N.~Lambert, \emph{{Modeling Multiple M2's}},
+  \href{http://dx.doi.org/10.1103/PhysRevD.75.045020}{Phys. Rev. \textbf{D75}
+  (2007) 045020},
+\href{http://arxiv.org/abs/hep-th/0611108}{{ arXiv:hep-th/0611108}}.
+%%CITATION = HEP-TH/0611108;%%.
+
+\bibitem[BLT13]{Blumenhagen:2013fgp}
+R.~Blumenhagen, D.~Lust, and S.~Theisen,
+  \href{http://dx.doi.org/10.1007/978-3-642-29497-6}{\emph{{Basic concepts of
+  string theory}}}, Theoretical and Mathematical Physics, Springer, Heidelberg,
+  Germany, 2013.
+\url{http://www.springer.com/physics/theoretical%2C+mathematical+%26+computational+physics/book/978-3-642-29496-9}.
+%%CITATION = INSPIRE-1217904;%%.
+
+\bibitem[BP09]{Blumenhagen:2009zz}
+R.~Blumenhagen and E.~Plauschinn, \emph{{Introduction to conformal field
+  theory}},
+\href{http://dx.doi.org/10.1007/978-3-642-00450-6}{Lect. Notes Phys.
+  \textbf{779} (2009) 1--256}.
+%%CITATION = LNPHA,779,1;%%.
+
+\bibitem[BPZ84]{belavin1984infinite}
+A.~A. Belavin, A.~M. Polyakov, and A.~B. Zamolodchikov, \emph{Infinite
+  conformal symmetry in two-dimensional quantum field theory}, Nuclear Physics
+  B \textbf{241} (1984)no.~2 333--380.
+
+\bibitem[Car86]{Cardy:1986ie}
+J.~L. Cardy, \emph{{Operator Content of Two-Dimensional Conformally Invariant
+  Theories}}, \href{http://dx.doi.org/10.1016/0550-3213(86)90552-3}{Nucl. Phys.
+  B \textbf{270} (1986) 186--204}.
+
+\bibitem[CCCDV12]{cappelli2012birth}
+A.~Cappelli, E.~Castellani, F.~Colomo, and P.~Di~Vecchia, \emph{The birth of
+  string theory}, Cambridge University Press, 2012.
+
+\bibitem[CDLOGP91]{Candelas:1990rm}
+P.~Candelas, X.~C. De~La~Ossa, P.~S. Green, and L.~Parkes, \emph{{A Pair of
+  Calabi-Yau manifolds as an exactly soluble superconformal theory}},
+  \href{http://dx.doi.org/10.1016/0550-3213(91)90292-6}{Nucl. Phys.
+  \textbf{B359} (1991) 21--74}.
+[AMS/IP Stud. Adv. Math.9,31(1998)].
+%%CITATION = NUPHA,B359,21;%%.
+
+\bibitem[CJS78]{Cremmer:1978km}
+E.~Cremmer, B.~Julia, and J.~Scherk, \emph{{Supergravity Theory in
+  Eleven-Dimensions}},
+  \href{http://dx.doi.org/10.1016/0370-2693(78)90894-8}{Phys. Lett. B
+  \textbf{76} (1978) 409--412}.
+
+\bibitem[CM96]{Callan:1996dv}
+C.~G. Callan and J.~M. Maldacena, \emph{{D-brane approach to black hole quantum
+  mechanics}}, \href{http://dx.doi.org/10.1016/0550-3213(96)00225-8}{Nucl.
+  Phys. B \textbf{472} (1996) 591--610},
+  \href{http://arxiv.org/abs/hep-th/9602043}{{ arXiv:hep-th/9602043}}.
+
+\bibitem[CT89]{Callan:1989nz}
+C.~G. Callan, Jr. and L.~Thorlacius, \emph{{SIGMA MODELS AND STRING THEORY}},
+  {Theoretical Advanced Study Institute in Elementary Particle Physics:
+  Particles, Strings and Supernovae (TASI 88) Providence, Rhode Island, June
+  5-July 1, 1988}, 1989,
+pp.~795--878.
+%%CITATION = PRINT-89-0232 (PRINCETON);%%.
+
+\bibitem[Dab95]{Dabholkar:1995ep}
+A.~Dabholkar, \emph{{Ten-dimensional heterotic string as a soliton}},
+  \href{http://dx.doi.org/10.1016/0370-2693(95)00949-L}{Phys. Lett.
+  \textbf{B357} (1995) 307--312},
+\href{http://arxiv.org/abs/hep-th/9506160}{{ arXiv:hep-th/9506160}}.
+%%CITATION = HEP-TH/9506160;%%.
+
+\bibitem[Dab97]{Dabholkar:1997zd}
+\bysame, \emph{{Lectures on orientifolds and duality}}, {ICTP Summer School in
+  High-Energy Physics and Cosmology}, 6 1997.
+  \href{http://arxiv.org/abs/hep-th/9804208}{{ arXiv:hep-th/9804208}}.
+
+\bibitem[DF02]{DHoker:2002nbb}
+E.~D'Hoker and D.~Z. Freedman, \emph{{Supersymmetric gauge theories and the
+  AdS/CFT correspondence}}, {Theoretical Advanced Study Institute in Elementary
+  Particle Physics (TASI 2001): Strings, Branes and EXTRA Dimensions}, 1 2002,
+  pp.~3--158. \href{http://arxiv.org/abs/hep-th/0201253}{{
+  arXiv:hep-th/0201253}}.
+
+\bibitem[Dij97]{Dijkgraaf:1997ip}
+R.~Dijkgraaf, \emph{{Les Houches lectures on fields, strings and duality}},
+  {Quantum symmetries. Proceedings, NATO Advanced Study Institute, 64th
+  Session, Les Houches, France, August 1-September 8, 1995}, 1997, pp.~3--147.
+  \href{http://arxiv.org/abs/hep-th/9703136}{{ arXiv:hep-th/9703136}}.
+\url{http://inspirehep.net/record/441345/files/arXiv:hep-th_9703136.pdf}.
+%%CITATION = HEP-TH/9703136;%%.
+
+\bibitem[Din07]{Dine:2007zp}
+M.~Dine, \emph{{Supersymmetry and string theory: Beyond the standard model}},
+  Cambridge University Press,
+2007.
+%%CITATION = INSPIRE-744405;%%.
+
+\bibitem[DLP89]{Dai:1989ua}
+J.~Dai, R.~G. Leigh, and J.~Polchinski, \emph{{New Connections Between String
+  Theories}}, \href{http://dx.doi.org/10.1142/S0217732389002331}{Mod. Phys.
+  Lett. A \textbf{4} (1989) 2073--2083}.
+
+\bibitem[DM96a]{Dasgupta:1995zm}
+K.~Dasgupta and S.~Mukhi, \emph{{Orbifolds of M theory}},
+  \href{http://dx.doi.org/10.1016/0550-3213(96)00070-3}{Nucl. Phys.
+  \textbf{B465} (1996) 399--412},
+\href{http://arxiv.org/abs/hep-th/9512196}{{ arXiv:hep-th/9512196}}.
+%%CITATION = HEP-TH/9512196;%%.
+
+\bibitem[DM96b]{Douglas:1996sw}
+M.~R. Douglas and G.~W. Moore, \emph{{D-branes, quivers, and ALE instantons}},
+  \href{http://arxiv.org/abs/hep-th/9603167}{{ arXiv:hep-th/9603167}}.
+
+\bibitem[DMW02]{David:2002wn}
+J.~R. David, G.~Mandal, and S.~R. Wadia, \emph{{Microscopic formulation of
+  black holes in string theory}},
+  \href{http://dx.doi.org/10.1016/S0370-1573(02)00271-5}{Phys. Rept.
+  \textbf{369} (2002) 549--686},
+\href{http://arxiv.org/abs/hep-th/0203048}{{ arXiv:hep-th/0203048}}.
+%%CITATION = HEP-TH/0203048;%%.
+
+\bibitem[DN12]{Dabholkar:2012zz}
+A.~Dabholkar and S.~Nampuri, \emph{{Quantum black holes}},
+  \href{http://dx.doi.org/10.1007/978-3-642-25947-0_5}{Lect. Notes Phys.
+  \textbf{851} (2012) 165--232}, \href{http://arxiv.org/abs/1208.4814}{{
+  arXiv:1208.4814 [hep-th]}}.
+
+\bibitem[DP96]{Dabholkar:1996pc}
+A.~Dabholkar and J.~Park, \emph{{Strings on orientifolds}},
+  \href{http://dx.doi.org/10.1016/0550-3213(96)00395-1}{Nucl. Phys. B
+  \textbf{477} (1996) 701--714}, \href{http://arxiv.org/abs/hep-th/9604178}{{
+  arXiv:hep-th/9604178}}.
+
+\bibitem[Duf95]{Duff:1994zt}
+M.~J. Duff, \emph{{Strong / weak coupling duality from the dual string}},
+  \href{http://dx.doi.org/10.1016/S0550-3213(95)00070-4}{Nucl. Phys. B
+  \textbf{442} (1995) 47--63}, \href{http://arxiv.org/abs/hep-th/9501030}{{
+  arXiv:hep-th/9501030}}.
+
+\bibitem[FL98]{Forste:1996yd}
+S.~Forste and J.~Louis, \emph{{Duality in string theory}},
+  \href{http://dx.doi.org/10.1016/S0920-5632(97)00516-1}{Nucl. Phys. Proc.
+  Suppl. \textbf{61A} (1998) 3--22},
+\href{http://arxiv.org/abs/hep-th/9612192}{{ arXiv:hep-th/9612192}}.
+%%CITATION = HEP-TH/9612192;%%.
+
+\bibitem[FMS12]{francesco2012conformal}
+P.~Francesco, P.~Mathieu, and D.~S{\'e}n{\'e}chal, \emph{Conformal field
+  theory}, Springer Science \& Business Media, 2012.
+
+\bibitem[FVP12]{freedman2012supergravity}
+D.~Z. Freedman and A.~Van~Proeyen, \emph{Supergravity}, Cambridge university
+  press, 2012.
+
+\bibitem[Gai12]{Gaiotto:2009we}
+D.~Gaiotto, \emph{{N=2 dualities}},
+  \href{http://dx.doi.org/10.1007/JHEP08(2012)034}{JHEP \textbf{08} (2012)
+  034},
+\href{http://arxiv.org/abs/0904.2715}{{ arXiv:0904.2715 [hep-th]}}.
+%%CITATION = ARXIV:0904.2715;%%.
+
+\bibitem[GHMR85a]{Gross:1985fr}
+D.~J. Gross, J.~A. Harvey, E.~J. Martinec, and R.~Rohm, \emph{{Heterotic String
+  Theory. 1. The Free Heterotic String}},
+\href{http://dx.doi.org/10.1016/0550-3213(85)90394-3}{Nucl. Phys. \textbf{B256}
+  (1985) 253}.
+%%CITATION = NUPHA,B256,253;%%.
+
+\bibitem[GHMR85b]{Gross:1984dd}
+\bysame, \emph{{The Heterotic String}},
+\href{http://dx.doi.org/10.1103/PhysRevLett.54.502}{Phys. Rev. Lett.
+  \textbf{54} (1985) 502--505}.
+%%CITATION = PRLTA,54,502;%%.
+
+\bibitem[GHMR86]{Gross:1985rr}
+\bysame, \emph{{Heterotic String Theory. 2. The Interacting Heterotic String}},
+\href{http://dx.doi.org/10.1016/0550-3213(86)90146-X}{Nucl. Phys. \textbf{B267}
+  (1986) 75--124}.
+%%CITATION = NUPHA,B267,75;%%.
+
+\bibitem[Gin87]{Ginsparg:1986bx}
+P.~H. Ginsparg, \emph{{Comment on Toroidal Compactification of Heterotic
+  Superstrings}},
+\href{http://dx.doi.org/10.1103/PhysRevD.35.648}{Phys. Rev. \textbf{D35} (1987)
+  648}.
+%%CITATION = PHRVA,D35,648;%%.
+
+\bibitem[Gin88]{ginsparg1988applied}
+\bysame, \emph{{APPLIED CONFORMAL FIELD THEORY}}, {Les Houches Summer School in
+  Theoretical Physics: Fields, Strings, Critical Phenomena Les Houches, France,
+  June 28-August 5, 1988}, 1988, pp.~1--168.
+  \href{http://arxiv.org/abs/hep-th/9108028}{{ arXiv:hep-th/9108028}}.
+\url{http://inspirehep.net/record/265020/files/arXiv:hep-th_9108028.pdf}.
+%%CITATION = HEP-TH/9108028;%%.
+
+\bibitem[GK99]{Giveon:1998sr}
+A.~Giveon and D.~Kutasov, \emph{{Brane Dynamics and Gauge Theory}},
+  \href{http://dx.doi.org/10.1103/RevModPhys.71.983}{Rev. Mod. Phys.
+  \textbf{71} (1999) 983--1084}, \href{http://arxiv.org/abs/hep-th/9802067}{{
+  arXiv:hep-th/9802067}}.
+
+\bibitem[GKP98]{Gubser:1998bc}
+S.~S. Gubser, I.~R. Klebanov, and A.~M. Polyakov, \emph{{Gauge theory
+  correlators from noncritical string theory}},
+  \href{http://dx.doi.org/10.1016/S0370-2693(98)00377-3}{Phys. Lett.
+  \textbf{B428} (1998) 105--114},
+\href{http://arxiv.org/abs/hep-th/9802109}{{ arXiv:hep-th/9802109}}.
+%%CITATION = HEP-TH/9802109;%%.
+
+\bibitem[GNO77]{Goddard:1976qe}
+P.~Goddard, J.~Nuyts, and D.~I. Olive, \emph{{Gauge Theories and Magnetic
+  Charge}}, \href{http://dx.doi.org/10.1016/0550-3213(77)90221-8}{Nucl. Phys. B
+  \textbf{125} (1977) 1--28}.
+
+\bibitem[Gre99]{Greene:1999kj}
+B.~R. Greene, \emph{{The elegant universe: Superstrings, hidden dimensions, and
+  the quest of the ultimate theory}}, American Association of Physics Teachers,
+1999.
+%%CITATION = INSPIRE-509616;%%.
+
+\bibitem[GS84]{Green:1984sg}
+M.~B. Green and J.~H. Schwarz, \emph{{Anomaly Cancellation in Supersymmetric
+  D=10 Gauge Theory and Superstring Theory}},
+\href{http://dx.doi.org/10.1016/0370-2693(84)91565-X}{Phys. Lett. \textbf{149B}
+  (1984) 117--122}.
+%%CITATION = PHLTA,149B,117;%%.
+
+\bibitem[GSW87]{GSW}
+M.~B. Green, J.~H. Schwarz, and E.~Witten, \emph{{Superstring Theory Vol.
+  1,2}}, Cambridge University Press, 1987.
+\url{http://www.cambridge.org/mw/academic/subjects/physics/theoretical-physics-and-mathematical-physics/superstring-theory-25th-anniversary-edition-volume-1?format=AR}.
+%%CITATION = INSPIRE-1384878;%%.
+
+\bibitem[Haw71]{Hawking:1971tu}
+S.~W. Hawking, \emph{{Gravitational radiation from colliding black holes}},
+  \href{http://dx.doi.org/10.1103/PhysRevLett.26.1344}{Phys. Rev. Lett.
+  \textbf{26} (1971) 1344--1346}.
+
+\bibitem[Haw72]{Hawking:1971vc}
+\bysame, \emph{{Black holes in general relativity}},
+  \href{http://dx.doi.org/10.1007/BF01877517}{Commun. Math. Phys. \textbf{25}
+  (1972) 152--166}.
+
+\bibitem[Haw75]{Hawking:1974sw}
+\bysame, \emph{{Particle Creation by Black Holes}},
+  \href{http://dx.doi.org/10.1007/BF02345020}{Commun. Math. Phys. \textbf{43}
+  (1975) 199--220}.
+[,167(1975)].
+%%CITATION = CMPHA,43,199;%%.
+
+\bibitem[Haw76]{Hawking:1976ra}
+\bysame, \emph{{Breakdown of Predictability in Gravitational Collapse}},
+\href{http://dx.doi.org/10.1103/PhysRevD.14.2460}{Phys. Rev. \textbf{D14}
+  (1976) 2460--2473}.
+%%CITATION = PHRVA,D14,2460;%%.
+
+\bibitem[HK00]{Hanany:2000fq}
+A.~Hanany and B.~Kol, \emph{{On orientifolds, discrete torsion, branes and M
+  theory}}, \href{http://dx.doi.org/10.1088/1126-6708/2000/06/013}{JHEP
+  \textbf{06} (2000) 013}, \href{http://arxiv.org/abs/hep-th/0003025}{{
+  arXiv:hep-th/0003025}}.
+
+\bibitem[Hos15]{Hosomichi}
+K.~Hosomichi, \emph{{Lecture notes on string theory}},
+  \href{https://sites.google.com/view/kazuohosomichi/home/string-theory}{his
+  webpage} (2015) .
+
+\bibitem[HR19]{Heckman:2018jxk}
+J.~J. Heckman and T.~Rudelius, \emph{{Top Down Approach to 6D SCFTs}},
+  \href{http://dx.doi.org/10.1088/1751-8121/aafc81}{J. Phys. A \textbf{52}
+  (2019)no.~9 093001}, \href{http://arxiv.org/abs/1805.06467}{{
+  arXiv:1805.06467 [hep-th]}}.
+
+\bibitem[HT95]{Hull:1994ys}
+C.~M. Hull and P.~K. Townsend, \emph{{Unity of superstring dualities}},
+  \href{http://dx.doi.org/10.1016/0550-3213(94)00559-W}{Nucl. Phys. B
+  \textbf{438} (1995) 109--137}, \href{http://arxiv.org/abs/hep-th/9410167}{{
+  arXiv:hep-th/9410167}}.
+
+\bibitem[Hul95]{Hull:1995nu}
+C.~M. Hull, \emph{{String-string duality in ten-dimensions}},
+  \href{http://dx.doi.org/10.1016/0370-2693(95)01000-G}{Phys. Lett.
+  \textbf{B357} (1995) 545--551},
+\href{http://arxiv.org/abs/hep-th/9506194}{{ arXiv:hep-th/9506194}}.
+%%CITATION = HEP-TH/9506194;%%.
+
+\bibitem[HW96a]{Horava:1996ma}
+P.~Horava and E.~Witten, \emph{{Eleven-dimensional supergravity on a manifold
+  with boundary}}, \href{http://dx.doi.org/10.1016/0550-3213(96)00308-2}{Nucl.
+  Phys. \textbf{B475} (1996) 94--114},
+\href{http://arxiv.org/abs/hep-th/9603142}{{ arXiv:hep-th/9603142}}.
+%%CITATION = HEP-TH/9603142;%%.
+
+\bibitem[HW96b]{Horava:1995qa}
+\bysame, \emph{{Heterotic and type I string dynamics from eleven-dimensions}},
+  \href{http://dx.doi.org/10.1016/0550-3213(95)00621-4}{Nucl. Phys.
+  \textbf{B460} (1996) 506--524},
+\href{http://arxiv.org/abs/hep-th/9510209}{{ arXiv:hep-th/9510209}}.
+%%CITATION = HEP-TH/9510209;%%.
+
+\bibitem[HW97]{Hanany:1996ie}
+A.~Hanany and E.~Witten, \emph{{Type IIB superstrings, BPS monopoles, and
+  three-dimensional gauge dynamics}},
+  \href{http://dx.doi.org/10.1016/S0550-3213(97)00157-0}{Nucl. Phys. B
+  \textbf{492} (1997) 152--190}, \href{http://arxiv.org/abs/hep-th/9611230}{{
+  arXiv:hep-th/9611230}}.
+
+\bibitem[HZ99]{Hanany:1999sj}
+A.~Hanany and A.~Zaffaroni, \emph{{Issues on orientifolds: On the brane
+  construction of gauge theories with SO(2n) global symmetry}},
+  \href{http://dx.doi.org/10.1088/1126-6708/1999/07/009}{JHEP \textbf{07}
+  (1999) 009}, \href{http://arxiv.org/abs/hep-th/9903242}{{
+  arXiv:hep-th/9903242}}.
+
+\bibitem[IS96]{Intriligator:1996ex}
+K.~A. Intriligator and N.~Seiberg, \emph{{Mirror symmetry in three-dimensional
+  gauge theories}}, \href{http://dx.doi.org/10.1016/0370-2693(96)01088-X}{Phys.
+  Lett. B \textbf{387} (1996) 513--519},
+  \href{http://arxiv.org/abs/hep-th/9607207}{{ arXiv:hep-th/9607207}}.
+
+\bibitem[IU12]{Ibanez:2012zz}
+L.~E. Ibanez and A.~M. Uranga, \emph{{String theory and particle physics: An
+  introduction to string phenomenology}}, Cambridge University Press, 2012.
+\url{http://www.cambridge.org/de/knowledge/isbn/item6563092/?site_locale=de_DE}.
+%%CITATION = INSPIRE-1112474;%%.
+
+\bibitem[Joh00]{Johnson:2000ch}
+C.~V. Johnson,
+  \href{http://dx.doi.org/10.1142/9789812799630_0002}{\emph{{D-brane primer}}},
+  {Theoretical Advanced Study Institute in Elementary Particle Physics (TASI
+  99): Strings, Branes, and Gravity}, 7 2000, pp.~129--350.
+  \href{http://arxiv.org/abs/hep-th/0007170}{{ arXiv:hep-th/0007170}}.
+
+\bibitem[Joh02]{johnson2002d}
+C.~V. Johnson, \emph{D-branes}, Cambridge university press, 2002.
+
+\bibitem[Joh06]{johnson2006d}
+\bysame, \emph{D-branes}, Cambridge university press, 2006.
+
+\bibitem[Kir08]{kirillov2008introduction}
+A.~Kirillov,
+  \emph{\href{https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf}{An
+  introduction to Lie groups and Lie algebras}}, vol. 113, Cambridge University
+  Press, 2008.
+
+\bibitem[Kir19]{kiritsis2019string}
+E.~Kiritsis, \emph{String theory in a nutshell}, vol.~21, Princeton University
+  Press, 2019.
+
+\bibitem[KN69a]{Koba:1969rw}
+Z.~Koba and H.~B. Nielsen, \emph{{Reaction amplitude for n mesons: A
+  Generalization of the Veneziano-Bardakci-Ruegg-Virasora model}},
+  \href{http://dx.doi.org/10.1016/0550-3213(69)90331-9}{Nucl. Phys. B
+  \textbf{10} (1969) 633--655}.
+
+\bibitem[KN69b]{Koba:1969kh}
+Z.~Koba and H.~B. Nielsen, \emph{{Manifestly crossing invariant parametrization
+  of n meson amplitude}},
+  \href{http://dx.doi.org/10.1016/0550-3213(69)90071-6}{Nucl. Phys. B
+  \textbf{12} (1969) 517--536}.
+
+\bibitem[Lei89]{Leigh:1989jq}
+R.~G. Leigh, \emph{{Dirac-Born-Infeld Action from Dirichlet Sigma Model}},
+  \href{http://dx.doi.org/10.1142/S0217732389003099}{Mod. Phys. Lett. A
+  \textbf{4} (1989) 2767}.
+
+\bibitem[Mal96]{Maldacena:1996ky}
+J.~M. Maldacena, \emph{{Black holes in string theory}}, Ph.D. thesis, Princeton
+  U., 1996. \href{http://arxiv.org/abs/hep-th/9607235}{{
+  arXiv:hep-th/9607235}}.
+\url{http://wwwlib.umi.com/dissertations/fullcit?p9627605}.
+%%CITATION = HEP-TH/9607235;%%.
+
+\bibitem[Mal99]{Maldacena:1997re}
+\bysame, \emph{{The Large N limit of superconformal field theories and
+  supergravity}}, \href{http://dx.doi.org/10.1023/A:1026654312961}{Int. J.
+  Theor. Phys. \textbf{38} (1999) 1113--1133},
+  \href{http://arxiv.org/abs/hep-th/9711200}{{ arXiv:hep-th/9711200}}.
+[Adv. Theor. Math. Phys.2,231(1998)].
+%%CITATION = HEP-TH/9711200;%%.
+
+\bibitem[Mal03]{Maldacena:2003nj}
+\bysame, \emph{{TASI 2003 lectures on AdS / CFT}}, {Theoretical Advanced Study
+  Institute in Elementary Particle Physics (TASI 2003): Recent Trends in String
+  Theory}, 9 2003, pp.~155--203. \href{http://arxiv.org/abs/hep-th/0309246}{{
+  arXiv:hep-th/0309246}}.
+
+\bibitem[MO77]{Montonen:1977sn}
+C.~Montonen and D.~I. Olive, \emph{{Magnetic Monopoles as Gauge Particles?}},
+  \href{http://dx.doi.org/10.1016/0370-2693(77)90076-4}{Phys. Lett. B
+  \textbf{72} (1977) 117--120}.
+
+\bibitem[MV96a]{Morrison:1996na}
+D.~R. Morrison and C.~Vafa, \emph{{Compactifications of F theory on Calabi-Yau
+  threefolds. 1}}, \href{http://dx.doi.org/10.1016/0550-3213(96)00242-8}{Nucl.
+  Phys. B \textbf{473} (1996) 74--92},
+  \href{http://arxiv.org/abs/hep-th/9602114}{{ arXiv:hep-th/9602114}}.
+
+\bibitem[MV96b]{Morrison:1996pp}
+\bysame, \emph{{Compactifications of F theory on Calabi-Yau threefolds. 2.}},
+  \href{http://dx.doi.org/10.1016/0550-3213(96)00369-0}{Nucl. Phys. B
+  \textbf{476} (1996) 437--469}, \href{http://arxiv.org/abs/hep-th/9603161}{{
+  arXiv:hep-th/9603161}}.
+
+\bibitem[Mye99]{Myers:1999ps}
+R.~C. Myers, \emph{{Dielectric branes}},
+  \href{http://dx.doi.org/10.1088/1126-6708/1999/12/022}{JHEP \textbf{12}
+  (1999) 022}, \href{http://arxiv.org/abs/hep-th/9910053}{{
+  arXiv:hep-th/9910053}}.
+
+\bibitem[Nah78]{Nahm:1977tg}
+W.~Nahm, \emph{{Supersymmetries and their Representations}},
+  \href{http://dx.doi.org/10.1016/0550-3213(78)90218-3}{Nucl. Phys. B
+  \textbf{135} (1978) 149}.
+
+\bibitem[Nar86]{Narain:1985jj}
+K.~S. Narain, \emph{{New Heterotic String Theories in Uncompactified Dimensions
+  $<$ 10}},
+\href{http://dx.doi.org/10.1016/0370-2693(86)90682-9}{Phys. Lett. \textbf{169B}
+  (1986) 41--46}.
+%%CITATION = PHLTA,169B,41;%%.
+
+\bibitem[N{\v{a}}s15]{nuastase2015introduction}
+H.~N{\v{a}}stase, \emph{Introduction to the ads/cft correspondence}, Cambridge
+  University Press, 2015.
+
+\bibitem[Nel87]{Nelson:1986ab}
+P.~C. Nelson, \emph{{Lectures on Strings and Moduli Space}},
+  \href{http://dx.doi.org/10.1016/0370-1573(87)90082-2}{Phys. Rept.
+  \textbf{149} (1987) 337}.
+
+\bibitem[NSW87]{Narain:1986am}
+K.~S. Narain, M.~H. Sarmadi, and E.~Witten, \emph{{A Note on Toroidal
+  Compactification of Heterotic String Theory}},
+\href{http://dx.doi.org/10.1016/0550-3213(87)90001-0}{Nucl. Phys. \textbf{B279}
+  (1987) 369--379}.
+%%CITATION = NUPHA,B279,369;%%.
+
+\bibitem[Oog15]{Ooguribook}
+H.~Ooguri, \emph{{Introduction to superstring theory}},
+Book for the general public in Chinese (2015) .
+%%CITATION = ARXIV:1708.09093;%%.
+
+\bibitem[OY96]{Ooguri:1996ik}
+H.~Ooguri and Z.~Yin, \emph{{TASI lectures on perturbative string theories}},
+  {Fields, strings and duality. Proceedings, Summer School, Theoretical
+  Advanced Study Institute in Elementary Particle Physics, TASI'96, Boulder,
+  USA, June 2-28, 1996}, 1996, pp.~5--81.
+\href{http://arxiv.org/abs/hep-th/9612254}{{ arXiv:hep-th/9612254}}.
+%%CITATION = HEP-TH/9612254;%%.
+
+\bibitem[PC88]{Polchinski:1987tu}
+J.~Polchinski and Y.~Cai, \emph{{Consistency of Open Superstring Theories}},
+  \href{http://dx.doi.org/10.1016/0550-3213(88)90382-3}{Nucl. Phys. B
+  \textbf{296} (1988) 91--128}.
+
+\bibitem[Pol95]{Polchinski:1995mt}
+J.~Polchinski, \emph{{Dirichlet Branes and Ramond-Ramond charges}},
+  \href{http://dx.doi.org/10.1103/PhysRevLett.75.4724}{Phys. Rev. Lett.
+  \textbf{75} (1995) 4724--4727}, \href{http://arxiv.org/abs/hep-th/9510017}{{
+  arXiv:hep-th/9510017}}.
+
+\bibitem[Pol96a]{Polchinski:1996nb}
+\bysame, \emph{{String duality: A Colloquium}},
+  \href{http://dx.doi.org/10.1103/RevModPhys.68.1245}{Rev. Mod. Phys.
+  \textbf{68} (1996) 1245--1258},
+\href{http://arxiv.org/abs/hep-th/9607050}{{ arXiv:hep-th/9607050}}.
+%%CITATION = HEP-TH/9607050;%%.
+
+\bibitem[Pol96b]{Polchinski:1996na}
+\bysame, \emph{{Tasi lectures on D-branes}}, {Fields, strings and duality.
+  Proceedings, Summer School, Theoretical Advanced Study Institute in
+  Elementary Particle Physics, TASI'96, Boulder, USA, June 2-28, 1996}, 1996,
+  pp.~293--356. \href{http://arxiv.org/abs/hep-th/9611050}{{
+  arXiv:hep-th/9611050}}.
+\url{http://inspirehep.net/record/425724/files/arXiv:hep-th_9611050.pdf}.
+%%CITATION = HEP-TH/9611050;%%.
+
+\bibitem[Pol98]{Polchinski}
+J.~Polchinski, \emph{{String theory. Vol. 1, 2}}, Cambridge University Press,
+1998.
+%%CITATION = INSPIRE-487240;%%.
+
+\bibitem[Pol06]{Polchinski:2005bg}
+J.~Polchinski, \emph{{Open heterotic strings}},
+  \href{http://dx.doi.org/10.1088/1126-6708/2006/09/082}{JHEP \textbf{09}
+  (2006) 082},
+\href{http://arxiv.org/abs/hep-th/0510033}{{ arXiv:hep-th/0510033}}.
+%%CITATION = HEP-TH/0510033;%%.
+
+\bibitem[Pol17]{Polchinski:2017vik}
+\bysame, \emph{{Memories of a Theoretical Physicist}},
+\href{http://arxiv.org/abs/1708.09093}{{ arXiv:1708.09093 [physics.hist-ph]}}.
+%%CITATION = ARXIV:1708.09093;%%.
+
+\bibitem[PW96]{Polchinski:1995df}
+J.~Polchinski and E.~Witten, \emph{{Evidence for heterotic - type I string
+  duality}}, \href{http://dx.doi.org/10.1016/0550-3213(95)00614-1}{Nucl. Phys.
+  \textbf{B460} (1996) 525--540},
+\href{http://arxiv.org/abs/hep-th/9510169}{{ arXiv:hep-th/9510169}}.
+%%CITATION = HEP-TH/9510169;%%.
+
+\bibitem[Qua15]{Qualls:2015qjb}
+J.~D. Qualls, \emph{{Lectures on Conformal Field Theory}},
+\href{http://arxiv.org/abs/1511.04074}{{ arXiv:1511.04074 [hep-th]}}.
+%%CITATION = ARXIV:1511.04074;%%.
+
+\bibitem[Ram15]{Ramallo:2013bua}
+A.~V. Ramallo, \emph{{Introduction to the AdS/CFT correspondence}},
+  \href{http://dx.doi.org/10.1007/978-3-319-12238-0_10}{Springer Proc. Phys.
+  \textbf{161} (2015) 411--474}, \href{http://arxiv.org/abs/1310.4319}{{
+  arXiv:1310.4319 [hep-th]}}.
+
+\bibitem[Rom86]{Romans:1985tz}
+L.~J. Romans, \emph{{Massive N=2a Supergravity in Ten-Dimensions}},
+  \href{http://dx.doi.org/10.1016/0370-2693(86)90375-8}{Phys. Lett. B
+  \textbf{169} (1986) 374}.
+
+\bibitem[RT06]{Ryu:2006bv}
+S.~Ryu and T.~Takayanagi, \emph{{Holographic derivation of entanglement entropy
+  from AdS/CFT}}, \href{http://dx.doi.org/10.1103/PhysRevLett.96.181602}{Phys.
+  Rev. Lett. \textbf{96} (2006) 181602},
+\href{http://arxiv.org/abs/hep-th/0603001}{{ arXiv:hep-th/0603001}}.
+%%CITATION = HEP-TH/0603001;%%.
+
+\bibitem[Sch97]{Schwarz:1996bh}
+J.~H. Schwarz, \emph{{Lectures on superstring and M theory dualities: Given at
+  ICTP Spring School and at TASI Summer School}},
+  \href{http://dx.doi.org/10.1016/S0920-5632(97)00070-4}{Nucl. Phys. Proc.
+  Suppl. \textbf{55B} (1997) 1--32},
+\href{http://arxiv.org/abs/hep-th/9607201}{{ arXiv:hep-th/9607201}}.
+%%CITATION = HEP-TH/9607201;%%.
+
+\bibitem[Sch00]{Schwarz}
+\bysame, \emph{{Interview with John H. Schwarz}},
+  \href{http://oralhistories.library.caltech.edu/116/1/Schwarz_OHO.pdf}{Caltech
+  Oral Histories} (2000) .
+\url{http://oralhistories.library.caltech.edu/116/1/Schwarz_OHO.pdf}.
+%%CITATION = ARXIV:1708.09093;%%.
+
+\bibitem[Sch11]{Schwarz:2011ona}
+\bysame, \emph{{The Early History of String Theory and Supersymmetry}}, Pontif.
+  Acad. Sci. Scr. Varia \textbf{119} (2011) 69--81,
+\href{http://arxiv.org/abs/1201.0981}{{ arXiv:1201.0981 [hep-th]}}.
+%%CITATION = INSPIRE-1283400;%%.
+
+\bibitem[Sen94]{Sen:1994fa}
+A.~Sen, \emph{{Strong - weak coupling duality in four-dimensional string
+  theory}}, \href{http://dx.doi.org/10.1142/S0217751X94001497}{Int. J. Mod.
+  Phys. A \textbf{9} (1994) 3707--3750},
+  \href{http://arxiv.org/abs/hep-th/9402002}{{ arXiv:hep-th/9402002}}.
+
+\bibitem[Sen96]{Sen:1996zq}
+\bysame, \emph{{Orbifolds of M theory and string theory}},
+  \href{http://dx.doi.org/10.1142/S021773239600134X}{Mod. Phys. Lett.
+  \textbf{A11} (1996) 1339--1348},
+\href{http://arxiv.org/abs/hep-th/9603113}{{ arXiv:hep-th/9603113}}.
+%%CITATION = HEP-TH/9603113;%%.
+
+\bibitem[Sen97]{Sen:1996yy}
+\bysame, \emph{{Unification of string dualities}},
+  \href{http://dx.doi.org/10.1016/S0920-5632(97)00409-X}{Nucl. Phys. Proc.
+  Suppl. \textbf{58} (1997) 5--19},
+\href{http://arxiv.org/abs/hep-th/9609176}{{ arXiv:hep-th/9609176}}.
+%%CITATION = HEP-TH/9609176;%%.
+
+\bibitem[Sen98a]{Sen:1998kr}
+\bysame, \emph{{An Introduction to nonperturbative string theory}}, {Duality
+  and supersymmetric theories. Proceedings, Easter School, Newton Institute,
+  Euroconference, Cambridge, UK, April 7-18, 1997}, 1998, pp.~297--413.
+\href{http://arxiv.org/abs/hep-th/9802051}{{ arXiv:hep-th/9802051}}.
+%%CITATION = HEP-TH/9802051;%%.
+
+\bibitem[Sen98b]{Sen:1998tt}
+\bysame, \emph{{SO(32) spinors of type I and other solitons on brane -
+  anti-brane pair}},
+  \href{http://dx.doi.org/10.1088/1126-6708/1998/09/023}{JHEP \textbf{09}
+  (1998) 023}, \href{http://arxiv.org/abs/hep-th/9808141}{{
+  arXiv:hep-th/9808141}}.
+
+\bibitem[Sha70]{Shapiro:1970gy}
+J.~A. Shapiro, \emph{{Electrostatic analog for the virasoro model}},
+  \href{http://dx.doi.org/10.1016/0370-2693(70)90255-8}{Phys. Lett. B
+  \textbf{33} (1970) 361--362}.
+
+\bibitem[SV96]{Strominger:1996sh}
+A.~Strominger and C.~Vafa, \emph{{Microscopic origin of the Bekenstein-Hawking
+  entropy}}, \href{http://dx.doi.org/10.1016/0370-2693(96)00345-0}{Phys. Lett.
+  \textbf{B379} (1996) 99--104},
+\href{http://arxiv.org/abs/hep-th/9601029}{{ arXiv:hep-th/9601029}}.
+%%CITATION = HEP-TH/9601029;%%.
+
+\bibitem[tH74]{tHooft:1973alw}
+G.~{}'t Hooft, \emph{{A Planar Diagram Theory for Strong Interactions}},
+\href{http://dx.doi.org/10.1016/0550-3213(74)90154-0}{Nucl. Phys. \textbf{B72}
+  (1974) 461}.
+%%CITATION = NUPHA,B72,461;%%.
+
+\bibitem[Tom22]{tomasiello2022geometry}
+A.~Tomasiello, \emph{Geometry of string theory compactifications}, Cambridge
+  University Press, 2022.
+
+\bibitem[Ton09]{Tong:2009np}
+D.~Tong, \emph{{String Theory}},
+\href{http://arxiv.org/abs/0908.0333}{{ arXiv:0908.0333 [hep-th]}}.
+%%CITATION = ARXIV:0908.0333;%%.
+
+\bibitem[Tow96]{Townsend:1996xj}
+P.~K. Townsend, \emph{{Four lectures on M theory}}, {High energy physics and
+  cosmology. Proceedings, Summer School, Trieste, Italy, June 10-July 26,
+  1996}, 1996, pp.~385--438.
+\href{http://arxiv.org/abs/hep-th/9612121}{{ arXiv:hep-th/9612121}}.
+%%CITATION = HEP-TH/9612121;%%.
+
+\bibitem[Tow97]{Townsend:1997ku}
+\bysame, \emph{{Black holes: Lecture notes}},
+\href{http://arxiv.org/abs/gr-qc/9707012}{{ arXiv:gr-qc/9707012}}.
+%%CITATION = GR-QC/9707012;%%.
+
+\bibitem[Tse97]{Tseytlin:1997csa}
+A.~A. Tseytlin, \emph{{On nonAbelian generalization of Born-Infeld action in
+  string theory}}, \href{http://dx.doi.org/10.1016/S0550-3213(97)00354-4}{Nucl.
+  Phys. B \textbf{501} (1997) 41--52},
+  \href{http://arxiv.org/abs/hep-th/9701125}{{ arXiv:hep-th/9701125}}.
+
+\bibitem[Tse99]{Tseytlin:1999dj}
+\bysame, \emph{{Born-Infeld action, supersymmetry and string theory}},
+\href{http://arxiv.org/abs/hep-th/9908105}{{ arXiv:hep-th/9908105}}.
+%%CITATION = HEP-TH/9908105;%%.
+
+\bibitem[TY19]{Tachikawa:2018njr}
+Y.~Tachikawa and K.~Yonekura, \emph{{Why are fractional charges of orientifolds
+  compatible with Dirac quantization?}},
+  \href{http://dx.doi.org/10.21468/SciPostPhys.7.5.058}{SciPost Phys.
+  \textbf{7} (2019)no.~5 058}, \href{http://arxiv.org/abs/1805.02772}{{
+  arXiv:1805.02772 [hep-th]}}.
+
+\bibitem[Ura05]{Uranga}
+A.~M. Uranga, \emph{{Introduction to String Theory}},
+\href{http://members.ift.uam-csic.es/auranga/Lect.pdf}{his webpage} (2005) .
+%%CITATION = ARXIV:0908.0333;%%.
+
+\bibitem[Vaf96]{Vafa:1996xn}
+C.~Vafa, \emph{{Evidence for F theory}},
+  \href{http://dx.doi.org/10.1016/0550-3213(96)00172-1}{Nucl. Phys. B
+  \textbf{469} (1996) 403--418}, \href{http://arxiv.org/abs/hep-th/9602022}{{
+  arXiv:hep-th/9602022}}.
+
+\bibitem[Vaf97]{Vafa:1997pm}
+\bysame, \emph{{Lectures on strings and dualities}}, {High energy physics and
+  cosmology. Proceedings, Summer School, Trieste, Italy, June 10-July 26,
+  1996}, 1997, pp.~66--119.
+\href{http://arxiv.org/abs/hep-th/9702201}{{ arXiv:hep-th/9702201}}.
+%%CITATION = HEP-TH/9702201;%%.
+
+\bibitem[Ven68]{Veneziano:1968yb}
+G.~Veneziano, \emph{{Construction of a crossing - symmetric, Regge behaved
+  amplitude for linearly rising trajectories}},
+\href{http://dx.doi.org/10.1007/BF02824451}{Nuovo Cim. \textbf{A57} (1968)
+  190--197}.
+%%CITATION = NUCIA,A57,190;%%.
+
+\bibitem[Vir69]{Virasoro:1969me}
+M.~A. Virasoro, \emph{{Alternative constructions of crossing-symmetric
+  amplitudes with regge behavior}},
+  \href{http://dx.doi.org/10.1103/PhysRev.177.2309}{Phys. Rev. \textbf{177}
+  (1969) 2309--2311}.
+
+\bibitem[Wei15]{Weigand}
+T.~Weigand, \emph{{Introduction to string theory}},
+  \href{http://www.thphys.uni-heidelberg.de/~weigand/Strings15-16/Strings.pdf}{his
+  webpage} (2015) .
+
+\bibitem[Wei21]{Weinstein:2021dop}
+G.~Weinstein, \emph{{Demons in Black Hole Thermodynamics: Bekenstein and
+  Hawking}}, \href{http://arxiv.org/abs/2102.11209}{{ arXiv:2102.11209
+  [physics.hist-ph]}}.
+
+\bibitem[Wit94]{Witten:1994cg}
+E.~Witten, \emph{{Monopoles and four manifolds}},
+  \href{http://dx.doi.org/10.4310/MRL.1994.v1.n6.a13}{Math. Res. Lett.
+  \textbf{1} (1994) 769--796},
+\href{http://arxiv.org/abs/hep-th/9411102}{{ arXiv:hep-th/9411102}}.
+%%CITATION = HEP-TH/9411102;%%.
+
+\bibitem[Wit95a]{Witten:1995zh}
+\bysame, \emph{{Some comments on string dynamics}}, {STRINGS 95: Future
+  Perspectives in String Theory}, 7 1995, pp.~501--523.
+  \href{http://arxiv.org/abs/hep-th/9507121}{{ arXiv:hep-th/9507121}}.
+
+\bibitem[Wit95b]{Witten:1995ex}
+\bysame, \emph{{String theory dynamics in various dimensions}},
+  \href{http://dx.doi.org/10.1016/0550-3213(95)00158-O}{Nucl. Phys.
+  \textbf{B443} (1995) 85--126},
+\href{http://arxiv.org/abs/hep-th/9503124}{{ arXiv:hep-th/9503124}}.
+%%CITATION = HEP-TH/9503124;%%.
+
+\bibitem[Wit96]{Witten:1995em}
+\bysame, \emph{{Five-branes and M theory on an orbifold}},
+  \href{http://dx.doi.org/10.1016/0550-3213(96)00032-6}{Nucl. Phys.
+  \textbf{B463} (1996) 383--397},
+\href{http://arxiv.org/abs/hep-th/9512219}{{ arXiv:hep-th/9512219}}.
+%%CITATION = HEP-TH/9512219;%%.
+
+\bibitem[Wit97]{Witten:1997sc}
+\bysame, \emph{{Solutions of four-dimensional field theories via M theory}},
+  \href{http://dx.doi.org/10.1016/S0550-3213(97)00416-1}{Nucl. Phys. B
+  \textbf{500} (1997) 3--42}, \href{http://arxiv.org/abs/hep-th/9703166}{{
+  arXiv:hep-th/9703166}}.
+
+\bibitem[Wit98a]{Witten:1998qj}
+\bysame, \emph{{Anti-de Sitter space and holography}},
+  \href{http://dx.doi.org/10.4310/ATMP.1998.v2.n2.a2}{Adv. Theor. Math. Phys.
+  \textbf{2} (1998) 253--291},
+\href{http://arxiv.org/abs/hep-th/9802150}{{ arXiv:hep-th/9802150}}.
+%%CITATION = HEP-TH/9802150;%%.
+
+\bibitem[Wit98b]{Witten:1998xy}
+\bysame, \emph{{Baryons and branes in anti-de Sitter space}},
+  \href{http://dx.doi.org/10.1088/1126-6708/1998/07/006}{JHEP \textbf{07}
+  (1998) 006}, \href{http://arxiv.org/abs/hep-th/9805112}{{
+  arXiv:hep-th/9805112}}.
+
+\bibitem[Wit98c]{Witten:1998cd}
+\bysame, \emph{{D-branes and K theory}},
+  \href{http://dx.doi.org/10.1088/1126-6708/1998/12/019}{JHEP \textbf{12}
+  (1998) 019}, \href{http://arxiv.org/abs/hep-th/9810188}{{
+  arXiv:hep-th/9810188}}.
+
+\bibitem[Wit18]{witten2018every}
+\bysame, \emph{What every physicist should know about string theory},
+  Foundations of mathematics and physics one century after Hilbert, Springer,
+  2018, pp.~197--210.
+  \url{https://physicstoday.scitation.org/doi/10.1063/PT.3.2980}.
+
+\bibitem[Wra11]{wray2011introduction}
+K.~Wray, \emph{An introduction to string theory},
+  \href{https://math.berkeley.edu/~kwray/papers/string_theory.pdf}{his webpage}
+  (2011) .
+
+\bibitem[Zwi06]{Zwiebach:2004tj}
+B.~Zwiebach, \emph{{A first course in string theory}}, Cambridge University
+  Press, 2006.
+\url{http://www.cambridge.org/uk/catalogue/catalogue.asp?isbn=0521831431}.
+%%CITATION = INSPIRE-660149;%%.
+
+\end{thebibliography}

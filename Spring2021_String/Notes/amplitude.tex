@@ -1,0 +1,590 @@
+\documentclass[String-lecture-21.tex]{subfiles}
+
+\begin{document}
+\section{Bosonic string amplitudes}\label{sec:amplitude}
+
+
+Finally, we will discuss string amplitude.
+The amplitude tells us about features of string theory.
+As we naively showed, the string amplitude is written as follows.
+\begin{align*}
+ A_n = \sum_g \int \frac{[\cD h_{ab}]_{g,0}}{(\textrm{Diff $\times$ Weyl})} \int \cD X^\mu e^{-S_\sigma [X^\mu,h_{ab}]} \prod_{i=1}^n \int d^2\sigma \sqrt h V_i  \ .
+\end{align*}
+In this section, we will learn the degrees of the metric integration
+in the string amplitude after the (Diff $\times$ Weyl) gauge fixing.
+Namely,
+\begin{align*}
+\dim \frac{[\cD h_{ab}]_{g,n}}{(\textrm{Diff $\times$ Weyl})} = 6g -6 +2n \ .
+\end{align*}
+
+
+
+The $2n$ is simply coming from the integration of the vertex operators,
+which is needed for the vertex operator to be Diff $\times$ Weyl-invariant.
+The $6g$ can be understood in a naive way as follows.
+Even after gauge fixing (say fixing metric locally)
+there is a freedom to change the ``shape'' of the world-sheet,
+which is called metric moduli (we simply denote moduli).
+Let us increase the number of genus $g$.
+As in \S\ref{sec:Weyl}, we can do that by attaching a cylinder
+to a Riemann surface $\Sigma_{g}$.
+When this is done, we need to specify where the endpoints of the cylinder are
+and its ``shape'' of the cylinder.
+The endpoints are denoted by two complex points $p_1,\ p_2$.
+Around the points, we introduce complex coordinates $z_1,\ z_2$
+and impose one condition $z_1 z_2 = c$,
+where $c$ is a constant whose phase specifies twist and magnitude specifies
+length (see Figure \ref{g-increase}).
+In total, there are another six parameters to describe the shape of the world-sheet.
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=300pt]{picture/g-increase}}
+\caption{Attaching a pair of cylinders to $\Sigma_g$, and patching the pair of cylinders by $z_1z_2=c$.}
+\label{g-increase}
+\end{figure}
+
+
+\subsection{Teichm\"uller space and moduli space of Riemann surfaces}
+
+Let us briefly introduce Teichm\"uller space $\cT_g$ and moduli space $\cM_g$ of Riemann surfaces of genus $g$. For the sake of brevity, we focus on an oriented closed Riemann surface without punctures. It is known that every Riemann surface admits a Riemannian metric of constant curvature:
+\begin{description}
+\item[positive] A two-sphere $S^2$ ($g=0$) with a fixed radius in $\bR^3$ has positive constant curvature with respect to the induced metric from the standard metric of $\bR^3$
+  \item[zero] A two-torus $T^2$ ($g=1$) constructed as a quotient space $T^2=\bC/\Gamma$ has zero curvature where $\Gamma$ is a two-dimensional lattice.
+  \item[negative] A Riemann surface of genus $g>1$ can be constructed from a $4g$-polygon with geodesic arcs and each angle $2\pi/4g$ in the Poincare disc $\bD$ where the edges are identified via words \[a_{1} b_{1} a_{1}^{-1} b_{1}^{-1} a_{2} b_{2} a_{2}^{-1} b_{2}^{-1} \cdots a_{g} b_{g} a_{g}^{-1} b_{g}^{-1}~.\]
+  (See Figure \ref{genus-two}.) Hence, it admits a negative constant curvature.
+\end{description}
+
+\begin{figure}[htb]\centering
+\includegraphics[width=5cm]{picture/poincare-genus2}\qquad\raisebox{.5cm}{\includegraphics[width=8cm]{picture/genus2}}
+\caption{A $4g$-polygon with geodesic arcs and each angle $2\pi/4g$ in the Poincare disc $\bD$ ($g=2$)}
+\label{genus-two}
+\end{figure}
+
+
+Let us first consider the case of genus one. As mentioned, a torus is constructed from a quotient space $\bC_w/\Gamma_\tau$. As far as ``shape'' is concerned, we can set one edge to $1\in \bC$ without loss of generality. Then, an identification is given by
+\be \label{torus-identification}w \cong w+2 \pi(m+n \tau)~,\qquad (m,n)\in\bZ\times \bZ~,\ee
+where $\tau = \tau_1 +i\tau_2$ with $\tau_2 > 0$. In this coordinate, the metric is flat $ds^2=dwd\overline w$ so that $w$ is an isothermal coordinate.
+Another way to see ``shape'' of a torus is
+\[(\sigma^{1}, \sigma^{2}) \cong (\sigma^{1}, \sigma^{2})+2 \pi(m, n)\]
+with a Riemannian metric
+\begin{equation}\label{torus-metric}
+d s^{2}=\left|d \sigma^{1}+\tau d \sigma^{2}\right|^{2}~.
+\end{equation}
+In fact, the holomorphic coordinate $w$ and $(\sigma^1,\sigma^2)$ are related by
+\be\label{c-str-torus}
+w=\sigma^1+\tau \sigma^2~,
+\ee
+so that $\tau$ encodes the information about holomorphicity. Thus, the parameter $\tau$ is called a complex structure that describes the ``shape'' of the torus, roughly speaking. The space of complex structure $\tau$ is therefore the upper half place $\bH$, which can be identified with the Teichm\"uller space $\cT_{g=1}$ of a torus.
+% There is also a complex translation invariance, which is 2 CKG.
+
+There are global transformations that leave ``shape'' as it is. The lattice $\Gamma_\tau$ is invariant under transformations
+\begin{align}
+ T: \tau \to \tau+1 \ , \quad S: \tau \to -\frac{1}{\tau} \ ,
+ \label{eq:ModularTra}
+\end{align}
+up to a scale.
+These transformations $T,\ S$ generate the \textbf{modular transformation}
+\begin{align} \label{eq:ModularTra2}
+ \tau \to \frac{a\tau+b}{c\tau+d} \ , \quad
+ \begin{pmatrix}
+  a & b \cr c & d
+ \end{pmatrix} \in \PSL(2,\bZ) \ ,
+\end{align}
+Hence, the modular transformations do not change the ``shape'' of a torus, but it acts on the Teichm\"uller space $\bH$ as in \ref{modular}. As a result, the moduli space of complex structures of a torus is
+\be
+\cM_{g=1}=\cT_{g=1}/\PSL(2,\bZ)~,
+\ee
+which is the shaded region in Figure \ref{modular}, called the \textbf{fundamental region}.
+
+
+
+\begin{figure}[htb]\centering
+\raisebox{0cm}{\includegraphics[width=5cm]{picture/tau-torus}}
+\qquad\qquad
+\includegraphics[width=10cm]{picture/modular} \caption{The Teichm\"uller space of a torus is the upper half-plane, and the mapping class group $\PSL(2,\bZ)$ acts on it. The moduli space is the fundamental region $F$ (the shaded region). }\label{modular}
+\end{figure}
+
+
+
+Now let us consider a Riemann surface of genus $g>1$. The Poincare disk with the hyperbolic metric
+\[\Bigl(\bD,ds^2=\frac{4(dx^2+dy^2)}{(1-x^2-y^2)^2}\Bigr)\]
+has negative constant curvature, and geodesics are portions of circles that intersect the disk boundary at right angles. As briefly mentioned above, a Riemann surface of genus $g>1$ can be constructed by a $4g$-polygon with geodesic arcs and each angle $2\pi/4g$ in the Poincare disk. However, not all Riemann surfaces of genus $g>1$ with negative constant curvature (hyperbolic Riemann surfaces) are constructed in this way. The \textbf{moduli space} of Riemann surfaces indeed parametrizes hyperbolic Riemann surfaces that are not related by an isometry.
+
+A hyperbolic Riemann surface of genus $g>1$ admits a \textbf{pants decomposition} by cutting along $3g-3$ simple closed curves into $2g-2$ pants. In fact, one can take geodesic arcs for $3g-3$ simple closed curves and measure their lengths with respect to the hyperbolic metric. The ``shape'' of each pants is uniquely determined by the lengths of three edges. Thus, when we construct a hyperbolic Riemann surface by gluing pants, the ``shape'' will be determined by twist angles at gluing along the simple closed curves. These data will determine how to construct a hyperbolic Riemann surface from $2g-2$ pants, and the collection of the length coordinates $l_i$ and the twist coordinates $\theta_i$
+\begin{equation}
+\left(l_{1}, \cdots, l_{3 g-3} ; \theta_{1}, \cdots, \theta_{3 g-3}\right)
+\end{equation}
+are referred to as  \textbf{Fenchel-Nielsen coordinates}. The Fenchel-Nielsen coordinates indeed parametrize the space of ``complex structure'' called \textbf{Teichm\"uller space} $\cT_g$, and we have the bijection
+\[\cT_g\cong \bR_+^{3g-3}\times  \bR^{3g-3}\]
+In other words, $\cT_g$ can be identified with an open disk in $\bR^{6g-6}$. Moreover, the Teichm\"uller space is endowed with a complex structure and K\"ahler form
+\bea
+\omega=\sum_{i=1}^{3g-3} d l_i\wedge d\theta_i~,
+\eea
+referred to as the \textbf{Weil-Petersson form} so that it can be considered as a K\"ahler manifold.
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=15cm]{picture/Pants-decomp}}
+\caption{A pants decomposition of Riemann surface}
+\label{Pants-decomp}
+\end{figure}
+
+
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=13cm]{picture/angle}}
+\caption{twist coordinates}
+\label{angle}
+\end{figure}
+
+
+The relation between the Teichm\"uller space $\cT_g$ and the moduli space $\cM_g$ is given by the mapping class group $\textrm{MCG}_g$. The Teichm\"uller space classifies hyperbolic Riemann surface by isometries isotopic to the identity map. However, there are isometries that are not isotopic to the identity map. (In physics, they are sometimes called \textbf{large gauge transformations}.) The mapping class group appears as the quotient of orientation-preserving diffeomorphisms by diffeomorphisms isotopic to the identity map
+\[\textrm{MCG}_g =\frac{\textrm{Diff}_+(\Sigma_g)}{\textrm{Diff}_0(\Sigma_g)}~.\]
+Although this definition looks horrendous, the theorem of Lickorish states that the mapping class group $\textrm{MCG}_g$ of Riemann surfaces of genus $g$ is a discrete group generated by Dehn twists along $3g-1$ simple closed curves shown in Figure \ref{Dehn-cycles}. A Dehn twist is an isometry that generates a $2\pi$-twist along a simple closed curve $C$ of a hyperbolic Riemann surface $\Sigma_g$. Consequently,
+the moduli space of Riemann surfaces of genus $g$ can be identified as the quotient space
+\[\cM_g=\cT_g/\textrm{MCG}_g~. \]
+In the case of a torus, $\cT_{g=1}$ is the upper half-plane and $\textrm{MCG}_g$ is $\PSL(2,\bZ)$, so that $\cM_{g=1}$ is the fundamental region.
+
+
+
+
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=12cm]{picture/Dehn}}
+\caption{The Dehn twist along a simple closed curve}
+\label{Dehn}
+\end{figure}
+\begin{figure}[htb]
+\centerline{\includegraphics[width=12cm]{picture/Dehn-cycles}}
+\caption{Choice of $3g-1$ cycles for Dehn twists. ($g=3$ here)}
+\label{Dehn-cycles}
+\end{figure}
+
+
+We can also discuss $\cT_g$ and $\cM_g$ from the viewpoint of complex analytics very briefly. More elaborate explanations can be found in \cite{Nelson:1986ab} for string theory. A Riemann surface $\Sigma$ is defined by a local coordinate system $\left\{\left(U_{j}, z_{j}\right)\right\}_{j \in J}$ that are patched by biholomorphic mappings
+\[
+z_{k} \circ z_{j}^{-1}: z_{j}\left(U_{j} \cap U_{k}\right) \rightarrow z_{k}\left(U_{j} \cap U_{k}\right)~.
+\]
+A local coordinate system defines a complex structure on $\Sigma$. Given Riemann surfaces $R$ and $S$, a biholomorphic map $f: R \rightarrow S$ is a holomorphic map $f:R\to S$ which has the holomorphic inverse mapping $f^{-1}: S \rightarrow R$. The Teichm\"uller space is the space of complex structures modulo biholomorphic equivalence. One can reconstruct a complex structure from a real two-dimensional oriented closed manifold with a Riemannian metric, which can be expressed on a local coordinate $(U,\sigma^a)$ as
+\[
+ds^2=h_{ab}d\sigma^ad\sigma^b~.
+\]
+Writing $z=\sigma^1+i\sigma^2$, the metric takes the form
+\be \label{metric} d s^{2}=\lambda|d z+\mu d \bar{z}|^{2} ~.\ee
+where
+\[
+\lambda =\frac{1}{4}\left(h_{11}+h_{22}+2 \sqrt{h_{11} h_{22}-h_{12}^{2}}\right)~, \qquad
+\mu =\frac{h_{11}-h_{22}+2 i h_{12}}{h_{11}+h_{22}+2 \sqrt{h_{11} h_{22}-h_{12}^{2}}}~.
+\]
+Moreover, we can choose an isothermal coordinate $w$ such that
+\[\rho d w d\overline w=\rho\left|w_{z}\right|^{2}\left|d z+\frac{w_{\bar{z}}}{w_{z}} d \bar{z}\right|^{2}~.\]
+Comparing \eqref{metric}, the existence of an isothermal coordinate is indeed equivalent to the existence of a solution to
+\be\label{Beltrami}\mu=\frac{w_{\bar z}}{w_z}=\frac{\frac{\partial w}{\partial \bar{z}}}{\frac{\partial w}{\partial z}}~.\ee
+This is referred to as the \textbf{Beltrami equation}, and there is always a solution $w$. Moreover, $\left\{\left(U_{j}, w_{j}\right)\right\}_{j \in J}$ defines a complex structure, and we write the resulting Riemann surface $\Sigma$. For example, in the case of a torus, we define a complex structure \eqref{c-str-torus} from a Riemannian metric \eqref{torus-metric}. Even if we perform a Weyl transformation on the metric, the resulting Riemann surface $\Sigma'$ is biholomorphically equivalent to the Riemann surface $\Sigma$ constructed from the original metric. Therefore, the Teichm\"uller space can be identified with
+\[
+\cT_g=\frac{\textrm{Met}(\Sigma_g)}{\Weyl\times\Diff_+}~.
+\]
+
+In fact, $\mu=\mu_{\bar z}{}^z$ in \eqref{Beltrami} can be considered as a $(-1,1)$-form, called \textbf{Beltrami differential}, which encodes the space of metrics up to Weyl transformations. However, there are gauge equivalent configurations due to diffeomorphisms. To distinguish non-trivial variation in the space $L_{(-1,1)}^{\infty}(\Sigma)$ of Beltrami differential, Teichm\"uller has introduced a paring $(\cdot,\cdot)$ with a \textbf{holomorphic quadratic differential} (or $(2,0)$-form) $ \varphi_{z z} (z)dz\otimes dz$:
+\be\label{pairing}(\mu, \varphi) \equiv \int_{\Sigma} \mu_{\bar{z}}{}^{z} \varphi_{z z} \mathrm{~d} z \wedge \mathrm{d} \bar{z}~.\ee
+Then, Teichmüller's Lemma states that the subspace of Beltrami differentials for a trivial variation is given by
+\[
+\mathcal{N}=\left\{\mu \mid(\mu, \varphi)=0\quad  \text{for}\ \ \forall\varphi\in H^0(\Sigma,K^{\otimes2}) \right\}~.
+\]
+Hence, the holomorphic tangent space of the Teichm\"uller space at $\Sigma$ can be identified with
+\be\label{tangent} T_{\Sigma}^{(1,0)} \mathcal{T}_{g}\cong L_{(-1,1)}^{\infty}(\Sigma) / \mathcal{N}~,\ee
+and the holomorphic cotangent space with the space of holomorphic quadratic differentials
+\be\label{cotangent} T_{\Sigma}^{*(1,0)} \mathcal{T}_{g}\cong H^0(\Sigma,K^{\otimes2}) \ee
+Note that $K$ is the cotangent bundle on $\Sigma$, and it has degree $2 g-2$ so that the Riemann-Roch formula tells us \[\dim H^0(\Sigma,K^{\otimes2})=\operatorname{deg}(K^{\otimes 2})-g+1=3 g-3~.\]
+The space of anti-holomorphic quadratic differentials has the same dimension.
+
+
+
+\subsection{Gauge fixing and string amplitudes}\label{sec:CKV-metric}
+
+
+
+\subsubsection*{Conformal Killing vectors \& Metric moduli of space}
+
+The gauge transformation of a world-sheet metric under diffeomorphism and Weyl transformation is given in \eqref{gauge-orbit}. Moreover, conformal Killing vectors $\e$
+\begin{equation}
+  P\cdot \e=0~.
+\end{equation}
+does not change the metric infinitesimally. The existence of conformal killing vectors means that there are zero modes of the ghost $c$-field as pointed out in \eqref{CKV}.  Thus, we need extra care even after introducing the $bc$ ghost.
+In addition, the physical inequivalent change of a metric is
+perpendicular to \eqref{gauge-orbit} as in Figure \ref{fig:gauge}. Writing the change $\delta^\perp h_{ab}$, we have
+\begin{align*}
+ 0 &= \int d^2\sigma \sqrt h \ \delta^\perp h_{ab} \left[
+ \left(P\cdot \epsilon\right)^{ab} +2\wt\omega h^{ab} \right] \cr
+ &= \int d^2\sigma \sqrt h\ \left[
+ \left(P^T \cdot \delta^\perp h \right)_a \epsilon^a +2\wt\omega h^{ab}\delta^\perp h_{ab} \right] \ .
+\end{align*}
+To satisfy the orthogonality for arbitrary $\epsilon$ and $\omega$,
+it is required that
+\begin{align*}
+ h^{ab} \delta^\perp h_{ab} = 0 \ , \qquad \left(P^T \cdot \delta^\perp h \right)_a = \nabla^b \delta^\perp h_{ba} = 0 \ .
+\end{align*}
+Therefore, solutions to this equation are equivalent to zero modes of the ghost $b$-field \eqref{metric-moduli}. Since these zero modes are absent in the action,
+we need to insert appropriate zero modes to derive a non-trivial amplitude
+(because $\int db \cdot 1 = 0=\int dc \cdot 1 $).
+In a conformal gauge, equations for conformal Killing vectors and metric moduli become
+\begin{align*}
+ &\partial \ol\epsilon = \ol\partial \epsilon = 0 \ , \cr
+ &\partial \delta^\perp h_{\ol z\ol z} = \ol\partial \delta^\perp h_{zz} = 0 \ .
+\end{align*}
+Hence, variations of the metric moduli correspond to holomorphic quadratic differentials, which can be identified with the holomorphic cotangent space \eqref{cotangent} of the Teichm\"uller space at $\Sigma$.
+
+Let us look at some examples.
+For a two-sphere, we have the stereographic projections, and the two local coordinates are related by $w=1/z$, yielding
+\[
+\begin{aligned}
+\delta w &=\frac{\partial w}{\partial z} \delta z=-z^{-2} \delta z \cr
+\delta h_{ww} &=\left(\frac{\partial w}{\partial z}\right)^{-2} \delta h_{z z}=z^{4} \delta h_{z z}
+\end{aligned}
+\]
+CKV $\delta z,$ is holomorphic at $w=0$ if it grows no more rapidly than $z^{2}$ as $z \rightarrow \infty$. On the other hand, there is no moduli for metric
+\begin{align*}
+ &\delta^\perp h_{zz} = \delta^\perp h_{\ol z\ol z} = 0 \ , \cr
+ &\epsilon = a_0 +a_1 z + a_2 z^2 \ , \cr
+ &\ol\epsilon = a_0^* +a_1^* \bar z + a_2^* \bar  z^2 \ .
+\end{align*}
+Therefore, there are 6 CKVs and no modulus.
+
+On the torus, the only holomorphic doubly periodic functions are the constants, so there are two real moduli and two real CKVs.
+\begin{align*}
+\delta^\perp h_{zz} = a \ , \qquad \epsilon = b \ .
+\end{align*}
+
+
+
+As we have seen, the dimension of the metric moduli is $6g-6$ for a Riemann surface of genus $g>1$. However, there is no CKV. Thus, if we write the dimension of the conformal Killing group by $\mu$ and the dimension of the metric moduli by $\nu$, we summarize the results in Table \ref{table:CKV-metric}.
+
+
+
+\begin{table}[htbp]\centering
+\begin{tabular}{c|c|c|c}
+ & $g=0$ & $g=1$ & $g \ge 2$ \cr\hline
+ $\mu$ & $6$ & $2$ & $0$ \cr
+ $\nu$ & $0$ & $2$ & $6g-6$
+\end{tabular}
+\caption{The number of zero modes of $b$ and $c$.}
+\label{table:CKV-metric}
+\end{table}
+
+
+
+
+\subsubsection*{Ghost number anomaly}
+We can derive the conclusion that we need to insert the ghost fields in correlation functions to have non-trivial results by considering the ghost number anomaly.
+The ghost action in \eqref{ghost-action} is invariant under the transformation
+\[\delta_g c = \epsilon c~, \qquad \delta_g b = -\epsilon b~.\]
+The corresponding Noether current is a ghost number current $j = cb$ under which we can define
+the ghost number $[c]=1$ and $[b]=-1$. At a flat world-sheet, the current satisfies the conservation law $\ol\partial j = 0$.
+However, it has an anomaly in a curved world-sheet proportional to the scalar curvature like in \eqref{Weyl-anomaly}
+\begin{align}\label{Ghost-anomaly}
+ \nabla^z j_z = \kappa \cdot R^{(2)} \ .
+\end{align}
+
+
+Let us determine the coefficient $\kappa$.
+The OPE of the energy-momentum tensor and the ghost number current leads to
+\begin{align*}
+ T(z)j(w) &= -\nord{(2b\partial c + \partial b c) (z)} \nord{cb(w)} \nonumber\cr
+ &\sim \frac{-3}{(z-w)^3} +\frac{ j(w)}{(z-w)^2} +\frac{\partial j(w)}{z-w} \ .
+\end{align*}
+Its infinitesimal version is
+\begin{align}\label{conformal-j}
+ &\delta j = \epsilon \partial j +\partial\epsilon j -\frac{3}{2}\partial^2 \epsilon \ . % \cr
+% &j(z) = \frac{\wt z}{\partial z} \wt j (\wt z) -\frac{3}{2} \partial_z \log \left(\frac{\partial\wt z}{\partial z}\right) \ .
+\end{align}
+
+On the other hand, in the conformal gauge \eqref{conformal-gauge}, \eqref{Ghost-anomaly} can be expressed as
+\begin{align*}
+ j_z = -4\kappa \partial\omega +j(z) \ ,
+\end{align*}
+where $j(z)$ is the holomorphic current. Using this expression, we find a transformation of $j(z)$ as
+\[
+j(z)=\frac{\partial \tilde{z}}{\partial z} \tilde{j}(\tilde{z})+2 \kappa \frac{\partial}{\partial z} \ln \frac{\partial \tilde{z}}{\partial z}~,
+\]
+which yields
+\begin{align*}
+ &\delta j(z) = \epsilon \partial j(z) +\partial\epsilon j(z) +2\kappa\partial^2 \epsilon \ .
+\end{align*}
+Comparing this with \eqref{conformal-j}, we have $\kappa = -\frac{3}{4}$.
+
+
+
+This anomaly puts a constraint on non-vanishing ghost correlators.
+Let us consider the variation of the following correlation function under the ghost number symmetry $\delta_g$
+\begin{align*}
+\delta_g \Bigl\langle  \prod_{j=1}^n b(z_j) \prod_{i=1}^m c(z_i)\Bigr\rangle
+ = (m-n) \Bigl\langle \prod_{j=1}^n b(z_j) \prod_{i=1}^m c(z_i) \Bigr\rangle \ .
+\end{align*}
+On the other hand,
+using holomorphic current equation
+\begin{align*}
+ 0 = \ol\partial j(z) = \nabla^z j_z +\frac34 \cdot R^{(2)} \ ,
+\end{align*}
+the Ward-Takahashi identity becomes
+\begin{align*}
+\delta_g \Bigl\langle \prod_{j=1}^n b(z_j)\prod_{i=1}^m c(z_i)  \Bigr\rangle
+ =  &\Bigl\langle \bigl(\int \frac{d^2z}{2\pi}\sqrt h \ol\partial j(z) \bigr)\prod_{j=1}^n b(z_j)\prod_{i=1}^m c(z_i) \Bigr\rangle  \nonumber\cr
+ =  &\Bigl\langle \bigl(\int \frac{d^2z}{2\pi}\sqrt h \bigl(\nabla^z j_z +\frac{3}{4} R^{(2)}\bigr) \bigr)\prod_{j=1}^n b(z_j)\prod_{i=1}^m c(z_i) \Bigr\rangle  \nonumber\cr
+ =  &\Bigl\langle \bigl(\int \frac{3d^2z}{8\pi}\sqrt h R^{(2)} \bigr)\prod_{j=1}^n b(z_j)\prod_{i=1}^m c(z_i) \Bigr\rangle\cr
+ =  & (3-3g) \Bigl\langle\prod_{j=1}^n b(z_j)\prod_{i=1}^m c(z_i) \Bigr\rangle \ .
+\end{align*}
+Therefore, we can conclude that $\# c - \# b = 3-3g$, and similarly we have $\#\ol c - \#\ol b = 3-3g$. This is consistent with Table \ref{table:CKV-metric}.
+
+
+
+
+
+\subsubsection*{General closed-string amplitude}
+
+Now let us heuristically derive the closed string amplitude. If the conformal Killing group is present, we insert the ghost zero modes $\# c +\# \ol c \equiv \mu$ at specified positions to fix the gauge. If enough numbers of vertex operators are present, the gauge fixing can be done by pairing $\mu/2$ vertex operators with the ghost zero modes at specific positions
+\[
+c\bar cV(\sigma_j) \qquad (j=1,\ldots, \mu/2)~.
+\]
+Moreover, we need to integrate over the physically inequivalent world-sheet metric, which is the moduli space of the world-sheet Riemann surface $\cM_{g}$. This can be done by using the non-degenerate pairing with the cotangent and tangent bundle of the moduli space introduced in \eqref{pairing}. Since the $b$ and $\bar b$ zero modes are sections of (anti-)holomorphic cotangent bundle of the moduli space, they are paired with  (anti-)holomorphic tangent vectors as
+\begin{align*}
+ (b, \partial_k h) = \int \frac{d^2\sigma}{4\pi} \sqrt{\wh h}\ b_{ab} \frac{\partial}{\partial t_k} \wh h^{ab}(t)~,\qquad  (\bar b, \overline\partial_k h) = \int \frac{d^2\sigma}{4\pi} \sqrt{\wh h}\ b_{ab} \frac{\partial}{\partial \overline t_k} \wh h^{ab}(t)~ .
+\end{align*}
+
+
+
+\begin{figure}[ht]\centering
+  \includegraphics{picture/fig-amplitude}
+  \caption{$\mu/2$ vertex operators are paired with $c\overline c$ at fixed positions and the others are integrated over the Riemann surface.}
+  \label{}
+\end{figure}
+
+With these insertions, the general closed-string amplitude in the bosonic string theory is written as
+\begin{align}\label{closed-amplitude}
+ A_{g,n}=&\int_{\cM_g} d^{\nu}t \int \cD[c, \bar c , b, \bar b , X]  \ e^{-S_\sigma [X,h] -S_\textrm{gh}[b,c] -\Phi\chi(\Sigma_g)} \cr
+ &\qquad \prod_{k=1}^{\nu/2} (b, \partial_k h)   (\bar b, \overline\partial_k h)\prod_{i=1}^{\mu/2}g_s \sqrt h c\ol cV_i(\sigma_i)
+ \prod_{l=\mu/2+1}^{n}\int d^2\sigma_l \sqrt h  g_sV_l(\sigma_l)  \ ,
+\end{align}
+where $\chi(\Sigma_g)$ is the Euler characteristics ($2-2g$), and $\Phi$ is a vacuum expectation value of a dilaton that gives the string coupling $g_s =e^\Phi$. Let us now consider explicit examples and carry out computations.
+
+\subsection{Tree amplitude}
+
+The first example is the tree level amplitude in string theory: a sphere with $n\ge 3$ punctures.
+Since we have $\mu =6$ and $\nu = 0$ for a sphere, we need to insert at least three vertex operators to fix conformal Killing vectors. Considering a sphere $S^2\cong \bC\cup \{\infty\}$, we give the flat metric locally. Then, the amplitude formula becomes
+\begin{align*}
+ A_{g=0,n} &= g_s^{-2} \int \cD[c, \bar c , b, \bar b , X]  \ e^{-S_\sigma [X,h] -S_\textrm{gh}[b,c]}
+ \prod_{i=1}^{3}c\ol c(z_i,\ol z_i)g_s  V_i(z_i,\ol z_i)  \prod_{l=4}^{n}\int d^2z_l  g_s  V_l(z_l,\ol z_l) \cr
+ &= g_s^{n-2} \prod_{l=4}^{n}\int d^2z_l  \Bigl\langle \prod_{j=1}^n V_j(z_j,\ol z_j) \Bigr\rangle_X
+ \Bigl\langle c\ol c(z_1,\ol z_1) c\ol c(z_2,\ol z_2) c\ol c(z_3,\ol z_3) \Bigr\rangle_{bc} \ ,
+\end{align*}
+where we fix the positions of three operators $c\ol c(z_i,\ol z_i)g_s  V(z_i,\ol z_i)$ for $i=1,2,3$.
+As a result, the amplitude factorizes into the matter sector and the ghost sector.
+
+
+Let us compute when all the vertex operators are Tachyons \eqref{tachyon-vertex}:
+\begin{align*}
+ V_j (z_j,\ol z_j) = \nord{e^{ik_j\cdot X(z_j,\ol z_j)}} \ .
+\end{align*}
+Then, the OPE of the Tachyon vertex operators can be computed from \eqref{OPE-general}, which yields
+\begin{align*}
+ \Bigl\langle \prod_{j=1}^nV_j (z_j,\ol z_j)\Bigr\rangle_X = C_X (2\pi)^D \delta^D(\sum k_i) \prod_{i < j}^n |z_{ij}|^{\alpha'k_i\cdot k_j} \ .
+\end{align*}
+
+
+
+To compute the ghost sector,
+we perform an integral over the zero modes
+\begin{align*}
+ c(z) = c_{0} + c_{1} z +c_{2} z^2 \ , \cr
+\ol c(\ol z) = \ol c_{0} + \ol c_{1}\ol z +\ol c_{2} \ol z^2 \ .
+\end{align*}
+Then, the integral is indeed very simple
+\begin{align*}
+ \Bigl\langle c\ol c(z_1,\ol z_1) c\ol c(z_2,\ol z_2) c\ol c(z_3,\ol z_3) \Bigr\rangle_{bc}
+ =& C_{bc} \int \prod_{i=0}^2 d\ol c_i dc_i \ c(z_1)\ol c(\ol z_1) c(z_2)\ol c(\ol z_2) c(z_3)\ol c(\ol z_3)\cr
+ =&C_{bc}
+\det \left|\begin{array}{ccc}
+1 & 1 & 1 \cr
+z_{1} & z_{2} & z_{3} \cr
+z_{1}^{2} & z_{2}^{2} & z_{3}^{2}
+\end{array}\right| \det \left|\begin{array}{ccc}
+1 & 1 & 1 \cr
+\bar{z}_{4} & \bar{z}_{5} & \bar{z}_{6} \cr
+\bar{z}_{4}^{2} & \bar{z}_{5}^{2} & \bar{z}_{6}^{2}
+\end{array}\right|\cr
+ =& C_{bc} |z_{12}|^2 |z_{23}|^2 |z_{31}|^2 \ .
+\end{align*}
+
+
+
+\subsubsection*{Shapiro-Virasoro amplitude}
+
+Let us explicitly perform the four-point amplitude
+\begin{align*}
+ A_{0,4} = g_s^{2} C_\textrm{4pt} (2\pi)^D \delta^D(\sum k_i) \int d^2z_4
+ \prod_{i < j}^4 |z_{ij}|^{\alpha'k_i\cdot k_j} \prod_{i < j}^3 |z_{ij}|^2 \ .
+\end{align*}
+To fix the conformal Killing vectors, we can set $(z_1,z_2,z_3)$ to $(0,1,\infty)$.
+Then the expression reduces to
+\begin{align}\label{Virasoro-Shapiro}
+ A_{0,4} = g_s^{2} C_\textrm{4pt} (2\pi)^D \delta^D(\sum k_i)
+ B\left( -\frac{\alpha' s}{4}-1,  -\frac{\alpha' t}{4}-1,  -\frac{\alpha' u}{4}-1 \right) \ ,
+\end{align}
+where
+\begin{align*}
+ &B(a,b,c) = \int d^2z |z|^{2a-2} |1-z|^{2b-2} = \pi \frac{\Gamma(a)\Gamma(b)\Gamma(c)}{\Gamma(a+b)\Gamma(b+c)\Gamma(c+a)} \ , \cr
+ &s = -k_{1+2}^2 = -k_{3+4}^2 = -2 k_1\cdot k_2 -\frac{8}{\alpha'} \ , \cr
+ &t = -k_{1+3}^2 = -k_{2+4}^2 = -2 k_1\cdot k_3 -\frac{8}{\alpha'} \ , \cr
+ &u = -k_{1+4}^2 = -k_{2+3}^2 = -2 k_1\cdot k_4 -\frac{8}{\alpha'} \ , \qquad (s+t+u = -\frac{16}{\alpha'}) \ . \nonumber
+\end{align*}
+This is called the \textbf{Shapiro-Virasoro amplitude}. It is easy to see that Shapiro-Virasoro amplitude has a permutation symmetry among $s,t, u$.
+For the derivation of the $B$ function, the reader can refer to \cite[\S7(Vol.1 pp.386 and pp.373)]{GSW}.
+
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=10cm]{picture/s-channel}}
+\caption{The s-channel of the Shapiro-Virasoro amplitude.}
+\label{s-channel.eps}
+\end{figure}
+
+
+The $\Gamma$-function has a pole at non-positive integers. This shows that the amplitude in \eqref{Virasoro-Shapiro} has poles in the $s$-channel:
+\begin{align*}
+ -\frac{\alpha's}{4}-1 \in \bZ_{\le 0} , \qquad s = -k_{1+2}^2 = M^2 = \frac{4}{\alpha'} (n-1) \quad (n \in \bZ_{\ge 0}) \ ,
+\end{align*}
+where $m$ is the mass of a propagating state as in Figure \ref{s-channel.eps}. Since the mass spectra are the same as in \eqref{mass2}, this implies that the propagating states are tachyon, graviton, $B$-field, etc.
+The four-point amplitude can be divided into two three-point amplitudes as in Figure \ref{s-channel.eps}.
+At the $s$-channel tachyon pole, it becomes
+\begin{align*}
+ A_{0,3} &= a_3 (2\pi)^D \delta^D (\sum k_i) \ , \qquad a_3 \simeq C g_s \ , \cr
+ A_{0,4} &= a_4 (2\pi)^D \delta^D (\sum k_i) \ , \qquad a_4 \simeq -\frac{4\pi}{\alpha'} \frac{1}{s+\frac{4}{\alpha'}} C g_s^2
+ \ .
+\end{align*}
+We can fix the overall constant from unitarity
+\begin{align*}
+ &a_4 = \frac{(a_3)^2}{s+\frac{4}{\alpha'}} \ , \qquad
+ \therefore \quad C = -\frac{4\pi}{\alpha'} \ .
+\end{align*}
+
+Although we have considered a closed-string tree-level amplitude here, the result for open-string amplitude, so-called the \textbf{Veneziano amplitude} \cite{Veneziano:1968yb}, has historically proceeded.  The discovery of the Veneziano amplitude is widely acknowledged as the starting point for the developments leading to string theory. The very first examples of string amplitudes by Veneziano \cite{Veneziano:1968yb}, Virasoro \cite{Virasoro:1969me}, Shapiro \cite{Shapiro:1970gy}, as well as Koba and Nielsen \cite{Koba:1969rw,Koba:1969kh} appeared long before the formulation of string theory. The early history of string theory before the superstring revolution in 1984 is recounted in \cite{cappelli2012birth}.
+
+
+\subsection{One-loop amplitude}\label{sec:1-loop}
+
+Let us consider a torus amplitude which is analogous to one-loop amplitude so that it encodes quantum corrections. First, we will use the cylindrical holomorphic coordinate $w=t+i\sigma$ in Figure \ref{fig3} with periodicity \eqref{torus-identification}.
+
+As seen in \S\ref{sec:CKV-metric}, there are two constant conformal Killing vectors and metric moduli. Note that an integral (with an appropriate normalization) over a torus automatically picks up zero modes
+\[
+c(0) = \int \frac{d^2w}{4\pi^2\tau_2}c(w)
+\]
+(The other zero modes $\ol c(0)$, $b(0), \ol b(0)$ are similarly obtained.)
+
+%
+% Though seemingly the metric would not depend on $\tau$, it does indeed depend on $\tau$ as follows.
+Let us consider an infinitesimal deformation of the flat metric
+\begin{align*}
+ ds^2 = dwd\ol w \to d(w+\epsilon\ol w) d(\ol w+\ol\epsilon w) \ ,
+\end{align*}
+where $\delta h_{ww} = \ol\epsilon$ and $h_{\ol w\ol w} = \epsilon$. One can set a new isothermal coordinate is
+ $\wt w=w+\epsilon \ol w$.
+This changes the period of a torus to
+\[
+\wt w=\wt w+(2\pi (1+\epsilon),2\pi(\tau+\epsilon\ol\tau))~.
+\]
+Consequently, the complex modulus becomes
+\[\wt \tau = \frac{\tau+\epsilon\ol\tau}{1+\epsilon} \simeq \tau -2i\epsilon\tau_2\]
+so that $\delta \tau = -2i\epsilon\tau_2$. Thus, a tangent vector of the metric moduli  is
+\begin{align*}
+ \partial_\tau h_{\ol w\ol w} =  \frac{\delta h_{\ol w\ol w}}{\delta \tau} = \frac{i}{2\tau_2} \ ,
+\end{align*}
+so that we have
+\begin{align*}
+ (b, \partial_\tau h) = \int \frac{d^2w}{4\pi} \sqrt{h}\ b_{ww}(w) \frac{\partial}{\partial \tau}  h_{\ol w\ol w} (\tau) =2\pi ib_{ww}(0)\ .
+\end{align*}
+
+
+
+The torus amplitude is expressed as an integral over the fundamental region $F$ in Figure \ref{modular} with $bc$ zero modes insertion
+\begin{align*}
+ A_{1,n}
+ &= g_s^{n} \frac{1}{2} \int_F d^2\tau   \Bigl\langle (b, \partial_\tau h) (\ol b, \partial_{\ol \tau} h)
+ c(0)\ol c(0) \sqrt h V_1(0) \prod_{j=2}^{n}\int d^2w_j \sqrt h V_j  (w_j,\ol w_j)\Bigr\rangle \ .
+\end{align*}
+where $\frac{1}{2}$ is due to the symmetry $w\to -w$. Since the zero mode on a torus can be obtained by integrating an operator out, the expression can be manipulated into
+\begin{align*}
+ A_{1,n}
+ &= g_s^{n} \frac{1}{2}  \int_F \frac{d^2\tau}{\tau_2}
+ \bigl\langle b(0)\ol b(0)c(0)\ol c(0) \bigr\rangle_{bc}
+ \Bigl\langle \prod_{j=1}^{n}\int d^2w_j \sqrt h V_j (w_j,\ol w_j)\Bigr\rangle_X \ .
+\end{align*}
+
+\subsubsection*{Torus partition function for bosonic string}
+Let us explicitly compute the amplitude without vertex operators ($n=0$):
+\begin{align*}
+ A_{1,0}
+ &= \frac{1}{2} \int_F \frac{d^2\tau}{\tau_2}
+ \bigl\langle b(0)\ol b(0)c(0)\ol c(0) \bigr\rangle_{bc}
+ \bigl\langle 1 \bigr\rangle_X \ .
+\end{align*}
+
+The Feynman path integral over a torus with complex structure $\tau$ can be written in terms of the Hamiltonian formalism
+\begin{align*}
+ \bigl\langle 1 \bigr\rangle_X = \Tr \exp \left[ 2\pi i \left( \tau_1 P +i\tau_2 H \right)\right]
+ = \Tr \left[ q^{L_0^X -\frac{c^X}{24}} \ol q^{\ol L_0^X -\frac{c^X}{24}} \right] \ ,
+\end{align*}
+where $q = e^{2\pi i\tau}$. Note that the space and time translation are generated by the zero mode of the Virasoro generator \eqref{Virasoro} \[P = L_0^X -\ol L_0^X~, \qquad H = L_0^X +\ol L_0^X -\frac{c^X}{12}~.\]
+
+The trace is taken over the Hilbert space \eqref{bosonic-Hilb}. Writing the holomorphic Fock space with a fixed target coordinate as
+\begin{equation}
+|n_1,n_2,n_3,\cdots;k\rangle=\a_{-1}^{n_1}\a_{-2}^{n_2}\a_{-3}^{n_3}\cdots|0;k\rangle, \quad \mbox{with}\quad  n_i\in \mathbb{Z}_{\ge0}~,
+\end{equation}
+its generating function can be written as
+\bea
+\label{free-boson-process}
+\mbox{Tr}_{\cH^X}(q^{L_0-\frac{c}{24}})&=q^{-\frac{1}{24}} \sum_{n_1=0}^\infty \sum_{n_2=0}^\infty \cdots \left\langle k;n_1,n_2,\cdots\left| q^{L_0^X} \right| n_1,n_2,\cdots ;k\right\rangle  \nonumber\\
+&=q^{\frac{\a'}{4}k^2-\frac{1}{24}} \prod_{n=1}^\infty \frac1{1-q^n}=q^{\frac{\a'}{4}k^2}\frac{1}{\eta(\tau)}~,
+\eea
+where $\eta(\tau)$ is the \textbf{Dedekind eta-function}.
+Hence, we have the bosonic torus partition function
+\begin{align*}
+ \bigl\langle 1 \bigr\rangle_X &=
+ \int \frac{d^Dxd^Dp}{(2\pi)^D} \exp \left( -4\pi\tau_2 \frac{\alpha'}{4} p^2 \right)
+ \left| \frac{q^{-\frac{1}{24}}}{\prod_{n \ge 1} (1-q^n)} \right|^{2D}  \nonumber\cr
+ &= i \frac{V_{D}}{(2\pi \ell_s)^{D}} \left(\tau_2\right)^{-D/2} \left|\eta(\tau)\right|^{-2D} \ ,
+\end{align*}
+where $i$ in the second line is from Wick-rotation of spacetime momentum $p^0 \to ip^0_E$.
+
+
+
+
+Similarly, we can write the ghost partition function over a torus with complex structure $\tau$ as
+\begin{align*}
+ \bigl\langle b(0)\ol b(0)c(0)\ol c(0) \bigr\rangle_{bc}
+ = \Tr [(-1)^F b_0 \ol b_0 c_0 \ol c_0 q^{L_0^{g} -\frac{c^g}{24}} \ol q^{\ol L_0^{g} -\frac{c^g}{24}}  ]
+\end{align*}
+with $c^g=-26$, and  the zero mode of the Virasoro generator \eqref{L-bc} is
+\be
+L^{g}_0=-\sum_{n\in\bZ}n:b_nc_{-n}:-1~.
+\ee
+Here $F$ is the fermion number operator; $F=1$ for fermion and $F=0$ for boson. The insertion of $(-1)^F$ means that the periodic boundary condition is imposed on the ghost fields along the time circle.
+The trace is taken over the Hilbert space spanned by physical states that are constructed creation operators $b_{-n},c_{-m}$ for $n,m\in \bZ_{>0}$ (as well as anti-holomorphic operators) on the $bc$ ghost vacuum $|\downarrow\downarrow\rangle$
+\[
+ \Tr_{\cH^g} [(-1)^F b_0 c_0  q^{L_0^{g} -\frac{c^g}{24}} ] = q^{-1-\frac{c^g}{24}}\prod_{n \ge 1} (1-q^n)^2
+ \]
+Thus, we have
+\begin{align*}
+ \bigl\langle b(0)\ol b(0)c(0)\ol c(0) \bigr\rangle_{bc}
+ = q^{-1-\frac{c^g}{24}} \ol q^{-1-\frac{c^g}{24}} \prod_{n \ge 1} (1-q^n)^2 (1-\ol q^n)^2 = |\eta(\tau)|^4 \ .
+\end{align*}
+In conclusion, the torus amplitude is
+\begin{align}\label{Boson-torus}
+ A_{1,0}
+ &= \frac{iV_D}{(2\pi \ell_s)^{D}} \int_F \frac{d^2\tau}{2\tau_2}  \left(\tau_2\right)^{-D/2} \left|\eta(\tau)\right|^{-2(D-2)} \ .
+\end{align}
+At the critical dimension $D=26$, the expansion of the Dedekind eta-function
+\[\left|\eta(\tau)\right|^{-48} \simeq \left|q^{-1} +24 +\mathcal O(q)\right|^2~,\]
+gives the spectrum of the bosonic string theory. Furthermore, it is invariant under $\PSL(2,\bZ)$. See \S\ref{sec:modular}.
+
+Note that the limit $\tau_{2} \rightarrow 0$ describes the ultraviolet (UV) regime since the Euclidean time becomes small. The integral over the fundamental domain $F$ avoids this UV region. Consequently, there is no UV divergence in one-loop amplitude of the bosonic string theory thanks to the modular invariance of a torus.
+
+
+
+\end{document}

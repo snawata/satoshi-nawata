@@ -1,0 +1,138 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+
+\usepackage{macros}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 7: Due at class on Apr 30}
+
+\section{Clifford algebra and spinor representations}
+Spinors in various space-time dimensions play an important role in superstring theory. In this problem, we will study spinors in even dimensions
+\subsection{Representation}
+We will be working in $D$ flat space-time dimensions with signature $(D-1,1)$, for which the metric reads $\eta_{\mu \nu}=\operatorname{diag}(-1,+1, \ldots,+1) .$ The Dirac matrices $\Gamma^{\mu}$ satisfy the Clifford algebra
+$$
+\left\{\Gamma^{\mu}, \Gamma^{\nu}\right\} \equiv \Gamma^{\mu} \Gamma^{\nu}+\Gamma^{\nu} \Gamma^{\mu}=2 \eta^{\mu \nu}
+$$
+where the product is the usual matrix multiplication. For even dimensions $D=2 k+2-$ which we are interested in, we define
+$$
+\begin{aligned}
+\Gamma^{0 \pm} &=\frac{1}{2}\left(\pm \Gamma^{0}+\Gamma^{1}\right) \\
+\Gamma^{a \pm} &=\frac{1}{2}\left(\Gamma^{2 a} \pm i \Gamma^{2 a+1}\right), & a=1, \ldots, k
+\end{aligned}
+$$
+
+(a) Verify that
+$$
+\left\{\Gamma^{a+}, \Gamma^{b-}\right\}=\delta^{a b}, \quad\left\{\Gamma^{a+}, \Gamma^{b+}\right\}=\left\{\Gamma^{a-}, \Gamma^{b-}\right\}=0
+$$
+It follows that $\left(\Gamma^{a+}\right)^{2}=\left(\Gamma^{a-}\right)^{2}=0 .$ By acting repeatedly with say $\Gamma^{a-}$, we can therefore reach a spinor $\zeta$ annihilated by all the $\Gamma^{a-}$
+$$
+\Gamma^{a-} \zeta=0 \quad \forall a
+$$
+Starting from $\zeta$, we obtain a representation by acting in all possible ways with $\Gamma^{a+}$. We can label these by $\mathbf{s}=\left(s_{0}, s_{1}, \ldots, s_{k}\right)$, with $s_{a}=\pm \frac{1}{2}$, and an explicit construction reads
+$$
+\zeta^{(\mathbf{s})}=\left(\Gamma^{k+}\right)^{s_{k}+\frac{1}{2}} \ldots\left(\Gamma^{0+}\right)^{s_{0}+\frac{1}{2}} \zeta
+$$
+
+(b) What is the dimensions of this representation?
+
+(c) Which label does $\zeta$ have?
+\subsection{Dirac representation}
+The notation $\bf s$ reflects the Lorentz properties of the spinors. In particular, define the following Lorentz generators
+$$
+\Sigma^{\mu \nu}=-\frac{i}{4}\left[\Gamma^{\mu}, \Gamma^{\nu}\right]
+$$
+These satisfy the Lorentz algebra $\mathfrak{s o}(D-1,1)$
+
+(d) Show that the generators $\Sigma^{2 a, 2 a+1}$ for different $a$ commute. Therefore, they can be simultaneously diagonalized.
+
+(e) Define and show that
+$$
+S_{a} \equiv i^{\delta_{a, 0}} \Sigma^{2 a, 2 a+1}=\Gamma^{a+} \Gamma^{a-}-\frac{1}{2}
+$$
+
+(f) Show that $\zeta^{(\mathbf{s})}$ is a simultaneous eigenstate of the $S_{a}$ with eigenvalues $s_{a}$.
+The half-integer values of $s_{a}$ show that $\zeta^{(\mathbf{s})}$ is indeed a spinor representation. More concretely, the spinors $\zeta^{(\mathbf{s})}$ form a so-called Dirac representation of the Lorentz algebra $\mathfrak{s o}(2 k+1,1) .$
+
+
+\subsection{Weyl representation}
+However, the Dirac representation is reducible from the point of view of the Lorentz algebra. Roughly speaking, this is due to the $\Gamma^{\mu}$ appearing quadratically in the Lorentz generators $\Sigma^{\mu \nu}$. Let us now define
+$$
+\Gamma_{11}=i^{-k} \Gamma^{0} \Gamma^{1} \ldots \Gamma^{D-1}
+$$
+which has the properties
+$$
+(\Gamma_{11})^{2}=1, \quad\left\{\Gamma_{11}, \Gamma^{\mu}\right\}=0, \quad\left[\Gamma_{11}, \Sigma^{\mu \nu}\right]=0 .
+$$
+
+(g) Verify these.
+Noting that $\Gamma_{11}=2^{k+1} S_{0} S_{1} \ldots S_{k}$, we see that the eigenvalues of $\Gamma_{11}$ are $\pm 1$. These eigenvalues are called chirality, and the states with $\Gamma_{11}$-eigenvalue $+1$ form a Weyl representation of the Lorentz algebra, and the states with $\Gamma_{11}$-eigenvalue $-1$ from another, inquivalent Weyl representation.
+
+(h) Characterize the two chirality states in terms of the eigenvalues $s_{a}$.
+
+\subsection{Conjugate representations}
+We now want to gain some more information about the two Weyl representations.
+
+(i) To start, we consider complex conjugation of the $\Gamma_{11}$-matrices: show that if $\Gamma^{\mu}$ satisfies the Clifford algebra, then also $\left(\Gamma^{\mu}\right)^{*}$ and $-\left(\Gamma^{\mu}\right)^{*}$ satisfy the Clifford algebra. (The $*$ means complex conjugation.)
+
+(j) Argue that the matrices $\Gamma^{a \pm}$ with $a=0, \ldots, k-$ in the basis $\mathbf{s}=\left(s_{0}, s_{1}, \ldots, s_{k}\right)$ with $s_{a}=\pm \frac{1}{2}-$ are real. Deduce then that $\Gamma^{3}, \Gamma^{5}, \ldots, \Gamma^{d-1}$ are imaginary, and that all other $\Gamma^{\mu}$ are real.
+
+(k) Define two matrices $B_{1}$ and $B_{2}$ as
+$$
+B_{1}=\Gamma^{3} \Gamma^{5} \ldots \Gamma^{D-1}, \quad B_{2}=\Gamma_{11} B_{1}
+$$
+Show that
+$$
+B_{1} \Gamma^{\mu} B_{1}^{-1}=(-1)^{k}\left(\Gamma^{\mu}\right)^{*}, \quad B_{2} \Gamma^{\mu} B_{2}^{-1}=(-1)^{k+1}\left(\Gamma^{\mu}\right)^{*}
+$$
+The two relations imply that $\left(\Gamma^{\mu}\right)^{*}$ and $-\left(\Gamma^{\mu}\right)^{*}$ are related to $\Gamma^{\mu}$ by a so-called similarity transformation. Roughly speaking, they are therefore equivalent.
+
+(l) Turning now to the Lorentz generators $\Sigma^{\mu \nu}=-\frac{i}{4}\left[\Gamma^{\mu}, \Gamma^{\nu}\right]$, show that for $B_{1}$ as well as for $B_{2}$ we have
+$$
+B_{1,2} \Sigma^{\mu \nu} B_{1,2}^{-1}=-\left(\Sigma^{\mu \nu}\right)^{*}
+$$
+This implies that the spinors $\zeta$ and $B_{1,2}^{-1} \zeta^{*}$ transform in the same way under the Lorentz group. The Dirac representation $\zeta$ of the Clifford algebra is thus its own conjugate. However, for Weyl representations, the story is different:
+
+(m) Show that
+$$
+B_{1} \Gamma_{11} B_{1}^{-1}=B_{2} \Gamma_{11} B_{2}^{-1}=(-1)^{k} \Gamma^{*}
+$$
+These relations imply that $B_{1}$ and $B_{2}$ change the eigenvalue of $\Gamma_{11}$ if $k$ is odd, but leave it invariant if $k$ is even. Recall that the $\Gamma_{11}$ eigenvalues distinguish the two Weyl representations. For even $k$, each Weyl representation is therefore its own conjugate, while for odd $k$ each Weyl representation is conjugate to the other.
+
+(n) Consider the case of $D=10$ space-time dimensions and decide whether the Weyl representations are conjugate to each other or are their own conjugate.
+
+
+(o) Argue or guess what the situation is for the superstring in light-cone quantization.
+\subsection{Majorana condition}
+
+The spinor fields in the Dirac representation are generally complex. However, some Dirac spinors satisfy a Majorana condition which relates $\zeta^{*}$ to $\zeta$. In order to be consistent with Lorentz transformations, we must demand
+$$
+\zeta^{*}=B_{1,2} \zeta
+$$
+Its complex conjugation gives $\zeta=B_{1,2}^{*} \zeta^{*}=B_{1,2}^{*} B_{1,2} \zeta$, and therefore we have to require $B_{1,2}^{*} B_{1,2}=1$ for consistency.
+
+
+(p) On the other hand, this is not always satisfied. Show that
+\be \label{BB}
+B_{1}^{*} B_{1}=(-1)^{\frac{k(k+1)}{2}}, \quad B_{2}^{*} B_{2}=(-1)^{\frac{k(k-1)}{2}}
+\ee
+These relations illustrate that a Majorana condition for Dirac spinors is not always possible.
+
+Let us finally turn to Weyl spinors. In order to impose a Majorana condition on a Weyl spinor, in addition to \eqref{BB} also the Weyl representation has to be conjugate to itself. (This is also called a Weyl condition.)
+
+(q) Determine the space-time dimensions in which a Majorana and a Weyl condition can be imposed simultaneously.
+
+
+\section{Type II superstring spectrum}
+Consider the type II superstring in the RNS-formalism in the Minkowski space. After performing the GSO projections leading to type IIA or type IIB, the spectrum is supersymmetric. In both cases, write down and count all physical states in the NS-NS, NS-R, R-NS, and R-R sectors
+
+(i) at the massless level,
+
+(ii) at the first massive level.
+
+(iii) For each state, determine whether it is a space-time boson or space-time fermion. Make sure that there is an equal number of bosons and fermions.
+
+\end{document}

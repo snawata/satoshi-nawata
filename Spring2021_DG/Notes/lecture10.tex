@@ -1,0 +1,298 @@
+\documentclass[geometry-lectures-21.tex]{subfiles}
+
+\begin{document}
+
+
+
+
+\subsection{Principal $G$-bundles}
+
+We have studied vector bundles where a fiber is a vector space. We can further generalize it to a \textbf{fiber bundle} where a fiber is a general manifold $F$ and a transition function is given by a diffeomorphism of $F$. Among fiber bundles, principal $G$-bundles play an important role in physics.
+
+
+
+
+\bdefn[Principal $G$-bundle]\index{principal $G$-bundle}
+ Let $G$ be a Lie group, and $M$ a manifold. A \term{principal $G$-bundle} is a smooth manifold $P$ with a projection $\pi: P \to M$ such that a fiber is $\pi^{-1}(\{x\}) \cong G$ for each $x \in M$.
+ More precisely, we are given an open cover $\{U_\alpha\}$ of $M$ and diffeomorphisms
+ \[
+  \begin{tikzcd}
+     \pi^{-1}(U) \ar[r, "t"] \ar[d, "\pi"] & U \times G \ar[dl, "p_1"]\\
+     U
+    \end{tikzcd} \]
+such that the transition functions
+ \[
+  t_\alpha \circ t_\beta^{-1}: (U_\alpha \cap U_\beta) \times G \to (U_\alpha \cap U_\beta) \times G
+ \]
+ is of the form
+ \[
+  (x, g) \mapsto (x, t_{\alpha\beta}(x) \cdot g)
+ \]
+ for some $t_{\alpha\beta}: U_\alpha \cap U_\beta \to G$ where $G$ is called the \term{structure group}.
+\edefn
+
+For $g\in G$ we can define the right action $R_g$ on the total space $P$
+$$
+R_gP \to P; u\mapsto ug
+$$
+where each fiber onto itself.
+
+Given a principle $G$-bundle and a representation $\rho:G\to \mathfrak{gl}(V)$ for a vector space $V$, we can construct \term{associated vector bundle}
+$$
+E=P\times_\rho V
+$$
+as follow. Let us consider the direct product $P\times V$ and $G$ action
+$$
+(u,y)\mapsto (us,\rho(s)^{-1}y) \qquad \textrm{for}  \quad s\in G
+$$
+We define the associated bundle as the quotient space $P\times_\rho V:=(P\times V)/G$. Conversely, given a $G$-bundle $E\to M$ with fiber $V$, there is a canonical way of producing a principal $G$-bundle by using transition functions.
+
+
+\subsection{Connections and curvatures}
+In Riemannian geometry \S\ref{sec:Riemann}, we have learned Levi-Civita connections and Riemann curvature. Even in vector bundles and principal $G$-bundles, we can introduce connections and curvatures.
+
+\bdefn[Connection]\index{connection}
+ A \term{connection} \index{$\nabla$} in a vector bundle $\pi:E\to M$ is a bilinear map
+ $$\nabla:\mathfrak{X}(M)\times \Gamma(E) \to \Gamma(E);(X,s)\mapsto \nabla_X s$$
+ satisfying
+ \begin{enumerate}
+  \item $ \nabla_{fX}(s) = f\nabla_{X}(s) $
+
+  \item Leibnitz property: $ \nabla_X (fs) = (X f) s + f (\nabla_X s)$
+ \end{enumerate}
+ for all $s \in \Gamma(E)$ and $f \in C^\infty(M)$.
+\edefn
+
+If a vector bundle $E$ has a metric $g$, a connection $\nabla$ is \term{compatible} with the metric if
+$$
+X g(s_1,s_2)= g(\nabla_X s_1,s_2)+g( s_1,\nabla_X s_2)
+$$
+for any $X\in \mathfrak{X}(M)$ and $s_1,s_2 \in \Gamma(E)$.
+
+\bdefn[Curvature]\index{Curvature}
+ A \term{curvature} \index{$\nabla$} in a vector bundle $\pi:E\to M$ is a trilinear map
+ $$F:\mathfrak{X}(M)\times \mathfrak{X}(M)\times \Gamma(E) \to \Gamma(E);(X,Y,s)\mapsto F(X,Y) s$$
+ defined by
+ $$
+ F(X,Y)s=\frac12\left[ \nabla_X\nabla_Y-\nabla_Y\nabla_X-\nabla_{[X,Y]}\right]s~.
+ $$
+ It has the following properties
+  \begin{enumerate}
+  \item $ F(X,Y)s =-F(Y,X)s $
+  \item $F(fX,gY)(hs) = fghF(X,Y)s $ for $f,g,h\in C^\infty(M)$
+ \end{enumerate}
+ for all $s \in \Gamma(E)$.
+\edefn
+
+
+For a certain open subset of $M$, we can take a frame $s_1,\cdots,s_r \in \Gamma(\pi^{-1}(U))$. For any vector field $X$ on $U$, the connection can be locally written as
+$$
+\nabla_X s_j=\sum_{i=1}^rA^i{}_j(X)s_i
+$$
+where $A^i{}_j\in \Omega^1(U,\mathfrak{gl}(r,\bR))$ (1-form on $U$ taking its value on $\mathfrak{gl}(r,\bR)$) is called \term{connection form}. We now look at the curvature $R$ from differential forms.
+$$
+F(X,Y)s_j=\sum_{i=1}^r F^i{}_j (X,Y)s_i
+$$
+where $F^i{}_j\in \Omega^2(U,\mathfrak{gl}(r,\bR))$ (2-form on $U$ taking its value on $\mathfrak{gl}(r,\bR)$) is called \term{curvature form}. They are related by the following equation:
+$$
+F=dA+A\wedge A~.
+$$
+The curvature form satisfies the Bianchi identity
+\be\label{Bianchi}
+dF-F\wedge A+A\wedge F=0~.
+\ee
+
+More explicitly, in physics, we write a section $s=\sum_{j=1}^rv^j(x)s_j$ on $U$ so that
+$$
+\nabla_{\frac{\partial}{\partial x^\mu}} s=\sum_{i=1}^r\left[\frac{\partial}{\partial x^\mu} v^i(x) + (A_{\mu}){}^i{}_j v^j(x) \right]s_i
+$$
+Also, the curvature can be written in terms of local coordinates
+$$
+F\left(\frac{\partial}{\partial x^\mu},\frac{\partial}{\partial x^\nu}\right)=F_{\mu\nu}=\frac{\partial A_\nu}{\partial x^\mu}-\frac{\partial A_\mu}{\partial x^\nu} +[ A_\mu, A_\nu]~.
+$$
+In the case of Maxwell $\U(1)$ theory, the last term vanishes because it is a commutative group.
+
+
+
+It is useful to know how the connection transforms under a change of local trivialization. Given a transition function $g_{\alpha\beta}: U_\alpha \cap U_\beta \to GL(r,\bR)$, the gauge fields on $U_\alpha$ and $U_\beta$ are related by
+\be\label{gauge-trans}
+ A_\beta = g_{\alpha \beta}^{-1} A_\alpha g_{\alpha\beta} + g_{\alpha\beta}^{-1} d (g_{\alpha\beta})~,
+\ee
+and the curvature forms are related by
+\be\label{gauge-trans2}
+F_\beta=g_{\alpha \beta}^{-1} F_\alpha g_{\alpha\beta}
+\ee
+
+In a similar manner, one can construct connections and curvatures for $G$-bundle where we have to replace the first term of \eqref{gauge-trans} by the adjoint representation of $G$ on $\mathfrak{g}$, and the second of \eqref{gauge-trans} by the Maurer--Cartan form \eqref{MC-form}.
+
+In particular, for the Maxwell theory, the gauge transformation can be written as $g_{\alpha\beta}=e^{i\lambda_{\alpha\beta}(x)}$ so that
+$$
+A_\beta=A_\alpha + i d\lambda_{\alpha\beta}
+$$
+and the curvature form stays invariant.
+
+
+
+\subsubsection*{Parallel transport and holonomy group}
+Given a connection $\nabla$ on a vector bundle $E$, on can define \term{horizontal} directions in the space $\Gamma(E)$ of sections. A section $s\in \Gamma(E)$ is \term{parallel} along a path $\gamma:I\to (M)$
+$$
+\nabla_{\dot \gamma(t)} s=0 \quad \textrm{for} \quad t\in I~.
+$$
+In terms of local coordinates, it can be written as
+$$
+\frac{ds_i}{dt}+\sum_{j=1}^r (A_\mu)^j{}_i \frac{dx^\mu}{dt} s_j=0~.
+$$
+A theorem of ordinary differential equations tells us that given an initial data $s(t=0)\in E_{\gamma(0)}$, one can do parallel transform along $\gamma(t)$ so that we have a map
+$$
+E_{\gamma(0)} \ni s(t=0) \to s(t=1)\in E_{\gamma(1)}~.
+$$
+In particular, if we consider a curve $p=\gamma(0)=\gamma(1)$, we obtain a map $\tau_\gamma:E_p\to E_p$. For given two curves $\gamma_1$ and $\gamma_2$, we can have a multiplication
+$$
+\tau_{\gamma_1\circ \gamma_2}=\tau_{\gamma_1}\circ \tau_{\gamma_2}
+$$
+and the inverse is defined by
+$$
+\tau_{\gamma^{-1}}=\tau_{\gamma}^{-1}~,
+$$
+so that it forms a group called \term{holonomy group}. In the case of $\U(1)$, this is the origin of the \term{Aharonov-Bohm effect}.
+
+\begin{figure}[ht]\centering
+\includegraphics[width=10cm]{pictures/abm}
+\end{figure}
+\begin{figure}[ht]\centering
+\includegraphics[width=7cm]{pictures/Aharonov-Bohm}
+\caption{The Aharonov-Bohm solenoid effect takes place when the wave function of a charged particle passing around a long solenoid experiences a phase shift as a result of the enclosed magnetic field, despite the magnetic field being negligible in particle trajectories.}
+\end{figure}
+
+\subsubsection*{Levi-Civita connections}
+We can consider the tangent bundle $TM$ as a vector bundle and its metric $g$ is indeed a Riemannian metric. As we have seen in \S\ref{sec:Riemann}, there is the unique natural connection called \term{Levi-Civita connections} in $TM$. Let $X_1, \cdots, X_n$ be an orthonormal frame vector field on an open set $U\subset M$ and their dual $e^1,\cdots,e^n\in \Omega^1(U)$. For the Levi-Civita connection $\nabla$, we can write
+\begin{align}
+\nabla_{X_j}X_i&=\sum_k\mathbf{\Gamma}^k_{ij}X_k~,\cr
+R(X_i,X_j)X_k&=\sum_{l}\mathbf{R}^{l}{}_{kij}X_l~.\nonumber
+\end{align}
+
+We can define connection one-form and curvature two-form taking their values on $\mathfrak{so}(n,\bR)$:
+\be\label{Riemann-2-form}
+\omega^k{}_j=\sum_k\mathbf{\Gamma}^k_{ij} e^i~, \quad \Omega^l_i=\sum_{l}\mathbf{R}^{l}{}_{ijk} e^j\wedge e^k~.
+\ee
+They satisfy the following conditions
+ \begin{align}
+de^i &=-\sum_j \omega^{i}{}_j\wedge e^j~,\cr
+\Omega^i{}_j&=d\omega^i{}_j+\omega^i{}_k\wedge \omega^k{}_j~.\nonumber
+ \end{align}
+
+
+
+
+
+
+
+
+\subsubsection*{Ehresmann connections}
+Similarly, one can construct the theory of connections on principal $G$-bundles, which are called \term{Ehresmann connections}. In principle, an Ehresmann connection determines the horizontal direction of a principal $G$-bundle.
+
+
+
+\bdefn[Ehresmann connection]\index{Ehresmann}
+ A \term{Ehresmann connection} $A$ on a principle $G$-bundle $\pi:P\to M$ is a one-form taking its value on $\frakg$, which satisfies the following conditions:
+  \begin{enumerate}
+  \item Given $X\in \frakg$, there is the corresponding vector field $\overline X$ on $P$
+  $$
+  \overline X_u=\frac{d}{dt}(u\cdot \exp t X)\Big|_u \quad \textrm{for} \quad u\in P~.
+  $$
+ Then, $A$ is subject to
+ $$
+ A(\overline X)=X \in \frakg~.
+ $$
+  \item For ${}^\forall g\in G$, under the right action $R_g$, it behaves as
+  $$ R^\ast_g(A)=\textrm{ad}(g^{-1}) A~.$$
+  In other words,
+  $$ A_{ug}(R_g(Y))=\textrm{ad}(g^{-1})(A_u(Y)) ~, \quad \textrm{for} \quad Y\in \frakg ~.  $$
+ \end{enumerate}
+\edefn
+
+For an open set $U_\alpha\subset M$, there is a local trivialization $\psi_{U_\alpha}: \pi^{-1}(U_\alpha)\to U_\alpha\times G$. Then, we have a section on $\pi^{-1}(U_\alpha)$
+$$ \sigma_{U_\alpha}:U_\alpha\to P; x\mapsto \psi_{U_\alpha}^{-1}(x,e)~.$$
+Then, if we define $A_\alpha=\sigma^*_{U_\alpha}(A)$, we have cocycle condition
+$$
+ A_\beta = g_{\alpha \beta}^{-1} A_\alpha g_{\alpha\beta} + g_{\alpha\beta}^{-1} d (g_{\alpha\beta})~, \quad \textrm{for} \quad U_\alpha\cap U_\beta~,
+$$
+where $g_{\alpha\beta}$ is the transition function on $U_\alpha\cap U_\beta$.
+
+We denote the space of Ehresmann connections on a principal $G$-bundle $P$ by $\mathscr{A}_P$. The space $\mathscr{G}_P$ of gauge transformations is the section $\Gamma(M,G_P)$ of the bundle $G_P:=P\times_{Ad}G$. A gauge transformation $g\in \mathscr{G}_P$ acts on the space of connection $\mathscr{A}_P$ via
+$$
+\mathscr{G}_P\times \mathscr{A}_P\to \mathscr{A}_P; (g,A)\mapsto g^*(A)=\{g^*(A)_U,g^*(A)_V, \cdots\}
+$$
+where
+$$
+g^*(A)_U=g_U^{-1}d(g_U)+g_U^{-1}Ag_U~.
+$$
+If $A'=g^*(A)$ for $A,A'\in \mathscr{A}_P$, they are physically identical, and we denote the space of physically different connections by
+$$
+\mathscr{B}_P:=\mathscr{A}_P/\mathscr{G}_P~.
+$$
+
+
+
+
+
+
+\subsection{Yang-Mills theory}
+Now we can describe non-Abelian gauge theory called \textbf{Yang-Mills theory} \cite{yang1954conservation}.
+Let us consider a principal $G$-bundle or its associated $G$-bundle. In addition, let $A$ be a connection on it and $F$ be its curvature.
+The classical \term{Yang-Mills action} can be written as
+\begin{align}
+ S_{YM}[A] &= \frac{1}{2g^2_{YM}} \int_M \Tr F\wedge \ast F\cr
+ &= \frac{1}{2g^2_{YM}} \int_M \Tr \left(F_{\mu\nu} F^{\mu\nu}\right) \;\sqrt{g} d^d x,
+\end{align}
+where the curvature is 2-form taking its value on the Lie algebra $\mathfrak{g}$. The action is almost the same as that of the Maxwell theory. However, due to the gauge transformation \eqref{gauge-trans2} of the curvature form,
+we need to take $\Tr$ over Lie algebra $\mathfrak{g}$ in order for the action to be gauge-invariant.
+The parameter $g_{YM}$ is called the Yang-Mills coupling constant. For the flat space, we have $\sqrt{g} = 1$ so that we will drop this term.
+
+For example, if $G = \SU(N)$, we can choose the basis of the Lie algebra $\mathfrak{su}(N)$
+\[
+ \Tr(T_a T_b) = \frac{1}{2} \delta_{ab},
+\]
+and on a local $U \subseteq M$, we have
+\[
+ S_{YM}[A] = \frac{1}{4 g^2_{YM}} \int F_{\mu\nu}^a F^{b, \mu\nu} \delta_{ab} \; d^d x,
+\]
+with $F_{\mu\nu}=\sum_a F_{\mu\nu}^a T_a$ and
+\[
+ F_{\mu\nu}^a = \partial_\mu A^a_\nu - \partial_\nu A_\mu^a + f_{bc}{}^a A_\mu^b A_\nu^c~.
+\]
+Thus, Yang-Mills theory is the natural generalization of Maxwell theory to the non-Abelian case.
+
+
+
+At the level of the classical field equations, if we vary our connection by $A_\mu \mapsto A_\mu + \delta a_\mu$, where $\delta a$ is a matrix-valued $1$-form, then we have
+\[
+ \delta F_{\mu\nu} = \partial_{[\mu} \delta a_{\nu]} + [A_\mu, \delta a_\nu].
+\]
+The equation of motion can be obtained by taking the variation of the Yang-Mills action
+\[
+\delta S_{YM}[A] = \frac{1}{2g_{YM}^2} \int \Tr(\delta F_{\mu\nu}, F^{\mu\nu}) \;d^d x = \frac{1}{2g_{YM}^2} \int \Tr(\nabla_\mu \delta a_\nu, F^{\mu\nu})\;d^d x = 0.
+\]
+Therefore, the \term{Yang--Mills equation} is
+\[
+ \nabla^\mu F_{\mu\nu}: = \partial^\mu F_{\mu\nu} + [A^\mu, F_{\mu\nu}] = 0~,
+\]
+or we can write it without coordinates
+$$
+\delta_A F:=\ast d_A\ast F=\ast (d+A)\ast F=0~.
+$$
+Recall we also have the Bianchi identity \eqref{Bianchi} which can be expressed in terms of a local coordinate
+\[
+ \nabla_\mu F_{\nu\lambda} + \nabla_\nu F_{\lambda\mu} + \nabla_\lambda F_{\mu\nu} = 0~.
+\]
+\term{Unlike} Maxwell's equations, these are non-linear PDE's for $A$. We no longer have the principle of superposition, which is similar to Einstein's equation \eqref{Einstein-eq}.
+
+The Yang-Mills path integral is expressed by
+$$
+Z_{YM}=\int_{\mathscr{A}/\mathscr{G}} DA~ \exp({iS_{YM}[A]})~.
+$$
+You can try to solve one of the seven Millennium Prize Problems: quantum Yang-Mills theory exists on $\mathbb {R} ^{4}$ and has a mass gap \cite{jaffe2006quantum}.
+
+
+
+\end{document}

@@ -1,0 +1,293 @@
+\documentclass[String-lecture-21.tex]{subfiles}
+
+\begin{document}\section{Heterotic string theories}\label{sec:Heterotic}
+
+
+We are ready to learn \textbf{Heterotic string theories} \cite{Gross:1984dd,Gross:1985fr,Gross:1985rr}. Heterotic string is a hybrid construction of the left-moving sector of the 26-dimensional bosonic string and the right-moving sector of 10-dimensional superstring. The 16 extra bosons of the left-movers are compactified on particular 16-dimensional tori, leading to $\SO(32)$ or $E_8\times E_8$. Since 16-dimensional tori have very special properties, we can also describe the left-movers in terms of 32 free fermions whose current algebra is associated to either  $\SO(32)$ or $E_8\times E_8$ with level $k=1$.  This hybridization of two different kinds of modes has been referred to as \textbf{heterosis}.
+
+
+\subsection{Bosonic construction}
+
+\subsubsection*{Toroidal compactifications}
+We have learned the $S^1$ compactification in \S\ref{sec:Tdual} so that we now generalize our analysis to the compactification of bosonic string theory on a $D$-dimensional torus $T^D$. The resulting theory is effectively $(26-D)$-dimensional. The torus is defined by identifying points in the $D$-dimensional internal space as follows (compact dimensions are labeled with capital letters):
+\be \label {torusequiv}
+	X^I \sim X^I + 2 \pi e^I_i w^i =X^I+2\pi W^I~, \qquad \textrm{for} \quad w^i \in \bZ~.
+	\ee
+The $\mathbf{e}_i= \{e_i^I\}$  ($i= 1\cdots D$) are $D$ linear independent vectors called \textbf{vielbein} which generate a $D$-dimensional lattice $\Lambda$. In addition, the vielbein brings the metric into the standard Euclidean form:
+\begin{align}
+	G_{ij} =\bfe_i\cdot\bfe_j= e^I_i e^J_j \delta_{IJ}, \qquad 	X^I \equiv e^I_i X^i\end{align}
+The torus on which we compactify is obtained by dividing $\bR^D$ by $\Lambda$:
+\[T^D = \frac{{\bR}^D }{2\pi \Lambda}~.\]
+The momentum $p^I$ conjugate to the coordinates $X^I$ on the torus
+ is quantized as $\bfp \cdot \bfW \in\bZ$.	Therefore, the momentum $p$ takes its value on the dual lattice $\Lambda^*$
+\[	\Lambda^* \equiv \{ e^{*Ii} n_i; \quad n_i \in \bZ \}, \qquad
+		 G^{i j}=\bfe^{*i}\cdot\bfe^{*j}= e_I^{*i} e_J^{*j}\delta^{IJ}. \]
+
+\begin{figure}[ht]\centering
+\includegraphics[width=12cm]{picture/lattice}
+\caption{Lattice and its dual lattice}
+\end{figure}
+The condition which a closed string in the compact directions $X ^I(z,\bz)=X_R^I(z)+\overline X_L^I(\bz)$ obey is
+\[
+X ^I( \s+2\pi,\t)=X ^I( \s,\t)+2\pi W^I
+\]
+so that $W^I$ are analogues of winding numbers. We express the mode expansion for the compact direction as follows:
+\begin{align}
+X_R^I(z)&=x^I-i\sqrt{\frac{\ap}{2}}p_R^I
+\ln z+i\sqrt{\frac{\ap}{2}}\sum_{m\neq0}\frac{\alpha^I_m}{mz^m}, \nonumber\\
+\overline X_L^I(\bz)&={\overline x}^I-i\sqrt{\frac{\ap}{2}}{p^I_L}
+\ln \bz+i\sqrt{\frac{\ap}{2}}\sum_{m\neq0}\frac{{\overline\alpha}^I_m}{m\bz^m}.\nonumber
+\end{align}
+where the zero modes are
+\begin{align}
+\bfp_L := p^I_L &=\frac{1}{\sqrt{2}} \left[\sqrt{\a'}p^I + \frac {W^I}{\sqrt{\a'}}\right] =\frac{1}{\sqrt{2}}\left[ \sqrt{\ap}e^{* I i} n_i + \frac {e^I_i} {\sqrt{\ap}}  w^i\right]~,\cr
+\bfp_R := p^I_R &=\frac{1}{\sqrt{2}} \left[\sqrt{\a'}p^I - \frac {W^I}{\sqrt{\a'}}\right] =\frac{1}{\sqrt{2}}\left[ \sqrt{\ap}e^{* I i} n_i - \frac{e^I_i} {\sqrt{\ap}}  w^i\right]~.
+\end{align}
+The mass formula and the level matching condition are now
+\begin{align}
+\ap M^2&=2(N+\overline N-2) + (\ap p_Ip^I+\frac1{\ap} W_IW^I)\cr
+&=2(N+\overline N-2) +(\ap n_in_jG^{ij}+\frac1{\ap} w^iw^jG_{ij})\cr
+N-\overline N&=p_I W^I=n_iw^i
+\end{align}
+As we have seen before,  the expressions for $p_L$ and $p_R$ suggest \textbf{T-duality} between the
+winding number $W^I$ and the momentum $p^I$.  In fact, \textbf{T-duality} is equivalence between a pair of compactification lattices $\bfe_i$ and
+$\bfe'_i$ that are related as $\sqrt{\ap}\bfe'_i = \frac{\bfe^{*i}}{\sqrt{\ap}}$.  These two
+compactifications give the same spectrum since
+their allowed values of the momenta are related as
+\be \label {tdualp}
+		\bfp_L \leftrightarrow \bfp_L';\qquad \bfp_R \leftrightarrow -\bfp_R'\ee
+by interchanging the labels $n_i$ and $w^i$.
+
+
+Now let us combine the zero modes into the $(D+D)$-dimensional vectors $\bfP=(\bfp_L,\bfp_R)$.
+This construction treats $\Lambda$ and $\Lambda^*$ on equal footing
+as
+\[
+\bfP=\bfE^{* i} n_i + \bfE_j w^j,
+\]
+where
+\[
+	\bfE_j = \frac1{\sqrt{\ap}}\left( \bfe_j,  - \bfe_j  \right)~, \quad
+	\bfE^{* i} = \sqrt{\ap}\left(\bfe^{*i}, \bfe^{*i}  \right).
+\]
+Note that the length of the lattice is normalized by the string length $\sqrt{\ap}=\ell_s$.
+Hence $\bfP$ takes value in a $(D+D)$-dimensional lattice $\G_{D,D}$
+spanned by $\{\bfE^{* i}\}$ and $\{\bfE_j\}$  that satisfies the following properties:
+\begin{itemize}\setlength{\parskip}{-0.1cm}
+\item \textbf{Lorentzian} if the signature of the metric $G$ is $((+1)^D,(-1)^D)$,
+\item \textbf{integral} if $v\cdot w \in \bZ$ for all $v,w\in \G_{D,D}$,
+\item \textbf{even} if $\G_{D,D}$ is integral and $v^2$ is even for all $v\in\G_{D,D}$,
+\item \textbf{self-dual} if $\G_{D,D} =(\G_{D,D})^*$,
+\item \textbf{unimodular} if $\textrm{Vol}(\G_{D,D}) =  | \det G| = 1$.
+\end{itemize}
+In fact, the metric of this lattice is defined by
+\[
+\bfP\cdot\bfP'=(\bfp_L\cdot\bfp'_L-\bfp_R\cdot\bfp'_R)=n_iw'^{i}+n'_iw^{i}
+\]
+so that it is Lorentzian. Because of ${\bf P\cdot P}\in2\bZ$, it is even. The self-dual property will be shown in Homework. The unimodular property $\textrm{Vol}(\G_{D,D})=\textrm{Vol}(\G_{D,D})=1$ immediately follows from  the self-dual property.
+The lattice $\G_{D,D}$  in the torus compactification of the string is called \textbf{Narain lattice}.
+
+
+ The partition function of the bosonic string compactified on a torus $T^D$ is easy to write down:
+\[	Z^{\textrm{bos}}_{\G_{D,D}} = \frac 1 {\t_2^{(24-D)/2}| {\eta (q)}|^{48}}
+		\sum_{(\bfp_R, \bfp_L) \in \G_{D,D}} q^{\frac{1}{2} \bfp_R^2}
+								\bar q^{\frac{1}{2} \bfp_L^2}
+\]
+where $| {\eta (q)}|^{48}$ is the bosonic oscillator contribution and $\t_2^{(24-D)/2}$ comes from
+the integral of non-compact momenta.
+This is easy to generalize to Type II string compactified on $T^D$
+\[
+Z^{\textrm{Type II}}_{\G_{D,D}} = \frac 1 {\t_2^{(8-D)/2}| {\eta (q)}|^{24}} \frac14\Big| -\vartheta_2^4(\tau) + \vartheta_3^4(\tau) - \vartheta_4^4(\tau)\Big|^2
+		\sum_{(\bfp_R, \bfp_L) \in \G_{D,D}} q^{\frac{1}{2} \bfp_R^2}
+								\bar q^{\frac{1}{2} \bfp_L^2}
+\]
+which vanishes by virtue of the Jacobi-Riemann identity.
+
+\subsubsection*{Heterotic strings}\label{sec:Heterotic-bosonic}
+
+After we learn about toroidal compactifications, we are ready to introduce the $D=10$ Heterotic string.
+As mentioned at the beginning, Heterotic string is a combination of the left-moving sector of the 26-dimensional bosonic string and the right-moving sector of the 10-dimensional superstring. The left-moving bosonic string is compactified on a 16-dimensional torus so that the momenta of the additional chiral bosons $X^I(\bar z)$ takes value on 16-dimensional lattice  $\G_{16}$, \textbf{i.e} $\bfp_L\in\G_{16}$.
+Hence, the partition function of Heterotic string can be written as
+\begin{equation}\label{het-pf}
+	Z^{\textrm{het}}(\tau )  = \frac 1 {\t_2^{4}\eta (q)^{12}\eta (\bar q)^{24}} \Big( -\vartheta_2^4(\tau) + \vartheta_3^4(\tau) - \vartheta_4^4(\tau)\Big)
+		\sum_{\bfp_L \in \G_{16}} 	\bar q^{\frac{1}{2} \bfp_L^2}
+\end{equation}
+Here $\eta (q)^{8}\eta (\bar q)^{24}$ is the bosonic oscillator contribution, the $\t_2^{4}$ factor arises from the zero modes of the noncompact transverse coordinates and $\vartheta^4_i/\eta (q)^{4}$ comes from the world-sheet fermions. The most interesting part of this partition function is the lattice sum
+\[
+P(\tau):=\sum_{\bfp_L \in \G_{16}} 	\bar q^{\frac{1}{2} \bfp_L^2}
+\]
+Since the partition function \eqref{het-pf} should be invariant under the modular transformation $\SL(2,\bZ)$, the modular transformation \eqref{S-T} of $\eta$ and $\vartheta_i$ tell us that
+\[
+T:P(\t+1)=P(\t)~,\qquad S:P(-1/\t)=\t^8P(\t)~.
+\]
+The invariance under T-transformation clearly demands that $\bfp_L^2\in 2\bZ$ so that $\G_{16}$ must be \textbf{even}.
+ For the $S$-transformation, we
+make use of the Poisson resummation formula
+\[	\sum_{\bfp\in\Lambda}e^{-\pi\a(\bfp+\bfx)^2+2\pi i \bfy\cdot (\bfp+\bfx)}=\frac{1}{\textrm{Vol}(\Lambda) \a^{\dim \Lambda /2}}\sum_{\bfq\in\Lambda^*}e^{-2\pi i \bfq\cdot \bfx-\frac{\pi}{\a}(\bfy+\bfq)^2}	\]
+which amounts to
+\[
+P(-1/\t)=\frac{\t^8}{\textrm{Vol}(\Lambda)}\sum_{ \bfp_L\in(\G_{16})^*} 	\bar q^{\frac{1}{2} \bfp_L^2}~.
+\]
+This requires that the lattice $\G_{16}$ is \textbf{self-dual}, \textit{i.e.} $(\G_{16})^*=\G_{16}$ so that  $\textrm{Vol}(\Lambda)=1$.
+
+
+
+It turns out that there are only two even self-dual Euclidean lattices in 16 dimensions
+\begin{itemize}\setlength{\parskip}{-0.1cm}
+\item the root lattice of $E_8\times E_8$
+\item the weight lattice of $\Spin(32)/\bZ_2$
+\end{itemize}
+The metric $G_{ij}$ of the root lattice of $E_8$ is the Cartan matrix of $E_8$ \footnote{Unfortunately, we do not have time to talk about exceptional Lie algebras or classification of semi-simple Lie algebras \cite{kirillov2008introduction}. In particular, if you want to get some intuition of weight and root lattices, see \cite[Fig 7.3, Fig 8.1, Fig 8.2]{kirillov2008introduction} for $A_2$. If you want to understand the structure $E_8$ related to string theory, we refer to \cite[\S 6]{GSW}.}:
+\begin{equation}\nonumber
+\left (
+\begin{smallmatrix}
+ 2 & -1 &  0 &  0 &  0 &  0 &  0 & 0 \\
+-1 &  2 & -1&  0 &  0 &  0 &  0 & 0 \\
+ 0 & -1 &  2 & -1 &  0 &  0 &  0 & 0 \\
+ 0 &  0 & -1 &  2 & -1 &  0 &  0 & 0 \\
+ 0 &  0 &  0 & -1 &  2 & -1 &  0 & -1 \\
+ 0 &  0 &  0 &  0 & -1 &  2 & -1 & 0 \\
+ 0 &  0 &  0 &  0 &  0 & -1 &  2 & 0 \\
+ 0 &  0 & 0 &  0 &  -1 &  0 &  0 & 2
+\end{smallmatrix}\right ). 		\qquad\qquad	 \raisebox{-.5cm}{\includegraphics[width=5cm]{picture/Dynkin_diagram_E8}}
+\end{equation}
+
+
+Let us read off massless fields in Heterotic string theory more carefully.
+As usual, there is the tachyonic vacuum of the bosonic string. At the massless level, we have oscillator excitations $\overline \a_{-1}^\mu|0\rangle$, $\overline \a_{-1}^I|0\rangle$ in the left-moving sector. The former transform like spacetime vectors while the internal oscillator excitations correspond to the left-moving part of the Abelian $\U(1)^{16}$ gauge boson. They form the \textbf{Cartan subalgebra} of $E_8 \times E_8$ or $\SO(32)$. Both the root lattice of $E_8\times E_8$ and the weight lattice of $\Spin(32)/\bZ_2$  contain 480 vectors of (length)$^2=2$ and generate the 496-dimensional non-Abelian gauge bosons of these groups. Remarkably, although Heterotic strings are closed strings, gauge fields show up thanks to the extra 16-dimensional tours! This can be also understood as a novel \textbf{stringy effect} and gauge groups are restricted only to either $E_8 \times E_8$ or $\SO(32)$ in order for the theory to be consistent. Moreover, we have seen that $\SO(32)$ gauge group appears in Type I string theory. As we will see in \S\ref{sec:dualities}, this is not coincidental because Type I and Heterotic $\SO(32)$ are related by \textbf{S-duality}.
+
+
+
+As a result, the massless spectra of Heterotic string are as follows
+
+\vspace{.3cm}
+\noindent $\bullet$ Gravitons, $B$-fields, dilaton in $D=10$
+\[
+\psi^\mu_{-\frac12}|0\rangle_{\textrm{NS}}\otimes\overline\alpha_{-1}^\nu|0\rangle
+\]
+$\bullet$  their supersymmetric partners, gravitino and dilatino
+\[
+|\mathbf{s}\rangle_{\textrm{R}}\otimes\overline\alpha_{-1}^\nu|0\rangle
+\]
+$\bullet$ 496 gauge bosons of  $E_8\times E_8$ or $\SO(32)$
+\[
+\psi^\mu_{-\frac12}|0\rangle_{\textrm{NS}}\otimes\overline\alpha_{-1}^I|0\rangle~,\qquad \psi^\mu_{-\frac12}|0\rangle_{\textrm{NS}}\otimes|\bfp_L^2=2\rangle
+\]
+$\bullet$  496 supersymmetric partners, gaugini
+\[
+|\mathbf{s}\rangle_{\textrm{R}}\otimes\overline\alpha_{-1}^I|0\rangle~,\qquad |\mathbf{s}\rangle_{\textrm{R}}\otimes|\bfp_L^2=2\rangle
+\]
+Indeed, Heterotic string theory is $D=10$ $\cN=1$ supergravity coupled to $D=10$ $\cN=1$  $E_8\times E_8$ or $\SO(32)$  super-Yang-Mills theory so that it has 16 real supersymmetric charges.
+
+
+\subsection{Fermionic construction}
+
+The 16 bosonic fields compactified on the self-dual lattice can be described by fermionic fields, which is called \textbf{fermionization}. Therefore, we will describe fermionic construction of Heterotic string theory next.
+
+The world-sheet action of Heterotic string theory is given by
+\begin{align}
+ S^{\textrm{m}} &= \frac{1}{4\pi} \int d^2 z\ \Big( \frac{2}{\alpha'} \partial X^\mu  \overline\partial X_\mu+\psi^\mu\overline\partial\psi_\mu+\overline \lambda^A\partial\overline\lambda_A\Big)\cr
+S^{\textrm{gh}}&=\frac{1}{2\pi}\int d^2z \ (b\overline \partial c+\bar b \partial \bar c+\beta\overline \partial \g)
+\end{align}
+where $\mu$ are 10-dimensional indices and the right-moving sector is supersymmetric. In order for the theory to be Weyl-anomaly free,  the central charge
+\[
+c^{\textrm{tot}}=c^X+c^\psi+c^{bc}+c^{\beta\gamma}+c^{\lambda}=10+\frac52-26+\frac{11}{2}+c^{\lambda}=c^{\lambda}-8
+\]
+should vanish. Since each Majorana-Weyl anti-chiral fermion $\overline\lambda^A$ contributes $\frac14$ to the central charge, we need 32 left-moving fermions $\overline\lambda^A$ in the action.
+
+
+It turns out that  there are two possible boundary conditions on the left-moving
+fermions $\overline\lambda_A$ which give rise to fully consistent string theories. If we impose the same boundary condition to all, it leads to $\SO(32)$ gauge group. On the other hand, if we impose one boundary condition to a half and the other boundary condition to the other half, we obtain $E_8\times E_8$ gauge group.
+
+\subsubsection*{Heterotic $\SO(32)$ (HO)}
+For Heterotic $\SO(32)$, we impose the same boundary condition to all the left-moving fermions as
+\begin{align}
+\overline \lambda^A(t,\sigma+2\pi)=+\overline \lambda^A
+  (t,\sigma) &\qquad\qquad\textrm{ R: periodic
+on cylinder}\cr
+\overline \lambda^A(t,\sigma+2\pi)=-\overline \lambda^A
+  (t,\sigma) &\qquad\qquad\textrm{ NS:
+anti-periodic on cylinder}
+\end{align}
+so that there is a global symmetry $\SO(32)$ that rotates  $\overline\lambda^A$ ($A=1,\ldots,32$). In order for the theory to be consistent, we have to impose GSO projection on the left-moving sector. In HO theory, we pick only states with odd fermionic numbers in NS sector and those with even fermionic number
+\[
+P_{\textrm{NS}}^{\textrm{HO}}:=\frac{1-(-1)^F}{2}
+\]
+whereas we keep only the states with even fermion number
+\[
+P_{\textrm{R}}^{\textrm{HO}}:=\frac{1+(-1)^F}{2}~.
+\]
+In addition, we have to impose the level matching condition
+\be\label{level-matching2}
+N-a=\overline  N-\overline a
+\ee
+where the normal ordering constants in the left-moving sector are
+\[
+{\overline a}_{\textrm{NS}}=\frac{8}{24}+\frac{32}{48}=1~,\qquad {\overline a}_{\textrm{R}}=\frac{8}{24}-\frac{32}{24}=-1~.
+\]
+Here the first term comes from the left-moving bosonic field $\overline X^i$ whereas the second term depends on the boundary condition \eqref{RNS-normalordering} of $\overline\lambda^A$. Hence, the R sector contains only massive states. Contrary to the supersymmetric right-mover,  the Tachyon state $ |0\rangle_{\textrm{NS}}$ in the NS sector is preserved under the GSO projection. However, there is no corresponding state in the right-moving sector so that it does not obey the level matching condition \eqref{level-matching2}.  As a result, the left-moving Tachyon is not included in the spectrum. Then, the first excited states after the GSO projection in the NS sector are
+\begin{align}
+\overline \a^i_{-1} |0\rangle_{\textrm{NS}} \,&,\qquad (\mathbf{8_v},\mathbf{1}) \cr
+\overline \lambda^A_{-1/2} \overline \lambda^B_{-1/2} |0\rangle_{\textrm{NS}}\,&, \qquad  (\mathbf{1},\textbf{adj}) \nonumber
+\end{align}
+where the bold letters are the representations of $\SO(8)\times \SO(32)$. The adjoint representation $\textbf{adj}$ of $\SO(32)$ is the antisymmetric tensor with dimension $32 \times 31/2 = \textbf{496}$. The following table shows the massless spectrum of HO where the first row represents the $D=10$ $\cN=1$ supergravity multiplet whereas the second row shows  $\cN = 1$ gauge multiplet in the adjoint of $\SO(32)$ as we have seen in the bosonic construction.
+\begin{table}[ht] \centering
+\begin{tabular}{ |c|c|c| }
+ \hline
+Left$\backslash $Right & ${\bf 8_v}$ & ${\bf 8_c}$ \\ \hline
+ $ (\mathbf{8_v},\mathbf{1})$ & ${\bf 1} \oplus {\bf 28}  \oplus {\bf 35}$ & ${\bf 8_s}\oplus{\bf 56_c}$ \\
+  & $\phi \ \ B_{\mu\nu} \ \ G_{\mu\nu}$ & $\lambda^+ \ \ \psi^-_m$ \\ \hline
+  $(\mathbf{1},\textbf{496})$ & $\SO(32)$ gauge boson &  $\SO(32)$ gaugini \\
+    & $A^\mu_{[A,B]}$ & $\eta_{[A,B]}$ \\
+ \hline
+\end{tabular}
+\end{table}
+
+\subsubsection*{Heterotic $E_8\times E_8$ (HE)}
+The second Heterotic string theory is obtained by dividing the $\overline \lambda^A$ into two sets of 16 with independent boundary conditions,
+\[
+\overline\lambda^A(t,\sigma+2\pi)=\left\{ \begin{matrix}\e_1 \overline\lambda^A(t,\sigma) & \quad~ A=1,\ldots,16\\ \e_2 \overline\lambda^A(t,\sigma) & \qquad A=17,\ldots,32  \end{matrix}\right.
+\]
+where $\e_i=\pm1$. Therefore, in the left-moving sector,  we need to take the following boundary conditions into account
+\[
+(\textrm{NS}_1,\textrm{NS}_2)~,\quad (\textrm{R}_1,\textrm{NS}_2)~,\quad (\textrm{NS}_1,\textrm{R}_2)~,\quad (\textrm{R}_1,\textrm{R}_2)~.
+\]
+Consequently, the global symmetry is broken to $\SO(16)_1\times\SO(16)_2$. The GSO projection is imposed to the two sets of left-movers independently:
+\[
+P_{\textrm{NS}_i}^{\textrm{HE}}:=\frac{1-(-1)^F}{2}
+~\qquad
+P_{\textrm{R}_i}^{\textrm{HE}}:=\frac{1+(-1)^F}{2}~.
+\]
+We also apply for the level-matching condition \eqref{level-matching2}. The normal ordering constant in each boundary condition is
+\[
+{\overline a}_{\textrm{NS}_1,\textrm{NS}_2}=1~,\qquad {\overline a}_{\textrm{R}_1,\textrm{NS}_2}={\overline a}_{\textrm{NS}_1,\textrm{R}_2}=\frac{8}{24}+\frac{16}{48}-\frac{16}{24}=0~,\qquad {\overline a}_{\textrm{R}_1,\textrm{R}_2}=-1~.
+\]
+Again, $ (\textrm{R}_1,\textrm{R}_2)$ boundary condition has only massive states. Although the Tachyon state $ |0\rangle_{\textrm{NS}_1,\textrm{NS}_2}$ in the NS sector is preserved under the GSO projection, it does not obey the level-matching condition  \eqref{level-matching2} so that it is not present in the spectrum. Then, the massless states are
+\begin{align}
+\overline \a^i_{-1} |0\rangle_{\textrm{NS}_1,\textrm{NS}_2} \,&,\qquad (\mathbf{8_v},\mathbf{1},\mathbf{1}) \cr
+\overline \lambda^A_{-1/2} \overline \lambda^B_{-1/2} |0\rangle_{\textrm{NS}_1,\textrm{NS}_2}\,&, \qquad  (\mathbf{1},\textbf{adj},\mathbf{1}) \ \textrm{or} \ (\mathbf{1},\mathbf{1},\textbf{adj})  \label{massless2}
+\end{align}
+where the bold letters are the representations of $\SO(8)\times \SO(16)_1\times \SO(16)_2$. Note that the GSO projection requires either $1\le A,B\le16$ or $17\le A,B\le32$ in \eqref{massless2}. The adjoint representation of $\SO(16)$ is of $16\times15/2=\textbf{120}$ dimensions.
+
+In $ (\textrm{R}_1,\textrm{NS}_2)$ and $(\textrm{NS}_1,\textrm{R}_2)$, the ground states are massless since the normal ordering constant is zero. Since the 16 $\overline \lambda_0^A$ zero modes form 8 raising and 8 lowering operators
+\[
+\overline \lambda_0^{K\pm} = 2^{-1/2}(\overline \lambda_0^{2K-1} \pm i\overline \lambda_0^{2K})~ , \qquad  K = 1,\ldots, 8 \ \textrm{or} \ K = 9,\ldots, 16~,
+\]
+the $2^{8}=\textbf{256}$-dimensional spinor representation of $\SO(16)$ becomes massless.
+However, the GSO projection picks positive chirality $\textbf{128}$ out of $\textbf{256}=\textbf{128}+\textbf{128}'$ in the Ramond sector. Hence, the ground states are $(\mathbf{1},\textbf{128},\mathbf{1})$ and $(\mathbf{1},\mathbf{1},\textbf{128})$ under $\SO(8)\times \SO(16)_1\times \SO(16)_2$ in $ (\textrm{R}_1,\textrm{NS}_2)$ and $(\textrm{NS}_1,\textrm{R}_2)$, respectively .
+
+All in all, the left-moving massless states form the representations of $\SO(8)\times \SO(16)_1\times \SO(16)_2$
+\[
+\bf (8_v,1,1) + (1,120,1) + (1,1,120) + (1,128,1) + (1,1,128)
+\]
+This spectrum strongly suggests that gauge symmetry is enhanced $\SO(16)\to E_8$ because $E_8$ has dimension $\bf 120+128=248$ which is also the dimension of the adjoint representation $E_8$. In fact, $E_8$ has an $\SO(16)$ subgroup under which the $E_8$ adjoint $\bf 248$ transforms as $\bf 120 + 128$. Hence, the massless spectrum is the  $D=10$ $\cN=1$ supergravity multiplet plus an  $\cN=1$ $E_8 \times E_8$ gauge multiplet. Even in fermionic construction, we reproduce the 496-dimensional adjoint representations of both $\SO(32)$ and $E_8\times E_8$ gauge groups.
+
+
+\subsubsection*{No D-branes in  Heterotic strings}
+We have seen that D-branes are charged to R-R fields in Type II theories. However, there is no R-R field in Heterotic string theories because there is only world-sheet supersymmetry in the right-moving sector. In other words, although the R-R $(p+2)$-form field strength $G$ in Type II theories can be expressed as
+\[
+G=\overline \psi^L \G^{\mu_1\cdots \mu_{p+2}}\psi^R~,
+\]
+there is no $\psi^L$ in Heterotic string theories.
+Hence, there is no D-brane in Heterotic string theories. Consequently, Heterotic string theories are the theories of closed strings\footnote{However, Polchinski argues in \cite{Polchinski:2005bg} that there exist open Heterotic strings.}. However, apart from the fundamental strings, there are extended objects, \textbf{NS5-branes or Heterotic fivebranes}, in Heterotic string theories and they are magnetically charged under the $B$-field.
+\end{document}

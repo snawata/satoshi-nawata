@@ -1,0 +1,373 @@
+\documentclass[String-lecture-21.tex]{subfiles}
+
+\begin{document}
+\section{BRST quantization}\label{sec:BRST}
+
+
+\subsection{Quantization via path integral}\label{sec:ghost}
+
+We have been studying bosonic string theory, but there are several caveats.
+
+\vspace{.3cm}
+\noindent$\bullet$ In the light-cone quantization \eqref{lcg}, Lorentz invariance is not manifest.  Can we quantize strings in a way that is manifestly Lorentz invariant?
+
+\vspace{.3cm}
+
+\noindent$\bullet$ We have seen that the Weyl symmetry of the string sigma model is anomalous \eqref{Weyl-anomaly} on a curved world-sheet. How can the bosonic string be anomaly-free?
+
+
+\vspace{.3cm}
+
+\noindent$\bullet$ Although we learned that string amplitude is expressed via Feynman path integral
+\eqref{amplitude},
+we do not know how to perform this path integral. In particular, the path integral is endowed with huge gauge symmetries, world-sheet diffeomorphism and Weyl symmetry. How can we treat integration measure and fix gauge in the path integral?
+
+\vspace{.3cm}
+
+
+To answer these questions, we will study the quantization procedure via path integral, which is often called \textbf{modern covariant quantization}. This method uses  the analog of the
+Faddeev-Popov method of gauge theories. Furthermore, the physical state condition is imposed via the BRST symmetry.
+
+
+
+
+
+After gauge-fixing the reparametrization and Weyl symmetry, the integral over $h_{ab}$ turns into a path-integral over ghost CFT, which has $c^{g}=-26$. Therefore, in order for the theory to be Weyl anomaly-free, the matter part of the theory has to be a CFT with $c^X=26$.
+
+\subsubsection*{Faddeev-Popov gauge fixing}
+
+
+
+\begin{figure}[ht]\centering
+\includegraphics[width=9cm]{picture/gphase}
+\caption{We need to fix a gauge in the field configuration space. Physically inequivalent configurations are depicted by the dotted line.}\label{fig:gauge}
+\end{figure}
+
+The integration measure can be written as $[\cD X_\mu][\cD h_{ab}]_{g,n}$ where the scalar fields and the metric on 2d surfaces with genus $g$ and $n$ marked points are integrated out. However, if there is no anomaly, this integral has the world-sheet diffeomorphisms and Weyl symmetry under which the field configurations are transformed as
+\bea\label{global}
+X_\mu^\zeta(\wt\s)=&X_\mu^(\s) \cr
+h_{ab}^\zeta(\wt\s)=&e^{2\omega(\s)}  \frac{\partial \s^c}{\partial \wt\s^a}\frac{\partial \s^d}{\partial \wt\s^b} h_{cd}(\s)~,
+\eea
+where $\zeta$ indicates Diff$\times$Weyl.
+These symmetries are redundant and integrating along these directions just gives rise to the volume of the symmetry group. (In Figure \ref{fig:gauge}, the solid arrows schematically draw gauge redundancy and  the dotted line shows physically distinct configurations.) Thus, we need to carry out gauge-fixing. Thankfully, there is a
+standard method to fix gauge, introduced by Faddeev and Popov. A basic idea is to insert the identity of the following form in the path integral:
+\be1= \int {\cal D}\zeta\ \delta(h-\hat{h}{}^{\,\zeta}) \det \left(\frac{\delta \hat{h}{}^{\,\zeta} }{\delta \zeta}\right)\label{dfp}\ee
+where the Jacobian
+factor  $\det \left(\frac{\delta \hat{h}{}^{\,\zeta} }{\delta \zeta}\right)$ is called \textbf{Faddeev-Popov determinant} and we denote it by $\Delta_{FP}[\hat{h}]$. Since ${\cal D}\zeta$ is a gauge-invariant measure, $\Delta_{FP}[\hat{h}]$ is independent of $\zeta$ so that it can be factored out of the integral above. The insertion of this identity into the path integral fixes the metric as $\hat{h}$ because of the delta functional. Because $\int {\cal D}\zeta$ integral only contributes an infinite multiplicative factor, we can discard this integral. Therefore, after Faddeev-Popov gauge fixing, the
+form of the path integral can be schematically written as
+\be Z[\hat{h}] = \int {\cal D}X\ \Delta_{FP}[\hat{h}]\,e^{-S_{\s}[X,\hat{h}]}\label{fullpf}\ee
+We should make several remarks about this procedure.
+
+\vspace{.3cm}
+\noindent$\bullet$ First, the conformal transformations are residual gauge symmetries not fixed above. We have to throw away these residual gauge symmetries in the path integral in order to avoid over-counting. Indeed we will be careful to fix this extra residual gauge freedom when computing string amplitudes.
+
+\vspace{.3cm}
+\noindent$\bullet$ Second, there are caveats related to global properties of the world-sheet Riemann surface $\Sigma_{g,n}$. In fact, metrics on a Riemann surface encode the information of ``shape'' of the Riemann surface $\Sigma_{g,n}$ called \textbf{complex moduli}, which is not accounted for by local gauge transformations $\zeta$. The space which parametrizes ``shape'' of the Riemann surface is called \textbf{moduli space of Riemann surface} $\Sigma_{g,n}$ which is $(6g-6+2n)$-dim$_\bR$:
+\[
+\cM_{g,n}:=\frac{\left[\cD h_{ab}\right]_{g,n}}{\textrm{Diff}\times\textrm{Weyl}}
+\]
+Therefore, the path integral involves integrals over $\cM_{g,n}$ as well. At this moment, we postpone both the issues and will come back to them in \S\ref{sec:amplitude} on string amplitudes.
+
+\vspace{.3cm}
+Now let us take an infinitesimal version of \eqref{global} where
+a Weyl transformation is parameterized by $\omega(\sigma)$ and an
+infinitesimal diffeomorphism by $\delta\sigma^\alpha = \e^\alpha(\sigma)$. Subsequently, the change of the metric under a gauge transformation is read off
+%
+\be\label{gauge-orbit}\delta \hat{h}_{ab}  = 2\omega\hat{h}_{ab} + \nabla_a \e_b + \nabla_b \e_a:=2\wt \omega \hat{h}_{ab} +(P\cdot \e)_{ab}~,\ee
+%
+where we decompose it into
+\begin{align}
+(P\cdot \e)_{ab}&=\nabla_a \e_b + \nabla_b \e_a-h_{ab}(\nabla\cdot \e) \cr
+\wt \omega&=\omega+\frac12 (\nabla\cdot \e) ~.
+\end{align}
+
+Indeed, the operator $P$ maps vectors $\e_a$ to symmetric traceless two-tensors $(P\cdot \e)_{ab}$. Thus, the Faddeev-Popov determinant can be written as
+\[
+\Delta_{FP}[\hat{h}]=\det \frac{\delta(P\cdot \e,\wt\omega)}{\delta(\e,\omega)}=\det \left| \begin{matrix}P&0\\\ast &1
+\end{matrix}
+\right|=\det P~.
+\]
+
+To compute $\det P$, we use \textbf{Faddeev-Popov ghosts}, which can be understood as an infinite-dimensional version of the following integral.
+Given a matrix $M_{ij}$, its determinant can be expressed as a Grassmann integral
+\[
+\int \prod_{i=1}^nd\psi_i d\theta_i  \exp(\theta_i M_{ij}\psi_j) = \det M~.
+\]
+where $\theta, \psi$ are Grassmann variables. Accordingly, we introduce anti-commuting fermionic fields, $c^a$ (ghosts) and $b_{ab}$ (anti-ghost) where $b_{ab}$ transforms as a symmetric traceless tensor  and $c^a$ as a vector. Then, we can express
+\[
+\Delta_{FP}[\hat{h}] =\int{\cal D} c{\cal D} b\, \exp\left(\frac{i}{2\pi}\int d^2\sigma \sqrt{-\hat{h}}\, b^{ab} (P\cdot c)_{ab}\right):= \int{\cal D}c{\cal D}b\ \exp[i S_{g}]~,
+\]
+where the ghost action can be written as
+\be\label{ghost1} S_{g}=\frac{1}{2 \pi} \int d^{2} \sigma \sqrt{-\hat{h}} b^{a b} \nabla_{a} c_{b} ~.\ee
+Even though the $bc$ ghost fields were introduced to fix a gauge, they look like dynamical fields with the action above. Consequently, the Faddeev-Popov gauge fixing results in a fermionic 2d CFT, usually called \textbf{$bc$ ghost CFT}.
+
+Let us make some remarks about the equation of motion of $S_{g} $
+
+\vspace{.3cm}
+\noindent$\bullet$ The equation of motion for $c_a$ is given by
+\be\label{CKV}
+P\cdot c = \nabla_a c_b +\nabla_b c_a
+-h_{ab} (\nabla \cdot c) = 0~.
+\ee
+Therefore the solutions for $c$ are in one-to-one correspondence with the \textbf{conformal Killing vectors}, which are the generators of the residual symmetry.
+
+\vspace{.3cm}
+\noindent$\bullet$ The equation of motion for $b_{ab}$ is
+\be\label{metric-moduli} \nabla_a b^{ab}=0 ~.\ee
+We will understand the geometric meaning of these equations when discussing the moduli
+space of Riemann surfaces.
+
+\vspace{.3cm}
+To understand the properties of the $bc$ ghost CFT, it is convenient to use the Euclidean signature so that we will perform Wick rotation in what follows. Then, the factor of $i$ in the action disappears.
+The expression for the full partition function \eqref{fullpf} is
+%
+\be Z[\hat{h}]=\int {\cal D}X{\cal D}c{\cal D}b\ \exp\left(-S_{\s}[X,\hat{h}] -
+S_{g}[b,c,\hat{h}]\right)~.\label{total}\ee
+%
+
+
+
+
+
+
+
+
+
+\subsubsection*{$bc$ ghost CFT}
+
+Now let us study the $bc$ ghost CFT more in detail. For this purpose, we pick the conformal gauge \eqref{conformal-gauge} for a world-sheet metric. Using \eqref{conformal-gauge2}, the ghost action can be written as
+\begin{align}
+S_{g}& = \frac{1}{2\pi}\int d^2z\ \left( b_{zz}\nabla_{\bz}c^z + b_{\bz\bz}\nabla_z c^{\bz}\right)\cr
+&=\frac{1}{2\pi} \int d^2z\ b_{zz}\,\partial_{\bz}c^z +
+b_{\bz\bz}\,\partial_zc^{\bz}\end{align}
+For the sake of simplicity, let us define
+%
+\begin{align} b= b_{zz}~,\qquad \bar{b}=b_{\bar{z}\bar{z}}~,\qquad
+c=c^z~,\qquad \bar{c}=c^{\bar{z}}~.\nonumber\end{align}
+%
+Then, the action simplifies to
+\be\label{ghost-action}
+S_{g} = \frac{1}{2\pi}\int d^2z\ \left(b\,\overline \partial c + \bar{b}\,\partial\bar{c}
+\right)~,\ee
+which gives the equations of motion
+\be \label{ghost-holo}\overline \partial b = \partial\bar{b} = \overline \partial c = \partial\bar{c}=0\ee
+Thus, we see that $b$ and $c$ are holomorphic fields, while $\bar{b}$ and $\bar{c}$ are
+anti-holomorphic.
+
+
+
+
+
+To compute the OPEs of the $bc$ ghost fields, we use the path integral techniques  in \S\ref{sec:OPE}:
+\be
+0=\int \mathcal{D} c \mathcal{D} b \frac{\delta}{\delta b(z)}\left[e^{-s_{g}} b(w)\right]=\int \mathcal{D} c \mathcal{D} b s^{-s_{g}}\left[-\frac{1}{2 \pi} \bar{\partial} c(z) b(w)+\delta(z-w)\right]~,\nonumber
+\ee
+which tells us that
+\be \overline \partial c(z)\,b(w) = 2\pi \,\delta(z-w)~.\nonumber\ee
+We can perform a similar computation for $c(z)$, which yields
+\be \overline \partial b(z)\,c(w) = 2\pi\,\delta(z-w)~.\nonumber\ee
+We can integrate both of these equations using \eqref{eq:deltaFunc}.  Then, we obtain the $bc$ OPE
+\begin{align} b(z)\,c(w) &= \frac{1}{z-w} + \ldots\nonumber\\ c(w)\,b(z) &= \frac{1}{w-z} + \ldots\nonumber\end{align}
+In fact, the second equation follows from the first equation and Fermi statistics. Hence, the
+OPEs of $b(z)\,b(w)$ and $c(z)\,c(w)$ are trivial for the obvious reason.
+
+
+In any CFT, it is of most importance to find the form of the energy-momentum tensor.
+The energy-momentum tensor is obtained via Noether's theorem with respect to world-sheet transformations $\delta z = \e(z)$, under which
+\[\delta b = (\e\partial+2(\partial\e))b~,\qquad \d c = (\e\partial-(\partial\e))c~.\]
+Indeed both $b$ and $c$ are primary fields with conformal dimensions $h=2$ and $h=-1$, respectively, which can be easily seen from their index structure $b_{zz}$ and $c^z$.
+From these rules, one can deduce the form of the energy-momentum tensor
+\be\label{Tgh} T^{g}(z) =- 2:b(z)\partial c(z): + :c(z)\partial b(z):~.\ee
+In fact, this form can be obtained from the first principle, namely the variation of the action under the metric (Exercise).
+
+
+
+The OPEs of $b$ and $c$ with the stress tensor are
+\begin{align}
+&T^{g}(z) c(w)=-\frac{c(w)}{(z-w)^{2}}+\frac{\partial c(w)}{z-w}+\ldots \cr
+&T^{g}(z) b(w)=\frac{2 b(w)}{(z-w)^{2}}+\frac{\partial b(w)}{z-w}+\ldots
+\nonumber\end{align}
+so that $b$ and $c$ are primary fields of conformal dimension $2$ and $-1$, respectively. Consequently, they admit the mode expansions
+\[
+b(z)=\sum_{m\in\bZ}\frac{b_m}{z^{m+2}}\qquad c(z)=\sum_{m\in\bZ}\frac{c_m}{z^{m-1}}~.
+\]
+The ghost OPEs give the commutation relations
+\be\label{ghost-comm}\left\{b_{m},c_{n}\right\}=\delta_{m+n,0}~, \quad\left\{c_{m}, c_{n}\right\}=\left\{b_{m}, b_{n}\right\}=0~.\ee
+Also, the Virasoro generators of the $bc$ ghost are expressed as
+\be \label{L-bc}
+L^{g}_m=\sum_{n\in\bZ}(2m-n):b_nc_{m-n}:+a^g\delta_{m,0}~.
+\ee
+The constant $a^g$ in the zero mode $L_0^{g}$ is determined by the Casimir energy $\frac{c^g}{24}$ in \eqref{Casimir2} and the commutation relation of the $bc$ modes $\frac1{12}=-\sum_{n>0}n$
+\[
+a^g=\frac{-26}{24}+\frac1{12}=-1~.
+\]
+This is consistent with the commutation relation $L_0=[L_1,L_{-1}]$ (\cite[(2.7.20)]{Polchinski}).
+
+Finally, we can compute the $TT$ OPE  (Exercise)
+%
+\be T^{g}(z)\,T^{g}(w) = \frac{-13}{(z-w)^4}+\frac{2T^{g}(w)}{(z-w)^2} + \frac{\partial T^{g}(w)}{z-w} +\ldots\nonumber\ee
+%
+Now one can read off the  central charge of the $bc$ ghost system, which is
+%
+\be c^{g}=2(-13)=-26 ~.\nonumber\ee
+
+We learned that the Weyl symmetry is anomalous unless $c=0$.
+Since the Weyl symmetry is a gauge symmetry, the theory must be Weyl anomaly-free. Since the total central charge of the string sigma model and ghost theory \eqref{total} is given by $c=c^X +c^{g}$, the dimension of the target space must be $D=26$.
+Again, we obtain the critical dimension of the bosonic string theory!
+
+
+
+
+\subsection{BRST quantization}
+
+In 4d Yang-Mills theory, the Lagrangian with Faddeev-Popov ghosts has the continuous symmetry, called \textbf{BRST symmetry} (Becchi-Rouet-Stora-Tyupin). The BRST symmetry is generated by a nilpotent charge $Q_B$ $(Q_B^2=0)$ that commutes with the Hamiltonian. The nilpotency of the BRST charge has substantial
+consequences. The BRST transformations come from the gauge symmetry, all physical states must be BRST-invariant. Hence, we require a physical state to be annihilated by $Q_B$
+\[
+Q_{B} |\textrm{phys}\rangle=0~.
+\]
+However, one can always add a state of the form $Q_{B} | \chi \rangle$ since this state will be annihilated by $Q_B$ because of the nilpotent BRST charge. However, this state is orthogonal to all physical states, and therefore it is a \textbf{null state}.
+Thus, two states related by
+\[ | \psi'\rangle = |\psi\rangle + Q_B |\chi\rangle \]
+have the same inner products with all the physical states and they are thus indistinguishable.
+This is the remnant in the gauge-fixed version of the original
+gauge symmetry. As a result, the Hilbert
+space of physical states is isomorphic to the $Q_B$-cohomology, i.e.
+\be \label{BRST-quantization}
+\cH^{\textrm{phys}}\cong\frac{\cH^{Q_B\textrm{-closed}}}{\cH^{Q_B\textrm{-exact}}}~.
+\ee
+This convariant way of determining the physical Hilbert space with ghosts is known as \textbf{BRST quantization}.
+
+We are now ready to apply this formalism to the bosonic string \cite[\S4]{Polchinski}. Combining \eqref{free-scalar} and \eqref{ghost-action}, the action we consider is
+\[
+S_X+S_{g}= \frac{1}{2\pi}\int d^2z\ \left( \frac1{\alpha'}\partial X^\mu  \ol\partial X_\mu+b\,\overline \partial c + \bar{b}\,\partial\bar{c}\right)~.
+\]
+This is invariant under the following BRST transformations:
+\begin{align}\nonumber
+&\delta_B X^\mu = i \epsilon ( c \partial + \bar{c} \bar{\partial} ) X^\mu \,,
+\cr
+&\delta_B c=  i\epsilon  c \partial c  \qquad \delta_B \bar c=  i\epsilon \bar{c} \bar{\partial} \bar c \,,
+\\
+&\delta_B b =  i \epsilon ( T^X + T^{g} ) \qquad \delta_B \bar b =  i \epsilon ( \overline T^X + \overline T^{g} )\,, \label{BRST-trans}
+\end{align}
+where the explicit forms of the energy-momentum tensors can be found in \eqref{TX} and \eqref{Tgh}. Note that we impose \eqref{ghost-holo} here.  This exhibits typical features of the BRST transformation: a bosonic field is transformed into a fermionic field and vice versa, and the ghost field $b$ is transformed into the energy-momentum tensor.
+Noether's theorem tells us that there is a classical current associated to the BRST symmetry, and the holomorphic part of the BRST current takes the form (Exercise)
+\begin{align}\label{jB}
+j_B &= c(z)T^X(z) + \frac12 : c(z)T^{g}(z): +\frac32:\partial^2c(z):\\
+&= c(z)T^X(z) + : b(z)c(z)\partial c(z) : +\frac32:\partial^2c(z):~.\nonumber
+\end{align}
+and the BRST charge is defined by
+\[ Q_B = \oint \frac{dz}{2\pi i} ~ j_B \,.\]
+It follows from \eqref{BRST-trans} that
+\be\label{Q-b}
+\{Q_B,b(z) \}=( T^X + T^{g} ) \to \{Q_B,b_m\}=L_m^X+L_m^{g}~.
+\ee
+Computing $j_Bj_B$ OPE, one can convince oneself that the BRST charge is
+nilpotent  $Q_B^2=0$ if and only if  $D=26$ (Exercise).
+Therefore, $j_B$ is a primary field with $h=1$, and $Q_B$ is a conserved charge at quantum level only when $D=26$.
+Furthermore,
+we can express the BRST charge in terms of the $X^{\mu}$ Virasoro
+operators and the ghost oscillators as
+\be
+Q_B = \sum_n c_n (L^X_{-n}-\d_{n,0}) + \sum_{m,n} \frac{m-n}{2} : c_m c_n
+b_{-m-n} :  \,,\\
+\label{27}\ee
+where the normal ordering constant comes from $\{Q_B,b_0\}=L_0^X+L_0^{g}$.
+In the case of closed strings, there is the anti-holomorphic part $\bar Q_B$, and the total
+BRST charge is $Q_B+\bar Q_B$.
+
+We will find the physical open string states in the BRST context.
+According to our previous discussion, the physical states will have
+to be annihilated by the BRST charge, and not be of the form
+$Q_B|\phantom{\chi}\rangle$.
+
+First, we have to describe our extended Hilbert space which includes
+the ghosts.
+As far as the $X^{\mu}$ oscillators are concerned, the situation is
+the same as in \eqref{bosonic-Hilb}, so we need to consider only the ghost Hilbert space.
+Indeed the ghost commutation relations \eqref{ghost-comm} generate a two-state spin system $|\uparrow\rangle, |\downarrow\rangle$ where
+\bea\label{ghost-Hilb}
+&b_0 | \downarrow \rangle = 0\,, \qquad b_0 |\uparrow\rangle =
+|
+\downarrow
+\rangle\,, \cr
+&c_0 | \uparrow \rangle
+= 0\,, \qquad c_0 | \downarrow\rangle = |
+\uparrow
+\rangle \,,\cr
+&b_{n>0}|\uparrow\rangle=b_{n>0}|\downarrow\rangle=c_{n>0}|\uparrow\rangle=c_{n>0}|\downarrow\rangle=0~.
+\eea
+
+
+The full Hilbert space will be a tensor product of the two  $|k,\uparrow\rangle, |k,\downarrow\rangle$ by acting creation operators where $|k\rangle=|0;k\rangle$ denotes the vacuum of the matter theory.
+From the light-cone quantization, we know that there is only one vacuum called Tachyon. Therefore, we have to pick the ghost vacuum among the two spin states.
+For this purpose, we further impose one more condition, namely
+\be
+b_0|{\rm phys}\rangle =0\,.
+\label{25}\ee
+This is sometimes called the \textbf{Siegel gauge} \cite[\S3.2]{GSW}.
+Under this condition, \eqref{ghost-Hilb} tells us that the correct ghost vacuum is
+$|\downarrow\rangle$.
+We can now create states from this vacuum by acting with the negative
+modes
+of the ghosts $b_m,c_n$. Note that $c_0 | \downarrow\rangle = |
+\uparrow
+\rangle$ does not satisfy the
+Siegel condition \eqref{25}.
+Also, \eqref{25} yields the condition
+\be\label{L0-annihilate} 0=\{Q_B,b_0\}|{\rm phys}\rangle=(L_0^X+L_0^{g})|{\rm phys}\rangle ~.\ee
+Therefore, if a physical state  is at level $N$ with momentum $k$, $|{\rm phys}\rangle=|N;k\rangle$, then we have
+\be \label{k_N}
+k^2 = \frac{1-N}{\alpha'}
+\ee
+which is consistent with the light-cone gauge.
+
+
+Now, let us impose the physical condition \eqref{BRST-quantization} for open-string states level by level. To this end, let us explicitly write the open-string mode expansions of the zero modes of the Virasoro generators
+\begin{align}\label{open-Virasoro}
+L^X_0&=\alpha^{\prime} p^{2}+\sum_{n=1}^{\infty} \alpha_{-n} \cdot \alpha_{n}=\a'p^2+\a_{-1}\cdot\a_1+\cdots~,\cr
+L^{g}_0&=-1\sum_{n \in \bZ} n: b_{-n} c_{n}:=-1+b_{-1}c_{1}+c_{-1}b_{1}+\cdots~,
+\end{align}
+(Compare with \eqref{Virasoro} and \eqref{L-bc}.)
+At level zero, there is only the vacuum state and the BRST quantization leads to
+$|k,\downarrow\rangle$
+\[
+ Q_B | k,\downarrow \rangle = ( L^X_0 - 1 ) c_0 | k,\downarrow\rangle= ( L^X_0 - 1 ) | k,\uparrow\rangle=0\,.
+\]
+and it is not $Q_B$-exact.
+
+
+At the first level, the possible operators that can act on the vacuum $| k,\downarrow\rangle$ are $\alpha^\mu_{-1}$,
+$b_{-1}$ and $c_{-1}$. The most general state of this form is then
+\be
+|\psi\rangle = ( \zeta \cdot \alpha_{-1} + \beta b_{-1} + \gamma c_{-1} )
+| k,\downarrow\rangle \,, \label{n=1}
+\ee
+which has 28 parameters: a 26-dimensional vector $\zeta_\mu$ and two more constants $\beta$, $\gamma$. First we note that \eqref{k_N} yields the massless
+condition  $k^2 =0$. In addition, the BRST condition demands
+\[
+ 0 = Q_B |\psi\rangle = 2 ( (k\cdot \zeta) c_{-1} + \beta
+k\cdot \alpha_{-1} ) |k,\downarrow \rangle \,.
+\]
+This only holds if $k\cdot\zeta=0$ and
+$\beta=0$. Therefore the BRST condition removes the unphysical anti-ghost excitations as well as all polarizations that are not orthogonal to the momentum, thereby eliminating two out of the $26+2$ original states. Hence, there are only 26 parameters left.
+
+Next, we have to make sure that this state is not $Q_B$-exact: a general state $|\chi\rangle$
+is of the same form as \eqref{n=1}, but with parameters
+$\zeta'^{\mu}$, $\b'$ and $\g'$. Thus, the most general $Q_B$-exact state at
+this level
+with $k^2=0$ will be
+\[ Q_B |\chi \rangle = 2 ( k\cdot \zeta' c_{-1} + \beta'
+k\cdot\alpha_{-1} ) | k,\downarrow\rangle \,. \]
+This means that the $c_{-1}$ part in \eqref{n=1} is BRST-exact and that
+the polarization has the equivalence relation $\zeta_\mu \sim
+\zeta_\mu + 2 \beta' k_\mu $. This leaves us with the 24 physical
+degrees of freedom we expect for a massless vector particle in 26 dimensions. In sum, the physical state at level one is
+ \[
+ \{|\zeta;k\rangle ~; \quad k\cdot\zeta=0\}/~ \zeta_\mu \sim
+\zeta_\mu + 2 \beta' k_\mu ~.
+ \]
+
+The same procedure can be followed for the higher levels of open string states. It can be proved that $\cH_{\textrm{light-cone}}$ is isomorphic to the $Q_B$-cohomology, and the inner product is positive-definite. In the
+case
+of the closed string, we have to use $Q_B+\bar Q_B$ for the BRST quantization.
+\end{document}

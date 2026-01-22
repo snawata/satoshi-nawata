@@ -1,0 +1,254 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{CDLOGP91}
+
+\bibitem[Arn74]{arnol1974mathematical}
+V.~I. Arnol'd, \emph{Mathematical methods of classical mechanics}, vol.~60,
+  Springer Science \& Business Media, 1974.
+
+\bibitem[Ati88]{atiyah1988topological}
+M.~F. Atiyah, \emph{Topological quantum field theory}, Publications
+  Math{\'e}matiques de l'IH{\'E}S \textbf{68} (1988) 175--186.
+
+\bibitem[Beh14]{behrend2014introduction}
+K.~Behrend, \emph{Introduction to algebraic stacks}, Moduli spaces \textbf{411}
+  (2014) 1.
+
+\bibitem[BGV03]{berline2003heat}
+N.~Berline, E.~Getzler, and M.~Vergne, \emph{Heat kernels and dirac operators},
+  Springer Science \& Business Media, 2003.
+
+\bibitem[Bou07]{Bouchard:2007ik}
+V.~Bouchard, \emph{{Lectures on complex geometry, Calabi-Yau manifolds and
+  toric geometry}},
+\href{http://arxiv.org/abs/hep-th/0702063}{{ arXiv:hep-th/0702063 [HEP-TH]}}.
+%%CITATION = HEP-TH/0702063;%%.
+
+\bibitem[BT82a]{Bott:1982}
+R.~Bott and L.~Tu, \emph{{Differential Forms in Algebraic Topology}}, Springer
+  Verlag, New York,
+1982.
+%%CITATION = INSPIRE-252419;%%.
+
+\bibitem[BT82b]{bott1982differential}
+R.~Bott and L.~W. Tu, \emph{Differential forms in algebraic topology}, vol.~82,
+  Springer Science \& Business Media, 1982.
+
+\bibitem[Cau37]{Cauchy}
+A.~L. Cauchy, \emph{Note sur la variation des constantes arbitraires dans les
+  problèmes de mécanique}, Journal de Mathématiques pures et appliquées
+  (1837) .
+
+\bibitem[CDLOGP91]{Candelas:1990rm}
+P.~Candelas, X.~C. De~La~Ossa, P.~S. Green, and L.~Parkes, \emph{{A Pair of
+  Calabi-Yau manifolds as an exactly soluble superconformal theory}},
+  \href{http://dx.doi.org/10.1016/0550-3213(91)90292-6}{Nucl. Phys.
+  \textbf{B359} (1991) 21--74}.
+[AMS/IP Stud. Adv. Math.9,31(1998)].
+%%CITATION = NUPHA,B359,21;%%.
+
+\bibitem[Die09]{dieudonne2009history}
+J.~Dieudonn{\'e}, \emph{A history of algebraic and differential topology,
+  1900-1960}, Springer Science \& Business Media, 2009.
+
+\bibitem[dL08]{Lagrange1}
+J.~L. de~Lagrange, \emph{Mémoire sur la théorie des variations des éléments
+  des planètes et en particulier des variations des grands axes de leurs
+  orbites}, à l'Institut de France (1808) .
+  \url{http://gallica.bnf.fr/ark:/12148/bpt6k229225j/f715}.
+
+\bibitem[dL09]{Lagrange2}
+\bysame, \emph{Mémoire sur la théorie générale de la variation des
+  constantes arbitraires dans tous les problèmes de mécanique}, Dans Euvres
+  de Lagrange, volume VI, Gauthier-Villars, Paris,pages 771-805 (1809) .
+  \url{https://gallica.bnf.fr/ark:/12148/bpt6k229225j/f773}.
+
+\bibitem[EGH80]{Eguchi:1980jx}
+T.~Eguchi, P.~B. Gilkey, and A.~J. Hanson, \emph{{Gravitation, Gauge Theories
+  and Differential Geometry}},
+\href{http://dx.doi.org/10.1016/0370-1573(80)90130-1}{Phys. Rept. \textbf{66}
+  (1980) 213}.
+%%CITATION = PRPLC,66,213;%%.
+
+\bibitem[Ein15]{einstein1915feldgleichungen}
+A.~Einstein, \emph{The field equations of gravitation}, session of the
+  physical-mathematical class \textbf{25} (1915) 844--847.
+
+\bibitem[Flo88a]{floer1988instanton}
+A.~Floer, \emph{An instanton-invariant for 3-manifolds}, Communications in
+  mathematical physics \textbf{118} (1988)no.~2 215--240.
+
+\bibitem[Flo88b]{floer1988morse}
+\bysame, \emph{Morse theory for lagrangian intersections}, Journal of
+  differential geometry \textbf{28} (1988)no.~3 513--547.
+
+\bibitem[Flo89]{floer1989witten}
+\bysame, \emph{Witten's complex and infinite-dimensional morse theory}, Journal
+  of differential geometry \textbf{30} (1989)no.~1 207--221.
+
+\bibitem[Fra11]{frankel2011geometry}
+T.~Frankel, \emph{The geometry of physics: an introduction}, Cambridge
+  university press, 2011.
+
+\bibitem[Fre82]{freedman1982topology}
+M.~H. Freedman, \emph{The topology of four-dimensional manifolds}, J.
+  Differential Geom \textbf{17} (1982)no.~3 357--453.
+
+\bibitem[Gro85]{gromov1985pseudo}
+M.~Gromov, \emph{Pseudo holomorphic curves in symplectic manifolds},
+  Inventiones mathematicae \textbf{82} (1985)no.~2 307--347.
+
+\bibitem[Ham34]{hamilton1834general}
+W.~R. Hamilton, \emph{On a general method in dynamics}, Richard Taylor, 1834.
+  \url{https://www.maths.tcd.ie/pub/HistMath/People/Hamilton/Dynamics/}.
+
+\bibitem[Ham35]{hamilton1835second}
+\bysame, \emph{Second essay on a general method in dynamics}, Philosophical
+  Transactions of the Royal Society of London \textbf{125} (1835) 95--144.
+
+\bibitem[Hat05]{hatcher2005algebraic}
+A.~Hatcher, \emph{Algebraic topology}, 2005.
+  \url{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf}.
+
+\bibitem[Hit10]{hitchin2010atiyah}
+N.~Hitchin, \emph{The atiyah--singer index theorem}, The Abel Prize, Springer,
+  2010, pp.~117--152.
+
+\bibitem[JW06]{jaffe2006quantum}
+A.~Jaffe and E.~Witten, \emph{Quantum yang-mills theory}, The millennium prize
+  problems (2006)no.~1 129.
+
+\bibitem[Kir08]{kirillov2008introduction}
+A.~A. Kirillov,
+  \emph{\href{https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf}{An
+  introduction to Lie groups and Lie algebras}}, vol. 113, Cambridge University
+  Press, 2008.
+
+\bibitem[KN63]{kobayashi1963foundations}
+S.~Kobayashi and K.~Nomizu, \emph{Foundations of differential geometry, vol.
+  1\&2}, New York, London, 1963.
+
+\bibitem[Max65]{maxwell1865viii}
+J.~C. Maxwell, \emph{A dynamical theory of the electromagnetic field},
+  Philosophical transactions of the Royal Society of London (1865)no.~155
+  459--512.
+
+\bibitem[Mil63]{milnor1963morse}
+J.~W. Milnor,
+  \emph{\href{https://www.maths.ed.ac.uk/~v1ranick/papers/milnmors.pdf}{Morse
+  theory}}, Princeton university press, 1963.
+
+\bibitem[Mil65]{milnor1965topology}
+\bysame,
+  \emph{\href{http://math.uchicago.edu/~may/REU2017/MilnorDiff.pdf}{Topology
+  from the differentiable viewpoint}}, Princeton university press, 1965.
+
+\bibitem[Mor01]{morita2001geometry}
+S.~Morita, \emph{Geometry of differential forms}, vol. 201, American
+  Mathematical Soc., 2001.
+
+\bibitem[Mun75]{munkres1975topology}
+J.~R. Munkres, \emph{Topology: a first course}, vol.~23, Prentice-Hall
+  Englewood Cliffs, NJ, 1975.
+
+\bibitem[Nak03]{nakahara2003geometry}
+M.~Nakahara, \emph{Geometry, topology and physics}, CRC Press, 2003.
+
+\bibitem[NS88]{nash1988topology}
+C.~Nash and S.~Sen, \emph{Topology and geometry for physicists}, Elsevier,
+  1988.
+
+\bibitem[Per02]{perelman2002entropy}
+G.~Perelman, \emph{The entropy formula for the ricci flow and its geometric
+  applications}, arXiv preprint math/0211159 (2002) .
+
+\bibitem[Pes18]{peskin2018introduction}
+M.~E. Peskin, \emph{An introduction to quantum field theory}, CRC Press, 2018.
+
+\bibitem[Poi08]{Poisson1}
+S.~D. Poisson, \emph{Mémoire sur les inégalités séculaires des moyens
+  mouvements des planètes}, à l'Institut de France (1808) .
+
+\bibitem[Poi09]{Poisson2}
+\bysame, \emph{Sur la variation des constantes arbitraires dans les questions
+  de mécanique}, à l'Institut de France (1809) .
+
+\bibitem[Poi95]{poincare1895analysis}
+H.~Poincar{\'e}, \emph{Analysis situs}, J. de l'{\'E}cole Poly. \textbf{1}
+  (1895) . \url{https://www.maths.ed.ac.uk/~v1ranick/papers/poincare2009.pdf}.
+  English translation.
+
+\bibitem[Rie54]{riemann1854hypothesen}
+B.~Riemann, \emph{\href{https://www.emis.de/classics/Riemann/Geom.pdf}{{\"U}ber
+  die Hypothesen, welche der Geometrie zu Grunde liegen}}, Springer, 1854.
+
+\bibitem[Rie57]{riemann1857theorie}
+\bysame, \emph{Theorie der abel'schen functionen}, Georg Reimer, 1857.
+
+\bibitem[Sch78]{Schwarz:1978cn}
+A.~S. Schwarz, \emph{{The Partition Function of Degenerate Quadratic Functional
+  and Ray-Singer Invariants}},
+\href{http://dx.doi.org/10.1007/BF00406412}{Lett. Math. Phys. \textbf{2} (1978)
+  247--252}.
+%%CITATION = LMPHD,2,247;%%.
+
+\bibitem[Sma61]{smale2007generalized}
+S.~Smale, \emph{Generalized poincar{\'e}'s conjecture in dimensions greater
+  than four}, Annals of Math. \textbf{74} (1961)no.~2 391--406.
+
+\bibitem[Spi70]{spivak1970comprehensive}
+M.~D. Spivak, \emph{A comprehensive introduction to differential geometry},
+  Publish or perish, 1970.
+
+\bibitem[ST67]{singer1967lecture}
+I.~M. Singer and J.~A. Thorpe, \emph{Lecture notes on elementary topology and
+  geometry}, Springer, 1967.
+
+\bibitem[War13]{warner2013foundations}
+F.~W. Warner, \emph{Foundations of differentiable manifolds and lie groups},
+  vol.~94, Springer Science \& Business Media, 2013.
+
+\bibitem[Wei72]{weinberg1972gravitation}
+S.~Weinberg, \emph{Gravitation and cosmology: principles and applications of
+  the general theory of relativity}, 1972.
+
+\bibitem[Wei77]{weinberg1977first}
+\bysame, \emph{The first three minutes. a modern view of the origin of the
+  universe}, 1977.
+
+\bibitem[Wit82a]{Witten:1982fp}
+E.~Witten, \emph{{An SU(2) Anomaly}},
+\href{http://dx.doi.org/10.1016/0370-2693(82)90728-6}{Phys. Lett. \textbf{B117}
+  (1982) 324--328}.
+%%CITATION = PHLTA,B117,324;%%.
+
+\bibitem[Wit82b]{Witten:1982im}
+\bysame, \emph{{Supersymmetry and Morse theory}}, J. Diff. Geom. \textbf{17}
+  (1982)no.~4 661--692.
+\url{http://www.math.toronto.edu/mgualt/Morse%20Theory/Witten%20Morse%20Theory%20and%20Supersymmetry.pdf}.
+%%CITATION = JDGEA,17,661;%%.
+
+\bibitem[Wit89]{Witten:1988hf}
+\bysame, \emph{{Quantum Field Theory and the Jones Polynomial}},
+  \href{http://dx.doi.org/10.1007/BF01217730}{Commun. Math. Phys. \textbf{121}
+  (1989) 351--399}.
+
+\bibitem[Yau09a]{yau2009calabi}
+S.-T. Yau, \emph{Calabi-yau manifold}, Scholarpedia \textbf{4} (2009)no.~8
+  6524. \url{http://scholarpedia.org/article/Calabi-Yau_manifold}.
+
+\bibitem[Yau09b]{index-book}
+\bysame, \emph{The founders of index theory: reminiscences of and about sir
+  michael atiyah, raoul bott, friedrich hirzebruch, and im singer}, Intl Pr of
+  Boston Inc, 2009.
+
+\bibitem[YM54]{yang1954conservation}
+C.-N. Yang and R.~L. Mills, \emph{Conservation of isotopic spin and isotopic
+  gauge invariance}, Physical review \textbf{96} (1954)no.~1 191.
+
+\end{thebibliography}

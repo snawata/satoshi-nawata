@@ -1,0 +1,289 @@
+\documentclass[geometry-lectures-21.tex]{subfiles}
+
+\begin{document}
+
+
+
+
+\section{Moduli spaces}
+
+
+In mathematics, one of the most important problems is a classification problem. A moduli space arises from a classification problem in Algebraic Geometry \cite{riemann1857theorie}. Classification of certain objects with some properties leads to the study of the entire space $\mathcal{A}$ of objects. Very roughly speaking, a moduli space $\cM$ is a space (or a family) of objects $\in \cA$ up to equivalence relations $\sim$:
+$$
+\mathcal{M}=\mathcal{A} / \sim~.
+$$
+Often (almost always if properly formulated), a moduli space is naturally endowed with topology and geometry reflecting properties of the objects in $\mathcal{A}$ under the equivalence relations $\sim$. Namely, it encodes information about
+\begin{itemize}  \itemsep0em
+  \item how 'close' two classes are to each other; how they vary
+  \item  how they degenerate
+  \item the existence of special objects
+  \end{itemize}
+ Consequently, the study of a moduli space leads to a deeper and more intrinsic understanding of the objects in $\mathcal{A}$ under the equivalence relations $\sim$. One example has already appeared in \eqref{Mflat}, moduli space of flat connections. In Example \ref{Mflat-torus}, we have seen that the moduli space of $\SU(2)$-flat connections over a torus $T^2$ is a pillowcase where there are four singular points. At these four singular points, the generators $A,B$ of the fundamental group are mapped to $\pm\Id$
+$$
+A,B\mapsto \begin{pmatrix} \pm1 &0\\0&\pm1\end{pmatrix}~.
+$$
+\subsection{Toy examples}
+
+Since the moduli problem can be difficult and intimidating to first learners, let us begin with the simplest examples.
+\bexample
+ Finite-dimensional vector spaces up to linear isomorphisms are classified by dimensions $d\in\bN$.
+\eexample
+\bexample
+Closed oriented surfaces up to homeomorphisms are classified by genera $g\in \bN$.
+\eexample
+
+\bexample\label{line-affine}
+The moduli space of lines up to affine transformations is a point.
+\eexample
+
+These moduli spaces consist of points, which means that there is no continuous deformation. Or, in other words, these are boring examples.
+If equivalence classes admit continuous deformations, the problem becomes more interesting.
+
+
+\bexample
+A sphere up to congruence (isometry) is classified by radius $r>0$ so that the moduli space is $\mathcal{M} \cong \mathbb{R}^{+}.$ $\mathcal{M} \cong \mathbb{R}^{+}$ is a connected, smooth, non-compact manifold, encoding the continuous variations of spheres up to congruence:
+\begin{itemize}  \itemsep0em
+\item  connectedness means that any sphere can be continuously deformed to any other sphere.
+\item  smoothness means that there are no special spheres (with extra symmetries): all spheres are equally symmetric.
+\item  At $r=0 \in \overline {\cM} \backslash \mathcal{M}$, a sphere degenerates to a point.
+\item  If we enlarge the ambient space of the moduli space to $\mathbb{R}^{+} \cup\{\infty\}$, then at $r=\infty \in \overline{\mathcal{M}} \backslash \mathcal{M}$, 'a plane at infinity' shows up as degenerate sphere of radius
+$\infty .$
+  \end{itemize}
+All these are indeed general principles of moduli spaces.
+\eexample
+
+\bexample\label{line-translation}
+In Example \ref{line-affine}, we have seen that the moduli space of lines up to affine transformations is a point. What about if we consider lines up to translations. Then, we can always bring a line that passes through the origin. Hence, the moduli space of one-dimensional subspaces in $\bR^{n}$ is indeed $\RP^{n-1}$. We can complexify the story and the moduli space of complex lines $\bC$ in $\bC^{n}$ up to translations is $\CP^{n-1}$. Therefore, the projective spaces can be interpreted as the moduli space of lines. As we have studied in the previous lectures, the moduli space can be endowed with geometric structures such as metric and symplectic forms.
+\eexample
+
+\bexample\label{line}
+Now let us consider lines in $\bR^{n}$ with no equivalence relations. Then, we can translate a line $\ell\in\RP^{n-1}$ along a plane orthogonal to a line $\ell\in\RP^{n-1}$. In fact, a plane orthogonal to  a line $\ell\in\RP^{n-1}$ is the tangent space $T_\ell \RP^{n-1}$. Therefore, the moduli space of lines is the tangent bundle $T\RP^{n-1}$.
+\eexample
+
+
+We can easily generalize the moduli space of $r$-dimensional planes $\bR^r$ in $\bR^{n}$ (resp. $\bC^{n}$) (up to affine transformations, up to translations, or with no equivalent relations). If the equivalence relation is up to affine transformations, then the moduli space is again a point. up to translations, we can always bring a plane that passes through the origin. Then, the moduli space of $r$-dimensional subspaces in $\bR^{n}$ is called a \textbf{Grassmanniann} $\textrm{Gr}_\bR(r,n)$. In a similar manner to Example \ref{projective-coset}, it can be realized as a homogeneous space
+\be
+\textrm{Gr}_\bR(r,n)\cong \OO(n)/(\OO(r)\times \OO(n-r))~.
+\ee
+Its complex version is
+\be
+\textrm{Gr}_\bC(r,n)\cong \U(n)/(\U(r)\times \U(n-r))~.
+\ee
+
+
+
+\subsection{Moduli space of triangles}
+Let us consider the moduli space of triangles up to similarity. The reader can refer to the wonderful lecture note \cite{behrend2014introduction} for more details, and the Figures are taken from there. Let us fix the perimeter of a triangle to be (say) 2. Then, the moduli space of triangles up to similarity are determined by the length of their sides, so
+$$
+\cM_{\textrm{tri}}=\left\{(a, b, c) \in \mathbb{R}^{3} \mid a \leq b \leq c, a+b+c=2, c<a+b\right\}
+$$
+This is a right triangle in $\mathbb{R}^{3}$ minus one of its edges, which has the following properties.  (Figure \ref{moduli-triangle}.)
+\begin{figure}[ht]\centering
+  \includegraphics[width=10cm]{pictures/moduli-triangle}\includegraphics[width=7.5cm]{pictures/moduli-triangle2}
+  \caption{}
+  \label{moduli-triangle}
+\end{figure}
+
+\begin{itemize} \itemsep0em
+  \item the moduli space $\cM_{\textrm{tri}}$ is not compact. To compactify $\cM$, we need to add line segments, as degenerate triangles.
+  \item at boundary of $\cM_{\textrm{tri}}$,  special triangles, namely isosceles, show up where symmetry of a triangle is enhanced to $\bZ_2$
+  \item at the singular point, equilateral triangle will show up and symmetries is enhanced to the dihedral group $D_{3}=\langle r, s \mid r^{3}=s^{2}=(sr)^{2}=1\rangle .$
+\end{itemize}
+Again, the geometry and topology of the moduli space itself give information on the individual triangles being parameterized!
+
+
+Now we slightly change the moduli problem by considering oriented triangles. This means that similarity transformations between triangles are only rotations, translations, and scalings, but not reflections. The corresponding moduli space is
+$$
+\wt\cM_{\textrm{tri}}=\left\{(a, b, c) \in \mathbb{R}^{3} \mid a\leq c, b\leq c, a+b+c=2, c<a+b\right\}
+$$
+The moduli space can be obtained by ``doubling'' the previous one and identifying the edges. (Figure \ref{moduli-oriented}.)
+\begin{figure}[ht]\centering
+  \includegraphics[width=10cm]{pictures/moduli-oriented}\includegraphics[width=6cm]{pictures/moduli-oriented2}
+  \caption{}
+  \label{moduli-oriented}
+\end{figure}
+
+Let us take a look at it from slightly different viewpoint. Let us place an oriented triangle to the upper half plane $\bfH$ where we scale one edge to be located at 1. If we adjust C$-$B to be 1 in  the upper half plane $\bfH$, then A$-$B is located at a complex number $z$:
+$$z=\frac{(\mathrm{A}-\mathrm{B})}{(\mathrm{C}-\mathrm{B})}$$
+On the other hand, if we normalize A$-$C to be 1, then B$-$C is located at
+\be\label{rotate1} \frac1{1-z}=\frac{(\mathrm{B}-\mathrm{C})}{(\mathrm{A}-\mathrm{C})} \ \longleftrightarrow \ \begin{pmatrix}0&1\\-1&1 \end{pmatrix}\in \PSL(2,\bZ)~.\ee
+Note that $\PSL(2,\bZ)$ acts on the upper half plane $\bfH$ as
+\be
+z\mapsto \frac{az+b}{cz+d}~, \qquad \begin{pmatrix}a&b\\c&d\end{pmatrix}\in \PSL(2,\bZ)~,
+\ee
+and we assign the corresponding matrix element in \eqref{rotate1}.
+We can continue along this line, and the remaining is when we normalize $\mathrm{B}-\mathrm{A}$ to 1. Then, $\mathrm{C}-\mathrm{A}$ sits at
+$$ \frac{z-1}z= \frac{\mathrm{C}-\mathrm{A}}{\mathrm{B}-\mathrm{A}}\ \longleftrightarrow \ \begin{pmatrix}1&-1\\1&0 \end{pmatrix} \in \PSL(2,\bZ)~. $$
+Therefore, we identify the subgroup $\bZ_3\in \PSL(2,\bZ)$ generated by
+$$
+\omega_3:=\begin{pmatrix}0&1\\-1&1 \end{pmatrix}~,
+$$
+and the moduli space of oriented triangles up to similarity can be identified with
+\be
+\wt\cM_{\textrm{tri}}\cong \bfH/\bZ_3~.
+\ee
+The moduli space is indeed the right of Figure \ref{moduli-oriented3}.
+Note that the fixed point of $\bZ_3\in \PSL(2,\bZ)$  is
+$$\rho=e^{2 \pi t / 6}=\frac{1+\sqrt{3} i}{2}~.$$
+where the equilateral triangle shows up.
+\begin{figure}[ht]\centering
+  \includegraphics[width=10cm]{pictures/moduli-oriented3}\raisebox{-1cm}{\includegraphics[width=6cm]{pictures/moduli-oriented5}}
+  \caption{The $0\rho$ arc is identified with the $1\rho$ arc.  }
+  \label{moduli-oriented3}
+\end{figure}
+
+To identify the two arcs in the right of Figure \ref{moduli-oriented3} in a smarter way, we map the moduli space by a fractional linear transformation
+$$
+z \mapsto \frac{\rho^2-\rho z}{\rho^2+z}
+$$
+where the corner points $\rho,0,1$ are mapped to $0,1,\rho^2$. (Left to middle in Figure \ref{moduli-oriented6}.) Then, a map $z\mapsto z^3$ brings the moduli space to a unit open disk where the locus of right triangles is a (dotted) curve in the right of Figure \ref{moduli-oriented6} parametrized by
+\begin{equation}
+r=\left(2 \cos \left(\frac{\theta-\pi}{3}\right)-\sqrt{4 \cos ^{2}\left(\frac{\theta-\pi}{3}\right)-1}\right)^{3}~.
+\end{equation}
+
+
+
+\begin{figure}[ht]\centering
+  \includegraphics[width=10cm]{pictures/moduli-oriented6}  \qquad  \raisebox{-.25cm}{\includegraphics[width=5cm]{pictures/moduli-oriented4}}
+  \caption{From left to middle, $z \mapsto (\rho^2-\rho z)/(\rho^2+z)$. From middle to right, $z\mapsto z^3$.}
+  \label{moduli-oriented6}
+\end{figure}
+
+
+
+\subsection{Moduli space of Riemann surfaces}\label{sec:moduli-Riemann}
+
+These are very simple examples to get used to the notion of moduli spaces. Now we introduce the genuine moduli problem originated from Riemann \cite{}. A 2-dimensional oriented manifold can be constructed as a complex manifold in Appendix \ref{sec:complex-manifolds}. The moduli space of Riemann surfaces classifies Riemann surfaces up to biholomorphic maps.
+
+Let us first consider the simplest example: $\mathcal{M}_{0, n}$ is the moduli space of $n$-pointed Riemann spheres $(n\ge3)$.
+The moduli space $\mathcal{M}_{0, n}$ parameterizes $n$ distinct points on $\CP^{1}$ up to biholomorphic maps
+$$
+\left[\CP^{1}, z_{1}, \ldots, z_{n}\right] \in \mathcal{M}_{0, n}
+$$
+Let $z_{1}, z_{2}, z_{3} \in \CP^{1}$ be three distinct points.
+There exists a unique linear fractional transformation
+$$f(z)=\frac{\left(z-z_{1}\right)\left(z_{2}-z_{3}\right)}{\left(z-z_{3}\right)\left(z_{2}-z_{1}\right)}$$
+satisfying $f\left(z_{1}\right)=0, f\left(z_{2}\right)=1, f\left(z_{3}\right)=\infty$.
+Therefore, $\mathcal{M}_{0.3}$ is a single point.
+
+Given four distinct points $z_{1}, z_{2}, z_{3}, z_{4} \in \CP^{1}$, the first three can be moved via linear fractional transformation to $0,1, \infty \in \CP^{1}$. Therefore, the moduli space parametrizes the position of $z_4$ so that
+$$
+\mathcal{M}_{0,4} \cong \CP^{1} \backslash\{0,1, \infty\}
+$$
+The statement may also be approached via the classical cross-ratio (which goes back to Pappus of Alexandria 300 AD).
+More generally, we have
+$$
+\mathcal{M}_{0, n} \cong\left(\CP^{1} \backslash\{0,1, \infty\}\right)^{n-3} \backslash \text { Diagonals. }
+$$
+
+The next elementary example is the moduli space $\cM_{1,0}$ of a torus. As we have seen, a torus is constructed as a complex plane quotient by a two-dimensional lattice $\Lambda$,  $T^2\cong\bC/\Lambda$. In fact, a two-dimensional lattice $\Lambda$ is in the one-to-one correspondence with a torus up to biholomorphic maps. Roughly speaking, $\Lambda$ defines the ``shape'' of a torus.  A lattice $\Lambda$ is spanned by two complex vector $\omega_1$, $\omega_2$ such that $\omega_2/\omega_1$ has a positive imaginary number.
+\bea\label{eq:ModularTrapre}
+\omega_1'=&a\omega_1+b\omega_2\cr
+\omega_2'=&c\omega_1+d\omega_2
+\eea
+where
+$$\begin{pmatrix}
+ a & b \cr c & d
+\end{pmatrix} \in \PSL(2,\bZ)~.$$
+We can normalize one of the vectors to be 1 and we write $\tau=\omega_2/\omega_1$ and $\tau'=\omega'_2/\omega'_1$. Then, \eqref{eq:ModularTrapre} can be rewritten as
+\begin{align} \label{eq:ModularTra2}
+ \tau' = \frac{a\tau+b}{c\tau+d} \ .
+\end{align}
+The action of $\PSL(2,\bZ)$ is called the \textbf{modular transformation}, and any element of $\PSL(2,\bZ)$ can be written as a product of the following elements
+\begin{align}
+ T: \tau \to \tau+1 \ , \quad S: \tau \to -\frac{1}{\tau} \ \cr
+ \mathrm{PSL}(2,\mathbb{Z})=\left\langle S, T: S^{2}=(S T)^{3}=\Id\right\rangle
+ \label{eq:ModularTra}
+\end{align}
+Hence, the modular transformations do not change $\Lambda$, namely the ``shape'' of a torus. Since $\tau$ is a point of the upper half plane $\bfH$ and $\PSL(2,\bZ)$
+ acts on the Teichm\"uller space $\bfH$ as in \ref{modular}, the moduli space of tori is
+\be
+\cM_{1,0}=\bfH/\PSL(2,\bZ)~,
+\ee
+which is the shaded region in Figure \ref{modular}, called the \textbf{fundamental region}. There are three special points $i\infty,i,e^{2\pi i /3}$ at the fundamental region. At $i\infty$, a torus degenerates to a circle. At $i$, $\Lambda$ is a square so that it has a symmetry of $\bZ_4$ generated by a rotation  of ${\pi i /2}$. At $e^{2\pi i /3}$, $\Lambda$  has a symmetry of $\bZ_3$ generated by a rotation  of ${2\pi i /3}$.
+\begin{figure}[ht]\centering
+\raisebox{0cm}{\includegraphics[width=5cm]{pictures/tau-torus}}
+\qquad\qquad
+\includegraphics[width=10cm]{pictures/modular} \caption{The Teichm\"uller space of a torus is the upper half plane, and the mapping class group $\PSL(2,\bZ)$ acts on it. The moduli space is the fundamental region $F$ (the shaded region). }\label{modular}
+\end{figure}
+
+
+Riemann has introduced the notion of the moduli space $\cM_{g}$ of Riemann surfaces, and he has noticed that its complex dimension of $\cM_{g>0}$ is $3g-3$ \cite{riemann1857theorie}. However, it requires sophisticated techniques to construct the moduli space of Riemann surfaces in a mathematically rigorous way. This was done mainly by Mumford in the 1960s from the viewpoint of algebraic geometry. Thurston gave another construction by using hyperbolic geometry:
+\be
+\cM_{g>2,0}=\bR^{6g-6}/\textrm{MCG}_g~,
+\ee
+where $\textrm{MCG}_g$ is a discrete group called the \textbf{mapping class group} of Riemann surface of genus $g$.
+
+
+\subsection{Nilpotent orbits}
+
+Now let us consider the moduli problem in linear algebra. Let us consider the moduli space of matrices $A\in $ that satisfy $A^m=0$ for $n\in \bN$.
+
+\bdefn
+ $A \in M_{n}(\mathbb{C})$ is called \textbf{nilpotent} if $A^m=0$.
+ The \textbf{nilpotent orbit} of $A$ is the set of all matrices conjugate to $A$.
+The nilpotent cone $\mathcal{N}$ is the set of all nilpotent matrices.
+\edefn
+
+
+Every nilpotent matrices has its Jordan form  $\textrm{diag} \left(J_{d_{1}}, \cdots, J_{d_{k}}\right)$, where $J_{d_{i}}$ is the Jordan matrix of size $d_{i}$ with zeros on diagonal. Hence nilpotent orbits in $M_{n}(\mathbb{C})$ are parametrized by partitions of $n$.
+
+
+\bexample
+Let $A \in \fraksl(2,\mathbb{C})$ be as
+$$
+\left(\begin{array}{cc}
+a & -b \\
+c & -a
+\end{array}\right)
+$$
+$A$ is nilpotent iff $A^{2}=0$, namely
+\be\label{A1-singularity}
+a^{2}-b c=0~.
+\ee
+The nilpotent cone of $\fraksl(2,\mathbb{C})$ consists of two orbits $[2],[1,1]$, corresponding to
+$$
+\begin{pmatrix}0&1\\0&0 \end{pmatrix}~, \qquad \begin{pmatrix}0&0\\0&0 \end{pmatrix}~.
+$$
+\eexample
+
+We want to understand geometry of the nilpotent orbit. It turns out that the nilpotent orbit is $\bC^2/\bZ_2$. The ring of holomorphic functions on $\bC^2$ is $\bC[z_1,z_2]$. The ring of holomorphic functions on $\bC^2/\bZ_2$ is $R=\mathbb{C}\left[z_1^{2}, z_1 z_2, z_2^{2}\right] \subset \bC[z_1,z_2]$. After change of variable, this is isomorphic to $R \cong \mathbb{C}[a,b,c] /\left(a^{2}-bc\right)$. Thus, the nilpotent orbit of $\fraksl(2,\mathbb{C})$ is geometrically $\bC^2/\bZ_2$. If we stare at it a bit more, we can notice that the ring of holmorphic functions $\bC^2/\bZ_2$ can be expressed as
+$$
+R\cong\mathbb{C}[x,y,z] /\left(x^{2}+y^2+z^2\right)~.
+$$
+The ideal $x^{2}+y^2+z^2=0$ can be deformed as
+\be\label{affine-variety}x^{2}+y^2+z^2=\xi^2~,\ee
+which is $T^*\CP^1$ where $\xi$ is the ``complex volume'' of $\CP^1$. In other words, the nilpotent orbit  $\bC^2/\bZ_2$ is the zero volume limit of $T^*\CP^1$. The cotangent bundle $T^*\CP^1$ is a symplectic manifold as seen in Example \ref{cotangent-symplectic}. How about general nilpotent orbits?
+
+A coadjoint orbit $\mathcal{O}_\mu$ for $\mu\in \mathfrak{g}^*$ of $\mathfrak{g}$ is defined as the orbit $\mathrm{Ad}^*_G~ \mu$ of $\mu$ under the coadjoint action \eqref{coadjoint}. In other words, it can be identified with
+$$\mathcal{O}_\mu\cong G/G_\mu$$
+where $G_\mu$ is the stabilizer of $\mu$ with respect to the coadjoint action \eqref{coadjoint}.
+The coadjoint orbits are submanifolds of $\mathfrak{g}^*$ and carry a natural symplectic structure. On each orbit $\mathcal{O}_\mu$, there is a $G$-invariant symplectic form $\omega \in \Omega^2(\mathcal{O}_\mu)$
+$$\omega_\nu(\mathrm{ad}^*_X \nu, \mathrm{ad}^*_Y \nu) := \langle \nu, [X, Y] \rangle , \nu \in \mathcal{O}_\mu, X, Y \in \mathfrak{g}~.$$
+The well-definedness, non-degeneracy, and $G$-invariance of $\omega$ follow from the following facts:
+\begin{itemize}  \itemsep0em
+\item  The tangent space $T_\nu \mathcal{O}_\mu = \{ -\mathrm{ad}^*_X \nu : X \in \mathfrak{g}\}$ may be identified with $\mathfrak{g}/\mathfrak{g}_\nu$, where $\mathfrak{g}_\nu$ is the Lie algebra of $G_\nu$.
+\item  The kernel of the map $X \mapsto \langle \nu, [X, \cdot] \rangle$ is exactly $\mathfrak{g}_\nu$.
+\item  The bilinear form $\langle \nu, [\cdot, \cdot] \rangle$ on $\mathfrak{g}$ is invariant under $G_\nu$.
+\item $\omega$ is also closed.
+\end{itemize}
+The symplectic form $\omega$ is referred to as the \textbf{Kirillov-Kostant-Souriau} symplectic form on the coadjoint orbit. So any nilpotent orbit is a symplectic manifold.
+
+
+\vspace{0.5cm}
+
+The nilpotent orbits appear in physics as the moduli space of vacua in 3d $\cN=4$ theories. For instance, let us consider 3d $\cN=4$ SQED with two flavors in which the superpotential is given by
+\be
+W=\wt Q_{1 \times 2} \phi_{1 \times1} Q_{2 \times 1}~.
+\ee
+Then, the moduli space of vacua is given by the critical point of the superpotential
+$$\frac{\partial W}{\partial \phi}=\wt Q_{1 \times 2} Q_{2 \times 1}=0~, \qquad \frac{\partial W}{\partial \wt Q}=\phi_{1 \times1} Q_{2 \times 1}=0 \quad \frac{\partial W}{\partial Q}=\wt Q_{1 \times 2} \phi_{1 \times1} =0~.$$
+If we assume $\langle\phi\rangle=0$, then the vacua are parametrized by the gauge invariant operator
+$A=Q_{2 \times 1} \wt Q_{1 \times 2}$, $\operatorname{rank}(A) \leq 1$,
+which is subject to
+$$
+\left\{A\in M_{2}(\bC) \mid A^{2}=0, \Tr A=0\right\}~.
+$$
+Therefore, the moduli space of vacua is the nilpotent orbit of $ \fraksl(2,\mathbb{C})$. The deformation parameter $\xi$ in \eqref{affine-variety} can be interpreted as FI and mass parameter of the 3d $\cN=4$ SQED.
+
+\end{document}

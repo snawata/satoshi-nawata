@@ -1,0 +1,484 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+
+\usepackage{physics}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{subfigure}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+
+
+%\hypersetup{colorlinks=true,urlcolor=darkred,linkcolor=darkred,citecolor=darkred}
+%\usepackage{verbatim}　　
+\usepackage[letterpaper,margin=0.9in,headheight=15pt]{geometry}
+\usepackage{mathpazo}
+\usepackage{authblk}
+\usepackage{empheq}
+\usepackage{feynmp}
+\usepackage{graphicx}
+\usepackage[matrix,arrow]{xy}
+\usepackage{young}
+\usepackage[vcentermath]{youngtab}
+\usepackage{slashed}
+%\usepackage{fontds}
+%
+\usepackage{bbm}
+\usepackage{youngtab}
+\usepackage{rotfloat}
+\usepackage{stmaryrd}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{tikz-cd}
+\usepackage{thmtools}
+\usepackage{dashrule}
+\usepackage[missing=]{gitinfo2}
+\usepackage{fancyhdr}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{subfiles}
+\usepackage{simplewick}
+
+\usepackage[utf8]{inputenc}
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+
+
+
+
+%
+%---------- mathcal font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+
+%%%%%%%%%%%% mathsf%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\sfA}{\ensuremath{\mathsf{A}}}
+\newcommand{\sfB}{\ensuremath{\mathsf{B}}}
+\newcommand{\sfC}{\ensuremath{\mathsf{C}}}
+\newcommand{\sfD}{\ensuremath{\mathsf{D}}}
+\newcommand{\sfE}{\ensuremath{\mathsf{E}}}
+\newcommand{\sfF}{\ensuremath{\mathsf{F}}}
+\newcommand{\sfG}{\ensuremath{\mathsf{G}}}
+\newcommand{\sfH}{\ensuremath{\mathsf{H}}}
+\newcommand{\sfJ}{\ensuremath{\mathsf{J}}}
+\newcommand{\sfK}{\ensuremath{\mathsf{K}}}
+\newcommand{\sfL}{\ensuremath{\mathsf{L}}}
+\newcommand{\sfM}{\ensuremath{\mathsf{M}}}
+\newcommand{\sfN}{\ensuremath{\mathsf{N}}}
+\newcommand{\sfO}{\ensuremath{\mathsf{O}}}
+\newcommand{\sfP}{\ensuremath{\mathsf{P}}}
+\newcommand{\sfQ}{\ensuremath{\mathsf{Q}}}
+\newcommand{\sfS}{\ensuremath{\mathsf{S}}}
+\newcommand{\sfU}{\ensuremath{\mathsf{U}}}
+\newcommand{\sfX}{\ensuremath{\mathsf{X}}}
+\newcommand{\sfY}{\ensuremath{\mathsf{Y}}}
+\newcommand{\sfW}{\ensuremath{\mathsf{W}}}
+\newcommand{\sfR}{\ensuremath{\mathsf{R}}}
+\newcommand{\sfT}{\ensuremath{\mathsf{T}}}
+\newcommand{\sfZ}{\ensuremath{\mathsf{Z}}}
+
+%%%%%%%%%%%%  Special letters for Lie groups %%%%%%%%%%%%%%%%%%
+
+\newcommand{\biA}{{\mathbi{A}}}
+\newcommand{\biB}{{\mathbi{B}}}
+\newcommand{\biC}{{\mathbi{C}}}
+\newcommand{\biD}{{\mathbi{D}}}
+\newcommand{\biE}{{\mathbi{E}}}
+\newcommand{\biF}{{\mathbi{F}}}
+\newcommand{\biG}{{\mathbi{G}}}
+\newcommand{\biH}{{\mathbi{H}}}
+\newcommand{\biI}{{\mathbi{I}}}
+\newcommand{\biJ}{{\mathbi{J}}}
+\newcommand{\biK}{{\mathbi{K}}}
+\newcommand{\biL}{{\mathbi{L}}}
+\newcommand{\biM}{{\mathbi{M}}}
+\newcommand{\biN}{{\mathbi{N}}}
+\newcommand{\biO}{{\mathbi{O}}}
+\newcommand{\biP}{{\mathbi{P}}}
+\newcommand{\biQ}{{\mathbi{Q}}}
+\newcommand{\biS}{{\mathbi{S}}}
+\newcommand{\biU}{{\mathbi{U}}}
+\newcommand{\biX}{{\mathbi{X}}}
+\newcommand{\biY}{{\mathbi{Y}}}
+\newcommand{\biV}{{\mathbi{V}}}
+\newcommand{\biW}{{\mathbi{W}}}
+\newcommand{\biR}{{\mathbi{R}}}
+\newcommand{\biT}{{\mathbi{T}}}
+\newcommand{\biZ}{{\mathbi{Z}}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+\newcommand{\PSL}{\mathrm{PSL}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\def \be  {\begin{equation}}
+\def \ee  {\end{equation}}
+\def \bea {\begin{equation}\begin{aligned}}
+\def \eea {\end{aligned}\end{equation}}
+\def \ba  {\begin{eqnarray}}
+\def \ea  {\end{eqnarray}}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 3: Due at class on April 6}
+
+
+
+
+
+
+
+
+
+
+\section{$\SU(3)$ Lie algebra}
+
+The standard basis for the generators of $\SU(3)$ in the fundamental representation is given by the so-called Gell-Mann matrices, which are the analogues of the Pauli matrices for $\SU(2):$
+\begin{equation}
+\begin{aligned}
+&t^{1}=\frac{1}{2}\left(\begin{array}{ccc}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 0
+\end{array}\right), \quad t^{2}=\frac{1}{2}\left(\begin{array}{ccc}
+0 & -i & 0 \\
+i & 0 & 0 \\
+0 & 0 & 0
+\end{array}\right), \quad t^{3}=\frac{1}{2}\left(\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & 0
+\end{array}\right)\\
+&t^{4}=\frac{1}{2}\left(\begin{array}{ccc}
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+1 & 0 & 0
+\end{array}\right), \quad t^{5}=\frac{1}{2}\left(\begin{array}{ccc}
+0 & 0 & -i \\
+0 & 0 & 0 \\
+i & 0 & 0
+\end{array}\right), \quad t^{6}=\frac{1}{2}\left(\begin{array}{ccc}
+0 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{array}\right)\\
+&t^{7}=\frac{1}{2}\left(\begin{array}{ccc}
+0 & 0 & 0 \\
+0 & 0 & -i \\
+0 & i & 0
+\end{array}\right), \quad t^{8}=\frac{1}{2 \sqrt{3}}\left(\begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & -2
+\end{array}\right)
+\end{aligned}
+\end{equation}
+This is usually referred to as the fundamental representation ``$\mathbf{3}$ of $\SU(3)$''.
+
+\subsection{}
+Explain why there are exactly eight of these matrices and why they form a basis for Hermitian, traceless $3 \times 3$ matrices.
+
+\subsection{}
+Evaluate all of the commutators of the Gell-Mann matrices to compute the structure constants, and show that they are antisymmetric. (This is a kind of tedious exercise, so you can compute only a representative sample if you don't feel like computing them all.)
+
+\subsection{}
+
+Check that these are normalized so that
+$$
+\operatorname{Tr}\left(t^{a} t^{b}\right)=C(\mathbf{3}) \delta^{a b}
+$$
+for a constant $C(\mathbf{3})$ which you should compute.
+\subsection{}
+
+
+Compute the quadratic Casimir $C_{2}$ directly from its definition
+$$
+t^{a} t^{a}=C_{2}(\mathbf{3}) \cdot \mathbf{1}
+$$
+where $\mathbf{1}$ is the identity matrix. And verify the identity (Peskin\&Schroeder (15.94)) for this representation:
+$$
+d(r) C_{2}(r)=d(G) C(r)
+$$
+
+
+\subsection{}
+
+Note that $t^{1}, t^{2}, t^{3}$ form a natural sub-algebra which acts on rows one and two of a three component column vector. Find two other natural $\SU(2)$ sub-algebras, which act on rows one and three and rows two and three, respectively. Of course, these three $\SU(2)$ sub-algebras do not commute with one another.
+
+
+
+\subsection{}
+
+Consider the $\SU(2) \subset \SU(3)$ generated by $t^{1}, t^{2}, t^{3} .$ How does the $\mathbf{3}$ of $\SU(3)$ transform under this $\SU(2)$ subgroup?
+
+
+\subsection{}
+
+Since all orthogonal matrices are also unitary, there is a natural $\SO(3) \subset \SU(3)$. Which Gell-Mann matrices generate this $\SO(3) ?$ How does the $\mathbf{3}$ of $\SU(3)$ transform under this $\SO(3)$?
+
+
+
+
+
+
+
+
+
+\section{Quadratic Casimir operator for $\SU(N)$}
+
+For each representation $r$ of $\SU(N)$ the generators $t_{r}^{a}$ are normalized such, that
+$$
+\operatorname{Tr}\left[t_{r}^{a} t_{r}^{b}\right]=C(r) \delta^{a b}
+$$
+where $C(r)$ is some constant depending on the representation under consideration. Using the fact that $I$ and the generators $t_{f}^{a}$ in the fundamental representation provide a basis for $N \times N$ Hermitian matrices, where $a=1 \ldots N^{2}-1$
+\subsection{}
+derive the Fierz identity:
+$$
+\sum_{a}\left(t_{f}^{a}\right)_{i j}\left(t_{f}^{a}\right)_{k l}=C(f)\left(\delta_{i l} \delta_{k j}-\frac{1}{N} \delta_{i j} \delta_{k l}\right)
+$$
+The quadratic Casimir operator $C_{2}(r)$ is defined by
+$$
+C_{2}(r) \mathbf{1}_{d(r)}=\sum_{a} t_{r}^{a} t_{r}^{a}
+$$
+where $\mathbf{1}_{d(r)}$ is the $d(r)\times d(r)$ identity matrix.
+\subsection{}
+Using the Fierz identity, derive the quadratic Casimir of the fundamental representation, $C_{2}(f)$
+\subsection{}
+Derive the more general relation
+$$
+C_{2}(r)=C(r) \frac{d( \SU(N))}{d(r)}=C(r) \frac{N^{2}-1}{d(r)}
+$$
+and with this find $C_{2}(f)$ (this should be the same as in the previous question) and $C_{2}(\textbf{adj})$, the quadratic Casimir of the adjoint representation. Express $C_{2}(\textbf{adj})$ in terms of $N$ and $C(f)$.
+
+
+
+\section{BRST transformations}
+Let us consider the gauge-fixed Yang-Mills Lagrangian with fermions
+$$
+\begin{aligned}
+\mathcal{L} &=-\frac{1}{4}\left(F_{\mu \nu}^{a}\right)^{2}+\bar{\psi}(i \slashed{D}-m) \psi+\mathcal{L}_{\mathrm{GF}} \cr
+\mathcal{L}_{\mathrm{GF}} &=\frac{\xi}{2}\left(B_{\mu}^{a}\right)^{2}+B^{a} \partial_{\mu} A_{\mu}^{a}+\partial_{\mu} \bar{c}^{a}\left(D_{\mu} c\right)^{a}~.
+\end{aligned}
+$$
+Under the BRST transformations
+$$
+\begin{aligned}
+\delta A_{\mu}^{a} & =\epsilon\left(Q A_{\mu}\right)^{a}=\epsilon D_{\mu}^{a b} c^{b} \cr
+\delta \psi & =\epsilon(Q \psi)=i g \epsilon c^{a} t^{a} \psi \cr
+\delta c^{a} & =\epsilon(Q c)^{a}=-\frac{1}{2} g \epsilon f^{a b c} c^{b} c^{c} \cr
+\delta \bar{c}^{a} & =\epsilon(Q \bar{c})^{a}=\epsilon B^{a} \cr
+\delta B^{a} & =\epsilon(Q B)^{a}=0~,
+\end{aligned}
+$$
+show $Q(Q \phi)$ vanishes for all the fields $\phi$. In addition, show that  $\mathcal{L}_{\mathrm{GF}}$ can be written as a BRST-exact
+$$
+\mathcal{L}_{\mathrm{GF}}=Q\left(\bar{c}^{a} \partial_{\mu} A_{\mu}^{a}+\frac{\xi}{2} \bar{c}^{a} B^{a}\right)~.
+$$
+
+\end{document}

@@ -1,0 +1,479 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+
+\usepackage{physics}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{subfigure}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+
+
+%\hypersetup{colorlinks=true,urlcolor=darkred,linkcolor=darkred,citecolor=darkred}
+%\usepackage{verbatim}　　
+\usepackage[letterpaper,margin=0.9in,headheight=15pt]{geometry}
+\usepackage{mathpazo}
+\usepackage{authblk}
+\usepackage{empheq}
+\usepackage{feynmp}
+\usepackage{graphicx}
+\usepackage[matrix,arrow]{xy}
+\usepackage{young}
+\usepackage[vcentermath]{youngtab}
+\usepackage{slashed}
+%\usepackage{fontds}
+%
+\usepackage{bbm}
+\usepackage{youngtab}
+\usepackage{rotfloat}
+\usepackage{stmaryrd}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{tikz-cd}
+\usepackage{thmtools}
+\usepackage{dashrule}
+\usepackage[missing=]{gitinfo2}
+\usepackage{fancyhdr}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{subfiles}
+\usepackage{simplewick}
+
+\usepackage[utf8]{inputenc}
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+
+
+
+
+%
+%---------- mathcal font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+
+%%%%%%%%%%%% mathsf%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\sfA}{\ensuremath{\mathsf{A}}}
+\newcommand{\sfB}{\ensuremath{\mathsf{B}}}
+\newcommand{\sfC}{\ensuremath{\mathsf{C}}}
+\newcommand{\sfD}{\ensuremath{\mathsf{D}}}
+\newcommand{\sfE}{\ensuremath{\mathsf{E}}}
+\newcommand{\sfF}{\ensuremath{\mathsf{F}}}
+\newcommand{\sfG}{\ensuremath{\mathsf{G}}}
+\newcommand{\sfH}{\ensuremath{\mathsf{H}}}
+\newcommand{\sfJ}{\ensuremath{\mathsf{J}}}
+\newcommand{\sfK}{\ensuremath{\mathsf{K}}}
+\newcommand{\sfL}{\ensuremath{\mathsf{L}}}
+\newcommand{\sfM}{\ensuremath{\mathsf{M}}}
+\newcommand{\sfN}{\ensuremath{\mathsf{N}}}
+\newcommand{\sfO}{\ensuremath{\mathsf{O}}}
+\newcommand{\sfP}{\ensuremath{\mathsf{P}}}
+\newcommand{\sfQ}{\ensuremath{\mathsf{Q}}}
+\newcommand{\sfS}{\ensuremath{\mathsf{S}}}
+\newcommand{\sfU}{\ensuremath{\mathsf{U}}}
+\newcommand{\sfX}{\ensuremath{\mathsf{X}}}
+\newcommand{\sfY}{\ensuremath{\mathsf{Y}}}
+\newcommand{\sfW}{\ensuremath{\mathsf{W}}}
+\newcommand{\sfR}{\ensuremath{\mathsf{R}}}
+\newcommand{\sfT}{\ensuremath{\mathsf{T}}}
+\newcommand{\sfZ}{\ensuremath{\mathsf{Z}}}
+
+%%%%%%%%%%%%  Special letters for Lie groups %%%%%%%%%%%%%%%%%%
+
+\newcommand{\biA}{{\mathbi{A}}}
+\newcommand{\biB}{{\mathbi{B}}}
+\newcommand{\biC}{{\mathbi{C}}}
+\newcommand{\biD}{{\mathbi{D}}}
+\newcommand{\biE}{{\mathbi{E}}}
+\newcommand{\biF}{{\mathbi{F}}}
+\newcommand{\biG}{{\mathbi{G}}}
+\newcommand{\biH}{{\mathbi{H}}}
+\newcommand{\biI}{{\mathbi{I}}}
+\newcommand{\biJ}{{\mathbi{J}}}
+\newcommand{\biK}{{\mathbi{K}}}
+\newcommand{\biL}{{\mathbi{L}}}
+\newcommand{\biM}{{\mathbi{M}}}
+\newcommand{\biN}{{\mathbi{N}}}
+\newcommand{\biO}{{\mathbi{O}}}
+\newcommand{\biP}{{\mathbi{P}}}
+\newcommand{\biQ}{{\mathbi{Q}}}
+\newcommand{\biS}{{\mathbi{S}}}
+\newcommand{\biU}{{\mathbi{U}}}
+\newcommand{\biX}{{\mathbi{X}}}
+\newcommand{\biY}{{\mathbi{Y}}}
+\newcommand{\biV}{{\mathbi{V}}}
+\newcommand{\biW}{{\mathbi{W}}}
+\newcommand{\biR}{{\mathbi{R}}}
+\newcommand{\biT}{{\mathbi{T}}}
+\newcommand{\biZ}{{\mathbi{Z}}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+\newcommand{\PSL}{\mathrm{PSL}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\def \be  {\begin{equation}}
+\def \ee  {\end{equation}}
+\def \bea {\begin{equation}\begin{aligned}}
+\def \eea {\end{aligned}\end{equation}}
+\def \ba  {\begin{eqnarray}}
+\def \ea  {\end{eqnarray}}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 6: Due at class on May 25}
+
+
+\section{Higgs mechanism in electroweak theory}
+
+The Glashow-Weinberg-Salam theory is the part of the Standard Model (SM) of particle physics which describes the electroweak interactions by a non-Abelian gauge theory with the gauge group $\mathrm{SU}(2)_L \times \mathrm{U}(1)_{Y}$.  In a one-family approximation, the SM has the following particle content:
+\begin{equation}\nonumber
+\begin{array}{cccccc}
+\hline & E_{L}=\left(\begin{array}{l}
+\nu_{e} \cr
+e^{-}
+\end{array}\right)_{L} & e_{R} & \phi=\left(\begin{array}{c}
+\phi^{+} \cr
+\phi^{0}
+\end{array}\right) & T^{a} W_{\mu}^{a} & B_{\mu} \cr
+\hline \text { Hypercharge } Y & -\frac12& -1 & +\frac12 & 0 & 0 \cr
+\mathrm{SU}(2)_L \text { rep. } & \mathbf{2} & \mathbf{1} & \mathbf{2} & \mathbf{3} & \mathbf{1} \cr
+\text { Lorentz rep. } & (\frac12,0) & (0,\frac12) & (0,0) & (\frac12,\frac12) & (\frac12,\frac12) \cr
+\hline
+\end{array}
+\end{equation}
+where $E_L, e_R$ contain Dirac spinors and the superscripts in the Higgs doublet denote electromagnetic charges. The corresponding Lagrangian is given by
+\begin{equation}\label{Lagrangian}
+\begin{aligned}
+\cL=&\overline{E}_{L}(i \slashed D) E_{L}+\overline{e}_{R}(i \slashed D) e_{R} -\frac{1}{4} W_{\mu \nu}^{a} W^{\mu \nu a}-\frac{1}{4} B_{\mu \nu} B^{\mu \nu} \cr
+&+\left(D_{\mu} \phi\right)^{\dagger}\left(D^{\mu} \phi\right)-\mu^{2} \phi^{\dagger} \phi-\lambda\left(\phi^{\dagger} \phi\right)^{2} -\left(\overline{E}_{L} \phi e_R+\overline{e_R} \phi^{\dagger} E_L\right)
+\end{aligned}
+\end{equation}
+with
+\be\label{covariant}
+\begin{aligned}
+    D_{\mu}&=\partial_{\mu}-i g W_{\mu}^{a} T^{a}-i g^{\prime} Y B_{\mu} \cr
+B_{\mu \nu} &=\partial_{\mu} B_{\nu}-\partial_{\nu} B_{\mu}, \quad W_{\mu \nu}^{a}=\partial_{\mu} W_{\nu}^{a}-\partial_{\nu} W_{\mu}^{a}+g \epsilon^{a b c} W_{\mu}^{b} W_{\nu}^{c}
+\end{aligned}
+\ee
+\subsection{}
+Write down how the covariant derivative \eqref{covariant} acts on the left- and right-handed leptons doublets and on the Higgs-doublet.
+
+\subsection{}Show that the Lagrangian \eqref{Lagrangian} is Lorentz invariant and gauge invariant as well.
+
+\subsection{}For the Higgs mechanism to work we need $\mu^{2}<0$.  For which value of $|\phi|$ does the Higgs potential obtain a minimum? By an $\mathrm{SU}(2)_L$ rotation we can choose the vacuum expectation value (VEV) of the Higgs field to be of the form $\langle\phi\rangle=\frac{1}{\sqrt{2}}(0, v)^{T}$.  This leads to a redefinition of the excitation modes of the Higgs fields,
+$$
+\phi(x)=\exp \left\{\frac{\mathrm{i}}{v} \xi^{a}(x) T^{a}\right\}\left(\begin{array}{c}
+0 \cr
+\frac{1}{\sqrt{2}}(v+\eta(x))
+\end{array}\right)
+$$
+with $\xi^{a}(x)$ and $\eta(x)$ being real fields and $T^{a}$ the generators of $\mathrm{SU}(2)_L$.  Now we apply an $\mathrm{SU}(2)_L$ gauge transformation such that the angular excitations $\xi^{a}(x)$ vanish. This gauge transformation is called \emph{unitary gauge}. Show that the Higgs potential in the unitary gauge is given by
+$$
+V(\phi)=-\mu^{2} \eta^{2}(x)+\lambda v \eta^{3}(x)+\frac{\lambda}{4} \eta^{4}(x)
+$$
+What is the mass of the $\eta$ field? Compare the degrees of freedom (DOF) in the Higgs sector to the situation before symmetry breakdown.
+
+\subsection{}Consider the kinetic energy terms of the Higgs field in \eqref{Lagrangian}. Show that
+\bea\label{3}
+\left(D_{\mu} \phi\right)^{\dagger}\left(D^{\mu} \phi\right)=\frac{1}{2} \partial_{\mu} \eta \partial^{\mu} \eta &+\frac{1}{4} g^{2}(v+\eta)^{2} W_{\mu}^{-} W^{+\mu} \cr
+&+\frac{1}{8}(v+\eta)^{2}(W_{\mu}^{3}\quad B_{\mu}) \left(\begin{array}{cc}
+g^{2} & -g^{\prime} g \cr
+-g^{\prime} g & g^{\prime 2}
+\end{array}\right)\left(\begin{array}{c}
+W^{3 \mu} \cr
+B^{\mu}
+\end{array}\right)
+\eea
+with $W^{\pm \mu}:=\frac{1}{\sqrt{2}}\left(W^{1 \mu} \mp \mathrm{i} W^{2 \mu}\right)$
+
+
+
+\subsection{}The masses of the gauge bosons are given by the terms that are quadratic in the fields, e.g. $\frac{1}{4} g^{2} v^{2} W_{\mu}^{-} W^{+\mu}=m_{W}^{2} W_{\mu}^{-} W^{+\mu},$ where $m_{W}=\frac{1}{2} v g$.  However, to see the masses of
+$W_{\mu}^{3}$ and $B_{\mu}$ one has to diagonalize the matrix in \eqref{3}:
+$$
+\frac{1}{8}(W_{\mu}^{3}\quad B_{\mu}) \mathcal{O}^{T} \mathcal{O}\left(\begin{array}{cc}
+g^{2} & -g^{\prime} g \cr
+-g^{\prime} g & g^{\prime 2}
+\end{array}\right) \mathcal{O}^{T} \mathcal{O}\left(\begin{array}{c}
+W^{3 \mu} \cr
+B^{\mu}
+\end{array}\right)=\frac12(\begin{array}{cc}
+Z_{\mu} & A_{\mu}
+\end{array})\left(\begin{array}{cc}
+m_{Z}^{2} & 0 \cr
+0 & m_{A}^{2}
+\end{array}\right)\left(\begin{array}{c}
+Z^{\mu} \cr
+A^{\mu}
+\end{array}\right)
+$$
+Determine this orthogonal matrix $\mathcal{O}$ by computing the corresponding eigenvalues and eigenvectors. What are the masses of the $Z_{\mu}$ and $A_{\mu}$ fields? Compare the DOF in the gauge sector to the situation before the symmetry breakdown. What can you say about the total amount of DOF?
+
+\subsection{}As you know, an orthogonal $2 \times 2$ matrix can be written as
+$$
+\mathcal{O}=\left(\begin{array}{cc}
+\cos \theta_{W} & -\sin \theta_{W} \cr
+\sin \theta_{W} & \cos \theta_{W}
+\end{array}\right)
+$$
+Write $\cos \theta_{W}$ in terms of $g^{\prime}$ and $g$.  Show for the ratio of the $W$ - and $Z$ -boson masses
+$$
+\frac{m_{W}}{m_{Z}}=\cos \theta_{W}
+$$
+The angle $\theta_{W}$ is sometimes called Weinberg angle or weak mixing angle.
+
+\subsection{}Finally, consider the covariant derivative \eqref{covariant}. Substitute the fields $B_{\mu}$ and $W_{\mu}^{a}$ by $W_{\mu}^{\pm}, Z_{\mu}$ and $A_{\mu}$ and show
+$$
+D_{\mu}=\partial_{\mu}-i \frac{g}{\sqrt{2}}\left(\begin{array}{ccc}
+0 & W_{\mu}^{+} \cr
+W_{\mu}^{-} & 0
+\end{array}\right)-i \frac{1}{\sqrt{g^{2}+g^{\prime 2}}} Z_{\mu}\left(g^{2} T^{3}-g^{\prime 2} Y\right)
+-i eQ A_{\mu}
+$$
+where we have defined the electric charge $e=\frac{g^{\prime} g}{\sqrt{g^{\prime 2}+g^{2}}}$ and $Q:=T^{3}+Y$
+
+
+
+\subsection{}Consider the following terms of the Lagrangian:
+$$
+\mathcal{L} \supset \overline{E}_{L}(i \slashed D) E_{L}+\overline{e}_{R}(i \slashed D) e_{R}
+$$
+Find the interaction terms of the fermions with the gauge bosons. For the weak interaction, analyze its V-A structure $\frac{1}{2}\left(c_{V}+c_{A} \gamma^{5}\right)$.  Draw the corresponding Feynman diagrams (Note: use $i \mathcal{L},$ drop all fields and you get the vertex factor).
+
+
+\subsection{}
+ Using the unitary gauge, insert the shifted Higgs field
+$$
+\phi(x)=\left(\begin{array}{c}
+0 \cr
+\frac{1}{\sqrt{2}}(v+\eta(x))
+\end{array}\right)
+$$
+into the Yukawa couplings of the Lagrangian:
+$$
+\mathcal{L} \supset-G_{e}\left(\overline{E}_{L} \phi e_R+\overline{e_R} \phi^{\dagger} E_L\right)
+$$
+Show that the mass of the electron is $m_{e}=\frac{G_{e} v}{\sqrt{2}}$.
+
+
+
+\section{Anomaly cancellation in Standard Model}
+ A condition for a QFT to be well-defined is the cancellation of anomalies associated with local symmetries. Show that the SM is anomaly free and
+$$
+\mathcal{A}^{a b c}=\operatorname{tr}\left[t^{a}\{t^{b}, t^{c}\}\right]=0
+$$
+\subsection{}
+List the different triangle diagrams that exist in terms of group structure. Using the fact that $\SU(3)_{C}$ is a vector-like interaction and properties of $\mathrm{SU}(2)_L$, argue that the only nontrivial contributions are those with an odd number of hypercharge insertions. Show that some relations are equivalent to requiring cancellation of electric charge inside each generation.
+
+\subsection{}
+Are baryon number $(B)$ and lepton number $(L)$ currents anomaly free?
+
+
+
+\end{document}
