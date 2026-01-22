@@ -1,0 +1,459 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{slashed}
+\usepackage{physics}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{subfigure}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+
+
+%\hypersetup{colorlinks=true,urlcolor=darkred,linkcolor=darkred,citecolor=darkred}
+%\usepackage{verbatim}
+\usepackage[letterpaper,margin=0.9in,headheight=15pt]{geometry}
+\usepackage{mathpazo}
+\usepackage{authblk}
+\usepackage{empheq}
+\usepackage{feynmp}
+\usepackage{graphicx}
+\usepackage[matrix,arrow]{xy}
+\usepackage{young}
+\usepackage[vcentermath]{youngtab}
+\usepackage{slashed}
+%\usepackage{fontds}
+%
+\usepackage{bbm}
+\usepackage{youngtab}
+\usepackage{rotfloat}
+\usepackage{stmaryrd}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{tikz-cd}
+\usepackage{thmtools}
+\usepackage{dashrule}
+\usepackage[missing=]{gitinfo2}
+\usepackage{fancyhdr}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{subfiles}
+\usepackage{simplewick}
+
+\usepackage[utf8]{inputenc}
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+
+
+
+
+%
+%---------- mathcal font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+
+%%%%%%%%%%%% mathsf%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\sfA}{\ensuremath{\mathsf{A}}}
+\newcommand{\sfB}{\ensuremath{\mathsf{B}}}
+\newcommand{\sfC}{\ensuremath{\mathsf{C}}}
+\newcommand{\sfD}{\ensuremath{\mathsf{D}}}
+\newcommand{\sfE}{\ensuremath{\mathsf{E}}}
+\newcommand{\sfF}{\ensuremath{\mathsf{F}}}
+\newcommand{\sfG}{\ensuremath{\mathsf{G}}}
+\newcommand{\sfH}{\ensuremath{\mathsf{H}}}
+\newcommand{\sfJ}{\ensuremath{\mathsf{J}}}
+\newcommand{\sfK}{\ensuremath{\mathsf{K}}}
+\newcommand{\sfL}{\ensuremath{\mathsf{L}}}
+\newcommand{\sfM}{\ensuremath{\mathsf{M}}}
+\newcommand{\sfN}{\ensuremath{\mathsf{N}}}
+\newcommand{\sfO}{\ensuremath{\mathsf{O}}}
+\newcommand{\sfP}{\ensuremath{\mathsf{P}}}
+\newcommand{\sfQ}{\ensuremath{\mathsf{Q}}}
+\newcommand{\sfS}{\ensuremath{\mathsf{S}}}
+\newcommand{\sfU}{\ensuremath{\mathsf{U}}}
+\newcommand{\sfX}{\ensuremath{\mathsf{X}}}
+\newcommand{\sfY}{\ensuremath{\mathsf{Y}}}
+\newcommand{\sfW}{\ensuremath{\mathsf{W}}}
+\newcommand{\sfR}{\ensuremath{\mathsf{R}}}
+\newcommand{\sfT}{\ensuremath{\mathsf{T}}}
+\newcommand{\sfZ}{\ensuremath{\mathsf{Z}}}
+
+%%%%%%%%%%%%  Special letters for Lie groups %%%%%%%%%%%%%%%%%%
+
+\newcommand{\biA}{{\mathbi{A}}}
+\newcommand{\biB}{{\mathbi{B}}}
+\newcommand{\biC}{{\mathbi{C}}}
+\newcommand{\biD}{{\mathbi{D}}}
+\newcommand{\biE}{{\mathbi{E}}}
+\newcommand{\biF}{{\mathbi{F}}}
+\newcommand{\biG}{{\mathbi{G}}}
+\newcommand{\biH}{{\mathbi{H}}}
+\newcommand{\biI}{{\mathbi{I}}}
+\newcommand{\biJ}{{\mathbi{J}}}
+\newcommand{\biK}{{\mathbi{K}}}
+\newcommand{\biL}{{\mathbi{L}}}
+\newcommand{\biM}{{\mathbi{M}}}
+\newcommand{\biN}{{\mathbi{N}}}
+\newcommand{\biO}{{\mathbi{O}}}
+\newcommand{\biP}{{\mathbi{P}}}
+\newcommand{\biQ}{{\mathbi{Q}}}
+\newcommand{\biS}{{\mathbi{S}}}
+\newcommand{\biU}{{\mathbi{U}}}
+\newcommand{\biX}{{\mathbi{X}}}
+\newcommand{\biY}{{\mathbi{Y}}}
+\newcommand{\biV}{{\mathbi{V}}}
+\newcommand{\biW}{{\mathbi{W}}}
+\newcommand{\biR}{{\mathbi{R}}}
+\newcommand{\biT}{{\mathbi{T}}}
+\newcommand{\biZ}{{\mathbi{Z}}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+\newcommand{\PSL}{\mathrm{PSL}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\def \be  {\begin{equation}}
+\def \ee  {\end{equation}}
+\def \bea {\begin{equation}\begin{aligned}}
+\def \eea {\end{aligned}\end{equation}}
+\def \ba  {\begin{eqnarray}}
+\def \ea  {\end{eqnarray}}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 2: Due at class on Oct 18}
+
+
+
+
+
+
+\section{Lorentz group}
+
+
+\subsection{}\label{1.1}
+
+
+
+Show that the generators
+$$
+J^{\mu \nu}=i\left(x^{\mu} \partial^{\nu}-x^{\nu} \partial^{\mu}\right)
+$$
+obey the Lorentz algebra
+\be\label{Lorentz-algebra}\left[J^{\mu \nu}, J^{\rho \sigma}\right]=i\left(g^{\nu \rho} J^{\mu \sigma}-g^{\mu \rho} J^{\nu \sigma}-g^{\nu \sigma} J^{\mu \rho}+g^{\mu \sigma} J^{\nu \rho}\right)~.\ee
+
+
+Find the commutation relations of $J^{\mu \nu}$ with the generators of translations $P^\rho=-i\partial^\rho$. These define the Lie algebra of
+the Poincare group (Lorentz $+$ translations).
+
+\subsection{}
+A 4-vector $V$ is transformed as $V\to \exp (-\frac{i\omega_{\mu\nu}J^{\mu\nu}}{2})V$ under a Lorentz transformation.
+Show that an infinitesimal Lorentz transformation can be written as
+$$
+-\frac{i\omega_{\mu\nu}J^{\mu\nu}}{2}=-\sum_ai\left(\theta_a L_a+\beta_a K_a\right)=\left(\begin{array}{cccc}{0} & {-\beta_{1}} & {-\beta_{2}} & {-\beta_{3}} \\ {-\beta_{1}} & {0} & {-\theta_{3}} & {\theta_{2}} \\ {-\beta_{2}} & {\theta_{3}} & {0} & {-\theta_{1}} \\ {-\beta_{3}} & {-\theta_{2}} & {\theta_{1}} & {0}\end{array}\right)
+$$
+where $K_a$ and $L_a$ generate Lorentz boosts and space-rotations, respectively.
+Rewrite the Lorentz algebra in terms of $K_a$ and $L_a$.
+
+\subsection{} Show that the matrices
+$$
+J_{a}^{+} \equiv \frac{1}{2}\left(L_{a}+i K_{a}\right), \quad J_{a}^{-} \equiv \frac{1}{2}\left(L_{a}-i K_{a}\right)
+$$
+satisfy the commutation relations
+$$
+\left[J_{a}^{+}, J_{b}^{+}\right] =i \epsilon_{abc} J_{c}^{+}~, \quad \left[J_{a}^{-}, J_{b}^{-}\right] =i \epsilon_{abc} J_{c}^{-}~, \quad \left[J_{a}^{+}, J_{b}^{-}\right] =0~.
+$$
+Therefore, the Lorentz algebra can be understood as two copies of the $\mathfrak{su}(2)$ algebra
+$$\left[s^{a}, s^{b}\right]=i \epsilon^{a b c} s^{c} $$
+where \(s^{a}=\sigma^{a} / 2,\) $(a=1,2,3)$ are a half of the Pauli matrices.
+
+
+
+
+
+\section{Clifford algebra}
+
+
+
+\subsection{}
+The gamma matrices form the Clifford algebra
+\be\label{Clifford}\left\{\gamma^{\mu}, \gamma^{\nu}\right\}=2 g^{\mu \nu}~.\ee
+Show that the generators of Lorentz transformations in the Dirac spinor representation
+$$
+S^{\mu \nu}=\frac{i}{4}\left[\gamma^{\mu}, \gamma^{\nu}\right]
+$$
+satisfy the Lorentz algebra \eqref{Lorentz-algebra}. Compute the commutation relation $[S^{\mu\nu},\gamma^\rho]$, and compare it with Problem \ref{1.1}.
+
+\subsection{}
+Use the Clifford algebra \eqref{Clifford} to show that \(\gamma^{5}=i \gamma^{0} \gamma^{1} \gamma^{2} \gamma^{3}\) obeys
+$$
+\left\{\gamma^{5}, \gamma^{\mu}\right\}=0, \quad\left(\gamma^{5}\right)^{2}=1~.
+$$
+Show that the chirality projection operators
+$$P_{L}=\frac{1-\gamma^{5}}{2}, \quad P_{R}=\frac{1+\gamma^{5}}{2}$$
+satisfy \(P_{L}^{2}=P_{L}, \quad P_{R}^{2}=P_{R}, \quad P_{L} P_{R}=P_{R} P_{L}=0\).
+
+\subsection{}
+Show that when $m=0$, $\psi \rightarrow e^{i \theta \gamma^{5}} \psi$ is a symmetry of the Dirac Lagrangian, which is called the \textbf{axial symmetry}. Find the corresponding Noether  current.
+
+
+\subsection{}
+Check that the basis of the gamma matrices chosen in Peskin-Schroeder
+\be\label{gamma-convention}
+\gamma^{0}=\left(\begin{array}{cc}0&1 \\ 1&0\end{array}\right) \quad \gamma^{i}=\left(\begin{array}{cc}{0} & {\sigma^{i}} \\ {-\sigma^{i}}&0\end{array}\right)
+\ee
+obey the Clifford algebra \eqref{Clifford}. Express $\gamma^5$ in this basis.
+
+\section{Magnetic moment from Dirac equation}
+The Dirac equation in the presence of the electromagnetic field is
+$$
+(i \slashed{D}-m) \psi=0
+$$
+where $D_\mu=\partial_\mu+ieA_\mu$. Using the convention \eqref{gamma-convention} of the gamma matrices in Peskin-Schroeder, show that non-relativistic limit of the equation for the plane wave
+$$\psi(x)=\begin{pmatrix}u_L(p)\\ u_R(p)\end{pmatrix} e^{-ip\cdot x}$$
+is
+$$
+H_{\textrm{nr}}=\frac{1}{2 m} \boldsymbol{\sigma} \cdot(\mathbf{p}-e \mathbf{A}) \boldsymbol{\sigma} \cdot(\mathbf{p}-e \mathbf{A})+e A^0
+$$
+Rewrite this Hamiltonian in the following form
+$$
+H_{\textrm{nr}}=\frac{1}{2 m}(\mathbf{p}-e \mathbf{A})^{2}-g \frac{e}{2 m} \mathbf{s} \cdot \mathbf{B}+e A^0
+$$
+and read off the $g$-factor. Here $\mathbf{s}=\boldsymbol{\sigma}/2$.
+
+
+
+\section{Spinor identities}
+
+\subsection{}
+In the lecture, we see that the plane wave solutions to the Dirac equation are given by
+$$
+\psi=u_s(p) e^{-i p\cdot x}~, \quad \psi=v_s(p) e^{i p\cdot x}~,
+$$
+where
+$$
+u_s(p)=\begin{pmatrix}
+\sqrt{ p \cdot \sigma} \xi_s \\ \sqrt{ p \cdot\overline  \sigma} \xi_s
+\end{pmatrix}~, \quad  v_s(p)=\begin{pmatrix}
+\sqrt{ p \cdot \sigma} \xi_s \\ -\sqrt{ p \cdot\overline  \sigma} \xi_s
+\end{pmatrix}~.
+$$
+Taking the Weyl spinor basis as $\xi^\dagger_s \xi_{s'}=\delta_{ss'}$, show that if we sum over polarization states of the spinor, we have
+$$
+\sum_{s} u_{s}(p) \overline{u}_{s}(p)=\slashed{p}+m ~,\qquad \sum_{s} v_{s}(p) \overline{v}_{s}(p)=\slashed{p}-m ~.$$
+Note that the formulas implicitly involves the spinor indices, which can be explict as
+$$
+\sum_{s} u_{s a}(p) \overline{u}_{s b}(p)=\gamma_{a b}^{\mu} p_{\mu}+m \delta_{ab}~.
+$$
+
+\subsection{}
+Show
+$\overline u_{s}(p) \gamma^{\mu} u_{s^{\prime}}(p)=2 p^{\mu} \delta_{s s^{\prime}}$.
+This is a simple version of the \textbf{Gordon identity}.
+
+\end{document}

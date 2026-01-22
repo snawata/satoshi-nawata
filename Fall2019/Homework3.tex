@@ -1,0 +1,446 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{slashed}
+\usepackage{physics}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{subfigure}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+
+
+%\hypersetup{colorlinks=true,urlcolor=darkred,linkcolor=darkred,citecolor=darkred}
+%\usepackage{verbatim}
+\usepackage[letterpaper,margin=0.9in,headheight=15pt]{geometry}
+\usepackage{mathpazo}
+\usepackage{authblk}
+\usepackage{empheq}
+\usepackage{feynmp}
+\usepackage{graphicx}
+\usepackage[matrix,arrow]{xy}
+\usepackage{young}
+\usepackage[vcentermath]{youngtab}
+\usepackage{slashed}
+%\usepackage{fontds}
+%
+\usepackage{bbm}
+\usepackage{youngtab}
+\usepackage{rotfloat}
+\usepackage{stmaryrd}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{tikz-cd}
+\usepackage{thmtools}
+\usepackage{dashrule}
+\usepackage[missing=]{gitinfo2}
+\usepackage{fancyhdr}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{subfiles}
+\usepackage{simplewick}
+
+\usepackage[utf8]{inputenc}
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+
+
+
+
+%
+%---------- mathcal font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+
+%%%%%%%%%%%% mathsf%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\sfA}{\ensuremath{\mathsf{A}}}
+\newcommand{\sfB}{\ensuremath{\mathsf{B}}}
+\newcommand{\sfC}{\ensuremath{\mathsf{C}}}
+\newcommand{\sfD}{\ensuremath{\mathsf{D}}}
+\newcommand{\sfE}{\ensuremath{\mathsf{E}}}
+\newcommand{\sfF}{\ensuremath{\mathsf{F}}}
+\newcommand{\sfG}{\ensuremath{\mathsf{G}}}
+\newcommand{\sfH}{\ensuremath{\mathsf{H}}}
+\newcommand{\sfJ}{\ensuremath{\mathsf{J}}}
+\newcommand{\sfK}{\ensuremath{\mathsf{K}}}
+\newcommand{\sfL}{\ensuremath{\mathsf{L}}}
+\newcommand{\sfM}{\ensuremath{\mathsf{M}}}
+\newcommand{\sfN}{\ensuremath{\mathsf{N}}}
+\newcommand{\sfO}{\ensuremath{\mathsf{O}}}
+\newcommand{\sfP}{\ensuremath{\mathsf{P}}}
+\newcommand{\sfQ}{\ensuremath{\mathsf{Q}}}
+\newcommand{\sfS}{\ensuremath{\mathsf{S}}}
+\newcommand{\sfU}{\ensuremath{\mathsf{U}}}
+\newcommand{\sfX}{\ensuremath{\mathsf{X}}}
+\newcommand{\sfY}{\ensuremath{\mathsf{Y}}}
+\newcommand{\sfW}{\ensuremath{\mathsf{W}}}
+\newcommand{\sfR}{\ensuremath{\mathsf{R}}}
+\newcommand{\sfT}{\ensuremath{\mathsf{T}}}
+\newcommand{\sfZ}{\ensuremath{\mathsf{Z}}}
+
+%%%%%%%%%%%%  Special letters for Lie groups %%%%%%%%%%%%%%%%%%
+
+\newcommand{\biA}{{\mathbi{A}}}
+\newcommand{\biB}{{\mathbi{B}}}
+\newcommand{\biC}{{\mathbi{C}}}
+\newcommand{\biD}{{\mathbi{D}}}
+\newcommand{\biE}{{\mathbi{E}}}
+\newcommand{\biF}{{\mathbi{F}}}
+\newcommand{\biG}{{\mathbi{G}}}
+\newcommand{\biH}{{\mathbi{H}}}
+\newcommand{\biI}{{\mathbi{I}}}
+\newcommand{\biJ}{{\mathbi{J}}}
+\newcommand{\biK}{{\mathbi{K}}}
+\newcommand{\biL}{{\mathbi{L}}}
+\newcommand{\biM}{{\mathbi{M}}}
+\newcommand{\biN}{{\mathbi{N}}}
+\newcommand{\biO}{{\mathbi{O}}}
+\newcommand{\biP}{{\mathbi{P}}}
+\newcommand{\biQ}{{\mathbi{Q}}}
+\newcommand{\biS}{{\mathbi{S}}}
+\newcommand{\biU}{{\mathbi{U}}}
+\newcommand{\biX}{{\mathbi{X}}}
+\newcommand{\biY}{{\mathbi{Y}}}
+\newcommand{\biV}{{\mathbi{V}}}
+\newcommand{\biW}{{\mathbi{W}}}
+\newcommand{\biR}{{\mathbi{R}}}
+\newcommand{\biT}{{\mathbi{T}}}
+\newcommand{\biZ}{{\mathbi{Z}}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+\newcommand{\PSL}{\mathrm{PSL}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\def \be  {\begin{equation}}
+\def \ee  {\end{equation}}
+\def \bea {\begin{equation}\begin{aligned}}
+\def \eea {\end{aligned}\end{equation}}
+\def \ba  {\begin{eqnarray}}
+\def \ea  {\end{eqnarray}}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 3: Due at class on Nov 1}
+
+
+\section{More practice with gamma matrices}
+Show the following identities without using explicit representation of the matrices:
+$$
+\operatorname{Tr}\left(\gamma^{\mu} \gamma^{\nu}\right)=4 g^{\mu \nu}
+$$
+
+$$
+\operatorname{Tr}\left(\gamma^{\mu} \gamma^{\nu} \gamma^{\kappa} \gamma^{\lambda}\right)=4 (g^{\mu \nu} g^{\kappa \lambda}-g^{\mu \kappa} g^{\nu \lambda}+g^{\mu \lambda} g^{\nu \kappa})$$
+
+$$ \operatorname{Tr}\left(\gamma^{5} \gamma^{\mu} \gamma^{\nu} \gamma^{\kappa} \gamma^{\lambda}\right)=-4 i \epsilon^{\mu \nu \kappa \lambda}
+$$
+
+
+$$
+\operatorname{Tr}\left(\gamma^{\mu_{1}} \gamma^{\mu_{2}} \ldots \gamma^{\mu_{2 n+1}}\right)=0
+$$
+
+
+
+
+\section{Feymann diagrams for simple integrals (Alex Maloney's homework)}
+
+In this problem we will consider a toy version of version of scalar \(\phi^{4}\) theory, where instead of
+computing a full path integral we compute a single integral:
+$$
+Z(\lambda)=\int_{-\infty}^{\infty} d \phi \exp \left\{-\frac{1}{2} \phi^{2}-\frac{\lambda}{4 !} \phi^{4}\right\}
+$$
+where \(\phi\) is just a real number, rather than a field. This is the path integral for ``0 -dimensional scalar \(\phi^{4}\)
+field theory".
+
+\subsection{}\label{a}
+Compute $Z(0)$, $Z(0.01)$, $Z(0.1)$, $Z(0.4)$, $Z(1)$, $Z(5)$ numerically by using your favourite numerical computing program. Ask or collaborate with your friends if you don't have one.
+
+\subsection{}
+Replace \(\exp \left(-\lambda \phi^{4} / 24\right)\)
+with its series expansion in \(\lambda\). Find the complete series expansion
+in \(\lambda\) in closed form:
+\be\label{eqn1}
+Z(\lambda)=\sum_{n=0}^{\infty} c_{n} \lambda^{n}
+\ee
+and find an explicit expression for \(c_{n}\). (Do this by expanding the exponent, exchanging
+orders of summation and integration, and doing the integral for each term in the series.)
+
+\subsection{}\label{b}
+Let us now develop the Feynman diagram expansion for \(Z(\lambda) .\)
+Explain how each \(c_{n}\) could be computed by using (appropriately modified) Feynman
+rules for our simple theory. Describe the Feynman rules for this theory and draw the
+appropriate ``Feynman Diagrams" for the first few terms \(c_{n} .\) Check that this matches
+the answer you got in Problem \ref{b} for the first few \(c_{n} .\) Note that we are computing
+the analog of ``vacuum" diagrams in QFT.
+
+\subsection{}
+Evaluate the order \(\lambda^{0}\) and \(\lambda^{1}\) terms in this series numerically for the values of \(\lambda\) given in
+Problem \ref{a}. For which values of \(\lambda\) does the order \(\lambda^{1}\) term help improve the accuracy of our
+perturbative expansion for \(Z(\lambda) ?\)
+
+
+
+\subsection{}
+What happens to the integral \(Z(\lambda)\) when \(\lambda\) is negative? Conclude from your answer that
+the radius of convergence (in \(\lambda)\) of the series you developed in Problem \ref{b} must be zero.
+
+\subsection{}\label{c}
+Using Stirling's approximation, find the asymptotic form of the \(c_{n}\) for large \(n .\)
+
+Now consider the individual terms \(\lambda^{n} c_{n}\) in the series for \(Z(\lambda) .\) Show that, for fixed \(\lambda\),
+these terms will decrease as function of \(n\) until they reach a minimum at some critical
+value of \(\left.n \text { (call it } n_{o}(\lambda)\right),\) after which they start increasing until they diverge at \(n \rightarrow \infty\).
+Use your approximate form for \(c_{n}\) to estimate \(n_{0}(\lambda)\) for small \(\lambda .\) This shows explicitly
+that the radius of convergence of this series is zero.
+
+Now, show that the smallest term in the series is
+$$
+\lambda^{n_{0}} c_{n_{0}} \sim e^{f(\lambda)}
+$$
+where \(f(\lambda)\) is a function you should determine. You need only determine the leading
+behaviour of \(f(\lambda)\) at small \(\lambda .\)
+
+\subsection{}
+Based on this, you might conclude that the series in Problem \ref{b} is useless. But that is not
+the case at all; it still contains lots of useful information about \(Z(\lambda) !\)
+The expansion
+$$
+e^{-x}=\sum_{m=0}^{\infty} \frac{(-1)^{m}}{m !} x^{m}=1-x+\frac{x^{2}}{2}-\frac{x^{3}}{6}+\ldots
+$$
+has the following property for \(x>0:\) the partial sums
+$$
+f_{n}(x) \equiv \sum_{m=0}^{n} \frac{(-1)^{m}}{m !} x^{m}
+$$
+are alternately strict over-estimates and strict under-estimates of the actual function;
+that is, for \(x>0, f_{0}(x)=1>e^{-x}, f_{1}(x)=(1-x)<e^{-x}, f_{2}(x)=\left(1-x+x^{2} / 2\right)>e^{-x}\)
+and so forth with the \(<,>\) alternating.
+
+Use this property to show that the partial sums found above (i.e. Eq. \eqref{eqn1} with \(n\) cut off at
+\(0,1,2,3, \ldots),\) are alternately over-estimates and under-estimates of \(Z(\lambda) .\) Therefore, the
+true answer \(Z(\lambda)\) always lies between neighbouring terms in the series of partial sums.
+Use this property to find a bound for \(Z(\lambda)\) at \(\lambda=1,\) by evaluating alternating terms
+until they start to diverge. How tight is the bound? Repeat for \(Z(0.4)\) and \(Z(0.1)\). How
+does this compare with your numerical answer for \(Z\)?
+
+Argue that, as \(\lambda\) gets smaller and smaller, one can use the Feynman diagram expansion
+to place tighter and tighter bounds on \(Z(\lambda) .\) Estimate for how tight the bound will be
+(i.e. how big the error terms will be) as a function of \(\lambda,\) when \(\lambda\) is small. You may find
+the function \(f(\lambda)\) in Problem \ref{c} useful.
+
+We conclude that, while the series does not converge, it gives us very good information
+about the value of \(Z(\lambda) .\) A series with this property - zero radius of convergence but the
+ability to give good information near the origin - is called an \emph{asymptotic series}. Feynman
+diagram expansions in QFT typically only give asymptotic series, rather than convergent
+series.
+
+
+
+
+\end{document}

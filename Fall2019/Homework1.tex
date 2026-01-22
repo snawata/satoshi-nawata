@@ -1,0 +1,428 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+
+\usepackage{physics}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{subfigure}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+
+
+%\hypersetup{colorlinks=true,urlcolor=darkred,linkcolor=darkred,citecolor=darkred}
+%\usepackage{verbatim}
+\usepackage[letterpaper,margin=0.9in,headheight=15pt]{geometry}
+\usepackage{mathpazo}
+\usepackage{authblk}
+\usepackage{empheq}
+\usepackage{feynmp}
+\usepackage{graphicx}
+\usepackage[matrix,arrow]{xy}
+\usepackage{young}
+\usepackage[vcentermath]{youngtab}
+\usepackage{slashed}
+%\usepackage{fontds}
+%
+\usepackage{bbm}
+\usepackage{youngtab}
+\usepackage{rotfloat}
+\usepackage{stmaryrd}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{tikz-cd}
+\usepackage{thmtools}
+\usepackage{dashrule}
+\usepackage[missing=]{gitinfo2}
+\usepackage{fancyhdr}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{subfiles}
+\usepackage{simplewick}
+
+\usepackage[utf8]{inputenc}
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+
+
+
+
+%
+%---------- mathcal font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+
+%%%%%%%%%%%% mathsf%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\sfA}{\ensuremath{\mathsf{A}}}
+\newcommand{\sfB}{\ensuremath{\mathsf{B}}}
+\newcommand{\sfC}{\ensuremath{\mathsf{C}}}
+\newcommand{\sfD}{\ensuremath{\mathsf{D}}}
+\newcommand{\sfE}{\ensuremath{\mathsf{E}}}
+\newcommand{\sfF}{\ensuremath{\mathsf{F}}}
+\newcommand{\sfG}{\ensuremath{\mathsf{G}}}
+\newcommand{\sfH}{\ensuremath{\mathsf{H}}}
+\newcommand{\sfJ}{\ensuremath{\mathsf{J}}}
+\newcommand{\sfK}{\ensuremath{\mathsf{K}}}
+\newcommand{\sfL}{\ensuremath{\mathsf{L}}}
+\newcommand{\sfM}{\ensuremath{\mathsf{M}}}
+\newcommand{\sfN}{\ensuremath{\mathsf{N}}}
+\newcommand{\sfO}{\ensuremath{\mathsf{O}}}
+\newcommand{\sfP}{\ensuremath{\mathsf{P}}}
+\newcommand{\sfQ}{\ensuremath{\mathsf{Q}}}
+\newcommand{\sfS}{\ensuremath{\mathsf{S}}}
+\newcommand{\sfU}{\ensuremath{\mathsf{U}}}
+\newcommand{\sfX}{\ensuremath{\mathsf{X}}}
+\newcommand{\sfY}{\ensuremath{\mathsf{Y}}}
+\newcommand{\sfW}{\ensuremath{\mathsf{W}}}
+\newcommand{\sfR}{\ensuremath{\mathsf{R}}}
+\newcommand{\sfT}{\ensuremath{\mathsf{T}}}
+\newcommand{\sfZ}{\ensuremath{\mathsf{Z}}}
+
+%%%%%%%%%%%%  Special letters for Lie groups %%%%%%%%%%%%%%%%%%
+
+\newcommand{\biA}{{\mathbi{A}}}
+\newcommand{\biB}{{\mathbi{B}}}
+\newcommand{\biC}{{\mathbi{C}}}
+\newcommand{\biD}{{\mathbi{D}}}
+\newcommand{\biE}{{\mathbi{E}}}
+\newcommand{\biF}{{\mathbi{F}}}
+\newcommand{\biG}{{\mathbi{G}}}
+\newcommand{\biH}{{\mathbi{H}}}
+\newcommand{\biI}{{\mathbi{I}}}
+\newcommand{\biJ}{{\mathbi{J}}}
+\newcommand{\biK}{{\mathbi{K}}}
+\newcommand{\biL}{{\mathbi{L}}}
+\newcommand{\biM}{{\mathbi{M}}}
+\newcommand{\biN}{{\mathbi{N}}}
+\newcommand{\biO}{{\mathbi{O}}}
+\newcommand{\biP}{{\mathbi{P}}}
+\newcommand{\biQ}{{\mathbi{Q}}}
+\newcommand{\biS}{{\mathbi{S}}}
+\newcommand{\biU}{{\mathbi{U}}}
+\newcommand{\biX}{{\mathbi{X}}}
+\newcommand{\biY}{{\mathbi{Y}}}
+\newcommand{\biV}{{\mathbi{V}}}
+\newcommand{\biW}{{\mathbi{W}}}
+\newcommand{\biR}{{\mathbi{R}}}
+\newcommand{\biT}{{\mathbi{T}}}
+\newcommand{\biZ}{{\mathbi{Z}}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+\newcommand{\PSL}{\mathrm{PSL}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\def \be  {\begin{equation}}
+\def \ee  {\end{equation}}
+\def \bea {\begin{equation}\begin{aligned}}
+\def \eea {\end{aligned}\end{equation}}
+\def \ba  {\begin{eqnarray}}
+\def \ea  {\end{eqnarray}}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 1: Due at class on Sep 27}
+\section{Lagrangian and symmetry}
+\subsection{}Let us consider the Lagrangian of the electromagnetic field
+$$
+\mathcal{L}_{\textrm{EM}}=-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}-A_\mu J^\mu
+$$
+where $F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu$ and $J_\mu$ is a 4-vector.  Derive the Euler-Lagrange equations for \(A_{\mu}(x)\). Write the equations in
+standard form of the Maxwell's equations by identifying \(E^{i}=-F^{0 i}\) and \(\epsilon^{i j k} B^{k}=-F^{i j} .\)
+
+\subsection{}\label{complex-scalar} Show that the Lagrangian of a complex scalar field
+$$
+\mathcal{L}_{\textrm{cpx scalar}}=\partial_{\mu} \phi^{*}(x) \partial^{\mu} \phi(x)-m^{2} \phi^{*}(x) \phi(x)
+$$
+is invariant under the global \(\U(1)\) symmetry
+$$
+\phi(x) \rightarrow e^{i \alpha} \phi(x), \quad \phi^{*}(x) \rightarrow e^{-i \alpha} \phi^{*}(x), \quad \alpha \in \mathbb{R}
+$$
+Find the corresponding Noether current.
+
+
+
+\subsection{} Let us consider the Lagrangian of a complex scalar field coupled to electromagnetic field
+$$
+\mathcal{L}=\left(D_{\mu} \phi\right)^{*} D^{\mu} \phi-m^{2} \phi^{*} \phi-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}
+$$
+ where \(D_{\mu}=\partial_{\mu}+i e A_{\mu} .\) Find the energy momentum \(T^{\mu \nu}\).
+
+ Show that \(\mathcal{L}\) is invariant under the $\U(1)$ gauge (sometimes called \textbf{local}) symmetry
+\begin{align}\nonumber
+\phi(x) & \rightarrow e^{i \alpha(x)} \phi(x) \\ A_{\mu}(x) & \rightarrow A_{\mu}(x)-\frac1e \partial_{\mu} \alpha(x)\nonumber
+\end{align}
+Note that $\alpha$ for the \textbf{global} \(\U(1)\) symmetry in Problem \ref{complex-scalar} does not depend on \(x .\)
+
+
+
+
+
+\section{Complex scalar field}
+
+Let us consider quantum theory of a complex scalar field in Problem \ref{complex-scalar}.
+
+\subsection{} The mode expansion of the complex scalar  field \(\phi(\mathbf{x})\) is
+$$
+\begin{aligned} \phi(\mathbf{x}) &=\int \frac{d^{3} p}{2 \pi^{3}} \frac{1}{\sqrt{2 E_{\mathbf{p}}}}\left(a_{\mathbf{p}} e^{i \mathbf{p} \cdot \mathbf{x}}+b_{\mathbf{p}}^{\dagger} e^{-i \mathbf{p} \cdot \mathbf{x}}\right) \\ \phi^*(\mathbf{x})&=\int \frac{d^{3} p}{2 \pi^{3}} \frac{1}{\sqrt{2 E_{\mathbf{p}}}}\left(b_{\mathbf{p}} e^{i \mathbf{p} \cdot \mathbf{x}}+a_{\mathbf{p}}^{\dagger} e^{-i \mathbf{p} \cdot \mathbf{x}}\right) \end{aligned}~.
+$$
+Imposing the canonical commutation relations
+$$[\phi(\mathbf{x}), \pi(\mathbf{y})]=i \delta^{(3)}(\mathbf{x}-\mathbf{y})=[\phi^*(\mathbf{x}), \pi^*(\mathbf{y})]~,$$
+and the others vanish, derive the commutation relations of the creation and annihilation operators \(a_{\mathbf{p}}, a_{\mathbf{p}}^{\dagger}, b_{\mathbf{p}}, b_{\mathbf{p}}^{\dagger}~.\)
+
+\subsection{}
+Show that the Noether charge \(Q\) for the global \(\U(1)\) symmetry in Problem \ref{complex-scalar} can be expressed as follows in terms of the
+modes of \(\phi :\)
+$$
+Q=-\int \frac{d^{3} p}{(2 \pi)^{3}}\left(a^{\dagger}_{\mathbf{p}} a_{\mathbf{p}}-b^{\dagger}_{\mathbf{p}} b_{\mathbf{p}}\right)
+$$
+after dropping a constant term.
+Show that the state \(a^{\dagger}_{\mathbf{p}}|0\rangle\) has the $\U(1)$ charge \(- 1\) and the state \(b^{\dagger}_{\mathbf{p}}|0\rangle\) has the $\U(1)$ charge \(+1\).
+
+
+
+\subsection{}
+Let us consider the operators in the Heisenberg picture
+$$
+\begin{aligned} \phi(x) &=\phi(\mathbf{x},t) =\int \frac{\mathrm{d}^{3} p}{(2 \pi)^{3}} \frac{1}{\sqrt{2 E_{\mathbf{p}}}}\left(a_{\mathbf{p}} e^{-i p \cdot x}+b_{\mathbf{p}}^{\dagger} e^{i p \cdot x}\right) \\ \phi^{*}(x) &=\phi^{*}(\mathbf{x},t)=\int \frac{\mathrm{d}^{3} p}{(2 \pi)^{3}} \frac{1}{\sqrt{2 E_{\mathbf{p}}}}\left(b_{\mathbf{p}} e^{-i p x}+a_{\mathbf{p}}^{\dagger} e^{i p \cdot x}\right) \end{aligned}
+$$
+Using the commutation relations of the creation and annihilation operators to calculate
+\(\langle 0|T[\phi(x) \phi(y)]| 0\rangle,\left\langle 0\left|T\phi^{*}(x) \phi^{*}(y)\right| 0\right\rangle\), and \(\left\langle 0\left|T\phi(x) \phi^{*}(y)\right| 0\right\rangle\).
+Compare with the Feynman propagator the real scalar field.
+
+
+\section{Propagator}
+The Feynman propagator of a real scalar field in momentum space is given by
+$$
+D_{F}(x-y)=\langle 0|T \phi(x) \phi(y)| 0\rangle=\int \frac{d^{4} p}{(2 \pi)^{4}} \frac{i}{p^{2}-m^{2}+i \epsilon} e^{-i p \cdot(x-y)}
+$$
+where the \(i \epsilon\) is there to ensure that the correct poles are included in the \(p_{0}\) integral.
+Compute \(D_{F}\) explicitly and write it as a function of the Lorentz-invariant length \(s^{2}=\)
+\((x-y)_{\mu}(x-y)^{\mu}\) in terms of the modified Hankel and
+Bessel functions in the limit \(\epsilon \rightarrow 0\):
+\bea
+H_{n}^{(1)}(z)&= \frac{-2i}{\sqrt{\pi}\left(n-\frac{1}{2}\right) !} \left(-\frac{1}{2} z\right)^{n}\int_{1}^{\infty-i \varepsilon} e^{-i z x}\left(x^{2}-1\right)^{n-1 / 2} dx\cr
+K_{n}(z)&=\frac{\sqrt{\pi}}{\left(n-\frac{1}{2}\right) !}\left(\frac{1}{2} z\right)^{n} \int_{1}^{\infty} e^{-z x}\left(x^{2}-1\right)^{n-1 / 2} d x \nonumber
+\eea
+where \(K_{n}(z)=i^{n+1}(\pi / 2) H_{n}^{(1)}(i z)\).
+
+Discuss the behaviors of the propagator in the following regimes by using the properties of the modified Hankel and
+Bessel functions. (See \href{https://en.wikipedia.org/wiki/Bessel_function}{Wikipedia}.)
+\begin{itemize}
+    \item  \(s \rightarrow 0 \)
+    \item \(s^{2}\) is large and positive (timelike separation)
+    \item  \(s^{2}\) is large and negative (spacelike separation)
+    \item \(m^{2} \rightarrow 0\)
+    \end{itemize}
+
+
+
+
+
+
+\end{document}
