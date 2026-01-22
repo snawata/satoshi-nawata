@@ -1,0 +1,998 @@
+ \documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{jheppub}
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{gensymb}
+\usepackage{simplewick}
+\usepackage{feynmp-auto}
+\usepackage{wrapfig}
+
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\lambdabda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%
+%---------- mathbf font --------------------------------
+%
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+\newcommand{\bfa}{\ensuremath{\mathbf{a}}}
+\newcommand{\bfb}{\ensuremath{\mathbf{b}}}
+\newcommand{\bfc}{\ensuremath{\mathbf{c}}}
+\newcommand{\bfd}{\ensuremath{\mathbf{d}}}
+\newcommand{\bfe}{\ensuremath{\mathbf{e}}}
+\newcommand{\bff}{\ensuremath{\mathbf{f}}}
+\newcommand{\bfg}{\ensuremath{\mathbf{g}}}
+\newcommand{\bfh}{\ensuremath{\mathbf{h}}}
+\newcommand{\bfi}{\ensuremath{\mathbf{i}}}
+\newcommand{\bfj}{\ensuremath{\mathbf{j}}}
+\newcommand{\bfk}{\ensuremath{\mathbf{k}}}
+\newcommand{\bfl}{\ensuremath{\mathbf{l}}}
+\newcommand{\bfm}{\ensuremath{\mathbf{m}}}
+\newcommand{\bfn}{\ensuremath{\mathbf{n}}}
+\newcommand{\bfo}{\ensuremath{\mathbf{o}}}
+\newcommand{\bfp}{\ensuremath{\mathbf{p}}}
+\newcommand{\bfq}{\ensuremath{\mathbf{q}}}
+\newcommand{\bfr}{\ensuremath{\mathbf{r}}}
+\newcommand{\bfs}{\ensuremath{\mathbf{s}}}
+\newcommand{\bft}{\ensuremath{\mathbf{t}}}
+\newcommand{\bfu}{\ensuremath{\mathbf{u}}}
+\newcommand{\bfv}{\ensuremath{\mathbf{v}}}
+\newcommand{\bfw}{\ensuremath{\mathbf{w}}}
+\newcommand{\bfx}{\ensuremath{\mathbf{x}}}
+\newcommand{\bfy}{\ensuremath{\mathbf{y}}}
+\newcommand{\bfz}{\ensuremath{\mathbf{z}}}
+
+
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+\def\tl{\tilde}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+\newcommand\bz{{\bar{z}}}
+
+
+\newcommand {\comm} [2] {\mbox {$\left[ #1, #2 \right]$}}
+\newcommand {\acomm} [2] {\mbox {$\left\{ #1, #2 \right\}$}}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+\newcommand {\nod} [1] {\mbox {$:#1\!:$}}
+\newcommand	{\abs}	[1] {{\left| #1 \right|}}
+\newcommand {\brac} [1]	{{\left\{	#1 \right\}}}
+
+\def\ap{{\alpha^\prime}}
+\def\zb{\bar{z}}
+
+
+\newcommand{\Gam}[1]{{\Gamma^{#1}}}
+
+\title{Homework Eight}
+
+\author{R.K.Tao}
+
+\begin{document}
+	\date{}
+	
+%	\maketitle
+	
+	\section{Bosonic string on a torus}
+	
+	\subsection{}
+	
+	The torus partition function on a circle $S^1$ of Radius R is given by
+	\begin{equation}
+	Z^{25}=\Tr q^{L_0-\frac{1}{24}} \bar{q}^{\bar{L}_0-\frac{1}{24}}
+	\end{equation}
+    $L_0$ and $\bar{L}_0$ are zero mode virasoro generators
+    \begin{align}
+    L_0 &= \frac{\alpha'{p_L}^2}{4}+\sum_{n=1}^{\infty}  \hat{\alpha}_{-n}\hat{\alpha}_{n}\\
+    \bar{L}_0 &= \frac{\alpha'{p_R}^2}{4}+\sum_{n=1}^{\infty}  \hat{\tilde{\alpha}}_{-n}\hat{\tilde{\alpha}}_{n}
+    \end{align} 
+    with right and left momentum
+    \begin{align}
+    p_L &= \frac{n}{R}+\frac{wR}{\alpha'}\\
+    p_R &= \frac{n}{R}-\frac{wR}{\alpha'}
+    \end{align}
+    Then we can express $Z^{25}$ in terms of Dedekind $\eta$ function
+    \begin{align}
+    Z^{25}&=(q\bar{q})^{-\frac{1}{24}}
+      \Tr q^{\frac{\alpha'{p_L}^2}{4}+\sum_{n=1}^{+\infty}  \hat{\alpha}_{-n}\hat{\alpha}_{n}} \bar{q}^{\frac{\alpha'{p_R}^2}{4}+\sum_{n=1}^{+\infty}  \hat{\tilde{\alpha}}_{-n}\hat{\tilde{\alpha}}_{n}}\notag\\
+    &=(q\bar{q})^{-\frac{1}{24}} 
+      \sum_{n,w=-\infty}^{+\infty}q^{\frac{\alpha'{p_L}^2}{4}}\bar{q}^{\frac{\alpha'{p_R}^2}{4}}
+      \sum_{N_n,\widetilde{N}_n=0}^{+\infty}q^{nN_n}\bar{q}^{n\widetilde{N}_n}\notag\\
+    &=(q\bar{q})^{-\frac{1}{24}} 
+      \sum_{n,w=-\infty}^{+\infty}q^{\frac{\alpha'{p_L}^2}{4}}\bar{q}^{\frac{\alpha'{p_R}^2}{4}}
+      \prod_{n=1}^{+\infty}\abs{1-q^n}^{-2}\notag\\
+    &= \abs{\eta(q)}^{-2}
+      \sum_{n,w=-\infty}^{+\infty}q^{\frac{\alpha'{p_L}^2}{4}}\bar{q}^{\frac{\alpha'{p_R}^2}{4}}
+    \end{align}
+    The partition function for the non-compact space $\mathbb{R}^{1,24}$
+    \begin{equation}
+    Z^{1,24} = \text{const} \times \abs{\eta(q)}^{-46}
+    \end{equation}
+    The matter part contributes $\abs{\eta(q)}^{-50}$(25 dimension), and the ghost part contribute $\abs{\eta(q)}^4$ as usual. 
+    
+    To recover each mass formula term. We need expand the whole partion function.
+    \begin{align}
+    Z^{1,24}Z^{25} & = \abs{\eta(q)}^{-46}
+      \abs{\eta(q)}^{-2}
+      \sum_{n,w=-\infty}^{+\infty}q^{\frac{\alpha'{p_L}^2}{4}}\bar{q}^{\frac{\alpha'{p_R}^2}{4}}\notag\\
+    &=\big[(q\bar{q})^{-\frac{1}{24}}
+      \prod_{n=1}^{+\infty}(1-q^n)^{-1}
+      (1-\bar{q  }^n)^{-1}\big]^{24}
+      \sum_{n,w=-\infty}^{+\infty}q^{\frac{\alpha'{p_L}^2}{4}}\bar{q}^{\frac{\alpha'{p_R}^2}{4}}\notag\\
+    &=\big[(q\bar{q})^{-\frac{1}{24}}
+      \prod_{n=1}^{+\infty}
+      \sum_{N_n=0}^{+\infty}q^{nN_n}
+      \sum_{\widetilde{N}_n=0}^{+\infty}\bar{q}^{n\widetilde{N}_n}
+      \big]^{24}
+      \sum_{n,w=-\infty}^{+\infty}q^{\frac{\alpha'{p_L}^2}{4}}\bar{q}^{\frac{\alpha'{p_R}^2}{4}}\notag\\
+    &=\sum_{N_n=0}^{+\infty}
+      \sum_{\tilde{N}_n=0}^{+\infty}
+      \sum_{n,w=-\infty}^{+\infty}
+      q^{\frac{\alpha'{p_L}^2}{4}-1+\sum_{n=1}^{\infty}24nN_n}
+      \bar{q}^{\frac{\alpha'{p_R}^2}{4}-1+\sum_{n=1}^{\infty}24n\widetilde{N}_n}
+    \end{align}
+    The number of state: Pochinski (1.3.37)
+    \begin{equation}
+    N = \sum_{2}^{D-1}\sum_{n=1}^{+\infty}nN_{im}
+    \end{equation}
+    Where D is dimension. Rewrite the partition function
+    \begin{equation}
+    Z^{1,24}Z^{25}=
+      \sum_{N_n=0}^{+\infty}
+      \sum_{\widetilde{N}_n=0}^{+\infty}
+      \sum_{n,w=-\infty}^{+\infty}
+      q^{\frac{\alpha'{p_L}^2}{4}-1+N}
+      \bar{q}^{\frac{\alpha'{p_R}^2}{4}-1+\widetilde{N}}
+    \end{equation} 
+    For each term, which means for each fixed $N_n$,$\widetilde{N}_n$,$n$ and $w$, it should be real which gives the level matching conditon
+    \begin{align}
+    0 &=\frac{\alpha'p_L^2}{4}+N - \frac{\alpha'p_R^2}{4}-\tilde{N}\notag\\
+      &=\frac{\alpha'}{4}\times\frac{4nw}{\alpha'}+N-\widetilde{N}\notag\\
+      &= nw+N-\widetilde{N}
+    \end{align}
+    Which is the desired level matching condition.
+    The partition function now writes
+    \begin{align}
+    Z^{1,24}Z^{25}&=
+      \sum_{N_n=0}^{+\infty}
+      \sum_{\widetilde{N}_n=0}^{+\infty}
+      \sum_{n,w=-\infty}^{+\infty}
+      \abs{q}^{\frac{\alpha'{p_L}^2}{4}-1+N+\frac{\alpha'{p_R}^2}{4}-1+\widetilde{N}}\notag\\
+    &=\sum_{N_n=0}^{+\infty}
+      \sum_{\widetilde{N}_n=0}^{+\infty}
+      \sum_{n,w=-\infty}^{+\infty}
+      \abs{q}^{\frac{\alpha'}{2}\big[\frac{n^2}{R^2}+\frac{\omega^2R^2}{\alpha'^2}+\frac{2}{\alpha'}(N+\widetilde{N}-2)\big]}
+    \end{align}
+    So each term means the right hand sides of the mass formula $M^2 = \frac{n^2}{R^2}+\frac{\omega^2R^2}{\alpha'^2}+\frac{2}{\alpha'}(N+\widetilde{N}-2)$.
+    
+\subsection{}
+    Write the more explicit form of partition funciton $Z^{25}$
+    \begin{align}
+    Z^{25} =&
+      \abs{\eta(q)}^{-2}
+      \sum_{n,w=-\infty}^{+\infty}
+      q^{\frac{\alpha'{p_L}^2}{4}}
+      \bar{q}^{\frac{\alpha'{p_R}^2}{4}}\notag\\
+    =&\abs{\eta(q)}^{-2}
+      \sum_{n,w=-\infty}^{+\infty}
+      \exp{2\pi i(\tau_1 + i \tau_2)\times \frac{\alpha'}{4}\big(\frac{n}{R}+\frac{wR}{\alpha'}\big)^2}\times\\
+      &\times\exp{-2\pi i(\tau_1 - i \tau_2)\times \frac{\alpha'}{4}\big(\frac{n}{R}-\frac{wR}{\alpha'}\big)^2}
+    \end{align} 
+    Calculate the factor in exponential
+    \begin{align}
+    &2\pi i(\tau_1 + i \tau_2)\times \frac{\alpha'}{4}\big(\frac{n}{R}+\frac{wR}{\alpha'}\big)^2-2\pi i(\tau_1 - i \tau_2)\times \frac{\alpha'}{4}\big(\frac{n}{R}-\frac{wR}{\alpha'}\big)^2\notag\\
+    =& 2\pi i \tau_1 \times \frac{\alpha'}{4}\times \frac{4nw}{\alpha'}
+       -2\pi\tau_2 \times \frac{\alpha'}{4}\times 2\big(\frac{n^2}{R^2}+\frac{w^2R^2}{\alpha'^2}\big)\notag\\
+    =& 2\pi i \tau_1 nw - \pi  \tau_2\big(\frac{\alpha'n^2}{R^2}+\frac{w^2R^2}{\alpha'}\big)
+    \end{align}
+    The partition function now is
+    \begin{equation}
+    Z^{25}=\abs{\eta(q)}^{-2}
+    \sum_{n,w=-\infty}^{+\infty}
+    \exp{ 2\pi i \tau_1 nw - \pi  \tau_2\big(\frac{\alpha'n^2}{R^2}+\frac{w^2R^2}{\alpha'}\big)}
+    \end{equation}
+    Using the Poisson resummation formula.
+    \begin{equation}
+    \sum_{n=-\infty}^{\infty} \exp(-\pi a n^2 +2\pi i bn ) = a^{-1/2}\sum_{m=-\infty}^{\infty}\exp[-\frac{\pi(m-b)^2}{a}]
+    \end{equation} 
+    By replacement $a\rightarrow \frac{\tau_2\alpha'}{R^2}$ and $b \rightarrow \tau_1 w$ the partition formula is
+    \begin{align}
+    Z^{25} &= \abs{\eta(q)}^{-2}
+      \big(\frac{\tau_2\alpha'}{R^2}\big)^{-1/2}
+      \sum_{w=-\infty}^{+\infty}
+      \exp(-\pi\tau_2\frac{w^2R^2}{\alpha'})
+      \sum_{m=-\infty}^{\infty}
+      \exp[-\frac{\pi R^2(m-\tau_1 w)^2}{\tau_2 \alpha'}]\notag\\
+    &=\abs{\eta(q)}^{-2}
+      \big(\frac{\tau_2\alpha'}{R^2}\big)^{-1/2}
+      \sum_{w,m=-\infty}^{+\infty}
+      \exp[-\frac{\pi R^2}{\tau_2\alpha'}(\tau_2^2w^2 + m^2 -2m\tau_1w +\tau^2_1w^2)]\notag\\
+    &= \abs{\eta(q)}^{-2}
+      \big(\frac{\tau_2\alpha'}{R^2}\big)^{-1/2}
+      \sum_{w,m=-\infty}^{+\infty}
+      \exp[-\frac{\pi R^2}{\tau_2\alpha'}\abs{m-w\tau}^2]
+    \end{align}
+    Now illustrate the modular invariance of the partition function. Under the transformation $\tau \rightarrow \tau+1 $,
+    $\tau_2 \rightarrow \tau_2$,
+    $\eta(\tau) \rightarrow e^{i\pi/12}\eta(\tau)$. Thus the partition funciton changes
+    \begin{align}
+    Z^{25}=&\abs{\eta(q)}^{-2}
+      \big(\frac{\tau_2\alpha'}{R^2}\big)^{-1/2}
+      \sum_{w,m=-\infty}^{+\infty}
+      \exp[-\frac{\pi R^2}{\tau_2\alpha'}\abs{m-w\tau}^2]\notag\\
+      \rightarrow &\abs{\eta(q)}^{-2}
+      \big(\frac{\tau_2\alpha'}{R^2}\big)^{-1/2}
+      \sum_{w,m=-\infty}^{+\infty}
+      \exp[-\frac{\pi R^2}{\tau_2\alpha'}\abs{m-w(\tau+1)}^2]
+    \end{align}
+    is invariant if we replace the sum index $m$ by $m+w$.
+    
+    Under the transformation $\tau\rightarrow -1/\tau$, we have $\tau_2 \rightarrow \tau_2/\abs{\tau}^2$, $\eta(\tau) \rightarrow \sqrt{-i\tau}\eta(\tau)$.
+    \begin{align}
+    Z^{25}=&\abs{\eta(q)}^{-2}
+    \big(\frac{\tau_2\alpha'}{R^2}\big)^{-1/2}
+    \sum_{w,m=-\infty}^{+\infty}
+    \exp[-\frac{\pi R^2}{\tau_2\alpha'}\abs{m-w\tau}^2]\notag\\
+    \rightarrow& \abs{\eta(q)}^{-2}
+    \sqrt{\tau}
+    \big(\frac{\tau_2\alpha'}{R^2}\big)^{-1/2}
+    \sqrt{\tau}^{-1}
+    \sum_{w,m=-\infty}^{+\infty}
+    \exp[-\frac{\pi R^2}{\tau_2\alpha'}\abs{\tau}^2\abs{m-w(-1/\tau)}^2]\notag\\
+    =& \abs{\eta(q)}^{-2}
+    \big(\frac{\tau_2\alpha'}{R^2}\big)^{-1/2}
+    \sum_{w,m=-\infty}^{+\infty}
+    \exp[-\frac{\pi R^2}{\tau_2\alpha'}\abs{m\tau+w}^2]
+    \end{align}
+    is invariant if we replace the sum index $m\rightarrow-w$ and $w\rightarrow m$.
+    
+\subsection{}
+    In the case of self-dual $R = \sqrt{\alpha'}$. The partition function $Z^{25}$ now is
+    \begin{align}
+    Z^{25}=&\abs{\eta(q)}^{-2}
+      \sum_{n,w=-\infty}^{+\infty}
+      q^{\frac{\alpha'{p_L}^2}{4}}
+      \bar{q}^{\frac{\alpha'{p_R}^2}{4}}\notag\\
+    =&\abs{\eta(q)}^{-2}
+      \sum_{n,w=-\infty}^{+\infty}
+      q^{\frac{(n+w)^2}{4}}
+      \bar{q}^{\frac{(n-w)^2}{4}}\notag\\
+    \end{align}
+    Do the replacement $n \rightarrow n-w $ 
+    \begin{align}
+    Z^{25} =& \abs{\eta(q)}^{-2}
+       \sum_{n,w=-\infty}^{+\infty}
+       q^{\frac{n^2}{4}}
+       \bar{q}^{\frac{(n-2w)^2}{4}}\notag\\
+    =& \abs{\eta(q)}^{-2}
+       \sum_{w=-\infty}^{+\infty}
+       \bigg(\sum_{2k+1 ,k\in\mathbb{Z}}
+       q^{\frac{(2k+1)^2}{4}}
+       \bar{q}^{\frac{(2k+1-2w)^2}{4}}
+       +\sum_{2k,k\in \mathbb{Z}}
+       q^{\frac{(2k)^2}{4}}
+       \bar{q}^{\frac{(2k-2w)^2}{4}}\bigg)\notag\\
+    =& \abs{\eta(q)}^{-2}
+       \sum_{w,k=-\infty}^{+\infty}
+        q^{(k+1/2)^2}
+        \bar{q}^{(k-w+1/2)^2}
+        +q^{k^2}
+        \bar{q}^{(k-w)^2}
+    \end{align}
+    With the replacement $w \rightarrow -w+k$, we have
+    \begin{align}
+    Z^{25} =& \abs{\eta(q)}^{-2}
+      \sum_{w,k=-\infty}^{+\infty}
+      q^{(k+1/2)^2}
+      \bar{q}^{(w+1/2)^2}
+      +q^{k^2}
+      \bar{q}^{w^2}\notag\\
+    &=\abs{\eta^{-1}\sum_{n\in\mathbb{Z}}q^{n^2}}^2
+      +\abs{\eta^{-1}\sum_{n\in\mathbb{Z}}q^{n^2+1/2}}^2\notag\\
+    &=\abs{\chi_1(q)}^2+\abs{\chi_2(q)}^2
+    \end{align}
+    The $\chi_i$ are the characters of the SU(2) affine Lie algebra with level k = 1.
+    Now the whole partition function is
+    \begin{equation}
+    Z^{1,24}Z^{25} =\text{const}\times
+      \abs{\eta(q)}^{-48}
+      \sum_{w,k=-\infty}^{+\infty}
+      q^{(k+1/2)^2}
+      \bar{q}^{(w+1/2)^2}
+      +q^{k^2}
+      \bar{q}^{w^2}
+    \end{equation}
+    According to lecture note 8, first factor $\abs{\eta(q)}^{-48} \simeq \abs{q^{-1}+24+O(q)}^2$. Its easy to see that the terms with $k = w = 0$ in the second factor contribute to usual 24 bosonic massless states. However $\abs{q}^2$, $q$, $\bar{q}$ terms in the  the second factor gives contributions to additional massless states, which corresponds to eight cases $k,w = \pm 1$ , $k = 0 , w = \pm 1$ and $k = \pm 1 , w = 0$. 
+    
+    We now briefly conclude these cases. We denote $w , n$ in original partition function as $w_o, n_o$
+    \begin{align}
+    & k = w = \pm 1 \qquad n_o = \pm 2 \qquad w_o= 0 \qquad N = \widetilde{N} =0\notag\\
+    & k = -w = \pm 1 \qquad  n_o = 0 \qquad w_o= \pm 2 \qquad N = \widetilde{N} =0\notag\\
+    & k = \pm 1 \qquad w=0 \qquad n_o = w_o = \pm 1 \qquad N =0\quad \widetilde{N} = 1\notag\\
+    & k = 0 \qquad w= \pm 1 \qquad n_o = -w_o = \pm 1 \qquad N =1\quad \widetilde{N} = 0\notag
+    \end{align} 
+    The last four states are physical additional massless states with nonzero state number. 
+    
+    \subsection{}
+    The current in the bosonic string theory is defined by
+    \begin{align}
+    j^{\pm}(z) &= j^{1}(z)\pm ij^2(z)\coloneq e^{\pm2iX^{25}(z)/\sqrt{\alpha'}}\notag\\
+    j^{3}(z) &\coloneq i\partial X^{25}(z)/\sqrt{\alpha'}
+    \end{align}
+    so we can write $j^1(z)$ and $j^2(z)$
+    \begin{align}
+    j^1(z)&=\frac{1}{2}(j^{+}(z)+j^{-}(z)) = \frac{1}{2}(e^{2iX^{25}(z)/\sqrt{\alpha'}}+e^{-2iX^{25}(z)/\sqrt{\alpha'}})\\
+    j^2(z)&=\frac{1}{2i}(j^{+}(z)+j^{-}(z)) = \frac{1}{2i}(e^{2iX^{25}(z)/\sqrt{\alpha'}}-e^{-2iX^{25}(z)/\sqrt{\alpha'}})
+    \end{align}
+    Useful formula which have proved in previous notes or exercises:
+    \begin{align}
+    X^{25}(z)X^{25}(0) &\sim -\frac{\alpha'}{2}\ln z\\
+    :e^{ik_1X^{25}(z)}::e^{ik_2X^{25}(0)}: &= z^{\frac{\alpha'}{2}k_1k_2}:e^{ik_1X^{25}(z)}e^{ik_2X^{25}(0)}:\\
+    :\partial X^{25}(z)::e^{ikX^{25}(0)}: &\sim \partial(-\frac{\alpha'}{2}\ln z) ik :e^{ikX^{25}(0)}:
+    \end{align}
+    Calculate OPE $j^3j^3$
+    \begin{align}
+    j^3(z)j^3(0) &= -\frac{1}{\alpha'}
+      \partial X^{25}(z)
+      \partial X^{25}(0)
+      \sim \frac{1}{\alpha'}
+      \partial^2(-\frac{\alpha'}{2}\ln z)
+      = \frac{1}{2z^2}
+    \end{align}
+    OPE $j^1j^1$
+    \begin{align}
+    j^1(z)j^1(0)=&\frac{1}{4}:
+      (e^{2iX^{25}(z)/\sqrt{\alpha'}}+
+      e^{-2iX^{25}(z)/\sqrt{\alpha'}}):
+      :(e^{2iX^{25}(0)/\sqrt{\alpha'}}+
+      e^{-2iX^{25}(0)/\sqrt{\alpha'}}):\notag\\
+    =& \frac{1}{4}
+      \bigg(
+      z^{2}
+      :e^{2iX^{25}(z)/\sqrt{\alpha'}}
+      e^{2iX^{25}(0)/\sqrt{\alpha'}}:+
+      z^{-2}
+      :e^{2iX^{25}(z)/\sqrt{\alpha'}}
+      e^{-2iX^{25}(0)/\sqrt{\alpha'}}:+\notag\\
+      &+z^{-2}
+      :e^{-2iX^{25}(z)/\sqrt{\alpha'}}
+      e^{2iX^{25}(0)/\sqrt{\alpha'}}:+
+      z^{2}
+      :e^{-2iX^{25}(z)/\sqrt{\alpha'}}
+      e^{-2iX^{25}(0)/\sqrt{\alpha'}}:
+      \bigg)\notag\\
+    =&\frac{1}{4}
+      \bigg[
+      z^{-2}
+      (1+\frac{2i}{\sqrt{\alpha'}}\partial X^{25}(0)z+O(z^2))+
+      z^{-2}
+      (1-\frac{2i}{\sqrt{\alpha'}}\partial X^{25}(0)z+O(z^2))+
+      O(z^2)
+      \bigg]\notag\\
+    =& \frac{1}{2z^2} + O(z^2)\notag\\
+    \sim& \frac{1}{2z^2}
+    \end{align}
+    Similar for OPE $j^2j^2$
+    \begin{align}
+    j^2(z)j^2(0)=&-\frac{1}{4}:
+    (e^{2iX^{25}(z)/\sqrt{\alpha'}}-
+    e^{-2iX^{25}(z)/\sqrt{\alpha'}}):
+    :(e^{2iX^{25}(0)/\sqrt{\alpha'}}-
+    e^{-2iX^{25}(0)/\sqrt{\alpha'}}):\notag\\
+    =& -\frac{1}{4}
+    \bigg(
+    z^{2}
+    :e^{2iX^{25}(z)/\sqrt{\alpha'}}
+    e^{2iX^{25}(0)/\sqrt{\alpha'}}:-
+    z^{-2}
+    :e^{2iX^{25}(z)/\sqrt{\alpha'}}
+    e^{-2iX^{25}(0)/\sqrt{\alpha'}}:+\notag\\
+    &-z^{-2}
+    :e^{-2iX^{25}(z)/\sqrt{\alpha'}}
+    e^{2iX^{25}(0)/\sqrt{\alpha'}}:+
+    z^{2}
+    :e^{-2iX^{25}(z)/\sqrt{\alpha'}}
+    e^{-2iX^{25}(0)/\sqrt{\alpha'}}:
+    \bigg)\notag\\
+    =&\frac{1}{4}
+    \bigg[
+    z^{-2}
+    (1+\frac{2i}{\sqrt{\alpha'}}\partial X^{25}(0)z+O(z^2))+
+    z^{-2}
+    (1-\frac{2i}{\sqrt{\alpha'}}\partial X^{25}(0)z+O(z^2))+
+    O(z^2)
+    \bigg]\notag\\
+    =& \frac{1}{2z^2} + O(z^2)\notag\\
+    \sim& \frac{1}{2z^2}
+    \end{align}
+    Calculate OPE $j^3j^1$
+    \begin{align}
+    j^3(z)j^1(0) =& 
+      \frac{i}{2\sqrt{\alpha'}}
+      \partial X^{25}(z)
+      :(
+      e^{2iX^{25}(0)/\sqrt{\alpha'}}+
+      e^{-2iX^{25}(0)/\sqrt{\alpha'}}
+      ):\notag \\
+    \sim&\frac{i}{2\sqrt{\alpha'}}
+    \bigg(
+    -\frac{\alpha'}{2}\times \frac{2i}{\sqrt{\alpha'}}
+    z^{-1}
+    :e^{2iX^{25}(0)/\sqrt{\alpha'}}:
+    -\frac{\alpha'}{2}\times \frac{-2i}{\sqrt{\alpha'}}
+    z^{-1}
+    :e^{-2iX^{25}(0)/\sqrt{\alpha'}}:
+    \bigg)\notag\\
+    =&\frac{i}{z}
+    \frac{1}{2i}
+    \bigg(
+    :e^{2iX^{25}(0)/\sqrt{\alpha'}}:-
+    :e^{-2iX^{25}(0)/\sqrt{\alpha'}}:
+    \bigg)\notag\\
+    =&\frac{i}{z}j^2(0)   
+    \end{align}
+    When calculate OPE $j^1j^3$ , the $\partial$ in $j^3$ act on $"0"$ offer an extra minus sign, so we have
+    \begin{equation}
+    j^1(z)j^3(0) \sim -\frac{i}{z}j^2(0)
+    \end{equation}
+    Similar calculation for OPE $j^3j^2$
+    \begin{align}
+    j^3(z)j^2(0) =& 
+    \frac{1}{2\sqrt{\alpha'}}
+    \partial X^{25}(z)
+    :(
+    e^{2iX^{25}(0)/\sqrt{\alpha'}}-
+    e^{-2iX^{25}(0)/\sqrt{\alpha'}}
+    ):\notag \\
+    \sim&\frac{1}{2\sqrt{\alpha'}}
+    \bigg(
+    -\frac{\alpha'}{2}\times \frac{2i}{\sqrt{\alpha'}}
+    z^{-1}
+    :e^{2iX^{25}(0)/\sqrt{\alpha'}}:
+    +\frac{\alpha'}{2}\times \frac{-2i}{\sqrt{\alpha'}}
+    z^{-1}
+    :e^{-2iX^{25}(0)/\sqrt{\alpha'}}:
+    \bigg)\notag\\
+    =&-\frac{i}{z}
+    \frac{1}{2}
+    \bigg(
+    :e^{2iX^{25}(0)/\sqrt{\alpha'}}:+
+    :e^{-2iX^{25}(0)/\sqrt{\alpha'}}:
+    \bigg)\notag\\
+    =&-\frac{i}{z}j^1(0)\\
+     j^2(z)j^3(0) =& \frac{i}{z}j^1(0)   
+    \end{align}
+    Finally, we goes to OPE $j^1j^2$
+    \begin{align}
+    j^1(z)j^2(0) =&\frac{1}{4i}:
+    (e^{2iX^{25}(z)/\sqrt{\alpha'}}+
+    e^{-2iX^{25}(z)/\sqrt{\alpha'}}):
+    :(e^{2iX^{25}(0)/\sqrt{\alpha'}}-
+    e^{-2iX^{25}(0)/\sqrt{\alpha'}}):\notag\\
+    =& \frac{1}{4i}
+    \bigg(
+    z^{2}
+    :e^{2iX^{25}(z)/\sqrt{\alpha'}}
+    e^{2iX^{25}(0)/\sqrt{\alpha'}}:-
+    z^{-2}
+    :e^{2iX^{25}(z)/\sqrt{\alpha'}}
+    e^{-2iX^{25}(0)/\sqrt{\alpha'}}:+\notag\\
+    &+z^{-2}
+    :e^{-2iX^{25}(z)/\sqrt{\alpha'}}
+    e^{2iX^{25}(0)/\sqrt{\alpha'}}:-
+    z^{2}
+    :e^{-2iX^{25}(z)/\sqrt{\alpha'}}
+    e^{-2iX^{25}(0)/\sqrt{\alpha'}}:
+    \bigg)\notag\\
+    =&\frac{1}{4i}
+    \bigg[
+    -z^{-2}
+    (1+\frac{2i}{\sqrt{\alpha'}}\partial X^{25}(0)z+O(z^2))+
+    z^{-2}
+    (1-\frac{2i}{\sqrt{\alpha'}}\partial X^{25}(0)z+O(z^2))+
+    O(z^2)
+    \bigg]\notag\\
+    \sim&\frac{i}{z}\frac{i}{\sqrt{\alpha'}}\partial X^{25}(0)
+    =\frac{i}{z}j^3(0)
+    \end{align}
+    Follow the similar pattern we have 
+    \begin{equation}
+    j^2(z)j^1(0) \sim -\frac{i}{z}\frac{i}{\sqrt{\alpha'}}\partial X^{25}(0)=-\frac{i}{z}j^3(0)
+    \end{equation}
+    Thus the OPE can be concluded
+    \begin{equation}
+    j^a(z)j^b(0) \sim \frac{\delta^{ab}}{2z^2}+\frac{i\epsilon^{abc}j^c(0)}{z}
+    \end{equation}
+    The oscillator modes of the currents
+    \begin{equation}
+    j^a(z)=\sum_{m\in \mathbb{Z}}\frac{j^a_m}{z^{m+1}}
+    \end{equation}
+    So we have
+    \begin{equation}
+    j^a_m = \oint_{c}\frac{dz}{2\pi i} z^m j^a(z)
+    \end{equation}
+    The commutator $\comm{j^a_m}{j^b_n}$ is
+    \begin{align}
+    \comm{j^a_m}{j^b_n}&=
+      \bigg(\oint_{c_1}\oint_{c_2}-
+      \oint_{c_2}\oint_{c_3}\bigg)
+      \frac{dz}{2\pi i}\frac{dw}{2\pi i}
+      z^m w^n
+      j^a(z)j^b(z) \notag\\
+    & =\oint_{c_2}
+      \frac{dw}{2\pi i}
+      \oint_{c_W}
+      \frac{dz}{2\pi i}
+      z^m w^n
+      \bigg[
+      \frac{\delta^{ab}}{2(z-w)^2}+\frac{i\epsilon^{abc}j^c(w)}{z-w}
+      \bigg]\notag\\
+    & = \oint_{c_2}
+      \frac{dw}{2\pi i}
+      \bigg[
+      \frac{1}{2}m\omega^{n+m-1}\delta^{ab}+i\epsilon^{abc}j^{c}(\omega)\omega^{m+n}
+      \bigg]\notag\\
+    & = \delta_{n+m,0}\frac{1}{2}m\delta^{ab}+i\epsilon^{abc}j^{c}_{m+n}
+    \end{align}
+    
+    
+    
+    
+    \section{RR field strengths and T-duality in Type II}
+    The Clifford algebra of SO(1,9) gamma matrices defined as
+    \begin{equation}
+    \acomm {\Gamma^{\mu}}{\Gamma^{\nu}} = 2 \eta^{\mu\nu} 
+      \qquad \mu,\nu =0,1 \dots 9
+    \end{equation} 
+    The chirality matrix is $\Gam{11}=\Gam{0}\Gam{1}\cdots\Gam{9}$, calculate $\Gam{11}\Gam{11}$:
+    \begin{equation}
+    \Gam{11}\Gam{11} = \Gam{0}\Gam{1}\cdots\Gam{9}\Gam{0}\Gam{1}\cdots\Gam{9} = (-1)^{9+8+\cdots+1}(\Gam{0})^2(\Gam{1})^2\cdots(\Gam{9})^2 =(-1)^{46} = 1
+    \end{equation} 
+    The anticommutator of $\Gam{11}$ and $\Gam{\mu}$ vanishes
+    \begin{equation}
+    \acomm{\Gam{11}}{\Gam{\mu}} 
+    =\Gam{11}\Gam{\mu}+\Gam{\mu}\Gam{11}
+    =\Gam{11}\Gam{\mu}+(-1)^{9}\Gam{11}\Gam{\mu}
+    =0
+    \end{equation}
+    Chiral spinors are now defined by 
+    $\Gam{11}\psi_{\pm} = \pm \psi_{\pm}$ , then we have
+    \begin{align}
+    \bar{\psi}_{\pm}\Gam{11}
+    =\psi_{\pm}^{\dagger}\Gam{0}\Gam{11}
+    =(\Gam{11}^{\dagger}\Gam{0}^{\dagger}\psi_{\pm})^{\dagger}
+    \end{align}
+    Notice that
+    \begin{align}
+    \Gam{11}^{\dagger}
+    =\Gam{9}^{\dagger}\cdots \Gam{0}^{\dagger}
+    =\Gam{0}\Gam{9}\Gam{8}\cdots\Gam{0}(\Gam{0})^{-1}
+    =(-1)^{45}\Gam{0}\Gam{0}\Gam{1}\cdots\Gam{9}(\Gam{0})^{-1}
+    =-\Gam{0}\Gam{11}(\Gam{0})^{-1}
+    \end{align}
+    So, we have
+    \begin{align}
+    \bar{\psi}_{\pm}\Gam{11}
+    =(\Gam{0}\Gam{11}\Gam{0}(\Gam{0})^{-1}\psi_{\pm})^{\dagger}
+    =\pm(\Gam{0}\psi_{\pm})^{\dagger}
+    =\pm\psi_{\pm}^{\dagger}(-\Gam{0})
+    =\mp\bar{\psi}_{\pm}
+    \end{align} 
+    The R R field strengths $G_{\mu_1\dots\mu_{p+1}}$ as bilinears
+    \begin{align}
+    \text{II A}: \quad \bar{\psi}_{-}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\psi_{+}^R
+    \qquad
+    \text{II B}: \quad \bar{\psi}_{+}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\psi_{+}^R
+    \end{align}
+    Since the spacetime indexes are antisymmetric  $p+1 \leq 10 $ .
+    Consider Type II A
+    \begin{align}
+    \bar{\psi}_{-}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\psi_{+}^R
+    =\bar{\psi}_{-}^{L}\Gam{11}\Gam{\mu_1\cdots\mu_{p+1}}\Gam{11}\psi_{+}^R
+    =\bar{\psi}_{-}^{L}(\Gam{11})^{2}(-1)^{p+1}\Gam{\mu_1\cdots\mu_{p+1}}\psi_{+}^R
+    =(-1)^{p+1}\bar{\psi}_{-}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\psi_{+}^R
+    \end{align}
+    So, for type II A, the spinor bilinears will vanish unless p is odd. $p$ can be $1,3,5,7,9$ .
+    Similar for Type II B
+    \begin{align}
+    \bar{\psi}_{+}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\psi_{+}^R
+    =-\bar{\psi}_{+}^{L}\Gam{11}\Gam{\mu_1\cdots\mu_{p+1}}\Gam{11}\psi_{+}^R
+    =(-1)^{p+2}\bar{\psi}_{+}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\psi_{+}^R
+    \end{align}
+    For type II B, the spinor bilinears will vanish unless p is even. So $p$ can be $0,2,4,6,8$ 
+    
+    Since $\beta_9 = \Gam{9}\Gam{11}$, we have 
+    \begin{align}
+    \acomm{\beta_9}{\Gam{9}} = \acomm{\Gam{9}\Gam{11}}{\Gam{9}}
+    =\Gam{9}\acomm{\Gam{11}}{\Gam{9}}-\comm{\Gam{9}}{\Gam{9}}\Gam{11}=0
+    \end{align}
+    For $\mu \neq 9$
+    \begin{align}
+    \comm{\beta_9}{\Gam{\mu}} = \comm{\Gam{9}\Gam{11}}{\Gam{\mu}}
+    =\Gam{9}\acomm{\Gam{11}}{\Gam{\mu}}-\acomm{\Gam{9}}{\Gam{\mu}}\Gam{11}
+    =0
+    \end{align}
+    Under  T-duality transformation $\psi^{L}\rightarrow\psi^{L}$, $\psi^{R}\rightarrow \beta_9 \psi^{R}$
+    \begin{align}
+    \bar{\psi}_{-}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\psi_{+}^R
+    \rightarrow
+    \bar{\psi}_{-}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\beta_{9}\psi_{+}^R
+    \end{align}
+    Follow the same step, we see that
+    \begin{align}
+    \bar{\psi}_{-}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\beta_{9}\psi_{+}^R
+    =\bar{\psi}_{-}^{L}\Gam{11}\Gam{\mu_1\cdots\mu_{p+1}}\beta_{9}\Gam{11}\psi_{+}^R=(-1)^{p+2}\bar{\psi}_{-}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\beta_{9}\psi_{+}^R
+    \end{align}
+    The transformed spinor bilinear vanishes unless $p$ is even which is the case of type II B. And we find $\bar{\psi}_{-}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\beta_{9}\psi_{+}^R \sim \bar{\psi}_{-}^{L}\beta_{9}\Gam{\mu_1\cdots\mu_{p+1}}\psi_{+}^R$ up to a sign factor. And 
+    \begin{align}
+    \bar{\psi}_{-}^{L}\beta_{9}\Gam{11} = -\bar{\psi}_{-}^{L}\Gam{11}\beta_{9}
+    =+ \bar{\psi}_{-}^{L}\beta_{9}
+    \end{align}
+    So $\bar{\psi}_{-}^{L}\beta_{9}\sim \bar{\psi}_{+}^{L}$. Thus T duality transform RR field strenghths in II A to II B, and the same reason vise versa.
+    \begin{align}
+    &\bar{\psi}_{+}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\psi_{+}^R
+     \rightarrow
+     \bar{\psi}_{+}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\beta_{9}\psi_{+}^R\\
+    &\bar{\psi}_{+}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\beta_{9}\psi_{+}^R
+     =\bar{\psi}_{+}^{L}\Gam{11}\Gam{\mu_1\cdots\mu_{p+1}}\beta_{9}\Gam{11}\psi_{+}^R=(-1)^{p+2}\bar{\psi}_{+}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\beta_{9}\psi_{+}^R
+    \end{align}
+    The transformed spinor bilinear vanishes unless $p$ is odd which is the case of type II A. And we find $\bar{\psi}_{+}^{L}\Gam{\mu_1\cdots\mu_{p+1}}\beta_{9}\psi_{+}^R \sim \bar{\psi}_{+}^{L}\beta_{9}\Gam{\mu_1\cdots\mu_{p+1}}\psi_{+}^R$ up to a sign factor. And 
+    \begin{align}
+    \bar{\psi}_{+}^{L}\beta_{9}\Gam{11} = -\bar{\psi}_{+}^{L}\Gam{11}\beta_{9}
+    =- \bar{\psi}_{+}^{L}\beta_{9}
+    \end{align}
+     So $\bar{\psi}_{+}^{L}\beta_{9}\sim \bar{\psi}_{-}^{L}$.
+     
+     \section{D-branes in Type II and T- duality}
+     \subsection{}
+     Since  T-duality exchange NN to DD and ND to DN in corresponding spacetime direction, the number (\# NN + \# DD) and (\# ND + \# DN) are invariant.
+     \subsection{}
+     Without loss of generality, we place all the spacetime dimension as small as possible. For II B theory p must be odd .Above tables list all the possible configuration, and all these configurations are dual to the D1-D5 configuration.
+     \begin{table}[!hbp]
+     	\centering
+     	\begin{tabular}{lclclclclclclclclclclcl}
+     	         &0       &1       &2       &3       &4      &5  
+     	         &6       &7       &8       &9  \\
+     		\midrule
+     		D3   &$\times$&$\times$&$\times$&$\times$&        &   
+     		     &        &        &        &   \\
+     		D1   &$\times$&        &        &        &$\times$&   
+     		     &        &        &        &   \\
+     	\end{tabular}
+     	\caption{ transform to D1-D5 by $T_4,T_5$}
+     \end{table}
+     \begin{table}[!hbp]
+     	\centering
+     	\begin{tabular}{lclclclclclclclclclclcl}
+     		     &0       &1       &2       &3       &4      &5  
+     		     &6       &7       &8       &9           \\
+     		\midrule
+     		D3   &$\times$&$\times$&$\times$&$\times$&        &   
+     		     &        &        &        &            \\
+     		D3   &$\times$&$\times$&        &        &$\times$&   
+     		      $\times$&        &        &        &   \\
+     	\end{tabular}
+     	\caption{ transform to D1-D5 by $T_2,T_3$}
+     \end{table}
+     \begin{table}[!hbp]
+     	\centering
+     	\begin{tabular}{lclclclclclclclclclclcl}
+     		     &0       &1       &2       &3       &4      &5  
+     		     &6       &7       &8       &9           \\
+     		\midrule
+     		D3   &$\times$&$\times$&$\times$&$\times$&        &   
+     		     &        &        &        &            \\
+     		D5   &$\times$&$\times$&$\times$&        &$\times$&   
+     		      $\times$&$\times$&        &        &   \\
+     	\end{tabular}
+     	\caption{ transform to D1-D5 by $T_1,T_3$}
+     \end{table}
+     \begin{table}[!hbp]
+     	\centering
+     	\begin{tabular}{lclclclclclclclclclclcl}
+     		    &0       &1       &2       &3       &4      &5  
+     	     	&6       &7       &8       &9           \\
+     		\midrule
+     		D3   &$\times$&$\times$&$\times$&$\times$&        &   
+     		     &        &        &        &            \\
+     		D5   &$\times$&$\times$&$\times$&$\times$&$\times$&   
+     		      $\times$&$\times$&$\times$&        &   \\
+     	\end{tabular}
+     	\caption{ transform to D1-D5 by $T_1,T_2$}
+     \end{table}
+\end{document}
