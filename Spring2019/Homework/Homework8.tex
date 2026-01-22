@@ -1,0 +1,121 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+\newcommand{\frakgl}{\ensuremath{\mathfrak{gl}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\OO}{\mathrm{O}}
+
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\GL}{\mathrm{GL}}
+
+
+\def \bea {\begin{equation}\begin{aligned}}
+\def \eea {\end{aligned}\end{equation}}
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem{question}[lemma]{Question}
+\newtheorem{proposition}[lemma]{Proposition}
+
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 8: Due at class on April 26}
+
+
+ \vspace{.5cm}
+\noindent 1. Let us define $S^3=\{(x^0,x^1,x^2,x^3)\in \bR^4 | \sum_{i=0}^3(x^i)^2=1\}$ and $S^1=\{(x^0,x^1,x^2,x^3)\in \bR^4 | (x^0)^2+(x^1)^2=1\}$. Then, show that $S^3 \backslash S^1$ is homotopic to $S^1$.
+
+
+
+ \vspace{.5cm}
+\noindent 2. Let us identify $S^2 =\bC\cup \{\infty\}$. Then, a holomorphic map $g:\bC\to \bC;z\mapsto z^n$ $(n\in \bZ)$ can be extended to $g:S^2\to S^2$. Find the mapping degree $\deg g$ of $g$.
+
+
+
+
+ \vspace{.5cm}
+\noindent 3. \textbf{Fundamental theorem of algebra}
+
+We define $f:\bC\to \bC$  by
+$f(z) = z^n +a_1z^{n-1} +\cdots+a_n $ for $n\ge 1$.  In addition, by writing $z=x+iy$, we define one-form
+$$
+\omega=\textrm{Im}\frac{dz}{z}= \frac{-ydx}{x^2+y^2}+\frac{xdy}{x^2+y^2}~.
+$$
+Then, show that
+$$
+\frac{1}{2\pi} \int_{C_R} f^*\omega=n~,
+$$
+where $C_R$ is the circle with sufficiently large radius $R$. (Hint: construct homotopy between  $f$ and $g$ above.) If there were no zero points $f(z)=0$ inside $C_R$, show that
+$$
+\frac{1}{2\pi} \int_{C_R} f^*\omega=0~
+$$
+by using the Stokes theorem.
+
+
+ \vspace{.5cm}
+\noindent 4. \textbf{This is a bonus problem with extra 5 points which is NOT mandatory.}
+
+4.1 Show that the following two embeddings $\bC P^k\hookrightarrow \bC P^n$  are homotopic
+\bea\nonumber &\bC P^{k}=\left\{\left[z^{0}, z^{1}, \cdots, z^{k}, 0, \cdots, 0\right] \in \bC P^{n}\right\} \subset
+\bC P^{n}\cr
+&\widetilde{\bC P}^{k}=\left\{\left[0, \cdots, 0, z^{n-k}, \cdots, z^{n}\right] \in \bC P^{n}\right\}\subset
+\bC P^{n}\eea
+
+4.2 Derive the cohomology ring $(H^*(\bC P^n;\bR),\cup)$.
+
+4.3 Find the intersection number $\bC P^{k} \cdot \widetilde{\bC P}^{n-k}$ in $\bC P^n$  for all $k$.
+
+4.4 If $n>m$, show that there is no smooth map $f:\mathbb{C} P^{n} \rightarrow \mathbb{C} P^{m}$ which induces a non-trivial map $f^*:H^{2}(\mathbb{C} P^{m} ; \mathbb{R}) \rightarrow H^{2}(\mathbb{C} P^{n} ; \mathbb{R})$.
+
+\end{document}

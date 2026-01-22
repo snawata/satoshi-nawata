@@ -1,0 +1,145 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem{question}[lemma]{Question}
+\newtheorem{proposition}[lemma]{Proposition}
+
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 3: Due at class on March 22}
+
+
+
+
+\vspace{.5cm}
+
+\noindent \textbf{1}. Let $(x,y)$ be the Cartesian coordinate of $\bR^2$ and $(r,\theta)$ be the polar coordinate of $\bR^2$. Write a vector field $X$ in terms of the Cartesian coordinate that generate a flow $\varphi_t:\bR^2\to\bR^2$
+$$
+\left(\begin{array}{c}
+x\\y
+\end{array}\right) \to\left(\begin{array}{cc}
+\cos t& -\sin t\\
+\sin t&\cos t
+\end{array}\right) \left(\begin{array}{c}
+x\\y
+\end{array}\right)~.
+$$
+This is the rotation in $\bR^2$. In addition, draw the schematic picture of the vector field $X$.
+
+
+
+\vspace{.5cm}
+
+\noindent \textbf{2}.  Write down vector fields that generate the rotation along $x$-, $y$-, $z$-axis in $\bR^3$. Find the commutation relations of these vector fields. Compare the theory of angular momenta in quantum mechanics.
+
+
+
+\vspace{.5cm}
+
+\noindent \textbf{3}.    Show that the tangent bundle $TS^1$ of a circle $S^1$ is diffeomorphic to $S^1\times \bR$.
+
+
+
+
+
+\vspace{.5cm}
+
+\noindent \textbf{4}.   Are there zeros of the vector fields in Example 3.10 of the lecture note?
+
+
+
+\vspace{.5cm}
+
+\noindent \textbf{5}.    Construct a smooth vector field on $S^2$ which vanishes only at one point explicitly in terms of local coordinates.
+
+
+
+
+\vspace{.5cm}
+
+\noindent \textbf{6}.
+Show that the Lie bracket satsfies the Jacobi identity.
+Show that, for $X_1,X_2\in \mathfrak{X}(M)$ and $f\in C^\infty(M)$,
+$$
+[fX_1,X_2]=f[X_1,X_2]-X_2(f) X_1~,\qquad [X_1,fX_2]=f[X_1,X_2]+X_1(f) X_2~.
+$$
+
+
+
+\vspace{.5cm}
+
+\noindent \textbf{7}.
+Show that $\bR P^n$ is non-orientable for even $n$. In addition, construct an example of unorientable manifolds except the M\"obius strip and even-dimensional real projective space.
+
+
+
+
+%\begin{definition}
+%A group is a set of $G$ with a multiplication $\times $
+%\begin{itemize}\setlength{\parskip}{-0.1cm}
+%\item (Closure) $a,b\in G \rightarrow a\times b\in G$
+%\item (Associativity)  For $a,b,c\in G$, $(a\times b)\times c=a\times (b\times c)$
+%\item (Identity element) There exists an element $e$ in $G$ such that, for every element $a$ in $G$, the equation $e\times a = a\times e = a$ holds. Such an element is unique (see below), and thus one speaks of the identity element.
+%\item (Inverse element) For each $a$ in $G$, there exists an element $b$ in $G$, commonly denoted $a^{-1}$, such that $a \times  b = b \times  a = e$, where e is the identity element.
+%\end{itemize}
+%\end{definition}
+%
+%\begin{definition}
+%A group $G$ is called Lie group if it is a smooth manifold so that the group operations
+%\begin{align}
+%&m:G\times G \to G;\quad (a,b) \to a\times b \cr
+%&\mathrm{inv}:G\to G;\quad a\to a^{-1}\nonumber
+%\end{align}
+%are smooth.
+%\end{definition}
+%
+%\noindent 4. (Optional) Show that the following Lie groups are manifold and find their dimensions
+%\begin{itemize}
+%\item General linear group: $GL(n, \bC) = \{A \in M_n(\bC)| \det A \neq 0\}$
+%\item Special linear group: $SL(n, \bC) = \{A \in GL(n, \bC)| \det A = 1\}$
+%\item Unitary group $U(n) = \{A \in GL(n, \bC)| AA^\dagger = I\}$
+%\item Special unitary group $SU(n) = U(n) \cap SL(n, \bC)$
+%\end{itemize}
+
+\end{document}

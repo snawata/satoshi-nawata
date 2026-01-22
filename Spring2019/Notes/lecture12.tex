@@ -1,0 +1,275 @@
+\documentclass[geometry-lectures-19.tex]{subfiles}
+
+\begin{document}
+
+
+
+\section{Index Theorem}\label{sec:index-thm}
+
+Finally, we will study celebrated \textbf{Atiyah-Singer index theorem}. The index theorem states the equivalence between the index of an elliptic operator $D$, which is analytic object, and the characteristic classes, which are topological object. This theorem is one of milestones in mathematics of 20th century. The index theorem plays a crucial role in physics like anomaly, fermion zero modes and supersymmetry. In fact, in the tasteful book \cite{index-book}, you can feel excitement when the index theorem has been formulated. I highly recommend you to read this book.
+
+\subsection{Symbol, elliptic operator, analytic index}
+
+Let $E$ and $F$ be vector bundles of rank $r$ over an $n$-dimensional $M$. In this section, we assume that $M$ is closed and oriented.
+Let $D\colon\Gamma(E)\to\Gamma(F)$ be a linear differential operator. Namely, on local trivializations $\pi_E^{-1}(U)\cong U\times \bR^m$ and $\pi_F^{-1}(U)\cong U\times \bR^m$ of $E$ and $F$, it can be written as
+$$
+D=\sum_{|\alpha|\le k} a^{ij}_\alpha(x) \frac{\partial^\alpha}{\partial x_1^{\alpha^1}\cdots \partial x_n^{\alpha^n}}
+$$
+where $a^{ij}_\alpha(x)$ is an $M_r(\bR)$-valued function on $U$. It is said to be of \textbf{elliptic type} if for ${}^\forall \xi=(\xi_1,\cdots,\xi_n)\neq0\in\bR^n$, the matrix
+$$
+\sigma(D)(\xi)=\sum_{|\alpha|= k} a^{ij}_\alpha(x) \xi_1^{\alpha^1}\cdots  \xi_n^{\alpha^n}
+$$
+is non-singular. In other words, $\sigma(D)(\xi):E_x\to F_x$ is an isomorphism for $\xi\neq0$. Let us note that $\sigma(D)$ depends only on the highest order portion of $D$. It is called the \textbf{symbol} of $D$. For example, the  Laplacian
+$$
+\sum_i\frac{\partial^2}{\partial x_i^2}
+$$
+is clearly of elliptic type. If $M$ is compact and $D$ is elliptic, it is Fredholm which means that $\Ker D$ and $\Coker D=\Gamma(F)/D(\Gamma(E))$ are finite-dimensional.  We can define the \textbf{analytic index}
+$$\textrm{ind}(D):=\dim\Ker(D)-\dim\textrm{Coker}(D)~.$$
+
+\subsection{de Rham complex}
+Let $M$ be a $2n$-dimensional closed oriented manifold. Let us define
+\begin{align}\nonumber
+\Omega^{\textrm{even}}(M)=\Omega^0(M)\oplus \Omega^2(M)\oplus \cdots \cr
+\Omega^{\textrm{odd}}(M)=\Omega^1(M)\oplus \Omega^3(M)\oplus \cdots
+\end{align}
+Then, the operator
+$$
+d+\delta:\Omega^{\textrm{even}}(M) \to \Omega^{\textrm{odd}}(M)
+$$
+is of elliptic type so that we can define the index
+$$
+\textrm{ind}(d+\delta)=\sum_i (-1)^i\dim H_{dR}^i(M)=\chi(M)
+$$
+so that the index theorem for de Rham complex is
+$$
+\textrm{ind}(d+\delta)=\int_M e(TM)~.
+$$
+
+\subsection{Dolbeault complex}
+In this course, we have not introduced to complex manifolds. However, one can complexify the definition of manifolds by taking care of ``holomorphicity'', and the basics is laid out in Appendix \ref{sec:complex-manifolds}. In the following, I just explain the index theorem for a complex vector bundle over a complex manifold, which is called \textbf{Hirzebruch-Riemann-Roch} theorem.
+
+Let $E\to M$ be a holomorphic vector bundle over an $n$-dimensional complex manifold $M$ and we consider Cauchy-Riemann operator
+\begin{align}\nonumber
+\overline \partial : \Gamma(E) \otimes \Omega^{0,p}(M)&\to \Gamma(E) \otimes \Omega^{0,p+1}(M)\cr
+\phi~ d\overline z_{i_1}\wedge \cdots \wedge  d\overline z_{i_p} &\mapsto\sum_{k}\frac{\partial \phi}{\partial \overline z_{k}}d \overline z_{k}\wedge d\overline z_{i_1}\wedge \cdots \wedge  d\overline z_{i_p}
+\end{align}
+where $\Omega^{0,p}(M)$ is the set of anti-holomorphic $p$-forms locally spanned by $ d\overline z_{i_1}\wedge \cdots \wedge  d\overline z_{i_p} $. Then, the following long exact sequence is called \textbf{Dolbeault complex}
+$$
+ 0 \to\Gamma(E)   \xrightarrow{\overline\partial} \Gamma(E) \otimes \Omega^{0,1}(M) \xrightarrow{\overline\partial}    \cdots \xrightarrow{\overline\partial}\Gamma(E) \otimes \Omega^{0,n}(M) \xrightarrow{\overline\partial}  0 ~.
+$$
+In a similar fashion to de Rham cohomology, one can define Dolbeault cohomology
+$$
+H^{0,*}(M,E):=\Ker (\overline\partial)/\Im (\overline\partial)~.
+$$
+If we put Hermitian metric on $M$ and $E$, we obtain the adjoint operator $\vartheta$ of $\overline \partial$
+$$
+\vartheta=\ast\cdot \overline \partial\cdot \ast:\Gamma(E) \otimes \Omega^{0,p}(M)\to \Gamma(E) \otimes \Omega^{0,p-1}(M)~.
+$$
+Then, the operator
+$$
+\overline \partial+\vartheta:\bigoplus_{p:\textrm{even}}\Gamma(E) \otimes \Omega^{0,p}(M) \to \bigoplus_{p:\textrm{odd}}\Gamma(E) \otimes \Omega^{0,p}(M)
+$$
+turns out to be elliptic, and its  analytic index is
+$$
+\ind(\overline \partial+\vartheta)= \sum_{p:\textrm{even}}\dim H^{0,p}(M,E)-\sum_{p:\textrm{odd}}\dim H^{0,p}(M,E)~.
+$$
+Then, the Hirzebruch-Riemann-Roch theorem states that the index can be expressed as Chern character and Todd class
+$$
+\ind(\overline \partial+\vartheta)=\int_M ch(E) \cdot Td(TM\otimes \bC)~.
+$$
+
+\subsection{Dirac operator}
+Another important example is the index of a Dirac operator.
+Unfortunately, due to time constraint, I cannot explain mathematics of Dirac equations, which involves Clifford algebra, spin group, spin representations, spinor bundle and Dirac operators. Instead, I will use an example in 4-dimension. I refer to \cite{berline2003heat} for detail.
+
+
+In a certain basis, the gamma matrices in $\bR^4$ with Euclidean signature can be written as
+$$
+\gamma_\mu=i \begin{pmatrix}0& \sigma_\mu\\ -\overline \sigma_\mu &0\end{pmatrix}~,\quad \sigma_\mu=(I, -i\vec \sigma)~,\quad  \overline \sigma_\mu=(I,i \vec\sigma)~.
+$$
+In fact, one can check they satisfy the following algebra
+$$
+\{\gamma_\mu ,\gamma_\nu\}=2\delta_{\mu\nu}~.
+$$
+Generalization of this anti-commutation relation leads to Clifford algebra. The massive Dirac equation on $\bR^4$ can be written as
+$$
+(i\gamma^\mu \partial_\mu-m)\psi=0~,
+$$
+which is the Euler-Lagrange equation for the action
+$$
+S=\int d^4x~ \bar\psi (i\gamma^\mu \partial_\mu-m)\psi~.
+$$
+The Dirac equation can be interpreted as the square root of the Klein-Gordon equation
+$$
+(\Box+m^2)\phi=0~.
+$$
+The solutions $\psi$ to the massless Dirac equation
+$$
+i\gamma^\mu\partial_\mu \psi=0~,
+$$
+are called \textbf{zero modes}.
+Defining
+$$
+\gamma_5=-\gamma_1\gamma_2\gamma_3\gamma_4= \begin{pmatrix}I&0\\0& -I \end{pmatrix}~
+$$
+the Dirac spinor $\psi$ can be decomposed into eigenspaces $\calS^\pm$ of $\gamma_5$ with eigenvalues $\pm$
+$$
+\frac12 (1+\gamma_5)\psi=\begin{pmatrix}\psi^+ \\0 \end{pmatrix}\in \calS^+ ~, \qquad \frac12 (1-\gamma_5)\psi= \begin{pmatrix}0\\ \psi^- \end{pmatrix}\in \calS^-
+$$
+which can be understood as left-handed and right-handed fermions, respectively. Now let us consider the Dirac equation on an oriented closed 4-manifold $M$. Then, the derivative is replaced by the covariant derivative
+$$
+\partial_\mu \to \nabla_\mu =\partial_\mu +\omega_\mu
+$$
+where $\omega_\mu$ is taking its value on $\textrm{Spin}(4)=\textrm{SU}(2)\times \textrm{SU}(2)$, which is called \textbf{spin connection}. The Dirac operator is defined
+$$
+\slashed{D}=\begin{pmatrix}
+0&\slashed{\nabla}^\dagger\\
+\slashed{\nabla}&0
+\end{pmatrix}
+$$
+where
+$$
+\slashed{\nabla}=-i\overline\sigma^\mu \nabla_\mu ~,\quad \slashed{\nabla}^\dagger=i\sigma^\mu \nabla_\mu~.
+$$
+Then, we have the \textbf{spin complex}
+$$
+\begin{tikzpicture}
+\node at (0.2,0) {$\calS^+$};
+\node at (1.5,0) {$\raisebox{.6cm}{\maplr{\slashed{\nabla}^\dagger}{\slashed{\nabla}}}$};
+\node at (2.8,0) {$\calS^-$};
+\end{tikzpicture}~.
+$$
+where $\slashed{D}$ is of elliptic type. Then, the analytic index of the Dirac operator is
+$$
+\ind(\slashed{D})=\dim \Ker \slashed{\nabla}-\dim \Ker \slashed{\nabla}^\dag=n_+ -n_-
+$$
+which is the difference between right-handed and left-handed zero modes. Then, the index theorem for the Dirac operator states that the index can be expressed as $\widehat A$-genus
+$$
+\ind(\slashed{D})=\int_M \widehat A(TM)~.
+$$
+
+Usually (like QCD), we consider fermion interacting with non-Abelian gauge fields. To couple fermion to gauge field, we tensor the spinor bundle to a vector bundle $E$
+$$
+\calS^\pm\to  \calS^\pm\otimes E ~,\qquad \nabla_\mu \to \nabla_\mu +A_\mu~,
+$$
+Then, one can modify the spin complex accordingly and, in this case, the index theorem is
+$$
+\ind(\slashed{D})=\int_M \widehat A(TM)\cdot ch(E)~.
+$$
+
+%In mathematics the spin group Spin($n$) is the double cover of the special orthogonal group SO($n$), such that there exists a short exact sequence of Lie groups (with $n \neq 2$)
+%$$  1 \to \mathrm{Z}_2 \to \operatorname{Spin}(n) \to \operatorname{SO}(n) \to 1.$$
+%As a Lie group, Spin($n$) therefore shares its dimension, $n(n -1)/2$, and its Lie algebra with the special orthogonal group. For instance, Spin(3)=SU(2) and Spin(4)$=\textrm{SU}(2)\times \textrm{SU}(2)$.
+
+\subsection{Anomaly}
+Although the classical Lagrangian of quantum chromodynamics (QCD) preserves a chiral $U(1)$ symmetry, it is not realized in QCD. The phenomena that the classical symmetry is broken at quantum level is called \textbf{anomaly}.
+
+The massless Dirac Lagrangian has a chiral symmetry which can be stated by
+$$
+\partial_\mu j^{\mu5}=0~,\qquad j^{\mu5} =\bar \psi \gamma^\mu\gamma^5\psi~.
+$$
+If we integrate it out
+$$
+\int d^4x~ \partial_\mu j^{\mu5}=n_+-n_-=0~,
+$$
+the difference in the number of right-handed fermions and left-handed fermions is conserved at classical level. However, if we take  quantum effect into account in QCD, this is no longer true.
+
+As we have seen above, the difference between right-handed  and left handed fermion zero modes is given by
+$$
+n_+-n_-=\int_{\bR^{1,3}} \widehat A(\bR^{1,3})\cdot ch(E)=\frac{1}{8\pi^2}\int_{\bR^{1,3}} \Tr(F\wedge F)~.
+$$
+In the presence of instanton effect, the right hand side is no longer zero so that the chiral symmetry is broken. This is called \textbf{Adler-Bell-Jackiw}, \textbf{chiral} or \textbf{triangle anomaly} \cite[\S19]{peskin2018introduction}.
+
+
+The pion $\pi^0$ can be considered as a Goldstone boson for chiral symmetry breaking. The decay rate of the pion into two photon $\pi^0\to 2\gamma$ can be computed by the index theorem and it is experimentally checked to an accuracy of  a few percent.
+
+\subsection{Supersymmetric quantum mechanics}
+
+Supersymmetry is a symmetry between bosons and fermions. Let us consider the simplest supersymmetric theory where there is only one fermionic field. Hence, we describe
+$$
+\binom{1}{0}:~\textrm{fermionic state}   \qquad   \binom{0}{1}:\textrm{bosonic state}~.
+$$
+The Hilbert space $\calH$ of states consists of wave functions of the form
+$$
+\binom{\phi_F(x)}{\phi_B(x)}=\phi_F(x)\binom{1}{0}+\phi_B(x) \binom{0}{1}~,
+$$
+where it obeys the normalizable ($L^2$-norm) condition
+\begin{equation}\label{L2}
+\int^\infty_{-\infty}(|\phi_B(x)|^2+|\phi_F(x)|^2)dx<\infty~.
+\end{equation}
+Let us denote the Pauli matrices as
+$$
+\sigma_3=\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}~, \quad \sigma_+=\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}~, \quad  \sigma_-=\begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}~.
+$$
+Then, $\sigma_\pm$ are the fermion creation ($+$) and annihilation ($-$) operators and the fermion number is defined by $F=\frac12(1+\sigma_3)$.
+
+Now we define supercharges
+\begin{align}
+Q&=\frac{1}{\sqrt{2}i}\sigma_+\left( \frac{d}{dx}+W'(x)\right)\cr
+Q^\dagger&=\frac{1}{\sqrt{2}i}\sigma_-\left( \frac{d}{dx}-W'(x)\right)~,
+\end{align}
+where $W(x)$ is called a \textbf{superpotential}. It is easy to see that
+$$\{Q,Q \} = \{Q^{\dag},Q^{\dag}\}=0~.$$
+Since the Hilbert space is decomposed into bosonic states and fermionic states $\calH_B\oplus \calH_F$, the supercharges are indeed linear maps
+$$
+\begin{tikzpicture}
+\node at (0.2,0) {$\calH_B$};
+\node at (1.5,0) {$\raisebox{.6cm}{\maplr{Q}{Q^\dag}}$};
+\node at (2.8,0) {$\calH_F$};
+\end{tikzpicture}~.
+$$
+The Hamiltonian of a supersymmetric theory is written as the anti-commutator of supercharges
+$$
+H:=\{Q,Q^{\dag}\}={ 1\over 2}\left(- {d^2 \over dx^2 }
++ W^\prime(x)^2\right) + {1 \over {2}}\sigma_3W^{\prime\prime}(x)
+$$
+ In other words, the supercharge is a ``square-root'' of Hamiltonian. In addition one can check that the supercharges commute with the Hamiltonian
+\begin{equation}
+[H,Q] =[H,Q^{\dag}] = 0 ~.
+\label{susyalg}
+ \end{equation}
+
+ Let us consider a bosonic eigenstate $|b\rangle \in\calH_B$ of the Hamiltonian
+ $$ H |b\rangle =\{Q Q^\dag+Q^\dag Q\}|b\rangle =Q^\dag Q|b\rangle =E|b\rangle~, $$
+ for $E>0$. Now its \textbf{superpartner} $|f\rangle =Q|b\rangle$ has  the same energy
+ $$  H |f\rangle =\{Q Q^\dag+Q^\dag Q\}Q |b\rangle =Q Q^\dag Q|b\rangle =E|f\rangle~.$$
+In a similar fashion, for a fermionic eigenstate $|f\rangle \in\calH_F$ with $E>0$, one can show that its superpartner $|b\rangle =Q^\dag|f\rangle$ has the same energy. In fact, the commutation relation \eqref{susyalg} is
+responsible for the degeneracy.
+
+
+\begin{figure}[ht]\centering
+\includegraphics{pictures/hilbert}
+\end{figure}
+
+
+On the other hands, situation drastically changes for states with $E=0$. For a  bosonic state $|b\rangle$ with zero energy $H|b\rangle=0$, we have $\langle b|Q^\dag Q |b\rangle=0$ so that the supercharge annihilates the state $Q|b\rangle=0$ and therefore there is no fermonic partner. Similarly, for a fermionic state $|f\rangle$, one can show that $Q^\dag |f\rangle$ so that there is no bosonic partner. Since  these zero energy states $|z\rangle$ are annihilated by both supercharges $Q$ and $Q^\dag$, they are invariant under supersymmetric transformation
+$$
+\exp(i\epsilon Q)|z\rangle=|z\rangle~,\qquad \exp(i\epsilon Q^\dag)|z\rangle=|z\rangle~.
+$$
+Therefore, they are also called \textbf{supersymmetric states}.
+
+
+
+Witten considered the difference between bosonic and fermionic zero energy states \cite{Witten:1982im}. To this end, he has introduced the index $\Tr(-1)^F$. Since the excited states do not contribute to the index because there are always boson-fermion pairs. Therefore, the index is equal to
+$$
+\Tr(-1)^F =\dim \Ker Q- \dim \Ker Q^\dag
+$$
+Note that the space of bosonic zero energy states can be expressed as $\Ker Q$ whereas the space of fermionic zero energy states can be written as $\Ker Q^\dag$.
+
+Since zero energy sates obey
+$$
+\left(\frac{d}{dx}\pm W^\prime(x)\right)\phi(x)=0~,
+$$
+we have
+$$
+\phi(x)=\textrm{const} \times \exp(\mp W(x))~.
+$$
+The normalizable condition \eqref{L2} requires $\phi(x)\to 0$ as $|x|\to\infty$.   Suppose that the superpotential $W(x)$ is subject to polynomial growth $W(x)\sim \lambda x^n$ in the region $|x|\gg R$.
+
+\begin{itemize}
+\item When $n$ is even, there exists either bosonic or fermionic zero energy states depending on the sign of $\lambda$. Therefore, the index is equal to the sign of $\lambda$.
+\item When $n$ is odd, there is no zero energy state because $W(x)$ changes the sign when $x$ moves from $-\infty$ to $\infty$ so that the index is equal to zero. Although the Hamiltonian is supersymmetric, there is no supersymmetric state for a potential of this type. Therefore, supersymmetry is \textbf{spontaneously broken}.
+\end{itemize}
+
+As we have seen, the index is independent of the detail of the superpotential $W(x)$ and it depends only on its asymptotic behavior. This is what we have seen in the first lecture.
+\end{document}

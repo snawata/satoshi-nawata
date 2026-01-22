@@ -1,0 +1,164 @@
+
+\documentclass[geometry-lectures-19.tex]{subfiles}
+%
+
+\begin{document}
+
+
+\section{Prologue}
+
+\subsection{Euler characteristics}\label{sec:Euler}
+
+Let $P$ be a polyhedron with $V$ vertices, $E$ edges, and
+$F$ faces. The Euler characteristic of $P$ is defined as
+$$
+\chi(P)=V-E+F~.
+$$
+For example, regular polyhedra povide \textbf{cell decomposition} of a sphere as follows, which provide $\chi(S^2)=2$. Note that the Euler characteristics are independent of a choice of cell decomposition. On the other hand, the Euler characteristic of a torus is equal to zero. The Euler characteristic is the most important \textbf{topological invariant}. For a mathematical formulation, we need to learn the notion of \textbf{homology}.
+\begin{figure}[!htb]\centering
+    \includegraphics[width=13cm]{pictures/euler}
+    \caption{Euler characteristic of the sphere from \href{https://en.wikipedia.org/wiki/Euler_characteristic}{Wikipedia:Euler\_characteristic}}
+\end{figure}
+\begin{figure}[!htb]\centering
+    \includegraphics[width=10cm]{pictures/torus}
+    \caption{Cell decomposition of a torus}\label{fig:torus}
+\end{figure}
+
+
+There are many ways to approach the Euler characteristic. For instance, let us consider a vector field on a surface $\Sigma$. A physics student is familiar with vector electric and magnetic fields. These are vector fields on $\bR^3$, and we can generalize them to a \textbf{smooth vector field} on a surface $\Sigma$. For a zero of a vector field, one can introduce the notion of an \textbf{index} which is illustrated in Figure \ref{fig:poincarehopf}. (The definition will be given in \S\ref{sec:Lefschetz}) Then, the \textbf{Poincar\'e-Hopf} theorem states that the sum of indices at zeros of a vector field $X$ is the Euler characteristic:
+$$
+\sum_p \mathrm{ind}_p (X)=\chi(\Sigma)~.
+$$
+To formulate the Poincar\'e-Hopf theorem, we need to introduce the notion of \textbf{vector fields} and \textbf{tangent bundles}.
+\begin{figure}[ht]\centering
+    \includegraphics[width=12cm]{pictures/poincarehopf}
+    \caption{Vector fields on surfaces and index at a zero.}\label{fig:poincarehopf}
+\end{figure}
+
+Another important theorem is the \textbf{Gauss-Bonnet theorem}:
+$$
+\chi(\Sigma)=\int_M \frac{\kappa}{2\pi} dA
+$$
+where $\kappa$ is called the Gauss curvature. The Gauss-Bonnet theorem was later generalized to the celebrated Hirtzebruch-Riemann-Roch theorem and index theorem, which can be regarded as one of milestones in mathematics of twentieth century. We will glimpse these theorems in \S\ref{sec:index-thm}.
+
+The geometric study of surfaces was preceded by Gauss, which clearly indicates the geometry beyond Euclid. In middle of the 19th century, Riemann proposed a concept of manifolds of arbitrary dimensions. Furthermore, he clearly envisioned \textbf{Riemannian geometry} which deals with metrics, connections and curvatures on a manifold. Remarkably, his idea on ``holomorphic function on a Riemann surface'' also has later led to the theory of \textbf{complex geometry} and \textbf{algebraic geometry}. Aournd 1900, Poincar\'e has opened up a new area of mathematics, nowadays called \textbf{algebraic topology}. He has illustrated his idea of studying topology by homology groups and fundamental groups.
+
+The large part of ideas of Riemann and Poincar\'e is not furnished with mathematical rigorous techniques of their time, so the necessary tools had to be invented. As a result, their revolutional ideas and methods are to be a source of inspiration for a century, and the later development justified their intuitions.\footnote{For history of algebraic and differential topology, we refer to \cite{dieudonne2009history}.} One can see similar phenomena in the current relation between physics and mathematics.
+
+
+In this course, we will learn the basic concepts of geometry and topology developed after Gauss, Riemann and Poincar\'e. More concretely, we will deal with the following subjects
+\begin{itemize}
+\item manifolds and tangent, cotangent bundles,
+\item homology, cohomology and fundamental groups
+\item metric, connections, curvatures (Riemannian geometry)
+\item Lie group and Lie algebras
+\item vector bundles and principal $G$-bundles
+\item topological invariants, characteristic classes
+\end{itemize}
+It turns out that these notions are indispensable to description of physics. Maxwell's equation is described by differential forms. We need to learn Riemannian geometry for Einstein's equations.  Yang-Mills theory is constructed base on the theory of vector bundles. The non-perturbative effects in quantum field theories are often formulated in terms of characteristic classes. Supersymmetry requires the index theorem.
+
+
+In this course, we will omit proofs of theorems, deligating them to the mathematical literature. We rather learn meanings of theorems and how to use them. Moreover,
+we will learn how geometric and topological methods are indispensable in physics through examples and homework sets.
+
+
+\subsection{Textbooks and references}
+There are many textbooks and you can pick what suits you best. However, I do not recommend you to stick only on one book, and it is often illuminating to compare books since they are written in different perspectives. For basics of differential geometry, one can refer to \cite{singer1967lecture,spivak1970comprehensive,morita2001geometry,warner2013foundations,bott1982differential}. There are many books \cite{frankel2011geometry,nash1988topology,nakahara2003geometry} that explain the connections to physics. It should be noted that Milnor's books \cite{milnor1965topology,milnor1963morse} would be wonderful-read.
+
+
+\subsection{Localization and toy model of TQFT}
+The relation between physics and topology has a long history. However, one of the most important steps in the modern interaction between physics and topology has been made by Witten \cite{Witten:1982im}. Here we provide an essence of  \cite{Witten:1982im}.
+
+\begin{figure}[ht]\centering
+    \includegraphics[width=12cm]{pictures/potential}
+    \caption{The partition function depends only on the asymptotic behavior of $s(x)$ at $x\to \pm\infty$.}\label{fig:potential}
+\end{figure}
+Let us consider the following integral
+\be\label{toy-integral}
+Z=\int_{-\infty}^{\infty} \frac{d x}{\sqrt{2 \pi}} \exp \left(-\frac{1}{2} s(x)^{2}\right) \cdot \frac{d s}{d x}~.
+\ee
+Recalling the Gaussian integral
+$$\displaystyle \int _{-\infty }^{\infty }e^{-x^{2}}\,dx={\sqrt {\pi }}~,$$
+if the function $s(x)$ takes the form in the left of Figure \ref{fig:potential}, then we have
+$$
+Z=\int_{-\infty}^{\infty} \exp \left(-\frac{1}{2} s(x)^{2}\right) \cdot \frac{d s}{\sqrt{2 \pi}}=1~.
+$$
+On the other hand, if the function $s(x)$ takes the form in the left of Figure \ref{fig:potential}, then we have
+$$
+Z=\int_{\infty}^{\infty} \exp \left(-\frac{1}{2} s(x)^{2}\right) \cdot \frac{d s}{\sqrt{2 \pi}}=0~.
+$$
+Therefore, if $s(x)$ is a polynomial of $x$
+$$
+s(x)=a x^{n}+\textrm{lower orders}
+$$
+then $Z=1,0$ for $n=\textrm{odd,even}$. Importantly, the partition function $Z$ does not depend on the detail of the function $s(x)$, but it depends only on the asymptotic behavior at $\pm\infty$. Thus, the scaling $s(x)\to t s(x)$ does not change $Z$ so that we can consider $t\to \infty$ of
+$$
+Z=\int_{-\infty}^{\infty} \frac{d x}{\sqrt{2 \pi}} \exp \left(-\frac{t^{2}}{2} s(x)^{2}\right) \cdot \frac{t d s}{d x}~.
+$$
+Then, the partition function receives contribution only when $s(x)=0$ so that
+$$
+Z=\sum_{s\left(x_{i}\right)=0} \operatorname{sign}\left.\left(\frac{d s}{d x}\right)\right|_{x_{i}}=\sum_{i} \pm 1~.
+$$
+Hence, the integral \eqref{toy-integral} localizes at the saddle points $x_i$ where $s(x_i)=0$.
+
+This can be formulated in terms of topological quantum field theory. To this end, we introduce Grassmann variables $\rho,\chi$ which obey
+$$
+\rho \chi=-\chi \rho~.
+$$
+The integration rules of Grassmann variables are give by
+$$
+\int d \chi d \rho=\int d \chi d \rho \rho=\int d \chi d \rho \chi=0 \qquad \int d \chi d \rho \rho \chi=1
+$$
+so that the partition function \eqref{toy-integral} can be written as
+$$
+Z=\int \frac{d x}{\sqrt{2 \pi}} d \chi d \rho \exp \left(-\frac{1}{2} s(x)^{2}+\rho \frac{d s}{d x} \chi\right)~.
+$$
+The exponent in the integrand can be regarded as a Lagrangian
+$$
+\mathcal{L}=-\frac{1}{2} s(x)^{2}+\rho \frac{d s}{d x} \chi~.
+$$
+Remarkably, this Lagrangian has BRST symmetry
+\be\label{BRST}
+\delta x=\chi, \quad \delta \rho=s(x), \quad \delta \chi=0~.
+\ee
+For, we can check
+$$
+\begin{aligned} \delta \mathcal{L} &=-s(x) \delta s(x)+\delta \rho \frac{d s}{d x} \chi+\rho \delta \frac{d s}{d x} \chi \\ &=-s(x) s^{\prime}(x) \chi+s(x) s^{\prime}(x) \chi \\ &=0 \end{aligned}
+$$
+The BRST symmetry has the property that its square becomes zero
+$$
+\begin{aligned} \delta^{2} x &=\delta \chi=0 \\ \delta^{2} \rho &=\delta s(x)=s^{\prime}(x) \chi=0 \end{aligned}
+$$
+where we impose the equation of motion $s^{\prime}(x) \chi$.  The saddle points $s(x)=0$ can be understood as the fixed points of the BRST transformation \eqref{BRST} of $\rho$. In general, a partition function of TQFT localizes the BRST fixed points.
+
+
+\begin{figure}[ht]\centering
+    \includegraphics[width=6cm]{pictures/morse-function}
+\end{figure}
+
+Let us generalize this one-dimensional model to the $n$-dimensional case.
+$$
+Z=\int \prod_{i=1}^{n} \frac{d x_{i}}{\sqrt{2 \pi}} \exp \left(-\frac{1}{2} \sum_{i=1}^{n}\left(\partial_{i} W(x)\right)^{2}\right)\operatorname{det} \partial_{i} \partial_{j} W(x)
+$$
+Again, we can introduce the fermionic degrees $\rho_i,\chi_i$ of freedom, and write the partition function as
+$$
+Z =\int \prod_{i} \frac{d x_{i}}{\sqrt{2 \pi}} d \rho_{i} d \chi_{i} \exp (\mathcal{L})~, \qquad \mathcal{L} =-\frac{1}{2} \sum_{i=1}^{n}\left(\partial_{i} W(x)\right)^{2}+\sum_{i, j=1}^{n} \rho_{i} \partial_{i} \partial_{j} W(x) \chi_{i} ~.
+$$
+We again take $W\to tW$ and the partition function is localized at critiacal point of $W$ as $t\to \infty$
+\bea
+Z&=\sum_{d W\left(x^{(a)}\right)=0} \operatorname{sign}\left.\left(\operatorname{det} \partial_{i} \partial_{j} W\right)\right|_{x^{(a)}}\cr
+&=\sum_{a}(-1)^{n_{-}^{(a)}}=\chi(M)
+\eea
+Here the matrix $\partial_{i} \partial_{j}W|_{x^{(a)}}$ is called the Hessian of $W$ at $x^{(a)}$, and we denote the number of its positive and negative eigenvalues by $n_{+}^{(a)}$ and $n_{-}^{(a)}$ respectively. In fact, $W$ is called a \textbf{Morse function} $W:M\to \bR$ of $M$ if all the critical points are non-degenerate. There is the classic \cite{milnor1963morse} that wonderfully explains the relation between Morse theory and topology. The last equality follows from the Morse fundamental theorem, and the partition function is given by the Euler characteristics of $M$. The partition function is independent of a choice of Morse functions $W$ and it only depends on the topology of $M$. Therefore, it is called a \textbf{topological quantum field theory}.
+
+
+
+
+
+%
+% \bibliography{all-ref}
+% \bibliographystyle{hyperamsalpha}
+%
+
+
+\end{document}

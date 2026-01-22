@@ -1,0 +1,201 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+\newcommand{\frakgl}{\ensuremath{\mathfrak{gl}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\OO}{\mathrm{O}}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem{question}[lemma]{Question}
+\newtheorem{proposition}[lemma]{Proposition}
+
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 9: Due at class on May 10}
+%
+%  \vspace{.5cm}
+% \noindent 1. Let us define $S^3=\{(x^0,x^1,x^2,x^3)\in \bR^4 | \sum_{i=1}^4x_i^2=1\}$ and $S^1=\{(x^0,x^1,x^2,x^3)\in \bR^4 | (x^0))^2+(x^1)^2=1\}$. Then, show that $S^3 \backslash S^1$ is homotopic to $S^1$.
+%
+%
+% %
+% \vspace{.5cm}
+%\noindent 2. Show that the Euler characteristics of an odd-dimensional compact oriented closed manifold is zero.
+%
+%
+
+ \vspace{.5cm}
+\noindent 1. Find the fundamental group $\pi_1(\Sigma_g)$ of the Riemann surface of genus $g$.
+
+
+
+ \vspace{.5cm}
+\noindent 2. Find the fundamental group $\pi_1(\bR P^n)$ of the $n$-dimensional real projective space $\bR P^n$.
+
+ \vspace{.5cm}
+\noindent 3.  Find  the fundamental group $\pi_1(K)$ of the 3-dimensional complex $K$ in Problem 5 of Homwork 7.
+
+%
+% \vspace{.5cm}
+% \noindent 4. Show that Euler characteristics of a compact Lie group is zero.
+
+ \vspace{.5cm}
+\noindent 4.  Find \textbf{real} dimensions of the following Lie groups
+\begin{itemize}
+\item Complex general linear group: $\GL(n, \bC) = \{A \in \textrm{M}_n(\bC)| \det A \neq 0\}$
+\item Complex special linear group: $\SL(n, \bC) = \{A \in \GL(n, \bC)| \det A = 1\}$
+\item Unitary group $\U(n) = \{A \in \GL(n, \bC)| A^\dagger A = I\}$
+\item Special unitary group $\SU(n) =\{A \in \U(n)| \det A = 1\}$
+\item Real general linear group: $\GL(n, \bR) = \{A \in \textrm{M}_n(\bR)| \det A \neq 0\}$
+\item Real special linear group: $\SL(n, \bR) = \{A \in \GL(n, \bR)| \det A = 1\}$
+\item Symplectic group $\mathrm { Sp } ( n,\bR)=\{ A \in \GL(2n, \bR)| A^ { \mathrm { T } } J A = J \ \textrm{where} \  J=\begin{pmatrix} 0&I_n\\-I_n&0\end{pmatrix}\}$
+\item  Orthogonal group $\OO(n,\bR) =  \{A \in \GL(n, \bR)| A^T A = I\}$
+\item Special orthogonal group $\SO(n,\bR) = \{A \in \OO(n,\bR)| \det A = 1\}$
+\end{itemize}
+
+
+ \vspace{.5cm}
+\noindent 5. Show that the group of Lorentz transformations is isomorphic to $\SL(2,\bC)/\pm \textrm{Id}$. Hint: If we define
+$$
+A:=\left( \begin{array}{cc}t+x&z+yi\\ z-yi&t-x\end{array}\right)~
+$$
+where $(t,x,y,z)\in \bR^4$, then we have $t^2-x^2-y^2-z^2=\det A$.
+
+ \vspace{.5cm}
+\noindent 6. Show that $\SO(4)\cong  \{\SU(2) \times \SU(2)\}/\{\pm \textrm{Id}\}$, where $\textrm{Id} \hookrightarrow \SU(2) \times \SU(2)$ is the
+diagonal embedding. The hint is given as follows.
+
+
+
+Let $\bH$ be the quaternion in which an element $x\in\bH$ can be expressed as
+$$x=x_1+x_2i+x_3j+x_4k$$ where $x_a\in\bR$ $( a=1,\cdots,4)$ and
+$$
+i^2=j^2=k^2=-1~,\quad ij=-ji=k~, \quad jk=-kj=i~,\quad ki=-ik=j ~.
+$$
+We define the imaginary part of $x$ as
+$$
+\textrm{Im}~x=x_2i+x_3j+x_4k
+$$
+so that the conjugate $\overline x$ is written as
+$$
+\overline x=x_1-x_2i-x_3j-x_4k
+$$
+Therefore, the multiplication becomes
+$$
+\overline{xy}=\overline y \cdot \overline x
+$$
+The norm of $x$ is
+$$
+|x|^2=x\overline x=\overline x x=x_1^2+x_2^2+x_3^2+x_4^2
+$$
+From this viepoint, $\SU(2)$ can be considered as a group of unit quaternions $\SU(2)=\{x\in\bH|~ |x|=1\} $. Then $\SU(2)\times \SU(2)$ acts on $\mathbb{H}$ by rotations in the following way:
+$$x\mapsto q_1 xq_2^{-1}$$
+is a rotation of $\mathbb{R}^4=\mathbb{H}$ for $q_1$, $q_2\in \SU(2)$.
+Then $(-q_1,-q_2)$ represents the same rotation as $(q_1,q_2)$. Show that these represent all the rotations of $\bR^4=\bH$ so that it is isomorphic to $\SO(4)$.
+
+
+%  \vspace{.5cm}
+% \noindent 6.  Write down the definitions of the following Lie algebras:
+% $\frakgl(n,\bC)$, $\fraksl(n,\bC)$, $\mathfrak{sp}(n,\bR)$, $\frakso(n,\bR)$ and $\mathfrak{su}(n)$.
+
+
+ \vspace{.5cm}
+\noindent 7. \textbf{This is a bonus problem with extra 3 points which is NOT mandatory.}
+
+\begin{theorem}[Borsuk-Ulam theorem]
+For every continuous map $f:S^2\to\bR^2$, there exists a pair of anti-podal points $x$ and $-x$ in $S^2$ with $f(x)=f(-x)$.
+\end{theorem}
+
+Let us give a proof by contradiction.
+Suppose to the contrary that $f:S^2\to\bR^2$ is continuous, but $f(x)\neq f(-x)$ for  ${}^\forall x\in S^2$. Then we define a continuous map $g:S^2\to S^1$ by
+$$
+g:x\mapsto \frac{f(x)-f(-x)}{|f(x)-f(-x)|}
+$$
+which satisfies $g(-x)=-g(x)$. Without loss of generality, we set $g(1,0,0)=1$. The equator of $S^2$ can understood as a loop
+$$\beta :[0,1]\to S^2; s\mapsto (\cos 2\pi s ,\sin 2\pi s,0)~.$$
+Show that $\alpha =g\circ \beta: [0,1]\to S^1$ is contractible, which means that it is homotopic to the constant map $\alpha\sim 1$.
+
+
+On the other hand, for $s\in [0,\frac12]$, we have $\beta(s)=-\beta(s+\frac12)$ so that $\alpha(s)=-\alpha(s+\frac12)$. Let $\tilde \alpha:[0,1]\to \bR$ be the lift of $\alpha$ to the universal cover. Then, show that $\tilde\alpha(0) =\tilde\alpha(1)+n$ where $n$ is an odd integer.
+Therefore, it contradicts with $\alpha\sim 1$.
+
+Here is a ``corollary". At every instant, there must be a pair of antipodal points on the earth having the same temperature and the same barometric pressure.
+
+\vspace{.5cm}
+
+
+Using the Borsuk-Ulam theorem, give a proof of the following theorem.
+
+\begin{theorem}[Ham-Sandwich theorem]
+Given any three sets in space, there exists a plane which bisects all three sets, in the sense that the part of each set which lies on one side of the plane has the same volume as the part of the same set which lies on the other side of the plane.
+\end{theorem}
+
+\begin{figure}[h]\centering
+\includegraphics[width=10cm]{Ham}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,263 @@
+\documentclass[geometry-lectures-19.tex]{subfiles}
+
+%\title{ Lecture 4}
+\begin{document}
+
+\section{de Rham cohomology}
+
+
+\subsection{de Rham cohomology}
+
+Given a differential operator
+$$
+d:\Omega^k(M)\to\Omega^{k+1}(M)~,
+$$
+$\omega\in\Omega^k(M)$ is called a \textbf{closed form} if $d\omega=0$, and   an \textbf{exact form} if there exists $(k-1)$-form such that $\omega=d\eta$. Let us denote the set of all closed $k$-forms on $M$ by $Z^k(M)$ and the set of all exact $k$-forms by $B^k(M)$.
+\begin{align}
+Z^k(M)&=\textrm{Ker}(d:\Omega^k(M)\to\Omega^{k+1}(M))\cr
+B^k(M)&=\textrm{Im}(d:\Omega^{k-1}(M)\to\Omega^{k}(M))\nonumber
+\end{align}
+The \textbf{de Rham cohomology group} of $M$ is defined  as the quotient space
+$$
+H^k_{dR}(M)=Z^k(M)/B^k(M)~,
+$$
+and its dimension is called
+the \(k\)-th \textbf{Betti number} of \(M\).
+In other words, the de Rham cohomology group of $M$ is the cohomology group of de Rahm complex
+$$
+0\to \Omega^0(M) \xrightarrow{d}\Omega^1(M) \xrightarrow{d}\cdots  \xrightarrow{d} \Omega^n(M)\to0~.
+$$
+It is an abelian group as a vector space over $\bR$.
+
+If \(x \in H_{dR}^{k}(M), y \in H_{dR}^{\ell}(M)\) are represented by closed forms \(\omega \in Z^{k}(M), \eta \in Z^{\ell}(M)\) respectively,
+then we set
+\(x \wedge y=[\omega \wedge \eta] \in H_{dR}^{k+\ell}(M)\)~.
+Obviously, we have $y \wedge x=(-1)^{k\ell}x \wedge y$.
+\((H_{dR}^{*}(M),\wedge)\) equipped with the product structure is called the \textbf{de Rham
+cohomology ring}.
+
+\blem[Poincar\'e Lemma]
+The de Rham cohomology of $\bR^n$ is
+$$
+H^k_{dR}(\bR^n)=\begin{cases} \bR \quad k=0 \\ 0 ~ \quad  k\neq 0\end{cases}
+$$
+where $H^0_{dR}(\bR^n)\cong \bR$ are represented by constant functions.
+\elem
+This also holds when $M$ is contractible, namely when one can smoothly shrink $M$ to a point. However, this is not true on a general manifold although it is true on each coordinate chart. The issue is how these charts are patched together globally. The de Rham cohomology is a topological invariant of a manifold as we will see in \S\ref{sec:homoology}.
+
+
+\subsection{Riemannian metrics}
+
+So far, a manifold we have considered is endowed with the notions of derivatives and integrals. We need to introduce a metric for the concept of length.
+
+
+\bdefn[Riemannian metric]
+A Riemannian metric $g$ on a smooth manifold $M$ is a bilinear form $g:T_pM\times T_p M\to \bR$ for any $p\in M$ with the following properties
+
+1. (symmetric) $g(X_p,Y_p)=g(Y_p,X_p)$  for all  $X_p,Y_p \in T_{p}M$
+
+2. (positive-definite) $g(X_p,X_p) \geq 0$ for all $X_p \in T_{p} M$
+
+3. (non-degenerate) $g(X_p,X_p) = 0$ if and only if $X_p=0$.
+
+Furthermore, \(g\) is smooth in the sense that for any smooth vector fields
+\(X\) and \(Y,\) the function \(x \mapsto g_{p}\left(X_{p}, Y_{p}\right)\) is smooth.
+\edefn
+
+A pair $(M,g)$ with a Riemannian metric $g$ on $M$ is called a Riemannian manifold. In physics, a metric is often not positive-definite, and the number of negative eigenvalues of a metric is called \textbf{signature}. In a chart $(U;x^1\cdots,x^n)$, it can be written locally as
+$$
+ds^2= g_{ij}(x)dx^i\otimes dx^j~.
+$$
+On an arbitrary smooth manifold, one can show there exists a Riemannian metric by using a partition of unity.
+On a Riemannian manifold, one can introduce the notion of the length of a tangent vector $X_p\in T_pM$
+$$
+|X_p|=\sqrt{g(X_p,X_p)}~.
+$$
+For a curve $\gamma:[a,b]\to M$, the length $L(c)$ of curve can be defined by
+$$
+L(\gamma)=\int_{a}^b |\dot \gamma(t)|dt=\int_a^b \sqrt{g_{ij}\frac{dx^i}{dt}\frac{dx^j}{dt}}
+$$
+
+For a smooth map $f:M\to N$, the metric $g$ on a smooth manifold $N$ can be pull-back to the metric $f^*g$ on a smooth manifold $M$ in such a way that for $X_p,Y_p\in T_pM$
+$$
+f^*g(X_p,Y_p)=g(f_*X_p,f_*Y_p)~.
+$$
+
+\bdefn[Isometry]\index{isometry}
+  Let $(M, g)$ and $(N, h)$ be Riemannian manifolds. We say $f: M \to N$ is an \emph{isometry} if it is a diffeomorphism and $f^*h = g$. In other words, for any $p \in M$ and $X_p,Y_p \in T_p M$, we need
+  \[
+    h\big(f_*X_p,f_*Y_p\big) = g(X_p,Y_p).
+  \]
+\edefn
+In fact, given isometries $f_1,f_2$, its product $f_1\circ f_2$ is also an isometry so that  the set of isometries forms a group, called the \textbf{isometry group}.
+\vspace{.5cm}
+
+\bexample
+Any reflection, translation and rotation is a global isometry of $\bR^n$. The isometry group $E(n)$ of $\bR^n$ is the Euclidian group, and  therefore it has as subgroups the translational group $T(n)$, and the orthogonal group $O(n)$. Any element of $E(n)$ is a translation followed by an orthogonal transformation (the linear part of the isometry), in a unique way:
+$$
+x \mapsto A (x + b)
+$$
+where $A\in O(n)$ is an orthogonal matrix.
+\eexample
+
+A vector field $X$ on a Riemannian metric $(M,g)$ is called a \textbf{Killing vector field} if its flow becomes an isometry $\varphi_t^*g=g$. Or its Lie derivative of the metric $g$ vanishes
+$$
+L_Xg=0~.
+$$
+If we write the metric $ds^2=g_{ij}dx^idx^j$ and the Killing vector field $X=X^k\partial_k$ in terms of a local coordinate $(U;x^1,\ldots, x^n)$, the Killing equation can be written as
+$$X^{k} \partial_{k} g_{i j}+g_{k j} \partial_{i} X^{k}+g_{i k} \partial_{j} X^{k}=0~.$$
+
+Using a metric $g$, one have an isomorphism between the vector field and one form
+$$
+\hat g: \mathfrak{X}(M) \cong \Omega^1(M)
+$$
+in such a way that for vector fields $X,Y\in  \mathfrak{X}(M)$ on $M$,
+$$
+\hat g(X)(Y)=g(X,Y)
+$$
+By using the isomorphism $T_pM\cong T^*_pM$, we can introduce an inner product on $T^*_pM$.
+
+
+\bdefn[gradient vector field]
+Let $f:M\to \bR$ be a smooth function. The dual of the one-form $df$ under this isomorphism is called the \textbf{gradient vector field} of $f$ denoted by $\operatorname{grad} f$  (or $\nabla f$)
+$$ g(\operatorname{grad} f, X)=d f(X)=X f~,$$
+for ${}^\forall X\in \frakX(M)$. Given a local coordinate $(U;x^1,\ldots,x^n)$, it is expressed as
+$$
+\operatorname{grad} f=\sum_{i,j=1}^n g^{ij}(x)\frac{\partial f}{\partial x^i}\frac{\partial }{\partial x^j}~.
+$$
+\edefn
+
+
+
+For simplicity, we will assume that the metric $g_{ij}$ is positive definite. For a metric with more general signature, we just have to introduce appropriate sign factors to some of the formulae below.
+Since the metric $g_{ij}$ is symmetric, we can find a basis $\{e^a_i \}$ $(a=1,\cdots ,n)$ at $p\in M$ so that
+$$
+g_{ij} =
+\sum^n_{a=1} e^a_ie^a_j~.
+$$
+This basis is called an \textbf{orthonormal frame} at $p\in M$. In fact, the orthonormal frame can be found on a local chart $(U;x^1,\ldots,x^n)$ by the standard Gram-Schmidt process.  For a given metric, an orthonormal frame is defined modulo $O(n)$. The frame $e^a$'s are called \textbf{vielbeins} where viel means many in German, and bein is a leg. (In 4 dimensions, they are also called vierbeins or tetrads. In dimensions other than 4, words like f\"unfbein, etc. have been used. Vielbein covers all dimensions.)
+
+
+
+
+\subsection{Hodge theorem and Hodge decomposition}
+
+
+On an oriented compact Riemannian manifold $(M,g)$,  we can find the one distinguished differential form among
+the set of all closed forms representing a de Rham cohomology class.
+Such a form is called a \textbf{harmonic form}, and it can be characterized by
+using a differential operator called the \textbf{Laplacian}. This is the theory due to Hodge.
+For the details, the reader is referred to \cite{warner2013foundations}.
+
+In this subsection, we assume $M$ is an oriented compact Riemannian manifold. Given a metric $g$,
+there is an isomorphism
+$$
+\ast : \Omega^k(M)\to \Omega^{n-k}(M)
+$$
+defined by
+$$
+\ast(e^1\wedge \cdots \wedge e^k)=e^{k+1}\wedge \cdots \wedge e^n~.
+$$
+This is called \textbf{Hodge $\ast$-operator}.
+In particular, $\ast 1\in \Omega^n(M)$ is called the \textbf{volume form}
+$$\textrm{vol}=\ast 1 = e^1 \wedge e^2 \wedge \cdots \wedge e^n~.$$
+On a local coordinate $(U;x^1,\ldots,x^n)$, we can express the volume form as
+$$\textrm{vol} = \sqrt{g}dx_1 \wedge dx_2 \wedge \cdots \wedge dx_n~,$$
+where $g = \det g_{ij}$ (we are assuming that the metric is positive definite).
+
+For a $k$-form $\omega$, it is defined as
+$$
+(\ast \omega)_{i_{k+1}\cdots i_n}=\frac{1}{k!} \frac{\epsilon^{j_1\cdots j_kj_{k+1}\cdots j_n}}{\sqrt{g}}\omega_{j_1\cdots j_k}g_{j_{k+1}i_{k+1}}\cdots g_{j_ni_n}~,
+$$
+where the anti-symmetric tensor $\epsilon_{i_1\cdots i_n}$ and $\epsilon^{i_1\cdots i_n}$ is normalized as
+$$
+\epsilon_{12\cdots n}=\epsilon^{12\cdots n}=1~.
+$$
+The important point is that the Hodge star depends on the metric $g$.  Under coordinate transformations,  $\epsilon_{i_1\cdots i_n}$  does not transform as a tensor. However, we can remedy this by multiplying
+$\sqrt{g}$ to make it into the volume form. The volume form transforms as a tensor if coordinate transformations preserve the orientation. If we change the orientation, we get an extra $(-1)$.
+
+The adjoint operator $\delta$ on $\Omega^k$ of the exterior differential $d$ is defined by
+$$\delta\omega = (-1)^{nk+n+1} \ast d \ast \omega~.$$
+We have commutative diagram
+$$
+\begin{tikzcd}
+\Omega^k(M) \arrow[r, "\ast"] \arrow[d, "\delta"]
+& \Omega^{n-k}(M) \arrow[d, "d" ] \\
+\Omega^{k-1}(M)\arrow[r,  "(-1)^k\ast"]
+& \Omega^{n-k+1}(M)
+\end{tikzcd}
+$$
+We can easily verify the following properties,
+$$\delta^2 =0~,\quad \ast\delta d=d\delta\ast~,\quad d\ast \delta=\delta
+\ast d=0~.$$
+For a closed manifold $M$, one can define the positive definite inner product on $\Omega^k(M)$ by
+$$
+(\omega,\eta)=\int_M \omega\wedge \ast \eta =\int_M\eta\wedge \ast \omega
+$$
+for $\omega,\eta\in \Omega^k(M)$.
+The operator $\delta$ is an adjoint operator of $d$ in the sense that
+$$
+(d\omega,\eta)=(\omega,\delta\eta)~.
+$$
+
+On a Riemannian manifold $M$, an operator defined by
+$$\Delta= \delta d + d\delta : \Omega^k(M) \to \Omega^k(M)~$$
+is called \textbf{Laplace-Beltrami operator}. A form $\omega\in\Omega^*(M)$ such that $\Delta\omega=0$ is called a \textbf{harmonic form}. In particular, a function $f$ such that $\Delta f=0$ is called a \textbf{harmonic function}. The Laplace-Beltrami operator is self-adjoint in the sense that
+$$
+(\Delta \omega,\eta)=(\omega,\Delta \eta)
+$$
+for ${}^\forall \omega,\eta\in \Omega^k(M)$. In addition,
+one can show that a necessary and sufficient condition of harmonic form: $\Delta\omega=0$ iff $d\omega=0=\delta\omega$.
+
+
+
+
+
+Let us denote the set of all harmonic $k$-forms on $M$
+$$
+\bH^k(M)=\{\omega\in\Omega^k(M)|\Delta\omega=0\}~.
+$$
+
+
+\bthm[Hodge decomposition]
+For an oriented compact Riemanninan manifold, we have the orthogonal decomposition
+$$
+\Omega^k(M)=\bH^k(M)\oplus d\Omega^{k-1}(M)\oplus \delta\Omega^{k+1}(M)~.
+$$
+\ethm
+
+
+
+
+\bthm[Hodge theorem]
+On an oriented compact Riemanninan manifold,  the natural map $\bH^k(M)\to H^k_{dR}(M)$ is isomorphism.
+\ethm
+
+
+
+
+In fact, a proof of Hodge theorem requires advanced techniques in analysis, which is given in \cite[\S6]{warner2013foundations}.
+
+
+The Hodge theorem tells us that for a nontrivial $\omega\in H^k(M)$, one can choose a harmonic $k$-form as a representative. Due to $\Delta\ast =\ast \Delta$, $\eta=\ast \omega$ is a harmonic $(n-k)$-form. Since $\omega\neq 0$, we have
+$$
+\int_M\omega\wedge \eta=||\omega ||^2\neq0~.
+$$
+
+
+\bthm[Poincar\'e duality]
+For an connected, oriented, closed $n$-dimensional Riemanninan manifold, the bilinear map
+$$
+H_{dR}^k(M)\times H_{dR}^{n-k}(M)\to \bR; ~(\omega,\eta)\mapsto \int_M\omega\wedge \eta
+$$
+is  non-degenerate and hence induces an isomorphism
+$$
+H_{dR}^{n-k}(M) \cong  H_{dR}^k(M)^*~.
+$$
+\ethm
+
+
+
+
+
+\end{document}

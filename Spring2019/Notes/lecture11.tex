@@ -1,0 +1,139 @@
+\documentclass[geometry-lectures-19.tex]{subfiles}
+
+\begin{document}
+
+
+
+
+\section{Chern-Simons theory}
+
+\subsection{Flat connections and holonomy homomorphisms}
+Let $P\to M$ be a principal $G$-bundle over a manifold $M$. An Ehresmann connection $A$ on $P$ is called a \term{flat connection} If its curvature form $F$ is identically zero $F=0$.  A principal $G$-bundle equipped with a fiat connection is called a flat $G$-bundle. As an example of flat bundle, the produce bundle $M\times G$ has a trivial connection, which is flat. This example is too trivial, and there are much richer stories for flat $G$-bundles.
+
+A connection $A$ determines the horizontal direction of a principal $G$-bundle. Namely at each point $u\in P$, we define
+$$
+\mathcal{H}_u = \{X\in T_uP|A(X) = 0 \}~.
+$$
+The collection $\mathcal{H}=\cup_u \mathcal{H}_u$ is called \term{distribution}. The distribution is called \term{completely integrable} if
+$$
+\textrm{for any two vector fields } X,Y\in \mathcal{H} \longrightarrow [X,Y]\in \mathcal{H}~.
+$$
+Another way to describe completely integrable distribution $\mathcal{H}$ is that for any point on $M$ there exists an integral manifold containing it. (A submanifold $N$ of $M$ is called an \term{integral manifold} of $\mathcal{H}$ if $T_uN=\mathcal{H}_u$ for ${}^\forall u\in N$.)
+
+
+For horizontal vector field $X,Y$, we have $A(X)=0=A(Y)$.
+$$
+F(X,Y)=dA(X,Y)=\frac12\left\{X(A(Y))+Y(A(X))-A([X,Y])\right\}=-\frac12 A([X,Y])
+$$
+Therefore, $F=0 \leftrightarrow [X,Y]$ horizontal vector field. A connection $A$ on a principal $G$-bundle is fiat if and only if the corresponding distribution $\mathcal{H}$ is completely integrable.
+
+
+\begin{figure}[ht]\centering
+\includegraphics[scale =.8]{holonomy}
+\end{figure}
+
+
+Then, for each point $u \in P$ if we denote by $L_u$ the maximal integral manifold passing through it, then the projection $\pi : L_u \to  M$ becomes a covering map. Now let $p_0 \in M$ be a base point of the base space and choose $u_0 \in \pi^{-1}(p_0)$. Then a homomorphism
+$$\rho : \pi_1(M) \to G~,$$
+called the \term{holonomy homomorphism}, is defined as follows.  For each element $\alpha\in \pi_1(M)$  of the fundamental group, we choose a closed curve $\gamma$ with initial point $p_0$ which represents $\alpha$. Let $\tilde \gamma$ be the lift of $\gamma$ to $L_{u_0}$ with initial point $u_0$. Then we can write the end point of $\tilde \gamma=u_0\cdot g$. Since $\pi: L_{u_0} \to M$ is the covering map. we see that the end point of $\tilde\gamma$ is determined uniquely by $\alpha$, and it is independent of choice of $\tilde \gamma$. Then, we set
+$$
+\rho(\gamma)=g^{-1}~.
+$$
+
+\bthm
+Via the holonomy homomorphism, the set of flat connections on $P$ is in a one-to-one correspondence with the set of conjugacy classes of homomorphisms $\rho : \pi_1(M) \to G$.
+\ethm
+
+\subsection{Chern-Simons theory}
+Let $M$ be a compact 3-manifold. We will consider a particular physical theory called \term{Chern-Simons} theory on 3-dimension. Let $P=M\times G$ be a trivial principal $G$-bundle and we denote a connection on $P$ by $A$.
+
+
+The Chern-Simons action for $A$ can be written as
+\begin{align}
+S_{CS}[M,A] &= \frac{k}{4\pi} \int_M \operatorname{Tr}\left(A \wedge dA + \frac23 A \wedge A \wedge A\right)\cr
+&=\frac{k}{8\pi}\int_M \epsilon^{\mu\nu\rho} \Tr \left( A_\mu(\partial_\nu A_\rho -\partial_\rho A_\nu)+ \frac23A_\mu [A_\nu,A_\rho] \right)\nonumber
+\end{align}
+The action is independent of metric of $M$ so it gives a topological invariant of $M$. In fact, the Chern-Simons 3-form is another kind of characteristic class of flat $G$-bundle.
+The a parameter $k$ of the theory (inverse of the coupling constant) is called \term{level}. If $G$ is compact and semi-simple, the level $k$ has to be an integer in order for the action to be gauge invariant.
+ Classically the equations of motion which are the extrema of the action are flat connections:
+ $${\frac {\delta S}{\delta A}}={\frac {k}{2\pi }}F=0~.$$
+
+\subsubsection{Abelian Chern-Simons theory}
+Let us first consider the case when $G = \U(1)$, namely the Abelian Chern-Simons theory. It
+has the action,
+$$S_{U(1)}[M,A] = \frac{k}{4\pi}  \int_M A\wedge dA~,$$
+Since $\U(1)$ is not a semi-simple group, the level $k$ is not necessarily an integer in this case. The Abelian Chern-Simons theory describes the fractional quantum Hall effect as we will see in the last lecture.
+
+Given an orientable close 3-manifold $M$, we can consider the path integral of $\U(1)$ Chern-Simons theory
+$$
+Z[M]=\int_{\mathscr{A}/\mathscr{G}} \mathcal{D}A  e^{iS_{U(1)}(M,A)}~.
+$$
+This can be evaluated by so-called \term{one-loop determinent} and  $Z[M]$ turns out to be also topological invariant, called \term{analytic (Reidemeister) torsion}. This means that Chern-Simons theory provides topological invariants even at quantum level!
+This was first shown by A. Schwarz in 1978, giving the first construction of what we now call a \term{topological quantum field theory} \cite{Schwarz:1978cn}.
+
+
+Furthermore, we can consider holonomy group in Chern-Simons theory on $M=S^3$. Given a loop $\gamma:I\to S^3$ with $I(0)=I(1)=p_0$, the parallel transport along $K$ with respect to $A$ provides a holonomy group and it is expressed as
+$$
+u_0\to u_0\cdot\exp(i\oint_K A)~.
+$$
+We denote it by
+$$
+W_K=\exp(i\oint_K A)
+$$
+This is called \term{Wilson loop operator}, which plays an important role in physics. The expectation value of the Wilson loop operator can be expressed by the Feynman path integral
+$$
+\langle W_K\rangle =\int_{\mathscr{A}/\mathscr{G}} \mathcal{D}A ~W_K(A)~ e^{iS_{U(1)}(A)}~.
+$$
+Let us evaluate the expectation value of two loops $K_1$ and $K_2$ in $\bR^3$.
+\be\label{twopt}\langle W_{K_1}W_{K_2}\rangle=\left \langle \exp(\oint_{K_1}dx_1^\mu A_\mu\oint_{K_2}dx_2^\nu A_\nu ) \right\rangle~.\ee
+Clearly, this expression
+can be easily evaluated in terms of the two-point correlator (propagator) in $S^3$
+$$\langle A_\mu(x) A_\nu (y)\rangle=\frac{i}{k}\epsilon_{\mu\nu\rho}\frac{(x-y)^\rho}{|x-y|^3}~.$$
+Plugging it into \eqref{twopt}, the expectation value can be written in terms of linking number
+$$
+\label{two-pt}\langle W_{K_1}(A) W_{K_2}(A)\rangle=\exp \left(\frac{4\pi i}{k} Lk(K_1,K_2)\right)~.
+$$
+
+
+
+
+
+\subsubsection{Non-Abelian Chern-Simons theory}
+
+Generalization to non-Abelian Chern-Simons theory has been done by the seminal paper of Witten \cite{Witten:1988hf}.
+Let us consider Wilson loop in non-Abelian Chern-Simons theory where the connections no longer commute. Therefore, the holonomy group should be written
+$$
+u_0\to u_0\cdot P \exp (i\oint_K A)
+$$
+where $P$ is the path-ordered integral due to non-commutativity:
+$$P \exp (i\oint_K A)=\prod _{t=0}^{1}e^{A(\gamma(t'))\,dt'}\equiv \lim _{N\rightarrow \infty }\left(e^{A(\gamma(t_{N}))\Delta t}e^{A(\gamma(t_{N-1}))\Delta t}\cdots e^{A(\gamma(t_{1}))\Delta t}e^{A(\gamma(t_{0}))\Delta t}\right)
+$$
+where we subdivide  $1\ge t_N\ge\cdots \ge t_0\ge0$ by $\Delta t=\frac1N$.
+If the starting point is different $u_0\to u_0'=u_0\cdot g$, then holonomy group is
+$$
+P \exp (i\oint_K A)\to g \cdot P \exp (i\oint_K A)\cdot g^{-1}~.
+$$
+Therefore, we can define the operator independent of a starting point by taking trace
+$$
+W_K:=\Tr P \exp (i\oint_K A)~.
+$$
+When $G = \SU(2)$, the expectation value of the Wilson loops
+$$
+\langle W_K\rangle =\int_{\mathscr{A}/\mathscr{G}} \mathcal{D}A ~W_K(A)~ e^{iS_{CS}(A)}~.
+$$
+gives the Jones polynomial which are invariants of knots and links \cite{Witten:1988hf}.
+
+
+Jones polynomials are knot invariants which can be computed by the following skein relation
+$$q^2 J\left({\raisebox{-.2cm}{\includegraphics[width=.6cm]{overcrossing}}}\right)
+- q^{-2}J\left({\raisebox{-.2cm}{\includegraphics[width=.6cm]{undercrossing}}}\right)
+=
+(q-q^{-1}) J\left({\raisebox{-.2cm}{\includegraphics[width=.6cm]{smoothing}}}\right)\,.
+$$
+where the ``quantum'' parameter $q$ is expressed as the Chern-Simons level
+$$
+q=\exp \left( \frac{2\pi i}{k+2}\right)~.
+$$
+
+
+\end{document}

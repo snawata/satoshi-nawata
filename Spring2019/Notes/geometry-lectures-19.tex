@@ -1,0 +1,386 @@
+ \documentclass[12pt,letterpaper]{article}
+
+\pdfoutput=1
+
+\usepackage{physics}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{subfigure}
+\usepackage{mathrsfs}
+\usepackage[letterpaper,margin=0.9in,headheight=15pt]{geometry}
+\usepackage{mathpazo}
+\usepackage{authblk}
+\usepackage{empheq}
+\usepackage{feynmp}
+\usepackage{graphicx}
+\usepackage[matrix,arrow]{xy}
+\usepackage{young}
+\usepackage[vcentermath]{youngtab}
+\usepackage{slashed}
+\usepackage{bbm}
+\usepackage{youngtab}
+\usepackage{rotfloat}
+\usepackage{stmaryrd}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{tikz-cd}
+\usepackage{thmtools}
+\usepackage{dashrule}
+\usepackage{fancyhdr}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{subfiles}
+\usepackage{simplewick}
+
+\usepackage[utf8]{inputenc}
+
+
+
+
+\definecolor{darkblue}{rgb}{0.1,0.1,0.7}
+\definecolor{darkred}{rgb}{0.5,0.1,0.1}
+\definecolor{darkgreen}{rgb}{0.0,0.42,0.06}
+\hypersetup{colorlinks=true,urlcolor=darkblue,linkcolor=darkblue,citecolor=darkred}
+\definecolor{shadecolor}{rgb}{0.85,0.85,0.85}
+
+
+
+% theorem environments
+\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,notefont=\normalfont\bfseries, notebraces={(}{)}]{theorem}
+\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,bodyfont=\normalfont,notefont=\normalfont\bfseries, notebraces={(}{)}]{noital}
+\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,bodyfont=\normalfont\color{darkgreen},notefont=\normalfont\bfseries, notebraces={(}{)}]{green}
+\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,bodyfont=\normalfont,notefont=\normalfont\bfseries,qed=$\qedsymbol$,notebraces={(}{)}]{proofstyle}
+
+\declaretheorem[name=Theorem,numberwithin=section,style=theorem]{thm}
+\declaretheorem[name=Proposition,sibling=thm,style=theorem]{prop}
+\declaretheorem[name=Corollary,sibling=thm,style=theorem]{cor}
+\declaretheorem[name=Lemma,sibling=thm,style=theorem]{lem}
+\declaretheorem[name=Remark,style=theorem,numbered=no]{rem}
+\declaretheorem[name=Definition,sibling=thm,style=noital]{defn}
+\declaretheorem[name=Conjecture,sibling=thm,style=noital]{conjecture}
+\declaretheorem[name=Example,sibling=thm,style=noital]{example}
+\declaretheorem[name=Exercise,numberwithin=section,style=green]{exercise}
+\declaretheorem[name=Proof,style=proofstyle,numbered=no]{pf}
+
+\numberwithin{equation}{section}
+
+
+\usepackage[most,listings]{tcolorbox}
+\tcbuselibrary{breakable}
+
+\tcbset{colframe=white}
+
+\def \bthm {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{thm}}
+\def \ethm {\end{thm}\end{tcolorbox}}
+\def \bprop {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{prop}}
+\def \eprop {\end{prop}\end{tcolorbox}}
+\def \blem {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{lem}}
+\def \elem {\end{lem}\end{tcolorbox}}
+\def \bcor {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{cor}}
+\def \ecor {\end{cor}\end{tcolorbox}}
+\def \bdefn {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{defn}}
+\def \edefn {\end{defn}\end{tcolorbox}}
+\def \bexample {\begin{tcolorbox}[colback=blue!2,breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{example}}
+\def \eexample {\end{example}\end{tcolorbox}}
+\def \brem {\begin{tcolorbox}[colback=blue!2,breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{rem}}
+\def \erem {\end{rem}\end{tcolorbox}}
+
+%\usepackage{imakeidx}
+ \newcommand{\ph}{\,\cdot\,}
+
+  \newcommand{\C}{\mathbb{C}}
+ \newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\d}{\mathrm{d}}
+\renewcommand{\H}{\mathbb{H}}
+\renewcommand{\P}{\mathbb{P}}
+ \newcommand{\R}{\mathbb{R}}
+
+ \newcommand{\term}[1]{\textbf{#1}\index{#1}}
+
+
+
+
+ \def\CY{Calabi--Yau}
+ \def\CP{\mathbb{C}\mathbf{P}}
+ \def\RP{\mathbb{R}\mathbf{P}}
+
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+%
+
+
+%Caligraphic roman letters
+\newcommand\calA{{\mathcal{A}}}
+\newcommand\calB{{\mathcal{B}}}
+\newcommand\calC{{\mathcal{C}}}
+\newcommand\calD{{\mathcal{D}}}
+\newcommand\calE{{\mathcal{E}}}
+\newcommand\calF{{\mathcal{F}}}
+\newcommand\calG{{\mathcal{G}}}
+\newcommand\calH{{\mathcal{H}}}
+\newcommand\calI{{\mathcal{I}}}
+\newcommand\calJ{{\mathcal{J}}}
+\newcommand\calK{{\mathcal{K}}}
+\newcommand\calL{{\mathcal{L}}}
+\newcommand\calM{{\mathcal{M}}}
+\newcommand\calN{{\mathcal{N}}}
+\newcommand\calO{{\mathcal{O}}}
+\newcommand\calP{{\mathcal{P}}}
+\newcommand\calQ{{\mathcal{Q}}}
+\newcommand\calR{{\mathcal{R}}}
+\newcommand\calS{{\mathcal{S}}}
+\newcommand\calT{{\mathcal{T}}}
+\newcommand\calU{{\mathcal{U}}}
+\newcommand\calV{{\mathcal{V}}}
+\newcommand\calW{{\mathcal{W}}}
+\newcommand\calX{{\mathcal{X}}}
+\newcommand\calY{{\mathcal{Y}}}
+\newcommand\calZ{{\mathcal{Z}}}
+
+
+
+%Bold roman letters
+\newcommand\bfa{{\mathbf a}}            \newcommand\bfA{{\mathbf A}}
+\newcommand\bfb{{\mathbf b}}            \newcommand\bfB{{\mathbf B}}
+\newcommand\bfc{{\mathbf c}}            \newcommand\bfC{{\mathbf C}}
+\newcommand\bfd{{\mathbf d}}            \newcommand\bfD{{\mathbf D}}
+\newcommand\bfe{{\mathbf e}}            \newcommand\bfE{{\mathbf E}}
+\newcommand\bff{{\mathbf f}}            \newcommand\bfF{{\mathbf F}}
+\newcommand\bfg{{\mathbf g}}            \newcommand\bfG{{\mathbf G}}
+\newcommand\bfh{{\mathbf h}}            \newcommand\bfH{{\mathbf H}}
+\newcommand\bfi{{\mathbf i}}            \newcommand\bfI{{\mathbf I}}
+\newcommand\bfj{{\mathbf j}}            \newcommand\bfJ{{\mathbf J}}
+\newcommand\bfk{{\mathbf k}}            \newcommand\bfK{{\mathbf K}}
+\newcommand\bfl{{\mathbf l}}            \newcommand\bfL{{\mathbf L}}
+\newcommand\bfm{{\mathbf m}}            \newcommand\bfM{{\mathbf M}}
+\newcommand\bfn{{\mathbf n}}            \newcommand\bfN{{\mathbf N}}
+\newcommand\bfo{{\mathbf o}}            \newcommand\bfO{{\mathbf O}}
+\newcommand\bfp{{\mathbf p}}            \newcommand\bfP{{\mathbf P}}
+\newcommand\bfq{{\mathbf q}}            \newcommand\bfQ{{\mathbf Q}}
+\newcommand\bfr{{\mathbf r}}            \newcommand\bfR{{\mathbf R}}
+\newcommand\bfs{{\mathbf s}}            \newcommand\bfS{{\mathbf S}}
+\newcommand\bft{{\mathbf t}}            \newcommand\bfT{{\mathbf T}}
+\newcommand\bfu{{\mathbf u}}            \newcommand\bfU{{\mathbf U}}
+\newcommand\bfv{{\mathbf v}}            \newcommand\bfV{{\mathbf V}}
+\newcommand\bfw{{\mathbf w}}            \newcommand\bfW{{\mathbf W}}
+\newcommand\bfx{{\mathbf x}}            \newcommand\bfX{{\mathbf X}}
+\newcommand\bfy{{\mathbf y}}            \newcommand\bfY{{\mathbf Y}}
+\newcommand\bfz{{\mathbf z}}            \newcommand\bfZ{{\mathbf Z}}
+
+%Capital roman double letters
+
+\newcommand\SL{{\rm SL}}
+\newcommand\SO{{\rm SO}}
+\newcommand\ind{\operatorname{ind}}
+\newcommand\supp{\operatorname{supp}}
+\def\Ker{\mathop{\rm Ker}}
+
+%overlined math alphabet
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+
+
+
+
+\def \be  {\begin{equation}}
+\def \ee  {\end{equation}}
+\def \bea {\begin{equation}\begin{aligned}}
+\def \eea {\end{aligned}\end{equation}}
+\def \wh {\widehat}
+
+
+
+
+
+
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\GL}{\mathrm{GL}}
+
+
+\newcommand{\so}{\mathfrak{so}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathfrak{su}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\tv}[1]{|#1|}
+\newcommand{\U}{\mathrm{U}}
+
+
+
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\id}{id}
+
+
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+\def\CY{Calabi--Yau}
+ \usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathmorphing}
+ \usetikzlibrary{decorations.markings}
+ \newcommand{\maplr}[2]{\begin{picture}(40,20)(0,20)
+    \put(18,32){{\small $#1$}}
+    \put(3,25){\vector(1,0){34}}
+    \put(37,20){\vector(-1,0){34}}
+     \put(18,10){{\small $#2$}}
+  \end{picture}
+}
+
+
+\tikzset{->/.style = {decoration={markings,
+                                  mark=at position 1 with {\arrow[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{<-/.style = {decoration={markings,
+                                  mark=at position 0 with {\arrowreversed[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{<->/.style = {decoration={markings,
+                                   mark=at position 0 with {\arrowreversed[scale=2]{latex'}},
+                                   mark=at position 1 with {\arrow[scale=2]{latex'}}},
+                       postaction={decorate}}}
+\tikzset{->-/.style = {decoration={markings,
+                                   mark=at position #1 with {\arrow[scale=2]{latex'}}},
+                       postaction={decorate}}}
+\tikzset{-<-/.style = {decoration={markings,
+                                   mark=at position #1 with {\arrowreversed[scale=2]{latex'}}},
+                       postaction={decorate}}}
+
+\tikzset{circ/.style = {fill, circle, inner sep = 0, minimum size = 3}}
+
+\definecolor{mblue}{rgb}{0.2, 0.3, 0.8}
+\definecolor{morange}{rgb}{1, 0.5, 0}
+\definecolor{mgreen}{rgb}{0.1, 0.4, 0.2}
+\definecolor{mred}{rgb}{0.5, 0, 0}
+
+
+\begin{document}
+
+
+\title{Differential Geometry and Topology in Physics: Spring-2019}
+
+\author{Satoshi Nawata}
+\date{}
+  \maketitle
+
+\abstract{These are lecture notes of course at Fudan in Spring 2019, and I write these by wishing that more students will be interested in the relationship between geometry and physics. Homework sets can be found in the \href{https://sites.google.com/site/snawata/teaching/spring-2019}{website}. These notes are written by referring to various sources without mentioning them. Comments are welcome. If you find typos, please email me.}
+
+
+
+
+\tableofcontents
+
+
+
+
+
+\subfile{prologue}
+
+
+\subfile{math-pre}
+
+
+\subfile{lecture2}
+
+
+\subfile{lecture3}
+
+
+\subfile{lecture4}
+
+
+\subfile{lecture5}
+
+
+\subfile{lecture6}
+
+
+\subfile{lecture7}
+
+
+\subfile{lecture8}
+
+
+
+\subfile{lecture9}
+
+
+\subfile{lecture10}
+
+
+\subfile{lecture12}
+
+\appendix
+
+
+\subfile{extra1}
+
+
+\subfile{extra2}
+
+\bibliography{all-ref}
+\bibliographystyle{hyperamsalpha}
+
+
+
+\end{document}

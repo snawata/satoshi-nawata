@@ -1,0 +1,101 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem{question}[lemma]{Question}
+\newtheorem{proposition}[lemma]{Proposition}
+
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 7: Due at class on April 19}
+
+ \vspace{.5cm}
+\noindent 1. Show that the Euler characteristics is equal to
+$$
+\chi(M)=\sum_{i\ge 0 } (-1)^i \dim C_i(K;\bR)
+$$
+given a triangulation $|K|\to M$.
+
+
+
+ \vspace{.5cm}
+\noindent 2. Show that the Euler characteristics of an odd-dimensional oriented closed manifold is zero.
+
+
+
+ \vspace{.5cm}
+\noindent 3. Find the integer-valued homology group $H_\ell(\Sigma_g;\bZ)$ of a Riemann surface $\Sigma_g$ of genus $g$.
+
+
+ \vspace{.5cm}
+\noindent 4. Find both the integer-valued $H_\ell(\bR P^2;\bZ)$ and the real-valued $H_\ell(\bR P^2;\bR)$ homology groups of $\bR P^2$. Does the Poincar\'e duality hold?
+
+
+ \vspace{.5cm}
+\noindent 5. Let us construct a 3-dimensional complex \(K\) from \(n\) tetrahedra $T_{1}, \cdots, T_{n}$ by the following two steps. First we arrange the
+tetrahedra in a cyclic pattern as in the figure, so that each \(T_{i}\) shares a common vertical face with its two neighbors \(T_{i-1}\)
+and \(T_{i+1},\) subscripts being taken mod \(n .\) Then we identify the bottom face of \(T_{i}\) with the top face of \(T_{i+1}\) for each \(i\). Compute the  homology groups of $K$.
+\begin{figure}[h]\centering
+    \includegraphics[width=5cm]{lens}
+\end{figure}
+%
+% \vspace{.5cm}
+%\noindent 5.  \textbf{Fundamental theorem of algebra}
+%
+%We define $f:\bC\to \bC$  by
+%$f(z) = z^n +a_1z^{n-1} +\cdots+a_n $ for $n\ge 1$. In addition, by writing $z=x+iy$, we define one-form
+%$$
+%\omega=\frac{-ydx}{x^2+y^2}+\frac{xdy}{x^2+y^2}~.
+%$$
+%Then, show that
+%$$
+%\frac{1}{2\pi} \int_{C_R} f^*\omega=n~,
+%$$
+%where $C_R$ is the circle with sufficiently large radius $R$. If there were no zero points $f(z)=0$ inside $C_R$, show that
+%$$
+%\frac{1}{2\pi} \int_{C_R} f^*\omega=0~
+%$$
+%by using the Stokes theorem.
+%
+
+\end{document}
