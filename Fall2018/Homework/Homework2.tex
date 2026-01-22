@@ -1,0 +1,440 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{fullpage}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+% \usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+% \usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\Lambda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+\newcommand{\bfa}{\ensuremath{\mathbf{a}}}
+\newcommand{\bfb}{\ensuremath{\mathbf{b}}}
+\newcommand{\bfc}{\ensuremath{\mathbf{c}}}
+\newcommand{\bfd}{\ensuremath{\mathbf{d}}}
+\newcommand{\bfe}{\ensuremath{\mathbf{e}}}
+\newcommand{\bff}{\ensuremath{\mathbf{f}}}
+\newcommand{\bfg}{\ensuremath{\mathbf{g}}}
+\newcommand{\bfh}{\ensuremath{\mathbf{h}}}
+\newcommand{\bfi}{\ensuremath{\mathbf{i}}}
+\newcommand{\bfj}{\ensuremath{\mathbf{j}}}
+\newcommand{\bfk}{\ensuremath{\mathbf{k}}}
+\newcommand{\bfl}{\ensuremath{\mathbf{l}}}
+\newcommand{\bfm}{\ensuremath{\mathbf{m}}}
+\newcommand{\bfn}{\ensuremath{\mathbf{n}}}
+\newcommand{\bfo}{\ensuremath{\mathbf{o}}}
+\newcommand{\bfp}{\ensuremath{\mathbf{p}}}
+\newcommand{\bfq}{\ensuremath{\mathbf{q}}}
+\newcommand{\bfr}{\ensuremath{\mathbf{r}}}
+\newcommand{\bfs}{\ensuremath{\mathbf{s}}}
+\newcommand{\bft}{\ensuremath{\mathbf{t}}}
+\newcommand{\bfu}{\ensuremath{\mathbf{u}}}
+\newcommand{\bfv}{\ensuremath{\mathbf{v}}}
+\newcommand{\bfw}{\ensuremath{\mathbf{w}}}
+\newcommand{\bfx}{\ensuremath{\mathbf{x}}}
+\newcommand{\bfy}{\ensuremath{\mathbf{y}}}
+\newcommand{\bfz}{\ensuremath{\mathbf{z}}}
+
+
+
+%
+%\parskip=1em
+%\parindent=0.3in
+%\setlength\oddsidemargin{0.5in} \setlength\evensidemargin{0.5in}
+%\setlength\textwidth{5.5in}
+%
+%\hfuzz6pt % Don't bother to report over-full boxes if over-edge is < 6pt
+%
+%\newlength{\defbaselineskip}
+%\setlength{\defbaselineskip}{\baselineskip}
+%\newcommand{\setlinespacing}[1]%
+%           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%
+%\newcommand{\properpagestyle}{\pagestyle{myheadings}\markboth{}{}\markright{}}
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+\def\tl{\tilde}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+
+
+\def\ap{{\alpha^\prime}}
+\def\bz{\bar{z}}
+
+
+\def \bea {\begin{equation}\begin{aligned}}
+\def \eea {\end{aligned}\end{equation}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{align}}
+\def\ea{\end{align}}
+
+
+\usepackage{graphicx}
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 2: Due at class on Sep 28}
+
+
+
+\section{ $\SL(2,\bC)$}
+\subsection{relation to Lorentz group}
+Let us define
+$$
+\sigma _{ \mu } \equiv ( \mathbf { 1 } , \vec { \sigma } )
+$$
+where $\sigma_i$ are the Pauli matrices. Compute that $\det X$ where 
+$$
+X:=x ^ { \mu } \sigma _ { \mu } = \left( \begin{array} { c c } { t + z } & { x - i y } \\ { x + i y } & { t - z } \end{array} \right)~.
+$$
+Show that $\SL(2,\bC)/\bZ_2$ is isomorphic to the Lorentz group with $\Lambda^0_{~0}\ge1$, namely $\SL(2,\bC)/\bZ_2\cong \SO^+(1,3)$. 
+\subsection{M\"obius transformation}
+
+Let us consider the Riemann sphere $S^2  = \bC \cup \{\infty\}$. The action of $\SL(2, \bC)$ defined by
+$$z  \mapsto w = \frac{az + b}{ cz + d}~,\qquad \begin{pmatrix}a&b\\c&d\end{pmatrix}\in \SL(2, \bC)~,$$
+maps the Riemann sphere onto itself. These transformations are called linear fractional  transformations.
+
+\vspace{.3cm}
+\noindent $\bullet$ Given three points $z_1,z_2,z_3$, find a linear fractional transformation which maps the points
+to $0, 1, \infty$. 
+
+\vspace{.3cm}
+\noindent $\bullet$ Given four points $z_1,z_2,z_3,z_4$, their \textbf{cross ratio} is defined by
+$$
+[z_1,z_2,z_3,z_4]= {\frac  {(z_{1}-z_{3})(z_{2}-z_{4})}{(z_{2}-z_{3})(z_{1}-z_{4})}}~.
+$$
+Show that the cross ratio is preserved by any linear fractional  transformation
+$$
+[z_1,z_2,z_3,z_4]=[w_1,w_2,w_3,w_4] ~.
+$$ 
+
+\section{Three-point function for primary fields}
+Derive the form of the three-point function for chiral primary fields
+$$
+  \langle{\phi_1(z_1)\phi_2(z_2)\phi_3(z_3)}\rangle
+  =\frac{C_{123}}{z_{12}^{h_1+h_2-h_3}
+  z_{23}^{h_2 + h_3 - h_1} z_{13}^{h_3+ h_1- h_2}}
+  \, .
+$$
+
+
+\section{Energy-momentum tensor}
+Let us consider the free boson on a $d$-dimensional flat space
+$$
+  S = \frac{1}{2}\int d^d x ~
+     \partial_\mu \phi 
+     \partial^\mu \phi
+~ .
+$$
+Derive the energy-momentum tensor by using the definition
+$$
+  T^{\mu\nu}=
+  -\eta^{\mu\nu}\mathcal{L}
+  +\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}
+  \partial^\nu \phi \, .
+$$
+Furthermore, let us consider the action of the free boson on a curved space-time where $g$ is the metric on $M$
+$$
+  S = \frac{1}{2}\int_M d^d x \sqrt{g} ~g^{\mu\nu}
+     \partial_\mu \phi 
+     \partial_\nu \phi
+~ .
+$$
+Find the explicit form of the following tensor 
+$$
+\wt T^{\mu\nu}=-\frac{2}{\sqrt{g}}\frac{\d S}{\d g_{\mu\nu}}~.
+$$
+
+\end{document}
+

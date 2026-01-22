@@ -1,0 +1,38 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{verbatim}
+\begin{document}
+	\usetikzlibrary{arrows,positioning} 
+	\tikzset{
+		%Define standard arrow tip
+		>=stealth',
+		% Define arrow style
+		pil/.style={
+			->,
+			thick,
+			shorten <=2pt,
+			shorten >=2pt,}
+	}
+\begin{tikzpicture}[
+x                = 30,
+scale            = 2.5,
+]
+\draw[font =\Large] (0.1,0.1) node{$\vartheta_3$};
+\draw[->,pil,blue]
+(-0.1,0)..controls(-0.4,0.1)and(-0.35,-0.4)..(-0.05,-0.1);
+\draw[blue] (-0.35,-0.25) node{$S$};
+\begin{scope}[xshift=0.8cm]
+\draw[font =\Large] (0.1,0.1) node{$\vartheta_4$};
+\end{scope}
+\begin{scope}[xshift=0.3cm,yshift= -0.75cm]
+\draw[font =\Large] (0.1,0.1) node{$\vartheta_2$};
+\draw[->,pil,blue]
+(-0.1,0)..controls(-0.4,0.1)and(-0.35,-0.4)..(-0.05,-0.1);
+\draw[blue] (-0.35,-0.25) node{$T$};
+\end{scope}
+\draw[<->,blue] (0.24,0.1)--(0.74,0.1);
+\draw[blue] (0.5,0.25) node{$T$};
+\draw[<->,blue] (0.75,-0.1)--(0.4,-0.45);
+\draw[blue] (0.45,-0.2) node{$S$};
+\end{tikzpicture}
+\end{document}

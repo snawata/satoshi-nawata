@@ -1,0 +1,643 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{AGM{\etalchar{+}}00}
+
+\bibitem[ABF84]{Andrews:1984af}
+G.~E. Andrews, R.~J. Baxter, and P.~J. Forrester, \emph{{Eight vertex SOS model
+  and generalized Rogers-Ramanujan type identities}},
+\href{http://dx.doi.org/10.1007/BF01014383}{J. Statist. Phys. \textbf{35}
+  (1984) 193--266}.
+%%CITATION = JSTPB,35,193;%%.
+
+\bibitem[AGM{\etalchar{+}}00]{Aharony:1999ti}
+O.~Aharony, S.~S. Gubser, J.~M. Maldacena, H.~Ooguri, and Y.~Oz, \emph{{Large N
+  field theories, string theory and gravity}},
+  \href{http://dx.doi.org/10.1016/S0370-1573(99)00083-6}{Phys. Rept.
+  \textbf{323} (2000) 183--386},
+\href{http://arxiv.org/abs/hep-th/9905111}{{ arXiv:hep-th/9905111}}.
+%%CITATION = HEP-TH/9905111;%%.
+
+\bibitem[AM88]{Anderson:1987ge}
+G.~Anderson and G.~W. Moore, \emph{{Rationality in Conformal Field Theory}},
+\href{http://dx.doi.org/10.1007/BF01223375}{Commun. Math. Phys. \textbf{117}
+  (1988) 441}.
+%%CITATION = CMPHA,117,441;%%.
+
+\bibitem[BCH73]{Bardeen:1973gs}
+J.~M. Bardeen, B.~Carter, and S.~W. Hawking, \emph{{The Four laws of black hole
+  mechanics}},
+\href{http://dx.doi.org/10.1007/BF01645742}{Commun. Math. Phys. \textbf{31}
+  (1973) 161--170}.
+%%CITATION = CMPHA,31,161;%%.
+
+\bibitem[BCN86]{Bloete:1986qm}
+H.~W.~J. Bloete, J.~L. Cardy, and M.~P. Nightingale, \emph{{Conformal
+  Invariance, the Central Charge, and Universal Finite Size Amplitudes at
+  Criticality}},
+\href{http://dx.doi.org/10.1103/PhysRevLett.56.742}{Phys. Rev. Lett.
+  \textbf{56} (1986) 742--745}.
+%%CITATION = PRLTA,56,742;%%.
+
+\bibitem[BD04]{beilinson2004chiral}
+A.~Beilinson and V.~Drinfeld, \emph{Chiral algebras}, vol.~51, American
+  Mathematical Soc., 2004.
+
+\bibitem[Bek72]{bekenstein1972black}
+J.~D. Bekenstein, \emph{Black holes and the second law}, Lettere Al Nuovo
+  Cimento (1971--1985) \textbf{4} (1972)no.~15 737--740.
+
+\bibitem[Bek73]{Bekenstein:1973ur}
+J.~D. Bekenstein, \emph{{Black holes and entropy}},
+\href{http://dx.doi.org/10.1103/PhysRevD.7.2333}{Phys. Rev. \textbf{D7} (1973)
+  2333--2346}.
+%%CITATION = PHRVA,D7,2333;%%.
+
+\bibitem[BP09]{Blumenhagen:2009zz}
+R.~Blumenhagen and E.~Plauschinn, \emph{{Introduction to conformal field
+  theory}},
+\href{http://dx.doi.org/10.1007/978-3-642-00450-6}{Lect. Notes Phys.
+  \textbf{779} (2009) 1--256}.
+%%CITATION = LNPHA,779,1;%%.
+
+\bibitem[BPZ84]{belavin1984infinite}
+A.~A. Belavin, A.~M. Polyakov, and A.~B. Zamolodchikov, \emph{{Infinite
+  Conformal Symmetry in Two-Dimensional Quantum Field Theory}},
+\href{http://dx.doi.org/10.1016/0550-3213(84)90052-X}{Nucl. Phys. \textbf{B241}
+  (1984) 333--380}.
+%%CITATION = NUPHA,B241,333;%%.
+
+\bibitem[Car84a]{Cardy:1984bb}
+J.~L. Cardy, \emph{{Conformal Invariance and Surface Critical Behavior}},
+\href{http://dx.doi.org/10.1016/0550-3213(84)90241-4}{Nucl. Phys. \textbf{B240}
+  (1984) 514--532}.
+%%CITATION = NUPHA,B240,514;%%.
+
+\bibitem[Car84b]{Cardy:1984rp}
+\bysame, \emph{{Conformal invariance and universality in finite-size scaling}},
+J. Phys. \textbf{A17} (1984) L385--L387.
+%%CITATION = JPAGA,A17,L385;%%.
+
+\bibitem[Car85]{Cardy:1985yy}
+\bysame, \emph{{Conformal Invariance and the Yang-lee Edge Singularity in
+  Two-dimensions}},
+\href{http://dx.doi.org/10.1103/PhysRevLett.54.1354}{Phys. Rev. Lett.
+  \textbf{54} (1985) 1354--1356}.
+%%CITATION = PRLTA,54,1354;%%.
+
+\bibitem[Car86a]{Cardy:1986gw}
+\bysame, \emph{{Effect of Boundary Conditions on the Operator Content of
+  Two-Dimensional Conformally Invariant Theories}},
+\href{http://dx.doi.org/10.1016/0550-3213(86)90596-1}{Nucl. Phys. \textbf{B275}
+  (1986) 200--218}.
+%%CITATION = NUPHA,B275,200;%%.
+
+\bibitem[Car86b]{cardy1986operator}
+\bysame, \emph{{Operator Content of Two-Dimensional Conformally Invariant
+  Theories}},
+\href{http://dx.doi.org/10.1016/0550-3213(86)90552-3}{Nucl. Phys. \textbf{B270}
+  (1986) 186--204}.
+%%CITATION = NUPHA,B270,186;%%.
+
+\bibitem[Car88]{cardy1988conformal}
+J.~L. Cardy,
+  \emph{\href{https://staff.fnwi.uva.nl/j.deboer/stringtheory06/cardy.pdf}{Conformal
+  invariance and statistical mechanics}}, Les Houches (1988) .
+
+\bibitem[Car96]{cardy1996scaling}
+J.~Cardy, \emph{Scaling and renormalization in statistical physics}, vol.~5,
+  Cambridge university press, 1996.
+
+\bibitem[CC04]{Calabrese:2004eu}
+P.~Calabrese and J.~L. Cardy, \emph{{Entanglement entropy and quantum field
+  theory}}, \href{http://dx.doi.org/10.1088/1742-5468/2004/06/P06002}{J. Stat.
+  Mech. \textbf{0406} (2004) P06002},
+\href{http://arxiv.org/abs/hep-th/0405152}{{ arXiv:hep-th/0405152}}.
+%%CITATION = HEP-TH/0405152;%%.
+
+\bibitem[CC09]{Calabrese:2009qy}
+P.~Calabrese and J.~Cardy, \emph{{Entanglement entropy and conformal field
+  theory}}, \href{http://dx.doi.org/10.1088/1751-8113/42/50/504005}{J. Phys.
+  \textbf{A42} (2009) 504005},
+\href{http://arxiv.org/abs/0905.4013}{{ arXiv:0905.4013 [cond-mat.stat-mech]}}.
+%%CITATION = ARXIV:0905.4013;%%.
+
+\bibitem[CDI16]{Cordova:2015fha}
+C.~Cordova, T.~T. Dumitrescu, and K.~Intriligator, \emph{{Anomalies,
+  renormalization group flows, and the a-theorem in six-dimensional (1, 0)
+  theories}}, \href{http://dx.doi.org/10.1007/JHEP10(2016)080}{JHEP \textbf{10}
+  (2016) 080},
+\href{http://arxiv.org/abs/1506.03807}{{ arXiv:1506.03807 [hep-th]}}.
+%%CITATION = ARXIV:1506.03807;%%.
+
+\bibitem[CIZ87a]{cappelli1987modular}
+A.~Cappelli, C.~Itzykson, and J.~B. Zuber, \emph{{Modular Invariant Partition
+  Functions in Two-Dimensions}},
+\href{http://dx.doi.org/10.1016/0550-3213(87)90155-6}{Nucl. Phys. \textbf{B280}
+  (1987) 445--465}.
+%%CITATION = NUPHA,B280,445;%%.
+
+\bibitem[CIZ87b]{cappelli1987ade}
+\bysame, \emph{{The ADE Classification of Minimal and A1(1) Conformal Invariant
+  Theories}},
+\href{http://dx.doi.org/10.1007/BF01221394}{Commun. Math. Phys. \textbf{113}
+  (1987) 1}.
+%%CITATION = CMPHA,113,1;%%.
+
+\bibitem[CZ09]{cappelli2009ade}
+A.~Cappelli and J.-B. Zuber, \emph{Ade classification of conformal field
+  theories}, arXiv preprint arXiv:0911.3242 (2009) .
+
+\bibitem[DF84]{Dotsenko:1984nm}
+V.~S. Dotsenko and V.~A. Fateev, \emph{{Conformal Algebra and Multipoint
+  Correlation Functions in Two-Dimensional Statistical Models}},
+  \href{http://dx.doi.org/10.1016/0550-3213(84)90269-4}{Nucl. Phys.
+  \textbf{B240} (1984) 312}.
+[,653(1984)].
+%%CITATION = NUPHA,B240,312;%%.
+
+\bibitem[DFMS87]{Dixon:1986qv}
+L.~J. Dixon, D.~Friedan, E.~J. Martinec, and S.~H. Shenker, \emph{{The
+  Conformal Field Theory of Orbifolds}},
+\href{http://dx.doi.org/10.1016/0550-3213(87)90676-6}{Nucl. Phys. \textbf{B282}
+  (1987) 13--73}.
+%%CITATION = NUPHA,B282,13;%%.
+
+\bibitem[DFSZ87]{di1987relations}
+P.~Di~Francesco, H.~Saleur, and J.-B. Zuber, \emph{Relations between the
+  coulomb gas picture and conformal invariance of two-dimensional critical
+  models}, Journal of statistical physics \textbf{49} (1987)no.~1-2 57--79.
+
+\bibitem[Dot84]{dotsenko1984critical}
+V.~S. Dotsenko, \emph{{Critical Behavior and Associated Conformal Algebra of
+  the Z(3) Potts Model}},
+\href{http://dx.doi.org/10.1016/0550-3213(84)90148-2}{Nucl. Phys. \textbf{B235}
+  (1984) 54--74}.
+%%CITATION = NUPHA,B235,54;%%.
+
+\bibitem[EY89]{eguchi1989deformations}
+T.~Eguchi and S.-K. Yang, \emph{{Deformations of Conformal Field Theories and
+  Soliton Equations}},
+\href{http://dx.doi.org/10.1016/0370-2693(89)91463-9}{Phys. Lett. \textbf{B224}
+  (1989) 373--378}.
+%%CITATION = PHLTA,B224,373;%%.
+
+\bibitem[FBZ04]{frenkel2004vertex}
+E.~Frenkel and D.~Ben-Zvi, \emph{Vertex algebras and algebraic curves}, no.~88,
+  American Mathematical Soc., 2004.
+
+\bibitem[FF83]{feigin1983verma}
+B.~L. Feigin and D.~Fuks, \emph{Verma modules over the virasoro algebra},
+  Functional Analysis and its Applications \textbf{17} (1983)no.~3 241--242.
+
+\bibitem[FLM89]{frenkel1989vertex}
+I.~Frenkel, J.~Lepowsky, and A.~Meurman, \emph{Vertex operator algebras and the
+  monster}, vol. 134, Academic press, 1989.
+
+\bibitem[FMS97]{francesco2012conformal}
+P.~Francesco, P.~Mathieu, and D.~S{\'e}n{\'e}chal, \emph{Conformal field
+  theory}, Springer Science \& Business Media, 1997.
+
+\bibitem[FQS85]{friedan1985superconformal}
+D.~Friedan, Z.~Qiu, and S.~Shenker, \emph{{Superconformal Invariance in
+  Two-Dimensions and the Tricritical Ising Model}},
+\href{http://dx.doi.org/10.1016/0370-2693(85)90819-6}{Phys. Lett. \textbf{151B}
+  (1985) 37--43}.
+%%CITATION = PHLTA,151B,37;%%.
+
+\bibitem[FS89]{Friedan:1989yz}
+D.~Friedan and S.~H. Shenker,
+\emph{{SUPERSYMMETRIC CRITICAL PHENOMENA AND THE TWO-DIMENSIONAL GAUSSIAN
+  MODEL: EXPLANATORY NOTE}}.
+%%CITATION = INSPIRE-282195;%%.
+
+\bibitem[FZ85]{fateev1985parafermionic}
+V.~Fateev and A.~Zamolodchikov, \emph{Parafermionic currents in the
+  two-dimensional conformal quantum field theory and selfdual critical points
+  in z (n) invariant statistical systems}, Zh. Eksp. Teor. Fiz. \textbf{62}
+  (1985)no.~LANDAU-1985-9 380--399.
+
+\bibitem[FZ87]{Fateev:1987vh}
+V.~A. Fateev and A.~B. Zamolodchikov, \emph{{Conformal Quantum Field Theory
+  Models in Two-Dimensions Having Z(3) Symmetry}},
+\href{http://dx.doi.org/10.1016/0550-3213(87)90166-0}{Nucl. Phys. \textbf{B280}
+  (1987) 644--660}.
+%%CITATION = NUPHA,B280,644;%%.
+
+\bibitem[Gep87]{Gepner:1987vz}
+D.~Gepner, \emph{{Exactly Solvable String Compactifications on Manifolds of
+  SU(N) Holonomy}},
+\href{http://dx.doi.org/10.1016/0370-2693(87)90938-5}{Phys. Lett. \textbf{B199}
+  (1987) 380--388}.
+%%CITATION = PHLTA,B199,380;%%.
+
+\bibitem[Gep88]{Gepner:1987qi}
+\bysame, \emph{{Space-Time Supersymmetry in Compactified String Theory and
+  Superconformal Models}},
+  \href{http://dx.doi.org/10.1016/0550-3213(88)90397-5}{Nucl. Phys.
+  \textbf{B296} (1988) 757}.
+[,757(1987)].
+%%CITATION = NUPHA,B296,757;%%.
+
+\bibitem[Gin88a]{ginsparg1988applied}
+P.~H. Ginsparg, \emph{{APPLIED CONFORMAL FIELD THEORY}}, {Les Houches Summer
+  School in Theoretical Physics: Fields, Strings, Critical Phenomena Les
+  Houches, France, June 28-August 5, 1988}, 1988, pp.~1--168.
+\href{http://arxiv.org/abs/hep-th/9108028}{{ arXiv:hep-th/9108028}}.
+%%CITATION = HEP-TH/9108028;%%.
+
+\bibitem[Gin88b]{Ginsparg:1987eb}
+\bysame, \emph{{Curiosities at c = 1}},
+\href{http://dx.doi.org/10.1016/0550-3213(88)90249-0}{Nucl. Phys. \textbf{B295}
+  (1988) 153--170}.
+%%CITATION = NUPHA,B295,153;%%.
+
+\bibitem[GKO86]{goddard1986unitary}
+P.~Goddard, A.~Kent, and D.~Olive, \emph{{Unitary representations of the
+  Virasoro and super-Virasoro algebras}},
+  \href{http://dx.doi.org/10.1007/BF01464283}{Commun. in Math. Phys.
+  \textbf{103} (1986)no.~1 105--119}.
+
+\bibitem[GKP98]{Gubser:1998bc}
+S.~S. Gubser, I.~R. Klebanov, and A.~M. Polyakov, \emph{{Gauge theory
+  correlators from noncritical string theory}},
+  \href{http://dx.doi.org/10.1016/S0370-2693(98)00377-3}{Phys. Lett.
+  \textbf{B428} (1998) 105--114},
+\href{http://arxiv.org/abs/hep-th/9802109}{{ arXiv:hep-th/9802109}}.
+%%CITATION = HEP-TH/9802109;%%.
+
+\bibitem[GQ87]{Gepner:1986hr}
+D.~Gepner and Z.-A. Qiu, \emph{{Modular Invariant Partition Functions for
+  Parafermionic Field Theories}},
+\href{http://dx.doi.org/10.1016/0550-3213(87)90348-8}{Nucl. Phys. \textbf{B285}
+  (1987) 423}.
+%%CITATION = NUPHA,B285,423;%%.
+
+\bibitem[GRAS05]{gomez2005quantum}
+C.~G{\'o}mez, M.~Ruiz-Altaba, and G.~Sierra, \emph{Quantum groups in
+  two-dimensional physics}, Cambridge University Press, 2005.
+
+\bibitem[GSW87]{GSW}
+M.~B. Green, J.~H. Schwarz, and E.~Witten, \emph{{Superstring Theory Vol.
+  1,2}}, Cambridge University Press,
+1987.
+%%CITATION = INSPIRE-1384878;%%.
+
+\bibitem[Har16]{Harlow:2014yka}
+D.~Harlow, \emph{{Jerusalem Lectures on Black Holes and Quantum Information}},
+  \href{http://dx.doi.org/10.1103/RevModPhys.88.015002}{Rev. Mod. Phys.
+  \textbf{88} (2016) 015002},
+\href{http://arxiv.org/abs/1409.1231}{{ arXiv:1409.1231 [hep-th]}}.
+%%CITATION = ARXIV:1409.1231;%%.
+
+\bibitem[Haw75]{Hawking:1974sw}
+S.~W. Hawking, \emph{{Particle Creation by Black Holes}},
+  \href{http://dx.doi.org/10.1007/BF02345020}{Commun. Math. Phys. \textbf{43}
+  (1975) 199--220}.
+[,167(1975)].
+%%CITATION = CMPHA,43,199;%%.
+
+\bibitem[Hen13]{henkel2013conformal}
+M.~Henkel, \emph{Conformal invariance and critical phenomena}, Springer Science
+  \& Business Media, 2013.
+
+\bibitem[Hus84]{Huse:1984mn}
+D.~A. Huse, \emph{{Exact exponents for infinitely many new multicritical
+  points}},
+\href{http://dx.doi.org/10.1103/PhysRevB.30.3908}{Phys. Rev. \textbf{B30}
+  (1984) 3908--3915}.
+%%CITATION = PHRVA,B30,3908;%%.
+
+\bibitem[ISZ88]{itzykson1988conformal}
+C.~Itzykson, H.~Saleur, and J.-B. Zuber, \emph{{Conformal invariance and
+  applications to statistical mechanics}}, World Scientific, 1988.
+
+\bibitem[JMT88]{jimbo2012conformal}
+M.~Jimbo, T.~Miwa, and A.~Tsuchiya, \emph{Conformal field theory and solvable
+  lattice models}, Advanced Studies in Pure Mathematics 16, 1988.
+
+\bibitem[JMT89]{jimbo2014integrable}
+\bysame, \emph{Integrable systems in quantum field theory and statistical
+  mechanics}, Advanced Studies in Pure Mathematics 19, 1989.
+
+\bibitem[Kac79]{kac1979contravariant}
+V.~G. Kac, \emph{Contravariant form for infinite-dimensional lie algebras and
+  superalgebras}, Group theoretical methods in physics, Springer, 1979,
+  pp.~441--445.
+
+\bibitem[Kac94]{kac1994infinite}
+\bysame, \emph{Infinite-dimensional lie algebras}, vol.~44, Cambridge
+  university press, 1994.
+
+\bibitem[Kat87]{kato1987classification}
+A.~Kato, \emph{{Classification of Modular Invariant Partition Functions in
+  Two-dimensions}},
+\href{http://dx.doi.org/10.1142/S0217732387000732}{Mod. Phys. Lett. \textbf{A2}
+  (1987) 585}.
+%%CITATION = MPLAE,A2,585;%%.
+
+\bibitem[Ket95]{ketov1995conformal}
+S.~V. Ketov, \emph{Conformal field theory}, World Scientific, 1995.
+
+\bibitem[Kir08]{kirillov2008introduction}
+A.~Kirillov,
+  \emph{\href{https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf}{An
+  introduction to Lie groups and Lie algebras}}, vol. 113, Cambridge University
+  Press, 2008.
+
+\bibitem[Koh02]{kohno2002conformal}
+T.~Kohno, \emph{Conformal field theory and topology}, vol. 210, American
+  Mathematical Soc., 2002.
+
+\bibitem[KS89]{Kazama:1988qp}
+Y.~Kazama and H.~Suzuki, \emph{{New N=2 Superconformal Field Theories and
+  Superstring Compactification}},
+\href{http://dx.doi.org/10.1016/0550-3213(89)90250-2}{Nucl. Phys. \textbf{B321}
+  (1989) 232--268}.
+%%CITATION = NUPHA,B321,232;%%.
+
+\bibitem[KS11]{Komargodski:2011vj}
+Z.~Komargodski and A.~Schwimmer, \emph{{On Renormalization Group Flows in Four
+  Dimensions}}, \href{http://dx.doi.org/10.1007/JHEP12(2011)099}{JHEP
+  \textbf{12} (2011) 099},
+\href{http://arxiv.org/abs/1107.3987}{{ arXiv:1107.3987 [hep-th]}}.
+%%CITATION = ARXIV:1107.3987;%%.
+
+\bibitem[KZ84]{knizhnik1984current}
+V.~G. Knizhnik and A.~B. Zamolodchikov, \emph{{Current Algebra and Wess-Zumino
+  Model in Two-Dimensions}},
+  \href{http://dx.doi.org/10.1016/0550-3213(84)90374-2}{Nucl. Phys.
+  \textbf{B247} (1984) 83--103}.
+[,690(1984)].
+%%CITATION = NUPHA,B247,83;%%.
+
+\bibitem[LVW89]{Lerche:1989uy}
+W.~Lerche, C.~Vafa, and N.~P. Warner, \emph{{Chiral Rings in N=2 Superconformal
+  Theories}},
+\href{http://dx.doi.org/10.1016/0550-3213(89)90474-4}{Nucl. Phys. \textbf{B324}
+  (1989) 427--474}.
+%%CITATION = NUPHA,B324,427;%%.
+
+\bibitem[Mal99]{Maldacena:1997re}
+J.~M. Maldacena, \emph{{The Large N limit of superconformal field theories and
+  supergravity}}, \href{http://dx.doi.org/10.1023/A:1026654312961}{Int. J.
+  Theor. Phys. \textbf{38} (1999) 1113--1133},
+  \href{http://arxiv.org/abs/hep-th/9711200}{{ arXiv:hep-th/9711200}}.
+[Adv. Theor. Math. Phys.2,231(1998)].
+%%CITATION = HEP-TH/9711200;%%.
+
+\bibitem[Mil63]{milnor1963morse}
+J.~Milnor,
+  \emph{\href{https://www.maths.ed.ac.uk/~v1ranick/papers/milnmors.pdf}{Morse
+  Theory}, volume 51 of annals of mathematics studies}, Princeton, NJ, USA
+  (1963) .
+
+\bibitem[MS89a]{Moore:1988qv}
+G.~W. Moore and N.~Seiberg, \emph{{Classical and Quantum Conformal Field
+  Theory}},
+\href{http://dx.doi.org/10.1007/BF01238857}{Commun. Math. Phys. \textbf{123}
+  (1989) 177}.
+%%CITATION = CMPHA,123,177;%%.
+
+\bibitem[MS89b]{Moore:1989vd}
+\bysame,
+  \emph{{\href{http://www.physics.rutgers.edu/~gmoore/LecturesRCFT.pdf}{Lectures
+  on RCFT}}}, {1989 Banff NATO ASI: Physics, Geometry and Topology Banff,
+  Canada, August 14-25, 1989}, 1989,
+pp.~1--129.
+%%CITATION = RU-89-32;%%.
+
+\bibitem[Mus10]{mussardo2010statistical}
+G.~Mussardo, \emph{Statistical field theory: an introduction to exactly solved
+  models in statistical physics}, Oxford University Press, 2010.
+
+\bibitem[Nak15]{Nakayama:2013is}
+Y.~Nakayama, \emph{{Scale invariance vs conformal invariance}},
+  \href{http://dx.doi.org/10.1016/j.physrep.2014.12.003}{Phys. Rept.
+  \textbf{569} (2015) 1--93},
+\href{http://arxiv.org/abs/1302.0884}{{ arXiv:1302.0884 [hep-th]}}.
+%%CITATION = ARXIV:1302.0884;%%.
+
+\bibitem[Nov82]{novikov1982hamiltonian}
+S.~P. Novikov,
+  \emph{\href{https://www.maths.ed.ac.uk/~v1ranick/papers/novmult.pdf}{The
+  Hamiltonian formalism and a many-valued analogue of Morse theory}}, Russian
+  mathematical surveys \textbf{37} (1982)no.~5 1--56.
+
+\bibitem[NRT09]{Nishioka:2009un}
+T.~Nishioka, S.~Ryu, and T.~Takayanagi, \emph{{Holographic Entanglement
+  Entropy: An Overview}},
+  \href{http://dx.doi.org/10.1088/1751-8113/42/50/504008}{J. Phys. \textbf{A42}
+  (2009) 504008},
+\href{http://arxiv.org/abs/0905.0932}{{ arXiv:0905.0932 [hep-th]}}.
+%%CITATION = ARXIV:0905.0932;%%.
+
+\bibitem[Pas87]{Pasquier:1986jc}
+V.~Pasquier, \emph{{Two-dimensional critical systems labelled by Dynkin
+  diagrams}},
+\href{http://dx.doi.org/10.1016/0550-3213(87)90332-4}{Nucl. Phys. \textbf{B285}
+  (1987) 162--172}.
+%%CITATION = NUPHA,B285,162;%%.
+
+\bibitem[Pol70]{Polyakov:1970xd}
+A.~M. Polyakov, \emph{{Conformal symmetry of critical fluctuations}}, JETP
+  Lett. \textbf{12} (1970) 381--383.
+[Pisma Zh. Eksp. Teor. Fiz.12,538(1970)].
+%%CITATION = JTPLA,12,381;%%.
+
+\bibitem[Pol98]{Polchinski}
+J.~Polchinski, \emph{{String theory. Vol. 1, 2}}, Cambridge University Press,
+1998.
+%%CITATION = INSPIRE-487240;%%.
+
+\bibitem[PS86]{pressley1986loop}
+A.~Pressley and G.~B. Segal, \emph{Loop groups}, Clarendon Press, 1986.
+
+\bibitem[Qua15]{Qualls:2015qjb}
+J.~D. Qualls, \emph{{Lectures on Conformal Field Theory}},
+\href{http://arxiv.org/abs/1511.04074}{{ arXiv:1511.04074 [hep-th]}}.
+%%CITATION = ARXIV:1511.04074;%%.
+
+\bibitem[RC85]{rocha1985vacuum}
+A.~Rocha-Caridi, \emph{Vacuum vector representations of the virasoro algebra},
+  Vertex operators in mathematics and physics, Springer, 1985, pp.~451--473.
+
+\bibitem[RT06a]{Ryu:2006ef}
+S.~Ryu and T.~Takayanagi, \emph{{Aspects of Holographic Entanglement Entropy}},
+  \href{http://dx.doi.org/10.1088/1126-6708/2006/08/045}{JHEP \textbf{08}
+  (2006) 045},
+\href{http://arxiv.org/abs/hep-th/0605073}{{ arXiv:hep-th/0605073}}.
+%%CITATION = HEP-TH/0605073;%%.
+
+\bibitem[RT06b]{Ryu:2006bv}
+\bysame, \emph{{Holographic derivation of entanglement entropy from AdS/CFT}},
+  \href{http://dx.doi.org/10.1103/PhysRevLett.96.181602}{Phys. Rev. Lett.
+  \textbf{96} (2006) 181602},
+\href{http://arxiv.org/abs/hep-th/0603001}{{ arXiv:hep-th/0603001}}.
+%%CITATION = HEP-TH/0603001;%%.
+
+\bibitem[RT17]{Rangamani:2016dms}
+M.~Rangamani and T.~Takayanagi, \emph{{Holographic Entanglement Entropy}},
+  \href{http://dx.doi.org/10.1007/978-3-319-52573-0}{Lect. Notes Phys.
+  \textbf{931} (2017) pp.1--246},
+\href{http://arxiv.org/abs/1609.01287}{{ arXiv:1609.01287 [hep-th]}}.
+%%CITATION = ARXIV:1609.01287;%%.
+
+\bibitem[Ryc16]{Rychkov:2016iqz}
+S.~Rychkov, \href{http://dx.doi.org/10.1007/978-3-319-43626-5}{\emph{{EPFL
+  Lectures on Conformal Field Theory in $D \ge 3$ Dimensions}}}, SpringerBriefs
+  in Physics, 2016.
+\href{http://arxiv.org/abs/1601.05000}{{ arXiv:1601.05000 [hep-th]}}.
+%%CITATION = ARXIV:1601.05000;%%.
+
+\bibitem[Sch96]{schellekens1996introduction}
+A.~Schellekens, \emph{\href{https://www.nikhef.nl/~t58/CFT.pdf}{Conformal field
+  theory}},
+Fortsch. Phys. \textbf{44} (1996) 605--705.
+%%CITATION = FPYKA,44,605;%%.
+
+\bibitem[SD17]{Simmons-Duffin:2016gjk}
+D.~Simmons-Duffin,
+  \href{http://dx.doi.org/10.1142/9789813149441_0001}{\emph{{The Conformal
+  Bootstrap}}}, {Proceedings, Theoretical Advanced Study Institute in
+  Elementary Particle Physics: New Frontiers in Fields and Strings (TASI 2015):
+  Boulder, CO, USA, June 1-26, 2015}, 2017, pp.~1--74.
+\href{http://arxiv.org/abs/1602.07982}{{ arXiv:1602.07982 [hep-th]}}.
+%%CITATION = ARXIV:1602.07982;%%.
+
+\bibitem[Seg88]{segal1988definition}
+G.~B. Segal,
+  \emph{\href{https://www.math.upenn.edu/~blockj/scfts/segal.pdf}{The
+  definition of conformal field theory}}, Differential geometrical methods in
+  theoretical physics, Springer, 1988, pp.~165--171.
+
+\bibitem[Sol11]{Solodukhin:2011gn}
+S.~N. Solodukhin, \emph{{Entanglement entropy of black holes}},
+  \href{http://dx.doi.org/10.12942/lrr-2011-8}{Living Rev. Rel. \textbf{14}
+  (2011) 8},
+\href{http://arxiv.org/abs/1104.3712}{{ arXiv:1104.3712 [hep-th]}}.
+%%CITATION = ARXIV:1104.3712;%%.
+
+\bibitem[Tak12]{Takayanagi:2012kg}
+T.~Takayanagi, \emph{{Entanglement Entropy from a Holographic Viewpoint}},
+  \href{http://dx.doi.org/10.1088/0264-9381/29/15/153001}{Class. Quant. Grav.
+  \textbf{29} (2012) 153001},
+\href{http://arxiv.org/abs/1204.2450}{{ arXiv:1204.2450 [gr-qc]}}.
+%%CITATION = ARXIV:1204.2450;%%.
+
+\bibitem[Tow97]{Townsend:1997ku}
+P.~K. Townsend, \emph{{Black holes: Lecture notes}},
+\href{http://arxiv.org/abs/gr-qc/9707012}{{ arXiv:gr-qc/9707012}}.
+%%CITATION = GR-QC/9707012;%%.
+
+\bibitem[TUY89]{tsuchiya1989conformal}
+A.~Tsuchiya, K.~Ueno, and Y.~Yamada, \emph{Conformal field theory on universal
+  family of stable curves with gauge symmetries}, Integrable Sys Quantum Field
+  Theory, Elsevier, 1989, pp.~459--566.
+
+\bibitem[Vaf88]{Vafa:1988ag}
+C.~Vafa, \emph{{Toward Classification of Conformal Theories}},
+\href{http://dx.doi.org/10.1016/0370-2693(88)91603-6}{Phys. Lett. \textbf{B206}
+  (1988) 421--426}.
+%%CITATION = PHLTA,B206,421;%%.
+
+\bibitem[vGR86]{vonGehlen:1986gk}
+G.~von Gehlen and V.~Rittenberg, \emph{{Operator Content of the Three States
+  Potts Quantum Chain}},
+\href{http://dx.doi.org/10.1088/0305-4470/19/10/013}{J. Phys. \textbf{A19}
+  (1986) L625}.
+%%CITATION = JPAGA,A19,L625;%%.
+
+\bibitem[Vir70]{virasoro1970subsidiary}
+M.~A. Virasoro, \emph{Subsidiary conditions and ghosts in dual-resonance
+  models}, Physical Review D \textbf{1} (1970)no.~10 2933.
+
+\bibitem[Wal10]{wald2010general}
+R.~M. Wald, \emph{General relativity}, University of Chicago press, 2010.
+
+\bibitem[Wit84]{Witten:1983ar}
+E.~Witten, \emph{{Nonabelian Bosonization in Two-Dimensions}},
+  \href{http://dx.doi.org/10.1007/BF01215276}{Commun. Math. Phys. \textbf{92}
+  (1984) 455--472}.
+[,201(1983)].
+%%CITATION = CMPHA,92,455;%%.
+
+\bibitem[Wit98]{Witten:1998qj}
+\bysame, \emph{{Anti-de Sitter space and holography}},
+  \href{http://dx.doi.org/10.4310/ATMP.1998.v2.n2.a2}{Adv. Theor. Math. Phys.
+  \textbf{2} (1998) 253--291},
+\href{http://arxiv.org/abs/hep-th/9802150}{{ arXiv:hep-th/9802150}}.
+%%CITATION = HEP-TH/9802150;%%.
+
+\bibitem[WZ71]{Wess:1971yu}
+J.~Wess and B.~Zumino, \emph{{Consequences of anomalous Ward identities}},
+\href{http://dx.doi.org/10.1016/0370-2693(71)90582-X}{Phys. Lett. \textbf{37B}
+  (1971) 95--97}.
+%%CITATION = PHLTA,37B,95;%%.
+
+\bibitem[Yan87]{Yang:1987mf}
+S.-K. Yang, \emph{{Modular Invariant Partition Function of the Ashkin-Teller
+  Model on the Critical Line and $N=2$ Superconformal Invariance}},
+\href{http://dx.doi.org/10.1016/0550-3213(87)90334-8}{Nucl. Phys. \textbf{B285}
+  (1987) 183}.
+%%CITATION = NUPHA,B285,183;%%.
+
+\bibitem[YZ87]{Yang:1987bj}
+S.-K. Yang and H.~B. Zheng, \emph{{Superconformal Invariance in the
+  Two-dimensional Ashkin-teller Model}},
+\href{http://dx.doi.org/10.1016/0550-3213(87)90347-6}{Nucl. Phys. \textbf{B285}
+  (1987) 410--422}.
+%%CITATION = NUPHA,B285,410;%%.
+
+\bibitem[Zam85]{Zamolodchikov:1985wn}
+A.~B. Zamolodchikov, \emph{{Infinite Additional Symmetries in Two-Dimensional
+  Conformal Quantum Field Theory}},
+  \href{http://dx.doi.org/10.1007/BF01036128}{Theor. Math. Phys. \textbf{65}
+  (1985) 1205--1213}.
+[Teor. Mat. Fiz.65,347(1985)].
+%%CITATION = TMPHA,65,1205;%%.
+
+\bibitem[Zam86a]{zamolodchikov1986conformal}
+\bysame, \emph{{Conformal Symmetry and Multicritical Points in Two-Dimensional
+  Quantum Field Theory}},
+Sov. J. Nucl. Phys. \textbf{44} (1986) 529--533.
+%%CITATION = SJNCA,44,529;%%.
+
+\bibitem[Zam86b]{zamolodchikov1986irreversibility}
+A.~B. Zamolodchikov, \emph{Irreversibility of the flux of the renormalization
+  group in a 2d field theory}, JETP lett \textbf{43} (1986)no.~12 730--732.
+
+\bibitem[Zam87]{Zamolodchikov:1987ti}
+A.~B. Zamolodchikov, \emph{{Renormalization Group and Perturbation Theory Near
+  Fixed Points in Two-Dimensional Field Theory}}, Sov. J. Nucl. Phys.
+  \textbf{46} (1987) 1090.
+[Yad. Fiz.46,1819(1987)].
+%%CITATION = SJNCA,46,1090;%%.
+
+\bibitem[Zam89]{Zamolodchikov:1989zs}
+\bysame, \emph{{Integrable field theory from conformal field theory}},
+Adv. Stud. Pure Math. \textbf{19} (1989) 641--674.
+%%CITATION = ASPME,19,641;%%.
+
+\bibitem[Zam91]{Zamolodchikov:1991vh}
+\bysame, \emph{{Thermodynamic Bethe ansatz for RSOS scattering theories}},
+\href{http://dx.doi.org/10.1016/0550-3213(91)90422-T}{Nucl. Phys. \textbf{B358}
+  (1991) 497--523}.
+%%CITATION = NUPHA,B358,497;%%.
+
+\bibitem[Zub86]{Zuber:1986ng}
+J.~B. Zuber, \emph{{Discrete Symmetries of Conformal Theories}},
+\href{http://dx.doi.org/10.1016/0370-2693(86)90936-6}{Phys. Lett. \textbf{B176}
+  (1986) 127}.
+%%CITATION = PHLTA,B176,127;%%.
+
+\bibitem[ZZ89]{zamolodchikov1989conformal}
+A.~B. Zamolodchikov and A.~B. Zamolodchikov, \emph{Conformal field theory and
+  critical phenomena in two dimensional systems}, vol.~10, CRC Press, 1989.
+
+\end{thebibliography}

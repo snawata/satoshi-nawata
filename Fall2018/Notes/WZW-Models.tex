@@ -1,0 +1,793 @@
+\documentclass[2dCFT-lecture.tex]{subfiles}
+
+
+\begin{document}
+
+\setcounter{tocdepth}{2}
+%\maketitle
+\section{Wess-Zumino-Novikov-Witten Models}
+This section is devoted to study a very important class of exactly solvable 2d conformal field theories called \textbf{Wess-Zumino-Novikov-Witten (WZNW) models} \cite{Wess:1971yu,novikov1982hamiltonian,Witten:1983ar}. Th WZNW models have many applications and they are related to condensed matter physics, AdS/CFT correspondence, knot theory, and mathematical physics.
+
+\subsection{U(1) symmetry of free boson}
+Let us recall the free boson theory in \S\ref{sec:free-boson} whose action is given by
+\be\label{free-boson-action}
+\cS = \frac{1}{8 \pi} \int d^{2} x \,\partial_{\mu} \varphi \partial^{\mu} \varphi= \frac{1}{8 \pi} \int d^{2} z\, \partial_{z} \varphi \partial_{\overline{z}} \varphi
+\ee
+This actin has a symmetry \be\label{U1-symmetry}\varphi\to \varphi+a\ee whose Noether current is $j^{\mu}=- \partial^{\mu} \varphi / 4 \pi$.
+The current conservation follows from the equation of motion \eqref{eom-boson}
+$$
+\partial_\mu j^\mu=0~.
+$$
+As in in \S\ref{sec:free-boson}, one can decompose the current into holomorphic and anti-holomorphic part
+\be\label{U1-current}
+J (z) \equiv i \partial_z \varphi~,\qquad  \overline J(\overline z)\equiv -i \partial_{\overline{z}} \varphi
+\ee
+so that the (holomorphic part of) energy-momentum tensor can be written as
+$$
+T (z)=- \frac{1}{2} : \partial \varphi \partial \varphi : =\frac12:J(z)J(z):~.
+$$
+As we will see below, this is called \textbf{Sugawara construction} of the energy-momentum tensor. In addition, the action \eqref{free-boson-action}
+can be written as
+\begin{equation}
+ \cS_0=\frac{1}{8\pi} \int_\Sigma \dd^2 x \,
+\pd^\mu g^{-1} \pd_\mu g   =\frac{1}{8\pi} \int_\Sigma \dd^2 x \,
+\pd_{z} g^{-1} \pd_{\overline z} g\, ,
+\end{equation}
+where $g(z,\overline z)$ is the map from $$g:\mathbb{C}\to \U(1);\, z\mapsto g(z,\overline{z})=\exp(i\varphi(z,\overline z))~.$$ This action can be regarded as the simplest version of WZNW models.
+In fact, the symmetry can be understood as the $\U(1)$ rotation
+$$
+e^{i\varphi(z,\overline z)} \mapsto e^{i(\varphi(z,\overline z)+a)}~,
+$$
+so that \eqref{U1-current} is called the $\U(1)$ current.
+The $\U(1)$ group is an abelian group and it is natural to ask if we can generalize this simple construction to non-abelian Lie groups. This section answers to this question.
+
+\subsection{SU(2) current algebra}\label{sec:SU(2)k}
+Before moving to the WZNW models, we shall provide the easiest introduction to the non-abelian generalization. In \eqref{sec:compactified-boson}, we have seen that the compactified boson enjoys the $T$-duality $R\leftrightarrow 2/R$ \eqref{T-duality} and $R=\sqrt{2}$ is the self-dual radius. At the self-radius, one can define the vertex operators
+$$
+J (z)=\frac{i\partial \varphi(z)}{\sqrt{2}}~,\qquad J^{\pm}(z)=: e^{\pm i \sqrt{2} \varphi(z)} :
+$$
+where they satisfy the OPE
+\be
+\begin{aligned} J (z) J^{\pm} (w) & \sim \frac{\pm J^{\pm} (w)}{z-w}  \\ J^{+} (z) J^{-} (w) & \sim \frac{1}{(z-w)^{2}}+\frac{2 J (w)}{z-w}  . \\ J (z) J (w) & \sim \frac{1 / 2}{(z-w)^{2}}  \end{aligned}
+\ee
+Furthermore, if we write
+\be\label{redefinition}
+J^{\pm} \equiv J^{1} \pm i J^{2} , \quad J   \equiv J^{3}~,
+\ee
+then the OPE amounts to
+$$
+J^{a} (z) J^{b} (w) \sim \frac{\frac{1}{2} \delta_{a b}}{(z-w)^{2}}+\frac{i \epsilon^{a b c} J^{c} (w)}{z-w}
+$$
+where $\epsilon^{abc}$ is the anti-symmetric tensor. It is easy to see the connection to the theory of the angular momentum which is associated to the $\fraksu(2)$ Lie algebra
+\be\label{su2-algebra}[t^a,t^b]=i \epsilon^{a b c} t^{c}\ee
+where $t^a=\sigma^a/2$ with the Pauli matrices $\sigma^a$ ($a=1,2,3$). In fact,
+as we will learn in the homework, the OPE can be generalized to
+$$
+J^{a} (z) J^{b} (w) \sim \frac{\frac{k}{2} \delta_{a b}}{(z-w)^{2}}+\frac{i \epsilon^{a b c} J^{c} (w)}{z-w}~.
+$$
+We note that
+$$
+J(z)=\sum_{a=1}^3J^a(z)t^a
+$$
+is called the $\SU(2)$ current and $k$ is its \textbf{level}. As usual, the mode expansion
+$$
+J^{a} (z)=\sum_{n \in \mathbb{Z}} z^{- n-1} J_{n}^{a}
+$$
+leads to the following commutation relations, which is called  is called the $\SU(2)$ \textbf{current algebra},
+$$
+\left[ J_{m}^{a} , J_{n}^{b} \right]=i \e^{ab c} J_{m+n}^{c}+\frac{k}{2} m \delta^{ab} \delta_{m+n , 0}
+$$
+where the zero modes satisfy the $\fraksu(2)$ Lie algebra \eqref{su2-algebra}. In mathematics, it is called the \textbf{$\widehat{\fraksu(2)}_k$ affine Lie algebra} with level $k$. This can be further generalized to so-called \textbf{Kac-Moody algebra}.
+
+Let us briefly study the highest weight representation of  the $\SU(2)$ current algebra. From \eqref{redefinition}, we introduce
+$$
+J_{n}^{\pm} \equiv J_{n}^{1} \pm i J_{n}^{2}
+$$
+where the Hermitian conjugates are defined as
+$$
+\left(J_{n}^{\pm} \right)^{\dagger}=J_{- n}^{\mp} , \quad \left(J_{n}^{3} \right)^{\dagger}=J_{- n}^{3}~.
+$$
+Then, the highest weight state $|h,j\rangle$ is defined as
+\be\label{HWS-su2}
+ J_{0}^3  |h,j \rangle =j  |h,j \rangle~,\quad  J_{0}^{+}  |h,j \rangle=0 ,\qquad  J_{n}^{a}  |h,j \rangle=0 , \quad n > 0 , \quad a=0 , \pm ~.
+\ee
+Note that $h$ is the conformal dimension
+$$
+L_0 |h,j \rangle=
+\frac{j (j+1)}{k+2 }|h,j \rangle
+$$
+which is left in homework.
+Since the zero modes satisfy the $\fraksu(2)$ Lie algebra, $j$ takes an half-integer value $j=\frac12,1,\frac32,2,\cdots$ associated to the spin-$j$ representation.
+In addition, it is straightforward to check that the following generators
+$$
+J_{(1)}^{+}=J_{- 1}^{+} , \quad J_{(1)}^{-}=J_{+ 1}^{-} , \quad J_{(1)}^3=J_{0}^3-\frac{k}{2}
+$$
+also form the $\fraksu(2)$ Lie algebra, and we call it $\fraksu(2)_{(1)}$.  Since the eigenvalue of $2 J_{(1)}^3=2 J_{0}^3-k$ is an integer, $k$ has to be an integer. Moreover, the unitarity imposes
+$$
+\begin{aligned} 0 \leqq \left| J_{(1)}^{+}  |h,j \rangle \right|^{2} &=\langle h,j \left| J_{+ 1}^{-} J_{- 1}^{+} \right |h,j \rangle \\ &=\left\langle h,j \left| \left[ J_{+ 1}^{-} , J_{- 1}^{+} \right] \right| h,j \right\rangle \\ &=- 2 \langle j | (J_{0}^3-k / 2)  |h,j \rangle \\ &=- 2 j+k \end{aligned}
+$$
+Therefore, for a given level $k\in \bZ_{>0}$, the spin $j$ is allowed to take the values
+$$
+j=0 , \frac{1}{2} , 1 , \frac{3}{2} , \cdots , \frac{k}{2}~.
+$$
+
+
+\subsection{A crash course on Lie groups and Lie algebras}
+
+
+It is well-known that the theory of angular momentum in quantum mechanics is described by the representation theory of the $\fraksu(2)$ Lie algebra \eqref{su2-algebra}. We want to generalize the current algebra to arbitrary Lie algebras. Thus, we shall briefly review Lie groups and Lie algebras. For more details, we refer the reader to \cite{kirillov2008introduction}.
+
+\begin{defn}[Lie group]\index{Lie group}
+  A \textbf{Lie group} is a manifold $G$ with a group structure such that multiplication $m: G \times G \to G$ and inverse $i: G \to G$ are smooth maps. The \textbf{dimension} of a Lie group $G$ is the dimension of the underlying manifold.
+\end{defn}
+
+
+
+
+Some of Lie groups will be given by subsets of the space $M_n(\bF)$ of  $n\times n$ matrices where $\bF=\bR$ or $\bC$ specified by certain algebraic equations. For example,
+\begin{itemize}
+\item  General linear group: $\GL(n, \bF)=\{A \in \mathrm{M}_n(\bF)| \det A \neq 0\}$
+\item  Special linear group: $\SL(n, \bF)=\{A \in \GL(n, \bF)| \det A=1\}$
+\item Symplectic group $\mathrm { Sp } ( n , \bF )=\{ A \in \GL(2n, \bF)| A^ { \mathrm { T } } J A = J \ \textrm{where} \  J=\begin{pmatrix} 0&I_n\\-I_n&0\end{pmatrix}\}$
+\item Unitary group $\U(n)=\{A \in \GL(n, \bC)| AA^\dagger=I\}$
+\item Special unitary group $\SU(n) =\{A \in \U(n)| \det A=1\}$
+\item  Orthogonal group $\mathrm{O}(n)= \{A \in \GL(n, \bR)| AA^T=I\}$
+\item Special orthogonal group $\SO(n)=\{A \in \mathrm{O}(n)| \det A=1\}$
+\end{itemize}
+In fact, the simple Lie groups are classified by Killing an Cartan, and $\SU(n+1)$, $\SO(2n + 1)$, $\Sp(n,\bR)$ and $\SO(2n)$ are assigned to type $A_n$, $B_n$, $C_n$ and $D_n$, respectively. In addition to these four types, there are five exceptional Lie groups called $E_6$, $E_7$, $E_8$, $F_4$, and $G_2$ type. The Dynkin diagrams of type $A$, $D$ and $E$ are all simply laced, but the other types are not.
+
+
+Roughly speaking, an element $X\in \frakg$ of a Lie algebra $\frakg$ describes an element $h\in G$ near the identity element $1\in G$ via
+$$
+h=1+\e X+\cO(\e^2)~.
+$$
+More precisely, the tangent space ${T}_1(G)$ of a Lie group $G$ at the identity element $1$ naturally admits a Lie bracket
+  \[
+    [\cdot, \cdot]: T_1 G \times T_1 G \to T_1 G; (X,Y) \mapsto [X,Y]=XY-YX
+  \]
+  such that the Lie algebra of
+  \[
+    \mathfrak{g}=(T_1(G), [\cdot, \cdot])
+  \]
+  is a Lie algebra.
+
+\begin{defn}[Lie algebra of a Lie group]\index{Lie algebra of a Lie group}
+  Let $G$ be a Lie group. The \textbf{Lie algebra} of $G$, written $\mathfrak{g}$, is the tangent space $T_1 G$ under the natural Lie bracket.
+\end{defn}
+
+
+
+
+
+
+
+Given a vector $X\in \mathfrak{g} $ in the tangent space of the identity element $1$, the exponential map defines a map $\exp:\mathfrak{g}  \to G$ such that
+  \[
+    \exp(tX)=\sum_{\ell=0}^\infty \frac{1}{\ell!} (tX)^\ell~.
+  \]
+Without relying on a Lie groups, one can defines a Lie algebra as follows.
+
+\begin{defn}[Lie algebra]\index{Lie algebra}
+  A \textbf{Lie algebra} $\mathfrak{g}$ is a vector space (over $\bF=\bR$ or $\bC$) with a \textbf{bracket}
+  \[
+    [\cdot,\cdot] : \mathfrak{g} \times \mathfrak{g} \to \mathfrak{g}
+  \]
+  satisfying
+  \begin{enumerate}
+      \item $[\alpha X+\beta Y, Z]=\alpha [X, Z]+\beta [Y, Z]$ for all $X, Y, Z \in \mathfrak{g}$ and $\alpha, \beta \in \bF$ \hfill(bilinearity)
+    \item $[X, Y]=-[Y, X]$ for all $X, Y \in \mathfrak{g}$ \hfill(antisymmetry)
+    \item $[X, [Y, Z]]+[Y, [Z, X]]+[Z, [X, Y]]=0$ for all $X, Y, Z \in \mathfrak{g}$.\hfill(Jacobi identity\index{Jacobi identity})
+  \end{enumerate}
+  Note that linearity in the second argument follows from linearity in the first argument and antisymmetry.
+\end{defn}
+
+For instance, we have the corresponding Lie algebras
+\begin{itemize}
+\item $\mathfrak{gl}(n, \bF)=\{A \in \mathrm{M}_n(\bF)\}$
+\item $\mathfrak{sl}(n, \bF)=\{A \in \mathrm{M}_n(\bF) |  \Tr A=0\}$
+\item  $\mathfrak{ sp } ( n , \mathbb { F } ) = \{ X \in \mathfrak{gl}(2n, \bF)) | X ^ {T} J + J X = 0  \ \textrm{where} \  J=\begin{pmatrix} 0&I_n\\-I_n&0\end{pmatrix} \}$
+\item $\mathfrak{su}(n)=\{A \in \mathrm{M}_n(\mathbb{C}) | \Tr A=0, A^\dagger=-A\}$
+\item $\mathfrak{so}(n)=\{A \in \mathrm{M}_n(\mathbb{R}) | A^T=-A\}$
+\end{itemize}
+
+
+
+Given a finite-dimensional Lie algebra $\frakg$, we can pick a basis for $\mathfrak{g}$:
+\be\label{Lie-basis}
+t^a: a=1, \cdots, \dim \mathfrak{g}~
+\ee
+with
+$$
+\Tr(t^at^b)=\frac12 \delta^{ab}~,
+$$
+which is called the Cartan-Killing form.
+Then any $X \in \mathfrak{g}$ can be written as
+\[
+  X=X^a t^a=i \sum_{a=1}^n X^a t^a,
+\]
+where $X^a \in \bF$.
+
+By linearity, the bracket of elements $X, Y \in \mathfrak{g}$ can be computed via
+\[
+  [X, Y] =- X^a Y^b [t^a, t^b].
+\]
+In other words, the whole structure of the Lie algebra can be given by the bracket of basis vectors. We know that $[t^a, t^b]$ is again an element of $\mathfrak{g}$. So we can write
+\[
+  [t^a, t^b] =i f_{ab}{}^c t^c,
+\]
+where $f_{ab}{}^c\in \bF$ are called the \textbf{structure constants}.
+By the antisymmetry of the bracket, we know
+  \[
+    f_{ba}{}^c=-f_{ab}{}^c.
+  \]
+The Jacobi identity amounts to
+  \[
+    f_{ab}{}^c f_{cd}{}^e+f_{da}{}^c f_{cb}{}^e+f_{bd}{}^c f_{ca}{}^e=0.
+  \]
+
+
+
+\subsection*{affinization}
+Hence, one can straightforwardly generalize the current associated to a Lie algebra $\frakg$ as follows. First the current taking its value on a Lie algebra $\frakg$ can be write
+$$
+J(z)=\sum_{a}J^a(z)t^a~.
+$$
+The OPE of the current takes the form
+$$
+J^{a}(z) J^{b}(w) \sim \frac{\frac k2 \d^{ab}}{(z-w)^{2}}+\frac{i f^{a b }{}_c J^{c}(w)}{z-w }
+$$
+so that the modes are subject to
+$$
+\left[ J _{n }^{a}, J _{m }^{b}\right]=i f^{a b}J _{n+m }^{c}+ \frac k2 \d^{a b}n \delta _{n+m , 0 }~.
+$$
+This is called the $G$ current algebra with level $k$ or the $\wh \frakg_k$ affine Lie algebra with level $k$.
+
+\subsection{WZNW models}
+\subsubsection*{Nonlinear Sigma Models}
+In searching for an explicit conformal field theory with the $G$ current algebra,
+it is natural to first consider the \textbf{nonlinear sigma model}
+\begin{equation}
+\label{nonlinear-sigma-models}
+ \cS_0=\frac{1}{2 a^2} \int_\Sigma \dd^2 x
+ \Tr(\pd^\mu g^{-1} \pd_\mu g)\, ,
+\end{equation}
+where $a^2$ is a positive, dimensionless coupling constant.
+The bosonic field $g(x)$ takes its value on the Lie group $G$, namely
+$$
+g:\Sigma\to G
+$$
+where $\Sigma$ is generally a two-dimensional manifold, called a Riemann surface.
+%For the action to be positive real, $g(x)$ must be valued in a unitary
+%representation so that
+%\begin{equation}
+%  \Tr(\pd^\mu g^{-1}\pd_\mu g)
+% =\Tr(\pd^\mu g^\dagger \pd_\mu g) \geq 0 \, .
+%\end{equation}
+%However, this is not the kind of theory we are looking for, since
+%the conserved currents can not factorize in a holomorphic and
+%an antiholomorphic part. Let us briefly discuss the reason.
+Under the variation of the action
+\begin{equation}
+\delta \cS_0=\frac{1}{a^2}
+\int_\Sigma \dd^2 x  \Tr(g^{-1}\delta g \pd^\mu (g^{-1}\pd_\mu g))\, ,
+\end{equation}
+which results in the following equation of motion
+\begin{equation}
+\pd^\mu(g^{-1}\pd_\mu g) =0 \, .
+\end{equation}
+This implies the conservation of the currents
+\begin{equation}
+  J_\mu=g^{-1}\pd_\mu g \, .
+\end{equation}
+In the complex coordinate $z=x^0+i x^1$ and
+$\overline{z}= x^0 -i x^1$. If we write $J_z= g^{-1}\pd_z g$
+and $\overline{J}_{\overline{z}}=g^{-1}\pd_{\overline{z}}g$, we find
+\begin{equation}
+\pd_z \overline{J}_{\overline{z}}+\pd_{\overline{z}} J_z=0\, .
+\end{equation}
+So that the holomorphic and anti-holomorphic currents can not
+be separately conserved.
+\def\tg{\widetilde{g}}
+
+
+
+
+
+
+\subsubsection*{WZNW Models}
+Hence, a more complicated action must be considered to
+enhance the symmetry. We should add a Wess-Zumino term \cite{Wess:1971yu}
+\begin{equation}
+\label{Wess-Zumino-term}
+ \Gamma=\frac{-i}{12\pi} \int_B
+ \dd^3 y \epsilon_{\alpha\beta\gamma}
+ \Tr(\tg^{-1}\pd^\alpha \tg \tg^{-1} \pd^\beta \tg \tg^{-1}
+ \pd^\gamma \tg) \,.
+\end{equation}
+This is defined on a three-dimensional manifold $B$, whose boundary is the Riemann surface $\partial \Sigma =B$. Here $\tg:B\to G$ is an extension of the original
+field $g$. Although the extension is not unique, this is actually well-defined.
+Given another choice $(B',\tg')$, we can glue together the three-manifolds $B$ and $B'$ along $\Sigma$ to get a closed three-manifold $B\cup_\Sigma -B'$. It is easy to check that $\omega\equiv \Tr(\tg^{-1}\pd^\alpha \tg \tg^{-1} \pd^\beta \tg \tg^{-1}
+ \pd^\gamma \tg)$ is a closed three-form, and moreover it is pull-back of an element $\Tr(\theta\wedge\theta \wedge\theta)$ of the third homology group $H^3(G;\bZ)$ with integer coefficients \cite[Prop 4.4.5]{pressley1986loop} via $\wt g:M\to G$ where $\theta$ is the Maurer-Cartan form of $G$.
+  Hence, the integral of $\omega$ over the closed three-manifold $B\cup_\Sigma -B'$ is an integer.
+ Therefore, the Euclidian functional integral,
+with weight $\exp(-k\Gamma)$ is perfectly well defined if the level $k$ is
+an integer.
+
+
+\begin{figure}[ht]\centering
+\includegraphics[width=10cm]{picture/gluing}
+\end{figure}
+
+We then consider the action
+\begin{equation}
+\label{wess-zumino-action}
+\cS=\cS_0 +k \Gamma\,,
+\end{equation}
+where $k$ is an integer. Although the Wess-Zumino term is
+expressed as a three-dimensional integral, its variation under
+$g\to g+ \delta g$ is a two-dimensional functional, because the
+variation of its density can be written as a total derivative.
+The final result is
+\begin{equation}
+\delta \Gamma=
+\frac{i}{4\pi}
+\int_\Sigma \dd^2 x \epsilon_{\mu\nu}
+\Tr(g^{-1}\delta g \partial^\mu(g^{-1}\pd^\nu g))\, .
+\end{equation}
+The equation of motion of the action \eqref{wess-zumino-action}
+is then
+\begin{equation}
+\pd^\mu(g^{-1}\pd_\mu g)+\frac{a^2 i k}{4\pi}
+\epsilon_{\mu\nu}\pd^\mu (g^{-1}\pd^\nu g) =0 \, .
+\end{equation}
+In terms of the complex variable $z$, $\overline{z}$, the equation
+of motion becomes
+\begin{equation}
+\bigg(
+1+\frac{a^2 k}{4 \pi}
+\bigg)
+\pd_z(g^{-1}\pd_{\overline{z}}g)
++
+\bigg(
+1-\frac{a^2 k}{4 \pi}
+\bigg)
+\pd_{\overline{z}}(g^{-1}\pd_z g) =0\, .
+\end{equation}
+Thus, for
+\begin{equation}
+a^2=4\pi/k\, ,
+\end{equation}
+we find the desired conservation law
+\begin{equation} \label{current-conservation-WZNW}
+\pd_z(g^{-1}\pd_{\overline{z}}g) =0 \, , \qquad \pd_{\overline{z}}((\pd_{z}g)g^{-1}) =0 \, .
+\end{equation}
+The action now becomes
+\begin{equation}
+ \cS =
+ \frac{k}{8\pi} \int_\Sigma \dd^2 x
+ \Tr(\pd^\mu g^{-1}\pd_\mu g)+k\Gamma \, ,
+\end{equation}
+which is called the $\widehat{\frakg}_k$  \textbf{WZNW (WZNW) model}.
+Since $a^2$ is positive, $k$ must be a positive integer.
+The other solution $a^2=- 4\pi /k$ , which requires
+$k<0$, implies the conservation of the dual currents.
+
+Due to the Noether theorem, the conservation of the currents
+$J_z$ and $\overline J_{\overline{z}}$ \eqref{current-conservation-WZNW} should implies the invariance of the
+action. In fact, \eqref{current-conservation-WZNW} tells us that the field $g$ takes the following factorized form
+$$
+g(z,\overline{z})=g_L(z)g_R(\overline{z})~.
+$$
+We will see, under the transformation
+\begin{equation}
+g(z,\overline{z}) \rightarrow
+\Omega(z) g(z,\overline{z}) \overline{\Omega}^{-1}(\overline{z})\, ,
+\end{equation}
+where $\Omega$ and $\overline{\Omega}$ are two arbitrary matrices
+valued in $G$, the action is invariant. Indeed, under the infinitesimal transformation
+\begin{equation}
+\Omega(z)=1+\omega(z) \, ,
+\qquad
+\overline{\Omega}(\overline{z})
+= 1+\overline{\omega}(\overline{z})\, .
+\end{equation}
+$g$ transforms as follows
+\begin{equation}
+\label{transformation-g}
+ \delta_\omega g=\omega g \, , \qquad
+ \delta_{\overline{\omega}} g=- g\overline{\omega} \, .
+\end{equation}
+With $a^2=4\pi /k$, the variation of the action for
+$g\rightarrow g+\delta_\omega g+\delta_{\overline{\omega}}g$ is
+\bea
+\label{variation-action}
+ \delta \cS &= \frac{k}{\pi}
+ \int_\Sigma \dd^2 x \Tr (g^{-1}\delta g [\pd_z(g^{-1}\pd_{\overline{z}}g)])
+ \notag \\
+ &= \frac{k}{\pi} \int_\Sigma \dd^2 x \Tr
+ [\omega(z)\pd_{\overline{z}}(\pd_z g g^{-1})-
+ \overline{\omega}(\overline{z})\pd_z(g^{-1}\pd_{\overline{z}}g)]\,,
+\eea
+ which vanishes after an integral by parts. Thus the global
+ $G \times G$ invariance of the sigma model has thus been
+ extended to a local $G(z)\times G(\overline{z})$ invariance.
+
+ By rescaling the conserved currents as
+ \bea
+ \label{rescaling-current}
+  J(z) &\equiv -\frac k2J_z(z)=- \frac k2 \pd_z g g^{-1}\, ,\\
+  \overline{J}(\overline{z}) &\equiv \frac k2 \overline J_{\overline{z}}(\overline{z})
+ =\frac k2 g^{-1}\partial_{\overline{z}} g \, .
+  \eea
+
+  \def\pdz{\pd_{z}}
+  \def\pdbz{\pd_{\overline{z}}}
+  \def\obz{\overline{\omega}({\overline{z}})}
+  \def\jbz{\overline{J}({\overline{z}})}
+ We can rewrite \eqref{variation-action} in the form
+ \begin{equation}
+  \delta \cS=-\frac{2}{\pi}
+  \int_\Sigma \dd^2 x \left\{
+  \pdbz (\Tr[\omega(z)J(z)])
+  +\pdz (\Tr[\obz\jbz])
+  \right\}\,.
+ \end{equation}
+ Replace $d^2 x$ by $(-i/2)\dd z \dd \overline{z}$ and take the
+ holomorphic contour to be counterclockwise and the antiholomorphic contour to be clockwise. This lead to
+ \begin{equation}
+ \delta_{\omega,\overline{\omega}} =
+ \frac{i}{\pi}
+ \oint \dd z \Tr[\omega(z)J(z)]
+ -\frac{i}{\pi}
+ \oint \dd \overline{z} \Tr
+ [\obz\jbz]\,.
+ \end{equation}
+ Expanding $J$ and $\omega$ as well as their dual part in terms
+ of the basis $t^{\alpha}$ of $G$
+ \begin{equation}
+  J=\sum_a J^a t^a\, , \qquad
+  \omega=\sum_a \omega^a t^a \, ,
+ \end{equation}
+ The variation of the action now becomes
+ \begin{equation}
+  \delta_{\omega,\overline{\omega}} S =
+  -\frac{1}{2 \pi i}
+  \oint \dd z
+  \sum_a \omega^a J^a
+ +
+  \frac{1}{2\pi i}
+  \oint \dd \overline{z}
+  \sum_a \overline{\omega}^a \overline{J}^a \,.
+ \end{equation}
+ Let $X$ stand for a list of fields as usual, from \eqref{variation-action-locally} and \eqref{Ward-identity-ver2}, we have
+ \begin{equation}
+ \delta\expval{X}=\expval{(\delta S) X}\, .
+ \end{equation}
+ Hence, we immediately obtain the
+ corresponding Ward-identity
+ \begin{equation}
+ \label{WZNW-ward-identity}
+ \delta_{\omega,\overline{\omega}}\expval{X}
+=-\frac{1}{2\pi i}
+ \oint \dd z \sum_a \omega^a \expval{J^a X}
++\frac{1}{2\pi i}
+ \oint \dd \overline{z}
+ \sum_a \overline{\omega}^a \expval{\overline{J}^a X}\, .
+ \end{equation}
+ From \eqref{rescaling-current} and \eqref{transformation-g},
+ the transformation law for the current is
+ \begin{equation}
+ \delta_{\omega} J=
+ \comm{\omega}{J}-\frac k2\partial_z \omega\, .
+ \end{equation}
+ Writing in terms of $J^a$ and $\omega^a$, we have
+ \begin{equation}
+  \delta_\omega J^a=
+  \sum_{b,c} i f_{abc} \omega^b J^c- \frac k2 \partial_z \omega^a \, .
+ \end{equation}
+ The substitution of this transformation into \eqref{WZNW-ward-identity}, leads to so called
+ current algebra.
+ \begin{equation}
+ J^a (z) J^b(w) \sim
+ \frac{\frac k2\delta_{ab}}{(z-w)^2}+ \sum_c i f_{abc}
+ \frac{J^c(w)}{(z-w)} \, .
+ \end{equation}
+
+ Introducing the modes $J^a_n$ from the Laurent expansion
+ \begin{equation}
+ \label{mode-expansion-Ja}
+   J^a (z)=\sum_{n\in \mathbb{Z}}
+   z^{-n-1}J^a_n\,.
+ \end{equation}
+ We can easily check (as we have done in the Virasoro case),
+ the commutation relations of $J^a_m$ become
+ \begin{equation}
+  \comm{J^a_n}{J^b_m}=\sum_c i f_{abc}J^c_{n+m}
+ +\frac k2n\delta_{ab} \delta_{n+m,0}\,,
+ \end{equation}
+ which is the $\widehat{\frakg}$ affine Lie algebra at level $k$. The dual part $\overline{J}$ is similar.
+
+\subsection{Sugawara construction}
+The energy-momentum tensor of the theory is given by Sugawara
+construction
+\begin{equation}
+\label{Sugawara-tensor}
+ T(z)=\frac{1}{(k+h^\vee)} \sum_a (J^a J^a)(z)\, .
+\end{equation}
+The prefactor
+$\frac{1}{(k+h^\vee)}$ is determined by the usual form of $TT$ OPE, and $h^\vee$ is called the \textbf{dual Coxeter number} of $\frakg$.
+
+By using the generalized wick theorem which we have encountered
+in the homework, we can derive the $TJ$ OPE
+\begin{equation}
+\label{TJ-OPE}
+ T(z)J^a(w)=
+ \frac{J^a(w)}{(z-w)^2}+\frac{\pd J^a (w)}{(z-w)}
+ \, .
+\end{equation}
+Therefore, $J^a$ is a Virasoro primary field with conformal dimension $1$.
+
+$TT$ OPE can be calculated straightforwardly
+\begin{equation}
+ T(z)T(w)=\frac{c/2}{(z-w)^4}
++\frac{2T(w)}{(z-w)^2}
++\frac{\pd T(w)}{(z-w)} \, ,
+\end{equation}
+with the central charge $c$
+\begin{equation}
+ c=\frac{k \,\text{dim} (\frakg)}{k+h^\vee}\, .
+\end{equation}
+
+The Sugawara energy-momentum tensor can be written in terms
+of mode expansion the same as before
+\begin{equation}
+ T(z) =\sum_{n\in\mathbb{Z}} z^{-n-2} L_n \, .
+\end{equation}
+With the OPEs listed above, we can compute the complete
+affine Lie and Virasoro algebra
+\bea
+  \comm{L_n}{L_m} &= (n-m) L_{n+m}+\frac{c}{12}
+  (n^3-n) \delta_{n+m,0}\, ,\\
+  \comm{L_n}{J^a_m} &= -m J^a_{n+m}\, ,\\
+  \comm{J^a_n}{J^b_m} &= \sum_c if_{abc}J^c_{n+m}
+ +\frac k2n \delta_{ab}\delta_{n+m,0}\, .
+\eea
+
+Finally, for future discussion, we need to write the relation
+between $L_n$ and $J^a_n$. From \eqref{Sugawara-tensor} and the mode expansion of
+$J^a$ \eqref{mode-expansion-Ja}, the relation can be obtained:
+\begin{equation}
+\label{rel-Ln-Jan}
+L_n=\frac{1}{(k+h^\vee)}
+\sum_a \sum_m :J^a_m J^a_{n-m}:\, .
+\end{equation}
+
+\subsection{Knizhinik-Zamolodchikov equations}
+\subsubsection*{WZNW primary field}
+A WZNW primary field is defined as a field that transforms
+covariantly with respect to a $G(z)\times G(\overline{z})$ transformation. From \eqref{transformation-g} and \eqref{WZNW-ward-identity}, we reformulate $Jg$ OPE as
+following
+\bea
+J^a(z) g(w, \overline{w}) &\sim \frac{- t^a g(w,\overline{w})}{z-w}\,, \\
+\overline{J}^a(z) g(w,\overline{w}) &\sim
+\frac{g(w,\overline{w})t^a}{z-w} \, .
+\eea
+This can be generalized to define a WZNW primary field. Any
+WZNW primary field $\phi_{\lambda,\mu}$ with $\lambda$ and $\mu$
+specified the representation in the holomorphic and antiholomorphic sector respectively should satisfy the
+following OPE
+\begin{equation}
+\label{WZNW-primary field}
+ J^a(z) \phi_{\lambda,\mu}(w,\overline{w}) \sim
+ \frac{- t^a_\lambda \phi_{\lambda,\mu}(w,\overline{w})}{z-w}\, ,
+\end{equation}
+\begin{equation}
+ \overline{J}^a(\overline{z}) \phi_{\lambda,\mu}(w,\overline{w})
+ \sim
+ \frac{\phi_{\lambda,\mu}(w,\overline{w})t^a_\mu}{\overline{z}-\overline{w}}\, ,
+\end{equation}
+where $t^a_\lambda$ is the matrix $t^a$ in the $\lambda$
+representation. By analogy with \eqref{Virasoro-primary}, the above OPE can be extended
+\begin{equation}
+\label{WZNW-primary-field-extension}
+  J^a(z)\phi_1(z_1)\phi_2(z_2)\cdots \phi_n(z_n)
+  \sim -\sum_i\frac{t^a_i}{z-z_i} \phi_1(z_1)\phi_2(z_2)
+  \cdots \phi_n(z_n)\, ,
+\end{equation}
+where we have considered only holomorphic sector, with
+$t_i^a$ a matrix acting on $\phi_i$.
+
+By expanding the currents in terms of the modes evaluated at
+$w$,
+\begin{equation}
+ J^a(z)=\sum_n (z-w)^{-n-1} J^a_n(w)\, .
+\end{equation}
+We can write their OPE with an arbitrary field $A$ as we have done in the Virasoro case
+\begin{equation}
+J^a(z)A(w)=\sum_n (z-w)^{-n-1} (J^a_n A)(w)\, .
+\end{equation}
+Thus, from \eqref{WZNW-primary field}, for the WZNW holomorphic primary field
+$\phi_\lambda$, we have
+\bea
+ J^a_0 \phi_\lambda &= -t^a_\lambda \phi_\lambda \, ,\\
+J^a_n \phi_\lambda &= 0 \qquad \text{for} \qquad n>0 \, .
+\eea
+Associating the state $\ket{\phi_\lambda}$ to the field
+$\phi_\lambda$ as usual
+\begin{equation}
+\phi_\lambda(0) \ket{0}=\ket{\phi_\lambda}\,.
+\end{equation}
+Then, the condition for a WZNW primary field translate into
+\bea
+  J^a_0\ket{\phi_\lambda} &=-t^a_\lambda \ket{\phi_\lambda}\, ,\\
+  J^a_n \ket{\phi_\lambda} &= 0 \qquad \text{for} \qquad n>0\, .
+\eea
+From \eqref{rel-Ln-Jan}, we see that in the expression for $L_n$,
+with $n>0$, the rightmost factor $J^a_m$ has $m>0$ which implies that
+\begin{equation}
+ L_n\ket{\phi_\lambda}=0 \qquad \text{for} \qquad n>0 \, .
+\end{equation}
+Therefore, the WZNW primary fields are also Virasora primary fields with the conformal dimension given by
+\begin{equation}
+ L_0 \ket{\phi_\lambda}=\frac{1}{(k+h^\vee)}
+ \sum_a J^a_0 J^a_0 \ket{\phi_\lambda}
+=\frac{\sum_a t^a_\lambda t^a_\lambda}{(k+h^\vee)}\ket{\phi_\lambda}
+ \, .
+\end{equation}
+The inversed statement is not true, for example, $J^a(z)$ is a
+Virasoro primary field but not WZNW primary field which can be seen directly from $TJ$ OPE and $JJ$ OPE we have shown before.
+
+Finally, a WZNW descendant state is defined of the form
+\begin{equation}
+ J^a_{-n_a} J^b_{-n_2}\cdots \ket{\phi_\lambda}\, ,
+\end{equation}
+with $n_1,n_2 \cdots$ all positive integers.
+
+
+
+
+
+\subsubsection*{Knizhnik-Zamolodchikov Equations}
+From the previous learning, we know that there are many
+constraints to the correlation function, such as the
+null fields. In this section, we briefly discuss the affine
+singular vector in level one and the constraint follows form it.
+
+For $n=-1$, from \eqref{rel-Ln-Jan}, we have
+\begin{equation}
+  L_{-1}\ket{\phi_i}=\frac{2}{k+h^\vee}
+  \sum_a (J^a_{-1}J^a_0) \ket{\phi_i}
+ =\frac{-2}{k+h^\vee} \sum_a (J^a_{-1}t_i^a) \ket{\phi_i}\, .
+\end{equation}
+We consider the insertion of the zero vector
+\begin{equation}
+ \ket{\chi}=\bigg[
+ L_{-1}+ \frac{2}{k+h^\vee}\sum_a(J^a_{-1}t_i^a)
+ \bigg]
+ \ket{\phi_i}=0\, .
+\end{equation}
+First, we need to calculate the contribution of the second term.
+By using \eqref{mode-expansion-Ja}
+, the insertion of the operator $J^a_{-1}$ in the correlator
+can be expressed as
+\begin{equation}
+  \expval{\phi_1(z_1)\cdots (J^a_{-1}\phi_i)(z_i)\cdots\phi_n(z_n)}
+ =\frac{1}{2\pi i}
+  \oint_{z_i}
+  \frac{\dd z}{z-z_i}
+  \expval{J^a(z)\phi_1(z_1)\cdots\phi_n(z_n)}\,.
+\end{equation}
+Now using \eqref{WZNW-primary-field-extension} and
+perform the residue calculation, we get
+\begin{equation}
+\expval{\phi_1(z_1)\cdots (J^a_{-1}\phi_i)(z_i)\cdots\phi_n(z_n)}
+= \sum_{j\neq i}
+\frac{t^a_j}{z_i-z_j}
+\expval{\phi_1(z_1)\cdots \phi_n(z_n)}\,.
+\end{equation}
+Thus
+\begin{equation}
+\expval{\phi_1(z_1)\cdots \chi(z_i)\cdots \phi_n(z_n)}=
+\bigg[
+\partial_{z_i}+ \frac{2}{k+h^\vee}
+\sum_{j\neq i}
+\frac{\sum_a t^a_i \otimes t^a_j}{z_i-z_j}
+\bigg]
+\expval{\phi_1(z_1)\cdots\phi_n(z_n)}
+\, ,
+\end{equation}
+where $t^a_j$ and $t^a_i$ act on $\phi_i$ and $\phi_j$
+respectively. By construction, it must  vanish so that
+we have
+\begin{equation}
+\bigg[
+\partial_{z_i}+ \frac{2}{k+h^\vee}
+\sum_{j\neq i}
+\frac{\sum_a t^a_i \otimes t^a_j}{z_i-z_j}
+\bigg]
+\expval{\phi_1(z_1)\cdots\phi_n(z_n)}
+=0\, .
+\end{equation}
+This is called the \textbf{Knizhnik-Zamolodchikov equation} \cite[ISZ88-No.4]{knizhnik1984current}. The
+solutions to this equation are the correlation functions
+of WZNW primary fields.
+
+
+\subsection{Coset models}\label{sec:coset}
+
+Using current algebras, one can construct an important class of 2d CFTs called \textbf{coset construction} \cite[ISZ88-No.11]{goddard1986unitary}. This construction has many applications in physics like (supersymmetric) unitary minimal models (see the end of \S\ref{sec:su2k-character}) and Kazama-Suzuki models \cite{Kazama:1988qp}.
+
+
+We start with the current algebra associated to a Lie algebra $\frakg$ which contains  $\frakh$ as subgroups. The Sugawara energy-momentum tensors of affine Lie algebra $\widehat \frakg_{k_{\frakg}}$ and $\widehat \frakh_{k_{\frakh}}$ are
+\bea
+T _{\mathfrak{g}} (z) &= \frac{1}{k_{\mathfrak{g}}+h^\vee _{\mathfrak{g}} }\sum _{a=1 }^{\operatorname{dim}\mathfrak{g}} : J _{\mathfrak{g}}^{a}J _{\mathfrak{g}}^{a}: (z) \cr T _{\mathfrak{h}} (z) &= \frac{1}{k_{\mathfrak{h}}+h^\vee _{\mathfrak{h}} }\sum _{b=1 }^{\operatorname{dim}\mathfrak{h}} : J _{\mathfrak{h}}^{b}J _{\mathfrak{h}}^{b}: (z) \eea
+We define the energy-momentum tensor of the coset model $\widehat \frakg_{k_{\frakg}}/ \widehat \frakh_{k_{\frakh}}$ as
+$$
+T _{\mathfrak{g}/ \mathfrak{h}} :=T _{\mathfrak{g}}-T _{\mathfrak{h}}~.
+$$
+Then, we have
+\bea
+T _{\mathfrak{g}} (z) J _{\mathfrak{h}}^{b}(w) & =\frac{J _{\mathfrak{h}}^{b}(w)}{(z-w)^{2}}+\frac{\partial _{w}\dot{j}_{\mathfrak{h}}^{b}(w)}{z-w}+ \cdots \cr T _{\mathfrak{h}} (z)  J _{\mathfrak{h}}^{b}(w)&=\frac{J _{\mathfrak{h}}^{b}(w)}{(z-w)^{2}}+\frac{\partial _{w}J _{\mathfrak{h}}^{b}(w)}{z-w}+ \cdots \eea
+which yield
+\bea
+\left(T _{\mathfrak{g}}-T _{\mathfrak{h}} \right) (z) J _{\mathfrak{h}}^{b}(w)&\sim0\cr
+ \left(T _{\mathfrak{g}}-T _{\mathfrak{h}} \right) (z) T _{\mathfrak{h}} (w) &\sim0~.
+ \eea
+Therefore, one can compute the $T _{\mathfrak{g}/ \mathfrak{h}} T _{\mathfrak{g}/ \mathfrak{h}} $ OPE so that the central charge of the coset model is
+\be\label{coset-central-charge}
+c _{\mathrm{g}/ \mathrm{h}}=c_{\mathfrak{g}}-c _{\mathrm{h}}=\frac{k _{\mathfrak{g}} \operatorname{dim}\mathfrak{g}}{k _{\mathfrak{g}}+h^\vee _{\mathfrak{g}}}- \frac{k _{\mathfrak{h}} \operatorname{dim}\mathfrak{h}}{k _{\mathfrak{h}}+h^\vee _{\mathfrak{h}} }~.
+\ee
+
+
+\subsubsection*{Parafermion}
+As the simplest model of the coset model, we consider $\widehat{\mathfrak{su}(2)}_k/\widehat{\mathfrak{u}(1)}_k$. The energy-momentum tensor $T_{\frakg/\frakh}=T _{\frakg }-T _{\frakh }$ where
+\bea
+T _{\frakg}(z) &= \frac{1}{k+2}\sum _{a=1 }^{3}: J^{a}(z) J^{a}(z) : \cr
+T _{\frakh}(z) &= \frac{1}{k}: J^{3}(z) J^{3}(z) :
+\eea
+If we define $J^{3}$ as
+$$
+J^{3}(z)=i \sqrt{\frac{k}{2}} \partial \varphi (z)
+$$
+then $T_H$ is the energy-momentum tensor of the free boson. It is easy to read off central charge
+$$
+c _{\mathrm{g}/ \mathrm{h}}=\frac{3 k}{k+2}- 1=\frac{2 (k-1)}{k+2 }~,
+$$
+which is equal to \eqref{Zk-cc}.  Indeed, this coset model describes the 2d CFT with $\bZ_k$ symmetry \cite[ISZ88-No.14]{fateev1985parafermionic}. This model contains a current with fractional spin (conformal dimension), which does obey neither bose nor fermi statistics, and is rather subject to para-statistics. Therefore, it is called  $\bZ_k$ \textbf{parafermion}.
+In terms of the free boson $\varphi$ and the $\SU(2)$ current $J^\pm$, the parafermions are defined by
+$$
+\left(J^{+}\right)^{\ell}= \psi _{\ell}e^{i \ell \sqrt{\frac{2}{k}} X}, \quad \left(J^{-}\right)^{\ell}= \psi _{\ell }^{\dagger}e^{- i \ell \sqrt{\frac{2}{k}} X}, \quad (\ell=0 , \cdots , k)
+$$
+where $ \psi _{\ell}$ and $\psi _{\ell}^\dagger$ have conformal dimension $h=\ell(k-\ell)/k$.
+
+
+
+
+When $k=1$, the central charge is $c=0$ so that the theory is trivial.
+When $k=2$, the central charge is $c=\frac12$ so that the theory is the free fermion.
+When $k=3$, the central charge is $c=\frac43$ so that the theory is the 3-state Potts model, which corresponds to the unitary minimal model $\cM_5$. In this case, the primary field with conformal dimension $h=2/3$ corresponds to the parafermion current $\psi_1$. The partition function of the parafermion is evaluated in \cite[ISZ88-No.28]{Gepner:1986hr}.
+
+In fact, the supersymmetric version of the parafermion describes $\cN=2$ unitary minimal models, which plays a crucial role to describe Calabi-Yau sigma models \cite{Gepner:1987vz,Gepner:1987qi}.
+
+
+
+
+\subsubsection*{Rational conformal field theories}
+The minimal models, the WZNW models and the coset models belong to a class of rational conformal field theories (RCFTs). A theory is endowed with a chiral algebra $\cA\otimes \overline \cA$ that contains the Virasoro algebra as a subalgebra. The definition of a RCFT is (roughly) given as follows.
+\begin{itemize}
+\item It is unitary with a unique vacuum.
+\item There are finitely  many primary fields $\phi_i$ of the chiral algebra $\cA$. The same statement holds for anti-holomorphic part.
+\item The Hilbert space is spanned by finitely  many  irreducible representations of $\cA\otimes \overline \cA$
+$$
+\cH=\bigoplus_{i,j} \cN_{i,j} \mathcal{V}_i\otimes \overline{\mathcal{V}}_j
+$$
+where the irreducible representation $\mathcal{V}_i$ arises from primary fields $\phi_i$.
+\item   Their OPEs of primary fields are closed among themselves
+$$
+\phi_i(z)\phi_j(w)\sim \sum_{k}\frac{C_{ijk}}{(z-w)^{h_i+h_j-h_k}}\phi_j(w)+\cdots
+$$
+\end{itemize}
+It is  called a RCFT because conformal dimensions of primary fields of the chiral algebra $\cA$ as well as the central charge are rational numbers $\in \bQ$ \cite{Anderson:1987ge,Vafa:1988ag}. In a RCFT, conformal blocks can be, in principle, determined from  structure constants $C_{ijk}$ by bootstrap equations \eqref{bootstrap}, and one can evaluate a correlation function on an arbitrary Riemann surface. For more details, we refer to \cite{Moore:1988qv,Moore:1989vd}.
+
+
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[tikz,border=1pt]{standalone}
+    \usepackage{tikz}
+    \usepackage{verbatim}
+\begin{document}
+	\usetikzlibrary{arrows,positioning} 
+	\tikzset{
+		%Define standard arrow tip
+		>=stealth',
+		% Define arrow style
+		pil/.style={
+			->,
+			thick,
+			shorten <=2pt,
+			shorten >=2pt,}
+	}
+\begin{tikzpicture}[
+x                = 30,
+scale            = 2.5,
+]
+\draw[->] (0,0) -- (2.1,0);
+\draw[->] (0,0) -- (0,2.1);
+\draw(2,-0.1) node{$s$};
+\draw(-0.1,2) node{$r$};
+\foreach \x in {0.4,0.8,1.2,1.6,2.0} {
+	\foreach \y in {0.4,0.8,1.2,1.6,2.0} {
+		\filldraw [black] (\x,\y) circle [radius =0.02];
+	}
+}
+\draw[dashed] (0,0) -- (1.8,2.1);
+    \end{tikzpicture}
+\end{document}

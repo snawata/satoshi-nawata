@@ -1,0 +1,35 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage{amsmath,unicode-math}
+\begin{document}
+	\usetikzlibrary{arrows,positioning} 
+	\tikzset{
+		%Define standard arrow tip
+		>=stealth',
+		% Define arrow style
+		pil/.style={
+			->,
+			thick,
+			shorten <=2pt,
+			shorten >=2pt,}
+	}
+	\begin{tikzpicture}
+    \draw[thick] (0,0)--(1.5,0);
+    \draw (0.75,0)node[anchor = north]{$p$};
+    \draw[thick] (0,0)--(-0.5,0.5) node[anchor = south east]{$i$};
+    \draw[thick] (0,0)--(-0.5,-0.5) node[anchor = north east]{$j$};
+    \draw[thick] (1.5,0)--(2,0.5) node[anchor = south west]{$\ell$};
+    \draw[thick] (1.5,0)--(2,-0.5) node[anchor = north west]{$m$};
+    \draw (-2,0) node{$\sum_p C_{ijp} C_{\ell m p}$};
+    \draw (3.5,0) node{$=\sum_p C_{i\ell q} C_{j m q}$};
+    \begin{scope}[xshift=5.5cm]
+        \draw[thick] (0,-0.75)--(0,0.75);
+        \draw (0,0) node[anchor = west]{$q$};
+        \draw[thick] (0,-0.75)--(-0.5,-1.25)node[anchor = north east]{$j$};
+        \draw[thick] (0,-0.75)--(0.5,-1.25)node[anchor = north west]{$m$};
+        \draw[thick] (0,0.75) --(-0.5,1.25)node[anchor = south east]{$i$};
+        \draw[thick] (0,0.75) --(0.5,1.25)node[anchor = south west]{$\ell$}; 
+    \end{scope}
+\end{tikzpicture}
+\end{document}

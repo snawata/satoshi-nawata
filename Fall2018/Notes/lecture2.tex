@@ -1,0 +1,2580 @@
+%%Line 1810 uncomment
+
+\documentclass[2dCFT-lecture.tex]{subfiles}
+%\usepackage{subfiles}
+%\usepackage{epsfig}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage{amsthm}
+%\usepackage{indentfirst}
+%\usepackage{xspace}
+%\usepackage{multirow}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+%\usepackage{verbatim}
+%%\hypersetup{colorlinks=true,urlcolor=darkred,linkcolor=darkred,citecolor=darkred}
+%%\usepackage{verbatim}
+%\usepackage[letterpaper,margin=0.9in,headheight=15pt]{geometry}
+%\usepackage{mathpazo}
+%\usepackage{authblk}
+%\usepackage{empheq}
+%\usepackage{feynmp}
+%\usepackage{graphicx}
+%\usepackage[matrix,arrow]{xy}
+%\usepackage{young}
+%\usepackage[vcentermath]{youngtab}
+%\usepackage{slashed}
+%%\usepackage{fontds}
+%%
+%\usepackage{bbm}
+%\usepackage{youngtab}
+%\usepackage{rotfloat}
+%\usepackage{stmaryrd}
+%\usepackage{amsfonts,amssymb,amsmath}
+%\usepackage{tikz-cd}
+%\usepackage{thmtools}
+%\usepackage{dashrule}
+%\usepackage[missing=]{gitinfo2}
+%\usepackage{fancyhdr}
+%\usepackage{mdframed}
+%
+%\usepackage{subfiles}
+
+
+
+%
+%
+%\definecolor{darkblue}{rgb}{0.1,0.1,0.7}
+%\definecolor{darkred}{rgb}{0.5,0.1,0.1}
+%\definecolor{darkgreen}{rgb}{0.0,0.42,0.06}
+%\hypersetup{colorlinks=true,urlcolor=darkred,linkcolor=darkblue,citecolor=darkred}
+%\definecolor{shadecolor}{rgb}{0.85,0.85,0.85}
+%
+%
+%
+%% theorem environments
+%\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,notefont=\normalfont\bfseries, notebraces={(}{)}]{theorem}
+%\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,bodyfont=\normalfont,notefont=\normalfont\bfseries, notebraces={(}{)}]{noital}
+%\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,bodyfont=\normalfont\color{darkgreen},notefont=\normalfont\bfseries, notebraces={(}{)}]{green}
+%\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,bodyfont=\normalfont,notefont=\normalfont\bfseries,qed=$\qedsymbol$,notebraces={(}{)}]{proofstyle}
+%
+%\declaretheorem[name=Theorem,numberwithin=section,style=theorem]{thm}
+%\declaretheorem[name=Proposition,sibling=thm,style=theorem]{prop}
+%\declaretheorem[name=Corollary,sibling=thm,style=theorem]{cor}
+%\declaretheorem[name=Lemma,sibling=thm,style=theorem]{lem}
+%\declaretheorem[name=Remark,style=theorem,numbered=no]{rem}
+%\declaretheorem[name=Definition,sibling=thm,style=noital]{defn}
+%\declaretheorem[name=Example,sibling=thm,style=noital]{example}
+%\declaretheorem[name=Exercise,numberwithin=section,style=green]{exercise}
+%\declaretheorem[name=Proof,style=proofstyle,numbered=no]{pf}
+%
+%\numberwithin{equation}{section}
+%
+%
+%\usepackage[most,listings]{tcolorbox}
+%\tcbuselibrary{breakable}
+%
+%\tcbset{colframe=white}
+%
+%\def \bthm {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{thm}}
+%\def \ethm {\end{thm}\end{tcolorbox}}
+%\def \bprop {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{prop}}
+%\def \eprop {\end{prop}\end{tcolorbox}}
+%\def \blem {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{lem}}
+%\def \elem {\end{lem}\end{tcolorbox}}
+%\def \bcor {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{cor}}
+%\def \ecor {\end{cor}\end{tcolorbox}}
+%\def \bdefn {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{defn}}
+%\def \edefn {\end{defn}\end{tcolorbox}}
+%\def \bexample {\begin{tcolorbox}[colback=blue!2,breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{example}}
+%\def \eexample {\end{example}\end{tcolorbox}}
+%\def \brem {\begin{tcolorbox}[colback=blue!2,breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{rem}}
+%\def \erem {\end{rem}\end{tcolorbox}}
+%
+%
+%%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+%\def\a{\alpha}
+%\def\b{\beta}
+%\def\c{\gamma} \def\g{\gamma}
+%\def\d{\delta}
+%\def\e{\epsilon}          
+%\def\f{\phi}              
+%\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+%\def\vp{\varphi}
+%\def\h{\eta}
+%\def\i{\iota}
+%\def\j{\psi}
+%\def\k{\kappa}    
+%\def\m{\mu}
+%\def\n{\nu}
+%\def\o{\omega}  \def\w{\omega}
+%\def\q{\theta}  \def\th{\theta}                  
+%\def\r{\rho}                                     
+%\def\s{\sigma}                                  
+%\def\t{\tau}
+%\def\u{\upsilon}
+%\def\x{\xi}
+%\def\z{\zeta} 
+%
+%\def\A{\Alpha}
+%\def\B{\Beta}
+%\def\G{\Gamma}
+%\def\D{\Delta}
+%\def\E{\Epsilon}         
+%\def\F{Phi}          
+%\def\h{\eta}
+%\def\I{\Iota}
+%\def\J{Psi}
+%%\def\K{\Kappa}                    
+%\def\L{\Lambda}
+%\def\M{\Mu}
+%\def\N{\Nu}
+%\def\O{\Omega}  \def\w{\omega}
+%\def\Q{\Theta}  \def\Th{\Theta}                  
+%\def\R{\Rho}                                    
+%\def\Si{\Sigma}                                   
+%\def\T{\Tau}
+%\def\Up{\Upsilon}
+%\def\X{\Xi}
+%\def\Z{\Zeta}
+%
+%
+%
+%
+%%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%---------- mathbb font --------------------------------
+%%
+%
+%\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+%\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+%\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+%\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+%\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+%\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+%\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+%\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+%\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+%\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+%\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+%\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+%\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+%\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+%\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+%\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+%\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+%\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+%\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+%\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+%\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+%\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+%\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+%\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+%\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+%\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+%
+%
+%
+%%
+%%---------- mathbf font --------------------------------
+%%
+%
+%
+%\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+%\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+%\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+%\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+%\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+%\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+%\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+%\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+%\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+%\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+%\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+%\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+%\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+%\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+%\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+%\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+%\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+%\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+%\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+%\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+%\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+%\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+%\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+%\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+%\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+%\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+%
+%
+%
+%
+%%
+%%---------- mathcal font -----------------------------
+%%
+%
+%\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+%\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+%\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+%\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+%\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+%\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+%\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+%\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+%\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+%\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+%\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+%\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+%\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+%\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+%\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+%\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+%\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+%\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+%\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+%\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+%\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+%\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+%\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+%\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+%\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+%\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+%
+%%
+%%---------- mathfrak font -----------------------------
+%%
+%
+%\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+%\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+%\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+%\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+%\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+%\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+%\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+%\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+%\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+%\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+%\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+%\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+%\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+%\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+%\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+%\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+%\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+%\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+%\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+%\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+%\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+%\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+%\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+%\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+%\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+%\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+%\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+%\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+%\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+%\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+%\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+%\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+%\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+%\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+%\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+%\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+%\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+%\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+%\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+%\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+%\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+%\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+%\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+%\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+%\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+%\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+%\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+%\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+%\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+%\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+%\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+%\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+%\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+%\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+%\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+%
+%%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+%
+%\newcommand{\cA}{\mathcal{A}}
+%\newcommand{\cB}{\mathcal{B}}
+%\newcommand{\cC}{\mathcal{C}}
+%\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\cE}{\mathcal{E}}
+%\newcommand{\cF}{\mathcal{F}}
+%\newcommand{\cG}{\mathcal{G}}
+%\newcommand{\cH}{\mathcal{H}}
+%\newcommand{\cJ}{\mathcal{J}}
+%\newcommand{\cK}{\mathcal{K}}
+%\newcommand{\cL}{\mathcal{L}}
+%\newcommand{\cM}{\mathcal{M}}
+%\newcommand{\cN}{\mathcal{N}}
+%\newcommand{\cO}{\mathcal{O}}
+%\newcommand{\cP}{\mathcal{P}}
+%\newcommand{\cQ}{\mathcal{Q}}
+%\newcommand{\cS}{\mathcal{S}}
+%\newcommand{\cU}{\mathcal{U}}
+%\newcommand{\cX}{\mathcal{X}}
+%\newcommand{\cY}{\mathcal{Y}}
+%\newcommand{\cW}{\mathcal{W}}
+%\newcommand{\cR}{\mathcal{R}}
+%\newcommand{\cT}{\mathcal{T}}
+%\newcommand{\cZ}{\mathcal{Z}}
+%
+%
+%%%%%%%%%%%%% mathsf%%%%%%%%%%%%%%%%%%
+%
+%
+%\newcommand{\sfA}{\ensuremath{\mathsf{A}}}
+%\newcommand{\sfB}{\ensuremath{\mathsf{B}}}
+%\newcommand{\sfC}{\ensuremath{\mathsf{C}}}
+%\newcommand{\sfD}{\ensuremath{\mathsf{D}}}
+%\newcommand{\sfE}{\ensuremath{\mathsf{E}}}
+%\newcommand{\sfF}{\ensuremath{\mathsf{F}}}
+%\newcommand{\sfG}{\ensuremath{\mathsf{G}}}
+%\newcommand{\sfH}{\ensuremath{\mathsf{H}}}
+%\newcommand{\sfJ}{\ensuremath{\mathsf{J}}}
+%\newcommand{\sfK}{\ensuremath{\mathsf{K}}}
+%\newcommand{\sfL}{\ensuremath{\mathsf{L}}}
+%\newcommand{\sfM}{\ensuremath{\mathsf{M}}}
+%\newcommand{\sfN}{\ensuremath{\mathsf{N}}}
+%\newcommand{\sfO}{\ensuremath{\mathsf{O}}}
+%\newcommand{\sfP}{\ensuremath{\mathsf{P}}}
+%\newcommand{\sfQ}{\ensuremath{\mathsf{Q}}}
+%\newcommand{\sfS}{\ensuremath{\mathsf{S}}}
+%\newcommand{\sfU}{\ensuremath{\mathsf{U}}}
+%\newcommand{\sfX}{\ensuremath{\mathsf{X}}}
+%\newcommand{\sfY}{\ensuremath{\mathsf{Y}}}
+%\newcommand{\sfW}{\ensuremath{\mathsf{W}}}
+%\newcommand{\sfR}{\ensuremath{\mathsf{R}}}
+%\newcommand{\sfT}{\ensuremath{\mathsf{T}}}
+%\newcommand{\sfZ}{\ensuremath{\mathsf{Z}}}
+%
+%%%%%%%%%%%%%  Special letters for Lie groups %%%%%%%%%%%%%%%%%%
+%
+%\newcommand{\biA}{{\mathbi{A}}}
+%\newcommand{\biB}{{\mathbi{B}}}
+%\newcommand{\biC}{{\mathbi{C}}}
+%\newcommand{\biD}{{\mathbi{D}}}
+%\newcommand{\biE}{{\mathbi{E}}}
+%\newcommand{\biF}{{\mathbi{F}}}
+%\newcommand{\biG}{{\mathbi{G}}}
+%\newcommand{\biH}{{\mathbi{H}}}
+%\newcommand{\biJ}{{\mathbi{J}}}
+%\newcommand{\biK}{{\mathbi{K}}}
+%\newcommand{\biL}{{\mathbi{L}}}
+%\newcommand{\biM}{{\mathbi{M}}}
+%\newcommand{\biN}{{\mathbi{N}}}
+%\newcommand{\biO}{{\mathbi{O}}}
+%\newcommand{\biP}{{\mathbi{P}}}
+%\newcommand{\biQ}{{\mathbi{Q}}}
+%\newcommand{\biS}{{\mathbi{S}}}
+%\newcommand{\biU}{{\mathbi{U}}}
+%\newcommand{\biX}{{\mathbi{X}}}
+%\newcommand{\biY}{{\mathbi{Y}}}
+%\newcommand{\biV}{{\mathbi{V}}}
+%\newcommand{\biW}{{\mathbi{W}}}
+%\newcommand{\biR}{{\mathbi{R}}}
+%\newcommand{\biT}{{\mathbi{T}}}
+%\newcommand{\biZ}{{\mathbi{Z}}}
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\SU}{\mathrm{SU}}
+%\newcommand{\SO}{\mathrm{SO}}
+%\newcommand{\SL}{\mathrm{SL}}
+%\newcommand{\GL}{\mathrm{GL}}
+%\newcommand{\Sp}{\mathrm{Sp}}
+%\newcommand{\U}{\mathrm{U}}
+%\newcommand{\ul}{\mathrm{u}}
+%\newcommand{\Spin}{\mathrm{Spin}}
+%\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%
+%
+%\renewcommand{\Im}{{\rm Im}}
+%\renewcommand{\Re}{{\rm Re}}
+%\newcommand{\Tr}{\mbox{Tr}}
+%\newcommand{\Pf}{\mbox{Pf}}
+%\newcommand{\sgn}{\mbox{sgn}}
+%\newcommand{\Vir}{{\rm Vir}}
+%\newcommand{\Li}{{\rm Li}}
+%
+%
+%
+%%\def\cD{{\cal D}}
+%%\def\cA{{\cal A}}
+%%\def\cN{{\cal N}}
+%%\def\cS{{\cal S}}
+%%\def\cD{{\cal D}}
+%%\def\cA{{\cal A}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%\newcommand{\valp}{{\vec\alpha}}
+%\newcommand{\vbet}{{\vec\beta}}
+%\newcommand{\vgam}{{\vec\gamma}}
+%\newcommand{\vrho}{{\vec\rho}}
+%\newcommand{\vome}{{\vec\omega}}
+%\newcommand{\vlam}{{\vec\lambda}}
+%\newcommand{\vphi}{{\vec\varphi}}
+%\newcommand{\va}{{\vec a}}
+%\newcommand{\vb}{{\vec b}}
+%\newcommand{\ve}{{\vec e}}
+%\newcommand{\vx}{{\vec x}}
+%\newcommand{\vW}{{\vec W}}
+%\newcommand{\vY}{{\vec Y}}
+%\newcommand{\vha}{{\vec{\hat a}}}
+%\newcommand{\vhb}{{\vec{\hat b}}}
+%\newcommand{\vhc}{{\vec{\hat c}}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%\newcommand{\dalpha}{{\dot \alpha}}
+%\newcommand{\dbeta}{{\dot \beta}}
+%\newcommand{\dgamma}{{\dot \gamma}}
+%\newcommand{\dmu}{{\dot \mu}}
+%\newcommand{\dnu}{{\dot \nu}}
+%\newcommand{\drho}{{\dot \rho}}
+%\newcommand{\dsigma}{{\dot \sigma}}
+%\newcommand{\dlambda}{{\dot \lambda}}
+%\newcommand{\dtau}{{\dot \tau}}
+%\newcommand{\ha}{{\hat a}}
+%\newcommand{\hb}{{\hat b}}
+%\newcommand{\hc}{{\hat c}}
+%\newcommand{\hj}{j^\circ}
+%\newcommand{\vh}{{\vec h}}
+%\newcommand{\vm}{{\vec m}}
+%\newcommand{\vn}{{\vec n}}
+%\newcommand{\vl}{{\vec l}}
+%
+%\newcommand{\HK}{{hyper-K\"ahler }}
+%\newcommand{\K}{{K\"ahler }}
+%\newcommand{\pl}{\textrm{pl}}
+%\newcommand{\Ind}{\textrm{Ind}}
+%
+%
+%
+%
+%\def \be  {\begin{equation}}
+%\def \ee  {\end{equation}}
+%\def \bea {\begin{equation}\begin{aligned}}
+%\def \eea {\end{aligned}\end{equation}}
+%\def \ba  {\begin{eqnarray}}
+%\def \ea  {\end{eqnarray}}
+%
+%
+%
+% 
+
+
+\def\wt{\widetilde}
+%\def\bZ{{\bar{z}}}
+
+
+
+
+
+
+%
+%
+%
+%\usepackage{accents}
+%\newcommand*{\dt}[1]{%
+%  \accentset{\mbox{\large\bfseries .}}{#1}}
+%\newcommand*{\ddt}[1]{%
+%  \accentset{\mbox{\large\bfseries .\hspace{-0.25ex}.}}{#1}}
+%
+%\newcommand{\Spec}{\operatorname{Spec}\nolimits}
+%\newcommand{\Gr}{\mathrm{Gr}}
+%
+%\newcommand{\Hom}{\textrm{Hom}}
+%\newcommand{\End}{\textrm{End}}
+%\def\BunG{{\text{Bun}_G}}
+%%\def\bfN{{\text{Nilp}}}
+%\def\Bcc{{\mathfrak{B}_{cc}}}
+%
+%
+%
+%
+%\def\MF{{\cM_\text{flat}}}
+%\def\MH{{{\cM}_H}}
+%\def\SH{\mathbi{S}\!\ddt{\mathbi{H}}}
+%\def\HH{\ddt{\mathbi{H}}}
+%\def\WW{ \ddt{\mathbi{W}}}
+%\def\BB{\ddt{\mathbi{B}}\mathbi{r}}
+%\def\wh{\widehat}
+%\def\id{\mathrm{id}}
+%\def\Td{\mathrm{Td}}
+%
+%
+%
+%\newcommand{\MyRed}{\color [rgb]{0.9,0,0}}
+%\newcommand{\MyGreen}{\color [rgb]{0,0.5,0}}
+%\newcommand{\MyBlue}{\color [rgb]{0,0,0.8}}
+%\newcommand{\MyBrown}{\color [rgb]{0.8,0.3,0.2}}
+%\newcommand{\MyPurple}{\color [rgb]{0.6,0.0,0.7}}
+%
+%
+%\def\SN#1{{\MyRed [SN: #1]}}
+%
+
+
+%\title{Introduction to 2d conformal field theories}
+%\date{}
+%\author{Satoshi Nawata\cr email \href{mailto:snawata@gmail.com}{snawata@gmail.com} }
+%%\author[2]{Anindya Dey}
+%%\author[3]{Gregory W. Moore}
+%\affil{Department of Physics and Center for Field Theory and Particle Physics, Fudan University, 220
+%Handan Road, 200433 Shanghai, China}
+
+
+
+
+\begin{document}
+%\maketitle
+%\abstract{These are lecture notes on 2d conformal field theories in Fall 2018. If you find typos, please email me. }
+%
+
+
+\setcounter{tocdepth}{2}
+%\maketitle
+
+
+\subsection{2d Conformal Transformation}
+In this section, we will focus on the 
+special case of two dimensions with 
+Euclidean metric.
+
+From \eqref{inf-cft-e-condition}, the infinitesimal condition for 
+conformal transformation 
+in two dimensions 
+reads as follows:
+\begin{equation}
+\label{C-R equation}
+  \partial_1\e_1
+  =
+  \partial_2\e_2
+  \, ,
+  \qquad
+  \partial_1\e_2
+  =
+  -\partial_2\e_1
+  \, .
+\end{equation}  
+\eqref{C-R equation} 
+tells us that 
+if we introduce complex variables :
+\begin{align}
+\label{coordinate transformation}
+  z= x^1 + i x^2
+  \,  ,\qquad
+  \e = \e^1 + i \e^2
+  \,  ,\notag \\
+  \bar{z}= x^1 - ix^2
+  \,  ,\qquad
+  \bar{\e}= \e^1-i \e^2 
+  \, ,
+\end{align}
+according to
+Cauchy-Riemann equations
+in complex analysis, 
+$\e(z)$ is a holomorphic function
+(in some open set).
+And, equivalently any infinitesimal
+holomorphic transformation 
+$z'=z+ \e(z)$ 
+gives rise to an 
+two-dimensional conformal transformation.
+
+In fact, any analytic mapping of 
+the complex plane onto itself
+is conformal
+(i.e, preserves angles).
+To prove this, 
+we should rewrite
+the definition of 
+a conformal transformation
+\eqref{def-flat-ct}
+with complex variables.
+Let us first, rewrite the line element:
+\begin{equation}
+  ds^2=(\dd x^1)^2+(\dd x^2)^2
+      =\dd z \dd \bar{z}
+      =g_{\alpha\beta}z^\alpha z^\beta
+      \, ,
+\end{equation}
+with $z^1=z$, $z^2=\bar{z}$. 
+The flat space metric 
+in complex coordinates
+can be obtained:
+\begin{equation}
+\label{metric-complex-space}
+  g_{\alpha\beta}
+  =
+  \mqty(
+       0 & \frac{1}{2}\\
+       \frac{1}{2} & 0
+       )
+  \, ,
+  \qquad
+  g^{\alpha\beta}
+  =
+  \mqty(
+       0 & 2 \\
+       2 & 0
+       )
+  \, .
+\end{equation}
+The condition 
+\eqref{def-flat-ct}
+now becomes:
+\begin{equation}
+  \label{def-flat-ct-complex}
+  g_{\alpha\beta} 
+  \pdv{z'^\alpha}{z^\gamma}
+  \pdv{z'^\beta}{z^\delta}
+  =
+  \Lambda(z,\bar{z})g_{\gamma\delta}
+  \, ,  
+\end{equation}
+which is satisfied, 
+if $z'=f(z)$ 
+is a holomorphic function.
+And, the scale factor is then
+$\Lambda(z,\bar{z}) 
+= 
+\abs{\pdv{f(z)}{z}}^2$.
+Fig. \ref{fig:2dcft-ill}, 
+shows some examples on 
+coordinate transformations.
+We see when 
+$z'=f(z)$ is holomorphic,
+all included angles 
+remain right angles,
+which implies a conformal mapping.   
+\begin{figure}[h]
+	\centering
+	\caption{Coordinate transformation: 
+		The transformation from 
+		square lattice (a), 
+		onto the lattice in (b) and (c) 
+		is conformal, 
+		while the transformation 
+		onto the lattice in (d) is not.}
+	\label{fig:2dcft-ill} 
+	\subfigure[$z$]{
+	\includegraphics[width=0.3\textwidth]{picture/2dcft-1}}
+    \subfigure[$z'=z^2$]{
+	\includegraphics[width=0.3\textwidth]{picture/2dcft-2}}
+    \subfigure[$z'=1/z$]{
+	\includegraphics[width=0.3\textwidth]{picture/2dcft-3}}
+    \subfigure[$z'=z\abs{z}$]{
+    \includegraphics[width=0.3\textwidth]{picture/2dcft-4}}
+\end{figure}
+
+\subsubsection*{Witt algebra}
+
+As we have seen above,
+for an infinitesimal conformal
+transformation in two dimensions,
+$\e(z)$ has to be holomorphic in 
+some open set. 
+We can locally around say
+$z = 0$
+perform a Laurent expansion of
+$\e(z)$.
+A general infinitesimal conformal 
+transformation thus can be written as
+\begin{align}
+\label{2d-inf-Laurant}
+  z'&=z+\e(z)
+     =z 
+     + \sum_{n\in\mathbb{Z}}
+     \e_n(-z^{n+1})
+     \notag \, , \\
+  \bar{z}' &=z+ \bar{\e}(\bar{z})
+     =\bar{z}
+     +  \sum_{n\in\mathbb{Z}}
+     \bar{\e}_n
+     (-\bar{z}^{n+1})
+     \, ,      
+\end{align} 
+where $\e_n$ and $\bar{\e}_n$ are 
+infinitesimal parameters.
+Supposing a spinless and dimensionless
+field $\phi(z,\bar{z})$
+living on the plane,
+the effect of such a mapping would be:
+\begin{equation}
+  \label{tran-scalar-field}
+  \phi(z,\bar{z})
+  \rightarrow
+  \phi'(z',\bar{z}')
+  =
+  \phi(z,\bar{z})
+  \, ,
+\end{equation} 
+or
+\begin{align}
+  \delta{\phi}
+  &\equiv
+  \phi'(z,\bar{z})
+  -\phi(z,\bar{z})
+  =\phi'(z'-\e(z),\bar{z}'-\bar\e(\bar{z}))  
+  -\phi(z,\bar{z})
+  \notag\\
+  &=
+  -\e(z)\partial\phi 
+  -\bar\e(\bar{z})\bar{\partial}\phi
+  +o(\e)
+  =
+  -\sum_{n\in\mathbb{Z}}
+  (\e_n l_n \phi(z,\bar{z})
+   +
+   \bar\e_n \bar{l}_n \phi(z,\bar{z})
+  )
+  \, ,
+\end{align}
+where we have introduced the generators
+\begin{equation}
+l_n = - z^{n+1}\partial\,,
+\qquad
+\bar{l}_n = -\bar{z}^{n+1} \bar\partial
+\, .
+\end{equation} 
+We find the number of 
+independent infinitesimal conformal transformations is infinite.
+The commutators for these
+local generators can be calculated straightforward then:
+\begin{align}
+\label{Witt-algebra}
+  \comm{l_n}{l_m} 
+  &=
+  (m-n) l_{n+m}
+  \, ,\notag \\
+  \comm{\bar{l}_m}{\bar{l}_n}
+  &=
+  (m-n)\bar{l}_{m+n}
+  \, , \\
+  \comm{l_m}{\bar{l}_n}
+  &=0
+  \, .\notag
+\end{align}
+The first commutation
+relations define one copy of the
+so-called Witt algebra.
+We can observe that the local 
+conformal algebra 
+\eqref{Witt-algebra} 
+is the direct sum of two
+Witt algebras.
+
+\subsubsection*{M\"obius transformation}
+A global conformal transformation 
+in two dimensions
+is defined to be invertible
+and well-defined on the 
+Riemann sphere
+$S^2 \simeq \mathbb{C}\cup
+\{\infty\}$.
+Thus, it should be generated
+by the global-defined
+infinitesimal generators.
+At $z=0$, we find that
+$l_n = - z^{n+1}\partial$,
+is non-singular only for
+$n\geq-1$.
+At $z=\infty$,
+let us perform the change
+of variable 
+$z=-\frac{1}{w}$,
+and study $w \rightarrow 0$.
+We then observe that
+$l_n=-(-\frac{1}{w})^{n-1}\partial_w$,
+is nonsingular at 
+$w=0$ only for
+$n\leq 1$.
+Therefore, globally defined
+conformal transformations 
+on the Riemann sphere
+$S^2=\mathbb{C}\cup\{\infty\}$
+are generated by 
+$\{l_{-1},l_0,l_{+1} \}$.
+Through Wit algebra 
+\eqref{Witt-algebra},
+we immediately see that these three 
+generators form a close subalgebra 
+of Wit algebra, 
+which implies 
+the corresponding conformal transformations
+form a globally defined group,
+called the conformal group
+in two dimensions.
+The discussion of
+antiholomorphic counterpart
+is similar.
+
+Now, we are going to study
+the conformal group in two dimensions
+deeply. 
+From the Laurent expansion 
+\eqref{2d-inf-Laurant}, 
+the operator 
+$l_{-1}= -\partial_z$, generates
+the infinitesimal transformation
+$z'=z-\e_{-1}$.
+Thus, $l_{-1}$ is the 
+generator of translations
+$z\mapsto z+b$ with $b$
+an arbitrary complex constant.
+
+For $n = 0$, the operator 
+$l_0 = -z\partial_z$, 
+generates the linear term of
+\eqref{2d-inf-Laurant}. 
+It is not difficult to verify that
+the corresponding finite transformation is
+$z'=a z$, with $a$ 
+an arbitrary complex constant. 
+The modulus of $a$ 
+turns out to lead a dilatation,
+while the phase of $a$ gives rise to
+a rotation. 
+In order to get a geometric intuition of
+such transformations, we can perform the
+change of variables $z=r e^{i\phi}$ to find
+\begin{equation}
+  l_0 = -\frac{1}{2} r \partial_r
+        + \frac{i}{2}\partial_\phi\, ,
+  \qquad
+  \bar{l}_0 = - \frac{1}{2}r \partial_{r}
+        - \partial_\phi \, .
+\end{equation}
+We can perform the linear combinations
+\begin{equation}
+  \label{l0combinations}
+  l_0 + \bar{l}_0 = - r \partial_r\, ,
+  \qquad 
+  i(l_0-\bar{l}_0) = -\partial_\phi\, .
+\end{equation}
+Therefore, we see that $l_0 + \bar{l}_0$ is the
+generator for two-dimensional dilations and
+that $i(l_0 - \bar{l}_0)$ is the generator of 
+rotations.
+
+Finally, the operator $l_{+1}$
+generates the infinitesimal quadratic term.
+By the variable changing 
+$w = -\frac{1}{z}$, 
+the operator turns out to be
+$l_{+1} = -\partial_w$, 
+which corresponds to a translation of $w$: 
+$w\mapsto w-c$. 
+Therefore, the operator $l_{+1}$ generates
+Special Conformal Transformations:
+$z\mapsto \frac{z}{cz+1}$.
+
+The complete set of mappings discussed 
+above is of the form
+\begin{equation}
+  z\mapsto \frac{a z+b}{cz + d}
+  \, ,
+\end{equation}
+with $a,b,c,d \in \mathbb{C} $. 
+For this transformation
+to be invertible, we have to require 
+that $ad-bc \neq 0$. 
+If this is the case, we can
+scale the constants $a,b,c,d$, 
+such that $ad-bc =1$.
+Furthermore, the expression is 
+unaffected by taking all of 
+$a,b,c,d$ to minus themselves.
+These mappings are called projective
+transformations.
+We see each global conformal transformation
+in 2 dimensions can be associated
+with a matrix
+$\mqty(a & b \\ c & d)$. 
+For instance:
+\begin{align}
+	&\text{translation}:\qquad
+	z\mapsto z+b 
+	\quad
+	\Leftrightarrow
+	\quad 
+	\mqty(1 & b \\ 0 & 1)
+	\, ,\notag\\
+	&\text{dilatation}:\quad
+	z\mapsto a z\, , a\in \mathbb{R}
+	\, 
+	\Leftrightarrow
+	\,
+	\mqty(\sqrt{a} & 0\\
+	      \sqrt{0} & \sqrt{1/a}	
+	     )	
+	\, ,\notag \\
+	&\text{rotation}:
+	\qquad
+	z\mapsto e^{i\theta}\, , 
+	\theta\in \mathbb{R}
+	\,
+	\Leftrightarrow
+	\,
+	\mqty(e^{i\theta/2} & 0\\
+	      0 & e^{-i\theta/2}
+	     )
+	\, ,\notag \\
+	&SCT:
+	\qquad\qquad
+	z\mapsto \frac{z}{c z +1}
+	\quad
+	\Leftrightarrow
+	\quad
+	\mqty(1 & 0 \\
+	      c & 1)
+	 \, .\notag
+\end{align}
+We can infer that the conformal 
+group of the Riemann sphere
+$S^2 = \mathbb{C} \cup \{\infty \}$
+is the  M\"obius group 
+$SL(2,\mathbb{C})/\mathbb{Z}_2$.
+
+
+
+
+
+
+
+
+
+	
+\section{Basics of Conformal Field Theory}
+
+\subsection{Noether theorem and Ward-Takahashi identity}
+In this section, we are going to review
+some basic concepts and theorem
+in classical field theory
+as well as in quantum field theory. 
+
+\subsubsection*{Continuous Symmetry Transformation}
+In the foregoing sections,
+we focus on coordinate transformation,
+while in field theory, 
+we still need to consider 
+the transformation of fields.
+In the previous sections, we have used transformations of spinless field
+\eqref{tran-scalar-field}, 
+to obtain the
+corresponding generators. 
+However, sometimes field 
+might have its own 
+non-trivial transformation rules.
+Fig.\ref{fig:symmetry} shows the rotation 
+transformation of a vector field.
+We see field $\Phi$ rotates under the
+coordinate transformation. 
+\begin{equation}
+  \label{trans-field-general}
+  x\rightarrow x'\, , 
+  \qquad
+  \Phi(x)\rightarrow\Phi'(x')
+  =\mathcal{F}(\Phi(x)) \, .
+\end{equation}
+
+\begin{figure}
+	\centering
+	\caption{Rotation transformation of a vector field.}
+	\includegraphics[width=0.5\linewidth]{picture/Symmetry}
+	\label{fig:symmetry}
+\end{figure}
+
+Functional change $\mathcal{F}$
+can be obtained by studying the 
+representation theory of coordinate
+transformation group. We will not 
+illustrate more on this, 
+but give some examples
+for later use.
+
+Let's starting with a rather trivial one:
+a translation:
+\begin{equation}
+  \label{translation-field}
+  x' = x + a\, , 
+  \qquad
+  \Phi'(x+a) = \Phi(x)\, ,
+\end{equation}
+which implies that functional change 
+$\mathcal{F}$ is trivial here.
+
+Next, we consider a Lorentz transformation
+(rigid rotation).
+In general it takes the following form:
+\begin{equation}
+  \label{lorentz-field}
+  x'^\mu = {\Lambda^\mu}_\nu x^\nu\, ,
+  \qquad
+  \Phi'(\Lambda x) =U(\Lambda)\Phi(x)\, ,
+\end{equation}
+\footnote{
+	In quantum field theory, 
+	$\Phi$ is more likely to treat as an operator with transformation rule:
+	\begin{equation}
+	\Phi'(\Lambda x)
+	=U^{-1}(\Lambda)\Phi(x)U(\Lambda)\, .
+	\notag
+	\end{equation}
+}
+where $U(\Lambda)$ is a transformation matrix acting on $\Phi$. 
+The infinitesimal form of 
+$U(\Lambda)$ is 
+\begin{equation}
+ \label{U-Lambda-inf}
+ U(\Lambda)=1-\frac{1}{2}i
+ \omega_{\rho\nu}
+ S^{\rho\nu}\, ,
+\end{equation}
+where $\omega_{\rho\nu}$ is infinitesimal 
+parameter for Lorentz transformation
+and $S^{\rho\nu}$ is some matrix
+obeying the Lorentz algebra.
+
+Finally, under scale transformations, 
+we have:
+\begin{equation}
+  \label{scale-field}
+  x'=\lambda x \, ,
+  \qquad
+  \Phi'(\lambda x) = \lambda^{-\Delta}
+  \Phi(x) \, ,
+\end{equation}
+where $\Delta$ is the scaling dimension 
+of the field.
+
+\subsubsection*{Generator}
+In a field theory, the generator 
+of a symmetry depends on 
+transformation of field 
+as well as of coordinate.
+The infinitesimal form of 
+\ref{trans-field-general}
+can be written as:
+\begin{align}
+\label{trans-field-general-inf}
+  x'^{\mu} &= x^\mu + \omega_a 
+  \frac{\delta x^\mu}{\delta \omega_a}
+  \, ,
+  \notag\\
+  \Phi'(x') &= \Phi(x)
+  +
+  \omega_a \frac{\delta\mathcal{F}}
+  {\delta \omega_a}(x)
+  \, .
+\end{align}
+Here $\{\omega_a\}$ is a set of
+infinitesimal parameters.
+Now it is customary to define  
+the generator $G_a$ of a
+symmetry transformation by 
+the following expression:
+\begin{equation}
+\label{def-generater-general}
+  \delta_\omega
+  \Phi(x) 
+  \equiv \Phi'(x)-\Phi(x)
+  \equiv 
+  -i\omega_a G_a \Phi(x)\, ,
+\end{equation}
+which is just
+the infinitesimal transformation
+of field at a same point. 
+Together with 
+\eqref{trans-field-general-inf},
+to first order, we obtain the 
+explicit expression:
+\begin{equation}
+  \label{def-generator-general-explicit}
+  iG_a \Phi 
+  =
+  \frac{\delta x^\mu}{\delta \omega_a}
+  \partial_\mu \Phi
+  -
+  \frac{\delta\mathcal{F}}{\delta \omega_a}
+  \, .
+\end{equation}
+For a field satisfying $\Phi'(x')=\Phi(x)$,
+the expression reduces to 
+\eqref{def-generator}.
+Using the definition 
+\eqref{def-generator-general-explicit},
+and combining with
+the infinitesimal field of 
+\eqref{translation-field},
+\eqref{lorentz-field} and
+\eqref{scale-field},
+the generators in field space listed
+below can be derived:
+\begin{align}
+  \label{generator-three-field}
+  &\text{translation}:
+  \qquad  P_\nu = -i\partial_\nu \, ,
+  \notag \\
+  &\text{rotation} :
+  \qquad L^{\rho\nu}
+  =i(x^\rho\partial^\nu
+  -x^\nu\partial^\rho)
+  +S^{\rho\nu}
+  \, ,\\
+  &\text{dilatation}:
+  \qquad
+  D = -i x^\nu \partial_\nu 
+  -i\Delta
+  \, . \notag 
+\end{align}
+We see that when field transformation
+$\mathcal{F}(\Phi)$ is trivial, 
+three expressions in
+\eqref{generator-three-field} reduce 
+to the first three generators in
+Table. \ref{tab:ModelASymbol}.
+
+\subsubsection*{Noether's Theorem}
+
+Consider theory in d dimensions
+with action depending 
+in general on $\Phi$ 
+and its first derivatives.
+\begin{equation}
+ S = \int \dd^d x
+ \mathcal{L}(\Phi,\partial_\mu \Phi)
+\end{equation}
+A theory with a symmetry means that
+its action
+(or effective action 
+more accurately in quantum field theory)
+keeps invariant under such a symmetric 
+transformation.
+
+We now demonstrate Noether's theorem, 
+which states that to every continuous 
+symmetry of the action one may associate 
+a current that is classically conserved.
+An elegant way to derive Noether's theorem 
+is to suppose that $\omega$
+the parameters
+of infinitesimal transformation depend
+on the position. First, under continuous 
+transformation 
+\eqref{trans-field-general}, 
+the action becomes
+\begin{align}
+  S' &= \int \dd^d x'
+  \mathcal{L}(
+  \Phi'(x'),\partial_\mu'\Phi'(x'))
+  \notag\\
+  & = \int \dd^d x \abs{\pdv{x'}{x}}
+  \mathcal{L}
+  (\mathcal{F}(\Phi(x)),(\pdv{x^\nu}{x'^\mu})
+  \partial_\nu \mathcal{F}(\Phi(x)))\, .
+\end{align}
+Using the infinitesimal form for transformation
+\eqref{trans-field-general-inf}, 
+we get
+\begin{align}
+S' = &\int \dd^d x (1+\partial_\mu
+     (\omega_a \frac{\delta x^\mu}
+     {\delta \omega_a}))
+     \notag\\
+     &\times
+     \mathcal{L}
+     (
+     \Phi + \omega_a 
+     \frac{\delta\mathcal{F}}
+     {\delta\omega_a},
+     (
+     \delta^\nu_\mu
+     -
+     \partial_\mu
+     (
+     \omega_a\frac{\delta x^\nu}
+     {\delta \omega_a}
+     )
+     )
+     (
+     \partial_\nu \Phi+
+     \partial_\nu
+     (
+     \omega_a\frac{\delta\mathcal{F}}
+     {\delta\omega_a}
+     )
+     )
+     )\, .
+\end{align}
+Now using the symmetric condition that 
+the variation $\delta S = S'-S$ of the
+action vanishes if $\omega_a$ is a constant.
+Thus sum up of all terms with no derivatives
+of $\omega_a$ in the variation must be zero.
+Therefore, to first order, the variation
+involves only the first derivatives of
+$\omega_a$, obtained by expanding the 
+Lagrangian. 
+We write
+\begin{equation}
+   \delta S = - \int \dd^d x
+   j^\mu_a \partial_\mu \omega_a\, ,
+\end{equation}
+where $j^\mu_a$ is called the current
+associated with the infinitesimal transformation:
+\begin{equation}
+  \label{cano-current}
+  j^\mu_a =(
+  \pdv{\mathcal{L}}{
+   (\partial_\mu\Phi)}
+   \partial_\nu \Phi
+   -
+   \delta^\mu_\nu
+   \mathcal{L}
+  )
+  \frac{\delta x^\nu}{\delta\omega_a}
+  -
+  \pdv{\mathcal{L}}{(\partial_\mu \Phi)}
+  \frac{\mathcal{F}}{\delta\omega_a}
+  \, .
+\end{equation}
+Integrating by parts, we have
+\begin{equation}
+  \label{variation-action-locally}
+  \delta S = \int \dd^d x \, \partial_\mu
+  j^\mu_a \omega_a
+  \, .
+\end{equation} 
+If the field configuration satisfy the
+classical equation of motion, 
+the action is stationary under any 
+variation of the fields. Thus 
+$\delta S$ should vanish for any parameters
+$\omega_a(x)$. This implies the 
+conservation law:
+\begin{equation}
+\partial_\mu j^\mu_a = 0 \, .
+\end{equation} 
+The associated conserved charge is
+\begin{equation}
+\label{def-conserved-charge}
+  Q_a = \int \dd^{d-1} x \, j^0_a \, .
+\end{equation}
+Its time derivative vanishes:
+\begin{equation}
+  \dot{Q}_a = \int \dd^{d-1} x \,
+  \partial_0 j_a^0
+  =-\int \dd^{d-1}x \, \partial_i j^i
+  =0\, .
+\end{equation}
+One remark  to be mentioned here
+is that we may freely add to the expression
+\eqref{cano-current} 
+the divergence of
+an antisymmetric tensor without 
+affecting the conservation law:
+\begin{equation}
+  \label{current-freedom}
+  j^\mu_a \rightarrow 
+  j^\mu_a +\partial_\nu B^{\nu\mu}_a
+  \, ,
+  \qquad
+  B^{\nu\mu}_a = - B^{\mu\nu}_a
+  \, .
+\end{equation}
+
+Now we are going to focus on some useful 
+currents as examples. First of all, 
+if the action is invariant under translation
+$x'^\mu\rightarrow x^\mu +\e^\mu$, 
+we can associate it with a current by using
+\eqref{cano-current}:
+\begin{equation}
+  \label{cano-ener-mon-tensor}
+  T^{\mu\nu}_{\text{c}}=
+  -\eta^{\mu\nu}\mathcal{L}
+  +\pdv{\mathcal{L}}{(\partial_\mu\Phi)}
+  \partial^\nu \Phi \, .
+\end{equation}
+The conserved current associated with
+translation invariance is the energy-momentum
+tensor. 
+In general, the canonical energy-momentum
+tensor $T^{\mu\nu}_\text{c}$ is not
+symmetric. However, we have freedom to 
+modify this tensor as is illustrated
+in \eqref{current-freedom}, 
+to make the energy momentum tensor
+symmetric.
+\begin{equation}
+  \label{freedom-energy-momentum-tensor}
+  T^{\mu\nu}_{\text{B}}=
+  	T^{\mu\nu}_\text{c}
+  	+\partial_\rho B^{\rho\mu\nu}\,
+  	,\quad
+  	B^{\rho\mu\nu} = -B^{\mu\rho\nu}\, .
+\end{equation}
+
+Now consider the conserved current
+associated with Lorentz transformation.
+By using the infinitesimal form 
+\eqref{U-Lambda-inf}, the conserved 
+current becomes
+\begin{equation}
+  j^{\mu\nu\rho}=
+  T^{\mu\nu}_{\text{c}}x^\rho-
+  T^{\mu\rho}_{\text{c}}x^\nu+
+  \frac{i}{2}
+  \pdv{\mathcal{L}}{(\partial_\mu\Phi)}
+  S^{\nu\rho}\Phi \, .
+\end{equation}
+We can look for $B^{\rho\mu\nu}$ such
+that this current may be expressed as
+\begin{equation}
+\label{current-lorentz-B}
+  j^{\mu\nu\rho}
+  = T^{\mu\nu}_\text{B} x^\rho
+  -T^{\mu\rho}_\text{B} x^\nu\, .
+\end{equation}
+This relation ensures that
+$T^{\mu\nu}_\text{B}=T^{\nu\mu}_\text{B}$
+classically,
+as is easily seen by applying the 
+conservation laws. The energy-momentum
+tensors with the above identity are 
+called Belinfante tensor.
+An explicit expression for
+$B^{\rho\mu\nu}$ can be found:
+\begin{equation}
+  B^{\mu\rho\nu} = \frac{1}{4}i\big[
+  \pdv{\mathcal{L}}{(\partial_\mu \Phi)}
+  S^{\nu\rho} \Phi 
+  +
+  \pdv{\mathcal{L}}{(\partial_\rho \Phi)}
+  S^{\mu\nu} \Phi
+  +
+  \pdv{\mathcal{L}}{(\partial_\nu \Phi)}
+  S^{\mu\rho} \Phi
+  \big]\, .
+\end{equation}
+Actually such kind of $B^{\mu\rho\nu}$
+is not unique.
+
+Finally, if the action of theory is also 
+invariant under dilatation, the current 
+associated with scale invariance can be
+obtained by using the infinitesimal form of
+\eqref{scale-field} and the definition
+\eqref{cano-current}:
+\begin{equation}
+  j^{\mu}_\text{D} =
+  {T_c^\mu}_\nu x^\nu+\Delta
+  \pdv{\mathcal{L}}{(\partial_\mu\Phi)}
+   \Phi \, .
+\end{equation}
+We can also modify the energy momentum 
+to become
+\begin{equation}
+  \label{dilatation-current}
+  j^\mu_\text{D}= {T^\mu}_\nu x^\nu\, ,
+\end{equation}
+without spoiling the symmetric condition for a Belinfante tensor.
+Further more,
+by using conservation laws, we may find
+such kind of modified energy momentum
+tensor is traceless classically, i.e.
+\begin{equation}
+ {T^\mu}_\mu = 0\, .
+\end{equation}
+In later discussion, we will always assume 
+the energy momentum tensor we have constructed
+in a conformal invariance theory
+is classically symmetric and traceless.
+
+\subsubsection*{Correlation Functions}
+In previous sections, we focus on the effect
+of a continuous symmetry classically. 
+At the quantum level, the main object of 
+study is correlation function. 
+A general correlation function is defined
+as following
+\begin{equation}
+\label{def-correlation-function}
+  \expval{\Phi(x_1)\cdots \Phi(x_n)}=
+  \frac{1}{Z}\int [\dd\Phi]
+  \Phi(x_1)\cdots \Phi(x_n)
+  \exp{-S[\Phi]}\, ,
+\end{equation}
+where $Z$ is the vacuum functional:
+\begin{equation}
+  Z = \int [\dd \Phi] \exp(-S[\Phi])
+  \, .
+\end{equation}
+The path integral denotation $[\dd \Phi]$ means to integrate out all the field configurations of $\Phi$. 
+The operators in the correlation function
+$\Phi(x_1)\cdots \Phi(x_n)$ are automatically
+time-ordered by using path integral method,
+i.e.
+\begin{equation}
+\expval{\mathcal{T}(\Phi(x_1)
+	\cdots \Phi(x_n))}
+= \expval{\Phi(x_1)\cdots\Phi(x_n)}\, ,
+\end{equation}
+where $\mathcal{T}$ is the time ordering operator
+which makes the field operator in time order:
+\begin{equation}
+  \mathcal{T}(\Phi(x_1)
+  	\cdots \Phi(x_n))
+  = \Phi(x_1)\cdots\Phi(x_n)\, ,
+  \qquad
+  \text{if}
+  \quad
+  t_1 > t_2 > \cdots > t_n \, .
+\end{equation}
+However, all we have discussed are in
+Euclidean space. So time direction can
+be arbitrary by now. We will specify time
+direction in two dimension case later.
+
+A continuous symmetry leads to constraints
+to the correlation function:
+\begin{equation}
+\label{tran-correlation-function}
+ \expval{\Phi(x_1')\cdots\Phi(x_2')}
+ =
+ \expval{\mathcal{F}(\Phi(x_1))\cdots 
+         \mathcal{F}(\Phi(x_n))   
+    }\, .
+\end{equation}
+The above identity is the consequence of 
+the invariance of the action 
+and of the path 
+integral measure under the transformation:
+\begin{align}
+  \expval{\Phi(x_1')\cdots \Phi(x_n')}
+  &=
+  \frac{1}{Z}
+  \int [\dd \Phi] \Phi(x_1')\cdots \Phi(x_n')
+  \exp(-S[\Phi])
+  \notag\\
+  &=
+  \frac{1}{Z}
+  \int [\dd \Phi']
+  \Phi'(x'_1)\cdots \Phi'(x'_n)
+  \exp(-S[\Phi'])
+  \notag \\
+  &=
+  \frac{1}{Z}
+  \int [\dd \Phi]
+  \mathcal{F}(\Phi(x_1))\cdots
+  \mathcal{F}(\Phi(x_n))
+  \exp(-S[\Phi])
+  \notag\\
+  &=
+  \expval{\mathcal{F}(\Phi(x_1))\cdots 
+  	\mathcal{F}(\Phi(x_n))} 
+  	\notag\, .
+\end{align}
+On the second line, we just rename the
+integration variable $\Phi \rightarrow \Phi'$.
+On the third line, the symmetry assumptions
+for action and functional integral measure 
+were used. 
+\eqref{tran-correlation-function} immediately
+implies that correlation function
+is invariant under translation.
+
+\subsubsection*{Ward-Takahashi Identity}
+The consequence of a symmetry of the action
+and the measure on correlation functions may
+also be expressed via the Ward-Takahashi Identity, which we shall demonstrate now.
+We first change the functional field 
+variable in 
+\eqref{def-correlation-function}
+by an infinitesimal transformation
+given by
+\eqref{def-generater-general}
+\begin{equation}
+  \Phi'(x) = \Phi(x)- i \omega_a G_a \Phi(x)
+  \, ,
+\end{equation}
+Denoting the collection
+$\Phi(x_1)\cdots \Phi(x_n)$ of fields
+in \eqref{def-correlation-function}
+by $X$. And since now $\omega_a$ is the 
+function of position $x$,
+the action transforms
+according to 
+\eqref{variation-action-locally}
+$S[\Phi] \rightarrow 
+S[\Phi]+\int \dd x \partial_\mu j^\mu_a 
+\omega_a(x) $.
+Under this local transformation,
+we denote the transformation of $X$ to be
+$X\rightarrow X+\delta X$. The correlation
+function is invariant through the functional
+variable exchange, thus 
+we can write:
+\begin{equation}
+ \expval{X}=\frac{1}{Z}
+ \int [\dd  \Phi']
+ (X+\delta X)
+ \exp{-S[\Phi]-\int \dd x 
+ \partial_\mu j^\mu_a \omega_a (x)}
+ \, .
+\end{equation}
+We again assume that the functional
+integration is invariant under the
+local transformation(i.e.,
+$[\dd \Phi'] = [\dd \Phi])$.
+When expanded to first order of
+$\omega_a(x)$, the above yields
+\begin{equation}
+  \label{Ward-identity-ver2}
+  \expval{\delta X}=\int \dd^d x
+  \partial_\mu
+  \expval{j^\mu_a (x)X} \omega_a(x)\, .
+\end{equation}
+
+The variation $\delta X$ is explicitly 
+given by 
+\begin{align}
+  \delta X 
+  &= -i \sum_{i=1}^n
+  (
+  \Phi(x_1)\cdots G_a\Phi(x_i)
+  \cdots \Phi(x_n)
+  )
+  \omega_a(x_i)
+  \notag \\
+  &=-i \int \dd^d x \, \omega_a(x)
+  \sum_{i=1}^{n}
+  (
+  \Phi(x_1)\cdots G_a \Phi(x_i)
+  \cdots \Phi(x_n)
+  )
+  \delta(x-x_i)
+\end{align}
+Since the above two expression hold
+for any infinitesimal function 
+$\omega_a(x)$, we may write the 
+following local relation:
+\begin{align}
+  \label{Ward-Takahashi-Identity}
+  \pdv{x^\mu}
+  &\expval{
+  	j^\mu_a(x)\Phi(x_1)\cdots
+  	\Phi(x_n)
+  }\notag\\
+  &=-i\sum_{i=1}^{n}
+  \delta(x-x_i)
+  \expval{
+  \Phi(x_1)\cdots G_a\Phi(x_i)
+  \cdots 
+  \Phi(x_n)
+  }\, .
+\end{align}
+This is the Ward-Takahashi identity for the 
+current $j^\mu_a$. Note that the modification
+\eqref{current-freedom}
+doesn't affect the identity.
+
+The Ward-Takahashi identity allows us to 
+identify the conserved charge $Q_a$ defined
+in \eqref{def-conserved-charge}
+as the generator of the symmetry transformation
+in the Hilbert space of quantum states.
+Let $Y= \Phi(x_2)\cdots \Phi(x_n)$ and 
+suppose that the time $t=x^0_1$ is larger
+than all the times in $Y$. We integrate the
+Ward-Takahashi identity \eqref{Ward-Takahashi-Identity}
+in a very thin box bounded by 
+$t_-<t$, by $t_+>t$, and by spatial
+infinity, which excludes all the 
+other points $x_2,\cdots,x_n$.
+\begin{equation}
+  \expval{Q_a(t_+)\Phi(x_1)Y}
+  -
+  \expval{Q_a(t_-)\Phi(x_1)Y}
+  = -i \expval{G_a \Phi(x_1)Y}\, .
+\end{equation}
+In the limit $t_-\rightarrow t_+$, for 
+arbitrary set of fields $Y$, we obtain
+\begin{equation}
+  \label{charge-com-generator}
+  \comm{Q_a}{\Phi} = -i G_a \Phi\, .
+\end{equation}
+We see that, the conserved charge $Q_a$ is 
+the generator in the operator formalism.
+
+
+\subsection{Primary fields}
+In the previous section, we have
+reviewed some concepts of field 
+theory in d dimensions,  and derived 
+the current expression for three important
+currents in conformal symmetry. 
+Now, we should fix our concentration in 
+two dimensions. First, we need to define
+the field transformation under conformal transformation. 
+From \eqref{Witt-algebra}, we find 
+$l_0$ and $\bar{l}_0$ are the Cartan 
+subalgebra of conformal algebra. 
+Thus we can assume physical states 
+to be eigenstates of $l_0$ and $\bar{l}_0$
+with eigenvalues $\{ h, \bar{h}\}$.
+$h$ are called the holomorphic conformal
+dimension and $\bar{h}$ the antiholomorphic 
+one. 
+There is an equivalent definition of 
+conformal dimension
+for an field operator which is more
+explicit. 
+Under conformal transformation
+$z\rightarrow \lambda z,
+ \bar{z} \rightarrow \bar\lambda \bar{z}$, 
+the field operator transforms as
+\begin{equation}
+\label{def-conformal-dimension}
+  \phi'(\lambda z,\overline\lambda \overline{z})
+  =
+  (\lambda)^{-h}
+  (\overline\lambda)^{-\overline{h}}
+  \phi(z,\overline{z})\, .
+\end{equation}
+Under an arbitrary global conformal map 
+$z\rightarrow w(z), 
+\overline{z} \rightarrow \overline{w}(\overline{z})$,
+if a field transforms as
+\begin{equation}
+\label{def-quasi-primary-field}
+  \phi'(w,\overline{w})
+  =\bigg(\frac{\dd w}{\dd z}\bigg)^{-h}
+  \bigg(\frac{\dd \overline{w}}{\dd \overline{z}}\bigg)^{-\overline{h}}
+  \phi(z,\overline{z})\, ,
+\end{equation}
+then we call such field a quasi-primary field.
+Under infinitesimal transformation 
+$z \rightarrow z + \e(z)$, we obtain the
+infinitesimal transformation of quasi-primary
+field:
+\begin{equation}
+\label{trans-inf-quasi-primary}
+  \delta_{\e,\overline\e}\phi
+  \equiv \phi'(z,\overline{z})
+  - \phi(z, \overline{z})
+  =-(h\phi\partial_z \e + \e \partial_z \phi)
+  -
+  (\overline{h}\phi\partial_{\bar{z}}
+  \overline{\e}
+  +
+  \overline{\e}\partial_{\bar{z}}\phi
+  )\, .
+\end{equation}
+A field whose transformation under
+any local conformal transformation 
+given by 
+\eqref{def-quasi-primary-field}
+or equivalently
+\eqref{trans-inf-quasi-primary}
+is called primary field. Therefore
+all primary fields are also quasi 
+primary, but the reverse is not true.
+A field which is not primary is 
+generally called secondary.
+
+The definition \eqref{def-quasi-primary-field}
+put strong constraints to their correlation 
+function by using \eqref{tran-correlation-function}.
+For instance for the two-point function of 
+chiral quasi-primary fields, the translation 
+invariance implies that the two-point function
+is of the form
+\begin{equation}
+  \expval{\phi_1(z)\phi_2(w)}
+  = g(z-w) \, .
+\end{equation}
+Then under conformal transformation  
+$z \rightarrow \lambda z $, we have
+\begin{equation}
+  \lambda^{h_1+h_2} g(z-w) = g(\lambda(z-w))\, ,
+\end{equation}
+where $h_1$,$h_2$ is the conformal dimensions of
+$\phi_1$  and $\phi_2$ correspondingly. This leads 
+a constraint for the two point function.
+since the relation above satisfies for arbitrary 
+$\lambda$ we obtain that $g(z-w)$ is of the form
+\begin{equation}
+  g(z-w) = \frac{C_{12}}{(z-w)^{h_1+h_2}}\, ,
+\end{equation}
+with $C_{12}$ a constant. Finally, when apply the
+conformal transformation $z \rightarrow 1/z$, for
+the two-point function to be non-trivial, the 
+conformal dimensions of the two fields must be 
+the same, i.e.
+\begin{equation}
+  \label{two-point-func-form}
+  \expval{\phi_1(z)\phi_2(w)} 
+  = \frac{C_{12}}{(z_1-z_2)^{2h}}\, ,
+  \quad
+  \text{if}
+  \quad
+  h_1 = h_2 = h\, . 
+\end{equation}
+The same treatment can be used to obtain the
+form of three-point function for the 2 dimensional
+primary operators. 
+For chiral part, we have
+\begin{equation}
+  \expval{\phi_1(z_1)\phi_2(z_2)\phi_3(z_3)}
+  =\frac{C_{123}}{z_{12}^{h_1+h_2-h_3}
+  z_{23}^{h_2 + h_3 - h_1} z_{13}^{h_3+ h_1- h_2}}
+  \, ,
+\end{equation}
+where $z_{ij} = z_i - z_j $.  
+the four points function and beyond are
+more complex, because of
+the existence of anharmonic ratios.
+
+Now, we want to apply Ward-Takahashi identity
+with respect to primary fields. First, we need 
+to write the generators 
+\eqref{generator-three-field}
+in terms of conformal dimensions.           
+Plugging the infinitesimal transformation
+of translation, rotation and dilatation into 
+\eqref{def-quasi-primary-field}
+and rewrite the expression in real coordinate
+, it turns out that 
+\eqref{generator-three-field}
+now becomes
+\begin{align}
+\label{generator-three-field-2d}
+  &\text{translation}:
+   \qquad  P_\nu = -i\partial_\nu \, ,
+   \notag \\
+  &\text{rotation} :
+  \qquad L^{\rho\nu}
+  =i(x^\rho\partial^\nu
+  -x^\nu\partial^\rho)
+  +s \e^{\rho\nu}
+   \, ,\\
+  &\text{dilatation}:
+   \qquad
+   D = -i x^\nu \partial_\nu 
+  -i\Delta
+   \, , \notag 
+\end{align}
+with the spin $s$ and scale factor
+$\Delta$ equal to
+\begin{equation}
+  \label{rel-spin-scale-conformal dimension}
+  s= h-\overline{h}\, ,\qquad
+  \Delta = h + \overline{h}\, ,
+\end{equation}
+which accord with the operator relations
+\eqref{l0combinations}.
+Now, we can apply Ward-Takahashi identity
+\eqref{Ward-Takahashi-Identity}
+to three transformations above. For 
+translation invariance, 
+the associated current is just 
+energy momentum tensor. Plugging
+the translation generator in 
+\eqref{generator-three-field-2d} 
+to Ward-Takahashi identity, we obtain
+\begin{equation}
+\label{Ward-identity-translation}
+ \partial_\mu\expval{
+ 	{T^\mu}_\nu X
+ }=
+\sum_i \delta(x-x_i)
+\pdv{x_i^\mu}\expval{X}\, ,
+\end{equation} 
+where $X$ stands for a product of 
+$n$ local quasi-primary fields $\cO_i(x_i)$, 
+$$ X(x_1,\ldots,x_n):=\cO_1(x_1)\cdots \cO_n(x_n)~.$$
+ This identity holds
+after a modification in \eqref{freedom-energy-momentum-tensor}.
+
+If a theory still has Lorentz symmetry, 
+we can assume the associated current to
+take the form of 
+\eqref{current-lorentz-B}.
+With the generator
+given on the second line of 
+\eqref{generator-three-field-2d}
+the Ward-Takahashi identity is
+\begin{equation}
+  \partial_\mu\expval{
+  (T^{\mu\nu}x^\rho-
+  T^{\mu\rho}x^\nu
+  )X}=
+  \sum_i \delta(x-x_i)[
+   (x^\nu_i\partial_i^\rho
+    -
+    x_i^\rho\partial_i^\nu )
+    \expval{X}
+    -
+    i \e^{\nu\rho} s_i
+    \expval{X}
+  ]\, ,
+\end{equation}
+where $s_i$ is the spin of the 
+$i$-th field of the set $X$. 
+Using \eqref{Ward-identity-translation},
+we can reduce the expression to 
+\begin{equation}
+  \expval{(T^{\rho\nu}
+  	-T^{\nu\rho})X}
+  =-i \sum_i
+  \delta(x-x_i)s_i \e^{\nu\rho}
+  \expval{X}\, .
+\end{equation}
+We see that the energy momentum tensor 
+is symmetric in correlation except 
+at the position of other fields. We always
+ignore such kinds of differences, since these
+exceptional points do not offer contributions
+when putting in the contour integral as we 
+will see.
+Taking the contraction of $\e_{\nu\rho}$
+from both sides of above, we reach the 
+final expression of Ward-Takahashi identity
+of Lorentz transformation for quasi-primary field:
+\begin{equation}
+\label{Ward-identity-lorentz}
+\e_{\mu\nu}\expval{T^{\mu\nu}X}
+= -i \sum_{i=1}^{n}s_i \delta(x-x_i)
+\expval{X}\, .
+\end{equation}
+
+Finally, if a theory has scale invariance, 
+using current expression
+associated with scale invariance
+\eqref{dilatation-current}
+and the dilatation generator in 
+\eqref{generator-three-field-2d},
+the Ward-Takahashi identity becomes
+\begin{equation}
+  \partial_\mu \expval{
+  {T^\mu}_\nu x^\nu X
+  }
+  =-
+  \sum_i \delta(x-x_i)
+  \big[
+  	x^\nu_i 
+  	\pdv{x^\nu_i}\expval{X}
+  	+\Delta_i
+  	\expval{X}
+  \big]\, ,
+\end{equation}
+with $\Delta_i$ the scaling dimension
+of the $i$th local operator. Using \eqref{Ward-identity-translation},
+the identity reduces to
+\begin{equation}
+\label{Ward-identity-scale}
+  \expval{{T^\mu}_\mu X}=
+  -\sum_i \delta(x-x_i)
+  \Delta_i
+  \expval{X}\, .
+\end{equation}
+We see that the energy momentum tensor is
+traceless in correlation function except 
+some positions of other fields. 
+Now, we have three Ward-Takahashi identity
+associated with three important global 
+invariances in conformal transformations.
+We want to rewrite these identities in
+terms of complex coordinates by using
+coordinate transformation
+\eqref{coordinate transformation}.
+Metric after transformation has been obtained
+in \eqref{metric-complex-space}, and antisymmetric tensor can be gained by 
+using transformation rule of tensor:
+\begin{equation}
+  \e_{\alpha\beta}
+  =
+  \mqty(
+  0 & \frac{1}{2}i \\
+  -\frac{1}{2}i & 0 
+  )
+  \, , \qquad
+  \e^{\alpha\beta}
+  =
+  \mqty(
+  0 & -2i\\
+  2i & 0
+  )\, .
+\end{equation}
+The energy momentum tensor 
+$T^{\mu\nu}\leftarrow T^{\alpha\beta}$ 
+under coordinate transformation. Writing 
+each component explicitly, we have
+\begin{align}
+  T_{zz} =&  \frac{1}{4}(T_{00}-2iT_{10}- T_{11})
+  \, , \\ 
+  T_{\bar{z}\bar{z}} =&
+  \frac{1}{4}(T_{00}+2iT_{10}-T_{11})
+  \, , \\
+  T_{z\bar{z}}
+  =&
+  T_{\bar{z}z}
+  =\frac{1}{4}
+  (T_{00}+T_{11})
+\end{align}
+We find the classically traceless of the
+energy momentum tensor implies that
+$T_{z\bar{z}}=T_{\bar{z}z}=0$ classically.
+From the conservation law 
+$\partial_\mu T^{\mu \nu} =0$, we see that
+$T_{zz}$ and $T_{\bar{z}\bar{z}}$ 
+are holomorphic and antiholomorphic respectively.
+
+For the delta functions, we can use the
+identity
+\begin{equation}
+  \delta(x)=\frac{1}{\pi}
+  \partial_{\bar{z}} \frac{1}{z}
+  =\frac{1}{\pi}\partial_z
+  \frac{1}{\overline{z}}\, .
+\end{equation}
+One may verify the
+first one satisfy 
+the property of delta function  
+if the integrand is holomorphic
+by using the Gauss's theorem.
+However we will find since
+the integrands in the three
+Ward-Takahashi identities
+we have derived
+are independent of $z$ or $\overline{z}$,
+we can just choose appropriate
+one of the two representations to
+obtain the result we want.
+The Ward-Takahashi identity associated
+with translation symmetry 
+\eqref{Ward-identity-lorentz}  
+now split into two expression:
+\begin{align}
+  \label{temp-Ward-translation-1}
+  2\pi \partial_z \expval{
+  T_{\bar{z}z} X}
+  +
+  2\pi \partial_{\bar{z}}
+  \expval{T_{zz} X}
+  &=
+  -\sum_{i} \partial_{\bar{z}}
+  \frac{1}{z-w_i}\partial_{w_i}
+  \expval{X}\, ,\\
+  \label{temp-Ward-translation-2}
+  2\pi \partial_z \expval{
+  	T_{\bar{z}\bar{z}} X}
+  +
+  2\pi \partial_{\bar{z}} \expval{
+  	T_{z\bar{z}} X}
+  &=
+  -\sum_{i} \partial_z
+  \frac{1}{\bar{z}-\bar{w_i}}
+  \partial_{\bar{w_i}}
+  \expval{X}\, ,
+\end{align}
+where $T_{zz}\cdots$ are just new components
+of energy momentum tensor after coordinate
+transformation $x\rightarrow z$ and local coordinates $x_i\rightarrow w_i$. 
+Ward-Takahashi identity of rotation and
+dilatation can be obtained similarly.
+\begin{align}
+\label{temp-Ward-scale}
+  2\expval{T_{z\bar{z}}X}
+  +
+  2\expval{T_{\bar{z}z}X}
+  &=
+  -\sum_i \delta(x-x_i)\Delta_i\expval{X}
+  \, , \\
+  \label{temp-Ward-rotation}
+  -2\expval{T_{z\bar{z}}X}
+  +2\expval{T_{\bar{z}z}X}
+  &=
+  -\sum_i \delta(x-x_i)s_i
+  \expval{X}\, .
+\end{align}
+If we add and subtract the last two
+equations of 
+\eqref{Ward-identity-lorentz}
+and
+\eqref{Ward-identity-scale},
+by using 
+\eqref{rel-spin-scale-conformal dimension}
+for quasi-primary field
+and replace appropriate delta function,
+we find
+\begin{align}
+  \label{traceless-condition-correlation1}
+  2\pi\expval{T_{\bar{z}z}X} &=
+  -\sum_i \partial_{\bar{z}}
+  \frac{1}{z-w_i}h_i
+  \expval{X}\, ,\\
+  \label{traceless-condition-correlation2}
+  2\pi\expval{T_{z\bar{z}}X} &=
+  -\sum_i \partial_{z}
+  \frac{1}{\overline{z}-\overline{w}_i}
+  \overline{h}_i
+  \expval{X}\, .
+\end{align}
+From above relation, we find the traceless
+condition for energy momentum tensor is still
+correct in the correlation function, except 
+the positions of other field points.
+Inserting these relations back to
+\eqref{temp-Ward-translation-1}
+and
+\eqref{temp-Ward-translation-2},
+we find
+\begin{align}
+  \partial_{\bar{z}}\bigg\{
+  \expval{T(z,\bar{z})X}-
+  \sum_i
+  \big[
+  \frac{1}{z-w_i}\partial_{w_i}
+  \expval{X}
+  +
+  \frac{h_i}{(z-w_i)^2}
+  \expval{X}
+  \big]
+  \bigg\}
+  &=0 \, ,\\
+  \partial_{z}\bigg\{
+  \expval{\overline{T}(z,\bar{z})X}-
+  \sum_i
+  \big[
+  \frac{1}{\overline{z}-\overline{w}_i}
+  \partial_{\overline{w}_i}
+  \expval{X}
+  +
+  \frac{\overline{h}_i}{(\overline{z}-\overline{w}_i)^2}
+  \expval{X}
+  \big]
+  \bigg\}
+  &=0 \, ,
+\end{align}
+where we have introduced
+\begin{equation}
+  T=-2\pi T_{zz}\, , \quad
+  \overline{T} = - 2\pi T_{\bar{z}\bar{z}}
+  \, .
+\end{equation}
+From the expression above , we see 
+$T$ and $\overline{T}$
+are holomorphic and antiholomorphic 
+respectively in the correlation function 
+, which is consistent with the classical
+conclusion. 
+In fact, we can always write an operator
+in holomorphic form in correlation function
+if it proves to be holomorphic classically. 
+
+Furthermore, we can write 
+an important expression for quasi-primary
+field.
+\begin{equation}
+ \expval{T(z)X} = \sum_i
+ \bigg\{
+   \frac{1}{z-w_i}\partial_{w_i}
+   \expval{X}
+   +
+   \frac{h_i}{(z-w_i)^2}\expval{X}
+ \bigg\}
+ +\text{reg.}\, ,
+\end{equation}
+where "reg." stands for a holomorpohic function
+of z which is regular at $z= w_i$. The
+antiholomorphic counterpart is similar.
+This expression gives the singular
+behavior of the correlator of fields
+$T(z)$ with a list of primary field
+$X$ as z approaches the point $w_i$.
+This implies the OPE (operator product expansion) 
+of the energy-momentum
+tensor with primary fields by removing 
+the bracket $\expval{\cdots}$
+\begin{equation}
+ T(z)X \sim \sum_i
+\bigg\{
+\frac{1}{z-w_i}\partial_{w_i}
+ X
++
+\frac{h_i}{(z-w_i)^2} X
+\bigg\}
+\, .
+\end{equation}
+The symbol $\sim$ means the regular terms 
+are ignored. OPE also contains an infinite
+numbers of regular terms which, for 
+energy-momentum tensor, can not be obtained
+from the conformal Ward identity. 
+The operator product expansion, or OPE, 
+is the representation of a product of operator,
+describes the infinite fluctuations when each
+point tend toward each other.
+In general,
+we would write the OPE of two fields $A(z)$, 
+$B(w)$ as
+\begin{equation}
+  A(z)B(w) = \sum_{n=-\infty}^{\infty}
+  \frac{\{AB\}_n(w)}{(z-w)^n} \, ,
+\end{equation}
+where the composite fields $\{AB\}_n(w)$ are 
+nonsingular at $w = z$.
+In particular for a single primary field $\phi$
+with conformal dimensions $h$ and $\overline{h}$
+, we have:
+\begin{align}
+\label{OPE-T-primaryfield-z}
+  T(z)\phi(w,\overline{w})&\sim 
+  \frac{h}{(z-w)^2}\phi(w,\overline{w})
+  +
+  \frac{1}{z-w}\partial_w \phi(w,\overline{w})
+  \, ,\\
+\label{OPE-T-primaryfield-barz}
+  \overline{T}(\overline{z})
+  \phi(w,\overline{w})&\sim 
+  \frac{\overline{h}}
+  {(\overline{z}-\overline{w})^2}
+  \phi(w,\overline{w})
+  +
+  \frac{1}{\overline{z}-\overline{w}}
+  \partial_{\overline{w}} \phi(w,\overline{w})
+  \, .
+\end{align}
+The expression above can be treated as an
+alternative definition for primary field.
+For a secondary field, but with conformal dimension
+$h$ and $\overline{h}$, 
+its OPE with energy-momentum tensor has more
+singular terms, i.e.
+
+\begin{align}
+\label{OPE-T-seconfield-z}
+T(z)\phi(w,\overline{w})&\sim \cdots+
+\frac{h}{(z-w)^2}\phi(w,\overline{w})
++
+\frac{1}{z-w}\partial_w \phi(w,\overline{w})
+\, ,\\
+\label{OPE-T-seconfield-barz}
+\overline{T}(\overline{z})
+\phi(w,\overline{w})&\sim \cdots +
+\frac{\overline{h}}
+{(\overline{z}-\overline{w})^2}
+\phi(w,\overline{w})
++
+\frac{1}{\overline{z}-\overline{w}}
+\partial_{\overline{w}} \phi(w,\overline{w})
+\, .
+\end{align}
+
+\subsection{Conformal Ward-Takahashi identity}
+
+In this section, we are going to write the 
+Ward-Takahashi identities for general conformal invariance- conformal Ward-Takahashi identity.
+By observing from 
+\eqref{current-lorentz-B} and
+\eqref{dilatation-current},
+we find for a conformal transformation
+with infinitesimal variation
+$\e^\mu$, its current can be written as
+\begin{equation}
+  j^\mu_a(x)\omega_a = T^{\mu\nu}\e_\nu\, .
+\end{equation}
+In fact, the above relation is satisfied 
+for not only translation, dilatation and
+rotation, but for arbitrary conformal variation.
+Plugging into 
+\eqref{Ward-identity-ver2},
+we obtain the conformal Ward-Takahashi identity
+\begin{equation}
+  \delta_\e\expval{X}
+  =\int_M \dd^d x \partial_\mu
+  \expval{T^{\mu\nu}(x)\e_\nu(x)X}\, .
+\end{equation}
+Here the integral is taken over the domain 
+M containing the positions of all the fields 
+in the $X$. Using Gauss's theorem and in
+2 dimensions, one find
+\begin{equation}
+  \delta_{\e,\overline\e}\expval{X}
+  = \frac{1}{2} i \int_c
+  \{
+   -dz\expval{T^{\bar{z}\bar{z}}\e_{\bar{z}}X}
+   +d\bar{z}\expval{T^{zz}\e_z X}
+  \}
+  \, ,
+\end{equation}
+where we have defined 
+$\e(z)= \e^z$ and 
+$\overline{\e}(\overline{z}) = \e^{\overline{z}}$,
+respectively. Note that 
+$\expval{T_{\bar{z}z}X}$ and
+$\expval{T_{z\bar{z}}}$ do not contribute
+to the contour integrals from
+\eqref{traceless-condition-correlation1}
+and
+\eqref{traceless-condition-correlation2}
+since the contours do not exactly go through
+the positions contained in $X$. Finally, we get
+\begin{equation}
+\label{Conformal-Ward-Identity-2d}
+  \delta_{\e,\overline\e}\expval{X}
+  =- \frac{1}{2\pi i}
+  \oint_C \dd z \,\e(z)\expval{T(z)X}
+  +
+  \frac{1}{2\pi i}
+  \oint_C \dd \overline{z}\, 
+  \overline{\e}(\overline{z})
+  \expval{\overline{T}(\overline{z})X}\, ,
+\end{equation}
+where the contour $C$ should contain all the
+positions of fields in $X$. Notice that the 
+validity of \eqref{Conformal-Ward-Identity-2d}
+extends beyond primary fields, thus it may be
+taken as a definition of the effect of conformal
+transformations on an arbitrary local field 
+within a correlation function.
+
+If $X$ is primary field :
+ $\phi(z,\overline{z})$, 
+plugging the OPE relation 
+\eqref{OPE-T-primaryfield-z}
+and 
+\eqref{OPE-T-primaryfield-barz}
+back to conformal Ward-Takahashi identity
+\eqref{Conformal-Ward-Identity-2d},
+we can verify the result should be the
+same with the variation of a primary field 
+\eqref{trans-inf-quasi-primary}.
+\subsection{Example: Free boson}
+
+In this section, we will study free boson 
+field as an example. We first review some basic
+concepts in field theory.
+\subsubsection*{Calculation of Two Point Function}
+
+Two point function is a correlation function 
+of two fields. Therefore, from the definition of 
+correlation function 
+\eqref{def-correlation-function}, we
+can easily write the definition of two point 
+function for Bosonic field as
+\begin{equation}
+\label{def-two-point-function}
+  \expval{\mathcal{T}(\phi(x_1)\phi(x_2))}
+  \frac{1}{Z}\int [\dd \phi]
+  \phi(x_1)\phi(x_2) \exp{-S[\phi]}\, .
+\end{equation}
+The time ordering operation $\mathcal{T}$ is automatically
+satisfied in a path integral.
+Then, we can define a generating functional
+for the theory:
+\begin{equation}
+\label{def-generating-functional}
+  Z[J] = \int [\dd\phi] \exp{-(S-\int \dd ^d x \phi(x) J(x)}\, ,
+\end{equation}
+where $J(x)$ is an auxiliary "current". Then the
+two point function can be generated bu functional
+derivative of $J$ :
+\begin{equation}
+  \label{two-point-correlation-functional-derivative}
+  \expval{\phi(x_1)\phi(x_2)}=
+  Z[0]^{-1} \frac{\delta}{\delta J(x_1)}
+  \frac{\delta}{\delta J(x_2)} Z[J]|_{J=0}\, .
+\end{equation} 
+For calculating the two point function more 
+generally, we first assume the action $S$ take 
+the form of following:
+\begin{equation}
+  \label{general-form-action}
+  S = \frac{1}{2}
+  \int \dd^d x \dd^d y\, 
+  \phi(x)A(x,y)\phi(y)\, .
+\end{equation}
+Let's introduce a variable transformation
+$\phi\rightarrow \phi + \phi_0$
+without changing the path integral measure and
+result as we have illustrated before. The term 
+in the exponential of generating functional 
+becomes:
+\begin{align}
+  -S+\int \dd^d x \phi(x)J(x)
+  \rightarrow& 
+  -\frac{1}{2}\int \dd^d x \dd^d y
+  \phi(x)A(x,y)\phi(y) 
+  -\int \dd^d x \dd^d y
+  \phi(x)A(x,y) \phi_0(y)-
+  \notag \\
+  &- \frac{1}{2}\int \dd^d x \dd^d y
+  \phi_0(x)A(x,y)\phi_0(y)
+  +\int \dd^d x\phi_0(x)J(x)
+  +\int \dd^d x \phi(x)J(x)\, ,
+  \notag
+\end{align}
+Now we choose $\phi_0$ to satisfy the equation:
+\begin{equation}
+ \int \dd^d y A(x,y) \phi_0(y) = J(x)\, 
+  \rightarrow
+ \phi_0(x) = \int \dd^d y A^{-1}(x,y)J(y)\, .
+\end{equation}
+Then, then the generating functional can be
+written as 
+\begin{equation}
+  Z[J] = N \exp{\frac{1}{2}
+  	\int \dd^d x \dd^d y \,
+  	J(x) A^{-1}(x,y) J(y)
+  }\, ,
+\end{equation}
+with $N$ independent of $J$
+\begin{equation}
+  N = \int [\dd \phi] 
+  \exp{-\frac{1}{2} \int \dd^d x \dd^d y \,
+  \phi(x) A(x,y) \phi(y)}\, .
+\end{equation}
+Therefore, by using 
+\eqref{two-point-correlation-functional-derivative},
+we have
+\begin{equation}
+\label{two-point-function-calculation}
+  \expval{\mathcal{T}(\phi(x_1)\phi(x_2))}
+  =A^{-1}(x,y)
+\end{equation} 
+We will apply the formula above to calculate the
+two-point function of some
+specific theories.
+
+\subsubsection*{Two-Point function in Free Boson}
+In two dimensions, the free boson has the following 
+Euclidian action:
+\begin{equation}
+\label{def-Free-boson action}
+  S = \frac{1}{2}g\int \dd^2 x 
+  \{
+     \partial_\mu \varphi 
+     \partial^\mu \varphi
+     +m^2 \varphi^2
+  \}\, ,
+\end{equation} 
+With $g$ a normalization parameter. Now 
+$\varphi$ is a scalar field, i.e. remains invariant
+under rotation and translation.
+We focus on massless case $m=0$, in which
+the theory becomes conformal.
+Comparing with \eqref{general-form-action}, we have
+\begin{equation}
+  A(x,y) = -g \delta^{(2)}(x-y)\square \, ,
+\end{equation} 
+From \eqref{two-point-function-calculation}, we
+can calculate the two-point function 
+$K(x,y) \equiv \expval{\varphi(x_1)\varphi(x_2)}$
+by solving the following equation:
+\begin{equation}
+  -g \square K(x,y) = \delta^{(2)}(x-y)\, ,
+\end{equation}
+From \eqref{tran-correlation-function} and
+the trivial nature of $\mathcal{F}$ for a scalar field, 
+$K(x,y)$ is invariant under translation and rotation.
+Thus, we can write $K(x,y)\equiv K(\rho)$
+with $\rho = \abs{x-y}$,
+and integrate over $x$ within a Disk of radius $r$
+around y. We find
+\begin{align}
+  1 &= 2\pi g \int^{r}_0 \dd \rho \rho
+  \bigg(
+    -\frac{1}{\rho}\pdv{\rho}(\rho K'(\rho))
+  \bigg)
+  \notag \\
+    &= 2 \pi g(-rK'(r))\, .
+\end{align}   
+The solution of two-point function for massless free boson
+can be obtained up to an additive constant,
+\begin{equation}
+  \label{two-point-function-free-Boson}
+  \expval{\varphi(x)\varphi(y)}=-\frac{1}{4\pi g}
+  \ln{\abs{x-y}}^2\, .
+\end{equation} 
+
+\subsubsection*{Wick's Theorem}
+In the previous part, we have introduced two-point function
+for a theory. In this part, we are going to briefly review
+the context of Wick's Theorem.
+We will see two-point function 
+is a basic quantity of a theory
+due to Wick's Theorem.
+
+In quantum field theory, a free(elementary)
+field operator can be split
+into two part:
+\begin{equation}
+  \phi(x) = \phi^{+}(x)+\phi^{-}(x)\, ,
+\end{equation}
+with $\phi^+(x)$ which contains only annihilation operators
+and $\phi^-(x)$ contains only creation operators.
+A normal-ordered operator $::$ is defined to put all the 
+annihilation operators to the right side of creation
+operators.  For instance,
+\begin{equation}
+  :\phi(x_1)\phi(x_2): = \phi(x_1)^+\phi(x_2)^+ 
+  + \phi(x_1)^-\phi(x_2)^- + \phi(x_1)^-\phi(x_2)^+
+  + \phi(x_2)^-\phi(x_1)^+ \, .\notag
+\end{equation}
+And the time ordering product for $x_1^0 > x_2^0$ gives
+\begin{equation}
+  \mathcal{T}(\phi(x_1)\phi(x_2))
+  =\phi(x_1)^+\phi(x_2)^+ 
+  + \phi(x_1)^-\phi(x_2)^- + \phi(x_1)^-\phi(x_2)^+
+  + \phi(x_1)^+\phi(x_1)^- \, .\notag
+\end{equation}
+Thus, we have the relation for time ordering product and
+normal ordering product for  $x_1^0 > x_2^0$ as
+\begin{equation}
+  \mathcal{T}(\phi(x_1)\phi(x_2))
+  =:\phi(x_1)\phi(x_2):
+  + \comm{\phi(x_1)^+}{\phi(x_2)^-}\, .
+\end{equation}
+We know from some specific field theory that
+the commutator from right side of above is
+a constant. And, by taking the expectation
+value of both sides, we find the constant
+is just a two-point function, i.e.
+\begin{equation}
+  \mathcal{T}(\phi(x_1)\phi(x_2)) = 
+  :\phi(x_1)\phi(x_2): +
+  \expval{\phi(x_1)\phi(x_2)}\, .
+\end{equation} 
+For $x^0_1 < x^0_2$, we get the same expression. The above relation can be generalized by defining 
+the contraction of two operators in different space time,
+\begin{equation}
+  \contraction{}{\phi_1}{}{\phi_2}
+  \phi_1\phi_2
+  \equiv 
+  \expval{\phi_1\phi_2}\, .
+\end{equation}
+The Wick's theorem states that
+the time-ordered product of operators in different
+space time is equal to the normal-ordered
+product, plus all possible ways of contracting pairs of fields
+within it. For instance,
+\begin{align}
+  \mathcal{T}(\phi_1\phi_2\phi_3\phi_4)
+  =&
+  :\phi_1\phi_2\phi_3\phi_4:
+  +:
+  \contraction{}{\phi_1}{}{\phi_2}
+  \phi_1\phi_2\phi_3\phi_4
+  :
+  +:
+  \contraction{}{\phi_1}{\phi_2}{\phi_3}
+  \phi_1\phi_2\phi_3\phi_4
+  :
+  +:
+  \contraction{}{\phi_1}{\phi_2\phi_3}{\phi_4}
+  \phi_1\phi_2\phi_3\phi_4
+  :\notag \\
+  &+:
+  \contraction{\phi_1}{\phi_2}{}{\phi_3}
+  \phi_1\phi_2\phi_3\phi_4
+  :
+  +:
+  \contraction{\phi_1}{\phi_2}{\phi_3}{\phi_4}
+  \phi_1\phi_2\phi_3\phi_4
+  :
+  +:
+  \contraction{\phi_1\phi_2}{\phi_3}{}{\phi_4}
+  \phi_1\phi_2\phi_3\phi_4
+  :
+  +:
+  \contraction{}{\phi_1}{}{\phi_2}
+  \contraction{\phi_1\phi_2}{\phi_3}{}{\phi_4}
+  \phi_1\phi_2\phi_3\phi_4
+  :
+  \notag\\
+  &+:
+  \contraction{}{\phi_1}{\phi_2}{\phi_3}
+  \contraction[2ex]{\phi_1}{\phi_2}{\phi_3}{\phi_4}
+  \phi_1\phi_2\phi_3\phi_4
+  :
+  +:
+  \contraction{}{\phi_1}{\phi_2\phi_3}{\phi_4}
+  \contraction[2ex]{\phi_1}{\phi_2}{}{\phi_3}
+  \phi_1\phi_2\phi_3\phi_4
+  :
+  \notag \, .
+\end{align}
+When applying Wick's theorem, there might be a case
+that some normal-ordered products may appear in left side 
+of the time-ordered product, within which all the operators
+are in the same space time. In this case, we can ignore the
+normal ordering left side, but do not contract the pair operators
+with same space time. For example,
+\begin{align}
+  &\mathcal{T}(
+  :\phi_1(x)\phi_2(x)::\phi_3(y)\phi_4(y):)
+  \notag\\
+  =&
+  :\phi_1(x)\phi_2(x)\phi_3(y)\phi_4(y):
+  +:
+  \contraction{}{\phi_1}{(x)\phi_2(x)}{\phi_3}
+  \phi_1(x)\phi_2(x)\phi_3(y)\phi_4(y)
+  :
+  +:
+  \contraction{}{\phi_1}{(x)\phi_2(x)\phi_3(y)}{\phi_4}
+  \phi_1(x)\phi_2(x)\phi_3(y)\phi_4(y)
+  :
+  \notag\\
+  &+:
+  \contraction{\phi_1(x)}{\phi_2}{(x)}{\phi_3}
+  \phi_1(x)\phi_2(x)\phi_3(y)\phi_4(y)
+  :
+  +:
+  \contraction{\phi_1(x)}{\phi_2}{(x)\phi_3(y)}{\phi_4}
+  \phi_1(x)\phi_2(x)\phi_3(y)\phi_4(y)
+  :
+  +:
+  \contraction{}{\phi_1}{(x)\phi_2(x)}{\phi_3}
+  \contraction[2ex]{\phi_1(x)}{\phi_2}{(x)\phi_3(y)}{\phi_4}
+  \phi_1(x)\phi_2(x)\phi_3(y)\phi_4(y)
+  :
+  \notag\\
+  &+:
+  \contraction{}{\phi_1}{(x)\phi_2(x)\phi_3(y)}{\phi_4}
+  \contraction[2ex]{\phi_1(x)}{\phi_2}{(x)}{\phi_3}
+  \phi_1(x)\phi_2(x)\phi_3(y)\phi_4(y)
+  :\notag\, .
+\end{align}
+The Wick's theorem for fermion is almost the same except that
+the exchange of two fermions contributes a minus sign. 
+
+
+
+
+
+
+\end{document}

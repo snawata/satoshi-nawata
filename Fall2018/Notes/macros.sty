@@ -1,0 +1,532 @@
+\usepackage{physics}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{subfigure}
+%\hypersetup{colorlinks=true,urlcolor=darkred,linkcolor=darkred,citecolor=darkred}
+%\usepackage{verbatim}
+\usepackage[letterpaper,margin=0.9in,headheight=15pt]{geometry}
+\usepackage{mathpazo}
+\usepackage{authblk}
+\usepackage{empheq}
+\usepackage{feynmp}
+\usepackage{graphicx}
+\usepackage[matrix,arrow]{xy}
+\usepackage{young}
+\usepackage[vcentermath]{youngtab}
+\usepackage{slashed}
+%\usepackage{fontds}
+%
+\usepackage{bbm}
+\usepackage{youngtab}
+\usepackage{rotfloat}
+\usepackage{stmaryrd}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{tikz-cd}
+\usepackage{thmtools}
+\usepackage{dashrule}
+\usepackage{fancyhdr}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{subfiles}
+\usepackage{simplewick}
+
+\usepackage[utf8]{inputenc}
+
+
+
+
+\definecolor{darkblue}{rgb}{0.1,0.1,0.7}
+\definecolor{darkred}{rgb}{0.5,0.1,0.1}
+\definecolor{darkgreen}{rgb}{0.0,0.42,0.06}
+\hypersetup{colorlinks=true,urlcolor=darkred,linkcolor=darkblue,citecolor=darkred}
+\definecolor{shadecolor}{rgb}{0.85,0.85,0.85}
+
+
+
+% theorem environments
+\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,notefont=\normalfont\bfseries, notebraces={(}{)}]{theorem}
+\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,bodyfont=\normalfont,notefont=\normalfont\bfseries, notebraces={(}{)}]{noital}
+\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,bodyfont=\normalfont\color{darkgreen},notefont=\normalfont\bfseries, notebraces={(}{)}]{green}
+\declaretheoremstyle[spaceabove=0.25cm,spacebelow=0.25cm,bodyfont=\normalfont,notefont=\normalfont\bfseries,qed=$\qedsymbol$,notebraces={(}{)}]{proofstyle}
+
+\declaretheorem[name=Theorem,numberwithin=section,style=theorem]{thm}
+\declaretheorem[name=Proposition,sibling=thm,style=theorem]{prop}
+\declaretheorem[name=Corollary,sibling=thm,style=theorem]{cor}
+\declaretheorem[name=Lemma,sibling=thm,style=theorem]{lem}
+\declaretheorem[name=Remark,style=theorem,numbered=no]{rem}
+\declaretheorem[name=Definition,sibling=thm,style=noital]{defn}
+\declaretheorem[name=Example,sibling=thm,style=noital]{example}
+\declaretheorem[name=Exercise,numberwithin=section,style=green]{exercise}
+\declaretheorem[name=Proof,style=proofstyle,numbered=no]{pf}
+
+\numberwithin{equation}{section}
+
+
+\usepackage[most,listings]{tcolorbox}
+\tcbuselibrary{breakable}
+
+\tcbset{colframe=white}
+
+\def \bthm {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{thm}}
+\def \ethm {\end{thm}\end{tcolorbox}}
+\def \bprop {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{prop}}
+\def \eprop {\end{prop}\end{tcolorbox}}
+\def \blem {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{lem}}
+\def \elem {\end{lem}\end{tcolorbox}}
+\def \bcor {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{cor}}
+\def \ecor {\end{cor}\end{tcolorbox}}
+\def \bdefn {\begin{tcolorbox}[breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{defn}}
+\def \edefn {\end{defn}\end{tcolorbox}}
+\def \bexample {\begin{tcolorbox}[colback=blue!2,breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{example}}
+\def \eexample {\end{example}\end{tcolorbox}}
+\def \brem {\begin{tcolorbox}[colback=blue!2,breakable,boxsep=5pt,left=0pt,right=0pt,top=0pt,bottom=0pt]\begin{rem}}
+\def \erem {\end{rem}\end{tcolorbox}}
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+%\def\K{\Kappa}
+\def\L{\Lambda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+
+
+
+
+%
+%---------- mathcal font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\fraksu}{\ensuremath{\mathfrak{su}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+
+%%%%%%%%%%%% mathsf%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\sfA}{\ensuremath{\mathsf{A}}}
+\newcommand{\sfB}{\ensuremath{\mathsf{B}}}
+\newcommand{\sfC}{\ensuremath{\mathsf{C}}}
+\newcommand{\sfD}{\ensuremath{\mathsf{D}}}
+\newcommand{\sfE}{\ensuremath{\mathsf{E}}}
+\newcommand{\sfF}{\ensuremath{\mathsf{F}}}
+\newcommand{\sfG}{\ensuremath{\mathsf{G}}}
+\newcommand{\sfH}{\ensuremath{\mathsf{H}}}
+\newcommand{\sfJ}{\ensuremath{\mathsf{J}}}
+\newcommand{\sfK}{\ensuremath{\mathsf{K}}}
+\newcommand{\sfL}{\ensuremath{\mathsf{L}}}
+\newcommand{\sfM}{\ensuremath{\mathsf{M}}}
+\newcommand{\sfN}{\ensuremath{\mathsf{N}}}
+\newcommand{\sfO}{\ensuremath{\mathsf{O}}}
+\newcommand{\sfP}{\ensuremath{\mathsf{P}}}
+\newcommand{\sfQ}{\ensuremath{\mathsf{Q}}}
+\newcommand{\sfS}{\ensuremath{\mathsf{S}}}
+\newcommand{\sfU}{\ensuremath{\mathsf{U}}}
+\newcommand{\sfX}{\ensuremath{\mathsf{X}}}
+\newcommand{\sfY}{\ensuremath{\mathsf{Y}}}
+\newcommand{\sfW}{\ensuremath{\mathsf{W}}}
+\newcommand{\sfR}{\ensuremath{\mathsf{R}}}
+\newcommand{\sfT}{\ensuremath{\mathsf{T}}}
+\newcommand{\sfZ}{\ensuremath{\mathsf{Z}}}
+
+%%%%%%%%%%%%  Special letters for Lie groups %%%%%%%%%%%%%%%%%%
+
+\newcommand{\biA}{{\mathbi{A}}}
+\newcommand{\biB}{{\mathbi{B}}}
+\newcommand{\biC}{{\mathbi{C}}}
+\newcommand{\biD}{{\mathbi{D}}}
+\newcommand{\biE}{{\mathbi{E}}}
+\newcommand{\biF}{{\mathbi{F}}}
+\newcommand{\biG}{{\mathbi{G}}}
+\newcommand{\biH}{{\mathbi{H}}}
+\newcommand{\biJ}{{\mathbi{J}}}
+\newcommand{\biK}{{\mathbi{K}}}
+\newcommand{\biL}{{\mathbi{L}}}
+\newcommand{\biM}{{\mathbi{M}}}
+\newcommand{\biN}{{\mathbi{N}}}
+\newcommand{\biO}{{\mathbi{O}}}
+\newcommand{\biP}{{\mathbi{P}}}
+\newcommand{\biQ}{{\mathbi{Q}}}
+\newcommand{\biS}{{\mathbi{S}}}
+\newcommand{\biU}{{\mathbi{U}}}
+\newcommand{\biX}{{\mathbi{X}}}
+\newcommand{\biY}{{\mathbi{Y}}}
+\newcommand{\biV}{{\mathbi{V}}}
+\newcommand{\biW}{{\mathbi{W}}}
+\newcommand{\biR}{{\mathbi{R}}}
+\newcommand{\biT}{{\mathbi{T}}}
+\newcommand{\biZ}{{\mathbi{Z}}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+
+
+%\def\cD{{\cal D}}
+%\def\cA{{\cal A}}
+%\def\cN{{\cal N}}
+%\def\cS{{\cal S}}
+%\def\cD{{\cal D}}
+%\def\cA{{\cal A}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\valp}{{\vec\alpha}}
+\newcommand{\vbet}{{\vec\beta}}
+\newcommand{\vgam}{{\vec\gamma}}
+\newcommand{\vrho}{{\vec\rho}}
+\newcommand{\vome}{{\vec\omega}}
+\newcommand{\vlam}{{\vec\lambda}}
+\newcommand{\vphi}{{\vec\varphi}}
+\newcommand{\ve}{{\vec e}}
+\newcommand{\vx}{{\vec x}}
+\newcommand{\vW}{{\vec W}}
+\newcommand{\vY}{{\vec Y}}
+\newcommand{\vha}{{\vec{\hat a}}}
+\newcommand{\vhb}{{\vec{\hat b}}}
+\newcommand{\vhc}{{\vec{\hat c}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newcommand{\dalpha}{{\dot \alpha}}
+\newcommand{\dbeta}{{\dot \beta}}
+\newcommand{\dgamma}{{\dot \gamma}}
+\newcommand{\dmu}{{\dot \mu}}
+\newcommand{\dnu}{{\dot \nu}}
+\newcommand{\drho}{{\dot \rho}}
+\newcommand{\dsigma}{{\dot \sigma}}
+\newcommand{\dlambda}{{\dot \lambda}}
+\newcommand{\dtau}{{\dot \tau}}
+\newcommand{\ha}{{\hat a}}
+\newcommand{\hb}{{\hat b}}
+\newcommand{\hc}{{\hat c}}
+\newcommand{\hj}{j^\circ}
+\newcommand{\vh}{{\vec h}}
+\newcommand{\vm}{{\vec m}}
+\newcommand{\vn}{{\vec n}}
+\newcommand{\vl}{{\vec l}}
+
+\newcommand{\HK}{{hyper-K\"ahler }}
+\newcommand{\K}{{K\"ahler }}
+\newcommand{\pl}{\textrm{pl}}
+\newcommand{\Ind}{\textrm{Ind}}
+
+
+
+
+\def \be  {\begin{equation}}
+\def \ee  {\end{equation}}
+\def \bea {\begin{equation}\begin{aligned}}
+\def \eea {\end{aligned}\end{equation}}
+\def \ba  {\begin{eqnarray}}
+\def \ea  {\end{eqnarray}}
+
+
+
+
+
+
+\def\wt{\widetilde}
+%\def\bZ{{\bar{z}}}
+
+
+
+\def\AdS{\mathrm{AdS}}
+\def\CFT{\mathrm{CFT}}
+\def \pd  {\partial}
+
+
+
+
+
+\usepackage{accents}
+\newcommand*{\dt}[1]{%
+  \accentset{\mbox{\large\bfseries .}}{#1}}
+\newcommand*{\ddt}[1]{%
+  \accentset{\mbox{\large\bfseries .\hspace{-0.25ex}.}}{#1}}
+
+\newcommand{\Spec}{\operatorname{Spec}\nolimits}
+\newcommand{\Gr}{\mathrm{Gr}}
+
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\End}{\textrm{End}}
+\def\BunG{{\text{Bun}_G}}
+%\def\bfN{{\text{Nilp}}}
+\def\Bcc{{\mathfrak{B}_{cc}}}
+
+
+
+
+\def\MF{{\cM_\text{flat}}}
+\def\MH{{{\cM}_H}}
+\def\SH{\mathbi{S}\!\ddt{\mathbi{H}}}
+\def\HH{\ddt{\mathbi{H}}}
+\def\WW{ \ddt{\mathbi{W}}}
+\def\BB{\ddt{\mathbi{B}}\mathbi{r}}
+\def\wh{\widehat}
+\def\id{\mathrm{id}}
+\def\Td{\mathrm{Td}}
+
+
+
+\newcommand{\MyRed}{\color [rgb]{0.9,0,0}}
+\newcommand{\MyGreen}{\color [rgb]{0,0.5,0}}
+\newcommand{\MyBlue}{\color [rgb]{0,0,0.8}}
+\newcommand{\MyBrown}{\color [rgb]{0.8,0.3,0.2}}
+\newcommand{\MyPurple}{\color [rgb]{0.6,0.0,0.7}}
+
+
+\def\SN#1{{\MyRed [SN: #1]}}
