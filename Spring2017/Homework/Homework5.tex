@@ -1,0 +1,120 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem{question}[lemma]{Question}
+\newtheorem{proposition}[lemma]{Proposition}
+
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 5: Due at class on April 7}
+
+ \vspace{.5cm}
+\noindent 1. Let $T^2=S^1\times S^1$ be the torus. Using the formula for de Rham cohomology  of a product space,
+$$
+H_{dR}^{p+q}(M\times N)\cong H_{dR}^p(M)\otimes H_{dR}^q(N)~,
+$$
+find de Rham cohomology  $H_{dR}^*(T^2)$. Find the Poincare dual of each generator of  $H_{dR}^*(T^2)$.
+
+
+
+ \vspace{.5cm}
+\noindent 2. Do parallel transport of a vector along a triangle $\Delta$PQR on a unit sphere (Figure below) and find the angle difference when it comes back. Note that the sphere has the standard metric and we consider the parallel transport with respect to the Levi-Civita connection. Compare it with the area of the triangle. Do the same exercise for a triangle on the upper half plane. Describe the difference between the sphere and the upper half plane.
+
+
+\begin{figure}[h]\centering
+ \includegraphics[width=5cm]{triangle}
+\caption{A triangle on a 2-sphere}
+\end{figure}
+
+\vspace{.5cm}
+\noindent 3. Derive the expression of the Christoffel symbols
+$$
+\Gamma_{ij}^k=\frac12\left(\frac{\partial{g}_{jl}}{\partial{x}^i}\,+\,\frac{\partial{g}_{il}}{\partial{x}^j}\,-\,\frac{\partial{g}_{ij}}{\partial{x}^l}\right)g^{lk}.
+$$
+from
+$$
+\frac{\partial}{\partial x^i}g_{jk}=g\left(\nabla_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^k}\right)+g\left(\frac{\partial}{\partial x^j},\nabla_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^k}\right)
+$$
+and its permutations with respect to $i,j,k$. Show that the Riemann curvature can be written
+$$
+R^l{}_{ijk}=\Gamma_{jk}^s\Gamma_{is}^l\;-\;\Gamma_{ik}^s\Gamma_{js}^l\;+\;\frac{\partial\Gamma_{jk}^l}{\partial{x}^i}\;-\;\frac{\partial\Gamma_{ik}^l}{\partial{x}^j}.
+$$
+in terms of local coordinates.
+
+
+
+
+
+
+\vspace{.5cm}
+\noindent 4. Let $S^2 \subset \bR^3$ be the 2-sphere with unit radius and the metric on $S^2$ is induced from the standard metric of $\bR^3$ as in Homework 4. Find geodesics on $S^2$ and compute its Riemann, Ricci and scalar curvature.
+
+
+
+
+
+\vspace{.5cm}
+\noindent 5.  Let $\mathbf{H}=\{(x,y)|y>0\}$ be the upper half plane and the metric is given by
+\begin{equation}\label{UHP}
+ds^2=\frac{dx^2+dy^2}{y^2}~.
+\end{equation}
+Find geodesics on $\mathbf{H}$ and compute its Riemann, Ricci and scalar curvature.
+
+
+\vspace{.5cm}
+\noindent 6. The \textbf{M\"obius transformation} of the upper half plane $\mathbf{H}=\{z=x+iy~|~y>0\}$  is a rational function of the form
+$$f(z) = \frac{a z + b}{c z + d}~,$$
+where $ad-bc=1$ with $a,b,c,d\in \bR$.  If $f_1$ and $f_2$ are M\"obius transformations, prove
+that $f_1 \circ f_2$ is also a M\"obius transformation. Show that this is an isometry for the metric \eqref{UHP}.
+
+
+
+
+
+
+
+
+
+
+\end{document}

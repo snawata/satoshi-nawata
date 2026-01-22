@@ -1,0 +1,733 @@
+ \documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+
+
+
+
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%\parskip=1em
+%\parindent=0.3in
+%\setlength\oddsidemargin{0.5in} \setlength\evensidemargin{0.5in}
+%\setlength\textwidth{5.5in}
+%
+%\hfuzz6pt % Don't bother to report over-full boxes if over-edge is < 6pt
+%
+%\newlength{\defbaselineskip}
+%\setlength{\defbaselineskip}{\baselineskip}
+%\newcommand{\setlinespacing}[1]%
+%           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%
+%\newcommand{\properpagestyle}{\pagestyle{myheadings}\markboth{}{}\markright{}}
+
+
+
+
+\def\Ric{\mathop{\rm Ric}}
+\def\cRic{\mathop{\stackrel{\circ}{\Ric}}}
+\def\Scal{\mathop{\rm R}}
+\def\scL{\mathop{\mathcal L}}
+\def\Hess{\mathop{\rm Hess}}
+\def\bt{\mathop{\bar\tau}}
+\def\dist{\mathop{\rm dist}}
+\def\Cut{\mathop{\rm Cut}}
+\def\Riem{\mathop{\rm Rm}}
+\def\scal{\mathop{\rm scal}}
+\def\Sec{\mathop{\rm Sec}}
+\def\Diam{\mathop{\rm Diam}}
+\def\CS{\mathop{\rm C_S}}
+\def\V{\mathop{\rm V}}
+\def\Vol{\mathop{\rm Vol}}
+\def\Area{\mathop{\rm Area}}
+\def\VR{\mathop{\rm VR}}
+\def\supp{\mathop{\rm supp}}
+\def\div{\mathop{\rm div}}
+\def\inj{\mathop{\rm inj}}
+\def\diam{\mathop{\rm diam}}
+\def\Id{\mathop{\rm Id}}
+\def\RRR{\mathop{\mathcal{R}}}
+\def\MMM{\mathop{\mathcal{M}}}
+\def\HHH{\mathop{\mathcal{H}}}
+\def\VVV{\mathop{\mathcal{V}}}
+\def\FF{\mathop{\mathbb{F}}}
+\def\RR{\mathop{\mathbb{R}}}
+\def\QQ{\mathop{\mathbb{Q}}}
+\def\CC{\mathop{\mathbb{C}}}
+\def\ZZ{\mathop{\mathbb{Z}}}
+\def\SS{\mathop{\mathbb{S}}}
+\def\SSS{\mathop{\mathcal{S}}}
+\def\PP{\mathop{\mathbb{P}}}
+\def\End{\mathop{\rm End}}
+\def\Aut{\mathop{\rm Aut}}
+\def\Ad{\mathop{\rm Ad}}
+\def\ad{\mathop{\rm ad}}
+\def\hht{\mathop{\rm ht}}
+\def\gl{\mathop{\mathfrak{gl}}}
+\def\ssl{\mathop{\mathfrak{sl}}}
+\def\TP{\mathop{\mathcal{TP}}}
+\def\PPP{\mathop{\mathcal{P}}}
+\def\gggg{\mathop{\mathfrak{g}}}
+\def\ffff{\mathop{\mathfrak{f}}}
+\def\OO{\mathop{\mathcal{O}}}
+\def\oo{\mathop{\mathfrak{o}}}
+\def\GG{\mathop{\mathcal{G}}}
+\def\WWW{\mathop{\mathcal{W}}}
+\def\Rad{\mathop{\rm Rad}}
+\def\Der{\mathop{\rm Der}}
+\def\Ker{\mathop{\rm Ker}}
+\def\Im{\mathop{\rm Im}}
+
+\def\be{\begin{eqnarray}}
+\def\ee{\end{eqnarray}}
+\def\beg{\begin{eqnarray*}}
+\def\ees{\end{eqnarray*}}
+
+
+%\newcommand{\qed}{\hfill$\Box$}
+\theoremstyle{definition}
+\newtheorem*{aim}{Aim}
+\newtheorem*{axiom}{Axiom}
+\newtheorem*{claim}{Claim}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{defi}{Definition}
+\newtheorem*{eg}{Example}
+\newtheorem*{ex}{Exercise}
+\newtheorem*{fact}{Fact}
+\newtheorem*{law}{Law}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{notation}{Notation}
+\newtheorem*{prop}{Proposition}
+\newtheorem*{question}{Question}
+\newtheorem*{thm}{Theorem}
+
+
+
+
+
+% Maths symbols
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+%\newcommand\ad{\mathrm{ad}}
+\newcommand\AND{\mathsf{AND}}
+\newcommand\Art{\mathrm{Art}}
+\newcommand{\Bilin}{\mathrm{Bilin}}
+\newcommand{\bket}[1]{\left\lvert #1\right\rangle}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\bolds}[1]{{\bfseries #1}}
+\newcommand{\brak}[1]{\left\langle #1 \right\rvert}
+\newcommand{\braket}[2]{\left\langle #1\middle\vert #2 \right\rangle}
+\newcommand{\bra}{\langle}
+\newcommand{\cat}[1]{\mathsf{#1}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\cU}{\mathcal{U}}
+%\newcommand{\Der}{\mathrm{Der}}
+\newcommand{\D}{\mathrm{D}}
+\newcommand{\dR}{\mathrm{dR}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Frob}{\mathrm{Frob}}
+%\newcommand{\GG}{\mathbb{G}}
+%\newcommand{\gl}{\mathfrak{gl}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\Gr}{\mathrm{Gr}}
+\newcommand{\haut}{\mathrm{ht}}
+\newcommand{\Hol}{\mathrm{Hol}}
+\newcommand{\hol}{\mathfrak{hol}}
+%\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\ket}{\rangle}
+\newcommand{\lie}[1]{\mathfrak{#1}}
+\newcommand{\Mat}{\mathrm{Mat}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\normalorder}[1]{\mathop{:}\nolimits\!#1\!\mathop{:}\nolimits}
+\newcommand{\NOT}{\mathsf{NOT}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\Oc}{\mathcal{O}}
+\newcommand{\Or}{\mathrm{O}}
+\newcommand\OR{\mathsf{OR}}
+\newcommand{\ort}{\mathfrak{o}}
+\newcommand{\PGL}{\mathrm{PGL}}
+\newcommand{\ph}{\,\cdot\,}
+\newcommand{\pr}{\mathrm{pr}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\PSL}{\mathrm{PSL}}
+\newcommand{\Ps}{\mathcal{P}}
+\newcommand{\PSU}{\mathrm{PSU}}
+\newcommand{\pt}{\mathrm{pt}}
+\newcommand{\qeq}{\mathrel{``{=}"}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\Rs}{\mathcal{R}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\so}{\mathfrak{so}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathfrak{su}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\term}[1]{\textbf{#1}\index{#1}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\tv}[1]{|#1|}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\uu}{\mathfrak{u}}
+\newcommand{\Vect}{\mathrm{Vect}}
+\newcommand{\wsto}{\stackrel{\mathrm{w}^*}{\to}}
+\newcommand{\wt}{\mathrm{wt}}
+\newcommand{\wto}{\stackrel{\mathrm{w}}{\to}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\d}{\mathrm{d}}
+\renewcommand{\H}{\mathbb{H}}
+\renewcommand{\P}{\mathbb{P}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+%\renewcommand{\F}{\mathcal{F}}
+
+\let\Im\relax
+\let\Re\relax
+
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\area}{area}
+%\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Bernoulli}{Bernoulli}
+\DeclareMathOperator{\betaD}{beta}
+\DeclareMathOperator{\bias}{bias}
+\DeclareMathOperator{\binomial}{binomial}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\ccl}{ccl}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\cls}{\overline{\mathrm{span}}}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\corr}{corr}
+\DeclareMathOperator{\cosec}{cosec}
+\DeclareMathOperator{\cosech}{cosech}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\covol}{covol}
+\DeclareMathOperator{\diag}{diag}
+%\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\disc}{disc}
+\DeclareMathOperator{\dom}{dom}
+%\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\energy}{energy}
+\DeclareMathOperator{\erfc}{erfc}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator*{\esssup}{ess\,sup}
+\DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\fst}{fst}
+\DeclareMathOperator{\Fit}{Fit}
+\DeclareMathOperator{\fix}{fix}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\gammaD}{gamma}
+\DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\hcf}{hcf}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Image}{image}
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\length}{length}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\like}{like}
+\DeclareMathOperator{\Lk}{Lk}
+\DeclareMathOperator{\Maps}{Maps}
+\DeclareMathOperator{\mse}{mse}
+\DeclareMathOperator{\multinomial}{multinomial}
+\DeclareMathOperator{\orb}{orb}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\otp}{otp}
+\DeclareMathOperator{\Poisson}{Poisson}
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\rel}{rel}
+%\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\Re}{Re}
+\DeclareMathOperator*{\res}{res}
+\DeclareMathOperator{\Res}{Res}
+%\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\Rees}{Rees}
+\DeclareMathOperator{\Root}{Root}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\snd}{snd}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\St}{St}
+%\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Syl}{Syl}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\vol}{vol}
+\usetikzlibrary{knots}
+
+
+
+
+\pgfarrowsdeclarecombine{twolatex'}{twolatex'}{latex'}{latex'}{latex'}{latex'}
+\tikzset{->/.style = {decoration={markings,
+                                  mark=at position 1 with {\arrow[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{<-/.style = {decoration={markings,
+                                  mark=at position 0 with {\arrowreversed[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{<->/.style = {decoration={markings,
+                                   mark=at position 0 with {\arrowreversed[scale=2]{latex'}},
+                                   mark=at position 1 with {\arrow[scale=2]{latex'}}},
+                       postaction={decorate}}}
+\tikzset{->-/.style = {decoration={markings,
+                                   mark=at position #1 with {\arrow[scale=2]{latex'}}},
+                       postaction={decorate}}}
+\tikzset{-<-/.style = {decoration={markings,
+                                   mark=at position #1 with {\arrowreversed[scale=2]{latex'}}},
+                       postaction={decorate}}}
+\tikzset{->>/.style = {decoration={markings,
+                                  mark=at position 1 with {\arrow[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{<<-/.style = {decoration={markings,
+                                  mark=at position 0 with {\arrowreversed[scale=2]{twolatex'}}},
+                      postaction={decorate}}}
+\tikzset{<<->>/.style = {decoration={markings,
+                                   mark=at position 0 with {\arrowreversed[scale=2]{twolatex'}},
+                                   mark=at position 1 with {\arrow[scale=2]{twolatex'}}},
+                       postaction={decorate}}}
+\tikzset{->>-/.style = {decoration={markings,
+                                   mark=at position #1 with {\arrow[scale=2]{twolatex'}}},
+                       postaction={decorate}}}
+\tikzset{-<<-/.style = {decoration={markings,
+                                   mark=at position #1 with {\arrowreversed[scale=2]{twolatex'}}},
+                       postaction={decorate}}}
+
+
+\tikzset{circ/.style = {fill, circle, inner sep = 0, minimum size = 3}}
+\tikzset{scirc/.style = {fill, circle, inner sep = 0, minimum size = 1.5}}
+\tikzset{mstate/.style={circle, draw, blue, text=black, minimum width=0.7cm}}
+
+\tikzset{eqpic/.style={baseline={([yshift=-.5ex]current bounding box.center)}}}
+\tikzset{commutative diagrams/.cd,cdmap/.style={/tikz/column 1/.append style={anchor=base east},/tikz/column 2/.append style={anchor=base west},row sep=tiny}}
+
+
+\definecolor{mblue}{rgb}{0.2, 0.3, 0.8}
+\definecolor{morange}{rgb}{1, 0.5, 0}
+\definecolor{mgreen}{rgb}{0.1, 0.4, 0.2}
+\definecolor{mred}{rgb}{0.5, 0, 0}
+
+
+%\title{ Lecture 4}
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Lecture 8}
+
+\centerline{\Large \bf Nakahara section 5.6, 5.7, 9.3}
+
+
+
+\section{Lie groups and Lie algebras}
+
+
+\begin{defi}[Lie group]\index{Lie group}
+  A \textbf{Lie group} is a manifold $G$ with a group structure such that multiplication $m: G \times G \to G$ and inverse $i: G \to G$ are smooth maps.?  The \textbf{dimension} of a Lie group $G$ is the dimension of the underlying manifold.
+\end{defi}
+
+  For each $h \in G$, we define the \textbf{left and right translation maps}
+  \begin{align*}
+    L_h: G &\to G;  g \mapsto hg~,\\
+    R_h: G &\to G; g \mapsto gh~.
+  \end{align*}
+  These maps are bijections, and in fact diffeomorphisms (i.e.\ smooth maps with smooth inverses), because they have smooth inverse $L_{h^{-1}}$ and $R_{h^{-1}}$ respectively.
+
+
+
+In general, most of our manifolds will be given by subsets of Euclidean space specified by certain equations, but note that not all subsets given by equations are manifolds! It is possible that they have some singularities.
+
+\begin{eg}
+Here are some examples.
+
+
+\begin{itemize}
+\item Complex general linear group: $\GL(n, \bC) = \{A \in \textrm{M}_n(\bC)| \det A \neq 0\}$
+\item Complex special linear group: $\SL(n, \bC) = \{A \in \GL(n, \bC)| \det A = 1\}$
+\item Unitary group $\U(n) = \{A \in \GL(n, \bC)| AA^\dagger = I\}$
+\item Special unitary group $\SU(n) =\{A \in \U(n)| \det A = 1\}$
+\item Real general linear group: $\GL(n, \bR) = \{A \in \textrm{M}_n(\bR)| \det A \neq 0\}$
+\item Real special linear group: $\SL(n, \bR) = \{A \in \GL(n, \bR)| \det A = 1\}$
+\item  Orthogonal group $\mathrm{O}(n) =  \{A \in \GL(n, \bR)| AA^T = I\}$
+\item Special orthogonal group $\SO(n) = \{A \in \mathrm{O}(n)| \det A = 1\}$
+\end{itemize}
+\end{eg}
+
+
+
+\begin{defi}[Lie algebra]\index{Lie algebra}
+  A \textbf{Lie algebra} $\mathfrak{g}$ is a vector space (over $\R$ or $\C$) with a \term{bracket}
+  \[
+    [\ph,\ph] : \mathfrak{g} \times \mathfrak{g} \to \mathfrak{g}
+  \]
+  satisfying
+  \begin{enumerate}
+      \item $[\alpha X + \beta Y, Z] = \alpha [X, Z] + \beta [Y, Z]$ for all $X, Y, Z \in \mathfrak{g}$ and $\alpha, \beta \in \F$ \hfill(bilinearity)
+    \item $[X, Y] = -[Y, X]$ for all $X, Y \in \mathfrak{g}$ \hfill(antisymmetry)
+    \item $[X, [Y, Z]] + [Y, [Z, X]] + [Z, [X, Y]] = 0$ for all $X, Y, Z \in \mathfrak{g}$.\hfill(Jacobi identity\index{Jacobi identity})
+  \end{enumerate}
+  Note that linearity in the second argument follows from linearity in the first argument and antisymmetry.
+\end{defi}
+
+
+
+We now try to get a Lie algebra from a Lie group $G$, by considering ${T}_e(G)$.
+  The tangent space of a Lie group $G$ at the identity naturally admits a Lie bracket
+  \[
+    [\ph, \ph]: T_e G \times T_e G \to T_e G; (X,Y) \mapsto [X,Y]=XY-YX
+  \]
+  such that
+  \[
+    \mathfrak{g} = (T_e(G), [\ph, \ph])
+  \]
+  is a Lie algebra.
+ 
+\begin{defi}[Lie algebra of a Lie group]\index{Lie algebra of a Lie group}
+  Let $G$ be a Lie group. The \textbf{Lie algebra} of $G$, written $\mathfrak{g}$, is the tangent space $T_e G$ under the natural Lie bracket.
+\end{defi}
+The general convention is that if the name of a Lie group is in upper case letters, then the corresponding Lie algebra is the same name with lower case letters in fraktur font. For example, the Lie group of $\SO(n)$ is $\so(n)$.
+
+
+
+Given a finite-dimensional Lie algebra, we can pick a basis $B$ for $\mathfrak{g}$.
+\be\label{Lie-basis}
+  B = \{T_a: a = 1, \cdots, \dim \mathfrak{g}\}.
+\ee
+Then any $X \in \mathfrak{g}$ can be written as
+\[
+  X = X^a T_a = \sum_{a = 1}^n X^a T_a,
+\]
+where $X^a \in \F$.
+
+By linearity, the bracket of elements $X, Y \in \mathfrak{g}$ can be computed via
+\[
+  [X, Y] = X^a Y^b [T_a, T_b].
+\]
+In other words, the whole structure of the Lie algebra can be given by the bracket of basis vectors. We know that $[T_a, T_b]$ is again an element of $\mathfrak{g}$. So we can write
+\[
+  [T_a, T_b] = f_{ab}{}^c T_c,
+\]
+where $f_{ab}{}^c\in \F$ are called the \textbf{structure constants}.
+By the antisymmetry of the bracket, we know
+  \[
+    f_{ba}{}^c = -f_{ab}{}^c.
+  \]
+The Jacobi identity amounts to
+  \[
+    f_{ab}{}^c f_{cd}{}^e + f_{da}{}^c f_{cb}{}^e + f_{bd}{}^c f_{ca}{}^e = 0.
+  \]
+
+
+
+
+\begin{eg}
+  Take $G = \SO(3)$. Then $\so(3)$ is the space of $3 \times 3$ real anti-symmetric matrices, which one can manually check are generated by
+  \[
+    {T}_1 =
+    \begin{pmatrix}
+      0 & 0 & 0\\
+      0 & 0 & -1\\
+      0 & 1 & 0
+    \end{pmatrix},\quad
+    {T}_2 =
+    \begin{pmatrix}
+      0 & 0 & 1\\
+      0 & 0 & 0\\
+      -1 & 0 & 0
+    \end{pmatrix},\quad
+    {T}_3 =
+    \begin{pmatrix}
+      0 & -1 & 0\\
+      1 & 0 & 0\\
+      0 & 0 & 0
+    \end{pmatrix}
+  \]
+  We then have
+  \[
+    ({T}_a)_{bc} = -\varepsilon_{abc}.
+  \]
+  Then the structure constants are  $f_{ab}{}^{c} = \varepsilon_{abc}$.
+\end{eg}
+
+
+
+Given a vector $X\in \mathfrak{g} $ in the tangent space of the identity $e$, one can generate the vector field by pushing-forward by the left translation $L_g$. Let us denote the corresponding vector field by $X$ too. Since $(L_g)_*X=X$, it is called a \term{left-invariant vector field}.  The flow generated by the vector field $X$ is called \textbf{exponential map}, which can be expressed as a matrix
+  \[
+    \exp(tX) = \sum_{\ell = 0}^\infty \frac{1}{\ell!} (tX)^\ell~.
+  \]
+Therefore, for any matrix Lie group $G$, the exponential map defines a map $\exp:\mathfrak{g}  \to G$.
+
+Given a Lie algebra $\frakg$, it is also natural to think about its dual space $\frakg^*$. This can be identified with the set of all left invariant 1-forms $\omega$ on $G$ such that $L_g^*\omega =\omega$. Note that $\omega(X)$, $\omega(Y)$ are constant over $G$ for $\omega\in \frakg^*$ and $X,Y\in \frakg$. Therefore, we have $Y(\omega(X))=0=X(\omega(Y))$ so that
+$$
+d\omega(X,Y)=\frac12\omega([X,Y])~.
+$$
+Therefore, if we take the basis $\omega_1,\cdots,\omega_{\dim \frakg}$ dual to \eqref{Lie-basis}, we can write it as
+$$
+d\omega_i=-\frac12 \sum_{j,k} f_{jk}{}_{i}~\omega_j\wedge \omega_k~.
+$$
+Moreover, let $\omega\in \Omega^1(Gl\frakg)$ be $\frakg$-valued 1-form on $G$ such that $\omega(X)=A$ for $A\in \frakg$. Using the above basis, it is describe as 
+$$
+\omega = \sum_i \omega_i T^i~,
+$$
+which is called \term{Maurer-Cartan form}. Then, the equation above has the following form
+$$
+d\omega = -\frac12 [\omega,\omega]~,
+$$
+which is called the \term{Maurer-Cartan equation}.
+
+\section{Vector bundles}
+We have learnt tangent bundles, cotangent bundles and their tensor products. Generalizing these leads to a notion called vector bundles. The notion of vector bundles was introduced by Whiteney. Remarkably, the notion of vector bundles is indispensable for description of non-Abelian gauge theories.
+
+\begin{defi}[Vector bundle]\index{vector bundle}
+  A \textbf{vector bundle} of rank $r$ on $M$ is a smooth manifold $E$ with a smooth \term{projection} $\pi: E \to M$ such that
+  \begin{enumerate}
+    \item For each $p \in M$, the fiber $\pi^{-1}(p) = E_p$ is an $r$-dimensional vector space,
+    \item For all $p \in M$, there is an open $U \subseteq M$ containing $p$ and a diffeomorphism
+      \[
+        t: E_U = \pi^{-1}(U) \to U \times \R^r
+      \]
+      such that
+      \[
+        \begin{tikzcd}
+          E_U \ar[r, "t"] \ar[d, "\pi"] & U \times \R^r \ar[dl, "p_1"]\\
+          U
+        \end{tikzcd}
+      \]
+      commutes, and the induced map $E_q \to \{q\} \times \R^r$ is a linear isomorphism for all $q \in U$.
+
+      We call $t$ a \term{trivialization} of $E$ over $U$; call $E$ the \term{total space}; call $M$ the \term{base space}. Also, for each $q \in M$, the vector space $E_q = \pi^{-1}(\{q\})$ is called the \term{fiber} over $q$. If $r=1$, it is called \term{line bundle}.
+  \end{enumerate}
+\end{defi}
+
+\begin{figure}[h]\centering
+\includegraphics[width=5cm]{Mobius_strip_illus}
+\end{figure}
+
+
+\begin{defi}[Transition function]\index{transition function}
+  Suppose that $t_\alpha: E|_{U_\alpha} \to U_\alpha \times \R^r$ and $t_\beta: E|_{U_\beta} \to U_\beta \times \R^r$ are trivializations of $E$. Then
+  \[
+    t_\alpha \circ t_\beta^{-1} : (U_\alpha \cap U_\beta) \times \R^r \to (U_\alpha \cap U_\beta) \times \R^r
+  \]
+  is fiberwise linear, i.e.
+  \[
+    t_\alpha \circ t_\beta^{-1}(q, v) = (q, \varphi_{\alpha\beta}(q) v),
+  \]
+  where $\varphi_{\alpha\beta}(q)$ is in $\GL(r,\R)$.
+
+  In fact, $\varphi_{\alpha\beta}: U_\alpha \cap U_\beta \to \GL(r,\R)$ is smooth. Then $\varphi_{\alpha\beta}$ is known as the \term{transition function} from $\beta$ to $\alpha$.
+\end{defi}
+We have the following equalities whenever everything is defined:
+  \begin{enumerate}
+    \item $\varphi_{\alpha\alpha} = \id$
+    \item $\varphi_{\alpha\beta} = \varphi_{\beta\alpha}^{-1}$
+    \item $\varphi_{\alpha\beta}\varphi_{\beta\gamma} = \varphi_{\alpha\gamma}$, which is called \term{cocycle condition}.
+  \end{enumerate}
+
+
+On the other hand, given an open cover $\{U_\alpha\}$ of open sets of $M$, suppose we have transition functions $\varphi_{\alpha\beta}$ which satisfy all the above properties. Then, we can glue $U_\alpha\times \bR^n$ and $U_\beta\times \bR^n$ by the transition functions $\varphi_{\alpha\beta}$ and construct a bundle $E\to M$.
+
+%
+%Alternatively, $t$ can be given by collections of smooth maps $s_1, \cdots, s_r: U \to E$ with the property that for each $q \in U$, the vectors $s_1(q), \cdots, s_r(q)$ form a basis for $E_q$. Indeed, given such $s_1, \cdots, s_r$, we can define $t$ by
+%\[
+%  t(v_q) = (q, \alpha_1, \cdots, \alpha_n),
+%\]
+%where $v_q \in E_q$ and the $\alpha_i$ are chosen such that
+%\[
+%  v_q = \sum_{i = 1}^r \alpha_i s_i(q).
+%\]
+%The $s_1, \cdots, s_r$ are known as a \term{frame} for $E$ over $U$.
+%
+%\begin{eg}[Tangent bundle]
+%  The bundle $TM \to M$ is a vector bundle. Given any point $p$, find some coordinate charts around $p$ with coordinates $x_1, \cdots, x_n$. Then we get a frame $\frac{\partial}{\partial x_i}$, giving trivializations of $TM$ over $U$. So $TM$ is a vector bundle.
+%\end{eg}
+
+
+\begin{figure}[h]\centering
+\includegraphics[width=7cm]{fig_vector_bundle}
+\end{figure}
+
+\begin{defi}[Section]\index{section}
+  A \textbf{section} of a vector bundle $\pi: E \to M$ is a map $s: M \to E$ such that $\pi \circ s = \id$. In other words, $s(p) \in E_p$ for each $p\in M$. We denote a set of sections by $\Gamma(M,E)$.
+\end{defi}
+
+
+
+
+  
+  
+  
+  \begin{defi}[Bundle map]\index{Bundle map}
+We can  consider about maps between vector bundles.  Let $E \to M$ and $E' \to M'$ be vector bundles. A \textbf{bundle map} from $E$ to $E'$ is a pair of smooth maps $(F: E \to E', f: M \to M')$ such that the following diagram commutes:
+  \[
+    \begin{tikzcd}
+      E \ar[d] \ar[r, "F"] & E' \ar[d]\\
+      M \ar[r, "f"] & M'
+    \end{tikzcd}.
+  \]
+  i.e.\ such that $F_p: E_p \to E'_{f(p)}$ is linear for each $p$.
+\end{defi}
+
+
+
+
+
+
+Everything we can do on vector spaces can be done on vector bundles, by doing it on each fiber.
+\begin{defi}[Whitney sum of vector bundles]\index{vector bundle!Whitney sum}\index{Whitney sum of vector bundles}
+  Let $\pi: E \to M$ and $\rho: F \to M$ be vector bundles. The \textbf{Whitney sum} is given by
+  \[
+    E \oplus F = \{(e, f)\in E \times F: \pi(e) = \rho(f)\}.
+  \]
+  This has a natural map $\pi \oplus \rho: E \oplus F \to M$ given by $(\pi \oplus \rho)(e, f) = \pi(e) = \rho(f)$. This is again a vector bundle, with $(E \oplus F)_x = E_x \oplus F_x$ and again local trivializations of $E$ and $F$ induce one for $E \oplus F$.
+\end{defi}
+Tensor products can be defined similarly.
+
+\begin{defi}[Tensor product of vector bundles]\index{tensor product!vector bundle}\index{vector bundle!tensor product}
+  Given two vector bundles $E, F$ over $M$, we can construct $E \otimes F$ similarly with fibers $(E \otimes F)|_p = E|_p \otimes F|_p$.
+\end{defi}
+
+Similarly, we can construct the alternating product of vector bundles $\Lambda^n E$. Finally, we have the \textbf{dual} vector bundle.
+
+\begin{defi}[Dual vector bundle]\index{vector bundle!dual}\index{dual!vector bundle}
+  Given a vector bundle $E \to M$, we define the \textbf{dual vector bundle} by
+  \[
+    E^* = \bigcup_{p \in M} (E_p)^*.
+  \]
+  Suppose again that $t_\alpha: E|_{U_\alpha} \to U_\alpha \times \R^n$ is a local trivialization. Taking the dual of this map gives
+  \[
+    t_\alpha^*: U_\alpha \times (\R^n)^* \to E|_{U_\alpha}^*.
+  \]
+  since taking the dual reverses the direction of the map. We pick an isomorphism $(\R^n)^* \to \R$ once and for all, and then reverse the above isomorphism to get a map
+  \[
+    E|_{U_\alpha}^* \to U_\alpha \times \R^n.
+  \]
+  This gives a local trivialization.
+\end{defi}
+
+One important operation we can do on vector bundles is \textbf{pullback}:
+\begin{defi}[Pullback of vector bundles]\index{pullback!vector bundle}\index{vector bundle!pullback}
+  Let $\pi: E \to M$ be a vector bundle, and $f: N \to M$ a map. We define the \textbf{pullback}
+  \[
+    f^* E = \{(y, e) \in N \times E: f(y) = \pi(e)\}.
+  \]
+  This has a map $f^*\pi: f^*E \to N$ given by projecting to the first coordinate. The vector space structure on each fiber is given by the identification $(f^*E)_y = E_{f(y)}$. It is a little exercise in topology to show that the local trivializations of $\pi: E \to M$ induce local trivializations of $f^*\pi: f^* E \to N$.
+\end{defi}
+
+
+One can introduce a metric $g$ on fibers of a vector bundle $E$. Namely, we have a non-degenerate symmetric form on a fiber $E_x$
+$$
+g_x:E_x\times E_x\to \bR~,
+$$
+and $g_x$ is differentiable in terms of $x$. If it is the tangent bundle $TM$, it is a Riemannian metric. Given a trivialization $\pi^{-1}(U_\alpha)\to U_\alpha \times \R^r$, we can take an orthonormal frame $(e_1,\cdots,e_r)$ for $e_i\in\Gamma(U,E)$ with respect to $g$. Then, the transition function takes the value at $\textrm{O}(r)$
+$$
+\varphi_{\alpha\beta}:U_\alpha\cap U_\beta \to \textrm{O}(r)~.
+$$
+We can further generalize that the transition function takes the value at an arbitrary Lie group $G$ with a representation $\rho: G \to  \GL(V)$. 
+\begin{defi}[$G$-bundle]\index{$G$-bundle}
+  Let $V$ be a vector space, $G$ a Lie group, and $\rho: G \to \GL(V)$ a representation. Then a $G$-bundle $\pi:E\to M$ consists of the following data:
+  \begin{enumerate}
+    \item For each $p\in M$, the fiber is $\pi^{-1}(p)\cong V$.
+    \item  One can take a trivializing cover $\{U_\alpha\}$ with transition functions $t_{\alpha\beta}:(U_\alpha \cap U_\beta) \times V \to (U_\alpha \cap U_\beta) \times V$.
+    \item The transition functions are constructed by maps $\varphi_{\alpha\beta}: U_{\alpha} \cap U_\beta: \to G$ satisfying the cocycle conditions with the representation $\rho$ such that $t_{\alpha\beta} = \rho \circ \varphi_{\alpha\beta}$.
+  \end{enumerate}
+\end{defi}
+
+
+%
+%\begin{thebibliography}{99}
+%
+%\bibitem{Hatcher}
+%A.~Hatcher, {\it Algebraic Topology}, \href{https://www.math.cornell.edu/~hatcher/AT/AT.pdf}{https://www.math.cornell.edu/~hatcher/AT/AT.pdf}
+%\end{thebibliography}
+%
+%
+
+
+
+\end{document}

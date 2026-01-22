@@ -1,0 +1,172 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{amsfonts,amssymb,amsmath}
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+\newcommand{\frakgl}{\ensuremath{\mathfrak{gl}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\OO}{\mathrm{O}}
+
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\GL}{\mathrm{GL}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 9: Due at class on May 5}
+
+ \vspace{.5cm}
+\noindent 1. Suppose that we have a connection $\nabla$ on a rank-$r$ vector bundle $\pi:E\to M$. Suppose that we have local trivializations of $E$ over two open sets $U_\alpha$ and $U_\beta$ in $M$. On these open sets, the connection can be written in terms of one-form $A_\alpha$ and $A_\beta$ taking value on $\mathfrak{gl}(r,\bR)$. Given a transition function $g_{\alpha\beta}: U_\alpha \cap U_\beta \to \GL(r,\bR)$, show that the connections are related by
+$$
+  A_\beta = g_{\alpha \beta}^{-1} A_\alpha g_{\alpha\beta} + g_{\alpha\beta}^{-1} d (g_{\alpha\beta})~,
+$$
+and the curvature forms are related by
+$$
+F_\beta=g_{\alpha \beta}^{-1} F_\alpha g_{\alpha\beta}
+$$
+on $U_\alpha\cap U_\beta$.
+
+
+ \vspace{.5cm}
+\noindent 2. Prove that the Bianchi identity
+$$
+dF+A\wedge F -F\wedge A=0~.
+$$
+
+
+
+ \vspace{.5cm}
+\noindent 3. Show that there is a line (rank one vector) bundle $L$ over $S^2$
+such that $TS^2 \oplus L$ is trivial where $TS^2$ is the tangent bundle of $S^2$. Hint: The tangent bundle of the flat space  is trivial $T\bR^n\cong \bR^{2n}$.
+
+
+
+ \vspace{.5cm}
+\noindent 4. \textbf{Hopf fibration and Dirac monopole}
+
+We define $S^{2n+1}=\{(z_0,\cdots,z_n)\in  \bC^{n+1}| \sum_{i=0}^n|z_i|^2=1 \}$ and let
+the complex projective space $\bC P^n$  be the quotient space $S^{2n+1}/\sim$ where we define an equivalent relation $(z_0,\cdots,z_n)\sim \lambda (z_0,\cdots,z_n)$ with $\lambda \in \U(1)$. We denote a point of $\bC P^n$ by $[z_0;\cdots;z_n]$. 
+
+When $n=1$, we can consider that $S^3$ is the principal $\U(1)$-bundle over $\bC P^1$
+\begin{equation}\begin{tikzcd}
+S^1 \arrow[r] 
+& S^3 \arrow[d, "\pi" ] \\
+&\bC P^1
+\end{tikzcd}\qquad.\nonumber
+\end{equation}
+ First of all, show that $\bC P^1$  can be identified with $S^2\subset \bR^3$ by a map
+$$
+[z_0;z_1]\mapsto (z_0 \overline z_1 + \overline z_0 z_1 , -i (z_0 \overline z_1 - \overline z_0 z_1) , |z_0 |^2 - |z_1 |^2 )~.
+$$
+Let us define trivializations of this bundle over $U_N=S^2\backslash \{\textrm{north  pole}\}$ and $U_S=S^2\backslash \{\textrm{south pole}\}$ as
+\begin{align}\nonumber
+\pi^{-1}(U_N)\to U_N\times S^1&;(z_0;z_1)\mapsto  \left( [z_0;z_1],\frac{z_0}{|z_0|}\right) \cr
+\pi^{-1}(U_S)\to U_S\times S^1&;(z_0;z_1)\mapsto \left( [z_0;z_1],\frac{z_1}{|z_1|}\right) ~.
+\end{align}
+Find the transition function between these trivializations. Let us consider embedding 
+\begin{align}\nonumber
+f_N:U_N\hookrightarrow \pi^{-1}(U_N)&: (\theta,\phi) \mapsto  \left( \cos \frac\theta2,\sin \frac\theta2 e^{-i\phi}\right) \cr
+f_S:U_S\hookrightarrow \pi^{-1}(U_S)&: (\theta,\phi) \mapsto  \left( \cos \frac\theta2 e^{i\phi},\sin \frac\theta2 \right) ~,
+\end{align}
+where $(\theta,\phi)$ is the standard polar coordinate of $S^2$. Defining a connection $$A=i~ \textrm{Im}(\overline z_0dz_0 +\overline z_1dz_1 )$$ on $S^3\subset\bC^2$, show that
+\begin{align}
+f^*_N A&=-\frac i2 (1-\cos \theta)d\phi   \quad \textrm{on} \quad U_N\cr
+f^*_S A&=\frac i2 (1+\cos \theta)d\phi  \qquad \textrm{on} \quad U_S ~. \nonumber
+\end{align}
+Show that they are related by gauge transformations and its curvature $F$ is well-defined on $S^2$. This connection provides \textbf{Dirac magnetic monopole}
+$$
+\frac{i}{2\pi }\int_{S^2} F=1~.
+$$
+
+
+
+
+ \vspace{.5cm}
+\noindent 5. Let us consider  the case that a Lie group $G$ acts on a manifold $M$
+$$
+G\times M \to M; (g,p)\mapsto g p~.
+$$
+We call the action is \textbf{transitive} if any two points of $M$ can be transformed by the action of $G$. Suppose that $G$ acts  on $M$ transitively, and we pick an arbitrary point $p\in M$. We call $H=\{g\in G|gp=p\}$ a \textbf{stabilizer subgroup} of $G$. Then, we have diffeomorphism $M\cong G/H$ and it is called a \textbf{homogeneous space}. Moreover, $G$ can be interpreted as a principle $H$-bundle over $M$.  Let us see this construction in the following examples.
+
+\vspace{.5cm}
+
+Let us consider the $\SO(2)$ subgroup of $\SO(3)$ as
+$$
+\SO(3)\supset\SO(2)=\left(
+\begin{array}{ccc}
+\cos\theta&-\sin \theta&0\\
+\sin \theta&\cos\theta&0\\
+0&0&1\\
+\end{array}
+\right) ~.
+$$
+Show that $S^2\cong \SO(3)/\SO(2)$ and $\SO(3)$ can be considered as $S^1$ bundle over $S^2$. Construct local trivializations of this bundle over $U_N=S^2\backslash \{\textrm{north  pole}\}$ and $U_S=S^2\backslash \{\textrm{south pole}\}$, and find the corresponding transition function at the equator. Construct a $\U(1)$-connection on this bundle and find its curvature.
+
+ \vspace{.5cm}
+\noindent 6. We have seen that $\SL(2,\bR)$ acts on the upper half plane \textbf{H}:
+$$
+\SL(2,\bR) \times \textbf{H} \to \textbf{H}; \left(\begin{array}{cc}
+a&b\\
+c&d\\
+\end{array}\right) \cdot z\mapsto \frac{az+b}{cz+d}~.
+$$
+Show that this action is transitive and find the stabilizer subgroup of the point $i\in  \textbf{H}$. Find the fundamental group of $\SL(2,\bR)$.
+
+\end{document}
+

@@ -1,0 +1,127 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 6: Due at class on April 14}
+
+ \vspace{.5cm}
+\noindent 1. Let us define $S^3=\{(x_1,x_2,x_3,x_4)\in \bR^4 | \sum_{i=1}^4x_i^2=1\}$ and $S^1=\{(x_1,x_2,x_3,x_4)\in \bR^4 | x_1^2+x_2^2=1\}$. Then, show that $S^3 \backslash S^1$ is homotopic to $S^1$.
+
+
+%
+% \vspace{.5cm}
+%\noindent 2. Show that the Euler characteristics of an odd-dimensional compact oriented closed manifold is zero.
+%
+%
+
+ \vspace{.5cm}
+\noindent 2. Find the fundamental group of the Riemann surface of genus $g$.
+
+
+
+ \vspace{.5cm}
+\noindent 3. Find the fundamental group of the $n$-dimensional projective space $\bR P^n$.
+
+ \vspace{.5cm}
+\noindent 4.  The three-dimensional lens space $L(p,1)$ is a quotient of $S^{3}$ by the ${\mathbb  {Z}}/p{\mathbb  {Z}}$-action. More precisely, let $p$ be a prime integer and consider $S^{3}$ as the unit sphere in ${\mathbb  C}^{2}$. Then the ${\mathbb  {Z}}/p{\mathbb  {Z}}$-action on $S^{3}$ yields an equivalence relation
+$$(z_{1},z_{2})\sim (e^{{2\pi i/p}}\cdot z_{1},e^{{2\pi i/p}}\cdot z_{2})~.$$
+The resulting quotient space $S^3/\sim$ is called the lens space $L(p,1)$. When $p=2$, it is $\bR P^2$.  Find the fundamental group of the Lens space $L(p,1)$.
+
+
+ \vspace{.5cm}
+\noindent 5. 
+
+\begin{theorem}[Borsuk-Ulam theorem]
+For every continuous map $f:S^2\to\bR^2$, there exists a pair of anti-podal points $x$ and $-x$ in $S^2$ with $f(x)=f(-x)$.
+\end{theorem}
+
+Let us give a proof by contradiction. 
+Suppose to the contrary that $f:S^2\to\bR^2$ is continuous, but $f(x)\neq f(-x)$ for  ${}^\forall x\in S^2$. Then we define a continuous map $g:S^2\to S^1$ by 
+$$
+g:x\mapsto \frac{f(x)-f(-x)}{|f(x)-f(-x)|}
+$$ 
+which satisfies $g(-x)=-g(x)$. Without loss of generality, we set $g(1,0,0)=1$. The equator of $S^2$ can understood as a loop 
+$$\beta :[0,1]\to S^2; s\mapsto (\cos 2\pi s ,\sin 2\pi s,0)~.$$
+Show that $\alpha =g\circ \beta: [0,1]\to S^1$ is contractible, which means that it is homotopic to the constant map $\alpha\sim 1$.
+
+
+On the other hand, for $s\in [0,\frac12]$, we have $\beta(s)=-\beta(s+\frac12)$ so that $\alpha(s)=-\alpha(s+\frac12)$. Let $\tilde \alpha:[0,1]\to \bR$ be the lift of $\alpha$ to the universal cover. Then, show that $\tilde\alpha(0) =\tilde\alpha(1)+n$ where $n$ is an odd integer. 
+Therefore, it contradicts with $\alpha\sim 1$.
+
+\vspace{.5cm}
+Here is a ``corollary". At every instant, there must be a pair of antipodal points on the earth having the same temperature and the same barometric pressure. 
+
+
+\newpage
+
+
+
+Using the Borsuk-Ulam theorem, give a proof of the following theorem.
+
+\begin{theorem}[Ham-Sandwich theorem]
+Given any three sets in space, there exists a plane which bisects all three sets, in the sense that the part of each set which lies on one side of the plane has the same volume as the part of the same set which lies on the other side of the plane.
+\end{theorem}
+
+\begin{figure}[h]\centering
+\includegraphics[width=10cm]{Ham}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+

@@ -1,0 +1,401 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%\parskip=1em
+%\parindent=0.3in
+%\setlength\oddsidemargin{0.5in} \setlength\evensidemargin{0.5in}
+%\setlength\textwidth{5.5in}
+%
+%\hfuzz6pt % Don't bother to report over-full boxes if over-edge is < 6pt
+%
+%\newlength{\defbaselineskip}
+%\setlength{\defbaselineskip}{\baselineskip}
+%\newcommand{\setlinespacing}[1]%
+%           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%
+%\newcommand{\properpagestyle}{\pagestyle{myheadings}\markboth{}{}\markright{}}
+
+
+
+
+\def\Ric{\mathop{\rm Ric}}
+\def\cRic{\mathop{\stackrel{\circ}{\Ric}}}
+\def\Scal{\mathop{\rm R}}
+\def\scL{\mathop{\mathcal L}}
+\def\Hess{\mathop{\rm Hess}}
+\def\bt{\mathop{\bar\tau}}
+\def\dist{\mathop{\rm dist}}
+\def\Cut{\mathop{\rm Cut}}
+\def\Riem{\mathop{\rm Rm}}
+\def\scal{\mathop{\rm scal}}
+\def\Sec{\mathop{\rm Sec}}
+\def\Diam{\mathop{\rm Diam}}
+\def\CS{\mathop{\rm C_S}}
+\def\V{\mathop{\rm V}}
+\def\Vol{\mathop{\rm Vol}}
+\def\Area{\mathop{\rm Area}}
+\def\VR{\mathop{\rm VR}}
+\def\supp{\mathop{\rm supp}}
+\def\div{\mathop{\rm div}}
+\def\inj{\mathop{\rm inj}}
+\def\diam{\mathop{\rm diam}}
+\def\Id{\mathop{\rm Id}}
+\def\RRR{\mathop{\mathcal{R}}}
+\def\MMM{\mathop{\mathcal{M}}}
+\def\HHH{\mathop{\mathcal{H}}}
+\def\VVV{\mathop{\mathcal{V}}}
+\def\FF{\mathop{\mathbb{F}}}
+\def\RR{\mathop{\mathbb{R}}}
+\def\QQ{\mathop{\mathbb{Q}}}
+\def\CC{\mathop{\mathbb{C}}}
+\def\ZZ{\mathop{\mathbb{Z}}}
+\def\SS{\mathop{\mathbb{S}}}
+\def\SSS{\mathop{\mathcal{S}}}
+\def\PP{\mathop{\mathbb{P}}}
+\def\End{\mathop{\rm End}}
+\def\Aut{\mathop{\rm Aut}}
+\def\Ad{\mathop{\rm Ad}}
+\def\ad{\mathop{\rm ad}}
+\def\hht{\mathop{\rm ht}}
+\def\gl{\mathop{\mathfrak{gl}}}
+\def\ssl{\mathop{\mathfrak{sl}}}
+\def\TP{\mathop{\mathcal{TP}}}
+\def\PPP{\mathop{\mathcal{P}}}
+\def\gggg{\mathop{\mathfrak{g}}}
+\def\ffff{\mathop{\mathfrak{f}}}
+\def\OO{\mathop{\mathcal{O}}}
+\def\oo{\mathop{\mathfrak{o}}}
+\def\GG{\mathop{\mathcal{G}}}
+\def\WWW{\mathop{\mathcal{W}}}
+\def\Rad{\mathop{\rm Rad}}
+\def\Der{\mathop{\rm Der}}
+\def\Ker{\mathop{\rm Ker}}
+\def\Im{\mathop{\rm Im}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+
+
+\def\be{\begin{eqnarray}}
+\def\ee{\end{eqnarray}}
+\def\beg{\begin{eqnarray*}}
+\def\ees{\end{eqnarray*}}
+
+
+\newcommand{\qed}{\hfill$\Box$}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{technicallemma}[theorem]{Technical Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{defi}[theorem]{Definition}
+\newtheorem{rem}[theorem]{Remark}
+\newtheorem{prob}[theorem]{Problem}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+
+
+
+
+
+
+
+\title{ Lecture 4}
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Lecture 5}
+
+\centerline{\Large \bf Nakahara section 7.2, 7.3, and 7.4}
+
+
+\section{Covariant derivative and parallel transport}
+
+
+Let $X$ and $Y$ be vector fields on $M$.
+The symbol $\nabla_XY$ denotes the derivative of the vector field $Y$ along trajectories of the vector field $X$. In fact, it is a map
+$$
+\nabla:\frakX(M)\times \frakX(M)\to \frakX(M); (X,Y)\mapsto \nabla_XY
+$$
+which satisfies the following conditions
+\begin{itemize}
+\item $\nabla$ is linear in the first variable and additive in the second: $$\nabla_{fX+hY}Z\;=\;f\nabla_XZ+h\nabla_YZ$$
+    $$\nabla_X(Y+Z)\;=\;\nabla_XY\,+\,\nabla_XZ$$ where $f,h\in \bC^\infty(M)$ are functions and $X,Y\in\frakX(M)$ are vector fields.
+\item $\nabla$ obeys the Leibnitz rule in the second variable: $$\nabla_X(fY)\;=\;X(f)Y\,+\,f\nabla_XY~.$$
+\end{itemize}
+The operator $\nabla$ is called \textbf{covariant derivative} or the \textbf{connection}.
+
+
+
+Let $(U,\{x^i\})$ be a chart on $M$.
+Since $\nabla_{\partial/\partial{x^i}}\frac{\partial}{\partial{x}^j}$ is a vector field, it can be expressed as a linear combination of the coordinate fields:
+\beg
+  \nabla_{\frac{\partial}{\partial x^j}} \frac{\partial}{\partial x^k} := \sum_{i = 1}^n \Gamma_{jk}^i \frac{\partial}{\partial x^i}.
+\ees
+These are called the \textbf{Christoffel symbols}.
+
+
+Let $\gamma: I \to M$ be a curve on $M$ and we define
+  \[
+    J(\gamma) = \{\text{vector fields along $\gamma$}\}.
+  \]
+Then, given a  connection $\nabla$, we define the \textbf{covariant derivative} along $\gamma$, which is a map $\frac{D}{dt}: J(\gamma) \to J(\gamma)$ such that
+  \begin{itemize}
+    \item $\frac{D}{dt}(fX) = \dot{f} X + f \frac{D}{dt} X$ for all $f \in C^\infty(I)$
+    \item If $X\in J(\gamma)$  is induced by  a vector field $\tilde X$  ($\tilde{X}|_{\gamma(t)} = X_t$ for all $t \in I$), then
+      \[
+        \frac{D}{dt}(X)\Big|_{t=0} = \nabla_{\dot{\gamma}(0)} \tilde{X}.
+      \]
+  \end{itemize}
+
+
+
+Given a path $\gamma(t)$ (not necessarily a geodesic), a vector field $X$ is called \textbf{parallel}, or constant, along $\gamma$ if
+\beg
+\frac{D}{dt}X\;=\;0.
+\ees
+In coordinates we can write
+\beg
+\frac{d}{dt}&=&\frac{dx^i}{dt}\frac{\partial}{\partial{x}^i} \quad\quad X\;=\;X^j\frac{\partial}{\partial{x}^j}.
+\ees
+Using the axioms of covariant differentiation, we compute
+\beg
+\frac{D}{dt}X&=&\nabla_{\frac{dx^i}{dt}\frac{\partial}{\partial{x}^i}}\left(X^j\frac{\partial}{\partial{x}^j}\right)\\
+&=&\frac{dx^i}{dt}\nabla_{\frac{\partial}{\partial{x}^i}}\left(X^j\frac{\partial}{\partial{x}^j}\right)\\
+&=&\frac{dx^i}{dt}\frac{\partial}{\partial{x}^i}\left(X^j\right)\frac{\partial}{\partial{x}^j}\,+\,\frac{dx^i}{dt}X^j\nabla_{\frac{\partial}{\partial{x}^i}}\frac{\partial}{\partial{x}^j}\\
+&=&\frac{d{X}^j}{dt}\frac{\partial}{\partial{x}^j}\,+\,\frac{dx^i}{dt}X^j\Gamma_{ij}^k\frac{\partial}{\partial{x}^k}\\
+&=&\left(\frac{d{X}^k}{dt}\,+\,\frac{dx^i}{dt}X^j\Gamma_{ij}^k\right)\frac{\partial}{\partial{x}^k}.
+\ees
+The Christoffel symbols $\Gamma_{ij}^k$, the path $\gamma$, and the derivatives $\frac{dx^i}{dt}$ are known.
+Therefore the parallel transport equation is a system of $n$ first order linear differential equations:
+\beg
+\frac{D}{dt}X\;=\;0 \quad\quad {\rm if}\;{\rm and}\;{\rm only}\;{\rm if} \quad\quad \frac{d{X}^k}{dt}\,+\,X^j\frac{dx^i}{dt}\Gamma_{ij}^k\;=\;0 \quad {\rm for} \; {\rm all} \; 1\,<\,k\,<\,n.
+\ees
+This means that given a single vector $X\in{T}_{\gamma(0)}M$, it can be \textbf{transported} along the curve $\gamma$ by solving this system of equations.
+
+
+
+
+
+
+
+\section{Levi-Civita Connection}
+
+
+Recall that in order to differentiate vectors, or even tensors on a manifold, we need a connection on the tangent bundle. There is a natural choice for the connection when a Riemannian metric is given.
+\begin{defi}[Levi-Civita connection]\index{Levi-Civita connection}
+  Let $(M, g)$ be a Riemannian manifold. The \emph{Levi-Civita connection} is the unique connection $\nabla$ on $M$ satisfying
+  \begin{itemize}
+    \item Compatibility with metric:\index{compatible connection}\index{connection!compatible with metric}
+      \[
+        Z g(X, Y) = g(\nabla_Z X, Y) + g(X, \nabla_Z Y),
+      \]
+    \item Symmetry/torsion-free:\index{symmetric connection}\index{torsion-free connection}\index{connection!symmetric}\index{connection!torsion-free}
+      \[
+        \nabla_X Y - \nabla_Y X = [X, Y].
+      \]
+  \end{itemize}
+\end{defi}
+With a bit more imagination on what the symbols mean, we can write the first property as
+\[
+  d (g(X, Y)) = g(\nabla X, Y) + g(X, \nabla Y),
+\]
+while the second property can be expressed in coordinate representation by
+\[
+  \Gamma_{jk}^i = \Gamma_{kj}^i~.
+\]
+
+
+On Riemannian manifold $(M,g)$, there exists a unique torsion-free  connection $\nabla$ compatible with $g$.
+Using the metric compatibility condition
+$$
+\frac{\partial}{\partial x^i}g_{jk}=g\left(\nabla_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^k}\right)+g\left(\frac{\partial}{\partial x^j},\nabla_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^k}\right)
+$$
+Changing the index labels, we have the formula
+\beg
+\Gamma_{ij}^k&=&\frac12\left(\frac{\partial{g}_{jl}}{\partial{x}^i}\,+\,\frac{\partial{g}_{il}}{\partial{x}^j}\,-\,\frac{\partial{g}_{ij}}{\partial{x}^l}\right)g^{lk}.
+\ees
+
+
+\begin{defi}[Geodesic]\index{geodesic}
+  A curve $\gamma(t)$ on a Riemannian manifold $(M, g)$ is called a \emph{geodesic curve} if its tangent vectors are parallel transported along the curve itself with respect to the Levi-Civita connection:
+  \[
+    \frac{D \dot{\gamma}}{d t} = 0.
+  \]
+\end{defi}
+In local coordinates, we write this condition as
+  \[
+  \ddot{x}_i + \Gamma^i_{jk}\dot{x}^j \dot{x}^k = 0.
+  \]
+A geodesic is uniquely specified by the initial conditions $p = x(0)$ and $a = \dot{x}(0)$.  This equation can be obtained as Euler-Lagrange equation of the action 
+$$
+S=\int \sqrt{g_{ij}\frac{dx^i}{dt}\frac{dx^j}{dt}}~,
+$$
+so, on a sufficiently small chart $U$, the curve is a shortest distant path with respect to the metric $g$.
+
+
+
+
+\section{Riemann curvature}
+
+
+We can consider doing some parallel transports on $S^n$ along the loop counterclockwise:
+\begin{figure}[h]\centering
+\includegraphics[width=5cm]{parallel}
+\end{figure}
+We see that after the parallel transport around the loop, we get a \emph{different} vector. The Riemann curvature is introduced to measure this difference.
+
+The Riemann tensor is a map
+$$
+R:\frakX(M)\times \frakX(M)\times \frakX(M)\to \frakX(M);(X,\,Y,\,Z)\mapsto R(X,\,Y)\,Z
+$$
+where $R(X,\,Y)\,Z$ is defined as follows:
+\beg
+R(X,\,Y)\,Z&:=&\nabla_X\nabla_YZ\;-\;\nabla_Y\nabla_XZ\;-\;\nabla_{[X,Y]}Z.
+\ees
+Note the obvious fact that $R$ is anti-symmetric in the first two variables:
+\beg
+R(X,\,Y)\,Z\;=\;-R(Y,\,X)\,Z.
+\ees
+The Riemann tensor is also called the \textbf{curvature tensor}. 
+
+
+
+
+On a chart, the Riemann tensor can be written in terms of the coordinate fields:
+\beg
+R\left(\frac{\partial}{\partial{x}^i},\,\frac{\partial}{\partial{x}^j}\right)\,\frac{\partial}{\partial{x}^k}\;=\;{R^l{}_{kij}}\frac{\partial}{\partial{x}^l}.
+\ees
+In fact, we can show that the Riemann curvature can be expressed in terms of  Christoffel symbols 
+\beg
+{R^l{}_{kij}}&=&\Gamma_{jk}^s\Gamma_{is}^l\;-\;\Gamma_{ik}^s\Gamma_{js}^l\;+\;\frac{\partial\Gamma_{jk}^l}{\partial{x}^i}\;-\;\frac{\partial\Gamma_{ik}^l}{\partial{x}^j}.
+\ees
+
+
+Essentially the Riemann tensor measures the {\bf failure of commutativity of two derivatives} when applied to vector fields.
+\begin{figure}[h]\centering
+\includegraphics[width=10cm]{parallelogram}
+\end{figure}
+Let us take infinitesimal parallelogram as in the figure. Then, the difference between the two vectors are indeed given by the Riemann curvature
+$$
+V_{C'}(r)-V_{C}(r)=V_0^j R^i_{jkl}\epsilon^k\delta^l
+$$
+
+
+
+Contracting the first and final indices of the Riemann tensor gives the \textbf{Ricci curvature tensor}
+\beg
+R_{ij}={\Ric}_{ij}&:=&{R^s{}_{isj}}\;=\;R_{kijl}g^{kj}.
+\ees
+If there is a constant $\lambda$ such that $R_{ij}=\lambda g_{ij}$, $M,g$ is called a \textbf{Einstein manifold}.
+
+
+
+Contracting again, we get the \textbf{scalar curvature}
+\beg
+R:=&{\Ric}_{ij}g^{ij}.
+\ees
+The scalar curvature is essentially the sum of all sectional curvatures at a point.
+
+
+\subsection{Curvature dentities}
+
+We can introduce the notation
+\beg
+R(X,\,Y,\,Z,\,W)&=&\left<R(X,Y)Z,\,W\right>\\
+R_{ijk\ell}&=&{R^s{}_{jk\ell}}g_{si}.
+\ees
+The Riemann tensor satisfy the following identity
+\beg
+&&R(X,\,Y,\,Z,\,W)\;=\;-R(Y,\,X,\,Z,\,W)\\
+&&R(X,\,Y,\,Z,\,W)\;=\;-R(X,\,Y,\,W,\,Z)\\
+&&R(X,\,Y,\,Z,\,W)\;=\;R(Z,\,W,\,X,\,Y)\\
+&&R(X,\,Y)Z\,+\,R(Y,\,Z)X\,+\,R(Z,\,X)Y\;=\;0 \quad\quad\quad\quad {\rm (first}\,{\rm Bianchi}\,{\rm identity)}\\
+&&(\nabla_WR)(X,\,Y)Z\,+\,(\nabla_XR)(Y,\,W)Z\,+\,(\nabla_YR)(W,\,X)Z\;=\;0 \quad\quad {\rm (second}\,{\rm Bianchi}\,{\rm identity)}
+\ees
+In components, these read
+\beg
+&&R_{ijkl}\;=\;-R_{ijlk}\\
+&&R_{ijkl}\;=\;-R_{jikl}\\
+&&R_{ijkl}\;=\;R_{klij}\\
+&&R_{lijk}\,+\,R_{ljki}\,+\,R_{lkij}\;=\;0\\
+&&R_{lijk,s}\,+\,R_{ljsk,i}\,+\,R_{lsik,j}\;=\;0.
+\ees
+Further identities can be derived by `mixing and matching' these identities.
+For instance the second Bianchi identity is frequently presented
+\beg
+R_{jkli,s}\,+\,R_{jlsi,k}\,+\,R_{jski,l}\;=\;0,
+\ees
+which can be derived from our second Bianchi identity and the rule $R_{ijkl}=R_{klij}$.
+
+\section{Gauss-Bonnet theorem}
+
+Let $(M,g)$ be a two-dimensional oriented closed manifold and vol is the volume form. Then Gauss curvature $\kappa$ is defined by
+$$
+\kappa:=-\frac{R_{1212}}{\det g} ~.
+$$
+Then, the Gauss-Bonnet theorem is 
+$$
+\frac{1}{2\pi} \int_M\kappa~ \textrm{vol}=\chi(M)~.
+$$
+It is remarkable in the sense that the integral in LHS is independent of choice of metric $g$ although the Gauss curvature $\kappa$  depends on the metric $g$. This formula connects differential geometry to topology. 
+
+\section{Einstein equations}
+The celebrated Einstein equations can be expressed
+$$
+R_{\mu \nu }-{\frac {1}{2}}Rg_{\mu \nu }+\Lambda g_{\mu \nu }={\frac {8\pi G}{c^{4}}}T_{\mu \nu }~,
+$$
+where $\Lambda$ is called the cosmological constant, $G$ is the Newton constant, $c$ is the speed of light and $T_{\mu\nu}$ is the stress-energy tensor. These are the Euler-Lagrange equations for the Einstein-Hilbert action
+$$
+S=\int \left[\frac {c^{4}}{16\pi G}\left(R-2\Lambda \right)+{\mathcal  {L}}_{{\mathrm  {M}}}\right]{\sqrt  {-g}}\,{\mathrm  {d}}^{4}x~.
+$$
+
+
+
+In this equation, a metric becomes dynamical variable and, roughly speaking, the curvature tensor of the spacetime is determined by the stress-energy tensor of matter. The equation is highly non-linear so that it can be solved analytically only in very special situations. The most of the cases requires  numerical simulations to solve the Einstein equations. Remarkably, this equation describes nature at terrestrial scale, and predicts the gravitational wave, which was detected by LIGO last year. (The No.1 candidate of Nobel physics prize this year!) It also describes the history of the universe \cite{Weinberg}.
+
+
+\begin{thebibliography}{99}
+\bibitem{Weinberg}
+Steven. Weinberg, \textit{The first three minutes: a modern view of the origin of the universe}, Basic Books, 1993.
+\end{thebibliography}
+
+
+
+\end{document}

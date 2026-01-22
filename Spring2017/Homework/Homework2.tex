@@ -1,0 +1,155 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 2: Due at class on March 17}
+\vspace{.5cm}
+
+\noindent 1. For elements $x=(x_0,\cdots,x_n)$ and   $y=(y_0,\cdots,y_n)$ of $\mathbb{R}^{n+1}\backslash0$ , we define an equivalence relation $x \sim y$ by 
+$$
+x=\alpha y  \qquad \alpha \in \mathbb{R}~.
+$$
+Let us define $\mathbb{R}P^n$ by $\mathbb{R}^{n+1}\backslash0/\sim$. Show that $\mathbb{R}P^n$ is a manifold and it is orientable if and only if $n$ is odd. The space is called a real projective space.
+\vspace{.5cm}
+
+\noindent 2. Let $(x,y)$ be the Cartesian coordinate of $\bR^2$ and $(r,\theta)$ be the polar coordinate of $\bR^2$. Write a vector filed $v$ in terms of the Cartesian coordinate that generate a flow $\varphi_t:\bR^2\to\bR^2$
+$$
+\left(\begin{array}{c}
+x\\y
+\end{array}\right) \to\left(\begin{array}{cc}
+\cos t& -\sin t\\
+\sin t&\cos t
+\end{array}\right) \left(\begin{array}{c}
+x\\y
+\end{array}\right)~.
+$$
+This is the rotation in $\bR^2$. In addition, draw the schematic picture of the vector field $v$. 
+
+\vspace{.5cm}
+
+\noindent 3. Let $M_n(\mathbb{R})$ and $M_n(\mathbb{C})$ denote the set of all $n\times n$ matrices over $\bR$ and $\bC$, respectively. We define
+\begin{align}
+SU(2)&=\{A\in M_2(\bC)| \ A^\dagger A=\mathrm{Id} , \ \det A=1 \}\cr
+SO(3)&=\{A\in M_3(\bR)| \ A^T A=\mathrm{Id} , \ \det A=1 \}~.\nonumber
+\end{align}
+
+
+3.1 Construct a double covering (2-to-1) map $SU(2)\to SO(3)$. 
+
+3.2 Show that $SU(2)$ is diffeomorphic to $S^3$ and $SO(3)$ is diffeomorphic to $\bR P^3$.
+\vspace{.5cm}
+
+\noindent 4. Let $e$ be the identity element of $SO(3)$. Show that the tangent space $T_e SO(3)$ at $e$ is spanned by tangent vectors of curves in $SO(3)$
+$$
+\exp(t J_i)=1+tJ_i+\frac12 (tJ_i)^2 +\cdots
+$$
+at $t=0$  where $J_i$ $(i=x,y,z)$ are defined by
+$$
+J_x=\left(
+\begin{array}{ccc}
+0&0&0\\
+0&0&-1\\
+0&1&0\\
+\end{array}
+\right) \qquad
+J_x=\left(
+\begin{array}{ccc}
+0&0&1\\
+0&0&0\\
+-1&0&0\\
+\end{array}
+\right) \qquad
+J_x=\left(
+\begin{array}{ccc}
+0&-1&0\\
+1&0&0\\
+0&0&0\\
+\end{array}
+\right) ~.
+$$
+Let us define the commutator by $[X, Y ] = XY - Y X$. Then, show that
+$$
+[J_x,J_y]=J_z~, \qquad [J_y,J_z]=J_x~, \qquad [J_z,J_x]=J_y~.
+$$
+
+\vspace{.5cm}
+
+\noindent 5. Show that the tangent space $T_e SU(2)$ is spanned by $i\sigma_x$, $i\sigma_y$ and $i\sigma_z$ (the Pauli matrices by $i$).
+
+\vspace{.5cm}
+\noindent 6. Write down vector fields that generate the rotation along $x$-, $y$-, $z$-axis in $\bR^3$. Find the commutation relations of these vector fields. Compare the theory of angular momenta in quantum mechanics.
+
+%\begin{definition}
+%A group is a set of $G$ with a multiplication $\times $
+%\begin{itemize}\setlength{\parskip}{-0.1cm}
+%\item (Closure) $a,b\in G \rightarrow a\times b\in G$ 
+%\item (Associativity)  For $a,b,c\in G$, $(a\times b)\times c=a\times (b\times c)$
+%\item (Identity element) There exists an element $e$ in $G$ such that, for every element $a$ in $G$, the equation $e\times a = a\times e = a$ holds. Such an element is unique (see below), and thus one speaks of the identity element.
+%\item (Inverse element) For each $a$ in $G$, there exists an element $b$ in $G$, commonly denoted $a^{-1}$, such that $a \times  b = b \times  a = e$, where e is the identity element.
+%\end{itemize}
+%\end{definition}
+%
+%\begin{definition}
+%A group $G$ is called Lie group if it is a smooth manifold so that the group operations 
+%\begin{align}
+%&m:G\times G \to G;\quad (a,b) \to a\times b \cr
+%&\mathrm{inv}:G\to G;\quad a\to a^{-1}\nonumber
+%\end{align}
+%are smooth.
+%\end{definition}
+%
+%\noindent 4. (Optional) Show that the following Lie groups are manifold and find their dimensions
+%\begin{itemize}
+%\item General linear group: $GL(n, \bC) = \{A \in M_n(\bC)| \det A \neq 0\}$
+%\item Special linear group: $SL(n, \bC) = \{A \in GL(n, \bC)| \det A = 1\}$
+%\item Unitary group $U(n) = \{A \in GL(n, \bC)| AA^\dagger = I\}$
+%\item Special unitary group $SU(n) = U(n) \cap SL(n, \bC)$
+%\end{itemize}
+
+\end{document}
+

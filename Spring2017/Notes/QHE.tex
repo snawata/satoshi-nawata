@@ -1,0 +1,402 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{wrapfig}
+
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+\newcommand{\E}{\vec{E}}
+\newcommand{\B}{\vec{B}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Epilogue: Quantum Hall effects}
+
+This is essentially a write-up of Witten's slides \cite{Witten:2005}.
+
+%\begin{enumerate}
+%\item What is the Hall effect?
+%\item What is the quantum Hall effect?
+%\item Some condensed mater physics
+%\item Some geometry
+%\item The Jones polynomial
+%\item Theory of the quantum Hall effect
+%\end{enumerate}
+
+\subsection*{What is the Hall effect?}
+
+\begin{wrapfigure}{R}{0.3\textwidth}
+\includegraphics[width=3cm]{E}
+\end{wrapfigure}
+
+ An electron in an electric field is accelerated
+$$
+m\frac{d^2\vec{x}}{dt^2} =e\vec{E} \quad \longrightarrow \quad  \vec{v}=\frac{d\vec{x}}{dt} \sim \frac{e\vec{E}}{m}t
+$$
+   If the electron is in an obstacle course  which randomizes its velocity on an average after a time $\tau$, then the velocity will not go to infinity, but to 
+   $$
+   \langle \vec{v}\rangle \sim  \frac{e\vec{E}}{m}\frac{\tau}{2}
+   $$
+ It $\cN$ is the number density of electrons that are free to move, The average current will be  be roughly 
+$$ 
+\vec{J}=\cN e \langle \vec{v}\rangle=\frac{\cN e^2\tau }{2m}\vec{E}\quad \longrightarrow \quad \vec{J}=\sigma\vec{E}
+$$
+where  the conductivity is $\sigma=\frac{\cN e^2\tau}{2m}$ in this approximation. (No topology here - $\sigma$ depends on all the details.) Now in a magnetic field $\vec{B}$ 
+$$
+m\frac{d^2\vec{x}}{dt^2} =\frac{e}{c}\frac{d\vec{x}}{dt}\times \vec{B}
+$$
+\begin{figure}[h]\centering
+\includegraphics[width=5cm]{B}
+\end{figure}
+ The electron motion is spiral. Uniform motion along $\vec{B}$ and circular oscillations normal to $\vec{B}$. To get the Hall effect. we want to combine perpendicular $\vec{E}$ and $\vec{B}$  with $\vec{E}\ll\vec{B}$. The electron now drifts out at the page, with velocity 
+ $$
+\vec{v} = c \frac{\vec{E}\times\vec{B}}{|\vec{B}|^2}
+$$
+
+\begin{figure}[h]\centering
+\includegraphics[width=10cm]{EB}
+\end{figure}
+With no magnetic field, the current $\vec{J}$ is in the $\vec{E}$ direction, but with a strong magnetic field, the current flow is perpendicular to $\E$ and $\B$. With average velocity $\vec{v} = c \frac{\vec{E}\times\vec{B}}{|\vec{B}|^2}
+$ for each electron, the current is
+$$
+\vec{J}=\cN e \vec{v}=\cN e c \frac{\vec{E}\times\vec{B}}{|\vec{B}|^2}=\sigma_H \widehat{B}\times \vec{E}
+$$
+where $ \widehat{B}=\vec{B}/|\vec{B}|$ the Hall conductivity is $\sigma_H=\cN e c/|\vec{B}|$. (no topology here!)
+
+\subsection*{What is the quantum Hall effect?}
+The quantum Hall effect arises if we consider a very thin sample: special composition, low temperature, large $\B$ which effectively is a 2d surface - a molecular monolayer. Here we find, for certain type of material, in certain ranges of $\B$ and temperature, that the Hall conductivity does have a magic value 
+$$
+\sigma_H=\frac{e^2}{\hbar} n \qquad n\in\bZ
+$$
+where $\hbar$ is the Planck courant. This value is unchanged as $\B$, temperature, chemical composition impurity concentration, etc. are varied  within certain limits.
+
+\begin{figure}[h]\centering
+\includegraphics[width=8cm]{integer}
+\end{figure}
+
+
+The integrality of $\frac{\hbar}{e^2}\sigma_H$, is verified so precisely that it has become the most accurate way to measure $\frac{e^2}{\hbar}$. There is an integer here, so we should seek a topological explanation! But how can we hope to find one in the messy world of condensed mater physics? In this measurement, we are looking at very large samples observed for very long times, compared to atomic distance and times. One of the main reasons that it is possible in physics is that in any observation made at a certain scale of length and time. Most of microscopic degree of freedom - needed for a much shorter lengths and times - are irrelevant. This notion of \textbf{effective theory} is called \textbf{universality}.
+
+
+Familiar example is a rigid body: The only relevant degree of freedom is the time-dependent embedding in space.
+
+Solids vary widely in their relevant degrees of freedom:
+\begin{itemize}
+\item vibrations are always relevant for certain questions, but not for electromagnetic behavior like the Hall effect
+\item electrons are relevant in conductors where they are free to move, but not in insulators.
+\item an exotic example of a relevant variable is the trivialization $s$ of the line bundle $\cL^2$ in a superconductor
+\item another exotic example arises in the ``fractional quantum Hall effect'', when $\sigma_H\frac{\hbar}{e^2}$ is a rational number not an integer.
+\end{itemize}
+
+
+Whatever the relevant degrees of freedom may be in a particular case, the macroscopic interactions of electromagnetism with the solid are described by Euler-Lagrange equation and quantization from an action 
+$$
+L=L_{\textrm{vacuum}}+L_{\textrm{solid}}~.
+$$
+Here $L_{\textrm{vacuum}}$ is the Lagrangian in vacuum of the electromagnetic field. If $A$ is $U(1)$ connection  and $F=dA$ is the curvature, then 
+$$
+L_{\textrm{vacuum}}=\frac{\hbar}{4e^2}\int _{\mathbb{R}^{3,1}}F\wedge \ast F~.
+$$
+The part of the action due to the solid is 
+$$
+L_{\textrm{solid}}=\int _{\textrm{solid}\times \textrm{time}}d\mu~ W\left( \Phi ,A\right)~,
+$$
+where $W$ is a local functional of the relevant  degrees of freedom $\Phi$ as well as the connection $A$. ``Locality'' means that the variation of $W$ is a gauge -invariant differential polynomial in $\Phi$, $A$. The total action is thus
+$$
+\dfrac {\hbar}{4e^{2}}\int _{\mathbb{R}^{3 ,1}}F\wedge \ast F+\int _{\textrm{solid}}d\mu~ W\left( \Phi ,A\right)~.
+$$
+The Euler-Lagrange equation for $A$ becomes
+$$
+d\left( \ast F\right) =-\dfrac {e^{2}}{\hbar}\dfrac {\delta W}{\delta A}\left( \Phi ,A\right)
+$$
+and if we compare to freshman physics
+$$
+\ast d(\ast F)=4\pi J 
+$$
+Now what are the relevant degrees of freedom for the quantum Hall effect? (Answer: for the ordinary integer quantum Hall effect, there are none.) Materials with no relevant degrees of freedom in their interaction with electromagnetism are not unusual. (An ordinary pane of class is an example.) It means that $W(\Phi,A)$ reduces to $W(A)$.
+
+
+\subsection*{Some condensed matter physics}
+
+Before trying to discuss the quantum Hall effect, let us discuss a 3-dimensional piece of class. So we will feel to know what we are doing. The local structure is invariant under rotations and reflections, which will constrain $W$. A drastic simplification comes from the following. Grade the monomials in $W$ by ``dimension''
+$$
+\dim A=1 ~,\qquad  \dim \frac\partial{\partial x}=\dim \frac\partial{\partial t}=1~, \qquad \dim \vec E=\dim \vec B=2~.
+$$
+If all fields and frequencies are small on an atomic scale, terms of higher dimension are smaller. This is essentially always true in practice, and anyway otherwise the effective description is not valid. The vacuum part of the action 
+$$
+L_{\textrm{vacuum}}=\frac{\hbar}{4e^2}\int _{\mathbb{R}^{3,1}}F\wedge \ast F~.
+$$
+is of dimension four, so we can neglect in $W(A)$ terms of dimension greater than four. Using rotation invariance and reflection symmetry, $W(A)$ cannot have any terms linear in $\vec E$ or $\vec B$ so the lowest dimension terms are 
+$$
+W(A)=\int d^4x(\epsilon \vec E^2-\mu \vec B^2)
+$$
+where $\epsilon$ and $\mu$ are the electric and magnetic susceptibilities. To find how glass interacts with electromagnetism, we just look at the combined Lagrangian
+$$
+\frac{\hbar}{4e^2}\int _{\mathbb{R}^{3,1}}F\wedge \ast F+\int d^4x(\epsilon \vec E^2-\mu \vec B^2)=\int d^4x\Big(\Big(\frac{\hbar}{4e^2}+\epsilon\Big) \vec E^2-\Big(\frac{\hbar}{4e^2}+\mu\Big)  \vec B^2\Big)~.
+$$
+The resulting Euler-Langrange equations are Maxwell's equations, but with a reduced speed of light. 
+
+If instead of glass, we consider a crystal (still with no relevant degrees of freedom), then $W$ can have general quadratic terms in $\vec E$ and $\vec B$
+$$
+\int d^4x(\epsilon_{ij} E_i E_j-\mu_{ij} B_i B_j)~.
+$$
+We get an anisotropic speed of light and ``birefringence''. If the crystal lacks reflection symmetry, then $W(A)$ can contain terms linear in $\vec E$ and $\vec B$
+$$
+\Delta W=\int d^4x (\vec n\cdot \vec E+\vec m\cdot \vec B)
+$$
+where $\vec n$ and $\vec m$ depend on the crystal axes. Such materials are ``ferroelectric'' and ``ferromagnetic'', as one can learn by deriving and solving the Euler-Lagrange equations. By now we know how to study materials with no relevant degrees of freedom: \textbf{write the possible terms in $W(A)$ of low dimension. derive and solve the Euler-Lagrange equations.} The hypothesis that there are no relevant degrees of freedom ensures that $W(A)$ is a local functional of $A$ only.
+
+
+\subsection*{Some geometry}
+
+
+Now we are ready to study the quantum Hall effect, which involves an atomic monolayer or a 2d surface in space. Hence, the spacetime sweeps out a three-manifold $Q=\Sigma\times \bR$ where $\bR$ parametrizes time. So we are doing $U(1)$ gauge theory on a three-manifold $Q$, and the reason that we will get something interesting is that there is an unusual term, of topological interest, that can appear in $Q(A)$. This is the Chern-Simons form. We can assume that $Q$ is the boundary of a 4-manifold $M$ over which the electromagnetic line bundle $\cL$ and connection $A$ extend and we write 
+$$
+S_M(A)=\frac{1}{4\pi^2}\int_M F\wedge F
+$$
+This depends on $M$, but only slightly
+$$
+S_M(A)-S_{M'}(A)=\frac{1}{4\pi^2}\int_X F\wedge F\in \bZ
+$$
+\begin{figure}[h]\centering
+\includegraphics[width=8cm]{4d-3d}
+\end{figure}
+
+So as a map to $\bR/\bZ$, $S_M(A)$ is independent of $M$ and we just call it $S(A)$. Concretely, for a trivial line bundle $\cL$, we have $$S(A)=\frac{1}{4\pi^2}\int_Q A\wedge dA~.$$
+$S(A)$ has a low dimension -three- so if we can include it in $W(A)$, the effective action, then this will be important? Does it make sense to do this, given that $S(A)$ has an additive integer indeterminacy?
+
+In classical mechanics, adding a constant to the action $I$ does not matter as it does not affect the Euler-Lagrange equation. In quantization, one needs to be able to define $\exp(iI)$. To compute quantum transition amplitude, so I can have an additive ambiguity, but this must be of the form $2\pi k$ for $k\in \bZ$. So a conceivable material may have in the electromagnetic effective action $W(A)$ a multiple of $S(A)$, but it must be a very special multiple:
+$$
+W(A)=2\pi k S(A)=\frac{k}{2\pi}\int A\wedge dA~,
+$$
+for some $k\in \bZ$ (which depends on the material, the magnetic field, etc.) 
+
+
+
+%
+%\subsection*{ The Jones polynomial}
+%
+%This also works in the non-Abelian case 
+%. $A$ is the connection on a $G$-bundle for compact simple $G$ over 3-manifold $Q$ and the action
+%$$
+%W(A)=\frac{k}{2\pi}\int_Q \textrm{Tr}(A\wedge dA+\frac23A\wedge A\wedge A)
+%$$
+%where $W$ maps to $\bR/2\pi \bZ$. So we can consider a quantum theory in which $W(A)$ is the complete action. The quantum path integral on a 3-manifold $Q$ is formally
+%$$
+%Z(M)=\int_{\cA/\cG}\cD A\exp(iW(A))
+%$$
+%where $\cA$ is the space of connections and $\cG$ is the gauge transformation $\textrm{Map}(Q,G)$. This is the quantum 3-manifold invariant with $q=e^{2\pi i /(k+h)}$. The same theory also leads to the Jones polynomial of knots and its generalizations. 
+%$$
+%\Phi _{R}\left( C\right) =\dfrac {1}{Z\left( M\right) }\int _{\cA/\cG}\cD A\exp iW\left( A\right) \mathrm{Tr}_{R}Hol\left( A;C\right)
+%$$
+%When the gauge group is Abelian, one still gets knot and 3-manifold invariants. But they are ``classical'' ones; linking numbers, torsion, eta-invariant. 
+
+
+
+\subsection*{Theory of the quantum Hall effect}
+
+
+Now let us go back to the quantum Hall effect where the gauge group (for the class of materials we are considering) is Abelian. We consider a flat sample in the x-y plane with $k\neq 0$.
+$$
+L=\frac{\hbar}{4e^2}\int_{\bR^{1,3}} F\wedge \ast F +\frac{k}{2\pi}\int_{\textrm{sample}\times \textrm{time}} A\wedge dA
+$$
+The electromagnetic current is 
+$$
+J=\frac{4\pi e^2}{\hbar}\frac{\delta W}{\delta A}=\frac{e^2k}{\hbar} (\ast_3 F)
+$$
+where $\ast_3$ is the Hodge star in the 3-dimensional spacetime for the sample. In a non-relativistic Language, this becomes 
+$$
+J_x=\frac{e^2k}{\hbar} E_y ~,\qquad J_y=-\frac{e^2k}{\hbar} E_x ~.
+$$
+We have found the quantum Hall effect $\sigma_H=\frac{e^2}{\hbar}k$. 
+\begin{figure}[h]\centering
+\includegraphics[width=8cm]{plane}
+\end{figure}
+
+For fractional quantum Hall effects, we add a new $U(1)'$ gauge field $B$ with the old $U(1)$ gauge field $A$
+$$
+\frac{\hbar}{4e^2}\int F\wedge \ast F +\frac{k_1}{2\pi}\int A\wedge dA+\frac{k_2}{\pi}\int A\wedge dB+\frac{k_3}{2\pi}\int B\wedge dB~.
+$$
+where $B$ can be interpreted as an ``emergent'' gauge field that only propagates in the sample.
+By integrating out $B$ field, one can check that the conductivity becomes fractional $$\sigma_H=\frac{e^2}{\hbar}\left(k_1-\frac{k_2^2}{k_3}\right)~.$$
+
+
+
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Witten:2005}
+
+E.~Witten, \href{https://www.fields.utoronto.ca/audio/04-05/distinguished_lectures/witten3/}{2004-2005 Distinguished Lecture Series  at the Fields Institute.}
+
+
+\bibitem{Witten:2015}
+E.~Witten, \textit{Three Lectures On Topological Phases Of Matter} \href{http://arxiv.org/abs/1510.07698}{[arXiv:1510.07698]}.
+
+\end{thebibliography}
+
+
+
+\end{document}
+

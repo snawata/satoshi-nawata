@@ -1,0 +1,284 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{bbm}
+\usepackage{youngtab}
+\usepackage{rotfloat}
+\usepackage{stmaryrd}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{tikz-cd}
+\usepackage{tcolorbox}
+
+
+
+
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{align}}
+\def\ea{\end{align}}
+
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sign}{\textrm{sign}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+\newcommand{\Ker}{{\rm Ker}}
+
+\newcommand{\Coker}{{\rm Coker}}
+
+
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\GL}{\mathrm{GL}}
+
+
+
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+\renewcommand{\Im}{{\rm Im}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{Z}}}
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+\usepackage{graphicx}
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 12}
+
+\subsection*{1. Toy models for index theorem}
+
+\subsubsection*{1.1 Index theorem on a point}
+
+First let us consider the index theorem in the simplest setting, namely on a point. Since a vector bundle over a point is just a vector space, we consider an index of a linear map. 
+Let $A:\bR^r \to \bR^s$ be a linear map (an $r\times s$ matrix). Compute  $$\dim \Ker A -\dim \Coker A~.$$
+
+
+\subsubsection*{1.2 Index theorem on $\bR$}
+
+Next, we consider the index theorem on $\bR$. More explicitly, we consider solutions of ordinary differential equations
+\begin{align}\nonumber
+D=\frac{d}{dx}+A(x)~, \qquad D^*=-\frac{d}{dx}+A(x)~
+\end{align}
+where $A$ takes the value of symmetric matrices. We require solutions to converge to zero at infinity. 
+For $f,g\in C^\infty(\bR)$ which decay at infinity, it is easy to see 
+$$
+\int_{-\infty}^\infty (Df,g)dx=\int_{-\infty}^\infty (f,D^*g)dx
+$$
+where we use the fact that $A$ is a symmetric matrix. Therefore, $D^*$ is the adjoint operator of $D$.
+
+
+% 
+% The goal is to compare the dimensions of the spaces of solutions of $(\frac{d}{dx}+A)f=0$ and $(-\frac{d}{dx}+A)g= 0$, respectively. Then we are required to study, closely, their behavior at infinity.
+
+
+Let $A: \bR\to \textrm{Sym}(r,\bR)$ be a function taking its value on $r\times r$ symmetric matrices $\textrm{Sym}(r,\bR)$, and for sufficiently large $R$, it is subject to 
+$$
+A(x)=\left\{ \begin{array}{l} A_- \quad (x\le -R)\\  A_+ \quad (x\ge R) \end{array}\right.
+$$
+for some matrices $A_-$ and $A_+$. We consider the following ordinary differential equations for vector valued functions $f(x)$, $g(x)$ i.e., $f,g: \bR\to \bR^r$:
+\begin{align}
+Df(x)&=f'(x) + A(x)f(x) = 0~, \label{eq-1}\\  
+D^*g(x)&=-g'(x) + A(x)g(x) = 0~.\label{eq-2}
+\end{align}
+Show that these equations are linear. Namely, if $\alpha(x)$ and $\beta(x)$ are solutions of the equation, then $p \alpha(x) +q\beta(x)$ is also a solution for $p,q\in \bR$. In other words, the space of solutions is a linear space.
+
+For any initial value $f(x_0)$, $g(x_0)$ for a fixed point $x_0\in \bR$, the theory of ordinary differential equations tells us that the solution exists uniquely. Namely,
+\begin{align}\nonumber
+f(x)&=P\exp\left(-\int_{x_0}^x A(\tilde x)d\tilde x\right)\cdot f(x_0)~,\cr  
+g(x)&=P\exp\left(\int_{x_0}^x A(\tilde x)d\tilde x\right)\cdot g(x_0)~,  
+\end{align}
+where $P$ represents the ordered integral. As a result, solutions are determined by an initial value and the space of solutions is therefore an $r$-dimensional  vector space. We denote the spaces of solutions to \eqref{eq-1} and \eqref{eq-2} by $E$ and $F$, respectively.
+For $f\in E$ and $g\in F$, show that its inner product is independent of a position $x\in \bR$:
+$$
+\frac{d}{dx} (f(x),g(x))=0~.
+$$
+Therefore, one can consider $E$ and $F$ are dual to each other, i.e. $E^*=F$.
+
+
+We, however, restrict ourselves to solutions which decay at infinity.
+We write the space of such solutions
+\begin{align}\nonumber
+E\supset E_0&:= \{ f(x) | f'(x) + A ( x ) f ( x ) = 0~, \lim_{x\to \pm \infty} f ( x ) = 0 \}~.\cr
+F\supset F_0 &:= \{ g(x) | -g'(x) + A (x) g ( x ) = 0~, \lim_{x\to \pm \infty} g( x ) = 0 \}~,
+\end{align}
+Changing the function $A(x)$ on a compact interval $-R \le x \le R$, the dimensions of $E_0$ and $F_0$  may vary.
+%Now, we introduce another ordinary differential equation 
+%$$-g'(x) + A(x)g(x) = 0~$$
+%Here, $g(x)$ is a $\bR^r$-valued function. Write
+%$$F_0 = \{ f(x) | -g'(x) + A ( x ) g ( x ) = 0~, \lim_{x\to \pm \infty} g( x ) = 0 \}~.$$
+%The dimension of this vector space may also vary according to changes of $A(x)$, in other words, changes of $A(x)$.
+A remarkable fact is that the difference between the dimensions of $E_0$ and $F_0$ does not change, even though $A(x)$ varies. Let us see this more precisely by assuming that eigenvalues of $A_\pm$ do not contain zeros. 
+
+Suppose that $A_\pm$ has an eigenvalue $\lambda$ for an eigenvector $v$. Then, the solution to \eqref{eq-1} and \eqref{eq-2} has asymptotic
+$$
+f(x)=e^{-\lambda x} v ~, \qquad g(x)=e^{\lambda x} v~ \quad \textrm{for} \quad x\ge R~.
+$$
+Whether or not the solution converges to zero as $x\to \pm \infty$ is dependent of the sign of the eigenvalue $\lambda$.
+
+
+
+Let us define $E_\pm$ be the solution which converges to zero as $x\to \pm\infty$. Then, show that $E_0=E_+\cap E_-$. In addition, using the fact that $F=E^*$ is dual to $E$,  show that $F_0=E_+^\perp \cap E_-^\perp$. Thus, show that 
+$$
+\dim E_0 -\dim F_0=\dim E_+ + \dim E_--r~.
+$$
+Consequently, show that the index theorem on $\bR$ is
+$$\dim E_0-\dim F_0=\frac12(\sign(A_-)-\sign(A_+))~,$$
+where $\sign(B)$ for a square matrix $B$ denotes the number of positive eigenvalues of $B$ subtracted by the number of negative eigenvalues. This is the index theorem on $\bR$, which captures the essential points of supersymmetric quantum mechanics. (Although the supersymmetric quantum mechanics in the lecture note corresponds to the case of $r=1$, we can generalize it to an arbitrary $r$.)
+
+
+
+
+
+\subsection*{2. Superfield formalism}
+
+
+
+In the lecture, I introduce to supersymmetric quantum mechanics. In this exercise, we will formulate it in a more concise way. 
+
+Let us write fermionic creation and
+annihilation operators as follows:
+\be\nonumber
+\overline \psi =  \sigma_{+}
+= \begin{pmatrix} 0 & 1\cr
+0 &0\end{pmatrix},
+\qquad
+\psi =  \sigma_{-}=
+\begin{pmatrix} 0 & 0\cr
+1 &0\end{pmatrix}, \qquad [\overline \psi, \psi]=\sigma_3~.
+\ee
+Then, the Hamiltonian can be written as
+\[
+H= { 1 \over 2} p^2+ {1 \over 2} W^\prime(x)^2   - { 1 \over 2}
+[\psi,\overline \psi]  W^{
+\prime\prime}(x),
+\]
+Show that the action can be written as
+\be\label{action}
+S=\int dt \left[ {1 \over 2} \dot{x}^2 + i \overline \psi\partial_t \psi -
+{1 \over 2} W^\prime(x)^2 +{ 1 \over 2} [\psi,\overline \psi]  W^{\prime\prime}(x)\right]~.
+\ee
+Then, show that the action is invariant under the supersymmetric transformation
+\begin{align}\nonumber
+ \delta x &= \overline\epsilon  \psi +\overline \psi\epsilon, \cr
+ \delta \overline\psi &= \overline\epsilon \left(i \partial_{t} x- W^\prime(x) \right), \cr
+ \delta \psi &=  -\epsilon \left( i\partial_{t} x + W^\prime(x) \right),
+\end{align}
+where $\epsilon$ and $\overline\epsilon$ are two infinitesimal anti-commuting
+parameters. 
+
+
+Let us show that the action \eqref{action} can be obtained by using superfield formalism. Superfields are defined on the superspace $(x; \theta,\overline\theta)$ where $x$ is the space coordinate  and $\theta.\overline \theta$ are Grassmann variables subject to  
+\[
+\{ \theta, \overline \theta \} = \{ \theta,\theta \} = \{ \overline\theta, \overline\theta \} = 0~.
+\]
+Let us define the following superfield
+\begin{equation*}
+\Phi(x, \theta, \overline \theta ) = x + i \theta \psi - i\overline \psi
+\overline \theta +
+\theta \overline \theta D~,
+\end{equation*}
+where $D$ is introduced as an auxiliary field.
+Acting the following derivative on it
+$$ D_{\theta} = \partial_{\theta} - i \overline \theta \partial_t~, $$
+show that 
+\begin{equation*}
+D_{\theta} \Phi = i \psi - \overline \theta D - i \overline \theta \dot{x}
++\overline \theta \theta
+\dot{\psi}~.
+\end{equation*}
+Similarly, show that
+\begin{equation*}
+D_{\overline \theta}  \Phi = -i \overline \psi - \theta D + i \theta \dot{x}
++\overline \theta
+\theta \dot{\overline \psi}~,
+\end{equation*}
+where $D_{\overline \theta} = \partial_{\overline \theta} - i \theta \partial_t$.
+Then, one can write the action in the superspace
+\begin{equation*}
+S = \int dt d \overline \theta d \theta \left({1 \over 2} | D_{\theta} \Phi |^2
+- W(\Phi)\right)~.
+\end{equation*}
+Using the rule of the Grassmann integral
+\[
+\int \theta d \theta = \int \overline \theta d \overline \theta = 1~,\qquad
+\int d \theta = \int d \overline\theta = 0~,
+\]
+show that the action is indeed equal to
+\begin{equation*}
+S= \int dt\Big[ {1 \over 2} \dot{x} ^2+ \overline \psi[\partial_{t}  -
+W^{\prime \prime} (x)]\psi + {1 \over 2} D^2 + D W^{\prime} (x) \Big]~.
+\end{equation*}
+By substituting the equation of motion $D= -W^\prime(x)$, we obtain the previous action \eqref{action}
+\begin{equation*}
+S= \int dt \left[ {1 \over 2} \dot{x} ^2+ \overline \psi[\partial_{t}  -
+W^{\prime \prime} (x)]\psi - {1 \over 2} W^{\prime} (x)^2 \right]~.
+\end{equation*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+

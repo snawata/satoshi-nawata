@@ -1,0 +1,616 @@
+ \documentclass[12pt,a4paper]{article}
+\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{fullpage}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%\parskip=1em
+%\parindent=0.3in
+%\setlength\oddsidemargin{0.5in} \setlength\evensidemargin{0.5in}
+%\setlength\textwidth{5.5in}
+%
+%\hfuzz6pt % Don't bother to report over-full boxes if over-edge is < 6pt
+%
+%\newlength{\defbaselineskip}
+%\setlength{\defbaselineskip}{\baselineskip}
+%\newcommand{\setlinespacing}[1]%
+%           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%
+%\newcommand{\properpagestyle}{\pagestyle{myheadings}\markboth{}{}\markright{}}
+
+
+
+
+\def\Ric{\mathop{\rm Ric}}
+\def\cRic{\mathop{\stackrel{\circ}{\Ric}}}
+\def\Scal{\mathop{\rm R}}
+\def\scL{\mathop{\mathcal L}}
+\def\Hess{\mathop{\rm Hess}}
+\def\bt{\mathop{\bar\tau}}
+\def\dist{\mathop{\rm dist}}
+\def\Cut{\mathop{\rm Cut}}
+\def\Riem{\mathop{\rm Rm}}
+\def\scal{\mathop{\rm scal}}
+\def\Sec{\mathop{\rm Sec}}
+\def\Diam{\mathop{\rm Diam}}
+\def\CS{\mathop{\rm C_S}}
+\def\V{\mathop{\rm V}}
+\def\Vol{\mathop{\rm Vol}}
+\def\Area{\mathop{\rm Area}}
+\def\VR{\mathop{\rm VR}}
+\def\supp{\mathop{\rm supp}}
+\def\div{\mathop{\rm div}}
+\def\inj{\mathop{\rm inj}}
+\def\diam{\mathop{\rm diam}}
+\def\Id{\mathop{\rm Id}}
+\def\RRR{\mathop{\mathcal{R}}}
+\def\MMM{\mathop{\mathcal{M}}}
+\def\HHH{\mathop{\mathcal{H}}}
+\def\VVV{\mathop{\mathcal{V}}}
+\def\FF{\mathop{\mathbb{F}}}
+\def\RR{\mathop{\mathbb{R}}}
+\def\QQ{\mathop{\mathbb{Q}}}
+\def\CC{\mathop{\mathbb{C}}}
+\def\ZZ{\mathop{\mathbb{Z}}}
+\def\SS{\mathop{\mathbb{S}}}
+\def\SSS{\mathop{\mathcal{S}}}
+\def\PP{\mathop{\mathbb{P}}}
+\def\End{\mathop{\rm End}}
+\def\Aut{\mathop{\rm Aut}}
+\def\Ad{\mathop{\rm Ad}}
+\def\ad{\mathop{\rm ad}}
+\def\hht{\mathop{\rm ht}}
+\def\gl{\mathop{\mathfrak{gl}}}
+\def\ssl{\mathop{\mathfrak{sl}}}
+\def\TP{\mathop{\mathcal{TP}}}
+\def\PPP{\mathop{\mathcal{P}}}
+\def\gggg{\mathop{\mathfrak{g}}}
+\def\ffff{\mathop{\mathfrak{f}}}
+\def\OO{\mathop{\mathcal{O}}}
+\def\oo{\mathop{\mathfrak{o}}}
+\def\GG{\mathop{\mathcal{G}}}
+\def\WWW{\mathop{\mathcal{W}}}
+\def\Rad{\mathop{\rm Rad}}
+\def\Der{\mathop{\rm Der}}
+\def\Ker{\mathop{\rm Ker}}
+\def\Im{\mathop{\rm Im}}
+
+\def\be{\begin{eqnarray}}
+\def\ee{\end{eqnarray}}
+\def\beg{\begin{eqnarray*}}
+\def\ees{\end{eqnarray*}}
+
+
+%\newcommand{\qed}{\hfill$\Box$}
+\theoremstyle{definition}
+\newtheorem*{aim}{Aim}
+\newtheorem*{axiom}{Axiom}
+\newtheorem*{claim}{Claim}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{defi}{Definition}
+\newtheorem*{eg}{Example}
+\newtheorem*{ex}{Exercise}
+\newtheorem*{fact}{Fact}
+\newtheorem*{law}{Law}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{notation}{Notation}
+\newtheorem*{prop}{Proposition}
+\newtheorem*{question}{Question}
+\newtheorem*{thm}{Theorem}
+
+
+
+
+
+% Maths symbols
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+%\newcommand\ad{\mathrm{ad}}
+\newcommand\AND{\mathsf{AND}}
+\newcommand\Art{\mathrm{Art}}
+\newcommand{\Bilin}{\mathrm{Bilin}}
+\newcommand{\bket}[1]{\left\lvert #1\right\rangle}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\bolds}[1]{{\bfseries #1}}
+\newcommand{\brak}[1]{\left\langle #1 \right\rvert}
+\newcommand{\braket}[2]{\left\langle #1\middle\vert #2 \right\rangle}
+\newcommand{\bra}{\langle}
+\newcommand{\cat}[1]{\mathsf{#1}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\cU}{\mathcal{U}}
+%\newcommand{\Der}{\mathrm{Der}}
+\newcommand{\D}{\mathrm{D}}
+\newcommand{\dR}{\mathrm{dR}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Frob}{\mathrm{Frob}}
+%\newcommand{\GG}{\mathbb{G}}
+%\newcommand{\gl}{\mathfrak{gl}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\Gr}{\mathrm{Gr}}
+\newcommand{\haut}{\mathrm{ht}}
+\newcommand{\Hol}{\mathrm{Hol}}
+\newcommand{\hol}{\mathfrak{hol}}
+%\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\ket}{\rangle}
+\newcommand{\lie}[1]{\mathfrak{#1}}
+\newcommand{\Mat}{\mathrm{Mat}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\normalorder}[1]{\mathop{:}\nolimits\!#1\!\mathop{:}\nolimits}
+\newcommand{\NOT}{\mathsf{NOT}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\Oc}{\mathcal{O}}
+\newcommand{\Or}{\mathrm{O}}
+\newcommand\OR{\mathsf{OR}}
+\newcommand{\ort}{\mathfrak{o}}
+\newcommand{\PGL}{\mathrm{PGL}}
+\newcommand{\ph}{\,\cdot\,}
+\newcommand{\pr}{\mathrm{pr}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\PSL}{\mathrm{PSL}}
+\newcommand{\Ps}{\mathcal{P}}
+\newcommand{\PSU}{\mathrm{PSU}}
+\newcommand{\pt}{\mathrm{pt}}
+\newcommand{\qeq}{\mathrel{``{=}"}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\Rs}{\mathcal{R}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\so}{\mathfrak{so}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathfrak{su}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\term}[1]{\textbf{#1}\index{#1}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\tv}[1]{|#1|}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\uu}{\mathfrak{u}}
+\newcommand{\Vect}{\mathrm{Vect}}
+\newcommand{\wsto}{\stackrel{\mathrm{w}^*}{\to}}
+\newcommand{\wt}{\mathrm{wt}}
+\newcommand{\wto}{\stackrel{\mathrm{w}}{\to}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\d}{\mathrm{d}}
+\renewcommand{\H}{\mathbb{H}}
+\renewcommand{\P}{\mathbb{P}}
+\renewcommand{\sl}{\mathfrak{sl}}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+%\renewcommand{\F}{\mathcal{F}}
+
+\let\Im\relax
+\let\Re\relax
+
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\area}{area}
+%\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Bernoulli}{Bernoulli}
+\DeclareMathOperator{\betaD}{beta}
+\DeclareMathOperator{\bias}{bias}
+\DeclareMathOperator{\binomial}{binomial}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\ccl}{ccl}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\cls}{\overline{\mathrm{span}}}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\corr}{corr}
+\DeclareMathOperator{\cosec}{cosec}
+\DeclareMathOperator{\cosech}{cosech}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\covol}{covol}
+\DeclareMathOperator{\diag}{diag}
+%\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\disc}{disc}
+\DeclareMathOperator{\dom}{dom}
+%\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\energy}{energy}
+\DeclareMathOperator{\erfc}{erfc}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator*{\esssup}{ess\,sup}
+\DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\fst}{fst}
+\DeclareMathOperator{\Fit}{Fit}
+\DeclareMathOperator{\fix}{fix}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\gammaD}{gamma}
+\DeclareMathOperator{\gr}{gr}
+\DeclareMathOperator{\hcf}{hcf}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Image}{image}
+\DeclareMathOperator{\Im}{Im}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\length}{length}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\like}{like}
+\DeclareMathOperator{\Lk}{Lk}
+\DeclareMathOperator{\Maps}{Maps}
+\DeclareMathOperator{\mse}{mse}
+\DeclareMathOperator{\multinomial}{multinomial}
+\DeclareMathOperator{\orb}{orb}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\otp}{otp}
+\DeclareMathOperator{\Poisson}{Poisson}
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\rel}{rel}
+%\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\Re}{Re}
+\DeclareMathOperator*{\res}{res}
+\DeclareMathOperator{\Res}{Res}
+%\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\Rees}{Rees}
+\DeclareMathOperator{\Root}{Root}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\snd}{snd}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\St}{St}
+%\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Syl}{Syl}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\vol}{vol}
+\usetikzlibrary{knots}
+
+
+
+
+\pgfarrowsdeclarecombine{twolatex'}{twolatex'}{latex'}{latex'}{latex'}{latex'}
+\tikzset{->/.style = {decoration={markings,
+                                  mark=at position 1 with {\arrow[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{<-/.style = {decoration={markings,
+                                  mark=at position 0 with {\arrowreversed[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{<->/.style = {decoration={markings,
+                                   mark=at position 0 with {\arrowreversed[scale=2]{latex'}},
+                                   mark=at position 1 with {\arrow[scale=2]{latex'}}},
+                       postaction={decorate}}}
+\tikzset{->-/.style = {decoration={markings,
+                                   mark=at position #1 with {\arrow[scale=2]{latex'}}},
+                       postaction={decorate}}}
+\tikzset{-<-/.style = {decoration={markings,
+                                   mark=at position #1 with {\arrowreversed[scale=2]{latex'}}},
+                       postaction={decorate}}}
+\tikzset{->>/.style = {decoration={markings,
+                                  mark=at position 1 with {\arrow[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{<<-/.style = {decoration={markings,
+                                  mark=at position 0 with {\arrowreversed[scale=2]{twolatex'}}},
+                      postaction={decorate}}}
+\tikzset{<<->>/.style = {decoration={markings,
+                                   mark=at position 0 with {\arrowreversed[scale=2]{twolatex'}},
+                                   mark=at position 1 with {\arrow[scale=2]{twolatex'}}},
+                       postaction={decorate}}}
+\tikzset{->>-/.style = {decoration={markings,
+                                   mark=at position #1 with {\arrow[scale=2]{twolatex'}}},
+                       postaction={decorate}}}
+\tikzset{-<<-/.style = {decoration={markings,
+                                   mark=at position #1 with {\arrowreversed[scale=2]{twolatex'}}},
+                       postaction={decorate}}}
+
+
+\tikzset{circ/.style = {fill, circle, inner sep = 0, minimum size = 3}}
+\tikzset{scirc/.style = {fill, circle, inner sep = 0, minimum size = 1.5}}
+\tikzset{mstate/.style={circle, draw, blue, text=black, minimum width=0.7cm}}
+
+\tikzset{eqpic/.style={baseline={([yshift=-.5ex]current bounding box.center)}}}
+\tikzset{commutative diagrams/.cd,cdmap/.style={/tikz/column 1/.append style={anchor=base east},/tikz/column 2/.append style={anchor=base west},row sep=tiny}}
+
+
+\definecolor{mblue}{rgb}{0.2, 0.3, 0.8}
+\definecolor{morange}{rgb}{1, 0.5, 0}
+\definecolor{mgreen}{rgb}{0.1, 0.4, 0.2}
+\definecolor{mred}{rgb}{0.5, 0, 0}
+
+
+%\title{ Lecture 4}
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Lecture 10}
+
+\centerline{\Large \bf Nakahara section  11}
+
+
+
+
+\section{Characteristic Classes}
+
+In the last time, we have seen principal $U(1)$-bundles on $S^2$ are classified by the monopole number $n$ which tells us how the $U(1)$ fibers over the upper hemisphere and the lower hemisphere are glued together. The generalization of this notion for a vector bundle $\pi:E\to M$ leads to a \term{characteristic class} associated to a cohomology class of $M$. Characteristic classes was introduced to extract topological information of a base manifold of vector bundles or principal $G$-bundles from curvature forms. This is called \term{Chern-Weil theory}.
+
+
+
+
+Characteristic classes are constructed as \term{invariant polynomials} of the curvature $F = dA+A\wedge A$. Under gauge transformation, $F$ transforms as $F\to g^{-1}Fg$, where $g\in \mathscr{G}_E$. To construct characteristic classes, we need to introduce invariant polynomials $P(X)$ of matrixes, that is invariant under the conjugation, $P(g^{-1}F g) = P(F)$. Examples of invariant polynomials are $\Tr F^k$ ($k = 1,2,\cdots$) and $\det F$. In fact, we can use these to construct nice bases of invariant polynomials as follows:
+
+
+(1) $\sigma_k(F)$ defined by
+$$\det(1 + tF) = 1 + t\sigma_1(F) + t^2\sigma_2(F) + \cdots + t^r\sigma_r(F)~.$$
+
+(2) $s_k(F)$ defined by
+ $$s_k(F) = \Tr F^k~, \qquad (k = 1, \cdots, r)~.$$
+They are related to each other by Newton's formula,
+$$s_1 = \sigma_1~ , \quad  s_2 = \sigma_1^2 -\sigma_2 ~, \quad  s_3 = \sigma_1^3 - 3 \sigma_1 \sigma_2 + 3  \sigma_3 ~, \cdots$$
+We can also express the invariant polynomials in terms of eigenvalues. If $F$ is a hermitian matrix, we can diagonalize it with eigenvalues $x_1,\cdots,x_k$. Then,
+$$\prod_{k=1}^r (1 + tx_k) = 1 + t\sigma_1(x) + \cdots + t^r\sigma_r(x). $$
+Similarly, 
+$s_k(F) = \sum_{j=1}^r (x_j)^k$.
+
+
+If $P_k(F)$ is an invariant polynomial of degree $k$, we can use the curvature 2-form $F$ to define a $2k$-form $P_k(F)$ so that it is invariant under the gauge transformation, $F\to g^{-1}F g$. It is also a closed form because the Bianchi identity
+$$
+dF+[A\wedge F]=0
+$$
+tells us
+\begin{align}\nonumber
+d\; \Tr F^k &= \Tr (dF\;F^{k-1} +F\;dF \;F^{k-1} +\cdots + F^{k-1}dF ) \cr
+&= -\Tr (([A\wedge F])F^{k-1} +\cdots+F^{k-1}([A\wedge F])  ) \cr
+&=-\Tr(A\wedge F^k -F^k\wedge A)=0 
+\end{align}
+Thus, we find $P_k(F)\in H^{2k}(M)$.
+
+Moreover, $P_k(F)$ is invariant under continuous deformation of the gauge field $A$ as an element of $H^{2k}(M)$. Suppose that we change $A \to A + \eta$ with $\eta$ being an infinitesimal one-form. 
+Under this deformation, $F$ changes by $\delta F = d\eta + A\wedge \eta+\eta\wedge A$. Therefore,
+\begin{align}
+\delta \Tr F^k &=\Tr( (d\eta + A\wedge \eta+\eta\wedge A)F^{k-1} +\cdots+F^{k-1}(d\eta + A\wedge \eta+\eta\wedge A)  )\cr
+&=k\Tr  ((d\eta + A\wedge \eta+\eta\wedge A)F^{k-1}) \cr
+&=k\Tr ( d\eta F^{k-1} -\eta dFF^{k- 2} -\cdots-\eta F^{k- 2}dF  )\cr
+&= k \;d\Tr ( \eta F^{k-1} )~.\nonumber
+\end{align}
+Since both $\eta$ and $F$ transform homogeneously under the gauge transformation, $\Tr(\eta F^{k-1})$ is a well-defined ($2k-1$)-form. Thus, under any infinitesimal deformation, $P_k(F)$ changes by an exact form. Thus, $P_k(F)$ depends only on the type of the bundle $E$ and not on a choice of the connection $A$ on $E$. For a more complete proof, please refer to Proposition 5.28 in Morita's book.
+
+\subsection{Pontryagin Classes}
+Let us consider a vector bundle $\pi:E\to M$ of rank $r$. One can always put a metric $g$ on $E$ and consider a connection $A$ which is compatible with the metric $g$. Therefore, we can consider the curvature form $F$ takes its value on $\mathfrak{so}(r)$. Namely it is a anti-symmetric $(F^i{}_j+F^j{}_i=0)$ 2-form so that $\Tr F^k=0$ if $k$ is odd. Therefore, for  the invariant polynomial $P_k$ of odd degree, we have
+$$
+P_k(F)=0~.
+$$ 
+As a result, the \term{Pointryagin class} is defined as
+$$
+p_k(E):=\frac1{(2\pi)^{2k}}\sigma_{2k}(F)\in H^{4k}(M;\bR)
+$$
+They may be written as
+$$p(E)=\det \left(1+\frac{1}{2\pi} F \right)=1+p_1(E)+p_2(E)+\cdots+p_{[r/2]}(E)~.$$
+
+
+
+\begin{thm}[Hirzebruch signature theorem]
+Let $M$ be an oriented compact 4-dimensional manifold. Since the Hodge star $\ast:H^2(M)\to H^2(M)$ satisfies $\ast^2=1$ on $H^2(M)$, we can decompose it into $H^2(M)=H^2_+(M)\oplus H^2_-(M)$ with eigenvalues $\pm1$ of $\ast$. Let us define the signature of $M$ by
+$$
+\tau(M)=\dim H^2_+(M) - \dim H^2_-(M)~.
+$$
+Then, the signature can be expressed by
+$$
+\tau(M)=\frac13\int_M p_1(TM)~.
+$$
+\end{thm}
+
+
+
+
+
+
+\subsection{Chern Classes}
+Now let us consider complex vector bundle $\pi:E\to M$ of rank $r$.  Similarly, one can always put a Hermitian metric $g$ on $E$ and consider a connection $A$ which is compatible with the metric $g$. Then, the curvature form $F$ takes its value $\mathfrak{u}(r)$. Namely it is a skew-Hermitian $(F^i{}_j+\overline F^j{}_i=0)$ 2-form so that $\Tr \left(\frac{F}{2\pi i} \right)^k$ is a real $2k$-form.
+
+Then, \term{Chern class} is defined as 
+$$c_k(E):=\left(\frac{-1}{2\pi i}\right)^k\sigma_k(F) \in H^{2k}(M;\bR)~.$$  
+This can be written as
+$$c(E)=\det  \left(1 - \frac{1}{2\pi i} F \right)  = c_0(E) + c_1 (E)+ c_2 (E)+ \cdots +c_r(E)~.$$
+  For example, we can explicitly write 
+$$c_0=1~, \quad c_1=\frac{-1}{2\pi i} \Tr F~, \quad c_2=-\frac1{8\pi^2} (\Tr F\wedge \Tr  F-\Tr  F\wedge F), \cdots $$
+   If the structure group is in $\SU(r)\in\U(r)$, we have a trivial first Chern class $c_1 = 0$ because $\mathfrak{su}(r)$ is traceless.
+   
+   
+
+Instead of $\sigma_k$, we can use $s_k$ for invariant polynomials, which defines the \term{Chern characters} 
+$$ch_k(E) = \frac{1}{k!}\Tr \left(-\frac{F}{2\pi i}\right)^k  \in H^{2k}(M) ~. $$
+We can also write it as
+$$ch(E)=ch_0(E) +ch_1 (E)+\cdots=\Tr\exp  \left(-\frac{F}{2\pi i}\right) ~.$$
+
+
+\subsection{Some properties}
+
+The Pontryagin class and Chern class are related by
+$$
+p_k(E)=(-1)^kc_{2k}(E\otimes\bC)\in H^{4k}(M;\bR)
+$$
+where $E\otimes \bC$ is the complexification of a real bundle $E\to M$.
+
+   One of the important properties of the Pontryagin and Chern classes is that it behaves nicely when we take a direct sum $E_1 \oplus E_2$ of vector bundles $E_1, E_2$ as,
+\begin{align}\nonumber
+p(E_1 \oplus E_2) &= p(E_1) \wedge p(E_2)~,\cr
+c(E_1 \oplus E_2) &= c(E_1) \wedge c(E_2)~.
+\end{align}
+On the other hand, it does not behave nicely under the direct product $E_1 \otimes E_2$.
+
+
+
+
+The Chern characters behave nicely under both the direct sum and direct product as,
+\begin{align}\nonumber
+ch(E_1 \oplus E_2) = ch(E_1) + ch(E_2)~,\cr
+ch(E_1 \otimes E_2) = ch(E_1) \wedge ch(E_2)~.
+\end{align}
+This property plays an important role in \term{K-theory}.
+
+
+%Chern number
+%Remarkably, the Chern classes and the Chern characters are integral. That means that if we integrate, say, ci(E) over any 2i-cycle in M with integer coefficients, we find an integer that is independent of the choice of the connection of E. If 2k ? n, we can integrate cn(F) over the entire manifold M and get the Chern number. Let us compute Chern numbers in some examples.
+%(1) Consider the monopole bundle over S2. It has the U(1) gauge field A. Let us denote the northen and southern hemispheres of S2 as H±, and the gauge fields on them as A±. For the monopole bundle with n monopole charge, the gauge field transforms as
+%A? = A+ + nd?
+%across the equator, where ? is the longitude of S2. We can then evaluate the Chern number as
+%C1 =   c1 S2
+%= ?1   A++  A?  2? H+ H?
+% ?1   2? S1
+%1   2? 2? 0
+%(A+ ? A?) =
+%Thus, the monopole number is the first Chern number in this case.
+%=
+%nd? = n. (6)
+%  (2) Consider an SU(2) bundle over S4. We can then consider the second Chern number, C2=  c2= 1   trF?F.
+% S4 8?2 S4
+%We again split S4 into H± such that H+ ? H? = S3. Over S3, the gauge field transforms as
+%A? = ??1A+? + ??1d?.
+%When we integrate trF± ? F± over H±, we note that the integrand can be written as
+%trF ? F = dtr  AdA + 2 A3   . 3
+%Note that this does not mean that trF ? F is an exact form since the right-hand side, called the Chern-Simons form, is not necessarily globally defined over S4. Thus,
+%C2 =   c2 S4
+%8?2 S3
+%= 1   tr(??1d?)3.
+% = 1   tr A+dA+ + 2A3+ ?A?dA? ? 2A3? 
+%   (7) The gauge transformation matrix ? is a map from S3 to SU(2). Since the group SU(2) is
+%3 3
+% 24?2 S3
+%diffeomorphic to S3 as a manifold, we can think of it as a map from S3 to itself. Such a map 4
+%can be classified by its winding number, which turns out to be the same as the second Chern number in the above.
+
+\subsection{Euler class}
+Let us turn to a real vector bundle $\pi:E\to M$ of even rank $2r$. In this case, in addition to $\Tr$ and $\det$, we can consider one more way to construct an invariant polynomial, which is called the \term{Pfaffian},
+$$
+Pf(F) = \frac{(-1)^r}{2^r r!} \epsilon^{k_1 j_1 i_2 j_2 \cdots i_r j_r}  F_{i_1j_1}F_{i_2j_2} \cdots F_{i_rj_r}~.
+$$
+Note that, for antisymmetric matrices, the Pfaffian is a square root of the determinant,
+$\det F = Pf(F)^2$.
+If $F$ is real and anti-symmetric, we can block diagonalize it by $\SO(2r)$ as
+\be\label{anti-symm}
+F=\left( \begin{array}{ccccccc}
+ 0& x_1 &0& 0& \cdots & 0& 0\\ 
+-x_1& 0& 0& 0&\cdots &0& 0\\
+ 0& 0& 0& x_2 &&& \\
+0 &0& -x_2& 0 &&&\\
+\cdot&\cdot&&&\cdots&\cdot&\cdot\\ 
+0&0 &&&\cdots& 0 &x_r\\
+0 &0&&&\cdots&  -x_r&0\\
+\end{array}\right)
+\ee
+ We can then write the Pfaffian as
+$$Pf(F) = (-1)^r  \prod_{i=1}^r x_k.$$
+Under the conjugation $F \to g^TFg$, the Pfaffian transforms as $Pf( g^T Fg) = \det g \cdot Pf(F)$.
+
+Thus, if $g\in\SO(2r)$, the Pfaffian is invariant. 
+We can now define the \term{Euler class} by 
+$$e(E) = Pf(E)\in H^{2r}(M;\bR)~.$$
+In fact, the Euler class can be understood as the square root of the highest Pontryagin class $p_r(E)$
+$$p_r(E) = e(E)^2~.$$
+In particular, the tangent bundle $TM$ of an orientable Riemannian manifold $M$ of dimensions
+ $n = 2r$ is an $\SO(2r)$ bundle. For example,
+ 
+\begin{align}\nonumber
+n=2:&\quad e(TM)= \frac{1}{2\pi} R_{12}~, \cr
+n=4:&\quad e(TM)= \frac{1}{32\pi^2} \epsilon_{\mu\nu\rho\sigma}R^{\mu\nu}\wedge R^{\rho\sigma}~,
+\end{align}
+where the Riemann curvature is regarded as the 2-form as,
+$$R^a{}_b =\frac12 R_{cd}{}^a{}_b e^a\wedge e^b=\frac12 R_{\mu\nu}{}^a{}_b dx^\mu\wedge dx^\nu~.$$
+The integral of the Euler class $e(TM)$ over $M$ is indeed equal to the Euler characteristic
+$$\chi(M) = \int_M  e(TM)~,$$
+which can be considered as the higher dimensional version of the Gauss-Bonnet theorem.
+
+ 
+ \subsection{Todd, $L$- and $\hat A$-classes}
+ 
+ Sometime we use other characteristic classes, such as \term{Todd classes, Hirzebruch $L$-class}, and \term{$\hat A$-class}. These classes are just defined by different basis of invariant polynomials. However, I will give a brief introduction since these classes will show up in the index theorem later.
+
+To describe Todd class, let $x_1,\cdots,x_k$ be eigenvalues of curvature form $\frac{-F}{2\pi i}$ of a complex vector bundle. For example, the total Chern classes can
+  be expressed as
+$$ c(F)=\det \left(1-\frac{F}{2\pi i}\right)= \prod_{i=1}^r(1+x_k).$$
+It is worth mentioning that the right-hand side takes the form $\prod_k c(L_k)$, where $L_k$ is a line bundle with a curvature given by $x_k$ and $c(L_k) = 1+x_k$. Thus, as far as the Chern classes are concerned, the vector bundle $E$ behaves like a Whitney (direct) sum of the line bundles $L_1 \oplus L_2 \oplus \cdots\oplus L_k$ although they are not isomorphic as bundles. This phenomenon is called the \term{splitting principle}, and $x_i$ are called \term{Chern roots}.
+Using this notation, the Todd class is defined by, 
+$$Td(E) =\prod_k\frac{ x_k}{1-e^{-x_k}}=1+\frac12c_1+\frac1{12}(c_2+c_1^2)+\cdots~,$$
+
+Furthermore, for real vector bundle $E$, the Hirzebruch $L$-classes are defined by
+$$ L(E)=\prod_{k} \frac{ x_k}{\tanh{x_k}}=1+\frac13 p_1+\frac1{45}(7p_2-p_1^2)+\cdots~,$$
+where $x_i$ are as in \eqref{anti-symm}. 
+Indeed Hirzebruch has introduced this class for the signature theorem of general $4k$-dimensional manifolds. 
+
+  The $\hat A$-classes are defined by,
+$$ \hat A(E)=\prod_{k} \frac{ x_k/2}{\sinh{x_k/2}}=1+\frac{1}{24}p_1+\frac{1}{5760}(7p_1^2-4p_2)+\cdots~.$$
+
+\begin{thebibliography}{99}
+
+\bibitem{EGH}
+Eguchi Gilkey Hanson, {\it  Gravitation, Gauge Theories And Differential Geometry}
+\end{thebibliography}
+
+\end{document}
