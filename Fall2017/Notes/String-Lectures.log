@@ -1,0 +1,2796 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.4.8)  22 JAN 2026 14:53
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**String-Lectures.tex
+(./String-Lectures.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (./jheppub.sty
+Package: jheppub 2018/12/04 v.1.1227
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen141
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count193
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count194
+\leftroot@=\count195
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count196
+\DOTSCASE@=\count197
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count198
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count199
+\dotsspace@=\muskip16
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
+\tag@help=\toks17
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
+\andhelp@=\toks18
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+)
+\epsfxsize=\dimen152
+\epsfysize=\dimen153
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip53
+\bibsep=\skip54
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count271
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count272
+)
+\@linkdim=\dimen154
+\Hy@linkcounter=\count273
+\Hy@pagecounter=\count274
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count275
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4060.
+Package hyperref Info: Option `linktocpage' set `true' on input line 4060.
+Package hyperref Info: Option `pdfa' set `true' on input line 4060.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count276
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen155
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count277
+\Field@Width=\dimen156
+\Fld@charsize=\dimen157
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring ON on input line 6060.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode ON on input line 6070.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count278
+\c@Item=\count279
+\c@Hfootnote=\count280
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-02-07 v7.00v Hyperref driver for pdfTeX
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count281
+\c@bookmark@seq@number=\count282
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip55
+)
+\auth@toks=\toks22
+\affil@toks=\toks23
+\email@toks=\toks24
+\c@email@counter=\count283
+\affiliationsSep=\skip56
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 1
+60.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count284
+\calc@Bcount=\count285
+\calc@Adimen=\dimen158
+\calc@Bdimen=\dimen159
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count286
+\calc@Cskip=\skip59
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count287
+\l_MT_multwidth_dim=\dimen160
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen161
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen162
+\l_MT_above_intertext_sep=\dimen163
+\l_MT_below_intertext_sep=\dimen164
+\l_MT_above_shortintertext_sep=\dimen165
+\l_MT_below_shortintertext_sep=\dimen166
+\xmathstrut@box=\box53
+\xmathstrut@dim=\dimen167
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
+Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks25
+\pgfutil@tempdima=\dimen168
+\pgfutil@tempdimb=\dimen169
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box54
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks26
+\pgfkeys@temptoks=\toks27
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex
+\pgfkeys@tmptoks=\toks28
+))
+\pgf@x=\dimen170
+\pgf@y=\dimen171
+\pgf@xa=\dimen172
+\pgf@ya=\dimen173
+\pgf@xb=\dimen174
+\pgf@yb=\dimen175
+\pgf@xc=\dimen176
+\pgf@yc=\dimen177
+\pgf@xd=\dimen178
+\pgf@yd=\dimen179
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count288
+\c@pgf@countb=\count289
+\c@pgf@countc=\count290
+\c@pgf@countd=\count291
+\t@pgf@toka=\toks29
+\t@pgf@tokb=\toks30
+\t@pgf@tokc=\toks31
+\pgf@sys@id@count=\count292
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count293
+\pgfsyssoftpath@bigbuffer@items=\count294
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen180
+\pgfmath@count=\count295
+\pgfmath@box=\box55
+\pgfmath@toks=\toks32
+\pgfmath@stack@operand=\toks33
+\pgfmath@stack@operation=\toks34
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count296
+)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen181
+\pgf@picmaxx=\dimen182
+\pgf@picminy=\dimen183
+\pgf@picmaxy=\dimen184
+\pgf@pathminx=\dimen185
+\pgf@pathmaxx=\dimen186
+\pgf@pathminy=\dimen187
+\pgf@pathmaxy=\dimen188
+\pgf@xx=\dimen189
+\pgf@xy=\dimen190
+\pgf@yx=\dimen191
+\pgf@yy=\dimen192
+\pgf@zx=\dimen193
+\pgf@zy=\dimen194
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen195
+\pgf@path@lasty=\dimen196
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen197
+\pgf@shorten@start@additional=\dimen198
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count297
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen199
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen256
+\pgf@pt@y=\dimen257
+\pgf@pt@temp=\dimen258
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen259
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen260
+\pgf@sys@shading@range@num=\count298
+\pgf@shadingcount=\count299
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box59
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box60
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen261
+\pgf@nodesepend=\dimen262
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen263
+\pgffor@skip=\dimen264
+\pgffor@stack=\toks35
+\pgffor@toks=\toks36
+))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count300
+\pgfplotmarksize=\dimen265
+)
+\tikz@lastx=\dimen266
+\tikz@lasty=\dimen267
+\tikz@lastxsaved=\dimen268
+\tikz@lastysaved=\dimen269
+\tikz@lastmovetox=\dimen270
+\tikz@lastmovetoy=\dimen271
+\tikzleveldistance=\dimen272
+\tikzsiblingdistance=\dimen273
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count301
+\tikznumberofchildren=\count302
+\tikznumberofcurrentchild=\count303
+\tikz@fig@count=\count304
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count305
+\pgfmatrixcurrentcolumn=\count306
+\pgf@matrix@numberofcolumns=\count307
+)
+\tikz@expandcount=\count308
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen274
+\pgfarrowlength=\dimen275
+\pgfarrowwidth=\dimen276
+\pgfarrowlinewidth=\dimen277
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 2021/01/29 v2.0g defines alltt environment
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks37
+\thm@bodyfont=\toks38
+\thm@headfont=\toks39
+\thm@notefont=\toks40
+\thm@headpunct=\toks41
+\thm@preskip=\skip61
+\thm@postskip=\skip62
+\thm@headsep=\skip63
+\dth@everypar=\toks42
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen278
+\lightrulewidth=\dimen279
+\cmidrulewidth=\dimen280
+\belowrulesep=\dimen281
+\belowbottomsep=\dimen282
+\aboverulesep=\dimen283
+\abovetopsep=\dimen284
+\cmidrulesep=\dimen285
+\cmidrulekern=\dimen286
+\defaultaddspace=\dimen287
+\@cmidla=\count309
+\@cmidlb=\count310
+\@aboverulesep=\dimen288
+\@belowrulesep=\dimen289
+\@thisruleclass=\count311
+\@lastruleclass=\count312
+\@thisrulewidth=\dimen290
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen291
+\captionmargin=\dimen292
+\caption@leftmargin=\dimen293
+\caption@rightmargin=\dimen294
+\caption@width=\dimen295
+\caption@indent=\dimen296
+\caption@parindent=\dimen297
+\caption@hangindent=\dimen298
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
+p \sbox \@tempboxa {\small #1. #2}\ifdim \wd \@tempboxa >\hsize \small #1. #2\p
+ar \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\
+fi \vskip \belowcaptionskip  on input line 1176.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count313
+\c@continuedfloat=\count314
+Package caption Info: hyperref package is loaded.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip64
+\enit@outerparindent=\dimen299
+\enit@toks=\toks43
+\enit@inbox=\box65
+\enit@count@id=\count315
+\enitdp@description=\count316
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip65
+\f@nch@O@elh=\skip66
+\f@nch@O@erh=\skip67
+\f@nch@O@olh=\skip68
+\f@nch@O@orh=\skip69
+\f@nch@O@elf=\skip70
+\f@nch@O@erf=\skip71
+\f@nch@O@olf=\skip72
+\f@nch@O@orf=\skip73
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/mathdots/mathdots.sty
+Package: mathdots 2014/06/11 v0.9 Improve and add various macros for dots in ma
+th.
+\MDo@unit=\dimen300
+\MDo@dotsbox=\box66
+\MDoprekern=\muskip18
+\MDopostkern=\muskip19
+\MDodotkern=\muskip20
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count317
+)
+\MT@toks=\toks44
+\MT@tempbox=\box67
+\MT@count=\count318
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
+LaTeX Info: Redefining \leftprotrusion on input line 1060.
+\MT@prot@toks=\toks45
+LaTeX Info: Redefining \rightprotrusion on input line 1078.
+LaTeX Info: Redefining \textls on input line 1368.
+\MT@outer@kern=\dimen301
+LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
+\MT@listname@count=\count319
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 902.
+LaTeX Info: Redefining \lslig on input line 902.
+\MT@outer@space=\skip74
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip75
+\multirow@cntb=\count320
+\multirow@dima=\skip76
+\bigstrutjot=\dimen302
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks46
+\t@pgfplots@tokb=\toks47
+\t@pgfplots@tokc=\toks48
+\pgfplots@tmpa=\dimen303
+\c@pgfplots@coordindex=\count321
+\c@pgfplots@scanlineindex=\count322
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
+.code.tex))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
+ode.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_loader.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks49
+\t@pgf@tokb=\toks50
+\t@pgf@tokc=\toks51
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgfutil-common-lists.tex))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
+.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructure.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructureext.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+array.code.tex
+\c@pgfplotsarray@tmp=\count323
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+matrix.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+shared.code.tex
+\c@pgfplotstable@counta=\count324
+\t@pgfplotstable@a=\toks52
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+deque.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
+de.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
+ta.code.tex))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
+s.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count325
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-pdftex.def)))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
+code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
+e.tex))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
+ode.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
+ode.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
+r.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
+code.tex)))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
+tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
+g.code.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+e.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
+tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
+x)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen304
+\pgfdecoratedremainingdistance=\dimen305
+\pgfdecoratedinputsegmentcompleteddistance=\dimen306
+\pgfdecoratedinputsegmentremainingdistance=\dimen307
+\pgf@decorate@distancetomove=\dimen308
+\pgf@decorate@repeatstate=\count326
+\pgfdecorationsegmentamplitude=\dimen309
+\pgfdecorationsegmentlength=\dimen310
+)
+\tikz@lib@dec@box=\box68
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
+ts.contourlua.code.tex)
+\pgfplots@numplots=\count327
+\pgfplots@xmin@reg=\dimen311
+\pgfplots@xmax@reg=\dimen312
+\pgfplots@ymin@reg=\dimen313
+\pgfplots@ymax@reg=\dimen314
+\pgfplots@zmin@reg=\dimen315
+\pgfplots@zmax@reg=\dimen316
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
+ks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2023-03-04 v3.2.2 A comprehensive (SI) units package
+\l__siunitx_angle_tmp_dim=\dimen317
+\l__siunitx_angle_marker_box=\box69
+\l__siunitx_angle_unit_box=\box70
+\l__siunitx_compound_count_int=\count328
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+)
+\l__siunitx_number_exponent_fixed_int=\count329
+\l__siunitx_number_min_decimal_int=\count330
+\l__siunitx_number_min_integer_int=\count331
+\l__siunitx_number_round_precision_int=\count332
+\l__siunitx_number_lower_threshold_int=\count333
+\l__siunitx_number_upper_threshold_int=\count334
+\l__siunitx_number_group_first_int=\count335
+\l__siunitx_number_group_size_int=\count336
+\l__siunitx_number_group_minimum_int=\count337
+\l__siunitx_table_tmp_box=\box71
+\l__siunitx_table_tmp_dim=\dimen318
+\l__siunitx_table_column_width_dim=\dimen319
+\l__siunitx_table_integer_box=\box72
+\l__siunitx_table_decimal_box=\box73
+\l__siunitx_table_uncert_box=\box74
+\l__siunitx_table_before_box=\box75
+\l__siunitx_table_after_box=\box76
+\l__siunitx_table_before_dim=\dimen320
+\l__siunitx_table_carry_dim=\dimen321
+\l__siunitx_unit_tmp_int=\count338
+\l__siunitx_unit_position_int=\count339
+\l__siunitx_unit_total_int=\count340
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen322
+\ar@mcellbox=\box77
+\extrarowheight=\dimen323
+\NC@list=\toks53
+\extratabsurround=\skip77
+\backup@length=\skip78
+\ar@cellbox=\box78
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/carlisle/slashed.sty
+Package: slashed 1997/01/16 v0.01 Feynman Slashed Character Notation (DPC)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen324
+\TX@old@table=\dimen325
+\TX@old@col=\dimen326
+\TX@target=\dimen327
+\TX@delta=\dimen328
+\TX@cols=\count341
+\TX@ftn=\toks54
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-euclide.sty
+2023/02/03 5.02c tkz-euclide.sty
+Package: tkz-euclide  2023/02/03 5.02c for pure Euclidean Geometry 
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryangles.code.tex
+File: tikzlibraryangles.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen329
+))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box79
+\pgf@layerboxsaved@background=\box80
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.markings.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.markings.code.tex))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.shapes.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.shapes.code.tex))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.text.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.text.code.tex
+\pgf@lib@dec@text@box=\box81
+)
+\tikz@lib@dec@te@box=\box82
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryintersections.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryinterse
+ctions.code.tex
+\pgf@intersect@solutions=\count342
+))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymath.code.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfpu.code.tex)
+\tikz@math@for@depth=\count343
+\tikz@math@dimen=\dimen330
+\tikz@math@toks=\toks55
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarythrough.code.tex
+File: tikzlibrarythrough.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xfp/xfp.sty
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-02-22 L3 programming layer (loader) 
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count344
+\l__pdf_internal_box=\box83
+))
+Package: xfp 2023-02-02 L3 Floating point unit
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/xpatch/xpatch.sty
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-02-02 L3 Experimental document command parser
+))
+\tkzRadius=\dimen331
+\tkzLength=\dimen332
+\tkz@radi=\dimen333
+\tkz@ax=\dimen334
+\tkz@ay=\dimen335
+\tkz@bx=\dimen336
+\tkz@by=\dimen337
+\tkz@cx=\dimen338
+\tkz@cy=\dimen339
+\tkz@dx=\dimen340
+\tkz@dy=\dimen341
+\tkz@cntmk=\count345
+
+Local configuration file tkz-euclide.cfg found and used
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-euclide.cfg
+2023/02/03 5.02c tkz-euclide.cfg
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-tools-eu-base.tex
+2023/02/03 5.02c tkz-tools-eu-base.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-tools-eu-utilitie
+s.tex
+2023/02/03 5.02c tkz-tools-eu-utilities.tex
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-tools-eu-BB.tex
+2023/02/03 5.02c tkz-obj-eu-BB.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-grids.tex
+2023/02/03 5.02c tkz-obj-eu-grids.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-lib-eu-marks.tex
+2023/02/03 5.02c tkz-lib-eu-marks.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-tools-eu-text.tex
+2023/02/03 5.02c tkz-tools-eu-text.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-lib-eu-shape.tex
+2023/02/03 5.02c tkz-lib-eu-shape.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-axesmin.te
+x
+2023/02/03 5.02c tkz-obj-eu-axesmin
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-tools-eu-colors.t
+ex
+2023/02/03 5.02c tkz-tools-eu-colors
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-points.tex
+2023/02/03 5.02c tkz-obj-eu-points.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-draw-eu-points.te
+x
+2023/01/24 5.01c tkz-draw-points.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-points.tex
+2023/02/03 5.02c tkz-obj-eu-points.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-points-by.
+tex
+2023/02/03 5.02c tkz-tools-eu-points-by.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-tools-eu-math.tex
+2023/02/03 5.02c tkz-tools-eu-math.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-tools-eu-intersec
+tions.tex
+2023/02/03 5.02c tkz-tools-eu-intersections.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-points-wit
+h.tex
+2023/02/03 5.02c tkz-obj-eu-points-with.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-points-spc
+.tex
+2023/02/03 5.02c tkz-obj-el-points.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-tools-eu-angles.t
+ex
+2023/02/03 5.02c tkz-tools-eu-angles.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-points-rnd
+.tex
+2023/02/03 5.02c tkz-obj-eu-points-rnd.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-circles.te
+x
+2023/02/03 5.02c tkz-obj-eu-circles.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-circles-by
+.tex
+2023/02/03 5.02c tkz-obj-eu-circles.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-lines.tex
+2023/02/03 5.02c tkz-obj-eu-lines.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-polygons.t
+ex
+2023/02/03 5.02c tkz-obj-eu-polygons.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-obj-eu-triangles.
+tex
+2023/02/03 5.02c tkz-obj-eu-triangles.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-draw-eu-lines.tex
+2023/02/03 5.02c tkz-obj-eu-draw-lines.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-draw-eu-circles.t
+ex
+2023/02/03 5.02c tkz-obj-eu-draw-circles.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-draw-eu-polygons.
+tex
+2023/02/03 5.02c tkz-obj-eu-polygons.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-draw-eu-angles.te
+x
+2023/02/03 5.02c tkz-tool-eu-angles.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-draw-eu-sectors.t
+ex
+2023/02/03 5.02c tkz-obj-eu-sectors.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-draw-eu-compass.t
+ex
+2023/02/03 5.02c tkz-obj-eu-compass.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-draw-eu-show.tex
+2023/02/03 5.02c tkz-obj-eu-show.tex
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tkz-euclide/tkz-draw-eu-protracto
+r.tex
+2023/02/03 5.02c tkz-obj-eu-protractor.tex
+)) (/usr/local/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box84
+\UL@hyphenbox=\box85
+\UL@skip=\skip79
+\UL@hook=\toks56
+\UL@height=\dimen342
+\UL@pe=\count346
+\UL@pixel=\dimen343
+\ULC@box=\box86
+Package: ulem 2019/11/18
+\ULdepth=\dimen344
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xy.sty
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing:
+catcodes, docmode,
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xyrecat.tex)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xyidioms.tex)
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen345
+\Y@c=\dimen346
+\U@c=\dimen347
+\D@c=\dimen348
+\L@c=\dimen349
+\R@c=\dimen350
+\Edge@c=\toks57
+\X@p=\dimen351
+\Y@p=\dimen352
+\U@p=\dimen353
+\D@p=\dimen354
+\L@p=\dimen355
+\R@p=\dimen356
+\Edge@p=\toks58
+\X@origin=\dimen357
+\Y@origin=\dimen358
+\X@xbase=\dimen359
+\Y@xbase=\dimen360
+\X@ybase=\dimen361
+\Y@ybase=\dimen362
+\X@min=\dimen363
+\Y@min=\dimen364
+\X@max=\dimen365
+\Y@max=\dimen366
+\lastobjectbox@=\box87
+\zerodotbox@=\box88
+\almostz@=\dimen367
+ direction,
+\d@X=\dimen368
+\d@Y=\dimen369
+\K@=\count347
+\KK@=\count348
+\Direction=\count349
+\K@dXdY=\dimen370
+\K@dYdX=\dimen371
+\xyread@=\read3
+\xywrite@=\write4
+\csp@=\count350
+\quotPTK@=\dimen372
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks59
+\connectobjectbox@@=\box89
+ objects,
+\styletoks@=\toks60
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+Package: xy 2013/10/06 Xy-pic version 3.8.9
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xyall.tex
+ Xy-pic option: All features v.3.8
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xycurve.tex
+ Xy-pic option: Curve and Spline extension v.3.12 curve,
+\crv@cnt@=\count351
+\crvpts@=\toks61
+\splinebox@=\box90
+\splineval@=\dimen373
+\splinedepth@=\dimen374
+\splinetol@=\dimen375
+\splinelength@=\dimen376
+ circles,
+\L@=\dimen377
+ loaded)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.14 loaded)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xycmtip.tex
+ Xy-pic option: Computer Modern tip extension v.3.7
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xytips.tex
+ Xy-pic option: More Tips extension v.3.11 loaded) loaded)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xyline.tex
+ Xy-pic option: Line styles extension v.3.10
+\xylinethick@=\dimen378
+ loaded)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xyrotate.tex
+ Xy-pic option: Rotate and Scale extension v.3.8 loaded)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xycolor.tex
+ Xy-pic option: Colour extension v.3.11 loaded)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xymatrix.tex
+ Xy-pic option: Matrix feature v.3.14
+\Row=\count352
+\Col=\count353
+\queue@=\toks62
+\queue@@=\toks63
+\qcount@=\count354
+\qcount@@=\count355
+\matrixsize@=\count356
+ loaded)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xygraph.tex
+ Xy-pic option: Graph feature v.3.11 loaded) loaded)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xypdf.tex
+ Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xypdf-co.tex loaded)
+Xy-pic pdf driver: `curve' extension support
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xypdf-cu.tex loaded)
+Xy-pic pdf driver: `frame' extension support
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xypdf-fr.tex loaded)
+Xy-pic pdf driver: `line' extension support
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xypdf-li.tex loaded)
+Xy-pic pdf driver: `rotate' extension support
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xypic/xypdf-ro.tex loaded)
+loaded)) (/usr/local/texlive/2023/texmf-dist/tex/latex/imakeidx/imakeidx.sty
+Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchro
+nous mode
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks64
+\XKV@tempa@toks=\toks65
+)
+\XKV@depth=\count357
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
+\c@tracingmulticols=\count358
+\mult@box=\box91
+\multicol@leftmargin=\dimen379
+\c@unbalance=\count359
+\c@collectmore=\count360
+\doublecol@number=\count361
+\multicoltolerance=\count362
+\multicolpretolerance=\count363
+\full@width=\dimen380
+\page@free=\dimen381
+\premulticols=\dimen382
+\postmulticols=\dimen383
+\multicolsep=\skip80
+\multicolbaselineskip=\skip81
+\partial@page=\box92
+\last@line=\box93
+\maxbalancingoverflow=\dimen384
+\mult@rightbox=\box94
+\mult@grightbox=\box95
+\mult@firstbox=\box96
+\mult@gfirstbox=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
+\@tempa=\box133
+\c@minrows=\count364
+\c@columnbadness=\count365
+\c@finalcolumnbadness=\count366
+\last@try=\dimen385
+\multicolovershoot=\dimen386
+\multicolundershoot=\dimen387
+\mult@nat@firstbox=\box134
+\colbreak@box=\box135
+\mc@col@check@num=\count367
+))
+(/usr/local/texlive/2023/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen388
+\WF@size=\dimen389
+\c@WF@wrappedlines=\count368
+\WF@box=\box136
+\WF@everypar=\toks66
+Package: wrapfig 2003/01/31  v 3.6
+)
+\c@lemma=\count369
+Package translations Info: No language package found. I am going to use `englis
+h' as default language. on input line 400.
+
+(./String-Lectures.aux
+
+LaTeX Warning: Label `table:001' multiply defined.
+
+
+LaTeX Warning: Label `mass' multiply defined.
+
+
+LaTeX Warning: Label `level-matching' multiply defined.
+
+
+LaTeX Warning: Label `massless' multiply defined.
+
+
+LaTeX Warning: Label `table:001' multiply defined.
+
+
+LaTeX Warning: Label `table:001' multiply defined.
+
+
+LaTeX Warning: Label `action' multiply defined.
+
+
+LaTeX Warning: Label `table:001' multiply defined.
+
+)
+\openout1 = `String-Lectures.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 400.
+LaTeX Font Info:    ... okay on input line 400.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 400.
+LaTeX Font Info:    ... okay on input line 400.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 400.
+LaTeX Font Info:    ... okay on input line 400.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 400.
+LaTeX Font Info:    ... okay on input line 400.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 400.
+LaTeX Font Info:    ... okay on input line 400.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 400.
+LaTeX Font Info:    ... okay on input line 400.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 400.
+LaTeX Font Info:    ... okay on input line 400.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 400.
+LaTeX Font Info:    ... okay on input line 400.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 400.
+LaTeX Font Info:    ... okay on input line 400.
+ (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count370
+\scratchdimen=\dimen390
+\scratchbox=\box137
+\nofMPsegments=\count371
+\nofMParguments=\count372
+\everyMPshowfont=\toks67
+\MPscratchCnt=\count373
+\MPscratchDim=\dimen391
+\MPnumerator=\count374
+\makeMPintoPDFobject=\count375
+\everyMPtoPDFconversion=\toks68
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring ON on input line 400.
+
+(./String-Lectures.out) (./String-Lectures.out)
+\@outlinefile=\write5
+\openout5 = `String-Lectures.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \microtypecontext on input line 400.
+Package microtype Info: Applying patch `item' on input line 400.
+Package microtype Info: Applying patch `toc' on input line 400.
+Package microtype Info: Applying patch `eqnum' on input line 400.
+Package microtype Info: Applying patch `footnote' on input line 400.
+Package microtype Info: Applying patch `verbatim' on input line 400.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 400.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
+your preamble.
+ on input line 400.
+
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 400.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 400
+.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 400
+.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Package xypdf Info: Line width: 0.47998pt on input line 400.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [0
+
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(./String-Lectures.toc [1] [2] [3])
+\tf@toc=\write6
+\openout6 = `String-Lectures.toc'.
+
+<M-Theory.pdf, id=614, 642.4pt x 642.4pt>
+File: M-Theory.pdf Graphic file (type pdf)
+<use M-Theory.pdf>
+Package pdftex.def Info: M-Theory.pdf  used on input line 434.
+(pdftex.def)             Requested size: 199.16928pt x 199.17134pt.
+ [1] [2 <./M-Theory.pdf>] [3]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4]
+<openstring.pdf, id=709, 183.68625pt x 228.855pt>
+File: openstring.pdf Graphic file (type pdf)
+<use openstring.pdf>
+Package pdftex.def Info: openstring.pdf  used on input line 518.
+(pdftex.def)             Requested size: 113.81102pt x 141.80132pt.
+<closedstring.pdf, id=710, 183.68625pt x 228.855pt>
+File: closedstring.pdf Graphic file (type pdf)
+<use closedstring.pdf>
+Package pdftex.def Info: closedstring.pdf  used on input line 518.
+(pdftex.def)             Requested size: 113.81102pt x 141.80132pt.
+ [5 <./openstring.pdf> <./closedstring.pdf>]
+<Divergence.png, id=731, 159.59625pt x 146.5475pt>
+File: Divergence.png Graphic file (type png)
+<use Divergence.png>
+Package pdftex.def Info: Divergence.png  used on input line 541.
+(pdftex.def)             Requested size: 113.81102pt x 104.5056pt.
+<string-loop.png, id=733, 175.65625pt x 183.68625pt>
+File: string-loop.png Graphic file (type png)
+<use string-loop.png>
+Package pdftex.def Info: string-loop.png  used on input line 541.
+(pdftex.def)             Requested size: 113.81102pt x 119.01625pt.
+ [6 <./Divergence.png> <./string-loop.png>]
+<particle.pdf, id=743, 183.68625pt x 228.855pt>
+File: particle.pdf Graphic file (type pdf)
+<use particle.pdf>
+Package pdftex.def Info: particle.pdf  used on input line 597.
+(pdftex.def)             Requested size: 113.81102pt x 141.80132pt.
+ [7 <./particle.pdf>] [8] [9] [10
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1.5}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.745 ...\mu\nu}\delta_{n+m,\,0}\ ,\label{acom}\ee
+                                                  ] [11] [12] [13
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1.13
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.877  \item e
+              xtension to curved background (curved ST).{/usr/local/texlive/202
+3/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<fig1.pdf, id=837, 279.0425pt x 79.29625pt>
+File: fig1.pdf Graphic file (type pdf)
+<use fig1.pdf>
+Package pdftex.def Info: fig1.pdf  used on input line 885.
+(pdftex.def)             Requested size: 250.0pt x 71.0453pt.
+<fig2.pdf, id=839, 292.09125pt x 84.315pt>
+File: fig2.pdf Graphic file (type pdf)
+<use fig2.pdf>
+Package pdftex.def Info: fig2.pdf  used on input line 898.
+(pdftex.def)             Requested size: 250.0pt x 72.16724pt.
+ [14 <./fig1.pdf> <./fig2.pdf>]
+<fig3.pdf, id=857, 374.39874pt x 108.405pt>
+File: fig3.pdf Graphic file (type pdf)
+<use fig3.pdf>
+Package pdftex.def Info: fig3.pdf  used on input line 971.
+(pdftex.def)             Requested size: 250.0pt x 72.38615pt.
+ [15] [16 <./fig3.pdf>] [17]
+Overfull \hbox (15.27734pt too wide) detected at line 1137
+[]
+ []
+
+[18]
+Overfull \hbox (3.19527pt too wide) detected at line 1190
+[]
+ []
+
+[19] [20] [21]
+<conformal-trans.pdf, id=918, 494.84875pt x 163.61125pt>
+File: conformal-trans.pdf Graphic file (type pdf)
+<use conformal-trans.pdf>
+Package pdftex.def Info: conformal-trans.pdf  used on input line 1320.
+(pdftex.def)             Requested size: 369.88582pt x 122.2937pt.
+ [22 <./conformal-trans.pdf>]
+Overfull \hbox (1.17212pt too wide) in paragraph at lines 1382--1384
+\OT1/cmr/m/n/12 (-20) The ap-pli-ca-tion to the Ward-Takahashi iden-tity leads 
+to \OT1/cmr/bx/n/12 (-20) con-for-mal Ward-Takahashi
+ []
+
+[23]
+Overfull \hbox (12.54807pt too wide) detected at line 1437
+\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z\OT1/cmr
+/m/n/12 )\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 w[]; [][]\OT1/
+cmr/m/n/12 ) [] \OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 w[]; []
+[]\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 i \OT1/cmr/m/n/12 = [] [][] + [][]\OMS/cmsy
+/m/n/12 h\OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 w[]; [][]\OT1/
+cmr/m/n/12 ) [] \OML/cmm/m/it/12 ^^^[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 w[]; []
+[]\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 i []\OML/cmm/m/it/12 :
+ []
+
+[24] [25] [26]
+<plane-cylinder.pdf, id=977, 430.60875pt x 182.6825pt>
+File: plane-cylinder.pdf Graphic file (type pdf)
+<use plane-cylinder.pdf>
+Package pdftex.def Info: plane-cylinder.pdf  used on input line 1581.
+(pdftex.def)             Requested size: 284.52756pt x 120.71017pt.
+ [27]
+<virasoro-contour.pdf, id=987, 615.29875pt x 195.73125pt>
+File: virasoro-contour.pdf Graphic file (type pdf)
+<use virasoro-contour.pdf>
+Package pdftex.def Info: virasoro-contour.pdf  used on input line 1607.
+(pdftex.def)             Requested size: 284.52756pt x 90.51233pt.
+ [28 <./plane-cylinder.pdf> <./virasoro-contour.pdf>]
+[29] [30] [31] [32] [33]
+Overfull \hbox (13.20956pt too wide) detected at line 1972
+[]
+ []
+
+[34]
+Overfull \hbox (19.4351pt too wide) detected at line 2035
+[]
+ []
+
+[35]
+Package epstopdf Info: Source file: <stringCoupling2.eps>
+(epstopdf)                    date: 2017-10-07 11:32:03
+(epstopdf)                    size: 232031 bytes
+(epstopdf)             Output file: <stringCoupling2-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-07 18:21:55
+(epstopdf)                    size: 30285 bytes
+(epstopdf)             Command: <repstopdf --outfile=stringCoupling2-eps-conver
+ted-to.pdf stringCoupling2.eps>
+(epstopdf)             \includegraphics on input line 2071.
+Package epstopdf Info: Output file is already uptodate.
+<stringCoupling2-eps-converted-to.pdf, id=1050, 327.2225pt x 127.47626pt>
+File: stringCoupling2-eps-converted-to.pdf Graphic file (type pdf)
+<use stringCoupling2-eps-converted-to.pdf>
+Package pdftex.def Info: stringCoupling2-eps-converted-to.pdf  used on input li
+ne 2071.
+(pdftex.def)             Requested size: 400.0pt x 155.82813pt.
+
+Overfull \hbox (43.55072pt too wide) detected at line 2091
+[]
+ []
+
+[36] [37 <./stringCoupling2-eps-converted-to.pdf>]
+<gphase.pdf, id=1063, 253.94875pt x 190.7125pt>
+File: gphase.pdf Graphic file (type pdf)
+<use gphase.pdf>
+Package pdftex.def Info: gphase.pdf  used on input line 2154.
+(pdftex.def)             Requested size: 113.81102pt x 85.47061pt.
+ [38 <./gphase.pdf>] [39]
+[40]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2280 \be
+           \overline \partial c(z)\,b(w) = 2\pi \,\delta(z-w)\nonumber\ee
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2280 \be
+           \overline \partial c(z)\,b(w) = 2\pi \,\delta(z-w)\nonumber\ee
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2280 \be
+           \overline \partial c(z)\,b(w) = 2\pi \,\delta(z-w)\nonumber\ee
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2280 \be
+           \overline \partial c(z)\,b(w) = 2\pi \,\delta(z-w)\nonumber\ee
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2284 \be
+           \overline \partial b(z)\,c(w) = 2\pi\,\delta(z-w)\nonumber\ee
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2284 \be
+           \overline \partial b(z)\,c(w) = 2\pi\,\delta(z-w)\nonumber\ee
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2284 \be
+           \overline \partial b(z)\,c(w) = 2\pi\,\delta(z-w)\nonumber\ee
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2284 \be
+           \overline \partial b(z)\,c(w) = 2\pi\,\delta(z-w)\nonumber\ee
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2301 \be
+           T^{\rm gh}(z) =- 2:b(z)\partial c(z): + :c(z)\partial b(z):\nonum...
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2301 \be
+           T^{\rm gh}(z) =- 2:b(z)\partial c(z): + :c(z)\partial b(z):\nonum...
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2301 \be
+           T^{\rm gh}(z) =- 2:b(z)\partial c(z): + :c(z)\partial b(z):\nonum...
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2301 \be
+           T^{\rm gh}(z) =- 2:b(z)\partial c(z): + :c(z)\partial b(z):\nonum...
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2317 \be
+           T^{\rm gh}(z)\,T^{\rm gh}(w) = \frac{-13}{(z-w)^4}+\frac{2T^{\rm ...
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2317 \be
+           T^{\rm gh}(z)\,T^{\rm gh}(w) = \frac{-13}{(z-w)^4}+\frac{2T^{\rm ...
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2317 \be
+           T^{\rm gh}(z)\,T^{\rm gh}(w) = \frac{-13}{(z-w)^4}+\frac{2T^{\rm ...
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2317 \be
+           T^{\rm gh}(z)\,T^{\rm gh}(w) = \frac{-13}{(z-w)^4}+\frac{2T^{\rm ...
+
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2321 \be
+           c^{\rm gh}=2(-13)=-26 ~.\nonumber\ee
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2321 \be
+           c^{\rm gh}=2(-13)=-26 ~.\nonumber\ee
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2321 \be
+           c^{\rm gh}=2(-13)=-26 ~.\nonumber\ee
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2321 \be
+           c^{\rm gh}=2(-13)=-26 ~.\nonumber\ee [41
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2321 \be c^{\rm gh}=2(-13)=-26 ~.\nonumber\ee
+                                               ] [42]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.5.9}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2370 \end{align}
+                   [43] [44] [45]
+Package epstopdf Info: Source file: <g-increase.eps>
+(epstopdf)                    date: 2017-10-20 02:53:54
+(epstopdf)                    size: 202533 bytes
+(epstopdf)             Output file: <g-increase-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-23 16:48:54
+(epstopdf)                    size: 18045 bytes
+(epstopdf)             Command: <repstopdf --outfile=g-increase-eps-converted-t
+o.pdf g-increase.eps>
+(epstopdf)             \includegraphics on input line 2547.
+Package epstopdf Info: Output file is already uptodate.
+<g-increase-eps-converted-to.pdf, id=1130, 211.79124pt x 88.33pt>
+File: g-increase-eps-converted-to.pdf Graphic file (type pdf)
+<use g-increase-eps-converted-to.pdf>
+Package pdftex.def Info: g-increase-eps-converted-to.pdf  used on input line 25
+47.
+(pdftex.def)             Requested size: 300.0pt x 125.1235pt.
+ [46 <./g-increase-eps-converted-to.pdf>]
+[47] [48]
+Overfull \hbox (20.36823pt too wide) detected at line 2779
+[]
+ []
+
+[49] [50] [51]
+Package epstopdf Info: Source file: <s-channel.eps>
+(epstopdf)                    date: 2017-10-20 02:58:13
+(epstopdf)                    size: 176433 bytes
+(epstopdf)             Output file: <s-channel-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-23 16:48:55
+(epstopdf)                    size: 7449 bytes
+(epstopdf)             Command: <repstopdf --outfile=s-channel-eps-converted-to
+.pdf s-channel.eps>
+(epstopdf)             \includegraphics on input line 2919.
+Package epstopdf Info: Output file is already uptodate.
+<s-channel-eps-converted-to.pdf, id=1166, 136.51pt x 77.28876pt>
+File: s-channel-eps-converted-to.pdf Graphic file (type pdf)
+<use s-channel-eps-converted-to.pdf>
+Package pdftex.def Info: s-channel-eps-converted-to.pdf  used on input line 291
+9.
+(pdftex.def)             Requested size: 150.0pt x 84.9318pt.
+Package epstopdf Info: Source file: <unitarity.eps>
+(epstopdf)                    date: 2017-10-20 03:11:23
+(epstopdf)                    size: 202409 bytes
+(epstopdf)             Output file: <unitarity-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-23 16:48:55
+(epstopdf)                    size: 18220 bytes
+(epstopdf)             Command: <repstopdf --outfile=unitarity-eps-converted-to
+.pdf unitarity.eps>
+(epstopdf)             \includegraphics on input line 2926.
+Package epstopdf Info: Output file is already uptodate.
+<unitarity-eps-converted-to.pdf, id=1168, 241.90375pt x 103.38625pt>
+File: unitarity-eps-converted-to.pdf Graphic file (type pdf)
+<use unitarity-eps-converted-to.pdf>
+Package pdftex.def Info: unitarity-eps-converted-to.pdf  used on input line 292
+6.
+(pdftex.def)             Requested size: 250.0pt x 106.85185pt.
+ [52 <./s-channel-eps-converted-to.pdf> <./unitarity-eps-converted-to.pdf>] [53
+]
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 3180.
+
+File: plane-cylinder.pdf Graphic file (type pdf)
+<use plane-cylinder.pdf>
+Package pdftex.def Info: plane-cylinder.pdf  used on input line 3187.
+(pdftex.def)             Requested size: 284.52756pt x 120.71017pt.
+[54] [55] [56] [57] [58] [59]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[60]
+
+LaTeX Warning: Reference `sec:supergravity' on page 61 undefined on input line 
+3516.
+
+Package epstopdf Info: Source file: <OpenClosed.eps>
+(epstopdf)                    date: 2017-11-03 05:38:13
+(epstopdf)                    size: 238978 bytes
+(epstopdf)             Output file: <OpenClosed-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-03 13:54:53
+(epstopdf)                    size: 31580 bytes
+(epstopdf)             Command: <repstopdf --outfile=OpenClosed-eps-converted-t
+o.pdf OpenClosed.eps>
+(epstopdf)             \includegraphics on input line 3562.
+Package epstopdf Info: Output file is already uptodate.
+<OpenClosed-eps-converted-to.pdf, id=1257, 272.01625pt x 103.38625pt>
+File: OpenClosed-eps-converted-to.pdf Graphic file (type pdf)
+<use OpenClosed-eps-converted-to.pdf>
+Package pdftex.def Info: OpenClosed-eps-converted-to.pdf  used on input line 35
+62.
+(pdftex.def)             Requested size: 350.0pt x 133.03278pt.
+[61]
+Package epstopdf Info: Source file: <BoundaryObj.eps>
+(epstopdf)                    date: 2017-11-03 05:36:52
+(epstopdf)                    size: 180353 bytes
+(epstopdf)             Output file: <BoundaryObj-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-03 13:54:53
+(epstopdf)                    size: 8601 bytes
+(epstopdf)             Command: <repstopdf --outfile=BoundaryObj-eps-converted-
+to.pdf BoundaryObj.eps>
+(epstopdf)             \includegraphics on input line 3598.
+Package epstopdf Info: Output file is already uptodate.
+<BoundaryObj-eps-converted-to.pdf, id=1270, 113.42375pt x 87.32625pt>
+File: BoundaryObj-eps-converted-to.pdf Graphic file (type pdf)
+<use BoundaryObj-eps-converted-to.pdf>
+Package pdftex.def Info: BoundaryObj-eps-converted-to.pdf  used on input line 3
+598.
+(pdftex.def)             Requested size: 100.0pt x 76.99124pt.
+Package epstopdf Info: Source file: <DpBrane.eps>
+(epstopdf)                    date: 2017-11-03 05:42:36
+(epstopdf)                    size: 197172 bytes
+(epstopdf)             Output file: <DpBrane-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-03 13:54:54
+(epstopdf)                    size: 15385 bytes
+(epstopdf)             Command: <repstopdf --outfile=DpBrane-eps-converted-to.p
+df DpBrane.eps>
+(epstopdf)             \includegraphics on input line 3620.
+Package epstopdf Info: Output file is already uptodate.
+<DpBrane-eps-converted-to.pdf, id=1272, 160.6pt x 148.555pt>
+File: DpBrane-eps-converted-to.pdf Graphic file (type pdf)
+<use DpBrane-eps-converted-to.pdf>
+Package pdftex.def Info: DpBrane-eps-converted-to.pdf  used on input line 3620.
+
+(pdftex.def)             Requested size: 150.0pt x 138.75313pt.
+ [62 <./OpenClosed-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <ManyD.eps>
+(epstopdf)                    date: 2017-11-03 05:51:17
+(epstopdf)                    size: 256328 bytes
+(epstopdf)             Output file: <ManyD-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-03 13:54:54
+(epstopdf)                    size: 38942 bytes
+(epstopdf)             Command: <repstopdf --outfile=ManyD-eps-converted-to.pdf
+ ManyD.eps>
+(epstopdf)             \includegraphics on input line 3653.
+Package epstopdf Info: Output file is already uptodate.
+<ManyD-eps-converted-to.pdf, id=1281, 200.75pt x 138.5175pt>
+File: ManyD-eps-converted-to.pdf Graphic file (type pdf)
+<use ManyD-eps-converted-to.pdf>
+Package pdftex.def Info: ManyD-eps-converted-to.pdf  used on input line 3653.
+(pdftex.def)             Requested size: 250.0pt x 172.51234pt.
+ [63 <./BoundaryObj-eps-converted-to.pdf> <./DpBrane-eps-converted-to.pdf>] [64
+ <./ManyD-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <mono.eps>
+(epstopdf)                    date: 2017-11-03 05:55:38
+(epstopdf)                    size: 194171 bytes
+(epstopdf)             Output file: <mono-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-03 13:56:01
+(epstopdf)                    size: 13990 bytes
+(epstopdf)             Command: <repstopdf --outfile=mono-eps-converted-to.pdf 
+mono.eps>
+(epstopdf)             \includegraphics on input line 3711.
+Package epstopdf Info: Output file is already uptodate.
+<mono-eps-converted-to.pdf, id=1300, 125.46875pt x 75.28125pt>
+File: mono-eps-converted-to.pdf Graphic file (type pdf)
+<use mono-eps-converted-to.pdf>
+Package pdftex.def Info: mono-eps-converted-to.pdf  used on input line 3711.
+(pdftex.def)             Requested size: 150.0pt x 90.01079pt.
+Package epstopdf Info: Source file: <MagD.eps>
+(epstopdf)                    date: 2017-11-03 06:07:07
+(epstopdf)                    size: 238536 bytes
+(epstopdf)             Output file: <MagD-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-03 13:56:02
+(epstopdf)                    size: 31480 bytes
+(epstopdf)             Command: <repstopdf --outfile=MagD-eps-converted-to.pdf 
+MagD.eps>
+(epstopdf)             \includegraphics on input line 3732.
+Package epstopdf Info: Output file is already uptodate.
+<MagD-eps-converted-to.pdf, id=1302, 342.27875pt x 83.31125pt>
+File: MagD-eps-converted-to.pdf Graphic file (type pdf)
+<use MagD-eps-converted-to.pdf>
+Package pdftex.def Info: MagD-eps-converted-to.pdf  used on input line 3732.
+(pdftex.def)             Requested size: 350.0pt x 85.19753pt.
+Package epstopdf Info: Source file: <EleMagD.eps>
+(epstopdf)                    date: 2017-11-03 06:12:30
+(epstopdf)                    size: 219514 bytes
+(epstopdf)             Output file: <EleMagD-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-03 13:56:02
+(epstopdf)                    size: 24248 bytes
+(epstopdf)             Command: <repstopdf --outfile=EleMagD-eps-converted-to.p
+df EleMagD.eps>
+(epstopdf)             \includegraphics on input line 3739.
+Package epstopdf Info: Output file is already uptodate.
+<EleMagD-eps-converted-to.pdf, id=1304, 296.10625pt x 137.51375pt>
+File: EleMagD-eps-converted-to.pdf Graphic file (type pdf)
+<use EleMagD-eps-converted-to.pdf>
+Package pdftex.def Info: EleMagD-eps-converted-to.pdf  used on input line 3739.
+
+(pdftex.def)             Requested size: 250.0pt x 116.10457pt.
+
+[65 <./mono-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <torus.eps>
+(epstopdf)                    date: 2017-10-20 06:47:07
+(epstopdf)                    size: 182862 bytes
+(epstopdf)             Output file: <torus-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-23 16:48:56
+(epstopdf)                    size: 10040 bytes
+(epstopdf)             Command: <repstopdf --outfile=torus-eps-converted-to.pdf
+ torus.eps>
+(epstopdf)             \includegraphics on input line 3803.
+Package epstopdf Info: Output file is already uptodate.
+<torus-eps-converted-to.pdf, id=1316, 136.51pt x 93.34875pt>
+File: torus-eps-converted-to.pdf Graphic file (type pdf)
+<use torus-eps-converted-to.pdf>
+Package pdftex.def Info: torus-eps-converted-to.pdf  used on input line 3803.
+(pdftex.def)             Requested size: 150.0pt x 102.57994pt.
+ [66 <./MagD-eps-converted-to.pdf> <./EleMagD-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <fundamental.eps>
+(epstopdf)                    date: 2017-10-20 06:47:26
+(epstopdf)                    size: 174715 bytes
+(epstopdf)             Output file: <fundamental-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-23 16:48:56
+(epstopdf)                    size: 6821 bytes
+(epstopdf)             Command: <repstopdf --outfile=fundamental-eps-converted-
+to.pdf fundamental.eps>
+(epstopdf)             \includegraphics on input line 3830.
+Package epstopdf Info: Output file is already uptodate.
+<fundamental-eps-converted-to.pdf, id=1328, 104.39pt x 97.36375pt>
+File: fundamental-eps-converted-to.pdf Graphic file (type pdf)
+<use fundamental-eps-converted-to.pdf>
+Package pdftex.def Info: fundamental-eps-converted-to.pdf  used on input line 3
+830.
+(pdftex.def)             Requested size: 120.0pt x 111.93028pt.
+ [67 <./torus-eps-converted-to.pdf> <./fundamental-eps-converted-to.pdf>] [68]
+Overfull \hbox (21.46155pt too wide) detected at line 3939
+[]
+ []
+
+[69]
+Package epstopdf Info: Source file: <noDivergence.eps>
+(epstopdf)                    date: 2017-10-20 06:58:31
+(epstopdf)                    size: 208230 bytes
+(epstopdf)             Output file: <noDivergence-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-10-23 16:48:57
+(epstopdf)                    size: 20397 bytes
+(epstopdf)             Command: <repstopdf --outfile=noDivergence-eps-converted
+-to.pdf noDivergence.eps>
+(epstopdf)             \includegraphics on input line 3962.
+Package epstopdf Info: Output file is already uptodate.
+<noDivergence-eps-converted-to.pdf, id=1350, 321.2pt x 88.33pt>
+File: noDivergence-eps-converted-to.pdf Graphic file (type pdf)
+<use noDivergence-eps-converted-to.pdf>
+Package pdftex.def Info: noDivergence-eps-converted-to.pdf  used on input line 
+3962.
+(pdftex.def)             Requested size: 350.0pt x 96.25217pt.
+ [70 <./noDivergence-eps-converted-to.pdf>] [71] [72]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4160.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 4160.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4160.
+
+[73]
+<winding.pdf, id=1372, 193.02011pt x 90.1779pt>
+File: winding.pdf Graphic file (type pdf)
+<use winding.pdf>
+Package pdftex.def Info: winding.pdf  used on input line 4195.
+(pdftex.def)             Requested size: 193.01964pt x 90.17767pt.
+ [74
+pdfTeX warning (ext4): destination with the same identifier (name{equation.9.1}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.4219 $$
+         M^2 = -\sum_{\mu=0}^{24}p^\mu p_\mu $$
+pdfTeX warning (ext4): destination with the same identifier (name{equation.9.1}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.4219 $$
+         M^2 = -\sum_{\mu=0}^{24}p^\mu p_\mu $$ <./winding.pdf>] [75
+pdfTeX warning (ext4): destination with the same identifier (name{equation.9.1}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.4277 
+       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.9.4}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.4277 
+       ]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4282.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 4282.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alpha' on input line 4282.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4282.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[76]
+
+LaTeX Warning: Reference `sec:quantization' on page 77 undefined on input line 
+4356.
+
+
+Package natbib Warning: Citation `Dai:1989ua' on page 77 undefined on input lin
+e 4356.
+
+
+Package natbib Warning: Citation `Leigh:1989jq' on page 77 undefined on input l
+ine 4356.
+
+[77]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./open-T-dual.pdf): PDF incl
+usion: found PDF version <1.6>, but at most version <1.5> allowed
+<open-T-dual.pdf, id=1425, 473.78525pt x 139.06654pt>
+File: open-T-dual.pdf Graphic file (type pdf)
+<use open-T-dual.pdf>
+Package pdftex.def Info: open-T-dual.pdf  used on input line 4372.
+(pdftex.def)             Requested size: 369.88582pt x 108.56906pt.
+
+LaTeX Warning: Reference `sec:intro-Dbrane' on page 78 undefined on input line 
+4375.
+
+[78 <./open-T-dual.pdf>]
+<open-Higgs.pdf, id=1441, 179.64616pt x 75.6707pt>
+File: open-Higgs.pdf Graphic file (type pdf)
+<use open-Higgs.pdf>
+Package pdftex.def Info: open-Higgs.pdf  used on input line 4395.
+(pdftex.def)             Requested size: 199.16928pt x 83.89615pt.
+ [79
+pdfTeX warning (ext4): destination with the same identifier (name{equation.9.10
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.4420  $$
+          
+pdfTeX warning (ext4): destination with the same identifier (name{equation.9.11
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.4420  $$
+           <./open-Higgs.pdf>] [80]
+Package epstopdf Info: Source file: <unorientedWS.eps>
+(epstopdf)                    date: 2017-11-16 15:15:14
+(epstopdf)                    size: 216134 bytes
+(epstopdf)             Output file: <unorientedWS-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-17 09:51:48
+(epstopdf)                    size: 22934 bytes
+(epstopdf)             Command: <repstopdf --outfile=unorientedWS-eps-converted
+-to.pdf unorientedWS.eps>
+(epstopdf)             \includegraphics on input line 4501.
+Package epstopdf Info: Output file is already uptodate.
+<unorientedWS-eps-converted-to.pdf, id=1467, 152.57pt x 107.40125pt>
+File: unorientedWS-eps-converted-to.pdf Graphic file (type pdf)
+<use unorientedWS-eps-converted-to.pdf>
+Package pdftex.def Info: unorientedWS-eps-converted-to.pdf  used on input line 
+4501.
+(pdftex.def)             Requested size: 200.0pt x 140.79497pt.
+ [81 <./unorientedWS-eps-converted-to.pdf>]
+[82] [83]
+Package epstopdf Info: Source file: <cylinder.eps>
+(epstopdf)                    date: 2017-11-17 00:32:57
+(epstopdf)                    size: 178403 bytes
+(epstopdf)             Output file: <cylinder-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-17 09:52:13
+(epstopdf)                    size: 7822 bytes
+(epstopdf)             Command: <repstopdf --outfile=cylinder-eps-converted-to.
+pdf cylinder.eps>
+(epstopdf)             \includegraphics on input line 4745.
+Package epstopdf Info: Output file is already uptodate.
+<cylinder-eps-converted-to.pdf, id=1485, 151.56625pt x 90.3375pt>
+File: cylinder-eps-converted-to.pdf Graphic file (type pdf)
+<use cylinder-eps-converted-to.pdf>
+Package pdftex.def Info: cylinder-eps-converted-to.pdf  used on input line 4745
+.
+(pdftex.def)             Requested size: 200.0pt x 119.20724pt.
+ [84] [85 <./cylinder-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <openClosedAmp.eps>
+(epstopdf)                    date: 2017-11-17 00:30:54
+(epstopdf)                    size: 183902 bytes
+(epstopdf)             Output file: <openClosedAmp-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-17 09:52:13
+(epstopdf)                    size: 9889 bytes
+(epstopdf)             Command: <repstopdf --outfile=openClosedAmp-eps-converte
+d-to.pdf openClosedAmp.eps>
+(epstopdf)             \includegraphics on input line 4788.
+Package epstopdf Info: Output file is already uptodate.
+<openClosedAmp-eps-converted-to.pdf, id=1498, 80.3pt x 49.18375pt>
+File: openClosedAmp-eps-converted-to.pdf Graphic file (type pdf)
+<use openClosedAmp-eps-converted-to.pdf>
+Package pdftex.def Info: openClosedAmp-eps-converted-to.pdf  used on input line
+ 4788.
+(pdftex.def)             Requested size: 150.0pt x 91.87779pt.
+Package epstopdf Info: Source file: <masslessProp.eps>
+(epstopdf)                    date: 2017-11-17 00:32:23
+(epstopdf)                    size: 170244 bytes
+(epstopdf)             Output file: <masslessProp-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-17 09:52:13
+(epstopdf)                    size: 4380 bytes
+(epstopdf)             Command: <repstopdf --outfile=masslessProp-eps-converted
+-to.pdf masslessProp.eps>
+(epstopdf)             \includegraphics on input line 4802.
+Package epstopdf Info: Output file is already uptodate.
+<masslessProp-eps-converted-to.pdf, id=1500, 67.25125pt x 16.06pt>
+File: masslessProp-eps-converted-to.pdf Graphic file (type pdf)
+<use masslessProp-eps-converted-to.pdf>
+Package pdftex.def Info: masslessProp-eps-converted-to.pdf  used on input line 
+4802.
+(pdftex.def)             Requested size: 150.0pt x 35.82121pt.
+ [86 <./openClosedAmp-eps-converted-to.pdf> <./masslessProp-eps-converted-to.pd
+f>]
+Package epstopdf Info: Source file: <KleinBottle.eps>
+(epstopdf)                    date: 2017-11-17 02:31:54
+(epstopdf)                    size: 225069 bytes
+(epstopdf)             Output file: <KleinBottle-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-17 09:52:14
+(epstopdf)                    size: 26541 bytes
+(epstopdf)             Command: <repstopdf --outfile=KleinBottle-eps-converted-
+to.pdf KleinBottle.eps>
+(epstopdf)             \includegraphics on input line 4825.
+Package epstopdf Info: Output file is already uptodate.
+<KleinBottle-eps-converted-to.pdf, id=1513, 237.88875pt x 75.28125pt>
+File: KleinBottle-eps-converted-to.pdf Graphic file (type pdf)
+<use KleinBottle-eps-converted-to.pdf>
+Package pdftex.def Info: KleinBottle-eps-converted-to.pdf  used on input line 4
+825.
+(pdftex.def)             Requested size: 350.0pt x 110.76546pt.
+Package epstopdf Info: Source file: <MobiusStrip.eps>
+(epstopdf)                    date: 2017-11-17 00:32:04
+(epstopdf)                    size: 210964 bytes
+(epstopdf)             Output file: <MobiusStrip-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-17 09:52:14
+(epstopdf)                    size: 20467 bytes
+(epstopdf)             Command: <repstopdf --outfile=MobiusStrip-eps-converted-
+to.pdf MobiusStrip.eps>
+(epstopdf)             \includegraphics on input line 4863.
+Package epstopdf Info: Output file is already uptodate.
+<MobiusStrip-eps-converted-to.pdf, id=1515, 184.69pt x 77.28876pt>
+File: MobiusStrip-eps-converted-to.pdf Graphic file (type pdf)
+<use MobiusStrip-eps-converted-to.pdf>
+Package pdftex.def Info: MobiusStrip-eps-converted-to.pdf  used on input line 4
+863.
+(pdftex.def)             Requested size: 300.0pt x 125.54437pt.
+ [87 <./KleinBottle-eps-converted-to.pdf>] [88 <./MobiusStrip-eps-converted-to.
+pdf>]
+Package epstopdf Info: Source file: <tadpoleCancel.eps>
+(epstopdf)                    date: 2017-11-17 02:42:21
+(epstopdf)                    size: 189170 bytes
+(epstopdf)             Output file: <tadpoleCancel-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-17 09:52:15
+(epstopdf)                    size: 12101 bytes
+(epstopdf)             Command: <repstopdf --outfile=tadpoleCancel-eps-converte
+d-to.pdf tadpoleCancel.eps>
+(epstopdf)             \includegraphics on input line 4953.
+Package epstopdf Info: Output file is already uptodate.
+<tadpoleCancel-eps-converted-to.pdf, id=1532, 177.66376pt x 49.18375pt>
+File: tadpoleCancel-eps-converted-to.pdf Graphic file (type pdf)
+<use tadpoleCancel-eps-converted-to.pdf>
+Package pdftex.def Info: tadpoleCancel-eps-converted-to.pdf  used on input line
+ 4953.
+(pdftex.def)             Requested size: 250.0pt x 69.21172pt.
+ [89 <./tadpoleCancel-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <s1Orbifold.eps>
+(epstopdf)                    date: 2017-11-17 04:22:35
+(epstopdf)                    size: 182756 bytes
+(epstopdf)             Output file: <s1Orbifold-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-17 09:52:15
+(epstopdf)                    size: 9622 bytes
+(epstopdf)             Command: <repstopdf --outfile=s1Orbifold-eps-converted-t
+o.pdf s1Orbifold.eps>
+(epstopdf)             \includegraphics on input line 5008.
+Package epstopdf Info: Output file is already uptodate.
+<s1Orbifold-eps-converted-to.pdf, id=1541, 83.31125pt x 86.3225pt>
+File: s1Orbifold-eps-converted-to.pdf Graphic file (type pdf)
+<use s1Orbifold-eps-converted-to.pdf>
+Package pdftex.def Info: s1Orbifold-eps-converted-to.pdf  used on input line 50
+08.
+(pdftex.def)             Requested size: 100.0pt x 103.62201pt.
+Package epstopdf Info: Source file: <type1dual.eps>
+(epstopdf)                    date: 2017-11-17 04:30:18
+(epstopdf)                    size: 237217 bytes
+(epstopdf)             Output file: <type1dual-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-17 09:52:16
+(epstopdf)                    size: 30987 bytes
+(epstopdf)             Command: <repstopdf --outfile=type1dual-eps-converted-to
+.pdf type1dual.eps>
+(epstopdf)             \includegraphics on input line 5032.
+Package epstopdf Info: Output file is already uptodate.
+<type1dual-eps-converted-to.pdf, id=1543, 76.285pt x 86.3225pt>
+File: type1dual-eps-converted-to.pdf Graphic file (type pdf)
+<use type1dual-eps-converted-to.pdf>
+Package pdftex.def Info: type1dual-eps-converted-to.pdf  used on input line 503
+2.
+(pdftex.def)             Requested size: 100.0pt x 113.1623pt.
+ [90 <./s1Orbifold-eps-converted-to.pdf>] [91 <./type1dual-eps-converted-to.pdf
+>]
+<lattice.pdf, id=1565, 506.89375pt x 233.87375pt>
+File: lattice.pdf Graphic file (type pdf)
+<use lattice.pdf>
+Package pdftex.def Info: lattice.pdf  used on input line 5078.
+(pdftex.def)             Requested size: 284.52756pt x 131.27885pt.
+ [92 <./lattice.pdf>] [93] [94]
+<Dynkin_diagram_E8.pdf, id=1600, 312.36702pt x 73.073pt>
+File: Dynkin_diagram_E8.pdf Graphic file (type pdf)
+<use Dynkin_diagram_E8.pdf>
+Package pdftex.def Info: Dynkin_diagram_E8.pdf  used on input line 5203.
+(pdftex.def)             Requested size: 142.26378pt x 33.2806pt.
+ [95 <./Dynkin_diagram_E8.pdf>]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.11.7
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.5242 \end{align}
+                  
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5253.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5253.
+
+[96]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5297.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 5297.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\times' on input line 5297.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 5297.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 5297.
+
+[97] [98]
+Package epstopdf Info: Source file: <tangent.eps>
+(epstopdf)                    date: 2017-12-01 10:08:56
+(epstopdf)                    size: 191522 bytes
+(epstopdf)             Output file: <tangent-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-12-01 14:04:53
+(epstopdf)                    size: 13195 bytes
+(epstopdf)             Command: <repstopdf --outfile=tangent-eps-converted-to.p
+df tangent.eps>
+(epstopdf)             \includegraphics on input line 5384.
+Package epstopdf Info: Output file is already uptodate.
+<tangent-eps-converted-to.pdf, id=1635, 175.65625pt x 129.48375pt>
+File: tangent-eps-converted-to.pdf Graphic file (type pdf)
+<use tangent-eps-converted-to.pdf>
+Package pdftex.def Info: tangent-eps-converted-to.pdf  used on input line 5384.
+
+(pdftex.def)             Requested size: 200.0pt x 147.44109pt.
+ [99] [100 <./tangent-eps-converted-to.pdf>] [101] [102]
+Overfull \hbox (70.05711pt too wide) detected at line 5616
+[]
+ []
+
+[103] [104]
+<duality-web.pdf, id=1671, 343.0476pt x 171.07314pt>
+File: duality-web.pdf Graphic file (type pdf)
+<use duality-web.pdf>
+Package pdftex.def Info: duality-web.pdf  used on input line 5998.
+(pdftex.def)             Requested size: 430.20639pt x 214.54567pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[105] [106 <./duality-web.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6059.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6059.
+
+[107] [108]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6136.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 6136.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\times' on input line 6136.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 6136.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6136.
+
+<HE-duality.pdf, id=1775, 310.64255pt x 136.47388pt>
+File: HE-duality.pdf Graphic file (type pdf)
+<use HE-duality.pdf>
+Package pdftex.def Info: HE-duality.pdf  used on input line 6142.
+(pdftex.def)             Requested size: 426.79134pt x 187.50949pt.
+[109 <./HE-duality.pdf>]
+<Horava-Witten.pdf, id=1814, 150.73415pt x 104.71019pt>
+File: Horava-Witten.pdf Graphic file (type pdf)
+<use Horava-Witten.pdf>
+Package pdftex.def Info: Horava-Witten.pdf  used on input line 6169.
+(pdftex.def)             Requested size: 369.88582pt x 256.97198pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6174.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 6174.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6174.
+
+[110 <./Horava-Witten.pdf>] [111]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6260.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 6260.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6260.
+
+[112] [113]
+Package epstopdf Info: Source file: <D1D2.eps>
+(epstopdf)                    date: 2017-12-01 10:10:59
+(epstopdf)                    size: 202043 bytes
+(epstopdf)             Output file: <D1D2-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-12-01 14:04:54
+(epstopdf)                    size: 17431 bytes
+(epstopdf)             Command: <repstopdf --outfile=D1D2-eps-converted-to.pdf 
+D1D2.eps>
+(epstopdf)             \includegraphics on input line 6367.
+Package epstopdf Info: Output file is already uptodate.
+<D1D2-eps-converted-to.pdf, id=1861, 234.8775pt x 83.31125pt>
+File: D1D2-eps-converted-to.pdf Graphic file (type pdf)
+<use D1D2-eps-converted-to.pdf>
+Package pdftex.def Info: D1D2-eps-converted-to.pdf  used on input line 6367.
+(pdftex.def)             Requested size: 250.0pt x 88.6756pt.
+Package epstopdf Info: Source file: <vibD1.eps>
+(epstopdf)                    date: 2017-12-01 10:11:14
+(epstopdf)                    size: 181964 bytes
+(epstopdf)             Output file: <vibD1-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-12-01 14:04:55
+(epstopdf)                    size: 9199 bytes
+(epstopdf)             Command: <repstopdf --outfile=vibD1-eps-converted-to.pdf
+ vibD1.eps>
+(epstopdf)             \includegraphics on input line 6382.
+Package epstopdf Info: Output file is already uptodate.
+<vibD1-eps-converted-to.pdf, id=1863, 98.3675pt x 68.255pt>
+File: vibD1-eps-converted-to.pdf Graphic file (type pdf)
+<use vibD1-eps-converted-to.pdf>
+Package pdftex.def Info: vibD1-eps-converted-to.pdf  used on input line 6382.
+(pdftex.def)             Requested size: 120.0pt x 83.26471pt.
+ [114 <./D1D2-eps-converted-to.pdf>]
+Overfull \hbox (17.92625pt too wide) detected at line 6443
+[]
+ []
+
+[115 <./vibD1-eps-converted-to.pdf>] [116]
+Package epstopdf Info: Source file: <D0D2.eps>
+(epstopdf)                    date: 2017-12-01 10:11:28
+(epstopdf)                    size: 178396 bytes
+(epstopdf)             Output file: <D0D2-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-12-01 14:04:55
+(epstopdf)                    size: 7590 bytes
+(epstopdf)             Command: <repstopdf --outfile=D0D2-eps-converted-to.pdf 
+D0D2.eps>
+(epstopdf)             \includegraphics on input line 6572.
+Package epstopdf Info: Output file is already uptodate.
+<D0D2-eps-converted-to.pdf, id=1886, 189.70876pt x 49.18375pt>
+File: D0D2-eps-converted-to.pdf Graphic file (type pdf)
+<use D0D2-eps-converted-to.pdf>
+Package pdftex.def Info: D0D2-eps-converted-to.pdf  used on input line 6572.
+(pdftex.def)             Requested size: 250.0pt x 64.81615pt.
+ [117 <./D0D2-eps-converted-to.pdf>]
+[118] [119] [120] [121]
+Package epstopdf Info: Source file: <D0D2Bound.eps>
+(epstopdf)                    date: 2017-12-15 06:25:05
+(epstopdf)                    size: 191512 bytes
+(epstopdf)             Output file: <D0D2Bound-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-12-15 13:37:31
+(epstopdf)                    size: 12928 bytes
+(epstopdf)             Command: <repstopdf --outfile=D0D2Bound-eps-converted-to
+.pdf D0D2Bound.eps>
+(epstopdf)             \includegraphics on input line 6857.
+Package epstopdf Info: Output file is already uptodate.
+<D0D2Bound-eps-converted-to.pdf, id=1926, 192.72pt x 54.2025pt>
+File: D0D2Bound-eps-converted-to.pdf Graphic file (type pdf)
+<use D0D2Bound-eps-converted-to.pdf>
+Package pdftex.def Info: D0D2Bound-eps-converted-to.pdf  used on input line 685
+7.
+(pdftex.def)             Requested size: 300.0pt x 84.37524pt.
+Package epstopdf Info: Source file: <Myers.eps>
+(epstopdf)                    date: 2017-12-15 06:24:46
+(epstopdf)                    size: 187759 bytes
+(epstopdf)             Output file: <Myers-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-12-15 13:37:32
+(epstopdf)                    size: 11381 bytes
+(epstopdf)             Command: <repstopdf --outfile=Myers-eps-converted-to.pdf
+ Myers.eps>
+(epstopdf)             \includegraphics on input line 6870.
+Package epstopdf Info: Output file is already uptodate.
+<Myers-eps-converted-to.pdf, id=1928, 124.465pt x 51.19125pt>
+File: Myers-eps-converted-to.pdf Graphic file (type pdf)
+<use Myers-eps-converted-to.pdf>
+Package pdftex.def Info: Myers-eps-converted-to.pdf  used on input line 6870.
+(pdftex.def)             Requested size: 200.0pt x 82.2654pt.
+Package epstopdf Info: Source file: <HW.eps>
+(epstopdf)                    date: 2017-12-15 06:40:00
+(epstopdf)                    size: 181102 bytes
+(epstopdf)             Output file: <HW-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-12-15 13:37:32
+(epstopdf)                    size: 8824 bytes
+(epstopdf)             Command: <repstopdf --outfile=HW-eps-converted-to.pdf HW
+.eps>
+(epstopdf)             \includegraphics on input line 6890.
+Package epstopdf Info: Output file is already uptodate.
+<HW-eps-converted-to.pdf, id=1930, 171.64125pt x 101.37875pt>
+File: HW-eps-converted-to.pdf Graphic file (type pdf)
+<use HW-eps-converted-to.pdf>
+Package pdftex.def Info: HW-eps-converted-to.pdf  used on input line 6890.
+(pdftex.def)             Requested size: 250.0pt x 147.66058pt.
+ [122 <./D0D2Bound-eps-converted-to.pdf> <./Myers-eps-converted-to.pdf>] [123 <
+./HW-eps-converted-to.pdf>] [124] [125]
+
+Package natbib Warning: Citation `Bekenstein:1972tm' on page 126 undefined on i
+nput line 7046.
+
+
+Package natbib Warning: Citation `Hawking:1971tu' on page 126 undefined on inpu
+t line 7046.
+
+
+Package natbib Warning: Citation `Hawking:1971vc' on page 126 undefined on inpu
+t line 7046.
+
+
+Package natbib Warning: Citation `Bekenstein:1972tm' on page 126 undefined on i
+nput line 7046.
+
+[126
+pdfTeX warning (ext4): destination with the same identifier (name{equation.15.4
+}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.7060 \be
+           dM = \frac{\kappa}{8\pi G} dA + \mu dQ + \Omega dJ \ee] [127]
+[128]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./D1D5.pdf): PDF inclusion: 
+found PDF version <1.6>, but at most version <1.5> allowed
+<D1D5.pdf, id=2008, 346.8428pt x 234.59846pt>
+File: D1D5.pdf Graphic file (type pdf)
+<use D1D5.pdf>
+Package pdftex.def Info: D1D5.pdf  used on input line 7168.
+(pdftex.def)             Requested size: 346.84195pt x 234.59789pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[129] [130 <./D1D5.pdf>]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.15.7
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7223 \bea
+           \label{sugra-result}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.15.7
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7223 \bea
+           \label{sugra-result}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.15.7
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7223 \bea
+           \label{sugra-result}
+pdfTeX warning (ext4): destination with the same identifier (name{equation.15.7
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7223 \bea
+           \label{sugra-result} [131]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./protected.pdf): PDF inclus
+ion: found PDF version <1.6>, but at most version <1.5> allowed
+<protected.pdf, id=2029, 277.42105pt x 172.33734pt>
+File: protected.pdf Graphic file (type pdf)
+<use protected.pdf>
+Package pdftex.def Info: protected.pdf  used on input line 7313.
+(pdftex.def)             Requested size: 312.9803pt x 194.43651pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[132] [133 <./protected.pdf>] [134] [135] [136] [137]
+Overfull \hbox (44.63927pt too wide) detected at line 7605
+[][][][][]
+ []
+
+
+LaTeX Warning: Reference `conformal-group' on page 138 undefined on input line 
+7627.
+
+[138]
+
+Package natbib Warning: Citation `Goddard:1976qe' on page 139 undefined on inpu
+t line 7650.
+
+
+Package natbib Warning: Citation `Montonen:1977sn' on page 139 undefined on inp
+ut line 7650.
+
+
+LaTeX Warning: Reference `sec:Sdual' on page 139 undefined on input line 7655.
+
+
+Package natbib Warning: Citation `Aharony:2013hda' on page 139 undefined on inp
+ut line 7659.
+
+[139]
+
+./String-Lectures.tex:7682: LaTeX Error: File `picture/throat' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7682 ...ludegraphics[width=10cm]{picture/throat}
+                                                  
+? 
+[140]
+
+./String-Lectures.tex:7765: LaTeX Error: File `picture/planar-non' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7765 ...egraphics[width=8cm]{picture/planar-non}
+                                                  
+? 
+[141] [142] [143] (./String-Lectures.bbl [144] [145] [146] [147] [148])
+
+Package natbib Warning: There were undefined citations.
+
+[149] (./String-Lectures.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `String-Lectures.out' has not changed.
+(rerunfilecheck)             Checksum: 0C1D3651CD45011F266C4863F8916938;20432.
+ ) 
+Here is how much of TeX's memory you used:
+ 49593 strings out of 476025
+ 1136810 string characters out of 5790018
+ 1871388 words of memory out of 5000000
+ 68166 multiletter control sequences out of 15000+600000
+ 538433 words of font info for 254 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 98i,19n,103p,3247b,1222s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
+></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
+sr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
+al/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
+exlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
+ive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
+/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
+23/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2023/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2023/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2023/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2023/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2023/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2023/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/font
+s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2023/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2023/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on String-Lectures.pdf (153 pages, 2173993 bytes).
+PDF statistics:
+ 2514 PDF objects out of 2984 (max. 8388607)
+ 2199 compressed objects within 22 object streams
+ 626 named destinations out of 1000 (max. 500000)
+ 57502 words of extra memory for PDF output out of 61914 (max. 10000000)
+

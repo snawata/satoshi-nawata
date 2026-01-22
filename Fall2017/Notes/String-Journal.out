@@ -1,0 +1,112 @@
+\BOOKMARK [1][-]{section.1}{Motivation and Overview}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Why do we study string theory?}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Very very brief history}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Very short highlights}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Convection}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{Bosonic string theory}{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{Towards string interaction}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.2}{Path integral method}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.3}{State-operator correspondence}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Two-dimensional conformal field theories}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{Conformal transformations}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Massless scalar theory in 2d}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.3}{Operator analysis \(Path integral quantization\)}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.4}{Operator product expansion \(OPE\)}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.5}{Noether's theorem and Ward-Takahashi identities}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.6}{Conformal Ward-Takahashi identity}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.7}{Primary fields}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.8}{Free scalar field}{section.3}% 18
+\BOOKMARK [2][-]{subsection.3.9}{OPE of stress-energy tensor}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.10}{Vertex operators}{section.3}% 20
+\BOOKMARK [3][-]{subsubsection.3.10.1}{Mass from vertex operator}{subsection.3.10}% 21
+\BOOKMARK [1][-]{section.4}{Weyl anomaly}{}% 22
+\BOOKMARK [2][-]{subsection.4.1}{Weyl anomaly from curved WS}{section.4}% 23
+\BOOKMARK [2][-]{subsection.4.2}{Non-linear sigma model \(Graviton included\)}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.3}{Perturbation theory for NLSM \(Weyl anomaly from curved ST\)}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.4}{NLSM \(general\)}{section.4}% 26
+\BOOKMARK [1][-]{section.5}{BRST quantization}{}% 27
+\BOOKMARK [2][-]{subsection.5.1}{Quantization via path integral}{section.5}% 28
+\BOOKMARK [2][-]{subsection.5.2}{BRST quantization}{section.5}% 29
+\BOOKMARK [1][-]{section.6}{Bosonic string amplitudes}{}% 30
+\BOOKMARK [2][-]{subsection.6.1}{Global part of the gauge fixing}{section.6}% 31
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Naive explanation}{subsection.6.1}% 32
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Conformal Killing Group \046 Metric moduli of space}{subsection.6.1}% 33
+\BOOKMARK [3][-]{subsubsection.6.1.3}{Ghost number anomaly}{subsection.6.1}% 34
+\BOOKMARK [3][-]{subsubsection.6.1.4}{Ghost action and the zero modes}{subsection.6.1}% 35
+\BOOKMARK [2][-]{subsection.6.2}{Tree amplitude}{section.6}% 36
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Matter sector}{subsection.6.2}% 37
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Ghost sector}{subsection.6.2}% 38
+\BOOKMARK [3][-]{subsubsection.6.2.3}{Shapiro-Virasoro amplitude}{subsection.6.2}% 39
+\BOOKMARK [1][-]{section.7}{Superstring theories}{}% 40
+\BOOKMARK [2][-]{subsection.7.1}{RNS formulation}{section.7}% 41
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Superconformal field theories}{subsection.7.1}% 42
+\BOOKMARK [2][-]{subsection.7.2}{Physical spectrum and the GSO Projection}{section.7}% 43
+\BOOKMARK [2][-]{subsection.7.3}{1-loop amplitude}{section.7}% 44
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Torus and its modulus \046 CKG}{subsection.7.3}% 45
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Torus partition function for bosonic string}{subsection.7.3}% 46
+\BOOKMARK [3][-]{subsubsection.7.3.3}{Torus partition functions for superstring}{subsection.7.3}% 47
+\BOOKMARK [2][-]{subsection.7.4}{Special functions}{section.7}% 48
+\BOOKMARK [1][-]{section.8}{Type II string theories}{}% 49
+\BOOKMARK [2][-]{subsection.8.1}{Type II Superstrings}{section.8}% 50
+\BOOKMARK [2][-]{subsection.8.2}{Introduction to D-branes}{section.8}% 51
+\BOOKMARK [3][-]{subsubsection.8.2.1}{Boundary conditions \046 D-brane}{subsection.8.2}% 52
+\BOOKMARK [3][-]{subsubsection.8.2.2}{Chan-Paton factor}{subsection.8.2}% 53
+\BOOKMARK [3][-]{subsubsection.8.2.3}{D-brane in IIA/IIB superstring theory}{subsection.8.2}% 54
+\BOOKMARK [1][-]{section.9}{T-duality}{}% 55
+\BOOKMARK [2][-]{subsection.9.1}{S1 compactification in closed bosonic string}{section.9}% 56
+\BOOKMARK [3][-]{subsubsection.9.1.1}{Self-dual radius: R = '}{subsection.9.1}% 57
+\BOOKMARK [2][-]{subsection.9.2}{T-duality of Open Strings}{section.9}% 58
+\BOOKMARK [2][-]{subsection.9.3}{T-duality of Type II Superstrings}{section.9}% 59
+\BOOKMARK [1][-]{section.10}{Type I superstring theory}{}% 60
+\BOOKMARK [2][-]{subsubsection.10.0.1}{Orientation flip operation}{section.10}% 61
+\BOOKMARK [3][-]{subsubsection.10.0.2}{Amplitude of Type I theory}{subsubsection.10.0.1}% 62
+\BOOKMARK [3][-]{subsubsection.10.0.3}{T-duality of Type I theory}{subsubsection.10.0.1}% 63
+\BOOKMARK [1][-]{section.11}{Heterotic string theories}{}% 64
+\BOOKMARK [2][-]{subsection.11.1}{Bosonic construction}{section.11}% 65
+\BOOKMARK [3][-]{subsubsection.11.1.1}{Toroidal compactifications}{subsection.11.1}% 66
+\BOOKMARK [3][-]{subsubsection.11.1.2}{Heterotic strings}{subsection.11.1}% 67
+\BOOKMARK [2][-]{subsection.11.2}{Fermionic construction}{section.11}% 68
+\BOOKMARK [3][-]{subsubsection.11.2.1}{Heterotic SO\(32\) \(HO\)}{subsection.11.2}% 69
+\BOOKMARK [3][-]{subsubsection.11.2.2}{Heterotic E8E8 \(HE\)}{subsection.11.2}% 70
+\BOOKMARK [3][-]{subsubsection.11.2.3}{No D-branes in Heterotic strings}{subsection.11.2}% 71
+\BOOKMARK [1][-]{section.12}{Supergravity}{}% 72
+\BOOKMARK [2][-]{subsection.12.1}{Local SUSY}{section.12}% 73
+\BOOKMARK [2][-]{subsection.12.2}{11d SUGRA}{section.12}% 74
+\BOOKMARK [2][-]{subsection.12.3}{10d Type IIA SUGRA}{section.12}% 75
+\BOOKMARK [2][-]{subsection.12.4}{10d Type IIB SUGRA}{section.12}% 76
+\BOOKMARK [1][-]{section.13}{String dualities}{}% 77
+\BOOKMARK [2][-]{subsection.13.1}{S-duality of Type IIB SUGRA}{section.13}% 78
+\BOOKMARK [2][-]{subsection.13.2}{M-theory}{section.13}% 79
+\BOOKMARK [1][-]{section.14}{Lecture 13}{}% 80
+\BOOKMARK [2][-]{subsection.14.1}{Heterotic T-duality}{section.14}% 81
+\BOOKMARK [2][-]{subsection.14.2}{S\205duality between Type I and Heterotic SO\(32\)}{section.14}% 82
+\BOOKMARK [2][-]{subsection.14.3}{Heterotic E8E8 string from M-theory}{section.14}% 83
+\BOOKMARK [2][-]{subsection.14.4}{Duality between Heterotic on T4 and Type IIA on K3}{section.14}% 84
+\BOOKMARK [3][-]{subsubsection.14.4.1}{K3 surface}{subsection.14.4}% 85
+\BOOKMARK [3][-]{subsubsection.14.4.2}{Heterotic on T4/Type IIA on K3}{subsection.14.4}% 86
+\BOOKMARK [3][-]{subsubsection.14.4.3}{More dualities}{subsection.14.4}% 87
+\BOOKMARK [1][-]{section.15}{D-brane dynamics}{}% 88
+\BOOKMARK [2][-]{subsection.15.1}{D-brane action}{section.15}% 89
+\BOOKMARK [2][-]{subsection.15.2}{Branes, Strings ending on Branes}{section.15}% 90
+\BOOKMARK [2][-]{subsection.15.3}{Bound states of D-branes}{section.15}% 91
+\BOOKMARK [1][-]{section.16}{Black holes in string theory}{}% 92
+\BOOKMARK [2][-]{subsection.16.1}{Black hole thermodynamics}{section.16}% 93
+\BOOKMARK [3][-]{subsubsection.16.1.1}{Black holes}{subsection.16.1}% 94
+\BOOKMARK [3][-]{subsubsection.16.1.2}{Black hole thermodynamics}{subsection.16.1}% 95
+\BOOKMARK [3][-]{subsubsection.16.1.3}{Bekenstein-Hawking entropy}{subsection.16.1}% 96
+\BOOKMARK [2][-]{subsection.16.2}{Black holes in string theory}{section.16}% 97
+\BOOKMARK [3][-]{subsubsection.16.2.1}{D1-D5-P brane system}{subsection.16.2}% 98
+\BOOKMARK [3][-]{subsubsection.16.2.2}{Black hole in 5d supergravity}{subsection.16.2}% 99
+\BOOKMARK [3][-]{subsubsection.16.2.3}{Counting microstates}{subsection.16.2}% 100
+\BOOKMARK [3][-]{subsubsection.16.2.4}{More results}{subsection.16.2}% 101
+\BOOKMARK [1][-]{section.17}{Introduction to AdS/CFT correspondence}{}% 102
+\BOOKMARK [2][-]{subsection.17.1}{Conformal group}{section.17}% 103
+\BOOKMARK [3][-]{subsubsection.17.1.1}{Primary fields}{subsection.17.1}% 104
+\BOOKMARK [2][-]{subsection.17.2}{Anti-de Sitter space}{section.17}% 105
+\BOOKMARK [3][-]{subsubsection.17.2.1}{Global coordinate}{subsection.17.2}% 106
+\BOOKMARK [3][-]{subsubsection.17.2.2}{Poincar\351 coordinates}{subsection.17.2}% 107
+\BOOKMARK [2][-]{subsection.17.3}{Introduction to AdS5/CFT4 correspondence}{section.17}% 108
+\BOOKMARK [3][-]{subsubsection.17.3.1}{N=4 super-Yang-Mills theory}{subsection.17.3}% 109
+\BOOKMARK [3][-]{subsubsection.17.3.2}{Near-horizon geometry of D3-branes}{subsection.17.3}% 110
+\BOOKMARK [3][-]{subsubsection.17.3.3}{The AdS/CFT correspondence}{subsection.17.3}% 111
+\BOOKMARK [2][-]{subsection.17.4}{GKPW relation}{section.17}% 112

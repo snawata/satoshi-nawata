@@ -1,0 +1,659 @@
+ \documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{jheppub}
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{gensymb}
+\usepackage{simplewick}
+\usepackage{feynmp-auto}
+\usepackage{wrapfig}
+
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\Lambda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%\parskip=1em
+%\parindent=0.3in
+%\setlength\oddsidemargin{0.5in} \setlength\evensidemargin{0.5in}
+%\setlength\textwidth{5.5in}
+%
+%\hfuzz6pt % Don't bother to report over-full boxes if over-edge is < 6pt
+%
+%\newlength{\defbaselineskip}
+%\setlength{\defbaselineskip}{\baselineskip}
+%\newcommand{\setlinespacing}[1]%
+%           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%
+%\newcommand{\properpagestyle}{\pagestyle{myheadings}\markboth{}{}\markright{}}
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+\def\tl{\tilde}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+
+
+
+
+\def\bea{\begin{align}}
+\def\eea{\end{align}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{align}}
+\def\ea{\end{align}}
+
+
+%\title{ Lecture 4}
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf  Lecture 3}
+
+\vspace{.5cm}
+Conformal field theories (CFTs) play distinctive role in quantum field theories, string theory, statistical mechanics, and condensed matter physics. Moreover, 2d CFTs are particularly rich because of infinite dimensional symmetry \cite{belavin1984infinite}. In the previous lecture, we have studied an important property of conformal field theories, the state-operator correspondence. In this lecture, we will learn significant feature of 2d conformal field theories more in detail. However, we glimpse only a tip of iceberg  and the subject would actually deserve the entire one semester. If you are interested in this fertile subject, we refer to the standard references \cite{ginsparg1988applied,francesco2012conformal,Blumenhagen:2009zz}.
+
+
+\section{Conformal transformations}
+
+ A CFT in any dimension is a quantum field theory which is invariant under conformal transformations at quantum level.
+A \textbf{conformal transformation} is a change of coordinates
+$x^a\rightarrow \wt{x}^a(x)$ such that the metric changes by
+%
+\be g_{ab}(x) \rightarrow \Omega^2(\sigma)g_{ab}(x)~.\label{cft}\ee
+%
+This means that the theory behaves the same at
+all length scales. 
+
+In the string sigma model action,  the metric is dynamical and the conformal transformations \eqref{cft} consist of a subgroup of diffeomorphisms so that it can be canceled by a Weyl symmetry of the metric. However, in the following, we fix a 2d Euclidian flat metric and  the transformation \eqref{cft} should be thought of as physical symmetry, taking the point $x^\alpha$ to point $\wt{x}^\alpha$.
+
+
+
+\begin{figure}[h]\centering
+\includegraphics[width=13cm]{conformal-trans}
+\end{figure}
+\subsection*{2d flat space}
+In complex coordinate, the 2d flat metric can be written as $ds^2 = dz d\bar{z}$. Under a holomorphic map,
+$$
+z\rightarrow f(z)~,
+$$
+the metric is transformed as
+$$
+ds^2 = dz d\bar{z}\quad  \rightarrow\quad  ds^2 =\frac{\partial {f}}{\partial {z}} \frac{\partial \bar{f}}{\partial \bar{z}} dz d\bar{z}~. 
+$$
+Therefore, all the holomorphic maps are conformal transformations where  $\left| \frac{\partial f}{\partial z} \right|^2$ is a conformal factor (corresponding to $ \Omega^2(\sigma)$ in \eqref{cft}). Moreover, it is easy to show that all 2d conformal transformations are indeed holomorphic functions (Exercise).  This set is infinite-dimensional, corresponding to the the coefficients of the Laurent series of holomorphic functions in some neighborhood. This infinity is what makes conformal symmetry so powerful in two dimensions.
+
+%To consider an infinitesimal conformal transformation, we right $f(z)=z+\epsilon(z)$. Because $f(z)$ is a holomorphic function, so too is $f(z)=z+\epsilon(z)$. The same statements hold true for the variable $\bar{z}$. These facts mean that metric tensor transforms as
+%$$
+%ds^2 = dz d\bar{z} \rightarrow \frac{\partial {f}}{\partial {z}} \frac{\partial \bar{f}}{\partial \bar{z}} dz d\bar{z}. 
+%$$
+%We can also read off the scale factor for these 2d conformal transformations as $\Lambda = \left| \frac{\partial f}{\partial z} \right|^2$.
+%
+
+
+\section{Conformal Ward-Takahashi identity}
+
+
+
+
+Recall that  in a field theory, continuous symmetries correspond to conserved currents. Hence, let us consider the Noether current for conformal symmetry. 
+
+
+For an infinitesimal conformal transformation $x^\mu\rightarrow x^\mu + \epsilon^\mu(x)$, the metric is transformed as
+$$
+\eta_{\mu\nu}\to \eta_{\mu\nu} +\partial_\mu\e_\nu+\partial_\nu\e_\mu~.
+$$
+Since this is conformal transformation, it is proportional to $\eta_{\mu\nu}$ so that we have
+$$
+\partial_\mu\e_\nu+\partial_\nu\e_\mu = (\partial_\rho \e^\rho)\eta_{\mu\nu}~.
+$$
+The current for the conformal transformation can be written as $$j_\mu=T_{\mu\nu}\epsilon^\nu~,$$
+where the straightforward calculation provides the stress-energy tensor
+\be\label{se}
+T_{\mu\nu}=-2\pi\Big[\frac{\partial L}{\partial(\partial^\mu \phi)} \partial_\nu \phi -\delta_{\mu\nu} L\Big]~.
+\ee
+If we assume $\epsilon$ is constant, it is easy to see that the the conservation of the current implies the conservation of the stress-energy tensor:
+\be\label{conservation}
+\partial_\mu j^\mu=0 \quad \to\quad \partial^\mu T_{\mu\nu}=0~.
+\ee 
+For general $\epsilon^\mu(x)$, the conservation of the current gives the traceless condition of $T_{\mu\nu}$:
+\begin{equation}\label{traceless}
+0=\partial^\mu j_\mu=\frac12 T_{\mu\nu}(\partial^\mu\e^\nu+\partial^\nu\e^\mu )=\frac12T^\mu{}_\mu(\partial_\rho \e^\rho)\quad \to \quad T^\mu{}_\mu=0~.
+\end{equation}
+In the complex coordinate $z=x^1+ix^2$, the traceless condition can be written as
+$$
+T_{z\bar{z}} = T_{\bar{z}z} = 0
+$$
+and the conservation of the stress-energy tensor can be written as
+$$
+\partial_{\bar{z}}T_{zz}= 0~,\qquad \partial_{z}T_{\bar{z}\bar{z}}= 0~.
+$$
+Thus, the non-vanishing components of the stress-energy tensor factorize to a chiral and anti-chiral field, 
+$$T(z):=T_{zz} \quad \textrm{and} \quad  \bar{T}(\bar{z}):=T_{\bar{z}\bar{z}} ~.$$ As a result, the Noether currents for conformal transformations $z \to z + \e(z)$ and $\bar z \to\bar  z + \bar \e(\bar z)$ are
+$$
+j(z)=  \epsilon(z) T(z)~,\quad \overline j(\overline z)=\overline \epsilon(\overline z)  \overline T(\overline z)  ~.
+$$
+The application to the Ward-Takahashi identity leads to \textbf{conformal Ward-Takahashi identity}
+\begin{equation}
+\delta_{\epsilon.\overline \epsilon} \mathcal{O}(w,\bar{w}) = \frac{1}{2\pi i}\oint_{C_w} dz\;  \epsilon(z)T(z) \mathcal{O}(w,\bar{w})+
+ \frac{1}{2\pi i}\oint_{C_{\bar w}} d\bar{z}\; \bar{\epsilon}(\bar{z}) \bar{T}(\bar{z})\mathcal{O}(w,\bar{w}) ~,
+\end{equation}
+where the contour integral is taken as a counter-clockwise circle both in $z$ and in $\bar z$ (thereby explaining the sign difference of the second term).
+
+
+
+\section{Primary fields}
+\begin{definition}
+ Fields  depending  only on $z$, i.e. $\phi(z)$, are called \textbf{chiral or holomorphic fields}  and fields $\overline \phi (\bar z)$ only depending on $\bar z$ are called \textbf{anti-chiral or anti-holomorphic  fields}. 
+\end{definition}
+\begin{definition}
+If a field $\phi$ that transforms under the scaling $z\rightarrow\lambda z$ as
+\begin{equation}
+\phi(z,\bar{z})\rightarrow\phi'(\lambda z,\bar{\lambda}\bar{z} )=\lambda^{-h} \bar{\lambda}^{-\bar{h}} \phi( z, \bar{z})~,
+\end{equation}
+it has \textbf{weight} $(h, \bar{h})$. Using these quantities (rather than the scaling dimension), we can define quasi-primary fields. 
+\end{definition}
+\begin{definition}
+Under a conformal transformation $z\rightarrow f(z)$, a field transforming according to the rule
+\begin{equation}\label{primary}
+\phi(z,\bar{z})\rightarrow\phi'(f(z),\bar{f} (\bar{z}))=\left(  \frac{\partial f}{\partial z} \right)^{-h} \left( \frac{\partial \overline f}{\partial \overline z}\right)^{-\bar{h}}\phi( z,\bar{z})
+\end{equation}
+ it is called a \textbf{primary field} of weight  $(h,\overline h)$. 
+ \end{definition}
+How do primary fields transform infinitesimally? Under the infinitesimal conformal transformation $z\rightarrow f(z)= z-\epsilon(z)$, we know that
+\begin{align}
+\left( \frac{\partial f}{\partial z} \right)^{-h}& = 1 + h \partial_z \epsilon(z) + O(\epsilon^2)~, \cr
+\phi(z-\epsilon(z),\bar{z}) &= \phi(z) - \epsilon(z)\partial_z \phi(z,\bar{z}) + O(\epsilon^2)~.
+\end{align}
+Hence, under an infinitesimal conformal transformation, the variation of a primary field is given by
+\begin{equation}
+\delta_\epsilon \phi(z,\bar{z}) = \left( h\partial_z \epsilon + \epsilon \partial_z + \bar{h}\partial_{\bar{z}}\bar{\epsilon} +\bar{\epsilon} \partial_{\bar{z}} \right)  \phi(z,\bar{z}) \label{eq:threetwothree}.
+\end{equation}
+
+Consequently, using simple complex analysis
+\begin{align}
+(\partial_w \e(w))\phi(w,\bar w)&=\frac1{2\pi i}\oint_{C_w} dz~ \frac{\e(z) \phi(w,\bar w)}{(z-w)^2}\cr
+\e(w)(\partial_w\phi(w,\bar w))&=\frac1{2\pi i}\oint_{C_w} dz ~\frac{\e(z)\partial_w \phi(w,\bar w)}{z-w}~,
+\end{align}
+one can read off the OPE of a primary operator $\phi$ of weight $(h,\tilde{h})$ with the stress-energy tensor $T$ (anti-chiral part $\overline  T$ can be obtained by complex conjugate)
+$$ T(z)\,\phi(w,\overline w) =h\frac{\phi(w,\overline w)}{(z-w)^2} + \frac{\partial_w \phi(w,\overline w)}{z-w} + \textrm{regular terms}
+\cdots $$
+In general, the OPE of an operator $\cO$ of weight $(h,\tilde{h})$ with the stress-energy tensor $T$ and $\overline  T$ takes the form
+%
+$$ T(z)\,{\cal O}(w,\overline w) =\quad \cdots + h\frac{{\cal O}(w,\overline w)}{(z-w)^2} + \frac{\partial{\cal O}(w,\overline w)}{z-w} +
+\cdots $$
+%
+
+One of the main interest in a CFT is to calculate correlation functions of primary fields. Indeed, the conformal Ward-Takahashi identity can be applied to a correlation function of primary fields
+$$
+\langle T(z) \phi_1(w_1,\bar{w}_1)\cdots \phi_n(w_n,\bar{w}_n)\rangle=\sum_{i=1}^n \Big(\frac{h_i}{(z-w_i)^2} + \frac{\partial_{w_{i}}}{z-w_i} \Big)\langle\phi_1(w_1,\bar{w}_1)\cdots \phi_n(w_n,\bar{w}_n)\rangle~.
+$$
+Moreover, conformal symmetry is so powerful that it determines the forms of two-point and three-point functions of primary fields (Exercise).
+
+\vspace{.4cm}
+
+\noindent $\bullet$ \textbf{2-point function}
+
+For chiral primary operators $\phi_i$ with weight $h_i$ ($i=1,2$), their 2-point function  is of form
+\be\label{2-pt}
+\langle \phi_1(z_1)\phi_2(z_2)\rangle =\delta_{h_1h_2}\frac{d_{12}}{(z_1-z_2)^{2h_1}}
+\ee
+If $d_{12}$ is non-degenerate, the fields can be normalized such that $d_{12}=\delta_{12}$.
+
+\vspace{.4cm}
+\noindent $\bullet$ \textbf{3-point function}
+
+A 3-point function is also completely fixed up to the appearance of a \textbf{structure constant}
+ $C_{ijk}$,
+$$
+\langle \phi_1(z_1)\phi_2(z_2)\phi_2(z_3)\rangle =\frac{C_{123}}{(z_1-z_2)^{h_1 +h_2 -h_3}(z_2-z_3)^{h_2 +h_3 -h_1}(z_3-z_1)^{h_3 +h_1 -h_2}}
+$$
+The structure constant depends on a CFT and, in general, it is not easy to determine it. 
+
+
+\vspace{.4cm}
+\noindent $\bullet$ \textbf{Multi-point function}
+
+The computation of multi-point functions involves \textbf{conformal blocks} with the 3-point function. The details are explained in \cite{francesco2012conformal,Blumenhagen:2009zz}.
+
+\section{Free scalar field}
+
+Now let us study conformal Ward-Takahashi identity in the simplest example, the free scalar field:
+$$
+S=\frac{1}{2\pi\a'}\int \!d^2z~ (\partial X \overline\partial X)~.
+$$
+Let us recall that the stress-energy tensor in 2d free scalar  theory  is
+%
+\be T_{ab} = - \frac{1}{\a'}\left(\partial_a X \partial_b X - \frac{1}{2}\,g_{ab}
+(\partial X)^2\right)\ ,\label{classicalt}\ee
+%
+In addition, since the equation of motion for $X$ is $\partial_z \overline \partial_{\bar z} X=0$, the general classical solution decomposes as $ X(z,\bar z) = X(z) + \bar{X}(\bar z)$. From the equation of motion, we find the conserved chiral and anti- chiral worldsheet currents $j(z) := i\partial X(z)$ and $\bar{j}(\bar{z}) := i\overline \partial \overline X(\overline z)$.
+Moreover, the stress-energy tensor looks
+much simpler in complex coordinates. It is simple to check that $T_{z\bar z}=0$ while
+%
+$$ T(z) = -\frac{1}{\a'}\,\partial_z X(z)\partial_z X(z)~, \quad   \overline T(\overline z) = -\frac{1}{\a'}\,\overline \partial_{\overline z} \overline X(z)\overline \partial_{\overline z} \overline X(\overline z)~.$$
+
+From the definition \eqref{primary}, one can see that $X(z,\overline z)$ is a primary field of weight (0,0). However, since the weight is of (0,0), the two-point function does not exactly take the form \eqref{2-pt}. Indeed, the OPE $XX$ tells us that the propagator takes the form
+$$
+\langle X(z,\overline z)X(w,\overline w) \rangle=-\frac{\a'}{2}\log|z-w|^2~.
+$$
+Also, the currents $\partial X(z)$, $\overline \partial \overline X(\overline z)$ are primary fields of weight (1,0) and (0,1)
+respectively. An immediate check is their correlation function
+$$
+\langle \partial X(z) \partial X(w) \rangle =-\frac{\a'}{2}\frac{1}{(z-w)^2}~,
+$$
+which takes the form \eqref{2-pt}. To convince ourselves completely, we need to compute the OPE with the stress-energy tensor by Wick's theorem %
+\begin{align}
+T(z)\,\partial X(w) &= -\frac{1}{\a'}: \partial X(z)\partial X(z): \partial X(w)\cr
+&= -\frac{1}{\a'} \Big[: \partial X(z)\partial X(z)\partial X(w): + \partial X(z)\langle \partial X(z) \partial X(w) \rangle  \Big]\cr
+&= \frac{\partial X(w)}{(z-w)^2}
++\frac{\partial^2 X(w)}{z-w} + \textrm{regular terms} \cdots
+\end{align}
+This is indeed the OPE for a primary operator of weight $h=1$. 
+
+
+
+
+
+Finally, lets check to see the OPE of the stress-energy tensor $TT$. This is again just an
+exercise in Wick contractions.
+%
+\begin{align} T(z)\,T(w) &= \frac{1}{\alpha^{\prime\,2}}\ :\partial X(z)\,\partial X(z):\ :\partial X(w)\,\partial X(w): \cr
+&= \frac{2}{\alpha^{\prime\,2}}\left(-\frac{\a'}{2}\,\frac{1}{(z-w)^2}\right)^2 -
+\frac{4}{\alpha^{\prime\,2}}
+\, \frac{\a'}{2}\,\frac{:\partial X(z)\,\partial X(w):}{(z-w)^2}+\ldots\end{align}
+%
+The factor of 2 in front of the first term comes from the two ways of performing
+two contractions; the factor of 4 in the second term comes from the number of
+ways of performing a single contraction. Continuing,
+%
+\begin{align}   T(z)\,T(w) &= \frac{1/2}{(z-w)^4} + \frac{2T(w)}{(z-w)^2} - \frac{2}{\a'}
+\frac{\partial^2X(w)\,\partial X(w)}{z-w} +\ldots \cr
+&= \frac{1/2}{(z-w)^4} + \frac{2T(w)}{(z-w)^2} +
+\frac{\partial T(w)}{z-w} + \ldots \label{scalartt}\end{align}
+%
+We learn that $T$ is \textbf{not} a primary operator in the theory of a
+single free scalar field. It is an operator of weight $(h,\overline{h})=(2,0)$,
+but it fails the primary test on account of the $(z-w)^{-4}$ term. In fact,
+this property of the stress-energy tensor is general in
+all CFTs which we now explore in more detail.
+
+
+
+
+
+%
+%Recalling its definition, a chiral primary field defined on $\mathbb{C}$ transforms under $z=e^w$ as
+%\begin{equation}
+%\phi_{cyl}(w)= \left(\frac{\partial z}{\partial w} \right)^h \phi(z) = z^h \phi(z)
+%\end{equation}
+%In terms of the mode expansion, this becomes
+%\begin{equation}
+%\phi_{cyl}(w) = z^h \sum_n \phi_n z^{-n-h} = \sum_n \phi_n e^{-nw}.
+%\end{equation}
+%If a field is invariant under $z\rightarrow e^{2\pi i}z$ on the complex plane, the same field picks up a phase $e^{2\pi i (h-\bar{h})}$ on the cylinder. If $(h-\bar{h})$ is not an integer, the boundary condition of the field is changed
+
+\section{OPE of stress-energy tensor}
+
+For the free scalar field, we have already seen that $T$ has 
+weight $(h,\tilde{h})=(2,0)$. This remains true in any CFT. The reason for this is simple:
+ $T_{ab}$ has dimension  $\Delta =2$ because we obtain the energy by integrating over space.
+It has spin $s=2$ because it is a symmetric 2-tensor. But these two pieces of information
+are equivalent to the statement that $T$ is an 
+operator of weight $(2,0)$. This means that the
+$TT$ OPE takes the form,
+%
+$$ T(z)\,T(w) = \ldots + \frac{2T(w)}{(z-w)^2} + \frac{\partial T(w)}{z-w} + \ldots $$
+%
+and similar for $\bar{T}\bar{T}$. What other terms could we have in this expansion? Since
+each term has dimension $\Delta=4$, the unitarity indeed tells us that the singular part of the OPE takes 
+$$T(z)\,T(w) = \frac{c/2}{(z-w)^4}+ \frac{2T(w)}{(z-w)^2} + \frac{\partial T (w)}{z-w}
++\ldots $$
+®
+
+
+
+
+
+
+From the OPE of the stress-energy tensor, one can see its variation under an infinitesimal conformal transformation $z\to z -\e(z)$
+\begin{align}
+\delta_\e T(w)&= \frac{1}{2\pi i}\oint_{C_w} dz~ \e(z)T(z)T(w)\cr
+&=\e(w)\partial T(w)+2\e'(w)T(w)+\frac{c}{12}\e{'''}(w)
+\end{align}
+One can verify by a straightforward computation that this is the infinitesimal version of
+ the following transformation under finite transformation $z\to w(z)$:
+\begin{equation}
+T'(w) = \left( \frac{\partial w}{\partial z} \right)^{-2} \left[T(z) - \frac{c}{12} S\left( w,z \right) \right], \label{eq:finitettransform}
+\end{equation}
+where the \textbf{Schwarzian derivative} $S$ is defined as
+\begin{equation}
+S(w,z) := \frac{1}{(\partial_z w)^2} \left((\partial_z w)(\partial_z^3 w)-\frac32(\partial_z^2 w)^2  \right).
+\end{equation}
+\begin{figure}\centering
+\includegraphics[width=10cm]{plane-cylinder}
+\end{figure}
+Using this conformal transformation law, one can see that the mapping from the plane to the cylinder $z=e^{-iw}$ ($w=\sigma+it$) leads to 
+\begin{equation}
+T_{cyl}(w) =- z^2 T(z) + \frac{c}{24}.
+\end{equation}
+The Laurent mode expansion of the stress-energy tensor on the cylinder is therefore
+\begin{equation}
+T_{cyl}(w) =- \sum_{n\in \mathbb{Z}} \left( L_n - \frac{c}{24}\delta_{n,0} \right) e^{inw}.
+\end{equation}
+We want to look at the
+Hamiltonian, which is defined by
+%
+$$ H \equiv \int d\sigma\ T_{\tau\tau} = -\int d\sigma\, (T_{ww} + \bar{T}_{\bar w\bar  w})$$
+%
+The conformal transformation then tells us that the ground state energy on the cylinder is
+%
+$$ E = -\frac{c+\overline{c}}{24}$$
+%
+This is indeed the (negative) Casimir energy on a cylinder. For a free scalar field, we have
+$c=\overline{c}=1$ and the energy density $E= -1/12.$ This is what we have seen in the quantization of bosonic string theory!
+
+
+\subsection*{Virasoro algebra}
+
+\begin{figure}\centering
+\includegraphics[width=10cm]{virasoro-contour}
+\end{figure}
+
+The mode expansion of the stress-energy tensor is expressed as
+$$
+T(z)= \sum_{n\in \mathbb{Z}} L_n z^{-n-2}
+$$
+It is natural to find the commutation relation of the generators $L_m$.  The commutator can be computed by
+%
+$$ [L_m,L_n] = \left(\oint\frac{dz}{2\pi i}\oint\frac{dw}{2\pi i}\ -\ \oint\frac{dw}{2\pi i}\oint\frac{dz}{2\pi i}\right)\,z^{m+1}w^{n+1}\,T(z)\,T(w)$$
+%
+A clever manipulation of the contour makes life easier
+\begin{align}
+[L_m,L_n] &= \oint \frac{dw}{2\pi i}\oint_w\frac{dz}{2\pi i} \ z^{m+1}w^{n+1}\,T(z)\,T(w) \\
+&= \oint\frac{dw}{2\pi i}\,\textrm{Res}\left[z^{m+1}w^{n+1}\left(\frac{c/2}{(z-w)^4}+\frac{2T(w)}{(z-w)^2}
++\frac{\partial T(w)}{z-w} + \ldots\right)\right]    \nonumber
+\end{align}
+A simple computation (Exercise) leads to the \textbf{Virasoro algebra}
+$$ [L_m,L_n] = (m-n)L_{m+n} + \frac{c}{12}m(m^2-1)\delta_{m+n,0}$$
+
+
+
+
+
+
+
+\bibliography{string-lecture}
+\bibliographystyle{halpha}
+
+
+
+
+
+
+\end{document}

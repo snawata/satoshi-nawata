@@ -1,0 +1,563 @@
+\documentclass[a4j,12pt]{jarticle}
+
+
+% \usepackage{a4j}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% \usepackage{showkeys}
+% \usepackage[dvips]{graphicx}
+
+\usepackage{bm}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{slashed}
+% \usepackage{mathbbol}  % 数字も白抜きにしてくれる
+\usepackage{multirow}  % Tableで複数のセルにまたがるセルを作れる
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headsep=10pt]{geometry}
+\usepackage[compact]{titlesec}
+\titlespacing*{\section}{0pt}{3ex}{2ex}
+\titlespacing*{\subsection}{0pt}{2ex}{1ex}
+\titlespacing*{\subsubsection}{0pt}{1ex}{1ex}
+
+% \usepackage{graphicx}           % tikzで使う graphicxと競合するので排除
+% \usepackage[usenames]{color}
+% \usepackage[usenames,dvipdfmx]{color}    % optionは同時に指定出来る。
+\usepackage[dvipsnames,dvipdfmx]{xcolor}    % optionは同時に指定出来る。
+
+
+\usepackage[british]{babel}
+\input{colordvi.tex}
+
+\usepackage[dvipdfm,colorlinks,pagebackref,pdfusetitle,urlcolor=blue,citecolor=MidnightBlue,linkcolor=MidnightBlue,bookmarksnumbered,plainpages=false]{hyperref}
+
+
+
+\input{dummy.tex}
+
+%%% tikzセッティング %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,patterns,snakes,calc}
+\input{arrowsnew}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{positioning}
+%%% end of tikz %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[hang,bf,figurename=Fig.\ , tablename=Table\ ,margin=1cm]{caption}
+\renewcommand{\captionfont}{\footnotesize}
+
+%%% listingsセッティング %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings, jlisting}
+\renewcommand{\lstlistingname}{Code}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  % language=Octave,                 % the language of the code
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=t,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%%% ned of listings セッティング %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pdfstringdefDisableCommands{%
+    \renewcommand*{\bm}[1]{#1}%
+    % any other necessary redefinitions 
+}
+
+%%%今村セッテッティング%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\HH}{\mathbb{H}}
+
+\newcommand{\hf}{\frac{1}{2}}
+\newcommand{\tr}{{\rm tr}}
+\newcommand{\ind}{{\rm ind}}
+\newcommand{\ol}{\overline}
+\newcommand{\ul}{\underline}
+\newcommand{\up}{\uparrow}
+\newcommand{\dn}{\downarrow}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\wh}{\widehat}
+
+
+%%%横山セッティング%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\NN}{\mathcal{N}\!}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\UU}{U(1)}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\SS}{\mathbf{S}}
+\renewcommand{\Im}{\mathrm{Im}}
+\renewcommand{\Re}{\mathrm{Re}}
+\renewcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\Tr}{{\rm Tr}}
+
+\renewcommand{\r}{\mathrm}
+
+\newcommand{\sign}{\mathrm{sign}}
+
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ro}{\sqrt}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\Pexp}{\mathrm{Pexp}}
+
+\newcommand{\nn}{\nonumber \\}
+\newcommand{\1}{\mbox{1}\hspace{-0.25em}\mbox{l}}
+
+%数字のみ対応
+\newcommand{\Maru}[1]{\ooalign{
+\ifnum#1<10 \hfil\resizebox{.9\width}{.85\height}{#1}\hfil
+\else
+\hfil\resizebox{.6\width}{.8\height}{#1}\hfil
+\fi
+\crcr
+\raise.1ex\hbox{$\bigcirc$}}}
+
+%全文字対応
+\newcommand{\maru}[1]{\ooalign{
+\hfil\resizebox{.8\width}{\height}{#1}\hfil
+\crcr
+\raise.1ex\hbox{\large$\bigcirc$}}}
+
+
+\newcommand{\nord}[1]{\vcentcolon\mathrel{#1}\vcentcolon}
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+
+
+\def\P{\mathop{\cal P}}
+\def\diag{\mathop{\rm diag}}
+
+
+\def\Re{\mathop{\rm Re}\nolimits}
+\def\Im{\mathop{\rm Im}\nolimits}
+\def\Det{\mathop{\rm Det}\nolimits}
+\def\sign{\mathop{\rm sign}\nolimits}
+
+
+%%% rap %%% - make two letters overlap
+\newcommand{\rap}[2]
+{\setbox1=\hbox{#1}%
+\setbox2=\hbox to\wd1{\hss #2\hss}%
+\mbox{\rlap{\box1}\box2}}
+
+%\newcommand{\sla}[1]{\rap{$#1$}{/}}
+\newcommand{\sla}[1]{\rap{$#1$}{$\backslash$}}
+
+
+\def\DY#1{{\MyGreen [DY: #1]}}
+\newcommand{\MyGreen}{\color [rgb]{0,0.7,0}}
+
+\usepackage[vcentermath]{youngtab}
+% \Yboxdim4pt
+\newcommand{\Y}{\yng}
+\newcommand{\Young}{}
+
+
+%%%title def%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\def\maketitle{
+\noindent
+{\Large \@title \par\vskip 2pt}
+\noindent
+{\large \@date \hspace{4pt} \@author}
+%\\[-2pt]
+%\noindent------------------------------------------------------------------------------------------
+\par\vskip 1.5em
+}
+
+\author{横山 大輔}
+\date{\today}
+%%%本文%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \title{\centerline{Lecture 2}}
+\begin{document}
+% \maketitle
+% \begin{abstract}
+
+% \end{abstract}
+% \tableofcontents
+
+% \parindent=0pt
+
+  \pagestyle{fancy}
+  \renewcommand{\headrulewidth}{0.0pt}
+  \rhead{}
+  \lhead{}
+  \cfoot{[\ \scshape\oldstylenums{\thepage}\ / %
+    \scshape\oldstylenums{\pageref{lastpage}} ]}
+%  \rfoot{\@author}
+
+% \setcounter{section}{}
+% \setcounter{subsection}{}
+% \setcounter{subsubsection}{}
+
+\centerline{\Large \bf  Homework 13: Due at Dec 25}
+
+% \vspace{12pt}
+% \DY{なにかコメント}
+
+% \vspace{-12pt}
+
+% \vspace{-4pt}
+% \begin{itemize}
+%  \setlength{\itemsep}{0pt}
+%  \item Type I superstring theory.
+%  \item In type I theory, we only have D$1$-, D$5$-, and D$9$-, branes.
+%  \item O$9^-$-plane is needed for type I to be consistent theory.
+%  \item T-duality of type I theory.
+% \end{itemize}
+% \vspace{-4pt}
+
+
+
+
+\subsection*{Prob. 1 DBI action}
+
+DBI action for D$p$-brane is given by
+\begin{align}
+ &S_\mathrm{DBI} = \int d^{p+1} \sigma \LL_\mathrm{DBI} \ , \\
+ &\LL_\mathrm{DBI} = T_{\mathrm Dp} -T_{\mathrm Dp}
+ \sqrt{-\det \left(G_{ab} +k F_{ab} -B_{ab}\right)} \ ,
+ \label{eq:lag}
+\end{align}
+where we assumed the world-sheet metric $h_{ab}$ is flat (i.e. $h_{ab} = \eta_{ab} = \diag(-1,+1,\ldots,+1)$),
+the first constant term is added so that the vacuum energy becomes zero,
+$k$ is $2\pi\alpha' = 2\pi l_s^2$,
+$T_{\mathrm Dp} = \frac{2\pi}{g_s (2\pi l_s)^{p+1}}$,
+and
+\begin{align}
+ G_{ab} = \partial_a X^\mu \partial_b X^\nu \eta_{\mu\nu} \ ,
+\end{align}
+namely, we assume the space-time is flat.
+In the following we always assume $B_{ab} = 0$.
+
+Static gauge is defined by $X^i = \sigma^i$ for $(i=0,1,\cdots,p)$,
+and rewrite $X^s = \phi^s(\sigma^i)$ for $(s=p+1,\cdots,9)$.
+Displacement field is defined by $\bm D = \frac{\partial \LL}{\partial \bm E}$, where $\bm E = F_{i0}\ (i=1,\cdots,p)$.
+
+\subsubsection*{Prob. 1.1 Gauge theory on D-brane}
+Consider D$3$-brane and take the static gauge.
+\begin{itemize}
+ \item Expand the Lagrangian~(\ref{eq:lag}) up to a quadratic order of fields
+       and write down a canonical Lagrangian.
+ \item Compare the coupling constant derived from the expansion and the canonical one $g$:
+       \begin{align}
+        \LL_\mathrm{gauge} = -\frac{1}{4g^2} F_{ab} F^{ab} \ .
+       \end{align}
+\end{itemize}
+
+
+\subsubsection*{Prob. 1.2 Features of the DBI action 1: Schwinger effect}
+Consider D$p$-brane, take the static gauge, set $\phi^s = 0$,
+and also set the magnetic field to zero; $\bm B = \bm 0$.
+\begin{itemize}
+ \item Calculate the displacement field $\bm D = \frac{\partial \LL_\mathrm{DBI}}{\partial \bm E}$.
+ \item Assume only $F_{10} = E$ has non-zero value and
+       plot $E$ in terms of $D$ that is a corresponding non-zero component
+       of the displacement field.
+       Explain physically why there are bounds for $E$.
+       (This is called \textbf{Schwinger effect}.)
+\end{itemize}
+
+\subsubsection*{Prob. 1.3 Features of the DBI action 2: Self-energy}
+Consider the same setting as Prob. 1.2 with $p=3$.
+\begin{itemize}
+ \item Calculate the self-energy $U_Q$ of a charged particle:
+       \begin{align}
+        U_Q = \int d^3\sigma \mathcal H(\bm D) \ , \qquad
+        \mathcal H(\bm D) = \bm E \cdot \bm D -\LL_\mathrm{DBI} \ ,
+       \end{align}
+       where $d^3\sigma$ is a spacial(not time) volume form.
+       The charged particle is characterized by
+       \begin{align}
+        \bm\nabla \cdot \bm D = Q \delta^3(\bm \sigma) \ ,
+       \end{align}
+       where $\bm \sigma$ is a world-sheet space(not time) vector.
+       You can use the following constant:
+       \begin{align}
+        c \equiv \int_0^\infty dx \left( \sqrt{1+x^4} -x^2 \right) \simeq 1.236 \ .
+       \end{align}
+ \item Compare the self-energy with that of a normal electromagnetism:
+       \begin{align}
+        \LL_\mathrm{EM} = \frac{\varepsilon}{2} \bm E^2 \ .
+       \end{align}
+       Discuss also $l_s \to 0$ limit in the self-energy.
+\end{itemize}
+
+
+\subsubsection*{Prob. 1.4 Brane bending}
+
+Consider D$p$-brane, take the static gauge, set $\bm B = \bm 0$.
+Assume only one of $\phi^s$ has non-zero value, say $\phi^9 \equiv X$.
+Then, the Lagrangian becomes
+\begin{align}
+ \wt \LL_\mathrm{DBI} = T_{\mathrm Dp} -T_{\mathrm Dp}
+ \sqrt{ \left( 1 -\bm{\mathcal E}^2 \right) \left( 1 +(\bm\nabla X)^2 \right)
+ +\left( \bm{\mathcal E}\cdot \bm\nabla X \right)^2 -\dot X^2
+ } \ ,
+\end{align}
+where $\bm{\mathcal E} = k \bm E$, $\dot X = \frac{\partial X}{\partial \sigma^0}$.
+\begin{itemize}
+ \item[a)] Show $\wt \LL_\mathrm{DBI} = \LL_\mathrm{DBI}$ in the case that
+         only one of components of $\bm E$ is non-zero, say $E_1$,
+         and $X$ only depends on $\sigma^0,\ \sigma^1$, and $\sigma^2$.
+         (This special case implies full identity $\wt \LL_\mathrm{DBI} = \LL_\mathrm{DBI}$
+         thanks to rotation symmetry.)
+\end{itemize}
+Let us look for a static solution, namely, all the fields are independent of $\sigma^0$.
+Then, we can express $\bm E$ by $\bm E = \bm \nabla A_0$.
+\begin{itemize}
+ \item[b)] Derive equations of motion of $X$ and $A_0$.
+         Confirm that both equations are satisfied if
+         \begin{align}
+          k \bm E = k \bm\nabla A_0 = \pm \bm\nabla X \ , \qquad
+          k\bm\nabla^2 A_0 = \bm\nabla^2 X = 0 \ .
+          \label{eq:eom}
+         \end{align}
+ \item[c)] Show that when (\ref{eq:eom}) holds we have
+         \begin{align}
+          \bm D = k^2 T_{\mathrm Dp} \bm E \ ,
+         \end{align}
+         and the energy
+         \begin{align}
+          U = \int d^p\sigma \left( \bm E \cdot \bm D -\wt \LL_\mathrm{DBI}  \right)
+          = k^2 T_{\mathrm Dp} \int d^p\sigma \bm E^2 \ .
+         \end{align}
+\end{itemize}
+Consider a string is ending on the D$p$-brane (stretching to the 9th direction),
+which is a source of the electric (displacement) field
+\begin{align}
+ \bm\nabla \cdot \bm D = \delta^p (\bm\sigma) \ .
+\end{align}
+\begin{itemize}
+ \item[d)] Derive the solution for $\bm D$ as well as $X$ and show that the energy $U$ is diverging.
+\end{itemize}
+Let us regularize the energy by a cut off $\delta$:
+\begin{align}
+ U(\delta) = k^2 T_{\mathrm Dp} \int_{r>\delta} d^p\sigma \bm E^2 \ .
+\end{align}
+\begin{itemize}
+ \item[e)] Show that $U(\delta) = T_\mathrm{str} |X(\delta)| = \frac{1}{k} |X(\delta)|$.
+         Draw the shape of the D$p$-brane, and discuss the meaning of $U(\delta)$.
+\end{itemize}
+
+
+
+\subsection*{Prob. 2 Bound states and supersymmetry}
+
+In type II theories we have left $16$ supercharges $Q_L$
+and right $16$ supercharges $Q_R$.
+Existence of string or branes break some of supersymmetry.
+Conditions are summarized in Table~\ref{table:001}.
+\begin{table}[htbp]
+ \begin{center}
+  \caption{Supersymmetry conditions for branes.}
+  \vspace{0pt}
+  \label{table:001}
+\begin{tabular}{l|l}
+ IIA branes & Conditions \\\hline
+ F$1$-String(01) & $\Gamma^{01} Q_L = Q_L\ , \quad \Gamma^{01} Q_R = -Q_R$ \\[3pt]
+ NS$5$-brane(012345) & $\Gamma^{012345} Q_L = Q_L\ , \quad \Gamma^{012345} Q_R = Q_R$ \\[3pt]
+ D$p$-brane($p$: even) & $\Gamma^{01\cdots p} Q_R = Q_L$
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{l|l}
+ IIB branes & Conditions \\\hline
+ F$1$-String(01) & $\Gamma^{01} Q_L = Q_L\ , \quad \Gamma^{01} Q_R = -Q_R$ \\[3pt]
+ NS$5$-brane(012345) & $\Gamma^{012345} Q_L = Q_L\ , \quad \Gamma^{012345} Q_R = -Q_R$ \\[3pt]
+ D$p$-brane($p$: odd) & $\Gamma^{01\cdots p} Q_R = Q_L$
+\end{tabular}
+\end{center}
+\end{table}
+\begin{itemize}
+ \item How many supersymmetry remain if there exist D$p$-brane ? (We call this D$p$ system and similar for multi branes.)
+ \item How many supersymmetry remain for D$0$-D$2$ system ?
+       D$0$ lies on $(0)$ direction and D$2$ lies on $(012)$ directions.
+ \item How many supersymmetry remain for F$1$-D$1$ system ?
+       Both string lie on $(01)$ directions.
+ \item How many supersymmetry remain for D$0$-D$4$ system ?
+       D$0$ lies on $(0)$ direction and D$4$ lies on $(01234)$ directions.
+ \item Show that D$4$-brane carries D$0$-brane RR-charge when
+       there exist non-trivial instanton configuration ($n\neq 0$):
+       \begin{align}
+        \frac{1}{8\pi^2} \int F_{(2)} \wedge F_{(2)} = n \in \ZZ \ .
+       \end{align}
+ \end{itemize}
+
+
+
+\subsection*{Prob. 3 Branes ending on a brane in IIB superstring}
+
+Start from equations of motions of IIB SUGRA:
+\begin{align}
+ d G_\mathrm{odd} &= H_{(3)} G_\mathrm{odd} \ , \\
+ d H_{(3)} &= 0 \ , \\
+ d H_{(7)} &= -\frac{1}{2} \left[ (\mathcal T G_\mathrm{odd}) G_\mathrm{odd} \right]_{(8)} \ ,
+\end{align}
+introduce brane currents and construct current conservation equations.
+From the equations make a table of branes, which can end on some branes.
+Is the table compatible with S-duality ?
+
+% \subsection*{Prob. 4 SUSY preserved by D-branes}
+
+
+
+% \begin{thebibliography}{CDLOGP91}
+
+%  \bibitem[Pol98]{Pol98}
+%                 J. Polchinski.
+%                 String theory. Vol. 1.
+%                 Cambridge University Press, 1998.
+
+%  \bibitem[BP09]{Blumenhagen:2009zz}
+%                R.~Blumenhagen and E.~Plauschinn.
+%                \newblock {Introduction to conformal field theory}.
+%                \newblock {\em Lect. Notes Phys.}, 779:1--256, 2009.
+
+% \end{thebibliography}
+
+
+% \bibliography{string-lecture}
+% \bibliographystyle{halpha}
+% \bibliographystyle{JHEP}
+
+% \begin{thebibliography}{CDLOGP91}
+
+% %\cite{AlvarezGaume:1981hn}
+% \bibitem[AFM81]{AlvarezGaume:1981hn}
+%   L.~Alvarez-Gaume, D.~Z.~Freedman and S.~Mukhi,
+%   ``The Background Field Method and the Ultraviolet Structure of the Supersymmetric Nonlinear Sigma Model,''
+%   Annals Phys.\  {\bf 134}, 85 (1981).
+%   %doi:10.1016/0003-4916(81)90006-3
+%   %%CITATION = doi:10.1016/0003-4916(81)90006-3;%%
+%   %525 citations counted in INSPIRE as of 09 Oct 2017
+
+
+
+% \bibitem[CT88]{Callan:1988xx}
+%  Curt Callan and Lárus Thorlacius.
+%  \textit{SIGMA MODELS AND STRING THEORY.}
+%  TASI Lecture, 1988.
+%  (The link below is a direct link to the pdf file of 45MB )
+%  \href{http://www.damtp.cam.ac.uk/user/tong/string/sigma.pdf}
+%  {http://www.damtp.cam.ac.uk/user/tong/string/sigma.pdf}.
+
+
+
+
+% \end{thebibliography}
+
+
+\label{lastpage}
+
+% \begin{tikzpicture}[>=stealth,scale=1]
+%  \draw[->] (0,0)--(1,0);
+%  \draw[latex-stealth] (0,0.5)--(1,0.5);
+%  \draw[latex-stealthnew,arrowhead=2mm] (0,1)--(1,1);
+% \end{tikzpicture}
+
+% \begin{figure}[htb]
+% \centerline{\includegraphics[width=250pt]{.eps}}
+% \caption{}
+% \label{.eps}
+% \end{figure}
+
+
+
+% \begin{table}[htbp]
+%  \begin{center}
+%   \caption{}
+%   \vspace{4pt}
+%   \label{table:001}
+% \begin{tabular}{|c|c|c|c|c|}
+% \hline
+% \hline
+%   Category & Sector & $(h_A,h_B,h_T)$ & Mirror theory & ABJM model \\
+% \hline
+%  1 & & \parbox{40pt}{$(0,0,0)$ $(1,1,1)$} & $1.11906$ & $1.13290$ \\
+% \hline
+%  2 & & \parbox{40pt}{$(0,0,1)$ $(1,1,0)$} & $-0.10861$ & $-0.10861$ \\
+% \hline
+%  \multirow{2}{*}{\vspace{-15pt}3} & 3-1 & \parbox{40pt}{$(0,1,0)$ $(1,0,1)$} & $0.176777$ &
+%  \multirow{2}{*}{\vspace{-15pt}$0.176577$} \\
+% \cline{2-4}
+%  & 3-2 & \parbox{40pt}{$(1,0,0)$ $(0,1,1)$} & $0.176777$ & \\
+% \hline
+% \hline
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+
+% \begin{thebibliography}{99}
+
+% % \cite{Imamura:2012rq}
+% \bibitem{Imamura:2012rq}
+%   Y.~Imamura and D.~Yokoyama,
+%   %``S^3/Z_n partition function and dualities,''
+%   JHEP {\bf 1211}, 122 (2012)
+%   [arXiv:1208.1404 [hep-th]].
+%   %%CITATION = ARXIV:1208.1404;%%
+
+ % \bibitem{fnorio:legendre}
+ %         fnorio
+ %         ``ルジャンドル変換とは何か''
+ %         \url{http://fnorio.com/0146Legendre_transformation/Legendre_transformation.html}
+
+
+ % \bibitem{EMAN:dynamics}
+ %         EMAN物理学
+ %         ``ハミルトニアン''
+ %         \url{http://eman-physics.net/analytic/hamilton.html}
+
+
+ % \bibitem{Wiki:legendre}
+ %         Wiki
+ %         ``ルジャンドル変換''
+ %         \url{https://ja.wikipedia.org/wiki/ルジャンドル変換}
+
+ % \bibitem{mathtrain:legendre}
+ %         高校数学の美しい物語
+ %         ``ルジャンドル変換の意味と具体例''
+ %         \url{http://mathtrain.jp/legendrehenkan}
+
+% \end{thebibliography}
+
+
+% \bibliography{dd}
+
+\end{document}

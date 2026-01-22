@@ -1,0 +1,26 @@
+\begin{thebibliography}{FMS12}
+
+\bibitem[BP09]{Blumenhagen:2009zz}
+R.~Blumenhagen and E.~Plauschinn.
+\newblock {Introduction to conformal field theory}.
+\newblock {\em Lect. Notes Phys.}, 779:1--256, 2009.
+
+\bibitem[BPZ84]{belavin1984infinite}
+A.~A. Belavin, A.~M. Polyakov, and A.~B. Zamolodchikov.
+\newblock Infinite conformal symmetry in two-dimensional quantum field theory.
+\newblock {\em Nuclear Physics B}, 241(2):333--380, 1984.
+
+\bibitem[FMS12]{francesco2012conformal}
+P.~Francesco, P.~Mathieu, and D.~S{\'e}n{\'e}chal.
+\newblock {\em Conformal field theory}.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem[Gin88]{ginsparg1988applied}
+P.~H. Ginsparg.
+\newblock {APPLIED CONFORMAL FIELD THEORY}.
+\newblock In {\em {Les Houches Summer School in Theoretical Physics: Fields,
+  Strings, Critical Phenomena Les Houches, France, June 28-August 5, 1988}},
+  pages 1--168, 1988, \href{http://arxiv.org/abs/hep-th/9108028}{{\tt
+  arXiv:hep-th/9108028}}.
+
+\end{thebibliography}

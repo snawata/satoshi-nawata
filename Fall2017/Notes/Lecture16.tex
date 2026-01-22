@@ -1,0 +1,1004 @@
+ \documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{jheppub}
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{gensymb}
+\usepackage{simplewick}
+\usepackage{feynmp-auto}
+\usepackage{wrapfig}
+
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\lambdabda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%
+%---------- mathbf font --------------------------------
+%
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+\newcommand{\bfa}{\ensuremath{\mathbf{a}}}
+\newcommand{\bfb}{\ensuremath{\mathbf{b}}}
+\newcommand{\bfc}{\ensuremath{\mathbf{c}}}
+\newcommand{\bfd}{\ensuremath{\mathbf{d}}}
+\newcommand{\bfe}{\ensuremath{\mathbf{e}}}
+\newcommand{\bff}{\ensuremath{\mathbf{f}}}
+\newcommand{\bfg}{\ensuremath{\mathbf{g}}}
+\newcommand{\bfh}{\ensuremath{\mathbf{h}}}
+\newcommand{\bfi}{\ensuremath{\mathbf{i}}}
+\newcommand{\bfj}{\ensuremath{\mathbf{j}}}
+\newcommand{\bfk}{\ensuremath{\mathbf{k}}}
+\newcommand{\bfl}{\ensuremath{\mathbf{l}}}
+\newcommand{\bfm}{\ensuremath{\mathbf{m}}}
+\newcommand{\bfn}{\ensuremath{\mathbf{n}}}
+\newcommand{\bfo}{\ensuremath{\mathbf{o}}}
+\newcommand{\bfp}{\ensuremath{\mathbf{p}}}
+\newcommand{\bfq}{\ensuremath{\mathbf{q}}}
+\newcommand{\bfr}{\ensuremath{\mathbf{r}}}
+\newcommand{\bfs}{\ensuremath{\mathbf{s}}}
+\newcommand{\bft}{\ensuremath{\mathbf{t}}}
+\newcommand{\bfu}{\ensuremath{\mathbf{u}}}
+\newcommand{\bfv}{\ensuremath{\mathbf{v}}}
+\newcommand{\bfw}{\ensuremath{\mathbf{w}}}
+\newcommand{\bfx}{\ensuremath{\mathbf{x}}}
+\newcommand{\bfy}{\ensuremath{\mathbf{y}}}
+\newcommand{\bfz}{\ensuremath{\mathbf{z}}}
+
+
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+\def\tl{\tilde}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+\def\half{\frac12}
+
+
+\newcommand\bz{{\bar{z}}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+\newcommand {\nod} [1] {\mbox {$:#1\!:$}}
+\newcommand	{\abs}	[1] {{\left| #1 \right|}}
+\newcommand {\brac} [1]	{{\left\{	#1 \right\}}}
+
+\def\ap{{\alpha^\prime}}
+\def\zb{\bar{z}}
+
+
+
+
+\def \be  {\begin{equation}}
+\def \ee  {\end{equation}}
+\def \bea {\begin{equation}\begin{aligned}}
+\def \eea {\end{aligned}\end{equation}}
+\def \ba  {\begin{eqnarray}}
+\def \ea  {\end{eqnarray}}
+
+%\title{ Lecture 4}
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf  Lecture 16}
+
+
+The study of black holes in string theory by using D-branes has led to the celebrated AdS/CFT correspondence \cite{Maldacena:1997re}. The AdS/CFT correspondence is the equivalence between a string theory or M-theory on an anti-de Sitter background and a conformal field theory. It has shed a new light on quantum gravity as well as  strongly coupled quantum field theories. Although it was proposed in the framework of string theory, it has already been studied beyond string theory, influencing other physical theories. It has attracted large number of researchers, and it is connected to many branches of physics. For the basic of the AdS/CFT correspondence, I refer to the most famous review \cite{Aharony:1999ti}.
+
+We shall first study basic properties of conformal field theories in general dimensions and geometry of anti-de Sitter space. Then, we will deal with the most famous example, Type IIB on AdS$_5\times S^5$/ 4d $\cN=4$ SYM.
+
+
+
+\section{Conformal group}\label{sec:conformal}
+
+A conformal field theory (CFT) is a quantum field theory that is invariant under conformal transformations.
+We have studied the conformal transformation for $2$-dim (in Lec 2 \& 3), which is a special case.
+Here, we study a conformal group for arbitrary dimensions (assume $d \ge 3$).
+
+
+Conformal group is defined by transformations that preserve the metric up to a local scale factor:
+\begin{align*}
+ g_{\mu\nu}(x) \to g_{\mu\nu}'(x') = \Omega^2(x) g_{\mu \nu}(x) \ .
+\end{align*}
+In an infinitesimal form (${x'}^\mu = x^\mu +\epsilon^\mu$) it is (compare with lecture note 03)
+\begin{align}
+ \partial_\mu \epsilon_\nu +\partial_\nu \epsilon_\mu = \frac{2}{d} \eta_{\mu\nu} \partial \cdot \epsilon \ .
+ \label{eq:def1}
+\end{align}
+Applying $\partial^\mu$ to Eq.~(\ref{eq:def1}) we have
+\begin{align*}
+ \left(1-\frac{2}{d}\right) \partial_\nu \partial\cdot\epsilon +\Box \epsilon_\nu = 0 \ ,
+\end{align*}
+where $\Box = \partial\cdot\partial$.
+From this expression we can see that $d=2$ is quite special, and it leads
+$\partial^2 \epsilon = \partial_- \partial_+ \epsilon$,
+which gives infinitely many transformations.
+We further apply $\partial^\nu$ and reach
+\begin{align*}
+ (d-1) \Box \partial\cdot\epsilon = 0 \ .
+\end{align*}
+This expression implies $\epsilon_\mu$ is up to quadratic order of $x$:
+\begin{align*}
+ \epsilon_\mu = a_\mu + b_{\mu\nu} x^\nu +c_{\mu\nu\rho} x^\nu x^\rho \ .
+\end{align*}
+Plugging these expressions back to the definition equations above (and its variant), we have following constraints
+\begin{align*}
+ &b_{\mu\nu} = \alpha \eta_{\mu\nu} +M_{\mu\nu} \qquad (M_{\mu\nu} = -M_{\nu\mu}) \ ,  \\
+ &c_{\mu\nu\rho} = \eta_{\mu\nu} f_\rho +\eta_{\mu\rho} f_\nu -\eta_{\nu\rho} f_\mu \qquad (f_\mu = \frac{1}{d} c^\rho_{\;\rho\mu}) \ .
+\end{align*}
+Parameters above correspond to transformations you are familiar with except $f_\mu$,
+which is called special conformal transformation (SCT). See Table~\ref{table:001} for the summary.
+\begin{table}[htbp]
+ \begin{center}
+  \caption{Ingredients of the conformal group.}
+  \label{table:001}
+\begin{tabular}{lllr}
+\hline
+ Names & Finite transf. & Generators & Dim. \\
+\hline
+\hline
+ Translation & $x'^\mu = x^\mu +a^\mu$ & $P_\mu=-i\partial_\mu$ & $+1$ \\
+ Dilat(at)ion & $x'^\mu = \alpha x^\mu$ & $D = -ix\cdot\partial$ & $0$ \\
+ Lorentz/Rotation & $x'^\mu = M^\mu_{\ \nu} x^\nu$ & $L_{\mu\nu} = i \left(x_\mu\partial_\nu -x_\nu\partial_\mu\right)$ & $0$ \\
+ SCT & $x'^\mu = \frac{x^\mu -(x\cdot x) f^\mu}{1-2f\cdot x +(f\cdot f)(x\cdot x)}$
+     & $K_\mu = -i \left(2x_\mu x\cdot \partial -(x\cdot x) \partial_\mu\right)$ & $-1$ \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+The generators summarized in the table form conformal group commutation relations
+\begin{align*}
+ &[J_{ab},J_{cd}]=i\left(\eta_{ad}J_{bc} +\eta_{bc}J_{ad} -\eta_{ac}J_{bd} -\eta_{bd}J_{ac}\right) \ , \\
+ &\begin{array}{ll}
+  J_{\mu\nu} = L_{\mu\nu} \ , \quad & J_{(d+1)d} = D \ , \\
+  J_{\mu d} = \frac{1}{2}\left( K_\mu -P_\mu \right) \ , \quad & J_{\mu (d+1)} = \frac{1}{2}\left( K_\mu +P_\mu \right) \ ,
+ \end{array}
+\end{align*}
+where note that $a,b,c,d=0,1,\ldots d+1$ and $\mu,\nu=0,1,\ldots,d-1$, and $\eta_{ab}$ is
+$\mathrm{diag}(-,+,\ldots,+,-)$ for Lorentzian spacetime and $\mathrm{diag}(+,+,\ldots,+,-)$ for Euclidean space.
+The algebras are isomorphic to those of $\SO(2,d)$ and $\SO(1,d+1)$, respectively.
+Note that the SCT can be understood with inversion ($x^\mu \to \frac{x^\mu}{x \cdot x}$)
+as follows $\frac{x'^\mu}{x' \cdot x'} = \frac{x^\mu}{x \cdot x} -f^\mu$.
+However, the inversion is not included in the algebra (since the inversion is discrete transformation).
+Among others we write down non-trivial commutation relations that involve $D$
+\begin{align}
+ [D,P_\mu] = -iP_\mu \ , \quad
+ [D,K_\mu] = iK_\mu \ , \quad
+ [P_\mu,K_\nu] = 2i \left( M_{\mu\nu} -\eta_{\mu\nu} D \right) \ ,
+ \label{eq:commD}
+\end{align}
+which characterize representation of the conformal group.
+By the way, the other non-trivial ones are
+\begin{align*}
+ &[M_{\mu\nu},P_\rho]=-i(\eta_{\mu\rho}P_\nu -\eta_{\nu\rho}P_\mu) \ , \qquad
+ [M_{\mu\nu},K_\rho]=-i(\eta_{\mu\rho}K_\nu-\eta_{\nu\rho}K_\mu) \ , \nonumber\\
+ &[M_{\mu\nu},M_{\rho\sigma}]=-i\eta_{\mu\rho}M_{\nu\sigma} \pm (\textrm{permutations}) \ .
+\end{align*}
+
+
+
+\subsection{Primary field}
+
+
+For $2$-dim we defined the primary field by using OPE with energy-momentum tensor (it leads a representation of the conformal group).
+For general dimensions we define it by a formal representation of the conformal group.
+It is known that the representation is characterized by an eigenvalue of the dilatation operator $-i\Delta$
+($\Delta$ is called the \textbf{scaling dimension} of the field, rather than \textbf{weight}),
+and representation of Lorentz group.
+The former statement means that $\Phi(x) \to \Phi^\prime(\lambda x) = \lambda^{-\Delta} \Phi(x)$.
+The commutation relations (\ref{eq:commD}) tell us that $P_\mu$ is raising operator, while $K_\mu$ is lowering operator.
+Therefore, there are operators that annihilated by $K_\mu$ in each finite representation of the conformal group.
+Such operator is called \textbf{primary operator/field} (we use operator and field interchangeably).
+The action of the conformal group on the primary field is
+\begin{align*}
+ [P_\mu, \Phi(x)] &= i\partial_\mu \Phi(x) \ , \cr
+ [M_{\mu\nu}, \Phi(x)] &= [i(x_\mu \partial_\nu - x_\nu \partial_\mu) +
+ \Sigma_{\mu\nu}] \Phi(x) \ , \cr
+ [D,\Phi(x)] &= i(-\Delta + x^\mu \partial_\mu) \Phi(x) \ , \cr
+ [K_\mu, \Phi(x)] &= [i(x^2\partial_\mu - 2x_\mu x^\nu \partial_\nu + 2x_\mu
+ \Delta) - 2x^\nu \Sigma_{\mu\nu}] \Phi(x) \ ,
+\end{align*}
+where $\Sigma_{\mu\nu}$ are the matrices of a finite dimensional
+representation of the Lorentz group, acting on the indices of the
+$\Phi$ field (e.g. it is $\frac{i}{2}\gamma_{\mu\nu}$ for a spinor).
+There are some comments on primary fields and others:
+\vspace{-4pt}
+\begin{itemize}
+ \setlength{\itemsep}{0pt}
+ \item Fields created by acting $P_\mu$ on a primary field are called \textbf{descendant fields}.
+ \item Fields are not, in general, by eigenfunctions of the Hamiltonian $P^0$, or the mass operator $-P\cdot P$,
+       and hence, they have continuous spectrum.
+ \item In unitary field theories the scale dimension is bounded from below (\textbf{unitary bound}).
+       It is $\Delta \ge (d-2)/2$ for scalars, $\Delta \ge (d-1)/2$ for spinors, and $\Delta \ge d+s-2$ for spin-$s$ fields for $s\ge1$.
+       (We refer the derivation of the bounds and other details to \cite[Sec. 2]{Qualls:2015qjb}.)
+\end{itemize}
+\vspace{-4pt}
+
+
+
+\section{Anti-de Sitter space}
+
+
+An anti-de Sitter(AdS) space is a maximally symmetric manifold with constant negative scalar curvature.
+It is a solution of Einstein's equations for an empty universe with negative cosmological constant.
+The easiest way to understand it is as follows.
+
+
+A Lorentzian AdS$_{d+1}$ space can be illustrated by the hyperboloid in $(2,d)$ Minkowski space:
+\begin{align}
+ X_0^2 +X_{d+1}^2 -\sum_{i=1}^{d} X_i^2 &= R^2 \ .
+ \label{embeding}
+\end{align}
+The metric can be naturally induced from the Minkowski space
+\begin{align}\nonumber
+ ds^2 &= -dX_0^2 -dX_{d+1}^2 +\sum_{i=1}^{d} dX_i^2 \ .
+\end{align}
+By construction it has $\SO(2,d)$ isometry, which is a first connection to
+the conformal group in $d$-dim.
+
+
+\subsection{Global coordinate}
+
+
+
+
+Simple solution to (\ref{embeding}) is given as follows.
+\begin{align}\nonumber
+ &X_0^2 +X_{d+1}^2 = R^2 \cosh^2 \rho \ , \cr
+ &\sum_{i=1}^{d} X_i^2 = R^2 \sinh^2 \rho \ .
+\end{align}
+Or, more concretely,
+\begin{align}\nonumber
+ X_{0} &= R \cosh \rho\ \cos \tau \ , \qquad
+ X_{d+1} = R \cosh \rho\ \sin \tau \ ,  \nonumber \cr
+ X_i &= R \sinh \rho\ \Omega_{i} \quad (i=1,\cdots,d,
+ \text{ and } \sum_i \Omega_i^2 = 1).
+\end{align}
+These are $S^{1}$ and $S^{d-1}$ with radii $R\cosh\rho$ and $R\sinh\rho$, respectively.
+The metric is
+\begin{align}\nonumber
+ ds^2 &= R^2 \left( -\cosh^2 \rho \ d\tau^2 +d\rho^2 +\sinh^2 \rho \ d\Omega_{(d-1)}^2 \right) \ .
+\end{align}
+Note that $\tau$ is a periodic variable and if we take $0 \le \tau <2\pi$
+the coordinate wrap the hyperboloid precisely once.
+This is why this coordinate is called \textbf{global coordinate}.
+The manifest sub-isometries are $\SO(2)$ and $\SO(d)$ of $\SO(2,d)$.
+To obtain a causal spacetime, we simply unwrap the circle $S^1$,
+namely, we take the region $-\infty < \tau < \infty$ with no identification,
+which is called \textbf{universal cover} of the hyperboloid.
+
+
+In literatures another global coordinate is also used,
+which can be derived by redefinitions
+$r \equiv R \sinh \rho$ and $dt \equiv R d\tau$:
+\begin{align}\nonumber
+ ds^2 &= - f(r) dt^2 +\frac{1}{f(r)} dr^2 + r^2 d\Omega_{(d-1)}^2 \ , \qquad
+ f(r) = 1+\frac{r^2}{R^2} \ .
+\end{align}
+
+
+
+
+\subsection{Poincar\'e coordinates}
+
+There is yet another coordinates, called \textbf{Poincar\'e coordinates}.
+As opposed to the global coordinate, this coordinate covers only the half of the hyperboloid.
+It is most easily (but naively) seen in $d=1$ case:
+\begin{align}\nonumber
+ x^2 -y^2 = R^2 \ ,
+\end{align}
+which is the hyperbolic curve.
+The curve consists of two isolated parts in regions $x>R$ and $x<-R$.
+We simply use one of them to construct the coordinate.
+
+
+
+Let us get back to general $d$-dim.
+We define the coordinate as follows.
+\begin{align}\nonumber
+ X_{0} &= \frac{1}{2u} \left( 1+u^2 \left( R^2 +x_i^2-t^2 \right) \right) \ , \cr
+ X_{i} &= R u x_i \qquad (i=1,\cdots,d-1) \ , \cr
+ X_{d} &= \frac{1}{2u} \left( 1-u^2 \left( R^2 -x_i^2+t^2 \right) \right) \ , \cr
+ X_{d+1} &= R u t \ ,
+\end{align}
+where $u > 0$.
+As it is stated
+the coordinate covers the half of the hyperboloid; in the region, $X_0 > X_{d}$.
+The metric is
+\begin{align}\label{ads-poincare}
+ ds^2 &= R^2 \left( \frac{du^2}{u^2} +u^2 (-dt^2 +dx_i^2) \right)
+ = R^2 \left( \frac{du^2}{u^2} +u^2 dx_\mu^2 \right) \ .
+\end{align}
+The coordinates $(u,t,x_i)$ is called \textbf{Poincar\'e coordinates}.
+This metric has manifest $ISO(1,d-1)$ and $\SO(1,1)$ sub-isometries of $\SO(2,d)$;
+the former is the Poincar\'e transformation and the latter corresponds to the dilatation
+\begin{align}\nonumber
+ (u,t,x_i) \to (\lambda^{-1}u,\lambda t,\lambda x_i) \ .
+\end{align}
+
+
+If we further define $z=1/u$ ($z>0$), then,
+\begin{align}\label{ads-poincare2}
+ ds^2 &= \frac{R^2}{z^2} \left( dz^2 +dx_\mu^2 \right) \ .
+\end{align}
+This is called \textbf{the upper(Poincar\'e) half-plane model}.
+The hypersurface given by $z=0$ is called \textbf{(asymptotic) boundary} of the AdS space,
+which corresponds to $u \sim r \sim \rho = \infty$.
+
+
+
+
+
+
+\section{Introduction to AdS${}_5$/CFT${}_4$ correspondence}
+
+Now let us study the most well-studied example of AdS/CFT correspondence, which is the equivalence between 4d $\U(N)$ $\cN=4$ super-Yang-Mills (SYM) and Type IIB string theory on AdS${}_5\times S^5$, which arises from the large number of D3-branes. 
+Type IIB string theory with D3-branes contains two kinds of
+perturbative excitations, closed strings and open strings. 
+ If we consider the system at low energies, energies lower
+than the string scale $1/\ell_s$, then only the massless string states
+can be excited. The closed string massless states give a gravity
+supermultiplet in 10d, and their low-energy effective
+theory is Type IIB supergravity. The open string massless
+states give an $\cN=4$ vector supermultiplet in 4d,
+and their low-energy effective theory is $\cN=4$ $\U(N)$
+SYM. Therefore, it can be also understood as  \textbf{open/closed duality}.
+
+
+
+
+\subsection{$\cN=4$ super-Yang-Mills theory}
+
+The low-energy effective theory of $N$ D3-branes is 4d $\cN=4$ $\U(N)$ SYM theory so we describe the basic properties of the ${\cal N}=4$ SYM. The action can be obtained by the dimensional reduction from the 10d $\cN=1$ SCFT on $\bR^{1,3} \times T^6$ where the 10d Lorentz group $\SO(1,9)$ is decomposed to $ \SO(1,3)\times \SO(6)\subset \SO(1,9) $:
+\bea
+{S}&=-\frac{1}{g_{YM}^2}
+\int d^{10} x{\rm Tr}\left[\frac{1}{4} F_{MN}^2+\frac i2\bar{\lambda}\Gamma^MD_M\lambda\right]\cr
+&=-\frac{1}{g_{YM}^2}\int d^4x  \;  {\rm Tr}\Big[
+\frac{1}{4} F_{\mu\nu}^2+\frac{1}{2}(D_{\mu}X_m)^2+  \frac{i}{2} \bar{\lambda}\Gamma^\mu D_\mu\lambda -\frac{g}{2}\bar{\lambda}\Gamma^m[X_m,\lambda]-\frac{g^2}{4}[X_m,X_n]^2\Big]
+\label{action}
+\eea
+where the ten-dimensional gauge fields $A_M$, $M=0,\cdots,9$  split the 4d gauge field $A_\mu$, $\mu=0,\cdots,3$ and 6 scalars $X_m$, $m=1,\cdots,6$, and $\lambda$ is a 10d Majorana-Weyl spinor dimensionally reduced to 4d. We can also add the topological term
+$$
+S_{\textrm{top}}=\frac{i\theta}{32\pi^2}\int d^4x~ \e^{\m\n\rho\sigma} \Tr(F_{\mu\nu} F_{\rho\sigma})
+$$
+The action are invariant under the supersymmetry transformation
+\bea
+\delta X^m&=-\bar\e \G^m\lambda \cr
+\delta A^\m&=-\bar\e \G^\m\lambda \cr
+\d \lambda&=\Big(\frac12F_{\m\n}\G^{\m\n}+D_\mu X_m \G^{\m m}+\frac i2 [X_m,X_n]\Big)\e~.
+\eea
+
+
+It is easy to see that 4d $\cN=4$ SYM is classically \textbf{conformal invariant}. because the mass-dimensions of the fields 
+\be
+[A_\mu ]=[X^i] =1~, \qquad
+[\lambda _a] = {3 \over 2} ~,
+\ee
+so that the coupling constant is dimensionless: $[g]=[\theta]=0$. However, one has to be careful quantum mechanically because quantum correction generally breaks the conformal invariance. To be conformal invariant at quantum level, the beta function of the coupling constant has to vanish $\b=0$. It turns out that 4d $\cN=4$ SYM is the case and hence it is quantum mechanically conformal. 
+The $\cN=4$ supersymmetry combined with conformal symmetry forms the superconformal group $\SU(2,2|4)$ which consists of the following generators
+\begin{itemize}
+
+\item \textbf{Conformal Symmetry} is $\SO(2,4) \cong \SU(2,2)$, as we have seen in \S\ref{sec:conformal}, generated by translations $P^\mu$, Lorentz transformations $L_{\mu
+\nu}$, dilations $D$ and special conformal transformations $K^\mu$;
+
+\item \textbf{R-symmetry} is $\SO(6)_R \cong \SU(4)_R$ which is manifest from the 10d viewpoint, and R-symmetry rotates the 6 scalar $X^m$ ($m=1,\cdots ,6$);
+
+\item \textbf{Poincar\' e supersymmetries} generated  by the supercharges $Q^I_\alpha,\bar Q _{\dot \alpha }^I$,
+$I=1,\cdots,4$ that  transform under
+the {\bf 4} of $\SU(4)_R$. Type IIB string theory has 32 supercharges and D3-branes break half of supersymmetries. Consequently, the 16 preserved supercharges are indeed $Q^I_\alpha,\bar Q _{\dot \alpha }^I$, which form 
+$\cN=4$ Poincar\' e supersymmetry;
+
+\item \textbf{Conformal supersymmetries} are generated by the fermionic generators
+$S_{\alpha }^I$ and  $\bar S ^I _{\dot \alpha}$ that are superconformal partners of $Q^I_\alpha,\bar Q _{\dot \alpha }^I$. The
+presence of these symmetries results from the fact that the Poincar\' e
+supersymmetries and the special conformal transformations $K_\mu$ do not
+commute. Since both are symmetries, their commutator must also be a
+symmetry, and these are the $S$ generators.
+
+\end{itemize}
+
+Therefore, there are 32 supercharges in total and they obey the anti-commutation relations 
+\bea
+&\{Q^{\alpha}_A, {\overline Q}^{\dot \alpha B} \} = P^{\alpha {\dot \alpha}} \delta_A^B, \cr
+&\{ S_{\alpha }^A , {\overline S}_{\dot \alpha B}\} = K_{\alpha {\dot \alpha}} \delta^A_B,  \cr
+& \{S_{\alpha }^A,Q^{\beta }_B \} = \delta^{A}_{B} M^{~\beta}_{\alpha} +\delta^{\beta}_{\alpha} R^{A}_{B}+ \delta^{A}_{B}\delta^{\beta}_{\alpha} {D \over 2}  , \cr
+  &\{\overline S_{\dot\alpha A},\overline Q^{\dot\beta B} \} = \delta_{A}^{B} \overline M^{\dot\beta}_{~\dot\alpha} -\delta^{\dot\beta}_{\dot\alpha} R_{A}^{B} + \delta_{A}^{B}\delta^{\dot\beta}_{\dot\alpha} {D \over 2} ~.
+\eea
+
+
+
+The $\cN=4$ SYM enjoys \textbf{S-duality (Montonen-Olive duality)}  that is the SL(2,\bZ) action on the complexified coupling constant $\tau \equiv {\theta \over 2 \pi} + { 4 \pi i \over g^2}$ as
+$$
+\tau \to {a \tau + b \over c \tau + d}
+\qquad \begin{pmatrix}a&b\\ c&d\end{pmatrix} \in \SL(2,\bZ)~.
+$$
+Namely, $\tau$ behaves as the complex structure of a torus. Indeed, the M5-branes wrapped on a torus with complex structure $\tau$ give rise $\cN=4$ SYM so that there is a geometric interpretation of complexified coupling constant. 
+Note that when $\theta =0$, the S-duality transformation amounts to
+$g\to 1/g$, thereby exchanging strong and weak coupling.
+
+\subsection{Near-horizon geometry of D3-branes}
+
+Now let us study the closed string side of the system.
+A system of $N$ coincident D$3$-branes is a classical solution of the 
+low-energy
+string effective action:
+\bea
+\label{D3metric}
+ds^2 = H(y) ^{-\half} \eta _{ij} dx^i
+dx^j +H(y) ^\half (dy^2 +y^2 d\Omega _5
+^2)
+\eea
+with RR field
+$$
+C_{4}=H(y) ^{-1}dx^0\wedge \cdots \wedge dx^3
+$$
+where 
+\bea\label{acca}
+H(y)=1 + {R^4 \over y^4}~,\qquad R^4 = 4 \pi g_s N (\alpha ')^2~.
+\eea
+
+\begin{figure}[htp]
+\centering
+\epsfxsize=4.5in
+\epsfysize=2.5in
+\epsffile{throat}
+\caption{Minkowski region and throat region}
+\label{fig:throat}
+\end{figure}
+
+
+To study this geometry more closely, we consider its limit in two regimes.
+As $y \gg R$, we recover flat space-time $\bR^{1,9}$. When $y<
+R$, the geometry is often referred to as the \textbf{throat} and would at first
+appear to be singular as $y\ll R$. More precisely the near-horizon geometry becomes apparent 
+in the region
+\be
+y \rightarrow 0 \hspace{2cm} \alpha ' \rightarrow 0 \hspace{2cm} u \equiv  R^2 /y
+\label{lim}
+\ee
+in which also the Regge slope is taken to zero, while $u$ is kept fixed. In 
+this limit we can neglect the factor $1$ in the function $H(y)$ in (\ref{acca}) and the metric in (\ref{D3metric}) becomes:
+\bea\label{nmet}
+ds^2 = R^2 \biggl [ {1 \over u^2} \eta _{ij} dx^i dx^j  + {du^2 \over
+u^2}  + d\Omega _5 ^2  \biggr ]
+\eea
+As we have seen in \eqref{ads-poincare}, the first part of the metric is  AdS$_5$, and the other part is  $S^5$. In conclusion, the
+geometry close to the brane ($y\sim 0$ or $u\sim \infty$) is regular and
+highly symmetrical AdS$_5\times S^5$ with the same radii
+$$
+R_{AdS_5}^{2} = R_{S^5}^{2}= \alpha' \sqrt{4 \pi N g_{s}} ~.
+$$
+
+
+In the limit \eqref{lim},  only the AdS region of the
+D3-brane geometry survives  while the dynamics in the asymptotically
+flat region decouples from the theory. Furthermore, it turns out that the interaction between bulk and brane dynamics becomes negligible.  Therefore, it is called \textbf{decoupling limit}. 
+
+
+\subsection{The AdS/CFT correspondence}
+
+
+As mentioned, the world volume theory of $N$ coincident D3-branes is 4d ${\cal{N}} =4$
+SYM with $\U(N)$ gauge group. On
+the other hand, the classical solution in (\ref{nmet}) is a good 
+approximation when the radii of AdS$_5$ and $S_5$ are very big:
+$$
+\frac{R^2}{\alpha'} \gg 1 \Longrightarrow Ng_{YM}^{2} \equiv \lambda \gg1
+$$
+The fact that those two descriptions are simultaneously consistent for 
+large values of the coupling constant $\lambda$ brought Maldacena
+to formulate the conjecture that the strongly interacting 
+${\cal{N}}=4$ SYM with gauge group $\U(N)$ at large $N$ is actually equivalent
+to the 10d classical supergravity compactified on 
+AdS$_5 \times S_5$. 
+But supergravity is not a consistent quantum theory
+and therefore in order to extend the conjecture to any value of $\lambda$ one 
+has to
+find a substitute for classical supergravity. The natural way to extend the
+ conjecture is therefore  that  ${\cal{N}}=4$ super Yang-Mills 
+is equivalent to Type IIB string theory  on 
+AdS$_5 \times S^5$~\cite{Maldacena:1997re}. 
+
+
+
+
+The AdS/CFT conjecture states the \textbf{equivalence} (also
+referred to as \textbf{duality}) between the following theories
+%
+\begin{itemize}
+\item Type IIB superstring theory on AdS where both AdS$_5$ and $S^5$
+have the same radius $R$, where the 5-form $G^+_5$ has integer flux
+$N=\int _{S^5} G_5^+$ and where the string coupling is $g_s$;
+\item $\cN=4$ super-Yang-Mills theory in 4-dimensions, with gauge group
+$\U(N)$ and Yang-Mills coupling $g_{YM}$ in its (super)conformal phase;
+\end{itemize}
+%
+with the following identifications between the parameters of both theories,
+$$
+g_s = g_{YM}^2 \qquad \qquad R^4 = 4 \pi g_s N (\alpha ') ^2~.
+$$
+One can find immediate correspondence as summarized in Table~\ref{table:dictionary}.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{c|c} 
+4d $\cN=4$ SYM & Type IIB on AdS$_{5}\times S^5$ \\ 
+\hline 
+32 supercharges & 32 supercharges \\
+$\SO(2,4)$ conformal group& $\SO(2,4)$ isometry of AdS$_{5}$ \\
+$\SU(4)_R$ symmetry & $\SO(6)$ isometry of $S^5$\\
+SL(2,\bZ) symmetry of coupling constants & SL(2,\bZ) symmetry of axio-dialton
+\end{tabular}
+\end{center}
+\caption{Simple dictionary}
+\label{table:dictionary}
+\end{table}
+
+
+
+Precisely what is meant by \textbf{equivalence} or \textbf{duality}
+will be briefly discussed later. Roughly speaking \textbf{equivalence} includes a precise map between the
+states (and fields) on the superstring side and the local gauge invariant
+operators on the $\cN=4$ SYM side, as well as a correspondence between the
+correlators in both theories.
+
+
+The above statement of the conjecture is referred to as the \textbf{strong
+form}, as it is to hold for all values of $N$ and of $g_s = g_{YM}^2$.
+String theory quantization on a general curved manifold (including
+AdS), however, appears to be very difficult and is at present out of
+reach. Therefore, it is natural to seek limits in which the Maldacena
+conjecture becomes more tractable but still remains non-trivial.
+
+
+\subsubsection*{The `t~Hooft Limit}
+
+
+The `t~Hooft limit \cite{tHooft:1973alw} consists in keeping the \textbf{`t~Hooft coupling} $\lambda
+\equiv g_{YM}^2 N = g_s N$ fixed and letting $N\to \infty$. In Yang-Mills
+theory, planar diagrams become dominant in this limit. On the AdS side, since the string coupling may be re-expressed in terms of the `t~Hooft coupling
+as $g_s = \lambda /N$, the `t~Hooft
+limit corresponds to the regime where weak coupling string perturbation theory is valid.
+
+\begin{figure}[h]\centering
+\includegraphics[width=8cm]{genus}
+\caption{Planar and non-planar diagram}
+\end{figure}
+
+
+
+\subsubsection*{Supergravity limit}
+While we take $N\to\infty$, in the regime that 
+'t Hooft coupling is large $\lambda=g_s N \gg 1$, supergravity description becomes reliable.
+In the gauge theory side, theory is strongly-coupled so that perturbation technique cannot be used. This is the reason that this correspondence is called a ÒdualityÓ. The two theories are conjectured to be exactly the same, but when one side is weakly coupled the other is strongly coupled and vice versa.
+
+
+
+
+\section{GKPW relation}
+
+
+Soon after Maldacena's proposal \cite{Maldacena:1997re}, more precise formulation was given in \cite{Gubser:1998bc,Witten:1998qj}. The gravitational partition function on asymptotically AdS space is equal to the generating function of correlation functions of the corresponding CFT:
+\bea\label{GKPW}
+Z_{\textrm{grav}}[\phi\to \phi_0]
+=
+\Bigg\langle \exp \biggl (\int _{\partial AdS} \bar \phi_0 \cO \biggr) 
+\Bigg\rangle_{\textrm{CFT}}
+\eea
+that is called \textbf{GKPW} relation.
+For any bulk field $\phi$ in gravity theory on AdS, there exists the corresponding an operator
+$\cO$ in the CFT. The gravitational partition function can be schematically written as
+$$
+Z_{\textrm{grav}}[\phi\to \phi_0]=\int_{\phi\to \phi_0}\cD\phi ~e^{-S_{\textrm{string}}[\phi]}~.
+$$
+For instance, in the regime $\lambda\gg1$, we can use supergravity description
+$$
+Z_{\textrm{grav}}[\phi\to \phi_0]=\sum_{\textrm{saddle point}}~e^{-S_{\textrm{SUGRA}}[\phi\to \phi_0]}~.
+$$
+
+
+\subsubsection*{Bulk field/boundary operator}
+Each field propagating on AdS space 
+is in a one to one correspondence with 
+an operator in the field theory. The spin of the
+bulk field is equal to the spin of the CFT operator; the mass of the bulk field fixes the
+scaling dimension of the CFT operator. Here are some examples:
+
+\begin{itemize}
+\item  Every theory of gravity has a massless spin-2 particle, the graviton $g_{\m\n}$. This
+is dual the stress tensor $T_{\m\n}$ in CFT. This makes sense since every CFT has a stress
+tensor. The fact that the graviton is massless corresponds to the fact that the CFT
+stress tensor is conserved. 
+\item  If our theory of gravity has a spin-1 vector field $A_\m$, then the dual CFT has a
+spin-1 operator $J_\m$. If $A_\m$ is gauge field (massless), then $J_\m$
+ is a conserved current so that gauge symmetries in the
+bulk correspond to global symmetries in the CFT.
+\item A bulk scalar field  is dual to a scalar operator in CFT. The boundary
+value of
+acts as a source in CFT. 
+\end{itemize}
+
+
+There is a relation between the mass  of the field $\phi$ and 
+the scaling dimension of the operator in the conformal field theory. 
+Let us describe this more generally in AdS$_{d+1}$ with metric \eqref{ads-poincare2}.
+The wave 
+equation in the AdS$_{d+1}$ space in euclidean signature for  a field of mass $m$ has 
+two independent solutions, 
+which behave like $z^{d - \Delta } $ (\textbf{non-normalizable}) and $z^{\Delta}$ (\textbf{normalizable})
+for small $z$ (close to the boundary of $AdS$),
+where 
+\be\label{dimenmass}
+\Delta = {d\over 2} + \sqrt{ {d^2 \over 4} + R^2 m^2 } .
+\ee
+Therefore, in order to get consistent behavior for a massive field, 
+the boundary condition on the
+field in the right hand side of \eqref{GKPW} should in general be changed to
+\be\label{bcond}
+\phi(\vec x , \epsilon) = \epsilon^{d - \Delta } \phi_0(\vec x),
+\ee
+and eventually we would take the limit where $\epsilon \to 0$. 
+Since $\phi$ is dimensionless, we see that $\phi_0$ has dimensions
+of $[{\rm length}]^{\Delta - d}$ which implies, through the 
+left hand side of  \eqref{GKPW}, that the associated operator ${\cal  O}$
+has dimension $\Delta$ (\ref{dimenmass}). 
+
+
+\subsubsection*{Examples}
+
+
+Let us now consider this correspondence in a massless scalar field in AdS$_5\times S^5$. The Klein-Gordon equation in ten dimensions is:
+$$
+\nabla^2 \phi\,=\,0\,\,.
+$$
+Since the metric factorizes into a  AdS$_5$ and $S^5$ part, the D'Alembertian is additive
+$$
+\nabla^2=\nabla^2_{AdS_5}+\nabla^2_{S^5}\,\,,
+$$
+where $\nabla^2_{S^5}$ is nothing but the quadratic Casimir operator in
+$\SO(6)$. The eigenvalues of $\nabla^2_{S^5}$ acting on the spherical harmonics are:
+$$
+\nabla^2_{S^5}\,Y_l(\Omega)\,=\,-{C_l^{(5)}\over R^2}\,Y_l(\Omega)\,\,,
+$$
+where the  $C_l^{(5)}$ are given by:
+$$
+C_l^{(5)}=l(l+4)\,\,,
+\qquad
+l=0,1,2,\cdots\,\,.
+$$
+Thus, the reduced  AdS$_5$ fields $\phi_l$ satisfy the massive Klein-Gordon equation
+\be
+\nabla^2_{AdS_5}\,\phi_l\,=\,m_l^2\,\phi_l\,\,,
+\qquad\qquad
+m_l^2={l(l+4)\over R^2}\,\,.
+\label{KK_masses}
+\ee
+Therefore, we have a tower of massive fields $\phi_l$, with a particular set of masses, which originate, after  dimensional Kaluza-Klein (KK) reduction on the five-sphere,  from a single massless scalar field $\phi$ in ten-dimensions.  These fields should have a field theory dual in the ${\cal N}=4$ theory and the mass spectrum (\ref{KK_masses}) should have a counterpart on the field theory side. 
+
+We will now apply the formula (\ref{dimenmass}) to these five-dimensional scalar fields. First of all, the dimension/mass relation for the case  $d=4$  is:
+\be
+\Delta=2+\sqrt{4+(m\,R)^2}\,\,.
+\label{Delta-mass-4d}
+\ee
+Let us first consider a massless scalar, which corresponds to the $s$-wave ($l=0$). In this case (\ref{Delta-mass-4d}) with $m=0$ gives $\Delta=4$. Then, the QFT dual operator should be  a scalar operator of dimension 4. Since this s-wave operator is singlet under the $\SO(6)$ symmetry of the $S^5$, it must not contain the $X_i$  scalars of the dual ${\cal N}=4$ QFT. The only candidate with these characteristics is the glueball operator:
+$$
+{\cal O}={\rm Tr}\big[ F_{\mu\nu}\,F^{\mu\nu}\big]\,\,.
+$$
+Notice that  dim$[\partial]$=dim$[A]=1$, so, indeed, dim(${\cal O}$)=4. For higher order KK  modes, the masses are $m^2 R^2=l(l+4)$ (see (\ref{KK_masses})). Then, the dimensions are:
+$$
+\Delta_l=2+\sqrt{4+l(l+4)}\,=\,4+l\,\,. 
+$$
+In this case, the dual operator should transform under the corresponding representation of $\SO(6)$ (a symmetric tensor with $l$ indices). One can construct such a tensor by multiplying ${\cal N}=4$ SYM scalar fields $X_i$ (they transform as vectors of $\SO(6)$). Then, the natural operator dual to the $l^{{\rm th}}$ KK mode is:
+\be
+{\cal O}_{i_1,\cdots, i_l}={\rm Tr}\big[X_{(i_1,\cdots, i_l)}
+ F_{\mu\nu}\,F^{\mu\nu}\big]\,\,,
+ \label{F_squared_adjoints}
+ \ee
+with $X_{(i_1,\cdots, i_l)}$ being the traceless symmetric product of $l$ scalar fields $X_i$  of  ${\cal N}=4$ SYM.  As dim$[X]=1$, one can check immediately that the dimension of the operator 
+${\cal O}_{i_1,\cdots, i_l}$ in  (\ref{F_squared_adjoints})  is indeed $4+l$, in agreement with the AdS/CFT result. It has been checked that this agreement can be extended to all the KK modes of 10d supergravity on  AdS$_5\times S^5$ (including fermions, forms,...). 
+
+
+
+
+
+\bibliography{string-lecture}
+\bibliographystyle{halpha}
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,531 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{jheppub}
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{gensymb}
+\usepackage{simplewick}
+\usepackage{feynmp-auto}
+\usepackage{wrapfig}
+
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\lambdabda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+\newcommand{\bfa}{\ensuremath{\mathbf{a}}}
+\newcommand{\bfb}{\ensuremath{\mathbf{b}}}
+\newcommand{\bfc}{\ensuremath{\mathbf{c}}}
+\newcommand{\bfd}{\ensuremath{\mathbf{d}}}
+\newcommand{\bfe}{\ensuremath{\mathbf{e}}}
+\newcommand{\bff}{\ensuremath{\mathbf{f}}}
+\newcommand{\bfg}{\ensuremath{\mathbf{g}}}
+\newcommand{\bfh}{\ensuremath{\mathbf{h}}}
+\newcommand{\bfi}{\ensuremath{\mathbf{i}}}
+\newcommand{\bfj}{\ensuremath{\mathbf{j}}}
+\newcommand{\bfk}{\ensuremath{\mathbf{k}}}
+\newcommand{\bfl}{\ensuremath{\mathbf{l}}}
+\newcommand{\bfm}{\ensuremath{\mathbf{m}}}
+\newcommand{\bfn}{\ensuremath{\mathbf{n}}}
+\newcommand{\bfo}{\ensuremath{\mathbf{o}}}
+\newcommand{\bfp}{\ensuremath{\mathbf{p}}}
+\newcommand{\bfq}{\ensuremath{\mathbf{q}}}
+\newcommand{\bfr}{\ensuremath{\mathbf{r}}}
+\newcommand{\bfs}{\ensuremath{\mathbf{s}}}
+\newcommand{\bft}{\ensuremath{\mathbf{t}}}
+\newcommand{\bfu}{\ensuremath{\mathbf{u}}}
+\newcommand{\bfv}{\ensuremath{\mathbf{v}}}
+\newcommand{\bfw}{\ensuremath{\mathbf{w}}}
+\newcommand{\bfx}{\ensuremath{\mathbf{x}}}
+\newcommand{\bfy}{\ensuremath{\mathbf{y}}}
+\newcommand{\bfz}{\ensuremath{\mathbf{z}}}
+
+
+
+%
+%\parskip=1em
+%\parindent=0.3in
+%\setlength\oddsidemargin{0.5in} \setlength\evensidemargin{0.5in}
+%\setlength\textwidth{5.5in}
+%
+%\hfuzz6pt % Don't bother to report over-full boxes if over-edge is < 6pt
+%
+%\newlength{\defbaselineskip}
+%\setlength{\defbaselineskip}{\baselineskip}
+%\newcommand{\setlinespacing}[1]%
+%           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%
+%\newcommand{\properpagestyle}{\pagestyle{myheadings}\markboth{}{}\markright{}}
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+\def\tl{\tilde}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+\newcommand\bz{{\bar{z}}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+
+
+
+
+\def\bea{\begin{align}}
+\def\eea{\end{align}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{align}}
+\def\ea{\end{align}}
+%%% Yokoyama def %%%
+\newcommand{\ol}{\overline}
+\newcommand{\nord}[1]{\vcentcolon\mathrel{#1}\vcentcolon}
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 10 (Due at class on Dec 1)}
+
+
+\section{ Fermionization}
+
+\subsection{}
+At the special radius $R =\sqrt{\frac{\a'}{2}}$ of the circle compactification, one can redefine a bosonic field $H(z):=\sqrt{\frac{2}{\a'}}X(z)$ so that the OPE are given by
+$$H(z)H(0) \sim - \ln z~.$$
+Let us also consider two Majorana-Weyl fermions $\psi^1, \psi^2$ with OPE 
+$$\psi^i(z)\psi^j(0) \sim \frac{\d^{ij}}{z}~.$$
+We can define the complex fermion $$\psi(z) = 2^{-1/2} (\psi^1(z) +i\psi^2(z))\,,\qquad \overline\psi(z) = 2^{-1/2} (\psi^1(z) -i\psi^2(z))~.$$
+Show the equivalence of operators in boson and fermion
+$$:e^{iH} :\cong\psi\,,\quad :e^{-iH} :\cong\overline \psi\,,\quad i\partial H \cong \psi\overline \psi\,,\quad T_H \cong T_\psi~,$$
+by calculating the OPEs of operators in both theories and comparing. 
+
+
+
+
+
+\subsection{}
+At the special radius $R =\sqrt{\frac{\a'}{2}}$, show that the torus partition function can be written as
+$$
+Z^{25}=\frac{1}{2|\eta(q)|^2}\left[\Big| \sum_n q^{n^2/2} \Big|^2+\Big| \sum_n (-1)^n q^{n^2/2} \Big|^2+\Big|\sum_n q^{\frac12(n + 1 / 2)^2}\Big|^2\right]\,.
+$$
+    Verify that this is the torus partition function of a free complex fermion with all the possible boundary conditions (AA, AP, PA, PP).  This is called the \textbf{diagonal modular invariant} partition function.
+
+
+\section{Check the central charge}
+The world-sheet action of Heterotic string theory is given by
+\begin{align}
+ S^{\textrm{m}} &= \frac{1}{4\pi} \int d^2 z\ \Big( \frac{2}{\alpha'} \partial X^\mu  \overline\partial X_\mu+\psi^\mu\overline\partial\psi_\mu+\wt \lambda^A\partial\wt\lambda_A\Big)\cr
+S^{\textrm{gh}}&=\frac{1}{2\pi}\int d^2z \ (b\overline \partial c+\bar b \partial \bar c+\beta\overline \partial \g)\nonumber
+\end{align}
+where $\mu$ are 10-dimensional indices and the right-moving sector is supersymmetric. In the lecture, I have explained that if there are 32 left-moving fermions $\wt\lambda^A$, there is no Weyl-anomaly $c^{\textrm{tot}}=0$. Explain in detail the value of each contribution $c^X,c^\psi,c^{bc},c^{\beta\gamma},c^{\lambda}$ in the lecture note.
+
+
+
+
+
+\section{Toroidal compactifications}
+
+Let us consider the toroidal compactification in the presence of $B$-field
+$$
+S=-\frac{1}{4\pi\a'}\int d^2\sigma(\d_{IJ}\eta^{\a\b}+ B_{IJ}\e^{\a\b})\partial_\a X^I\partial_\b X^J~,
+$$
+where $\e^{01} =-1$ and $\eta^{\a\b}=\textrm{diag}(-1,1)$. The bosonic field is quantized as in the lecture note 
+\begin{align}
+X^I(z)&=x^I-i\sqrt{\a'\over2}p_R^I
+\ln z+i\sqrt{\a'\over2}\sum_{m\neq0}{\alpha^I_m\over mz^m}, \nonumber\\
+\overline X^I(\bz)&={\wt x}^I-i\sqrt{\a'\over2}{p^I_L}
+\ln \bz+i\sqrt{\a'\over2}\sum_{m\neq0}{{\wt\alpha}^I_m\over m\bz^m}.\nonumber
+\end{align}
+where the bosonic field is periodically identified on the lattice $W^I\in \Lambda$
+\be\label{bc}
+X ^I( \s+2\pi,\t)=X ^I( \s,\t)+2\pi W^I~.
+\ee
+
+
+
+
+\subsection{} Show that  the center of mass momentum
+$$
+\pi_I:=\int_0^{2\pi} d\sigma ~ \Pi_I~,\qquad  \Pi_I=\frac{\d S}{\d \dot{X}^I}~,
+$$
+together with \eqref{bc} imply that
+$$
+(p_I)_{L,R} :=\d_{IJ}p^J_{L,R} = \sqrt{\frac{\a'}{2}}\Big( \pi_I  \pm \frac1{\a'}(\d_{IJ} \mp B_{IJ})W^J \Big)~.
+$$
+Here left-modes get the upper sign and right-modes get the lower sign whenever you find the notation $\pm$ and $\mp$.
+
+
+
+\subsection{}  It is $\pi_I$ that generates translations and it must therefore lie on the lattice $\Lambda^*_D$, $\pi_I=e^{*i}_Im_i$ for $m_i\in\bZ$. Writing $\mathbf{g}=g_{ij} = e^I_i \d_{IJ }e^J_j $, $\mathbf{b} = b_{ij} = e^I_i B_{IJ} e^J_j$, 
+show that the mass formula and the level-matching condition  for closed strings are modified to (a matrix notation is employed in the expression below)
+\begin{gather}\label{mass-level}
+\a' M^2={\a'}\bfm^T\bfg^{-1}\bfm+\frac{1}{\a'}\bfn^T(\bfg-\bfb\bfg^{-1}\bfb)\bfn+2\bfn^T\bfb\bfg^{-1}\bfm+2(N +\wt N -2)\cr
+N-\wt N=\boldsymbol{\pi}\cdot \bfW=\bfm^T \bfn~.
+\end{gather}
+
+
+\subsection{}
+Use \eqref{mass-level} to show that the spectrum is invariant under the map
+$$
+\bfm\leftrightarrow\bfn~,\quad \a' \bfg^{-1}\leftrightarrow \frac1{\a'} (\bfg-\bfb\bfg^{-1}\bfb)~, \quad  \bfb\bfg^{-1}\leftrightarrow -\bfg^{-1} \bfb~.
+$$
+The second and the third are indeed equivalent to
+$$
+\frac{1}{\a'}(\bfg+\bfb)\leftrightarrow \a'(\bfg+\bfb)^{-1}~,
+$$
+and this is the T-duality in the presence of $B$-field.
+
+
+\subsection{} A non-trivial instructive example is the 2-torus $T^2= \bR^2/\Lambda$ where $\bfe_1,\bfe_2$ are the two generators of $\Lambda$ and its metric is $g_{ij}=\bfe_i\cdot \bfe_j$.
+The torus has one K\"ahler modulus $\sqrt{\det g_{ij}}$ and one complex structure modulus
+$$
+\tau=\frac{|\bfe_2|}{|\bfe_1|}e^{i \,\textrm{angle}(\bfe_1,\bfe_2)}=\frac{g_{12}+i \sqrt{\det g_{ij} }}{g_{11}}=\tau_1+i\tau_2~.
+$$
+In the presence of $B$-field, the K\"ahler modulus  is complexified
+$$
+\omega=\frac{1}{\a'}(B+i \sqrt{\det g_{ij}})=\omega_1+i\omega_2~.
+$$
+This leads to the expression
+$$
+g_{ij}=\a'\frac{\omega_2}{\tau_2}\begin{pmatrix} 1&\tau_1\\ \tau_1 & |\tau|^2\end{pmatrix}~.
+$$
+Using these expressions, show that the momentum contribution to the mass formula is given by
+\begin{align}
+\bfp_L^2&=\frac{1}{2\omega_2\tau_2}|m_2-\t m_1+\overline{\omega}(n^1 + \t n^2)|^2  \cr
+\bfp_R^2&=\frac{1}{2\omega_2\tau_2}|m_2-\t m_1+{\omega}(n^1 + \t n^2)|^2~.\nonumber
+\end{align}
+Show that, if we transform the momentum and winding numbers appropriately, the string spectrum is then invariant under the following two $\SL(2,\bZ)$ transformations
+
+
+\noindent $\bullet$ T-dualities
+$$
+\omega\to\frac{a\omega+b}{c\omega+d}
+$$
+$\bullet$ Torus modular transformations
+$$
+\tau\to\frac{a\tau+b}{c\tau+d}
+$$
+$\bullet$  \textbf{mirror symmetry} (symmetry between complexified K\"ahler modulus and complex structure modulus)
+$$
+\omega\leftrightarrow \tau
+$$
+How do the momentum and winding numbers transform?
+
+
+%Let us now figure out what is the moduli space of such
+%a compactification.  
+%Any nontrivial $O(D,D)$ rotation 
+%would map one even self-dual Lorentzian 
+%lattice into a different one.  
+%The converse is a mathematical fact:  
+%any two even self-dual Lorentzian 
+%lattices are related by some $O(D,D)$ 
+%rotation.  Therefore the space of such lattices is simply $O(D,D)$.  
+%However, not all of them correspond to different compactifications.  
+%The spectrum for the $(26-D)$-dimensional theory is determined 
+%by $p_L^2$ and $p_R^2$.  They are left invariant by  
+%$O(D)\times O(D)$, the maximal compact subgroup of $O(D,D)$, 
+%acting independently on the left and right momenta respectively.  
+%Therefore 
+%the space of vacua is \textbf{locally} $O(D,D) / (O(D)\times O(D))$, 
+%of dimension $D^2$.  
+
+
+
+\end{document}
+

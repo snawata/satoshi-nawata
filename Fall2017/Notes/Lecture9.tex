@@ -1,0 +1,678 @@
+ \documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{jheppub}
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{gensymb}
+\usepackage{simplewick}
+\usepackage{feynmp-auto}
+\usepackage{wrapfig}
+
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\lambdabda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+\newcommand {\nod} [1] {\mbox {$:#1\!:$}}
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%\parskip=1em
+%\parindent=0.3in
+%\setlength\oddsidemargin{0.5in} \setlength\evensidemargin{0.5in}
+%\setlength\textwidth{5.5in}
+%
+%\hfuzz6pt % Don't bother to report over-full boxes if over-edge is < 6pt
+%
+%\newlength{\defbaselineskip}
+%\setlength{\defbaselineskip}{\baselineskip}
+%\newcommand{\setlinespacing}[1]%
+%           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%
+%\newcommand{\properpagestyle}{\pagestyle{myheadings}\markboth{}{}\markright{}}
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+
+
+\def\tl{\tilde}
+\def\zb{\bar{z}}
+
+\def\ap{{\alpha^\prime}}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+\newcommand\bz{{\bar{z}}}
+\newcommand	{\abs}	[1] {{\left| #1 \right|}}
+\newcommand {\brac} [1]	{{\left\{	#1 \right\}}}
+
+
+\def\ket#1{\left| #1 \right\rangle}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+
+
+
+
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+
+\def\bea{\begin{align}}
+\def\eea{\end{align}}
+
+%\title{ Lecture 4}
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf  Lecture 9}
+
+
+We have seen that the critical dimensions $D$ of bosonic and supersymmetric string theory are $D=26$ and $D=10$, respectively. To obtain an effective theory in lower dimensions, we can make use of \textbf{Kaluza-Klein compactifications} where  the 
+true spacetime takes the form of a direct product $M_{d} \times K_{D-d}$, where 
+$M_d$ is the $d$-dimensional Minkowski spacetime, and $K_{D-d}$ is a very tiny compact manifold. As we will see, an effective theory in $M_d$ still sees interesting ``stringy'' effects in this Kaluza-Klein scheme. 
+
+
+
+
+First we concentrate on the simple compactifications, $K=T^{D-d}$
+called \textrm{toroidal compactifications}.  Since a torus is simply a  product of $S^1$ and are flat,  the nonlinear sigma model can be described by the free two-dimensional CFT. Remarkably, this simple compactification leads to the notion of \textbf{T-duality} and \textbf{Heterotic string theories} have been constructed based on toroidal compactifications. To understand the basic properties,  let us first see study the toroidal compactifications of bosonic string theory. Toroidal compactifications of superstring theories are also very interesting so that we will learn them relating to string dualities later more in detail.
+
+
+The concept of D-branes was introduced in the last lecture as boundary conditions of open strings. T-duality gets particularly rich when we include D-branes so that we will study their properties more in detail. 
+
+
+
+\section{$S^1$ compactification in closed bosonic string}
+
+To begin with, let us first study the simplest case of the spacetime $\bR^{1,24}\times S^1$ where we compactify 25-th direction on a circle $S^1$ of radius $R$.  For closed strings, we have the 
+familiar mode expansion 
+$X^\mu(z,\zb)=X^\mu(z)+\overline X^\mu(\zb)$ with
+\begin{align}
+X^\mu(z)&=x^\mu+i\sqrt{\ap\over2}
+\left(-\alpha_0^\mu
+\ln z+\sum_{m\neq0}{\alpha^\mu_m\over mz^m}\right), \nonumber\\
+\overline X^\mu(\zb)&={\wt x}^\mu+i\sqrt{\ap\over2}\left(-{\wt\alpha}_0^\mu
+\ln \zb+\sum_{m\neq0}{{\wt\alpha}^\mu_m\over m\zb^m}\right).\nonumber
+\label{cmodes}
+\end{align}
+Now let us take a close look at the zero modes which can be written as
+\be\nonumber
+X^\mu(z,\bar{z}) = x^\mu + \wt x^\mu -i\sqrt{\a'\over2}
+(\alpha^\mu_0+{\wt\alpha}^\mu_0)t + \sqrt{\a'\over2}
+({\wt\alpha}^\mu_0-{\alpha}^\mu_0)\sigma
++ {\rm oscillators}.
+\ee
+where the spacetime momentum of the string is
+\be\nonumber
+p^\mu =
+{1\over{\sqrt{2\a'}}}(\alpha^\mu_0 + {\wt\alpha}^\mu_0)~.
+\ee
+
+Under $\sigma \to \sigma+2\pi$,
+the oscillator term are periodic and $X^\mu(z,\bar{z})$
+changes by $2\pi\sqrt{(\a'/2)}(\wt\alpha^\mu_0-{\alpha}^\mu_0).$
+For a non-compact spatial direction $\bR^{1,24}$, $X^\mu$ is single-valued $X^\mu(t,\s)= X^\mu(t,\s+2\pi)$,
+which requires
+\be\nonumber
+\alpha^\mu_0={\wt\alpha}^\mu_0=\sqrt{\a'\over2}p^\mu~,\qquad \mu=0,1,\cdots,24~.
+\ee
+
+\begin{figure}[h]\centering
+\includegraphics{winding}
+\end{figure}
+
+
+On the other hand, since the 25-th direction is put on the circle $S^1$ of radius $R$, it has period
+ $X^{25}\sim X^{25}+2\pi R$. Hence, the momentum $p^{25}$ can take the values $n/R$ for $n\in\bZ$ where $n$ is called \textbf{Kaluza-Klein momentum}.
+Also, under $\sigma\sim\sigma+2\pi$, $X^{25}(z,\bar{z})$
+can change by $2\pi wR$ where $w$  is called 
+ the \textbf{winding number}.  Thus, we have
+\begin{align}\nonumber
+\alpha^{25}_0+{\wt\alpha}^{25}_0 =
+{2n\over R}\sqrt{\a'\over2} ~, \qquad
+\wt\alpha^{25}_0-{\alpha}^{25}_0 = 
+\sqrt{2 \over \a'}wR~,
+\end{align}
+implying
+\begin{align}\label{25a}
+\alpha^{25}_0 = \left({n\over R}-{wR\over\a'}\right)
+\sqrt{\a'\over2} ~, \qquad
+{\wt\alpha}^{25}_0 =
+\left({n\over R}+{wR\over\a'}\right)\sqrt{\a'\over2}~.
+\end{align}
+
+Now let us study their mass spectrum. The mass formula for the string with one dimension compactified on a circle can be interpreted from a 25-dimensional viewpoint in which one regards each of the Kaluza-Klein momenta, which are given by $n$, as distinct particles. Thus, the mass formula is given by
+$$M^2 = -\sum_{\mu=0}^{24}p^\mu p_\mu $$
+where $\mu$ runs only over the non-compact dimensions.
+Hence, we can write the mass formula as
+$$
+M^2 =
+{2\over\a'}(\alpha_0^{25})^2+{4\over\a'}
+({ N}-1) = {2\over\a'}({\wt\alpha}_0^{25})^2+{4\over\a'}
+( {\wt N}-1).
+$$
+where $N$ and $\wt N$ are the right and left numbering operator (See lecture note 1). Using \eqref{25a}, we can express the difference of the two expression
+\be\label{level-matching}
+N-\wt N=nw~,
+\ee
+so that the level matching condition is modified due to the $S^1$ compactification. In a similar fashion, the mass can be expressed in terms of the Kaluza-Klein momentum and the winding number 
+\be\label{mass}
+M^2=\frac{n^2}{R^2}+\frac{w^2R^2}{\a'^2}+\frac2{\a'}(N+\wt N-2)
+\ee
+
+
+
+
+%As $R \to \infty$, all states with
+%$w\neq 0$ become infinitely massive, while the $w=0$ states with all
+%values of $n$ go over to a continuum.  As $R\to 0$, all states with $n
+%\neq 0$ become infinitely massive.  In field theory this is all that would
+%happen---the surviving fields would be independent of the compact
+%coordinate, so the effective dimension is reduced.  In closed string theory
+%things work quite differently: the $n=0$ states with all $w$ values form a
+%continuum as $R\to 0$, because it is very cheap to wind around the small
+%circle.  In the $R\to 0$ limit, the compactified dimension reappears!
+
+
+The mass spectra \eqref{mass} of the theories at radius $R$ and $\a'/ R$ are identical
+when the winding and Kaluza-Klein modes are interchanged
+$n \leftrightarrow w$. This symmetry of the bosonic string theory is called \textbf{T-duality}.  This is the first and still most striking indication that strings see
+spacetime geometry differently from the way we are used to.  Indeed, many
+other examples of `stringy geometry' or `quantum geometry' are closely
+related to this.
+
+
+
+It is easy to see from \eqref{25a} that this interchange amounts to
+\be\nonumber
+\alpha^{25}_0 \rightarrow-\alpha^{25}_0, \quad
+{\wt\alpha}_0^{25} \rightarrow {\wt\alpha}_0^{25} 
+\label{tzemo}.
+\ee
+In fact, it is not just the zero mode, but the entire right-moving part of the compact coordinate that flips sign under the T-duality transformation
+\be
+X^{\prime25}(z,\bar{z})=-X^{25}(z)+\overline X^{25}(\bar{z})\ . \label{onesidep}
+\ee
+Remarkably, the energy-momentum tensor, OPEs and therefore all of the correlation
+functions are invariant under this rewriting. In other words, T-duality, relating the two theories with radius $R$ and $\a'/R$, is an exact
+symmetry of perturbative closed string theory.  
+
+Because of the T-duality, a theory with compactification radius $R$ is equivalent to the theory with compactification radius $\a'/R$. Thus, this implies that there is a ``minimal radius'' $R=\sqrt{\a'}$ in string theory which is called \textbf{self-dual radius}. At self-dual radius, the duality
+$R \to \a'/R$ maps $R$ back to its original value where we can expect 
+something interesting to occur.  In the next section, we will study the physics at the self-dual radius.
+
+
+
+
+\subsection{Self-dual radius: $R = \protect \sqrt {\a'}$}
+
+As we know, the massless spectra of bosonic string theory includes graviton. Hence, let us see the effect of the $S^1$ compactification on the graviton. In the Kaluza-Klein mechanism  $M^{25}\times S^1$, the metric is decomposed into compact and non-compact spacetime direction
+\be\label{KK-metric}
+ds^2 = G_{MN} dx^M dx^N = G_{\mu\nu} dx^\mu dx^\nu + G_{25,25}(dx^{25}+ A_\mu dx^\mu)^2 ~.
+\ee
+where the fields $G_{\mu\nu}$, $G_{25,25}$, and $A_\mu$ are allowed to depend only on the non-compact coordinates $x^\mu$ ($\mu=0,1,\cdots24$). Under a coordinate transformation
+$$x'^{25} = x^{25} + \lambda (x^\mu)  $$
+the part $G_{\mu,25}=G_{25,\mu}$ of the metric transforms as
+$$A'_\mu = A_\mu - \partial_\mu \lambda~ . $$
+Thus, it behaves as $\U(1)$ gauge field, and gauge transformations arise as part of the higher-dimensional coordinate transformation. On the other hand, the part $G_{25,25}$ of the metric behaves as a scalar field. Indeed, writing $G_{25,25}=e^\s$, the Ricci scalar for the metric  \eqref{KK-metric} can be written as
+$$
+R_{26} = R_{25} - 2e^{-\s}\nabla^2 e^\s - \frac14e^{2\s}F_{\m\n}F^{\m\n}~ .
+$$
+Actually, it is straightforward to see the corresponding vertex operators at generic radius $R$:
+\begin{align}	
+\partial X^\mu \bar \partial X^\nu e^{i k\cdot X}	&\quad \longleftrightarrow \quad G_{\mu\nu}, B_{\mu\nu}, \phi \cr
+\partial X^\mu \bar{\partial} X^{25} e^{i k\cdot X}, \ \partial X^{25} \bar{\partial} X^\mu e^{i k\cdot X}& \quad \longleftrightarrow \quad A^\mu\,,B_{\mu,25}\cr
+\partial X^{25} \bar{\partial} X^{25} e^{i k\cdot X}&\quad \longleftrightarrow \quad  \sigma
+\end{align}
+where $\nu = 0, \ldots, 24$  runs the coordinate indices for $M_{25}$.  In fact, the middle line indicates that the theory has $\U(1)_\ell \times \U(1)_r$ gauge symmetry at generic radius $R$.
+
+However, at the self-dual radius $R=\sqrt{\a'}$, the mass formula \eqref{mass} becomes
+$$
+M^2=\frac{1}{\a'}(n^2+w^2+2(N+\wt N-2))~,
+$$
+so that the massless spectra actually gets enlarged. In addition to the generic solution $n=w=0$, $N=\wt N =1$, there are now
+also
+\begin{table}[h]\centering
+\begin{tabular}{ccccc}
+&$n$&$w$&$\wt  N$&$N$\\\hline
+A&$\pm1$&$\pm1$&$0$&$1$\\
+B&$\pm1$&$\mp1$&$1$&$0$\\
+C&$\pm2$&$0$&$0$&$0$\\
+D&$0$&$\pm2$&$0$&$0$
+\end{tabular}\end{table}
+
+\noindent Hence, the states corresponding to A and B contain four new gauge bosons (A,B,C,D contain new massless scalars too that will appear in Homework 8), with vertex operators
+$$
+\bar{\partial} X^\mu e^{\pm 2iX^{25}(z)/\sqrt{\a'}} e^{i k\cdot X} ~,  \qquad\qquad  {\partial} X^\mu e^{\pm 2i\overline X^{25}(\bar z)/\sqrt{\a'}} e^{i k\cdot X}~.
+$$
+It is expected that the new gauge bosons must combine with the
+old into a non-Abelian theory. In fact, if one can define the current 
+$$
+j^\pm(z)=j^1(z)\pm i \, j^2(z):=e^{\pm 2iX^{25}(z)/\sqrt{\a'}} \qquad j^3(z):=i\, \partial X^{25}(z)/\sqrt{\a'}~,
+$$
+they satisfy the OPEs (Exercise)
+$$
+j^a(z) j^b (0) \sim \frac { k\delta^{ab} } {2z^2}  
+		+ \frac {i {\epsilon^{abc}} j^c(0)} {z}~.
+$$
+with $k=1$. Here $\epsilon^{abc}$ is the structure constant 
+of $\SU(2)$.  This is precisely the definition of $\SU(2)$ affine Lie 
+algebra with level $k=1$.  The same story is repeated for the left movers.  Hence we see that we have 
+an enhancement of gauge symmetry from $\U(1)_\ell \times \U(1)_r$
+to $\SU(2)_\ell \times \SU(2)_r$ at $R = \sqrt{\a'}$.
+
+
+In fact, when the theory moves away from the self-dual radius $R=\sqrt{\a'}$, the $\SU(2)_\ell \times \SU(2)_r$  gauge symmetry is Higgsed. 
+The world sheet action is deformed by turning on the marginal operator 
+$$
+V_{a\wt a}:=j_a \bar j_{\wt a} e^{ik\cdot X}~,
+$$
+which is equivalent to giving the VEV of the $(3,3)$-component of Higgs filed. As a result, when the theory is away from the self-dual 
+radius, the $\SU(2)_\ell \times \SU(2)_r$ 
+gauge symmetry is spontaneously 
+broken down to a $\U(1)_\ell \times \U(1)_r$.
+
+
+
+\section{T-duality of Open Strings}
+
+
+Now let us consider the open string spectrum in the $S^1$ compactification.  Open strings with Neumann boundary conditions have no   wind number around the periodic dimension; they have no quantum
+number comparable to $w$.  So when $R \to 0$ the states with nonzero
+momentum go to infinite mass, but there is no new continuum of states.
+This looks contrary to the case of closed strings.
+
+Indeed, the remedy follows from the duality
+transformation~(\ref{onesidep}) under which the Neumann condition is exchanged the Dirichlet
+condition:
+$$
+\partial_\sigma X^{25} \Big|_{\sigma=0,\pi}=0 \quad \to\quad \partial_t X'^{25} \Big|_{\sigma=0,\pi}=0~.
+$$
+Consequently, 
+the $X^{25}$ coordinate of the open string endpoints is fixed after T-duality, so the endpoint is constrained
+to lie on a D-brane. Hence, T-dualities with open strings always involve D-branes. To see this, integrate 
+\begin{align}
+X'^{25}(\pi) - X'^{25}(0) &= \int_0^\pi d\sigma \partial_\sigma X'^{25}
+\ =\ i \int_0^\pi d\sigma \partial_t X^{25} \nonumber\\
+&= 2\pi \a' p^{25}\ =\ \frac{2\pi \a' n}{R}\ =\ 2\pi n R'. \label{deltax}
+\end{align}
+Here the KK momentum $n$ is transformed to winding number $n$  as in figure.
+\begin{figure}[h]\centering
+\includegraphics[width=13cm]{open-T-dual}
+\end{figure}
+For two different open strings, consider the connected world-sheet that
+results from graviton exchange between them.  One can carry out the same
+argument~(\ref{deltax}) on a path connecting any two endpoints, so all
+endpoints lie on the same D-brane.  The ends are still free to move in
+the other $D-2 = 24$ spatial dimensions.
+
+In the previous lecture, we learnt that D-branes are associated to 
+Chan-Paton factors. Now let us see how the Chan-Paton factors arise in this setting.
+Open strings give rise gauge fields and we now consider $\U(N)$ spacetime gauge fields. If  the
+$X^{25}$ direction is compactified on the circle $S^1$, we can include a Wilson line $A_{25}={\rm
+diag}\{\theta_1,\theta_2,\ldots,\theta_N\}/2\pi R$ on  $S^1$. The presence of the Wilson line 
+generically breaking $\U(N) \to \U(1)^N$, which can be locally written in pure gauge:
+\be\nonumber
+A_{25} = -i\Lambda^{-1}\partial_{25}\Lambda,\qquad
+\Lambda={\rm diag}\{e^{ i X^{25}\theta_1/2\pi R},e^{ i X^{25}\theta_2/2\pi
+R}, \ldots , e^{ i X^{25}\theta_N/2\pi R} \}\ .
+\ee
+Then, the open string momenta is now shifted by
+\be
+{\rm diag}\left\{ e^{-i\theta_1}, e^{-i\theta_2}, \ldots, e^{-i\theta_N}
+\right\} \nonumber
+\ee
+  Since the momentum is dual to the winding number, we
+expect the fields in the dual description to have fractional winding
+number, meaning that their endpoints are no longer on the same D-brane.  Indeed,
+a string whose endpoints are in the state $|ij\rangle$ picks up a phase
+$e^{i(\theta_j - \theta_i)}$, so the momentum is $(2\pi n + \theta_j -
+\theta_i)/2\pi R$.  The calculation~(\ref{deltax}) then gives
+\be\nonumber
+X'^{25}(\pi) - X'^{25}(0) = (2\pi n + \theta_j - \theta_i) R'.
+\ee
+In other words, up to an arbitrary additive normalization, the endpoint in
+state $i$ is at 
+\be
+X'^{25}\ =\ \theta_i R' \ =\ 2\pi\a' A_{25,ii}. \nonumber
+\ee  
+There are in general $N$
+D-branes at different positions as schematically depicted in the following figure.
+\begin{figure}[h]\centering
+\includegraphics[width=7cm]{open-Higgs}
+\end{figure}
+
+\noindent Then, the $D-1$ dimensional mass of this open string is
+\begin{align}
+M^2 &= (p^{25})^2+{1\over\a'}({N}-1) \nonumber\\
+&= \left( {[2\pi n+(\theta_j-\theta_i)]R^\prime\over2\pi\a'}
+\right)^2 +{1\over\a'}(N-1).\nonumber
+\end{align}
+Note that $[2\pi
+n+(\theta_i-\theta_j)]R^\prime$ is the minimum length of a string winding
+between D-branes $i$ and $j$.  Massless states arise
+generically only for non-winding open strings whose end points are on the
+same D-branes, as the string tension contributes an energy to a stretched
+string. 
+We have therefore the massless states and the corresponding vertex operators
+\begin{align}\nonumber
+\alpha^{\mu}_{-1}|{ k};ii\rangle, &\quad\longleftrightarrow\quad  \partial_t X^\mu e^{ik\cdot X}, \cr
+\alpha^{25}_{-1}|{ k};ii\rangle, &\quad\longleftrightarrow\quad \partial_t X^{25}e^{ik\cdot X} = \partial_\sigma
+X'^{25}e^{ik\cdot X}~.
+\end{align}
+
+The first of these is a gauge field
+living on the D-brane, with $24+1$ components tangent to the D-brane. 
+The second was the gauge field in the compact direction in the original
+theory.  In the dual theory it becomes the transverse position of the
+D-brane.  
+
+More generally, boundary condition of open strings can be of arbitrary dimensions. Since T-duality interchanges N and D boundary conditions, a
+further T-duality in a direction tangent to a D$p$-brane reduces it to a
+D$(p-1)$-brane, while a T-duality in a direction orthogonal turns it into a
+D$(p+1)$-brane.  
+
+
+
+In addition, let us make an important remark. So far, we have treat D-branes just as rigid boundary conditions. However, 
+ D-branes are dynamical so that they can fluctuate in shape and position. As we will see in the subsequent lectures (hopefully!), the gravitational and gauge dynamics on a stack of D-branes makes string theory very intriguing. 
+
+
+
+
+\section{T-duality of Type II Superstrings}
+To end this lecture, let us briefly discuss how the 
+T-duality 
+ acts on Type II superstring compactified on $M^9 \times S^1$. We have seen that the T-duality acts as the parity transformation on the right-moving sector
+ $$
+  {X}^9 ( z)\quad\longleftrightarrow\quad -  {{X}'^9}( z)
+ $$
+The superconformal invariance requires 
+$$\psi^9 \leftrightarrow - {\psi}^{'9}~.$$
+ However, this implies that the chirality of the right-moving R sector ground state is reversed: the raising and lowering operators ${\psi}^{'8}±\pm i{\psi}^{'9}$ are interchanged. In other words, T-duality is a spacetime parity operation on just one side of the world-sheet, and so reverses the relative chiralities of the right- and left-moving ground states. As a result, Type IIA theory with compactification radius $R$ is T-dualized to Type IIB theory with radius $\a'/R$.
+ 
+
+Since the IIA and IIB theories have different R-R fields, T-duality in the 9th direction
+must transform one set into the other.  The action of duality on the spin
+fields is of the form
+\be\nonumber
+\psi^R_{\alpha} (z) \to  \beta_9 \psi^R_{\alpha} (z),\qquad
+\overline\psi^L_{\alpha} (\bar{z}) \to\overline\psi^L_{\alpha} (\bar{z}) 
+\ee
+for $\beta_9 =\Gamma^9\Gamma^{11}$, the parity transformation (9-reflection) on the
+spinors.  Since the RR vertex
+operators are written as
+$$
+\overline\psi^L\G^{\mu_1\cdots \mu_p}{\psi^R}
+~,
+$$
+Hence, the RR fields are transformed as
+\begin{align}\nonumber
+C_9 &\quad \to\quad C \cr
+C_{\mu},C_{\mu \nu 9}&\quad \to\quad C_{\mu 9}, C_{\mu\nu}\cr
+C_{\mu \nu \lambda}&\quad \to\quad C_{\mu \nu \lambda 9}~.
+\end{align}
+
+
+
+
+
+
+
+\end{document}

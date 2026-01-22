@@ -1,0 +1,23 @@
+\documentclass[border=2pt,tikz]{standalone}
+
+
+
+\usetikzlibrary{decorations.pathmorphing}
+\begin{document}
+\begin{tikzpicture}
+
+\draw [domain =0:60] plot ({4* cos (\x )} , {4* sin (\x )}) ;
+\draw [domain =0:60] plot ({3* cos (\x )} , {3* sin (\x )}) ;
+\draw [domain =0:60] plot ({4.5* cos (\x )} , {4.5* sin (\x )}) ;
+\draw [domain =0:60] plot ({3.5* cos (\x )} , {3.5* sin (\x )}) ;
+\draw [domain =0:60] plot ({2.5* cos (\x )} , {2.5* sin (\x )}) ;
+\draw [domain =0:60] plot ({2* cos (\x )} , {2* sin (\x )}) ;
+\draw  ({1.5* cos (5)} , {1.5* sin (5)}) -- ({5.5* cos (5)} , {5.5* sin (5)}) ;
+\draw  ({1.5* cos (15)} , {1.5* sin (15)}) -- ({5.5* cos (15)} , {5.5* sin (15)}) ;
+\draw  ({1.5* cos (25)} , {1.5* sin (25)}) -- ({5.5* cos (25)} , {5.5* sin (25)}) ;
+\draw  ({1.5* cos (35)} , {1.5* sin (35)}) -- ({5.5* cos (35)} , {5.5* sin (35)}) ;
+\draw  ({1.5* cos (45)} , {1.5* sin (45)}) -- ({5.5* cos (45)} , {5.5* sin (45)}) ;
+\draw  ({1.5* cos (55)} , {1.5* sin (55)}) -- ({5.5* cos (55)} , {5.5* sin (55)}) ;
+    
+\end{tikzpicture}
+\end{document}

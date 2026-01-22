@@ -1,0 +1,729 @@
+ \documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{jheppub}
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{gensymb}
+\usepackage{simplewick}
+\usepackage{feynmp-auto}
+\usepackage{wrapfig}
+
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\lambdabda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%
+%---------- mathbf font --------------------------------
+%
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+\newcommand{\bfa}{\ensuremath{\mathbf{a}}}
+\newcommand{\bfb}{\ensuremath{\mathbf{b}}}
+\newcommand{\bfc}{\ensuremath{\mathbf{c}}}
+\newcommand{\bfd}{\ensuremath{\mathbf{d}}}
+\newcommand{\bfe}{\ensuremath{\mathbf{e}}}
+\newcommand{\bff}{\ensuremath{\mathbf{f}}}
+\newcommand{\bfg}{\ensuremath{\mathbf{g}}}
+\newcommand{\bfh}{\ensuremath{\mathbf{h}}}
+\newcommand{\bfi}{\ensuremath{\mathbf{i}}}
+\newcommand{\bfj}{\ensuremath{\mathbf{j}}}
+\newcommand{\bfk}{\ensuremath{\mathbf{k}}}
+\newcommand{\bfl}{\ensuremath{\mathbf{l}}}
+\newcommand{\bfm}{\ensuremath{\mathbf{m}}}
+\newcommand{\bfn}{\ensuremath{\mathbf{n}}}
+\newcommand{\bfo}{\ensuremath{\mathbf{o}}}
+\newcommand{\bfp}{\ensuremath{\mathbf{p}}}
+\newcommand{\bfq}{\ensuremath{\mathbf{q}}}
+\newcommand{\bfr}{\ensuremath{\mathbf{r}}}
+\newcommand{\bfs}{\ensuremath{\mathbf{s}}}
+\newcommand{\bft}{\ensuremath{\mathbf{t}}}
+\newcommand{\bfu}{\ensuremath{\mathbf{u}}}
+\newcommand{\bfv}{\ensuremath{\mathbf{v}}}
+\newcommand{\bfw}{\ensuremath{\mathbf{w}}}
+\newcommand{\bfx}{\ensuremath{\mathbf{x}}}
+\newcommand{\bfy}{\ensuremath{\mathbf{y}}}
+\newcommand{\bfz}{\ensuremath{\mathbf{z}}}
+
+
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+\def\tl{\tilde}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+\newcommand\bz{{\bar{z}}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+\newcommand {\nod} [1] {\mbox {$:#1\!:$}}
+\newcommand	{\abs}	[1] {{\left| #1 \right|}}
+\newcommand {\brac} [1]	{{\left\{	#1 \right\}}}
+
+\def\ap{{\alpha^\prime}}
+\def\zb{\bar{z}}
+
+
+
+\def\bea{\begin{align}}
+\def\eea{\end{align}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{align}}
+\def\ea{\end{align}}
+
+
+%\title{ Lecture 4}
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf  Lecture 13}
+
+
+We will continue to learn string dualities extensively studied in the second string revolution after the seminal paper \cite{Witten:1995ex}. So far, we have learned
+
+\vspace{.3cm}
+\noindent $\bullet$ Type IIA and IIB are T-dual to each other
+
+\vspace{.3cm}
+\noindent $\bullet$ Type I is the orientifold projection of Type IIB 
+
+\vspace{.3cm}
+\noindent $\bullet$  Type IIB has $\SL(2,\bZ)$ symmetry so that it is self-dual under S-duality  
+
+\vspace{.3cm}
+\noindent $\bullet$  The strong coupling regime of Type IIA is described by M-theory on $S^1$
+
+\vspace{.3cm}
+\noindent In this lecture, we will learn
+
+\vspace{.3cm}
+\noindent $\bullet$  Heterotic SO(32) and $E_8\times E_8$ are T-dual to each other
+
+\vspace{.3cm}
+\noindent $\bullet$  Heterotic SO(32) is S-dual to Type I 
+
+\vspace{.3cm}
+\noindent $\bullet$ The strong coupling regime of  Heterotic $E_8\times E_8$ is described by M-theory on $S^1/\bZ_2$
+
+\vspace{.3cm}
+\noindent $\bullet$  Heterotic string on $T^4$ is dual to Type IIA on K3
+
+\begin{figure}[h]\centering
+\includegraphics[width=\textwidth]{duality-web}
+\end{figure}
+
+Even for these dualities, we can cover only key points in this lecture. More details can be found in  \cite{Polchinski,BBS}. Moreover, we  just see a tip of iceberg, and there are much more string dualities. Thus, 
+I refer to good reviews \cite{Aspinwall:1996mn,Forste:1996yd,Ooguri:1996ik,Polchinski:1996nb,Polchinski:1996na,Townsend:1996xj,Schwarz:1996bh,Sen:1996yy,Dijkgraaf:1997ip,Vafa:1997pm,Sen:1998kr} written during the second string revolution for this rich subject. All in all, these dualities tells us that quantum strings somehow see geometry from drastically different viewpoints. I hope you will get some feeling of it in this lecture.
+
+\section{Heterotic T-duality} \label{sec:HeteroticT}
+
+Let us consider the T-duality in Heterotic strings on a circle $S^1$ in \cite{Narain:1985jj,Narain:1986am,Ginsparg:1986bx}. In the bosonic construction, the bosonic left-moving sector is compactified on an even self-dual Euclidean lattice of 16-dimensions. There are only two such lattices: the weight lattice $\G_{\SO(32)}$ of $\SO(32)$ and the root lattice $\G_{E_8}\oplus \G_{E_8}$ of $E_8\times E_8$.
+
+
+One may also describe the compactification on a circle $S^1$ in terms of lattices. As we have seen, the left-moving and right-moving momenta compactified boson takes the value on  the lattice $\Gamma^{1,1}$ of the Lorentzian signature. Hence, the circle compactification results in adding ($\oplus$) the lattice $\Gamma^{1,1}$ to the original lattice. 
+
+
+
+It is a useful mathematical fact that for Lorentzian
+lattices, there is 
+only unique even unimodular Lorentzian lattice for each rank. Therefore, the theorem implies 
+$$\G_{\SO(32)}\oplus \Gamma^{1,1} \cong\G^{1,17}
+\cong  \G_{E_8}\oplus \G_{E_8}\oplus \Gamma^{1,1}~.$$
+Together with the metric $G$ and the $B$-field, 
+they parameterize the
+moduli space 
+\begin{equation}\label{eq:Mhettoroidal}
+{\cal M}=\left. \frac{\mathrm{O}(1,17)}{\mathrm{O}(1)\times \mathrm{O}(17)}\right/ \mathrm{O}(1,17; \bZ) ,
+\end{equation}
+where $\mathrm{O}(1,17; \bZ)$ is the T-duality group. It is called \textbf{Narain moduli space}.
+Different points in the moduli space correspond to physically distinct compactifications, e.g. the gauge groups can be different, although always of rank 18. At generic points it is $\U(1)^{18}$ that corresponds to the fact that Wilson loops generically breaks 10d gauge group to $\U(1)^{18}$.
+
+
+
+However, there are special subspaces of the moduli space where it is enhanced.
+This moduli space has exactly two asymptotic boundary points, one associated to the
+decomposition $\G^{1,17}\cong \G_{E_8}\oplus \G_{E_8}\oplus\G^{1,1}$,
+and the other to the decomposition $\G^{1,17}
+\cong \G_{\SO(32)}\oplus\G^{1,1}$.  
+We assign the boundary points the 
+interpretations of types HE and HO strings, or large radius and small radius.
+T-duality will relate these interpretations.  
+
+
+
+In fact, starting from either Heterotic theory, there is a simple choice of
+Wilson line which breaks the gauge group to 
+$\SO(16)\times \SO(16) \times \U(1)\times  \U(1)$.   If we leave this
+group unbroken, then the only remaining parameter is the radius. An analysis of the massive states shows
+that if we map $R\to 1/R$ while exchanging KK momenta
+and winding modes, then the two Heterotic theories are exchanged \cite[\S11.6]{Polchinski}.
+
+
+
+More generally, upon a compactification of Heterotic strings  on a $D$-dimensional torus $T^D$, momenta take the values on  an even self-dual Lorentzian lattice $\G^{D,D+16}$. Therefore, the Narain moduli space becomes
+\be\label{Narain}
+{\cal M}=\left. \frac{\mathrm{O}(D,D+16)}{\mathrm{O}(D)\times \mathrm{O}(D+16)}\right/ \mathrm{O}\left(D,D+16; \bZ\right)~.
+\ee
+which is  $D(D+16)$-dimensional.
+
+
+
+
+
+\section{S--duality between Type I and Heterotic $\SO(32)$}
+
+
+Now let us see S-duality between Type I theory  and Heterotic  $SO(32)$ theory  \cite{Witten:1995ex,Dabholkar:1995ep,Hull:1995nu,Polchinski:1995df} from low-energy effective actions.
+
+
+
+One can obtain Type I supergravity action from Type IIB by setting to zero the IIB fields $C_0$, $B_2$, and $C_4$ that are removed by the $\O$ projection. In addition, we include $\SO(32)$ gauge fields with appropriate dilaton dependence 
+\begin{align}\label{TypeI}
+S_{\textrm{I}}&=S_{\textrm{grav}}+S_{\textrm{YM}}\cr
+S_{\textrm{grav}}&= \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G}   \,\left[
+e^{-2\Phi}( R +4 \partial_\mu \Phi \partial^\mu \Phi )-\frac{1}{2}| \wt G_{3}|^{2} \right] \cr
+S_{\textrm{YM}}&=- \frac{1}{2g_{10}^2} \int d^{10}x \sqrt{ -G}\,  e^{-\Phi} \Tr_{V} |F_2|^2
+\end{align}
+where $F_2$ is the SO(32) field strength and the trace is in the vector representation. Here $G_3$ is the field strength of the RR 2-form $C_2$
+$$
+\wt G_{3}=dC_2-\frac{\kappa_{10}^2}{g_{10}^2}\omega_3
+$$
+with  the Chern-Simons 3-form
+$$
+\omega_3=\Tr_{V}\Big(AdA-\frac{2i}3 A^3\Big)~.
+$$
+The gauge coupling constant $g_{10}$ and the gravitational constant $\kappa_{10}$ are related by $\kappa_{10}^2/g_{10}^2 = \a'/4$, which is determined by anomaly cancelation.
+Under the gauge transformation $\delta A=d\lambda-i[A,\lambda]$, the Chern-Simons term transforms as
+$$
+\delta \omega_3=d \Tr_V(\lambda A)
+$$
+Hence, it comes with 
+$$
+\d C_2 = \frac{\kappa_{10}^2}{g_{10}^2} \Tr_V(\lambda dA)~.
+$$
+
+Heterotic strings have the same supersymmetry as the Type I string and so we expect the same action. However, in the absence of open strings or RR fields the dilaton dependence should be $e^{-2\Phi}$ throughout:
+\begin{align}\label{Het}
+S_{\textrm{Het}}&=S_{\textrm{grav}}+S_{\textrm{YM}}\cr
+S_{\textrm{grav}}&= \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G}   \,e^{-2\Phi}\left[
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2}| \wt H_{3}|^{2} \right] \cr
+S_{\textrm{YM}}&=- \frac{1}{2g_{10}^2} \int d^{10}x \sqrt{ -G}\,  e^{-2\Phi} \Tr_{V} |F_2|^2
+\end{align}
+where the 3-form $\wt H_3$ is the field strength of the $B$-field equipped with Chern-Simons form
+$$
+\wt H_{3}=dB_2-\frac{\kappa_{10}^2}{g_{10}^2}\omega_3~.
+$$
+
+Indeed the low-energy effective actions of Type I \eqref{TypeI} and Heterotic SO(32) \eqref{Het}  are related by the following the field definitions (Homework)
+\begin{align}
+G_{\m\n}^{I} = e^{-\Phi^{H}} G_{\m\n}^{H} ~,&\qquad  \Phi^I = -\Phi^{H} \cr
+\wt G_{3}^I = \wt  H_{3}^{H}~ ,&\qquad  A^I = A^{H} ~.
+\end{align}
+ Recalling that the vacuum expectation value of the dilaton is the string coupling $g_{st}=e^{\Phi}$, we see that the strong coupling limit of one theory is related to the weak coupling limit of the other theory and vice versa.
+
+In Type I theory there are D1-branes and 
+D5-branes that are electrically and magnetically charged under $C_2$, respectively. In Heterotic SO(32) theory, there are fundamental strings and NS5-branes that are electrically and magnetically charged under $B_2$, respectively. The S-duality 
+maps them as \cite{Polchinski:1995df}
+\begin{table}[h]\centering
+\begin{tabular}{ccc}
+Type I&$\leftrightarrow$& Heterotic SO(32)\\ \hline
+D1-branes&$\leftrightarrow$&F-strings\\
+D5-branes&$\leftrightarrow$&NS5-branes
+\end{tabular}\end{table}
+
+One can provide another evidence of this duality by looking at massless spectrum. We have seen that Heterotic SO(32) has massless fields:
+\begin{enumerate}\setlength{\parskip}{-0.1cm}
+\item $\bf 8_v$ of SO(8): bosonic right-moving  $X^i(z)$  
+\item $\bf 8_c$ of SO(8):   fermionic right-moving $\psi^i(z)$
+\item $\bf 32$ of SO(32):   left-moving Majorana-Weyl fermion $\wt\lambda^a(\bar z)$ 
+\end{enumerate}
+Correspondingly, one can see the massless BPS excitations from D1-strings stretched in the $x_1$-direction in Type I theory (Homework):
+\begin{enumerate}\setlength{\parskip}{-0.1cm}
+\item $\bf 8_v$ of SO(8): normal bosonic excitations of D1-D1 strings  
+\item $\bf 8_c$ of SO(8):  right-moving fermionic  excitations of D1-D1 strings 
+\item $\bf 32$ of SO(32):   left-moving fermionic  excitations of D1-D9 strings
+\end{enumerate}
+
+Further evidence of
+this duality has been assembled by comparing tensions, $F_2^4$ interactions, so on \cite[\S14.3]{Polchinski}.	
+
+
+\section{Heterotic $E_8\times E_8$ string from M-theory}
+
+Now we shall consider the strong-coupling behavior of Heterotic $E_8\times E_8$ theory. Taking T-duality and S-duality, Heterotic $E_8\times E_8$ theory is dual to Type I theory. The T-dual to Type I theory is Type IIA theory on a line segment $S^1/\bZ_2$ where O8${}^-$-plane sit at the two ends and 16+16 D8 branes are distributed on  $S^1/\bZ_2$. We call this theory \textbf{Type I' theory}. In the strong coupling regime, the 11th circle will emerge and it is described M-theory on $S^1\times S^1/\bZ_2$. 
+
+
+\begin{figure}[h]\centering
+\includegraphics[width=15cm]{HE-duality}
+\caption{Duality web for Heterotic M-theory}
+\end{figure}
+
+
+Interestingly enough, the relative position of O8${}^-$-planes and D8-branes in Type I' string theory may be adjusted. This freedom goes away in the M-theory limit; the D8-branes have to be stuck at the O8${}^-$-planes, and they become the domain walls of M-theory, which are called \textbf{Ho\v{r}ava-Witten domain wall} or \textbf{M9-branes} \cite{Horava:1995qa,Horava:1996ma}. 
+
+
+Its low-energy effective description is given by 11d supergravity on $S^1/\bZ_2$ which  gives rise to gravitational anomaly \cite{AlvarezGaume:1983ig}. In order to cancel such 
+anomaly, non-Abelian gauge fields have to be present at the boundaries
+in order to employ a Green-Schwarz mechanism \cite{Green:1984sg}. (Homework) This mechanism that bulk anomaly cancels with boundary anomaly is called \textbf{anomaly inflow}. Indeed the low-energy effective theory at the Ho\v{r}ava-Witten domain wall is indeed described by 10d $\cN=1$ SYM with $E_8$ gauge group that cancel anomaly. 
+
+
+
+As in the Type IIA case, the distance between the two boundaries is related to Heterotic coupling $R = g_{\rm het}^{\frac{3}{2}} \ell_p$.  
+Hence, the line segment $S^1/\bZ_2$ shrinks at the weak coupling regime, leading to Heterotic $E_8\times E_8$ string theory.
+The reason to pick $E_8 \times E_8$ is that the anomalies must be canceled on both boundaries, and there is no way to distribute SO(32) between two boundaries (its a simple group with no factors). Using the previous terminology Heterotic $E_8\times E_8$
+string theory can be viewed as M-theory compactified 
+on $S_1/\bZ_2$. This setup is called \textbf{Ho\v{r}ava-Witten M-theory}  or \textbf{Heterotic M-theory}  \cite{Horava:1995qa,Horava:1996ma}.
+
+
+
+
+
+
+
+\begin{figure}[h]\centering
+\includegraphics[width=13cm]{Horava-Witten}
+\caption{Low-energy effective description of Heterotic M-theory. Ho\v{r}ava-Witten domain walls at the two boundaries give rise to $\cN=1$ SYM with $E_8$ gauge group and they cancel bulk anomaly.}
+\end{figure}
+
+
+\section{Duality between Heterotic on $T^4$ and Type IIA on K3}
+Let us now see one more non-trivial duality. Although we have studied only toroidal compactifications, we have seen rich web of dualities. In string theory, a theory is consistent if we compactify it on a Calabi-Yau manifold. Since there are wide varieties of Calabi-Yau manifolds, string dualities involving them are much richer. It has still been an active research area both in physics and mathematics. In this lecture, we deal with the next simplest Calabi-Yau manifold called \textbf{K3 surface}.
+
+\subsection{K3 surface}
+
+A K3 surface is a resolution of $T^4/\bZ_2$.  We write a 4-torus as
+$$
+T^4=\bR^4/\bZ^4=\{\bfx=(x_1,x_2,x_3,x_4)\in\bR^4| x_i\sim x_i+1\}
+$$
+and  the $\bZ_2$ action is a reflection $x_i\rightarrow -x_i$.
+Note that this action has $2^4=16$ fixed points given by the choice
+of midpoints or the origin in any of the four $x_i$.
+Thus, the resulting space $T^4/\bZ_2$ is singular at any of these 16 fixed points. The neighborhood of a singular point is indeed a cone of $\bR P^3$. 
+To make it smooth,  let us consider the set of vectors of length $\le 1$ in the tangent bundle of $TS^2$ 
+$$
+V=\{ (v_1,v_2)\in S^2\times T_{v_1}S^2| ~|v_2|\le 1\}~.
+$$
+Then the boundary of $V$  is $\partial V=\bR P^3$ so that you can replace the neighborhood of each singular point by $V$. Since $V$ is a smooth manifold, the resulting space is smooth and it is a K3 surface. This smoothing procedure is called \textbf{resolution} or \textbf{blow-up}. 
+
+Although the construction of a K3 surface is rather simple, its geometry is surprisingly fertile. First of all, it is a Calabi-Yau manifold, namely a Ricci-flat K\"ahler manifold. 
+In real four dimensions, there are only two topologically equivalent compact closed Calabi-Yau manifolds, $T^4$ and K3.  Moreover, it is a hyper-K\"ahler manifold. (Let's not go into detail about hyper-K\"ahler manifold.)
+
+Let us now briefly look at topological property of K3 surfaces. The resolution of the 16 singular points provides 16 elements of $H^2(K3,\bZ)$ in addition to $6={}_4C_2$ tori in $T^4$. Therefore, we have $H^2(K3;\bZ)\cong \bZ^{22}$. Moreover, the Hodge diamond as a complex manifold turns out to be
+$$
+\begin{array}{c c c c c}
+            &              &  h^{0,0} &            &            \\
+            & h^{1,0}\! &              &\! h^{0,1}\!&            \\
+  h^{2,0}\! & \!             & h^{1,1} & \!            &\! h^{0,2}\\
+            & h^{2,1} &              &h^{1,2}&             \\
+             &              &h^{2,2}&              & 
+\end{array} =
+\begin{array}{c c c c c}
+  &   & 1   &  & \\
+  & 0\! &      &\! 0& \\
+1\! &\!   & 20 & \! &\! 1\\
+  & 0\! &      &\! 0&  \\
+  &   &1    &  & 
+\end{array}\  .
+$$
+Since it is a real 4-dimensional manifold, one can consider the intersection matrix of rank 22
+$$
+Q(\a_i,\a_j) =\a_i \cap  \a_j \qquad \a_i\in H_2(K3;\bZ)
+$$
+In fact, in a certain nice basis,  the intersection  matrix can be written as follows 
+$$
+Q(\a_i,\a_j) \sim 2(-E_8)\oplus 3\begin{pmatrix} 0&1\\1&0\end{pmatrix}
+$$
+where $-E_8$ denotes the $8\times8$ matrix given by minus the Cartan
+matrix of the Lie algebra $E_8$. Hence, we may decompose 
+$$
+  H^2(K3,\bR) = H^+\oplus H^-,
+$$
+where $H^\pm$ represents the cohomology of the space of
+(anti-)self-dual 2-forms. We then see that 
+$$
+  \dim H^+=3,\quad\dim H^-=19~.
+$$
+
+The moduli 
+space of non-trivial metric deformations on a K3 
+is 58-dimensional and given by the coset space \cite{Aspinwall:1996mn}
+$$
+{\cal M}_{\textrm{K3}}\ =\  \bR^+\ \times\
+\left.\frac{\mathrm{O}(3,19)}{\mathrm{O}(3)\times \mathrm{O}(19)}\right/ \mathrm{O}(3,19,\bZ)\ ,
+$$
+where the second factor is the Teichm\"uller space 
+for Ricci-flat metrics of
+volume one on a K3 surface and 
+the first factor is associated with the
+size of the K3.
+
+
+This is not the end of the story if we consider string propagation
+on $K3$. For each element of $H_2(K3,\bZ)$, we can turn
+on the $B$-field. Because of $H_2(K3,\bZ)=\bZ^{22}$, we have 22 additional real parameters and that makes the total
+dimension of moduli space $58+22=80$.  It turns out that this moduli
+space is isomorphic to
+$$
+{\cal M}_{\textrm{K3}}^{\textrm{stringy}} = 
+\left. \frac{\mathrm{O}(4,20)}{\mathrm{O}(4)\times \mathrm{O}(20)}\right/ 
+\mathrm{O}(4,20,\bZ)\ .
+$$
+Substituting $D=4$ into \eqref{Narain}, one can see that this is exactly the same as the Narain moduli space for Heterotic string on $T^4$!
+
+
+
+\subsection{Heterotic on $T^4$/Type IIA on K3}
+The relations between Heterotic on $T^4$ and Type IIA on K3 can be seen by comparing the effective actions in $D= 6$. On Heterotic side, for generic Wilson lines the $E_8 \times  E_8$ or $\SO(32)$ gauge symmetry is broken to $\U(1)^{16}$. Including the KK gauge bosons from $T^4$ compactification, the gauge group becomes $\U(1)^{24}$ and the effective 6d supergravity action of Heterotic string is
+$$
+S_{\textrm{Het}}= \frac{1}{2\kappa_{6}^2} \int d^{6}x \sqrt{ -G}   \,e^{-2\Phi}\left[
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2}| \wt H_{3}|^{2}- \frac{\kappa_{6}^2}{2g_{6}^2} \sum_{I=1}^{24} |F^I_2|^2 \right] ~.
+$$
+
+Type IIA superstring theory compactified on K3 breaks a half of supersymmetries so that there are 16 supercharges as in Heterotic string. It also gives rise to $\U(1)^{24}$ gauge fields which, via KK-reduction, all arise from the RR sector. One comes from the one-form with indices along the six non-compact directions, i.e. $C_1$ , and another one from the three-form with indices $C_3$ , which is Hodge-dual to a massless vector in $D=6$. Because of $H_2(K3,\bZ)=\bZ^{22}$, the three-form with index structure $C_3$ gives 22 vectors. As a result, the effective string frame Type IIA action compactified on K3 is
+$$
+S_{\textrm{IIA}}= \frac{1}{2\kappa_{6}^2} \int d^{6}x \sqrt{ -G}   \left[e^{-2\Phi}\Big(
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2}| \wt H_{3}|^{2} \Big)- \frac{\kappa_{6}^2}{2g_{6}^2} \sum_{I=1}^{24} |F^I_2|^2 \right] ~.
+$$
+
+ It is straightforward to show that the two actions are equivalent via the following field redefinition
+ \begin{align}\nonumber
+\Phi^{\textrm{H}}=-\Phi^{\textrm{IIA}}~,&\qquad G^{\textrm{H}}=e^{-2\Phi^{\textrm{IIA}}}G^{\textrm{IIA}}\cr
+A^{\textrm{H}}=A^{\textrm{IIA}}~,&\qquad \wt H^{\textrm{H}}=e^{-2\Phi^{\textrm{IIA}}}\ast \wt H^{\textrm{IIA}}~.
+\end{align}
+
+ 
+ 
+ 
+ 
+\subsection{More dualities}
+
+
+
+Of course, what we have glimpsed are merely a few  representative examples of string dualities. Compactifying M-theory on various manifolds, one can find many duality relations.
+These duality conjectures can be arrived at by using similar arguments. Some
+examples of such conjectured dualities are given 
+below \cite{Dasgupta:1995zm,Witten:1995em,Sen:1996zq}:
+\begin{eqnarray}
+\hbox{M-theory on} && \nonumber \\
+\textrm{K3} \qquad  &\leftrightarrow& \qquad\hbox{Heterotic/Type I on $T^3$} \nonumber
+\\
+T^5/\bZ_2 \qquad
+&\leftrightarrow&\qquad \hbox{IIB on K3} \nonumber \\
+T^8/\bZ_2 \qquad &\leftrightarrow&\qquad \hbox{Type I/Heterotic on $T^7$}
+\nonumber \\
+T^9/\bZ_2 \qquad &\leftrightarrow&\qquad \hbox{Type IIB on
+$T^8/\bZ_2$}\nonumber 
+\end{eqnarray}
+In each case $\bZ_2$ acts by reversing the sign of all the
+coordinates of $T^n$.
+Each of these duality conjectures satisfy the consistency condition
+that the theory on the
+right hand side, upon further compactification on a circle,
+is dual to Type IIA string theory compactified
+on the manifold on the left hand side.
+
+
+
+\bibliography{string-lecture}
+\bibliographystyle{halpha}
+
+
+
+
+
+
+
+
+
+\end{document}

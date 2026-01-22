@@ -1,0 +1,564 @@
+\documentclass[a4j,12pt]{jarticle}
+
+
+% \usepackage{a4j}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% \usepackage{showkeys}
+% \usepackage[dvips]{graphicx}
+
+\usepackage{bm}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{slashed}
+% \usepackage{mathbbol}  % 数字も白抜きにしてくれる
+\usepackage{multirow}  % Tableで複数のセルにまたがるセルを作れる
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headsep=10pt]{geometry}
+\usepackage[compact]{titlesec}
+\titlespacing*{\section}{0pt}{3ex}{2ex}
+\titlespacing*{\subsection}{0pt}{2ex}{1ex}
+\titlespacing*{\subsubsection}{0pt}{1ex}{1ex}
+
+% \usepackage{graphicx}           % tikzで使う graphicxと競合するので排除
+% \usepackage[usenames]{color}
+% \usepackage[usenames,dvipdfmx]{color}    % optionは同時に指定出来る。
+\usepackage[dvipsnames,dvipdfmx]{xcolor}    % optionは同時に指定出来る。
+
+
+\usepackage[british]{babel}
+\input{colordvi.tex}
+
+\usepackage[dvipdfm,colorlinks,pagebackref,pdfusetitle,urlcolor=blue,citecolor=MidnightBlue,linkcolor=MidnightBlue,bookmarksnumbered,plainpages=false]{hyperref}
+
+
+
+\input{dummy.tex}
+
+%%% tikzセッティング %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,patterns,snakes,calc}
+\input{arrowsnew}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{positioning}
+%%% end of tikz %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[hang,bf,figurename=Fig.\ , tablename=Table\ ,margin=1cm]{caption}
+\renewcommand{\captionfont}{\footnotesize}
+
+%%% listingsセッティング %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings, jlisting}
+\renewcommand{\lstlistingname}{Code}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  % language=Octave,                 % the language of the code
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=t,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%%% ned of listings セッティング %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pdfstringdefDisableCommands{%
+    \renewcommand*{\bm}[1]{#1}%
+    % any other necessary redefinitions 
+}
+
+%%%今村セッテッティング%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\HH}{\mathbb{H}}
+
+\newcommand{\hf}{\frac{1}{2}}
+\newcommand{\tr}{{\rm tr}}
+\newcommand{\ind}{{\rm ind}}
+\newcommand{\ol}{\overline}
+\newcommand{\ul}{\underline}
+\newcommand{\up}{\uparrow}
+\newcommand{\dn}{\downarrow}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\wh}{\widehat}
+
+
+%%%横山セッティング%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\NN}{\mathcal{N}\!}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\UU}{U(1)}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\SS}{\mathbf{S}}
+\renewcommand{\Im}{\mathrm{Im}}
+\renewcommand{\Re}{\mathrm{Re}}
+\renewcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\Tr}{{\rm Tr}}
+
+\renewcommand{\r}{\mathrm}
+
+\newcommand{\sign}{\mathrm{sign}}
+
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ro}{\sqrt}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\Pexp}{\mathrm{Pexp}}
+
+\newcommand{\nn}{\nonumber \\}
+\newcommand{\1}{\mbox{1}\hspace{-0.25em}\mbox{l}}
+
+%数字のみ対応
+\newcommand{\Maru}[1]{\ooalign{
+\ifnum#1<10 \hfil\resizebox{.9\width}{.85\height}{#1}\hfil
+\else
+\hfil\resizebox{.6\width}{.8\height}{#1}\hfil
+\fi
+\crcr
+\raise.1ex\hbox{$\bigcirc$}}}
+
+%全文字対応
+\newcommand{\maru}[1]{\ooalign{
+\hfil\resizebox{.8\width}{\height}{#1}\hfil
+\crcr
+\raise.1ex\hbox{\large$\bigcirc$}}}
+
+
+\newcommand{\nord}[1]{\vcentcolon\mathrel{#1}\vcentcolon}
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+
+
+\def\P{\mathop{\cal P}}
+\def\diag{\mathop{\rm diag}}
+
+
+\def\Re{\mathop{\rm Re}\nolimits}
+\def\Im{\mathop{\rm Im}\nolimits}
+\def\Det{\mathop{\rm Det}\nolimits}
+\def\sign{\mathop{\rm sign}\nolimits}
+
+
+%%% rap %%% - make two letters overlap
+\newcommand{\rap}[2]
+{\setbox1=\hbox{#1}%
+\setbox2=\hbox to\wd1{\hss #2\hss}%
+\mbox{\rlap{\box1}\box2}}
+
+%\newcommand{\sla}[1]{\rap{$#1$}{/}}
+\newcommand{\sla}[1]{\rap{$#1$}{$\backslash$}}
+
+
+\def\DY#1{{\MyGreen [DY: #1]}}
+\newcommand{\MyGreen}{\color [rgb]{0,0.7,0}}
+
+\usepackage[vcentermath]{youngtab}
+% \Yboxdim4pt
+\newcommand{\Y}{\yng}
+\newcommand{\Young}{}
+
+
+%%%title def%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\def\maketitle{
+\noindent
+{\Large \@title \par\vskip 2pt}
+\noindent
+{\large \@date \hspace{4pt} \@author}
+%\\[-2pt]
+%\noindent------------------------------------------------------------------------------------------
+\par\vskip 1.5em
+}
+
+\author{横山 大輔}
+\date{\today}
+%%%本文%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \title{\centerline{Lecture 2}}
+\begin{document}
+% \maketitle
+% \begin{abstract}
+
+% \end{abstract}
+% \tableofcontents
+
+% \parindent=0pt
+
+  \pagestyle{fancy}
+  \renewcommand{\headrulewidth}{0.0pt}
+  \rhead{}
+  \lhead{}
+  \cfoot{[\ \scshape\oldstylenums{\thepage}\ / %
+    \scshape\oldstylenums{\pageref{lastpage}} ]}
+%  \rfoot{\@author}
+
+% \setcounter{section}{}
+% \setcounter{subsection}{}
+% \setcounter{subsubsection}{}
+
+\centerline{\Large \bf  Homework 11: Due at class on Dec 8}
+
+% \vspace{12pt}
+% \DY{なにかコメント}
+
+% \vspace{-12pt}
+
+% \vspace{-4pt}
+% \begin{itemize}
+%  \setlength{\itemsep}{0pt}
+%  \item Type I superstring theory.
+%  \item In type I theory, we only have D$1$-, D$5$-, and D$9$-, branes.
+%  \item O$9^-$-plane is needed for type I to be consistent theory.
+%  \item T-duality of type I theory.
+% \end{itemize}
+% \vspace{-4pt}
+
+
+
+
+\subsection*{Prob. 1 Electromagnetic duality}
+
+\subsubsection*{Prob. 1.1 Differential form}
+
+
+An $n$-form field is defined by
+\begin{align}
+ A_n = \frac{1}{n!} A_{\mu_1,\mu_2,\cdots,\mu_n} dx^{\mu_1} \wedge dx^{\mu_2} \wedge \cdots \wedge dx^{\mu_n} \ .
+\end{align}
+Hodge dual in a $D$-dimensional curved space is defined by
+\begin{align}
+ * A_n = \frac{\sqrt{|G|}}{n! (D-n)!} {\epsilon_{\mu_1,\cdots,\mu_{D-n}}}^{\mu_{D-n+1},\cdots,\mu_{D}} A_{\mu_{D-n+1},\cdots,\mu_D} dx^{\mu_1} \wedge \cdots \wedge dx^{\mu_{D-n}} \ ,
+\end{align}
+where $G$ is the determinant of a metric $G_{MN}$, and
+$\epsilon_{\mu_1,\cdots,\mu_D}$ is the totally anti-symmetric tensor and normalized as $\epsilon_{0,1,\cdots,D-1} = 1$.
+\begin{itemize}
+ \item Confirm that
+\begin{align}
+ \frac{1}{2g^2} \int {F_2}^2 \equiv \frac{1}{2g^2} \int F_2 \wedge * F_2
+ = \frac{1}{4g^2} \int \sqrt{|G|} d^Dx\ F_{\mu\nu} F^{\mu\nu} \ .
+\end{align}
+(For example, compare the coefficients of $F_{01}F^{01}$ term in both side.
+If it is still difficult consider $D=4$.)
+\end{itemize}
+Comment: this is the convention used in the lecture for kinetic terms of anti-symmetric tensors in SUGRA.
+
+
+\subsubsection*{Prob. 1.2 Electromagnetic duality}
+
+Let us consider a following action
+\begin{align}
+ S = -\frac{1}{2g^2} \int F_{n+1} \wedge * F_{n+1} - \int f_{D-n-1} \wedge \left( F_{n+1} -d A_n \right) \ ,
+\end{align}
+where $F_{n+1}$ and $A_n$ are independent each other.
+\begin{itemize}
+ \item Consider an equation of motion for $f_{D-n-1}$ and derive the solution for the E.O.M.
+       Then, what is the physical meaning of $F_{n+1}$ and $S$ with the solution ?
+ \item Consider an E.O.M. for $F_{n+1}$ and derive the solution.
+       Rewrite the action $S$ in terms of $f_{D-n-1}$ using the solution.
+ \item Consider an equation of motion for $A_n$ with the action $S(f_{D-n-1})$ and derive the solution for the E.O.M.
+       Then, what is the physical meaning of $f_{D-n-1}$ and $S(f_{D-n-1})$ with the solution ?
+ \item Define $\wt S = (\mathrm{sign})S$, where you should properly choose the $(\mathrm{sign})$ so that
+       the kinetic term has the usual sign. If we write $\wt S \equiv -\frac{1}{2\wt g^2} \int \wt F_{D-n-1} \wedge * \wt F_{D-n-1}$,
+       what is the value of $\wt g$ in terms of $g$ ?
+\end{itemize}
+(Again, if you are confused with the differential form convention get back to normal convention and consider $D=4$.)
+
+
+
+
+\subsection*{Prob. 2 Dirac monopole}
+
+
+
+\subsubsection*{Prob. 2.1 Wu-Yang monopole}
+
+Let us consider so called Dirac monopole, which is a field configuration of $\bm B$
+that satisfies
+\begin{align}
+ \nabla \cdot \bm B = q_m \delta^3 (\bm r) \ ,
+ \label{eq:1}
+\end{align}
+where $\delta^3 (\bm r)$ is a three-dimensional delta function and $\bm r$ is a three-dimensional space point vector.
+\begin{itemize}
+ \item Derive a solution of $\bm B$.
+ \item Explain that $\bm B$ cannot be expressed by space components of a gauge field $\bm A$ globally.
+\end{itemize}
+Consider the polar coordinate $(r,\theta,\phi)$ and a following gauge field
+\begin{align}
+ \bm A^N &= \frac{q_m(1-\cos\theta)}{4\pi r\sin\theta} \bm e_\phi  ,  \\
+ \bm A^S &= -\frac{q_m(1+\cos\theta)}{4\pi r\sin\theta} \bm e_\phi  ,
+\end{align}
+where $\bm A^N$ is defined in a region $r\neq 0$ and $\theta\neq \pi$,
+and $\bm A^S$ is defined in a region $r\neq 0$ and $\theta\neq 0$.
+(Comments: The singular lines are called Dirac string. Those solutions are called Wu-Yang monopole.
+The point is that a gauge field $A_\mu$ is a section of fiber bundle and is not necessarily defined globally.)
+\begin{itemize}
+ \item Show that $\bm A^N-\bm A^S$ is a gauge transformation in the region $r\neq 0$ and $\theta\neq 0, \pi$.
+ \item Show that both $\bm A^N$ and $\bm A^S$ lead the $\bm B$ derived above in the region where they are defined.
+ \item Show that magnetic flux $\Phi$ from the monopole is $q_m$, using $\bm A^N$ and $\bm A^S$.
+\end{itemize}
+The statements so far are based on vector analysis.
+More properly, a gauge field is a 1-form $A_1$ and magnetic flux density is a 2-form $B_2$.
+Let us rewrite the statements in terms of differential forms.
+\begin{itemize}
+ \item Explain that Eq.~(\ref{eq:1}) can be expressed as $dF_2 = q_m \delta_3(\bm r)$,
+       where $\delta_3(\bm r)$ is a 3-form delta function:
+       $\delta_3(\bm r) = \delta^3(\bm r) d^3\bm r \left(= \delta(x)\delta(y)\delta(z) dx\wedge dy\wedge dz \right)$.
+ \item Explain the Wu-Yang monopole can be written by
+ \begin{align}
+  A_N = \frac{q_m}{4\pi}(1-\cos\theta) d\phi \ , \qquad A_S = -\frac{q_m}{4\pi}(1+\cos\theta) d\phi \ .
+ \end{align}
+ \item Show that $A_N-A_S$ is a gauge transformation.
+ \item Show that magnetic flux $\Phi$ from the monopole is $q_m$, using $A_N$ and $A_S$ in terms of differential forms.
+\end{itemize}
+
+
+\subsubsection*{Prob. 2.2 Dirac quantization condition}
+The previous argument in differential forms can be easily generalized to higher dimension.
+Let us consider a $(p+1)$-form gauge field $C_{p+1}$, which satisfies following equation of motion.
+\begin{align}
+ \frac{1}{2\kappa^2} dG_{p+2} = q_m \delta_{p+3}(M_{D-p-3}) \ ,
+\end{align}
+where $G_{p+2}$ is a field strength of $C_{p+1}$, $\delta_{p+3}(M_{D-p-3})$ is a $(p+3)$-form delta function,
+and $M_{D-p-3}$ is a world-sheet of an object that is magnetically coupled to $C_{p+1}$ (Consider $D=4$ and $p=0$, which is the monopole case).
+\begin{itemize}
+ \item (Optional) Explain the origin of $2\kappa^2$.
+ \item Show that $G_{p+2}$ integrated over a sphere enclosing the magnetic object is $2\kappa^2 q_m$.
+\end{itemize}
+
+
+Let us consider an object that is electrically coupled to $C_{p+1}$, whose coupling is
+\begin{align}
+ S_E = q_e \int_{E_{p+1}} C_{p+1} = q_e \int_{\wh E_{p+2}} G_{p+2} \equiv S_E(\wh E_{p+2}) \ ,
+\end{align}
+where $E_{p+1}$ is a world-sheet that starts from $t=-\infty$ and ends at $t=\infty$
+or starts at $\bm x_0$ and ends at $\bm x_0$ (closed path), and $\wh E_{p+2}$ is a manifold whose boundary is $E_{p+1}$.
+\begin{itemize}
+ \item Since a choice of $\wh E_{p+2}$ is arbitrary one can consider a deformation of $\delta \wh E_{p+2} = \wh E_{p+2}^N -\wh E_{p+2}^S$,
+       and then, $e^{iS_E(\delta\wh E_{p+2})} =1$. Show that this leads Dirac quantization condition.
+\end{itemize}
+% Classically the world-sheet is fixed, however, quantum mechanically any world-sheet has to be considered.
+% Therefore, if there exist the magnetic object we have to consider two world-sheet $E_{p+1}^N$ and $E_{p+1}^S$
+% such that $E_{p+1}^N -E_{p+1}^S$ enclose the magnetic object, or a closed path enclosing the magnetic object.
+% \begin{itemize}
+%  \item Show that $e^{iS_E}$
+% \end{itemize}
+% \begin{itemize}
+%  \item (Optional) Show that gauge invariance of the action assure that a deformation of the world-sheet $E_{p+1}$ does not change the action
+%        up to $2\pi n$ ($n\in \ZZ$).
+%  \item Assume that a deformation of $E_{p+1}$ enclose the magnetic object and the deformation does not change the action,
+%        and then, show that it leads Dirac quantization condition $2\kappa^2 q_e q_m \in 2\pi \ZZ$.
+% \end{itemize}
+
+
+
+
+
+\subsection*{Prob. 3 $SL(2,\RR)$ invariance of type IIB SUGRA}
+
+
+\begin{itemize}
+ \item Show that the $SL(2,\RR)$ invariance of the type IIB SUGRA.
+\end{itemize}
+
+
+
+
+\subsection*{Prob. 4 Kaluza-Klein theory}
+
+Let us consider a $D+1$-dimensional real scalar Kaluza-Klein theory:
+\begin{align}
+ \LL^{(D+1)} = -\frac{1}{2} G^{MN} \partial_M \phi \partial_N \phi \ .
+\end{align}
+The metric is given by
+\begin{align}
+ ds^2 = G_{MN} dx^M dx^N = g_{\mu\nu} dx^\mu dx^\nu + e^{2\sigma} \left( dy +A_\mu dx^\mu \right)^2 \ ,
+ \label{eq:2}
+\end{align}
+where $M,N$ run from $0$ to $D$, $\mu,\nu$ run from $0$ to $D-1$,
+and $y \equiv x^D$, which is compactified to $S^1$ with radius $r$.
+\begin{itemize}
+ \item Rewrite the Lagrangian in terms of $\mu,\nu$, and $y$, rather than $M,N$.
+ \item Calculate the determinant of $G_{MN}$ (i.e. $G \equiv \det G_{MN}$) and express it in terms of $g \equiv \det g_{\mu\nu}$.
+ \item Assume that the fields $(g_{\mu\nu}, A_\mu, \sigma)$ are independent of $y$, except $\phi$,
+       which can be expanded as $\phi(\bm x,y) = \sum_{n \in \ZZ} \phi_n(\bm x)e^{iny/r},\ (\phi_n^*(\bm x)=\phi_{-n}(\bm x))$.
+       Write down the effective Lagrangian of $D$-dimensional theory:
+ \begin{align}
+  \sqrt{-g}\LL^{(D)} = \int dy \sqrt{-G} \LL^{(D+1)} \ .
+ \end{align}
+ \item Derive the masses of the fields $\phi_n$, and their coupling constants to the KK-gauge field $A_\mu$.
+\end{itemize}
+
+
+Let us consider a gravi-dilaton KK-theory:
+\begin{align}
+ S_{EH}^{(D+1)} \simeq \frac{1}{2\kappa^2} \int d^{D+1}x \sqrt{-G} e^{-2\Phi} \Big(R +\cdots \Big) \ ,
+\end{align}
+which, with the same metric Eq.~(\ref{eq:2}), reduces to
+\begin{align}
+ S_{EH}^{(D)} \simeq \frac{2\pi L}{2\kappa^2} \int d^{D}x \sqrt{-g} e^{-2\Phi} \Big(R +\cdots \Big) \ ,
+\end{align}
+where we defined $L = r e^{-\sigma}$, and $\cdots$ includes the dilaton kinetic term and other terms that are not important here.
+\begin{itemize}
+ \item Define an effective coupling $\frac{1}{2\kappa_\mathrm{eff}^2} = \frac{2\pi L}{2\kappa^2}e^{-2\langle\Phi\rangle}$,
+       and compare it with that of T-dual theory.
+       $\frac{1}{2\kappa_\mathrm{eff}^2}$ should be the same after the T-dual.
+       Derive the value of $\langle\wt \Phi\rangle$ in terms of $\langle\Phi\rangle$,
+       where $\langle\wt \Phi\rangle$ is a dilaton vev of the T-dual theory.
+\end{itemize}
+
+
+
+% \begin{thebibliography}{CDLOGP91}
+
+%  \bibitem[Pol98]{Pol98}
+%                 J. Polchinski.
+%                 String theory. Vol. 1.
+%                 Cambridge University Press, 1998.
+
+%  \bibitem[BP09]{Blumenhagen:2009zz}
+%                R.~Blumenhagen and E.~Plauschinn.
+%                \newblock {Introduction to conformal field theory}.
+%                \newblock {\em Lect. Notes Phys.}, 779:1--256, 2009.
+
+% \end{thebibliography}
+
+
+% \bibliography{string-lecture}
+% \bibliographystyle{halpha}
+% \bibliographystyle{JHEP}
+
+% \begin{thebibliography}{CDLOGP91}
+
+% %\cite{AlvarezGaume:1981hn}
+% \bibitem[AFM81]{AlvarezGaume:1981hn}
+%   L.~Alvarez-Gaume, D.~Z.~Freedman and S.~Mukhi,
+%   ``The Background Field Method and the Ultraviolet Structure of the Supersymmetric Nonlinear Sigma Model,''
+%   Annals Phys.\  {\bf 134}, 85 (1981).
+%   %doi:10.1016/0003-4916(81)90006-3
+%   %%CITATION = doi:10.1016/0003-4916(81)90006-3;%%
+%   %525 citations counted in INSPIRE as of 09 Oct 2017
+
+
+
+% \bibitem[CT88]{Callan:1988xx}
+%  Curt Callan and Lárus Thorlacius.
+%  \textit{SIGMA MODELS AND STRING THEORY.}
+%  TASI Lecture, 1988.
+%  (The link below is a direct link to the pdf file of 45MB )
+%  \href{http://www.damtp.cam.ac.uk/user/tong/string/sigma.pdf}
+%  {http://www.damtp.cam.ac.uk/user/tong/string/sigma.pdf}.
+
+
+
+
+% \end{thebibliography}
+
+
+\label{lastpage}
+
+% \begin{tikzpicture}[>=stealth,scale=1]
+%  \draw[->] (0,0)--(1,0);
+%  \draw[latex-stealth] (0,0.5)--(1,0.5);
+%  \draw[latex-stealthnew,arrowhead=2mm] (0,1)--(1,1);
+% \end{tikzpicture}
+
+% \begin{figure}[htb]
+% \centerline{\includegraphics[width=250pt]{.eps}}
+% \caption{}
+% \label{.eps}
+% \end{figure}
+
+
+
+% \begin{table}[htbp]
+%  \begin{center}
+%   \caption{}
+%   \vspace{4pt}
+%   \label{table:001}
+% \begin{tabular}{|c|c|c|c|c|}
+% \hline
+% \hline
+%   Category & Sector & $(h_A,h_B,h_T)$ & Mirror theory & ABJM model \\
+% \hline
+%  1 & & \parbox{40pt}{$(0,0,0)$ $(1,1,1)$} & $1.11906$ & $1.13290$ \\
+% \hline
+%  2 & & \parbox{40pt}{$(0,0,1)$ $(1,1,0)$} & $-0.10861$ & $-0.10861$ \\
+% \hline
+%  \multirow{2}{*}{\vspace{-15pt}3} & 3-1 & \parbox{40pt}{$(0,1,0)$ $(1,0,1)$} & $0.176777$ &
+%  \multirow{2}{*}{\vspace{-15pt}$0.176577$} \\
+% \cline{2-4}
+%  & 3-2 & \parbox{40pt}{$(1,0,0)$ $(0,1,1)$} & $0.176777$ & \\
+% \hline
+% \hline
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+
+% \begin{thebibliography}{99}
+
+% % \cite{Imamura:2012rq}
+% \bibitem{Imamura:2012rq}
+%   Y.~Imamura and D.~Yokoyama,
+%   %``S^3/Z_n partition function and dualities,''
+%   JHEP {\bf 1211}, 122 (2012)
+%   [arXiv:1208.1404 [hep-th]].
+%   %%CITATION = ARXIV:1208.1404;%%
+
+ % \bibitem{fnorio:legendre}
+ %         fnorio
+ %         ``ルジャンドル変換とは何か''
+ %         \url{http://fnorio.com/0146Legendre_transformation/Legendre_transformation.html}
+
+
+ % \bibitem{EMAN:dynamics}
+ %         EMAN物理学
+ %         ``ハミルトニアン''
+ %         \url{http://eman-physics.net/analytic/hamilton.html}
+
+
+ % \bibitem{Wiki:legendre}
+ %         Wiki
+ %         ``ルジャンドル変換''
+ %         \url{https://ja.wikipedia.org/wiki/ルジャンドル変換}
+
+ % \bibitem{mathtrain:legendre}
+ %         高校数学の美しい物語
+ %         ``ルジャンドル変換の意味と具体例''
+ %         \url{http://mathtrain.jp/legendrehenkan}
+
+% \end{thebibliography}
+
+
+% \bibliography{dd}
+
+\end{document}

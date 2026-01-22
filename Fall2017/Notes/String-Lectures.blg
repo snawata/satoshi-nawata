@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: String-Lectures.aux
+The style file: halpha.bst
+Database file #1: string-lecture.bib
+Warning--I didn't find a database entry for "Dai:1989ua"
+Warning--I didn't find a database entry for "Leigh:1989jq"
+Warning--I didn't find a database entry for "Bekenstein:1972tm"
+Warning--I didn't find a database entry for "Hawking:1971tu"
+Warning--I didn't find a database entry for "Hawking:1971vc"
+Warning--I didn't find a database entry for "Goddard:1976qe"
+Warning--I didn't find a database entry for "Montonen:1977sn"
+Warning--I didn't find a database entry for "Aharony:2013hda"
+Warning--empty publisher in Dine:2007zp
+Warning--empty publisher in Greene:1999kj
+Warning--empty journal in Polchinski:2017vik
+Warning--empty journal in Qualls:2015qjb
+Warning--empty journal in Tong:2009np
+Warning--empty journal in Townsend:1997ku
+Warning--empty journal in Tseytlin:1999dj
+You've used 78 entries,
+            2649 wiz_defined-function locations,
+            1103 strings with 16115 characters,
+and the built_in function-call counts, 29352 in all, are:
+= -- 2811
+> -- 1113
+< -- 57
++ -- 358
+- -- 353
+* -- 2231
+:= -- 4701
+add.period$ -- 238
+call.type$ -- 78
+change.case$ -- 433
+chr.to.int$ -- 75
+cite$ -- 85
+duplicate$ -- 1310
+empty$ -- 2462
+format.name$ -- 476
+if$ -- 6119
+int.to.chr$ -- 4
+int.to.str$ -- 0
+missing$ -- 89
+newline$ -- 397
+num.names$ -- 234
+pop$ -- 439
+preamble$ -- 1
+purify$ -- 524
+quote$ -- 0
+skip$ -- 976
+stack$ -- 0
+substring$ -- 1576
+swap$ -- 150
+text.length$ -- 57
+text.prefix$ -- 46
+top$ -- 0
+type$ -- 576
+warning$ -- 7
+while$ -- 251
+width$ -- 87
+write$ -- 1038
+(There were 15 warnings)

@@ -1,0 +1,866 @@
+ \documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{jheppub}
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+
+\usepackage{wrapfig}
+
+%%%今村セッテッティング%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\HH}{\mathbb{H}}
+
+\newcommand{\hf}{\frac{1}{2}}
+\newcommand{\tr}{{\rm tr}}
+\newcommand{\ind}{{\rm ind}}
+\newcommand{\ol}{\overline}
+\newcommand{\ul}{\underline}
+\newcommand{\up}{\uparrow}
+\newcommand{\dn}{\downarrow}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\wh}{\widehat}
+
+
+%%%横山セッティング%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\NN}{\mathcal{N}\!}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\UU}{U(1)}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\SS}{\mathbf{S}}
+\renewcommand{\Im}{\mathrm{Im}}
+\renewcommand{\Re}{\mathrm{Re}}
+%\renewcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\Tr}{{\rm Tr}}
+
+\renewcommand{\r}{\mathrm}
+
+\newcommand{\sign}{\mathrm{sign}}
+
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ro}{\sqrt}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\Pexp}{\mathrm{Pexp}}
+
+\newcommand{\nn}{\nonumber \cr}
+%\newcommand{\1}{\mbox{1}\hspace{-0.25em}\mbox{l}}
+
+%数字のみ対応
+\newcommand{\Maru}[1]{\ooalign{
+\ifnum#1<10 \hfil\resizebox{.9\width}{.85\height}{#1}\hfil
+\else
+\hfil\resizebox{.6\width}{.8\height}{#1}\hfil
+\fi
+\crcr
+\raise.1ex\hbox{$\bigcirc$}}}
+
+%全文字対応
+\newcommand{\maru}[1]{\ooalign{
+\hfil\resizebox{.8\width}{\height}{#1}\hfil
+\crcr
+\raise.1ex\hbox{\large$\bigcirc$}}}
+
+
+\newcommand{\nord}[1]{\vcentcolon\mathrel{#1}\vcentcolon}
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+
+
+\def\P{\mathop{\cal P}}
+\def\diag{\mathop{\rm diag}}
+
+
+\def\Re{\mathop{\rm Re}\nolimits}
+\def\Im{\mathop{\rm Im}\nolimits}
+\def\Det{\mathop{\rm Det}\nolimits}
+\def\sign{\mathop{\rm sign}\nolimits}
+
+
+%%% rap %%% - make two letters overlap
+\newcommand{\rap}[2]
+{\setbox1=\hbox{#1}%
+\setbox2=\hbox to\wd1{\hss #2\hss}%
+\mbox{\rlap{\box1}\box2}}
+
+%\newcommand{\sla}[1]{\rap{$#1$}{/}}
+\newcommand{\sla}[1]{\rap{$#1$}{$\backslash$}}
+
+
+\def\DY#1{{\MyGreen [DY: #1]}}
+\newcommand{\MyGreen}{\color [rgb]{0,0.7,0}}
+
+\usepackage[vcentermath]{youngtab}
+% \Yboxdim4pt
+\newcommand{\Y}{\yng}
+\newcommand{\Young}{}
+
+
+%%%title def%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\def\maketitle{
+\noindent
+{\Large \@title \par\vskip 2pt}
+\noindent
+{\large \@date \hspace{4pt} \@author}
+%\cr[-2pt]
+%\noindent------------------------------------------------------------------------------------------
+\par\vskip 1.5em
+}
+
+\author{横山 大輔}
+\date{\today}
+%%%本文%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \title{\centerline{Lecture 2}}
+\begin{document}
+% \maketitle
+% \begin{abstract}
+
+% \end{abstract}
+% \tableofcontents
+
+%  \pagestyle{fancy}
+%  \renewcommand{\headrulewidth}{0.0pt}
+%  \rhead{}
+%  \lhead{}
+%  \cfoot{[\ \scshape\oldstylenums{\thepage}\ / %
+%    \scshape\oldstylenums{\pageref{lastpage}} ]}
+%%  \rfoot{\@author}
+
+% \setcounter{section}{}
+% \setcounter{subsection}{}
+% \setcounter{subsubsection}{}
+
+\centerline{\Large \bf  Lecture 6}
+
+\vspace{12pt}
+% \DY{なにかコメント}
+Finally, we will discuss string amplitude.
+The amplitude tell us about the feature of the string theory.
+\vspace{-12pt}
+
+
+
+
+\section{Global part of the gauge fixing}
+% \DY{$6g-6+2n$を説明する。}
+
+
+As we naive showed the string amplitude is written as follows.
+\begin{align*}
+ A_n = \sum_g \int \frac{[\DD h_{ab}]_{g,0}}{(\textrm{Weyl $\times$ diff})} \int \DD X^\mu e^{-S_\sigma [X^\mu,h_{ab}]} \prod_{i=1}^n \int d^2z \sqrt h V_i  \ .
+\end{align*}
+In this section we will learn the degrees of the metric integration
+in the string amplitude after the (Weyl $\times$ diff) gauge fixing.
+Namely,
+\begin{align*}
+ \frac{[\DD h_{ab}]_{g,n}}{(\textrm{Weyl $\times$ diff})} = 6g -6 +2n \ .
+\end{align*}
+
+\subsection{Naive explanation}
+
+The $2n$ is simply coming from the integration of the vertex operators,
+which is needed for the vertex operator to be Weyl \& diff-invariant.
+The $6g$ can be understood in a naive way as follows.
+Even after gauge fixing (say fixing metric locally)
+there is a freedom to change the ``shape'' of world-sheet(WS),
+which is called metric moduli (we simply denote moduli).
+Let us consider to increase the number of genus $g$.
+As we did in the lecture 4 we can do that by attaching a cylinder
+to a certain Riemann surface $\Sigma_{g}$.
+When this is done we need to specify where the end points of the cylinder are
+and its ``shape'' of the cylinder.
+The end points are denoted by two complex points $p_1,\ p_2$.
+Around the points we introduce complex coordinate $z_1,\ z_2$
+and impose one condition $z_1 z_2 = c$,
+where $c$ is a constant whose phase specifies twist and magnitude specifies
+length (see Fig.~\ref{g-increase.eps}).
+In total there are another 6 parameters to describe the shape of WS.
+
+\begin{figure}[htb]
+\centerline{\includegraphics[width=300pt]{g-increase.eps}}
+\caption{Attaching a pair of cylinders to $\Sigma_g$, and patching the pair of cylinders by $z_1z_2=c$.}
+\label{g-increase.eps}
+\end{figure}
+
+Let us see some concrete examples.
+As we saw in the Problem 5 sphere has 6 symmetries(Conformal Killing Group(CKG))
+so that we can move three points on sphere to arbitrary locations.
+Therefore, sphere amplitude has $2n-6$ integrations.
+For torus there are 2 moduli and 2 CKG, thus torus amplitude has
+$2n$ integrations.
+From the discussion above for genus $g$ Riemann surface
+its amplitude has $6g-6+2n$ integrations.
+
+
+
+
+
+\subsection{Conformal Killing Group \& Metric moduli of space}
+
+From the previous lecture we know the variation of the metric:
+\begin{align*}
+ \delta h_{ab} = \left(P \cdot \epsilon \right)_{ab} +2\wt \omega h_{ab} \ ,
+\end{align*}
+where
+\begin{align*}
+ &\left(P \cdot \epsilon \right)_{ab} = \nabla_a \epsilon_b +\nabla_b \epsilon_a
+ -h_{ab} (\nabla \cdot \epsilon) \ , \cr
+ &\wt \omega = \omega +\frac{1}{2} (\nabla \cdot \epsilon) \ .
+\end{align*}
+Conformal Killing Vectors are transformations that do not change metric, namely,
+$\delta h_{ab} = 0$. $\omega$ is totally fix by $\nabla\cdot\epsilon$.
+Therefore, they are the solutions of
+\begin{align*}
+ \left(P\cdot\epsilon\right)_{ab} = 0 \ .
+\end{align*}
+On the other hand, moduli is given by all the transformations
+perpendicular to the transformation $\delta h_{ab}$, which we will denote
+$\delta^\perp h_{ab}$.
+It can be derived as follows.
+\begin{align*}
+ 0 &= \int \sqrt h d^2\sigma\ \delta^\perp h_{ab} \left[
+ \left(P\cdot \epsilon\right)^{ab} +2\wt\omega h^{ab} \right] \cr
+ &= \int \sqrt h d^2\sigma\ \left[
+ \left(P^T \cdot \delta^\perp h \right)_a \epsilon^a +2\wt\omega h^{ab}\delta^\perp h_{ab} \right] \ .
+\end{align*}
+To satisfy the equation for arbitrary $\epsilon$ and $\omega$
+it is required that
+\begin{align*}
+ &h^{ab} \delta^\perp h_{ab} = 0 \ , \cr
+ &\left(P^T \cdot \delta^\perp h \right)_a = \nabla^b \delta^\perp h_{ba} = 0 \ .
+\end{align*}
+CK-eq and moduli eq becomes simpler in conformal gauge in complex coordinates:
+\begin{align*}
+ &\partial \ol\epsilon = \ol\partial \epsilon = 0 \ , \cr
+ &\partial \delta^\perp h_{\ol z\ol z} = \ol\partial \delta^\perp h_{zz} = 0 \ .
+\end{align*}
+
+\subsubsection*{Examples}
+For sphere we have
+\begin{align*}
+ &\delta^\perp h_{zz} = \delta^\perp h_{\ol z\ol z} = 0 \ , \cr
+ &\epsilon = a_0 +a_1 z + a_2 z^2 \ , \cr
+ &\ol\epsilon = a_0^* +a_1^* z + a_2^* z^2 \ .
+\end{align*}
+Therefore, there are 6 CKVs and no modulus.
+
+For torus we have
+\begin{align*}
+ &\delta^\perp h_{zz} = a \ , \cr
+ &\epsilon = b \ .
+\end{align*}
+Therefore, there are 2 CKVs and 2 moduli.
+
+
+
+
+\subsubsection*{Relation to ghost zero modes}
+
+
+Action for ghost is
+\begin{align*}
+ S_\textrm{gh} = \frac{1}{2\pi} \int \sqrt{h} d^2z \ b_{ab} \nabla^a c^b \ .
+\end{align*}
+As we saw in the previous lecture
+the nonzero ghost modes cancel non-physical modes in $X^\mu$.
+On the other hand, its zero mode
+\begin{align*}
+ &P\cdot c = \nabla_a c_b +\nabla_b c_a
+ -h_{ab} (\nabla \cdot c) = 0 \ , \cr
+ &\nabla^a b_{ab} = 0 \ .
+\end{align*}
+corresponds to CKG and moduli.
+Since these modes are absent in the action
+we need to insert appropriate zero modes to derive a non-trivial amplitude
+(because $\int d\theta \cdot 1 = 0$).
+\begin{table}[htbp]
+ \begin{center}
+  \caption{The number of zero modes of $b$ and $c$.}
+  \vspace{0pt}
+  \label{table:001}
+\begin{tabular}{c|c|c|c}
+ & $g=0$ & $g=1$ & $g \ge 2$ \cr\hline
+ $c$ & $6$ & $2$ & $0$ \cr
+ $b$ & $0$ & $2$ & $6g-6$
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+
+
+\subsection{Ghost number anomaly}
+
+
+Ghost fields have so called ghost number $[c]=1$ and $[b]=-1$,
+and other fields have zero ghost number.
+Correspondingly, there is a ghost number current $j = cb$
+for the transformation $\delta c = \epsilon c$ and $\delta b = -\epsilon b$.
+The current satisfies the conservation law $\ol\partial j = 0$.
+However, it has anomaly in curved WS:
+\begin{align*}
+ \nabla^z j_z = \kappa \cdot R^{(2)} \ .
+\end{align*}
+
+%
+%OPE with EM tensor leads
+%\begin{align*}
+% T(z)j(w) &= -\nord{(2b\partial c + \partial b c) (z)} \nord{cb(w)} \cr
+% &\sim \frac{-3}{(z-w)^3} +\frac{ j(w)}{(z-w)^2} +\frac{\partial j(w)}{z-w} \ .
+%\end{align*}
+%From this the infinitesimal %\& finite
+%transformations can be derived as follows.
+%\begin{align*}
+% &\delta j = \epsilon \partial j +\partial\epsilon j -\frac{3}{2}\partial^2 \epsilon \ . % \cr
+%% &j(z) = \frac{\wt z}{\partial z} \wt j (\wt z) -\frac{3}{2} \partial_z \log \left(\frac{\partial\wt z}{\partial z}\right) \ .
+%\end{align*}
+%
+%On the other hand, for the conformal gauge $ds^2 = e^{2\omega} dzd\ol z$,
+%the WS curvature is $R = -8e^{-2\omega} \partial\ol\partial\omega$.
+%Therefore, we can derive
+%\begin{align*}
+% j_z = -4\kappa \partial\omega -j(z) \ ,
+%\end{align*}
+%where $j(z)$ is the holomorphic current.
+%As we did before (for EM tensor anomaly)
+%we deduce that
+%\begin{align*}
+% &\delta j(z) = \epsilon \partial j(z) +\partial\epsilon j(z) -2\kappa\partial^2 \epsilon \ ,  \cr
+% &\therefore \qquad \kappa = \frac{3}{4} \ .
+%\end{align*}
+%
+%
+%This anomaly puts constraint on non-vanishing ghost correlators:
+%\begin{align*}
+% &\wh\delta \left\langle \prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle
+% = \left\langle \left(\int \frac{d^2x}{2\pi}\sqrt h \nabla^a j_a \right)\prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle  \cr
+% &\quad= (m-n) \left\langle \prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle
+% = \left\langle \left(\int \frac{3d^2x}{8\pi}\sqrt h R^{(2)} \right)\prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle  \cr
+% &\quad= (3-3g) \left\langle \prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle \ .
+%\end{align*}
+%Namely, $\# c - \# b = 3-3g$, and similarly, $\#\ol c - \#\ol b = 3-3g$.
+%
+
+
+OPE with EM tensor leads
+\begin{align*}
+ T(z)j(w) &= -\nord{(2b\partial c + \partial b c) (z)} \nord{cb(w)} \nonumber\\
+ &\sim \frac{-3}{(z-w)^3} +\frac{ j(w)}{(z-w)^2} +\frac{\partial j(w)}{z-w} \ .
+\end{align*}
+From this the infinitesimal %\& finite
+transformations can be derived as follows.
+\begin{align*}
+ &\delta j = \epsilon \partial j +\partial\epsilon j -\frac{3}{2}\partial^2 \epsilon \ . % \\
+% &j(z) = \frac{\wt z}{\partial z} \wt j (\wt z) -\frac{3}{2} \partial_z \log \left(\frac{\partial\wt z}{\partial z}\right) \ .
+\end{align*}
+
+On the other hand, for the conformal gauge $ds^2 = e^{2\omega} dzd\ol z$,
+the WS curvature is $R = -8e^{-2\omega} \partial\ol\partial\omega$.
+Therefore, we can derive
+\begin{align*}
+ j_z = -4\kappa \partial\omega +j(z) \ ,
+\end{align*}
+where $j(z)$ is the holomorphic current.
+As we did before (for EM tensor anomaly)
+we deduce that
+\begin{align*}
+ &\delta j(z) = \epsilon \partial j(z) +\partial\epsilon j(z) -2\kappa\partial^2 \epsilon \ ,  \\
+ &\therefore \qquad \kappa = -\frac{3}{4} \ .
+\end{align*}
+
+
+
+
+This anomaly puts constraint on non-vanishing ghost correlators.
+Let us first consider classical action of $\delta$:
+\begin{align*}
+ &\frac{1}{\epsilon} \delta \left\langle \prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle
+ = (m-n) \left\langle \prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle \ .
+\end{align*}
+On the other hand,
+using holomorphic current equation
+\begin{align*}
+ 0 = \ol\partial J(z) = \nabla^z j_z -\kappa \cdot R^{(2)} \ ,
+\end{align*}
+the Ward-Takahashi indentity becomes
+\begin{align*}
+ &\frac{1}{\epsilon} \wh\delta \left\langle \prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle
+ = \left\langle \left(\int \frac{d^2x}{2\pi}\sqrt h \ol\partial J(z) \right)\prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle  \nonumber\\
+ &\quad
+ = \left\langle \left(\int \frac{d^2x}{2\pi}\sqrt h \left(\nabla^z j_z +\frac{3}{4} R^{(2)}\right) \right)\prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle  \nonumber\\
+ &\quad
+ = \left\langle \left(\int \frac{3d^2x}{8\pi}\sqrt h R^{(2)} \right)\prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle
+ = (3-3g) \left\langle \prod_{i=1}^m c(z_i) \prod_{j=1}^n b(z_j) \right\rangle \ .
+\end{align*}
+Therefore, we can conclude that $\# c - \# b = 3-3g$, and similarly, $\#\ol c - \#\ol b = 3-3g$.
+
+
+
+
+
+\subsection{Ghost action and the zero modes}
+
+Keeping the zero modes in mind we redo the BRST quantization.
+\begin{align*}
+ S_\textrm{gh} &= Q_B \int \frac{d^2 x}{4\pi} \sqrt{\wh h} \left( h^{ab} -\wh h^{ab}(t) \right)  \nonumber\\
+ &\simeq \int \frac{d^2 x}{4\pi} \left\{
+ B_{ab} \left( h^{ab} -\wh h^{ab}(t) \right)
+ -b_{ab} \left( \left(P\cdot c \right)^{ab} -\frac{\partial}{\partial t_k} \wh h^{ab}(t) \xi_k \right)
+ +4\pi \eta_{ai} c^a(\wh \sigma_i)+\cdots
+ \right\} \ ,
+\end{align*}
+where $\cdots$ is an abbreviation of vanishing terms when $h_{ab}=\wh h_{ab}(t)$,
+$i$ runs for $\# c +\# \ol c \equiv \mu$ and $k$ runs for $\# b +\# \ol b \equiv \nu$.
+With this gauge fixing the string amplitude is written as follows.
+\begin{align*}
+ A_n &= \sum_g \int d^{\mu}t \int \DD b \DD c \DD X  e^{-S_\sigma [X,h] -S_\textrm{gh}[b,c] -\lambda\chi}  \nonumber\\
+ &\quad \times \prod_{l=\mu/2+1}^{n}\int d^2z_l \prod_{i=1}^{\mu/2}c\ol c(\sigma_i)
+ \prod_{k=1}^\nu (b, \partial_k h) \prod_{j=1}^n g_\textrm{st} \sqrt h V_j  \ .
+\end{align*}
+where $\chi$ is the Euler number, $\lambda$ is a vacuum expectation value of a dilaton, $g_\textrm{st} =e^\lambda$, and
+\begin{align*}
+ (b, \partial_k h) = \int \frac{d^2x}{4\pi} \sqrt{\wh h}\ b_{ab} \frac{\partial}{\partial t_k} \wh h^{ab}(t) \ .
+\end{align*}
+This is \textbf{the most general amplitude formula} we will consider in the remaining part.
+
+\section{Tree amplitude}
+
+% \DY{簡単な例を見せたい。Pole から intermediate states についての情報}
+
+
+Let us consider $g=0$ case, namely, sphere case.
+In this case we have $\mu =6$ and $\nu = 0$.
+Then, the amplitude formula becomes
+\begin{align*}
+ A_{g=0,n} &= g_\textrm{st}^{-2} \int \DD b \DD c \DD X  e^{-S_\sigma [X,h] -S_\textrm{gh}[b,c]}
+ \prod_{l=4}^{n}\int d^2z_l \prod_{i=1}^{3}c\ol c(\sigma_i)
+ \prod_{j=1}^n g_\textrm{st} \sqrt h V_j  \cr
+ &= g_\textrm{st}^{n-2} \prod_{l=4}^{n}\int d^2z_l  \left\langle \prod_{j=1}^n \sqrt h V_j \right\rangle_X
+ \left\langle c\ol c(z_1) c\ol c(z_2) c\ol c(z_3) \right\rangle_{bc} \ ,
+\end{align*}
+where we divided the amplitude to the matter sector and the ghost sector.
+Note that there is no easy definition for less than 3pt amplitude.
+
+Though we can consider any vertex operators we will focus on the simplest example,
+which is tachyon vertex operators:
+\begin{align*}
+ V_j = \nord{e^{ik_j\cdot X(z_j,\ol z_j)}} \ .
+\end{align*}
+
+
+
+\subsection{Matter sector}
+
+In the following argument we will focus on the important part.
+To be precise we need subtle argument for metric and zero modes.
+However, all of the subtleties vanish in the end.
+(For the interested students see \cite[\S6.2]{Polchinski})
+
+
+Let us consider a generating functional
+\begin{align*}
+ Z[J] = \left\langle \exp\left( i\int \sqrt h d^2z J(z,\ol z) '\cdot X(z,\ol z) \right) \right\rangle \ .
+\end{align*}
+Expand $X^\mu$ in a complete set $X_I$:
+\begin{align*}
+ &X^\mu = \sum_I x_I^\mu X_I \ ,  \cr
+ &\Delta X_I = -\omega_I^2 X_I \ ,  \cr
+ &\int \sqrt h d^2z X_I X_{I'} = \delta_{II'} \ .
+\end{align*}
+Then,
+\begin{align*}
+ Z[J] = \prod_{I,\mu} \int dx_I^\mu \ \exp \left( -\frac{\omega_I^2 X_I\cdot X_I}{4\pi \alpha'} +ix_I \cdot J_I \right) \ ,
+\end{align*}
+where
+\begin{align*}
+ J^\mu_I = \int \sqrt h d^2 z J^\mu X_I \ .
+\end{align*}
+Note that for the zero mode $\omega_I = 0$ and hence the integral leads delta function.
+So the result is
+\begin{align*}
+ Z[J] &= C (2\pi)^D \delta^D(J_0) \prod_{I\neq 0}\exp \left( -\frac{\pi\alpha' J_I\cdot J_I}{\omega_I} \right)  \cr
+ &= C (2\pi)^D \delta^D(J_0) \prod_{I\neq 0}\exp \left( -\frac{1}{2} \int h d^2z d^2w J(z)\cdot J(w) G(z,w) \right) \ ,
+\end{align*}
+where $G(z,w) = -\frac{\alpha'}{2} \log|z-w|^2$.
+
+
+
+When we consider tachyon vertex operators it corresponds to
+\begin{align*}
+ J(z) = \sum_{i=1}^n k_i \delta^2(z-z_i) \ .
+\end{align*}
+Hence, the amplitude is
+\begin{align*}
+ \left\langle \prod_{j=1}^n \sqrt h V_j \right\rangle_X = C_X (2\pi)^D \delta^D(\sum k_i) \prod_{i < j}^n |z_{ij}|^{\alpha'k_i\cdot k_j} \ .
+\end{align*}
+Note that we ignored the divergent part that is coming from $i=j$ because the vertex operators are normal ordered ones.
+
+
+
+
+\subsection{Ghost sector}
+
+For the ghost sector
+\begin{align*}
+ \left\langle c\ol c(z_1) c\ol c(z_2) c\ol c(z_3) \right\rangle_{bc} \ ,
+\end{align*}
+we only need to consider the zero modes, which is
+\begin{align*}
+ c(z) = c_{0} + c_{1} z +c_{2} z^2 \ .
+\end{align*}
+Therefore,
+\begin{align*}
+ \left\langle c\ol c(z_1) c\ol c(z_2) c\ol c(z_3) \right\rangle_{bc}
+ = C_{bc} \int \prod_{i=0}^2 d\ol c_i dc_i \ c\ol c(z_1) c\ol c(z_2) c\ol c(z_3)
+ = C_{bc} |z_{12}|^2 |z_{23}|^2 |z_{31}|^2 \ .
+\end{align*}
+
+
+
+\subsection{Shapiro-Virasoro amplitude}
+
+Let us see 4pt amplitude of tachyons.
+\begin{align*}
+ A_{0,4} = g_\textrm{st}^{2} C_\textrm{4pt} (2\pi)^D \delta^D(\sum k_i) \int d^2z_4
+ \prod_{i < j}^4 |z_{ij}|^{\alpha'k_i\cdot k_j} \prod_{i < j}^3 |z_{ij}|^2 \ .
+\end{align*}
+Since we have 6 CKG we can set $(z_1,z_2,z_3)$ to $(0,1,\infty)$,
+then the expression reduces to
+\begin{align*}
+ A_{0,4} = g_\textrm{st}^{2} C_\textrm{4pt} (2\pi)^D \delta^D(\sum k_i)
+ B\left( -\frac{\alpha' s}{4}-1,  -\frac{\alpha' t}{4}-1,  -\frac{\alpha' u}{4}-1 \right) \ ,
+\end{align*}
+where
+\begin{align*}
+ &B(a,b,c) = \int d^2z |z|^{2a-2} |1-z|^{2b-2} = \pi \frac{\Gamma(a)\Gamma(b)\Gamma(c)}{\Gamma(a+b)\Gamma(b+c)\Gamma(c+a)} \ , \cr
+ &s = -k_{1+2}^2 = -k_{3+4}^2 = -2 k_1\cdot k_2 -\frac{8}{\alpha'} \ , \cr
+ &t = -k_{1+3}^2 = -k_{2+4}^2 = -2 k_1\cdot k_3 -\frac{8}{\alpha'} \ , \cr
+ &s = -k_{1+4}^2 = -k_{2+3}^2 = -2 k_1\cdot k_4 -\frac{8}{\alpha'} \ , \qquad (s+t+u = -\frac{16}{\alpha'}) \ . \nonumber
+\end{align*}
+This is called Shapiro-Virasoro amplitude.
+For the derivation of the $B$ function see \cite[\S3.2]{GSW} Vol.1 pp.386 and pp.373.
+
+
+Let us discuss the poles in the amplitude so that we can see what kind of states propagate.
+The s-channel poles (see Fig.~\ref{s-channel.eps}) are
+\begin{align*}
+ -\frac{\alpha's}{4}-1 \in \ZZ_{\le 0} , \qquad s = -k_{1+2}^2 = m^2 = \frac{4}{\alpha'} (n-1) \quad (n \in \ZZ_{\ge 0}) \ ,
+\end{align*}
+where $m$ is a mass of intermediate states.
+As it shows the intermediate states could be tachyon, graviton etc.
+\begin{figure}[htb]
+\centerline{\includegraphics[width=150pt]{s-channel.eps}}
+\caption{s-channel.}
+\label{s-channel.eps}
+\end{figure}
+
+We can fix the overall constant from unitarity (see Fig.~\ref{unitarity.eps}).
+\begin{figure}[htb]
+\centerline{\includegraphics[width=250pt]{unitarity.eps}}
+\caption{Unitarity requirement.}
+\label{unitarity.eps}
+\end{figure}
+The 4pt amplitude can be divided into two 3pt amplitude as in Fig.
+At s-channel tachyon pole it becomes
+\begin{align*}
+ A_{0,3} &= a_3 (2\pi)^D \delta^D (\sum k_i) \ , \qquad a_3 \simeq C g_\textrm{st} \ , \cr
+ A_{0,4} &= a_4 (2\pi)^D \delta^D (\sum k_i) \ , \qquad a_4 \simeq -\frac{4\pi}{\alpha'} \frac{1}{s+\frac{4}{\alpha'}} C g_\textrm{st}^2
+ \ .
+\end{align*}
+Unitarity requires
+\begin{align*}
+ &a_4 = \frac{(a_3)^2}{s+\frac{4}{\alpha'}} \ , \qquad
+ \therefore \quad C = -\frac{4\pi}{\alpha'} \ .
+\end{align*}
+
+
+\section{1-loop amplitude}
+
+% \DY{UV finite であることを説明したい。}
+
+Here, we will briefly see $g=1$ case, which is nothing but torus.
+Torus can be constructed from 1d flat complex space $\CC$ by identification (see Fig.~\ref{torus.eps})
+\begin{figure}[htb]
+\centerline{\includegraphics[width=150pt]{torus.eps}}
+\caption{Torus from $\CC$ by the identification.}
+\label{torus.eps}
+\end{figure}
+\begin{align*}
+ z \sim z+2\pi \sim z+2\pi \tau \ ,
+\end{align*}
+where $\tau = \tau_1 i\tau_2$ and assume $\tau_2 > 0$.
+Since the metric is flat the $\tau$ is a complex modulus, which describe the ``shape'' of the torus.
+There is also a complex translation invariance, which is 2 CKG.
+
+Torus has so called a modular invariance.
+Let us define two generators:
+\begin{align*}
+ T: \tau \to \tau+1 \ , \quad S: \tau \to -\frac{1}{\tau} \ .
+\end{align*}
+These $T,\ S$ generates modular transformation
+\begin{align*}
+ \tau \to \frac{a\tau+b}{c\tau+d} \ , \quad
+ \begin{pmatrix}
+  a & b \cr c & d
+ \end{pmatrix} \in PSL(2,\ZZ) \ ,
+\end{align*}
+The ``shape'' of torus is conformally invariant under the modular transformation.
+Therefore, the parameter space of $\tau$ is limited to the fundamental region, see Fig.~\ref{fundamental.eps}.
+\begin{figure}[htb]
+\centerline{\includegraphics[width=120pt]{fundamental.eps}}
+\caption{Fundamental region of $\tau$.}
+\label{fundamental.eps}
+\end{figure}
+
+As we did for sphere case we will encounter ghost expectation,
+whose contribution is only from the zero modes.
+In the torus case since the space is flat and finite
+we can insert a WS integral as follows
+\begin{align*}
+ \langle c(0) \rangle_{bc} = \langle C \rangle_{bc} \ , \quad C \equiv \int \frac{d^2z}{4\pi^2\tau_2}c(z) \ .
+\end{align*}
+($\ol C$ and $B, \ol B$ are similarly defined.)
+
+
+The string amplitude for torus case is
+\begin{align*}
+ A_{1,n}
+ &= g_\textrm{st}^{n} \frac{1}{2} \int_F d^2\tau   \left\langle (b, \partial_\tau h) (b, \partial_{\ol\tau} h)
+ c\ol c\ \sqrt h V_1 \prod_{j=2}^{n}\int d^2z_j \sqrt h V_j \right\rangle \ .
+\end{align*}
+As the same logic as before we can insert the integration even for $z_1$ since the amplitude should not depend on $z_1$:
+\begin{align*}
+ A_{1,n}
+ &= g_\textrm{st}^{n} \frac{1}{2} \frac{1}{4\pi^2\tau_2} \int_F d^2\tau
+ \left\langle (b, \partial_\tau h) (b, \partial_{\ol\tau} h) C\ol C\ \right\rangle_{bc}
+ \left\langle \prod_{j=1}^{n}\int d^2z_j \sqrt h V_j \right\rangle_X \ .
+\end{align*}
+
+
+Though seemingly the metric would not depend on $\tau$, it does indeed depend on $\tau$ as follows.
+Let us consider small deformation of the metric
+\begin{align*}
+ &ds^2 = dzd\ol z \to d(z+\epsilon\ol z) d(\ol z+\ol\epsilon z) \ , \cr
+ &\Leftrightarrow \quad \delta h_{zz} = \ol\epsilon \ , \quad \delta h_{\ol z\ol z} = \epsilon \ .
+\end{align*}
+This deformation changes the period to $(2\pi (1+\epsilon),2\pi(\tau+\epsilon\ol\tau))$.
+Therefore the modulus becomes $\wt \tau = \frac{\tau+\epsilon\ol\tau}{1+\epsilon} \simeq \tau -2i\epsilon\tau_2$
+$\Leftrightarrow\ \delta \tau = -2i\epsilon\tau_2$.
+Now the $\tau$ derivative is
+\begin{align*}
+ \partial_\tau h_{\ol z\ol z} = \lim_{\epsilon \to 0} \frac{\delta h_{\ol z\ol z}}{\delta \tau} = \frac{i}{2\tau_2} \ ,
+ % \quad \partial_{\ol \tau} h_{zz} = -\frac{i}{2\tau_2} \ ,
+ \quad\Rightarrow\quad (b, \partial_\tau h) = 2\pi i B \quad \textrm{etc}.
+\end{align*}
+
+
+One may think the simplest amplitude would be tachyon amplitude,
+however, it is actually vacuum amplitude $n=0$, which can be calculated in torus case opposed to sphere case.
+\begin{align*}
+ A_{1,n}
+ &= \frac{1}{2} \int_F \frac{d^2\tau}{\tau_2}
+ \left\langle B\ol B C\ol C\ \right\rangle_{bc}
+ \left\langle 1 \right\rangle_X \ .
+\end{align*}
+
+
+\subsubsection*{Matter sector}
+
+Using operator formalism
+\begin{align*}
+ \left\langle 1 \right\rangle_X = \tr \exp \left[ 2\pi i \left( \tau_1 P +i\tau_2 H \right)\right]
+ = \tr \left[ q^{L_0 -\frac{c}{24}} \ol q^{\ol L_0 -\frac{c}{24}} \right] \ ,
+\end{align*}
+where $q = e^{2\pi i\tau}$, $P = L_0 -\ol L_0$, $H = L_0 +\ol L_0 -\frac{c}{12}$, and
+\begin{align*}
+ L_0 = \frac{\alpha'}{2} p^2 +\sum_{n > 0} \alpha_{-n} \cdot \alpha_n \ .
+\end{align*}
+\begin{align*}
+ \left\langle 1 \right\rangle_X &=
+ \int \frac{d^Dxd^Dp}{(2\pi)^D} \exp \left( -4\pi\tau_2 \frac{\alpha'}{4} p^2 \right)
+ \left| \frac{q^{-\frac{1}{24}}}{\prod_{n \ge 1} (1-q^n)} \right|^{2D}  \cr
+ &= i \frac{V}{(2\pi l_s)^{26}} \left(\tau_2\right)^{-13} \left|\eta(\tau)\right|^{-52} \ ,
+\end{align*}
+where $l_s = \sqrt{\alpha'}$.
+
+
+\subsubsection*{Ghost sector}
+
+
+Similarly,
+\begin{align*}
+ \left\langle B\ol B C\ol C\ \right\rangle_{bc}
+ = \tr \left[ (-1)^F b_0 \ol b_0 c_0 \ol c_0 q^{L_0 -\frac{c}{24}} \ol q^{\ol L_0 -\frac{c}{24}}  \right]
+\end{align*}
+with
+$c=-26$ and $L_0 = \sum n \nord{b_{-n}c_n} -1$. Hence
+\begin{align*}
+ \left\langle B\ol B C\ol C\ \right\rangle_{bc}
+ = q^{-1-\frac{c}{24}} \ol q^{-1-\frac{c}{24}} \prod_{n \ge 1} (1-q^n) (1-\ol q^n) = |\eta(\tau)|^4 \ .
+\end{align*}
+
+
+
+So, the final result is
+\begin{align*}
+ A_{1,n}
+ &= \frac{iV}{(2\pi l_s)^{26}} \int_F \frac{d^2\tau}{2\tau_2}  \left(\tau_2\right)^{-13} \left|\eta(\tau)\right|^{-48} \ .
+\end{align*}
+
+\textbf{Comments:}
+\begin{itemize}
+ \item There is no UV divergence (see Fig. and recall the naive argument).
+ \item $\left|\eta(\tau)\right|^{-48} \simeq \left|q^{-1} +24 +\mathcal O(q)\right|^2$,
+       which shows correct spectrum of a closed string.
+\end{itemize}
+\begin{figure}[htb]
+\centerline{\includegraphics[width=350pt]{noDivergence.eps}}
+\caption{Naive explanation of no UV divergence in string theory.}
+\label{noDivergence.eps}
+\end{figure}
+
+\bibliography{string-lecture}
+\bibliographystyle{halpha}
+% \bibliographystyle{JHEP}
+
+% \begin{thebibliography}{CDLOGP91}
+
+% %\cite{AlvarezGaume:1981hn}
+% \bibitem[AFM81]{AlvarezGaume:1981hn}
+%   L.~Alvarez-Gaume, D.~Z.~Freedman and S.~Mukhi,
+%   ``The Background Field Method and the Ultraviolet Structure of the Supersymmetric Nonlinear Sigma Model,''
+%   Annals Phys.\  {\bf 134}, 85 (1981).
+%   %doi:10.1016/0003-4916(81)90006-3
+%   %%CITATION = doi:10.1016/0003-4916(81)90006-3;%%
+%   %525 citations counted in INSPIRE as of 09 Oct 2017
+
+
+ 
+% \bibitem[CT88]{Callan:1988xx}
+%  Curt Callan and Lárus Thorlacius.
+%  \textit{SIGMA MODELS AND STRING THEORY.}
+%  TASI Lecture, 1988.
+%  (The link below is a direct link to the pdf file of 45MB )
+%  \href{http://www.damtp.cam.ac.uk/user/tong/string/sigma.pdf}
+%  {http://www.damtp.cam.ac.uk/user/tong/string/sigma.pdf}.
+
+
+
+
+% \end{thebibliography}
+
+
+\label{lastpage}
+
+% \begin{tikzpicture}[>=stealth,scale=1]
+%  \draw[->] (0,0)--(1,0);
+%  \draw[latex-stealth] (0,0.5)--(1,0.5);
+%  \draw[latex-stealthnew,arrowhead=2mm] (0,1)--(1,1);
+% \end{tikzpicture}
+
+% \begin{figure}[htb]
+% \centerline{\includegraphics[width=250pt]{.eps}}
+% \caption{}
+% \label{.eps}
+% \end{figure}
+
+
+
+% \begin{table}[htbp]
+%  \begin{center}
+%   \caption{}
+%   \vspace{4pt}
+%   \label{table:001}
+% \begin{tabular}{|c|c|c|c|c|}
+% \hline
+% \hline
+%   Category & Sector & $(h_A,h_B,h_T)$ & Mirror theory & ABJM model \cr
+% \hline
+%  1 & & \parbox{40pt}{$(0,0,0)$ $(1,1,1)$} & $1.11906$ & $1.13290$ \cr
+% \hline
+%  2 & & \parbox{40pt}{$(0,0,1)$ $(1,1,0)$} & $-0.10861$ & $-0.10861$ \cr
+% \hline
+%  \multirow{2}{*}{\vspace{-15pt}3} & 3-1 & \parbox{40pt}{$(0,1,0)$ $(1,0,1)$} & $0.176777$ &
+%  \multirow{2}{*}{\vspace{-15pt}$0.176577$} \cr
+% \cline{2-4}
+%  & 3-2 & \parbox{40pt}{$(1,0,0)$ $(0,1,1)$} & $0.176777$ & \cr
+% \hline
+% \hline
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+
+% \begin{thebibliography}{99}
+
+% % \cite{Imamura:2012rq}
+% \bibitem{Imamura:2012rq}
+%   Y.~Imamura and D.~Yokoyama,
+%   %``S^3/Z_n partition function and dualities,''
+%   JHEP {\bf 1211}, 122 (2012)
+%   [arXiv:1208.1404 [hep-th]].
+%   %%CITATION = ARXIV:1208.1404;%%
+
+ % \bibitem{fnorio:legendre}
+ %         fnorio
+ %         ``ルジャンドル変換とは何か''
+ %         \url{http://fnorio.com/0146Legendre_transformation/Legendre_transformation.html}
+
+
+ % \bibitem{EMAN:dynamics}
+ %         EMAN物理学
+ %         ``ハミルトニアン''
+ %         \url{http://eman-physics.net/analytic/hamilton.html}
+
+
+ % \bibitem{Wiki:legendre}
+ %         Wiki
+ %         ``ルジャンドル変換''
+ %         \url{https://ja.wikipedia.org/wiki/ルジャンドル変換}
+
+ % \bibitem{mathtrain:legendre}
+ %         高校数学の美しい物語
+ %         ``ルジャンドル変換の意味と具体例''
+ %         \url{http://mathtrain.jp/legendrehenkan}
+
+% \end{thebibliography}
+
+
+% \bibliography{dd}
+
+\end{document}

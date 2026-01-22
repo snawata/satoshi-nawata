@@ -1,0 +1,806 @@
+\documentclass[a4j,12pt]{jarticle}
+
+
+% \usepackage{a4j}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% \usepackage{showkeys}
+% \usepackage[dvips]{graphicx}
+
+\usepackage{bm}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{slashed}
+% \usepackage{mathbbol}  % 数字も白抜きにしてくれる
+\usepackage{multirow}  % Tableで複数のセルにまたがるセルを作れる
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,headsep=10pt]{geometry}
+% \usepackage{graphicx}           % tikzで使う graphicxと競合するので排除
+% \usepackage[usenames]{color}
+% \usepackage[usenames,dvipdfmx]{color}    % optionは同時に指定出来る。
+\usepackage[dvipsnames,dvipdfmx]{xcolor}    % optionは同時に指定出来る。
+
+
+\usepackage[british]{babel}
+\input{colordvi.tex}
+
+\usepackage[dvipdfm,colorlinks,pagebackref,pdfusetitle,urlcolor=blue,citecolor=MidnightBlue,linkcolor=MidnightBlue,bookmarksnumbered,plainpages=false]{hyperref}
+
+\bibliographystyle{JHEP}
+
+\input{dummy.tex}
+
+%%% tikzセッティング %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,patterns,snakes,calc}
+\input{arrowsnew}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{positioning}
+%%% end of tikz %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[hang,bf,figurename=Fig.\ , tablename=Table\ ,margin=1cm]{caption}
+\renewcommand{\captionfont}{\footnotesize}
+
+%%% listingsセッティング %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings, jlisting}
+\renewcommand{\lstlistingname}{Code}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  % language=Octave,                 % the language of the code
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=t,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%%% ned of listings セッティング %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\pdfstringdefDisableCommands{%
+    \renewcommand*{\bm}[1]{#1}%
+    % any other necessary redefinitions 
+}
+
+%%%今村セッテッティング%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\HH}{\mathbb{H}}
+
+\newcommand{\hf}{\frac{1}{2}}
+\newcommand{\tr}{{\rm tr}}
+\newcommand{\ind}{{\rm ind}}
+\newcommand{\ol}{\overline}
+\newcommand{\ul}{\underline}
+\newcommand{\up}{\uparrow}
+\newcommand{\dn}{\downarrow}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\wh}{\widehat}
+
+
+%%%横山セッティング%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\NN}{\mathcal{N}\!}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\UU}{U(1)}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\SS}{\mathbf{S}}
+\renewcommand{\Im}{\mathrm{Im}}
+\renewcommand{\Re}{\mathrm{Re}}
+\renewcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\Tr}{{\rm Tr}}
+
+\renewcommand{\r}{\mathrm}
+
+\newcommand{\sign}{\mathrm{sign}}
+
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ro}{\sqrt}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\Pexp}{\mathrm{Pexp}}
+
+\newcommand{\nn}{\nonumber \\}
+\newcommand{\1}{\mbox{1}\hspace{-0.25em}\mbox{l}}
+
+%数字のみ対応
+\newcommand{\Maru}[1]{\ooalign{
+\ifnum#1<10 \hfil\resizebox{.9\width}{.85\height}{#1}\hfil
+\else
+\hfil\resizebox{.6\width}{.8\height}{#1}\hfil
+\fi
+\crcr
+\raise.1ex\hbox{$\bigcirc$}}}
+
+%全文字対応
+\newcommand{\maru}[1]{\ooalign{
+\hfil\resizebox{.8\width}{\height}{#1}\hfil
+\crcr
+\raise.1ex\hbox{\large$\bigcirc$}}}
+
+
+\newcommand{\nord}[1]{\vcentcolon\mathrel{#1}\vcentcolon}
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+
+
+\def\P{\mathop{\cal P}}
+\def\diag{\mathop{\rm diag}}
+
+
+\def\Re{\mathop{\rm Re}\nolimits}
+\def\Im{\mathop{\rm Im}\nolimits}
+\def\Det{\mathop{\rm Det}\nolimits}
+\def\sign{\mathop{\rm sign}\nolimits}
+
+
+%%% rap %%% - make two letters overlap
+\newcommand{\rap}[2]
+{\setbox1=\hbox{#1}%
+\setbox2=\hbox to\wd1{\hss #2\hss}%
+\mbox{\rlap{\box1}\box2}}
+
+%\newcommand{\sla}[1]{\rap{$#1$}{/}}
+\newcommand{\sla}[1]{\rap{$#1$}{$\backslash$}}
+
+
+\def\DY#1{{\MyGreen [DY: #1]}}
+\newcommand{\MyGreen}{\color [rgb]{0,0.7,0}}
+
+\usepackage[vcentermath]{youngtab}
+% \Yboxdim4pt
+\newcommand{\Y}{\yng}
+\newcommand{\Young}{}
+
+
+%%%title def%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\def\maketitle{
+\noindent
+{\Large \@title \par\vskip 2pt}
+\noindent
+{\large \@date \hspace{4pt} \@author}
+%\\[-2pt]
+%\noindent------------------------------------------------------------------------------------------
+\par\vskip 1.5em
+}
+
+\author{横山 大輔}
+\date{\today}
+%%%本文%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \title{\centerline{Lecture 2}}
+\begin{document}
+% \maketitle
+% \begin{abstract}
+
+% \end{abstract}
+% \tableofcontents
+
+  \pagestyle{fancy}
+  \renewcommand{\headrulewidth}{0.0pt}
+  \rhead{}
+  \lhead{}
+  \cfoot{[\ \scshape\oldstylenums{\thepage}\ / %
+    \scshape\oldstylenums{\pageref{lastpage}} ]}
+%  \rfoot{\@author}
+
+% \setcounter{section}{}
+% \setcounter{subsection}{}
+% \setcounter{subsubsection}{}
+
+\centerline{\Large \bf  Lecture 4}
+
+\vspace{12pt}
+Since we learnt conformal field theories and techniques in the theories,
+we would like to connect them to string theory, especially by considering vertex operators.
+
+In conformal field theory the conformal symmetry is essential.
+However, classical conformal symmetry, which is related to WS diff and Weyl sym, breaks at quantum level.
+We regard this anomaly Weyl anomaly. We will look into important examples of the anomaly.
+
+% \textbf{Comment:} we could not talk about Weyl anomaly from curved WS and the reason why dilaton vacuum expectation value
+% plays the role of string in the actual 4th lecture.
+\vspace{-12pt}
+
+
+
+
+\section{Vertex operators}
+
+% \DY{Vertex operator が適切な field op で表せることを書いて、
+% 次節へのつなぎとしたい。}
+
+
+Let us consider the vertex operators, which has been postponed to do from the second lecture.
+We learnt the state-operator correspondence, which tells us a state corresponds to a certain local operator (vertex operator).
+We also learnt that a closed string spectrum includes tachyon, graviton, etc.
+Why not consider the corresponding local operators of the states ?
+
+
+Recall a few spectra in a closed string:
+\begin{align}
+\renewcommand\arraystretch{1.2}
+ \begin{array}{ll}
+  \textrm{Tachyon}\ \phi & |0;k \rangle \ , \\[2pt]
+  \textrm{Graviton}\  G^{\mu\nu} & \alpha^\mu_{-1}\wt\alpha^\nu_{-1} |0;k \rangle  \quad (\textrm{symmetric in $\mu$ and $\nu$, and traceless} ) \ , \\[2pt]
+  \textrm{B-field}\ B^{\mu\nu} & \alpha^\mu_{-1}\wt\alpha^\nu_{-1} |0;k \rangle  \quad (\textrm{anti-symmetric in $\mu$ and $\nu$} ) \ , \\[2pt]
+  \textrm{Dilaton}\ \Phi & \alpha^\mu_{-1}\wt\alpha_{-1,\mu} |0;k \rangle \ .
+ \end{array}
+\end{align}
+Note that in order to extract physical states we need to contract the polarization tensor $\zeta_{\mu\nu}$,
+which satisfies $k^\mu \zeta_{\mu\nu} = 0$ ($\zeta_{\mu\nu}^{G} = \zeta_{\nu\mu}^{G}$ and $\zeta_{\mu}^{G,\mu} = 0$ etc.).
+Let us first focus on the tachyon state, which is nothing but a vacuum state with a certain momentum $k^\mu$.
+It was defined by $p |0;k \rangle = k |0;k \rangle$, namely,
+\begin{align}
+ |0;k \rangle = e^{ik\cdot x} |0;0 \rangle
+ \quad \ra \quad
+ e^{ik\cdot X(0,0)} \ .
+\end{align}
+The final replacement is by the state-operator correspondence.
+
+
+Next we consider the first excited states.
+Remind ourselves that the closed string mode expansion is given by
+\begin{align}
+ X^\mu(z,\ol z) &= X_R^\mu (z) +X_L^\mu (\ol z)   ,   \\
+ X_R^\mu (z) &= \frac{1}{2}x^\mu -i \frac{\alpha'}{2} p^\mu \log z +i \sqrt{ \frac{\alpha'}{2} } \sum_{n \neq 0} \frac{1}{n} \frac{\alpha_n^\mu}{z^n} \ .
+\end{align}
+Therefore, each mode can be expressed as follows.
+\begin{align}
+ \alpha^\mu_{-m} = i\sqrt{\frac{2}{\alpha'}} \oint \frac{dz}{2\pi i} z^{-m} \partial X^\mu(z)
+ \quad \ra \quad
+ i\sqrt{\frac{2}{\alpha'}} \frac{1}{(m-1)!} \partial^m X(0)  .
+\end{align}
+At the last replacement we forgot the ``classical'' mode expansion and regarded $\partial X(z)$ as a local operator.
+Now we have the correspondence of tachyon, graviton etc. as follows.
+\begin{align}
+ &|0;k\rangle  \quad \ra \quad  e^{ikX}  \\[2pt]
+%  &\alpha^\mu_{-n} |0;k\rangle  \ra   \partial^n X^\mu e^{ik\cdot X}  \\
+ &\zeta_{\mu\nu}\alpha^\mu_{-1}\wt\alpha^\nu_{-1} |0;k\rangle \quad \ra \quad \zeta_{\mu\nu} \partial X^\mu \ol\partial X^\nu e^{ikX}
+\end{align}
+
+
+The string amplitude is
+\begin{align}
+ A_n = \sum_g \int \left(\DD h_{ab}\right)_{g,n} \int \DD X^\mu e^{-S_\sigma [X^\mu,h_{ab}]} \wh V_1 \cdots \wh V_n \ .
+\end{align}
+Note that, naively say, 
+\begin{align}
+ \left(\DD h_{ab}\right)_{g,n} = \left(\DD h_{ab}\right)_{g,0} d^2z_1 \cdots d^2z_n
+\end{align}
+(naively say, this is because Weyl rescaling can move points on the Riemann surface to anywhere),
+so we can re-write the amplitude as
+\begin{align}
+ A_n = \sum_g \int \left(\DD h_{ab}\right)_{g,0} \int \DD X^\mu e^{-S_\sigma [X^\mu,h_{ab}]} \prod_{i=1}^n \int d^2z \sqrt h V_i  \ .
+\end{align}
+Here $\int d^2z \sqrt h V_i$ is an operator of the CFT, and hence, it must be Weyl \& WS diff $\sim$ conformal invariant.
+
+\subsection{Mass from vertex operator}
+Now, let us consider a constant scaling $z \ra \lambda z$ and $\ol z \ra \ol\lambda \ol z$.
+Under the scaling, a field transforms as $\phi(z,\ol z) \ra \lambda^{-h}\ol\lambda^{-\ol h} \phi(z,\ol z)$,
+which should compensate the scaling of the measure $dzd\ol z \ra \lambda\ol\lambda dzd\ol z$.
+Namely, $h=\ol h=1$.
+Conformal dimension of the vertex operators are
+\begin{align}
+\renewcommand\arraystretch{1.2}
+ \begin{array}{lll}
+  \textrm{Name} & \mathcal O & (h, \ol h) \\\hline
+  \textrm{Tachyon} & e^{ik\cdot X} & (\frac{\alpha'k^2}{4},\frac{\alpha'k^2}{4}) \\
+  \textrm{1st excited states} & \zeta_{\mu\nu} \partial X^\mu \ol\partial X^\nu e^{ikX} & (1+\frac{\alpha'k^2}{4},1+\frac{\alpha'k^2}{4}) \\
+ \end{array}
+\end{align}
+The consistency condition for the tachyon leads that
+\begin{align}
+ M^2 = -k^2_\textrm{Tachyon} = -\frac{4}{\alpha'} \ .
+\end{align}
+Similarly, that for the first excited states leads
+\begin{align}
+ M^2 = -k^2_\textrm{1st} = 0 \ .
+\end{align}
+Both results are consistent with the analysis from the first (and the second) lecture.
+
+
+
+
+\section{Weyl anomaly}
+
+As we have seen the Weyl symmetry ($T^a_a = 0$) is crucial.
+However, in general matter theories, the symmetry has anomaly.
+An important example is a string sigma model that is extended to curved space-time(ST):
+\begin{align}
+ S = \frac{1}{4\pi \alpha'}\int \sqrt h d^2z\ h^{ab} \partial_a X^\mu \partial_b X^\nu g_{\mu\nu}(X) \ .
+\end{align}
+This is called (string) non-linear sigma model(NLSM).
+The anomaly is characterized by $\beta$-functions.
+
+Even if the matter theory has no anomaly on flat world-sheet(WS), $\RR^2$,
+the same theory has anomaly on curved WS.
+As we will see it is characterized by the central charge $T^a_a = -\frac{c}{12} R^{(2)}$.
+Therefore, the string sigma model has anomaly.
+However, the path integral for the metric $h_{ab}$ turns into
+that of ``ghost CFT'' due to gauge-fixing,
+and it leads $c=-26$.
+This means that the matter theory has to have $c=26$ !
+
+
+In total we have two types of anomalies:
+\begin{enumerate}
+ \item Anomaly from curved WS $T^a_a = -\frac{c}{12} R^{(2)}$ ,
+ \item Anomaly from curved ST $\beta[G_{\mu\nu}] \neq 0$ .
+\end{enumerate}
+We will learn these anomalies in this order
+(ghost CFT will be covered in the next lecture).
+
+
+
+\subsection{Weyl anomaly from curved WS}
+
+As is stated $T^a_a = A \neq 0$.
+The form of $A$ is highly restricted by symmetries: $A$ should be
+\begin{itemize}
+ \item WS diff invariant ,
+ \item zero on $\RR^2$ ,
+ \item WS mass dimension two .
+\end{itemize}
+These restriction leads
+\begin{align}
+ T^a_a = a R^{(2)} \ ,
+\end{align}
+where $R^{(2)}$ is a WS Ricci scalar.
+
+Let us derive $T^a_a = -\frac{c}{12} R^{(2)}$.
+Take the WS to be conformally flat (which is always possible using WS diff)
+\begin{align}
+ ds^2 = e^{2\Omega(x,y)} (dxdx+dydy) = e^{2\Omega(z,\ol z)} dzd\ol z \ .
+\end{align}
+For the metric we have
+\begin{align}
+ R^{(2)} = -2 \partial^a \partial_a \Omega \ ,
+\end{align}
+therefore, the diagonal element of the EM tensor becomes
+\begin{align}
+ T_{z\ol z} = \frac{1}{4} e^{2\Omega}\ T^a_a = -2a \partial\ol\partial \Omega \ .
+\end{align}
+The other components can be derived from $\nabla_a T^a_b = 0$.
+\begin{align}
+ &0 = \nabla^z T_{zz} +\nabla^{\ol z} T_{\ol zz} = \nabla_{\ol z} T_{zz} +\nabla_{z} T_{\ol zz}
+ = \ol\partial \left( T_{zz} -2a\left( \partial\partial\Omega -\partial\Omega\partial\Omega \right) \right)  \\
+ &\therefore \quad T_{zz} = 2a\left( \partial\partial\Omega -\partial\Omega\partial\Omega \right)+T(z) \qquad (T(z): \textrm{ holomorphic})
+\end{align}
+
+
+
+Let us recall that the conformal Ward-Takahashi identity \textit{in flat WS}:
+\begin{align}
+ \delta_{\epsilon,\ol\epsilon} \mathcal O (w,\ol w) &= \frac{1}{2\pi i} \oint_{\partial M}
+ \left\{ dz\ \epsilon(z)T(z) - d\ol z\ \ol\epsilon(\ol z) \ol T(\ol z) \right\} \mathcal O (w,\ol w) \nonumber\\
+ &= \int_{M}\frac{d^2z}{2\pi }
+ \left\{ \ol\partial\left(\epsilon(z)T(z)\right) +\partial\left(\ol\epsilon(\ol z) \ol T(\ol z)\right) \right\} \mathcal O (w,\ol w) \ .
+\end{align}
+(Notice that the convention is different from the last lecture.)
+Note that EM tensor is conserved, $\partial^a T_{ab} = 0$, equivalently,
+$\ol\partial T(z) = 0 = \partial \ol T(\ol z)$ with
+$T(z) = T_{zz}$, $\ol T(\ol z) = T_{\ol z\ol z}$, and $T_{z\ol z} = 0$.
+On the other hand, \textit{in the curved WS},
+the current conservation is expressed with a covariant derivative
+$\nabla^a T_{ab} = 0$.
+For example,
+\begin{align}
+ &\nabla^a T_{az} = \nabla^z T_{zz} +\nabla^{\ol z} T_{\ol zz} = \ol\partial T(z) = 0  \\
+ &\textrm{with} \quad T(z) = T_{zz} - 2a\left( \partial\partial\Omega -\partial\Omega\partial\Omega \right) \ .
+ \label{eq:curvedEM}
+\end{align}
+Similar for $\ol T(\ol z)$.
+Hence, we have the same form of conformal Ward-Takahashi identity.
+Especially,
+\begin{align}
+ \delta_\epsilon T(z) = \epsilon(w)\partial T(z) +2\partial\epsilon(z) T(z) +\frac{c}{12} \partial^3 \epsilon(z) \ .
+\end{align}
+On the other hand, from the expression (\ref{eq:curvedEM}) we have
+\begin{align}
+ \delta_\epsilon T(z) = \delta_\epsilon T_{zz}(z) -2a \left( \partial\partial\delta_\epsilon\Omega -2\partial\Omega\partial\delta_\epsilon\Omega \right) \ .
+ \label{eq:curvedTransfT}
+\end{align}
+Using (finite) transformations:
+\begin{align}
+ &z \to \wt z = z -\epsilon(z) \ , \\
+ &T_{zz}(z) \to \wt T_{\wt z\wt z}(\wt z) = \left( \partial_{z} \wt z \right)^{-2} T_{zz}(z) \ , \\
+ &\Omega(z) \to \wt \Omega (\wt z) = \Omega(z) -\frac{1}{2} \log \left| \partial_z \wt z \right|^2 \ ,
+\end{align}
+the transformation of (\ref{eq:curvedTransfT}) becomes
+\begin{align}
+ \delta_\epsilon T(z) = \epsilon(z)\partial T(z) +2\partial\epsilon(z) T(z) -a \partial^3 \epsilon(z) \ .
+\end{align}
+Therefore,
+\begin{align}
+ T^a_a = aR^{(2)} = -\frac{1}{12} c R^{(2)}  .
+\end{align}
+
+
+
+
+
+\subsection{Non-linear sigma model (Graviton included)}
+
+% \DY{ST metric を X dependent にすることがなぜ正当化されるのか書いて、
+% その一般化を書く。}
+
+
+So far we only consider a flat space-time(ST).
+However, if we expect that the string theory
+describe general relativity
+the action should contain general metric $G_{\mu\nu}(X)$:
+\begin{align}
+ S[X^\mu, h_{ab}] = \frac{1}{4\pi \alpha'} \int d^2x \left( \sqrt h h^{ab} \partial_a X^\mu \partial_b X^\nu G_{\mu\nu}(X)
+ \right) \ .
+\end{align}
+An action of this shape is called non-linear sigma model(NLSM).
+Now let us consider an almost flat metric:
+\begin{align}
+ G_{\mu\nu}(X) = \eta_{\mu\nu} + f_{\mu\nu} (X) \ .
+\end{align}
+Then, partition function becomes
+\begin{align}
+ Z &= \int \DD h_{ab} \DD X^\mu e^{-S} \nonumber\\
+ &= \int \DD h_{ab} \DD X^\mu e^{-S_0} \left(
+ 1+\frac{1}{4\pi \alpha'} \int d^2x \left( \sqrt h h^{ab} \partial_a X^\mu \partial_b X^\nu f_{\mu\nu}(X) \right) +\cdots
+ \right) \ .
+\end{align}
+Notice that the perturbative part is nothing but the graviton operator
+with wave function $f_{\mu\nu}(X) = \zeta_{\mu\nu} e^{ik\cdot X}$.
+
+
+Let us again consider general case $G_{\mu\nu}(X)$.
+As a 2d field theory we can consider the vacuum expectation value(vev) for $X$,
+which we set to $X_0$:
+\begin{align}
+ \hat X(\sigma,\tau) = X_0 +X(\sigma,\tau) \ .
+\end{align}
+On the othat hand, $X_0$ is a certain point in ST and
+we will expand the metric around this point.
+If you choose the coordinate nicely (Riemann normal coordinate)
+the expansion of the metric can be written as follows.
+\begin{align}
+ G_{\mu\nu} (X) = G_{\mu\nu} -\frac{1}{3} R_{\mu\lambda\nu\rho} X^\lambda X^\rho +\mathcal O(X^3) \ ,
+\end{align}
+where $G_{\mu\nu}$ and $R_{\mu\lambda\nu\rho}$ are a metric and a Rimann tensor at $X_0$, respectively.
+In a field theory sense those are coupling constants:
+\begin{align}
+ S &= \frac{1}{4\pi \alpha'} \int d^2x \ \partial^a X^\mu \partial_a X^\nu
+ \left( G_{\mu\nu} -\frac{1}{3} R_{\mu\lambda\nu\rho} X^\lambda X^\rho +\cdots
+ \right)  \nonumber\\
+ &= \frac{1}{2} \int d^2x \ \partial^a X^\mu \partial_a X^\nu
+ \left( G_{\mu\nu} -\frac{2\pi \alpha'}{3} R_{\mu\lambda\nu\rho} X^\lambda X^\rho +\mathcal O(\alpha'^2)
+ \right) \ .
+\end{align}
+We rescaled the field $X \to \sqrt{2\pi \alpha'} X$ so that
+the expansion looks like ``stringy expansion''.
+
+
+
+
+
+
+\subsection{Perturbation theory for NLSM (Weyl anomaly from curved ST)}
+
+% \DY{Perturbation を考える。}
+% \DY{Beta-functions がどうして Weyl anomaly と関係するのかを書く。}
+
+Discussion here is a simpler version of Hosomichi's note(Lecture 03).
+Note that discussion on this subject in textbooks(Green-Schwarz-Witten, Polchinski, Hosomichi etc.) are incomplete.
+If you are interested in the details you should consult \cite{Callan:1988xx},
+which is a nice review from TASI lecture 1988.
+
+
+\vspace{12pt}
+We want to check if the theory (NLSM) has Weyl anomaly.
+As we briefly saw it is an intracting theory, and in general,
+intracting theories have non-trivial $\beta$-functions:
+\begin{align}
+ \beta[\lambda] \equiv E \frac{\partial}{\partial E} \lambda(E) = \frac{\partial}{\partial (\log E)} \lambda(E) \ ,
+\end{align}
+where $\lambda$ is a coupling constant and $E$ is a characteristic energy scale.
+When we consider a global scaling of coordinate:$z \to \wt z = s z = (1-\epsilon) z = e^{-\epsilon} z$,
+enegy scales oppositely: $E \to \wt E = \frac{1}{s} E = e^{\epsilon} E$.
+So the $\beta$-function can be written as
+\begin{align}
+ \beta[\lambda] = \frac{\partial}{\partial \epsilon} \lambda(\epsilon) \ .
+\end{align}
+The variation of the action is expressed in two ways:
+\begin{align}
+ &\delta_\epsilon S =
+ \begin{cases}
+  \int \frac{d^2x}{2\pi} \sqrt{h} \delta_\epsilon h^{ab}  T_{ba} = -\epsilon \int \frac{d^2x}{2\pi} T^a_a \ , \\[2pt]
+  \frac{1}{4\pi \alpha'} \int d^2x \ \partial^a X^\mu \partial_a X^\nu
+  \left( \epsilon \frac{\partial}{\partial \epsilon} G_{\mu\nu}(\epsilon) +\cdots \right) \ ,
+ \end{cases}
+\end{align}
+where the first variation is a formal transformation of the theory, and in quantum regime,
+it should be proportional to the trace part of the EM tensor.
+On the other hand, the second variation is the actual theory with an assumption that
+$\epsilon$ dependence of the theory is only in the coupling constants.
+Identifying them we have
+\begin{align}
+  &\therefore \qquad T^a_a = -\frac{1}{2\alpha'} \beta[G_{\mu\nu}] \partial^b X^\mu \partial_b X^\nu +\cdots \ .
+\end{align}
+This shows that the anomaly is parametrized by $\beta$-functions.
+
+
+Let us consider perturbation theory, namely
+loop corrections to two-point function etc, so that we can see if the theory is anomalous.
+\begin{align}
+ &\langle X^\mu (x_1) X^\nu (x_2) \rangle \nonumber\\ & \qquad =
+ \int \frac{d^2k}{(2\pi)^2} \frac{2\pi \alpha'}{k^2} e^{ik\cdot (x_1-x_2)}
+ \left\{ G^{\mu\nu} +\frac{2\pi \alpha'}{3} R^{\mu\nu} \left(
+ \int \frac{d^2p}{(2\pi)^2} \frac{1}{p^2} + \frac{1}{k^2}\int \frac{d^2p}{(2\pi)^2}
+ \right)+\cdots \right\} \ .
+\end{align}
+We further focus on the logarithmic divergence and introduce regularization parameters:
+\begin{align}
+ \int_E^\Lambda \frac{d^2p}{(2\pi)^2} \frac{1}{p^2} = \frac{1}{2\pi} \log
+ \left( \frac{\Lambda}{E} \right) \ ,
+\end{align}
+where $\Lambda$ is an ultra-violet(UV) energy scale supposed to be $\infty$,
+and $E$ is an infra-red(IR) energy scale supposed to be our life energy scale, which is very law ($\sim 0$).
+
+The divergence can be subtracted by counter terms as follows.
+Define $\hat S = S +S_\mathrm{ct}$, which is called bare action:
+\begin{align}
+ \hat S = \frac{1}{4\pi \alpha'} \int d^2x \ \partial^a \hat X^\mu \partial_a \hat X^\nu
+ \left( \hat G_{\mu\nu} -\frac{1}{3} \hat R_{\mu\lambda\nu\rho} \hat X^\lambda \hat X^\rho +\cdots
+ \right)
+\end{align}
+with
+\begin{align}
+ &\hat X^\mu = Z^\mu_\nu X^\nu \ , \quad Z^\mu_\nu = \delta^\mu_\nu +
+ \sum_{n=1}^\infty \alpha'^n Z_{(n), \nu}^\mu (\Lambda/E) \ , \\
+ &\hat G_{\mu\nu} = G_{\mu\nu} +\sum_{n=1}^\infty \alpha'^n G^{(n)}_{\mu\nu} (\Lambda/E) \ ,
+ \textrm{etc.}
+\end{align}
+Physical action is $S$, which describes IR physics of energy scale $E$, on the other hand, $\hat S$ is called
+bare action, which describes UV physics of energy scale $\Lambda$.
+Note that the bare action only depends on $\Lambda$ (not on $E$), and hence,
+the bare coupling constants ($\hat G_{\mu\nu}$ etc) only depends on high energy $\Lambda$.
+The counter terms leads other contributions
+\begin{align}
+ &\langle X^\mu (x_1) X^\nu (x_2) \rangle \nonumber\\ & \qquad \sim
+ \left\{ G^{\mu\nu} +\frac{\alpha'}{3} R^{\mu\nu} \log \left( \frac{\Lambda}{E} \right)
+ -\alpha' \left(G_{(1)}^{\mu\nu} +Z_{(1)}^{\mu\nu} +Z_{(1)}^{\nu\mu}
+ \right)+\cdots \right\} \ .
+ \label{eq:renom2pt}
+\end{align}
+Unfortunately, the equation above cannot fix the ration between $G_{(1)}$ and $Z_{(1)}$.
+We need further information like 4-pt function etc.
+to determine the ratio.
+We simply list the result:
+\begin{align}
+ &G_{\mu\nu}^{(1)} = R_{\mu\nu} \log \left( \frac{\Lambda}{E} \right) \ , \quad
+ Z_{\mu\nu}^{(1)} =  -\frac{1}{3} R_{\mu\nu} \log \left( \frac{\Lambda}{E} \right) \ ,
+\end{align}
+which does cancel the divergent term in (\ref{eq:renom2pt}).
+From the result we can derive the $\beta$-function:
+\begin{align}
+ &G_{\mu\nu} (E,\Lambda) = \hat G_{\mu\nu} (\Lambda) - \alpha' R_{\mu\nu} \log \left( \frac{\Lambda}{E} \right) \ , \\
+ &\beta[G_{\mu\nu}] = \frac{\partial}{\partial (\log E)} G_{\mu\nu} (E,\Lambda) = \alpha' R_{\mu\nu} \ .
+\end{align}
+Therefore, in order for the theory to be anomaly free we need the space-time to be Ricci flat ($R_{\mu\nu}=0$).
+This is equivalent for Hilbert-Einstein action to satisfy its E.O.M.
+
+
+
+\subsection{NLSM (general)}
+
+So far only the graviton has been included but not B-field or dilaton.
+Here, we simply give the action and their $\beta$-functions.
+\begin{align}
+ &S = \frac{1}{4\pi \alpha'} \int d^2x \left( \sqrt h h^{ab} \partial_a X^\mu \partial_b X^\nu G_{\mu\nu}(X)
+ +i \varepsilon^{ab} \partial_a X^\mu \partial_b X^\nu B_{\mu\nu}(X)
+ +\alpha' \sqrt h R^{(2)} \Phi(X)
+ \right) \ .
+\end{align}
+Weyl anomaly:
+\begin{align}
+ T^a_a = -\frac{1}{2\alpha'} \beta[G_{\mu\nu}] \partial_a X^\mu \partial_b X^\nu
+ -\frac{i}{2\alpha'} \beta[B_{\mu\nu}] \varepsilon^{ab} \partial_a X^\mu \partial_b X^\nu
+ -\frac{1}{2} \beta [\Phi] R^{(2)}
+\end{align}
+$\beta$-functions:
+\begin{align}
+ &\beta[G_{\mu\nu}] = \alpha' R_{\mu\nu} +2\alpha' \nabla_\mu \nabla_\nu \Phi
+ -\frac{\alpha'}{4}H_{\mu\lambda\rho}H_\nu^{\ \lambda\rho} +\mathcal O(\alpha'^2) \ , \\
+ &\beta[B_{\mu\nu}] = -\frac{\alpha'}{2} \nabla^\lambda H_{\lambda\mu\nu}
+ +\alpha' \nabla^\lambda \Phi H_{\lambda\mu\nu} +\mathcal O(\alpha'^2) \ , \\
+ &\beta[\Phi] = \frac{D-26}{6} -\frac{\alpha'}{2} \nabla^2\Phi
+ +\alpha' \nabla^\lambda\Phi \nabla_\lambda\Phi
+ -\frac{\alpha'}{24}H_{\mu\lambda\rho}H^{\mu\lambda\rho} +\mathcal O(\alpha'^2) \ .
+\end{align}
+There are a few remarks on them:
+\begin{itemize}
+
+ \item String theory to be consistent requires all the $\beta$-functions to be zero.
+
+ \item Note that 2d gravity has no physical D.O.F, and the Einstein-Hilbert action gives a topological number(Euler characteristic).
+       So if the dilaton is constant we have
+  \begin{align}
+   S_\mathrm{dilaton} &= \frac{1}{4\pi \alpha'} \int d^2x \left( \alpha' \sqrt{h} R^{(2)} \Phi(X) \right)  \nonumber\\
+   &\to \frac{1}{4\pi} \int d^2x \left( \sqrt{h} R^{(2)} \Phi \right)
+   = \Phi (2-2g)
+  \end{align}
+       Define $g_\mathrm{str} = e^\Phi$ and the action leads
+  \begin{align}
+   e^{-S_\mathrm{dilaton}} = g_\mathrm{str}^{2g-2} \ .
+  \end{align}
+       $g_\mathrm{str}$ can be understood as a string coupling as follows.
+       See Fig.~\ref{stringCoupling2.eps}. $n$-point string tree amplitude can be understood $n-2$ cylinders attaching to a cylinder.
+\begin{figure}[htb]
+\centerline{\includegraphics[width=400pt]{stringCoupling2.eps}}
+ \caption{4-pt amplitude example. The upper one is a construction of 4pt tree amplitude from cylinders. The lower one is a construction of 4-pt 1-loop amplitude from the tree amplitude.}
+\label{stringCoupling2.eps}
+\end{figure}
+       So the amplitude should proportional to $g_\mathrm{str}^{n-2}$.
+       Higher loop (higher genus) amplitude can be derived by attaching g cylinders to the tree amplitude,
+       and the amplitude should be $\hat A_{n,g} \propto g_\mathrm{str}^{n-2+2g}$.
+       Usually, vertex operators are re-normalized so that $g_\mathrm{str}^n$ is included in the definition of $V_1 \cdots V_n$.
+       Therefore, the re-normalized amplitude should be
+  \begin{align}
+   A_{n,g} \propto g_\mathrm{str}^{2g-2} \ ,
+  \end{align}
+       which coincide with the dilaton action.
+
+ \item Trivial $\beta$-function ($\beta=0$) is equivalent to the E.O.M of the following ST action.
+  \begin{align}
+   S_\mathrm{eff} = \frac{1}{2\kappa_D^2} \int d^D X \sqrt{-G} e^{-2\Phi} \left[
+   \frac{2(D-26)}{3\alpha'} +R -\frac{1}{12} H_{\mu\lambda\rho}H^{\mu\lambda\rho}
+   +4 \nabla^\lambda\Phi \nabla_\lambda\Phi +\mathcal O(\alpha'^2)
+   \right] \ .
+  \end{align}
+
+ \item B-field is a higher dimensional analogy of gauge fields.
+       It has gauge transformation
+  \begin{align}
+   \delta B_{\mu\nu} = \partial_\mu \Lambda_\nu -\partial_\nu \Lambda_\mu \ ,
+  \end{align}
+       and field strength $H_{\mu\nu\lambda}$:
+   \begin{align}
+    H_{\mu\nu\lambda} = \partial_\mu B_{\nu\lambda}
+    +\partial_\nu B_{\lambda\mu} +\partial_\lambda B_{\mu\nu} \ .
+   \end{align}
+       B-field plays an important role with open string.
+
+\end{itemize}
+
+
+
+\begin{thebibliography}{CDLOGP91}
+
+% %\cite{AlvarezGaume:1981hn}
+% \bibitem[AFM81]{AlvarezGaume:1981hn}
+%   L.~Alvarez-Gaume, D.~Z.~Freedman and S.~Mukhi,
+%   ``The Background Field Method and the Ultraviolet Structure of the Supersymmetric Nonlinear Sigma Model,''
+%   Annals Phys.\  {\bf 134}, 85 (1981).
+%   %doi:10.1016/0003-4916(81)90006-3
+%   %%CITATION = doi:10.1016/0003-4916(81)90006-3;%%
+%   %525 citations counted in INSPIRE as of 09 Oct 2017
+
+ \bibitem[CT88]{Callan:1988xx}
+               Curt Callan and Lárus Thorlacius.
+               \textit{SIGMA MODELS AND STRING THEORY.}
+               TASI Lecture, 1988.
+               (The link below is a direct link to the pdf file of 45MB )
+               \href{http://www.damtp.cam.ac.uk/user/tong/string/sigma.pdf}
+               {http://www.damtp.cam.ac.uk/user/tong/string/sigma.pdf}.
+
+
+
+
+\end{thebibliography}
+
+
+\label{lastpage}
+
+% \begin{tikzpicture}[>=stealth,scale=1]
+%  \draw[->] (0,0)--(1,0);
+%  \draw[latex-stealth] (0,0.5)--(1,0.5);
+%  \draw[latex-stealthnew,arrowhead=2mm] (0,1)--(1,1);
+% \end{tikzpicture}
+
+% \begin{figure}[htb]
+% \centerline{\includegraphics[width=250pt]{.eps}}
+% \caption{}
+% \label{.eps}
+% \end{figure}
+
+
+
+% \begin{table}[htbp]
+%  \begin{center}
+%   \caption{}
+%   \vspace{4pt}
+%   \label{table:001}
+% \begin{tabular}{|c|c|c|c|c|}
+% \hline
+% \hline
+%   Category & Sector & $(h_A,h_B,h_T)$ & Mirror theory & ABJM model \\
+% \hline
+%  1 & & \parbox{40pt}{$(0,0,0)$ $(1,1,1)$} & $1.11906$ & $1.13290$ \\
+% \hline
+%  2 & & \parbox{40pt}{$(0,0,1)$ $(1,1,0)$} & $-0.10861$ & $-0.10861$ \\
+% \hline
+%  \multirow{2}{*}{\vspace{-15pt}3} & 3-1 & \parbox{40pt}{$(0,1,0)$ $(1,0,1)$} & $0.176777$ &
+%  \multirow{2}{*}{\vspace{-15pt}$0.176577$} \\
+% \cline{2-4}
+%  & 3-2 & \parbox{40pt}{$(1,0,0)$ $(0,1,1)$} & $0.176777$ & \\
+% \hline
+% \hline
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+
+% \begin{thebibliography}{99}
+
+% % \cite{Imamura:2012rq}
+% \bibitem{Imamura:2012rq}
+%   Y.~Imamura and D.~Yokoyama,
+%   %``S^3/Z_n partition function and dualities,''
+%   JHEP {\bf 1211}, 122 (2012)
+%   [arXiv:1208.1404 [hep-th]].
+%   %%CITATION = ARXIV:1208.1404;%%
+
+ % \bibitem{fnorio:legendre}
+ %         fnorio
+ %         ``ルジャンドル変換とは何か''
+ %         \url{http://fnorio.com/0146Legendre_transformation/Legendre_transformation.html}
+
+
+ % \bibitem{EMAN:dynamics}
+ %         EMAN物理学
+ %         ``ハミルトニアン''
+ %         \url{http://eman-physics.net/analytic/hamilton.html}
+
+
+ % \bibitem{Wiki:legendre}
+ %         Wiki
+ %         ``ルジャンドル変換''
+ %         \url{https://ja.wikipedia.org/wiki/ルジャンドル変換}
+
+ % \bibitem{mathtrain:legendre}
+ %         高校数学の美しい物語
+ %         ``ルジャンドル変換の意味と具体例''
+ %         \url{http://mathtrain.jp/legendrehenkan}
+
+% \end{thebibliography}
+
+
+% \bibliography{dd}
+
+\end{document}

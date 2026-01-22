@@ -1,0 +1,757 @@
+ \documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{jheppub}
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{gensymb}
+\usepackage{simplewick}
+\usepackage{feynmp-auto}
+\usepackage{wrapfig}
+
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\lambdabda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%\parskip=1em
+%\parindent=0.3in
+%\setlength\oddsidemargin{0.5in} \setlength\evensidemargin{0.5in}
+%\setlength\textwidth{5.5in}
+%
+%\hfuzz6pt % Don't bother to report over-full boxes if over-edge is < 6pt
+%
+%\newlength{\defbaselineskip}
+%\setlength{\defbaselineskip}{\baselineskip}
+%\newcommand{\setlinespacing}[1]%
+%           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%
+%\newcommand{\properpagestyle}{\pagestyle{myheadings}\markboth{}{}\markright{}}
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+\def\tl{\tilde}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+\newcommand\bz{{\bar{z}}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+
+
+
+
+\def\bea{\begin{align}}
+\def\eea{\end{align}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{align}}
+\def\ea{\end{align}}
+
+
+%\title{ Lecture 4}
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf  Lecture 7}
+
+\vspace{.5cm}
+
+
+We have seen so far that bosonic strings suffer from two major problems:
+
+\vspace{.3cm}
+\noindent $\bullet$  Their spectrum always contains a tachyon. In that respect their vacuum is unstable. 
+
+\vspace{.3cm}
+\noindent $\bullet$    They do not contain spacetime fermions. This lack of fermionic states is in
+contrast to observations and makes the bosonic string unrealistic.
+\vspace{.3cm}
+
+
+Both of these challenges are remedied in superstring theory. 
+Supersymmetry is a symmetry that exchanges bosons and fermions. The worldsheet superstring theory consists of a bosonic and a fermionic sector. The bosonic sector is identical to the worldsheet theory of the bosonic string. We can therefore view our efforts up to now as a preliminary study of one half of the superstring theory.
+In fact, we will see in this lecture that the presence of fermions resolves the problem of Tachyon. Moreover, we will learn that the critical dimension of superstring theory is $D=10$. 
+
+There are five superstring theories as follows and we will study them in this order.
+
+\begin{description}
+\item{\textbf{Type IIA \& IIB}} 
+
+Closed oriented strings (if there is no D-brane). IIA: Ramond ground states with opposite chirality. IIB: Ramond ground states with same chirality.
+
+\item{\textbf{Type I}} 
+
+Open and closed unoriented strings, including Yang-Mills degrees of freedom with $\SO(32)$ gauge group.
+
+\item{\textbf{Heterotic $\SO(32)$ \& $E_8\times E_8$}}  
+
+Type II right-movers \& bosonic left-movers, including Yang-Mills degrees of freedom with either $\SO(32)$ or 
+$E_8\times E_8$ gauge group.
+\end{description}
+
+
+There exist two major formulations of superstring theory. Both formulations enjoy supersymmetry on the worldsheet and in spacetime, but they differ in the following respect:
+
+\vspace{.3cm}
+\noindent $\bullet$  In the \textbf{Ramond-Neveu-Schwarz (RNS) formulation}, supersymmetry is manifest on the worldsheet, but not in spacetime.
+
+\vspace{.3cm}
+\noindent $\bullet$  In the \textbf{Green-Schwarz (GS) formulation} \cite[\S5]{GSW} \cite[\S5]{BBS}, supersymmetry is manifest in spacetime, but not on the worldsheet .
+\vspace{.3cm}
+
+
+More recently, the pure-spinor  \cite{Berkovits:2004px} has been developed as yet another approach to the superstring.
+In this course, we will only discuss the RNS formalism.
+
+\section{RNS formulation}
+
+
+\subsection{Superconformal field theories}
+
+With the complex coordinate convention, the action becomes
+\begin{align}\label{action}
+ S^{\textrm{m}} = \frac{1}{4\pi} \int d^2 z\ \Big( \frac{2}{\alpha'} \partial X^\mu  \overline\partial X_\mu+\psi^\mu\overline\partial\psi_\mu+\wt \psi^\mu\partial\wt\psi_\mu\Big)
+ \end{align}
+where the equations of motion tell us $\psi^\mu(z)$ (resp. $\wt\psi^\mu(\bar z)$) is chiral (resp. anti-chiral). The action is invariant under \textbf{supersymmetric transformation} (Exercise)
+\be\label{susy-trans}
+\delta X^\mu=-\sqrt{\frac{\a'}{2}}\,(\e \psi^\mu+\overline \e \wt\psi^\mu)~,\qquad 
+\delta \psi^\mu =\sqrt{\frac{2}{\a'}}\, \e \partial X^\mu~, \qquad \delta \wt\psi^\mu =\sqrt{\frac{2}{\a'}}\,\overline\e \overline \partial X^\mu~.
+\ee
+The Noether theorem implies that there are currents for the supersymmetry
+\be
+T_F(z)=i\sqrt{\frac{2}{\a'}}\psi^{\mu}\partial X^{\mu}\;,\qquad \wt T_F(z)=i\sqrt{\frac{2}{\a'}}\wt
+\psi^{\mu}
+\bar \partial X^{\mu}\,.\label{274}\ee
+which is called \textbf{supercurrents}. Indeed, $X^\mu$, $\psi^\mu$ and $\wt \psi^\mu$  are primary fields of weight (0,0), $(\frac12,0)$ $(0,\frac12)$, respectively, and therefore  their OPEs are 
+\be\label{OPE}
+X^\mu(z,\bar z)X^\nu(0,0)\sim -\sqrt{\frac{\a'}{2}} \eta^{\mu\nu}\ln |z|^2~,\quad \psi^\mu(z) \psi^\nu(0)\sim \frac{\eta^{\mu\nu}}{z}~,\quad \wt\psi^\mu(\bar z) \wt\psi^\nu(0)\sim \frac{\eta^{\mu\nu}}{\bar z}~.
+\ee
+Using the OPEs, one can show the supersymmetric transformation \eqref{susy-trans} (exercise).
+
+The stress-energy tensor of the action \eqref{action} is
+\begin{align}
+T_B(z) =-\frac1{\a'}\,\partial_z X^\mu \partial X_\mu-\frac12
+\psi^\mu\partial\psi_\mu
+\end{align}
+along with their complex conjugates $\wt T_B$, $\wt T_F$.
+Their OPE's can be computed by using  \eqref{OPE}
+\begin{align}
+T_B(z)T_B(w) &\sim \frac{3D}{ 4(z-w)^4}+{2T_B(w)\over (z-w)^2}
+  +{\partial_w T_B(w)\over z-w}\cr
+T_B(z) T_F(w) &\sim \frac{3T_F(w)}{ 2(z-w)^2}+\frac{\partial_w T_F(w)}{
+  z-w}\cr
+T_F(z)T_F(w) &\sim \frac{D}{ (z-w)^3}+\frac{2T_B(w)}{z-w}\,\,.
+\end{align}
+and similarly for the anti-chiral part. The central charge of the theory is 
+\be \label{c}c^{\textrm{m}}=\frac32D\ee
+where each scalar and fermion contributes 1 and 1/2, respectively.
+
+\subsection*{Ramond vs Neveu-Schwarz}
+\begin{figure}\centering
+\includegraphics[width=10cm]{plane-cylinder}
+\end{figure}
+
+In superstring theory, the fermionic fields on the closed string may be either periodic or anti-periodic on the circle around the string, corresponding to two different spinor bundles.
+It is conventional to denote these spin structures by \textbf{Ramond (R)} and \textbf{Neveu-Schwarz (NS)}, defined as follows.
+\begin{align}
+\psi^\mu(t,\sigma+2\pi)=+\psi^\mu
+  (t,\sigma) &\qquad\qquad\textrm{ R: periodic
+on cylinder}\cr
+\psi^\mu(t,\sigma+2\pi)=-\psi^\mu
+  (t,\sigma) &\qquad\qquad\textrm{ NS:
+anti-periodic on cylinder}
+\end{align}
+As we have seen before, the mapping $z=e^{iw}$ from the cylinder $w=-it-\sigma$ to the 2-plane $z\in \bC$ is a conformal map (Figure above). Under the conformal map, the primary field $\psi^\mu$ with weight $(\frac12,0)$ is transformed as
+$$
+\psi^\mu(z) =\Big(\frac{dz}{dw}\Big)^{-\frac12}\psi^\mu(w)=\textrm{const}\times e^{-i\frac{w}{2}}\psi^\mu(w)~.
+$$
+Hence the (anti-)periodicity assignments are reversed
+between the cylinders and the plane:
+\begin{align}
+\psi^\mu(e^{2\pi i}z)=-\psi^\mu(z)
+ &\null\qquad\qquad\hbox{\rm R: anti-periodic on plane}\cr
+\psi^\mu(e^{2\pi i}z)=+\psi^\mu(z)
+  &\null\qquad\qquad \hbox{\rm NS: periodic on plane}
+  \end{align}
+The boundary conditions for anti-chiral fields $\wt \psi^\mu$ are defined in a similar fashion.
+
+As in the bosonic string, one can  decompose $\psi^\mu$ and $\wt\psi^\mu$ in
+modes 
+$$
+%\left\{
+\psi^\mu(z) =\sum\limits_{n\in\bZ+\nu}\frac{\psi_n^\mu}{  z^{n+1/2}}~,\qquad
+\wt\psi^\mu(\bar{z}) =\sum\limits_{n\in\bZ+\nu}\frac{\wt{\psi}_n^\mu}{ \bar{z}^{n+1/2}}
+$$
+where $\nu$ takes the values 0 (R) and $\frac12$ (NS). The canonical quantization leads to the algebra
+$$
+\{\psi_m^\mu,\psi_n^\nu\}
+  =\eta^{\mu\nu}\delta_{m+n,0}\qquad
+\{\wt{\psi}_m^\mu,\wt{\psi}_n^\nu\}
+ =\eta^{\mu\nu}\delta_{m+n,0}\,\,.
+$$
+
+
+
+
+The mode expansion must be carried out with care
+here, since we must distinguish between Ramond and
+Neveu-Schwarz sectors.
+\begin{align}
+T_B(z)=\sum\limits_{m\in\bZ}\frac{L_m}{z^{m+2}}~,\qquad T_F(z)=\sum_{r\in \bZ+\nu}\frac{G_r}{ z^{r+3/2}}~,
+\end{align}
+where the generators can be written in terms of the modes (exercise)
+\begin{align}
+L_m^{\textrm{m}}&=\frac12\sum_{n\in \bZ}:\a_{m-n}\a_n:+\frac14\sum_{r\in \bZ+\nu} (2r-m):\psi_{m-r}\psi_r:+a^{\textrm{m}}\delta_{m,0} \cr
+G_r^{\textrm{m}}&=\sum_{n\in \bZ}\a_n\psi_{r-n}~.
+\end{align}
+The normal ordering constant $a$ can be determined like in the bosonic string theory. Each periodic
+boson contributes $-\frac1{24} $. The fermionic contributions are
+\begin{align}\nonumber
+-\tfrac12\sum_{r=0}^\infty r=\tfrac1{24} & \qquad \textrm{R-sector}\cr
+-\tfrac12\sum_{r=0}^\infty (r+\tfrac12)=-\tfrac1{48} & \qquad \textrm{NS-sector}~.
+\end{align}
+Including the shift $\tfrac1{24}c=\tfrac{1}{16}D$ gives
+\begin{align}\label{zero-m}
+a^{\textrm{m}}=\tfrac1{24}c^{\textrm{m}}+\Big(-\tfrac1{24}+\tfrac1{24}\Big)D=\tfrac{1}{16}D& \qquad \textrm{R-sector}\cr
+a^{\textrm{m}}=\tfrac1{24}c^{\textrm{m}}+\Big(-\tfrac1{24}-\tfrac1{48}\Big)D=0 & \qquad \textrm{NS-sector}~.
+\end{align}
+In fact,  the generators $L_m$ and $G_r$ form the algebra called the
+\textbf{ $\cN=1$ superconformal
+algebra} with central charge \eqref{c} (exercise).
+
+
+
+\subsection*{Ghost CFT}
+
+In bosonic string theory, we study BRST quantization with Faddeev-Popov ghost. In superstring theory, ghost fields also appear with their supersymmetric partners:
+$$
+S^{\textrm{gh}}=\frac{1}{2\pi}\int d^2z (b\overline \partial c+\beta\overline \partial \g)
+$$
+where $b,c$ are fermionic and  $\beta,\gamma$ are bosonic fields.  Hence, the standard method tells us the $\beta\g$ OPEs
+$$
+  \g(z)\b(w)=-\b(z)\g(w) =\frac{1}{z - w}+\cdots
+$$
+We have seen that the weights of $X$ and $\psi$ differ by $\frac12$. This is the same for the ghost fields. Sine the $b$ and $c$ ghosts have weights $2$ and $-1$ respectively, $\beta$ and $\g$ are primary fields of weights $(\frac32,0)$ and $(-\frac12,0)$ respectively. Hence the form of the stress energy tensor and the supercurrent are
+\begin{align}
+T_B^{\textrm{gh}}(z) &=: (\partial b) c : -2\, \partial: bc :+ : (\partial \b) \g : -\frac32\, \partial: \b\g :\cr
+T_G^{\textrm{gh}}(z) &= (\partial\b)c+\frac32\b\partial c-2b \g~.
+\end{align}
+Then, the $TT$ OPE  to determine the central charge of the ghost SCFT. The $bc$ system contributes $-26$ to the central charge as we know while  the
+$\beta\gamma$
+system contributes $+11$. Hence the total central charge 
+$$
+c^{\textrm{tot}}=c^{\textrm{m}}+c^{\textrm{gh}}=\tfrac{3}{2} D-26+11~.
+$$
+Then, we happily obtain the critical dimension $D=10$ of superstring theory if we impose the Weyl-anomaly-free condition $c^{\textrm{tot}}=0$. In the following, we assume $D=10$. 
+
+Now let us write find the Virasoro generator of the ghost  ghost SCFT. The $\b\g$ ghosts have the same boundary condition as the fermionic fields $\psi^\mu\wt \psi^\mu$ so that we have the mode expansions
+$$
+\beta(z)=\sum_{r\in \bZ+\nu}\frac{\beta_r}{z^{r+\frac32}}~,\quad \g(z)=\sum_{r\in \bZ+\nu}\frac{\g_r}{z^{r-\frac12}}~,
+$$
+which satisfy the commutation relation
+$$
+[\b_r,\g_s]=\delta_{r,-s}~.
+$$
+Using these modes, the Virasoro generator of the ghost  ghost SCFT can be expressed as
+\begin{align}
+L_m^{\textrm{gh}}&=\sum_{n\in \bZ}(m+n):b_{m-n}c_n:+\frac12\sum_{r\in\bZ+\nu}(m+2r):\b_{m-r}\g_r:+a^{\textrm{gh}}\d_{m,0}\cr
+G_r^{\textrm{gh}}&=\sum_{n\in \bZ}\Big[\frac12(n+2r)\b_{r-n}c_n +2b_{n}\g_{r-n}\Big]
+\end{align}
+Again, using the commutation relations of the ghost modes, one can determine the normal ordering constant
+\begin{align}\nonumber
+a^{\textrm{gh}}=\tfrac{-15}{24}+\Big(\tfrac1{12}-\tfrac1{12}\Big)=-\tfrac58& \qquad \textrm{R-sector}\cr
+a^{\textrm{gh}}=\tfrac{-15}{24}+\Big(-\tfrac1{12}+\tfrac1{24}\Big)=-\tfrac12 & \qquad \textrm{NS-sector}~.
+\end{align}
+Combining them with \eqref{zero-m} at $D=10$, we have the total vacuum energy
+\begin{align}\nonumber
+a^{\textrm{tot}}=0& \qquad \textrm{R-sector}\cr
+a^{\textrm{tot}}=-\tfrac12 & \qquad \textrm{NS-sector}~.
+\end{align}
+In R sector, the vacuum energy is zero so that the Tachyon is absent. On the other hand, there is still the Tachyon in NS sector. This will be projected out by the GSO projection as we will see below.
+
+
+
+\subsection*{Fermion spectrum}
+Before discussing about the GSO projection, let us study the fermionic spectrum generated by fermionic modes $\psi^\mu_r$.  We first consider NS spectrum since it's simpler. Since $r$ takes half integers, we can define the ground state of NS sector as
+$$
+\psi^\mu_r|0;k\rangle_{\textrm{NS}}=0 \quad \textrm{for} \ r>0~.
+$$
+When we include the ghost part of the vertex operator,  it contributes to the total fermion number $F$, so that on the total matter plus ghost ground state one has the odd fermion number
+\be\label{NS-vac}
+(-1)^{F}|0;k\rangle_{\textrm{NS}}=-|0;k\rangle_{\textrm{NS}}~.
+\ee
+Because there exists the zero modes $\psi^\mu_0$, R-sector is more subtle. In fact, the zero modes satisfy the \textbf{Clifford algebra}
+$$
+\{\sqrt{2}\psi_0^\mu,\sqrt{2} \psi_0^\nu\}=2\eta^{\mu\nu}~.
+$$
+Therefore, the ground state of R-sector becomes the spin representation of $\SO(1,D-1)$. In this lecture, we do not cover mathematics of Clifford algebra, spin group, spin representations. (See \cite[Appendix B]{Polchinski} for physics and \cite[\S3]{meinrenken2013clifford} for mathematics) However, we can heuristically understand the spin representation as follows. The following basis for this representation is often convenient.  Form
+the combinations
+\begin{align}
+\Gamma^{\pm}_i &= {{1}\over{\sqrt 2}}\left ( \psi^{2i}_0\pm i \psi^{2i+1}_0\right
+) \qquad i=1,\cdots,4 \nonumber\\ 
+ \Gamma^{\pm}_0 &= {{1}\over{\sqrt 2}}\left ( \psi^{1}_0 \mp \psi^{0}_0\right ) 
+\end{align}
+In this basis, the Clifford algebra takes the form
+\be
+\{ \Gamma^{+}_i, \Gamma^{-}_j \}=\delta_{ij}~,\qquad  \{ \Gamma^{+}_i, \Gamma^{+}_j \}=0=\{ \Gamma^{-}_i, \Gamma^{-}_j \}~.
+\ee
+The $\Gamma^{\pm}_i$, $i = 0, \cdots, 4$ act as raising and lowering 
+operators, generating the $2^5= 32$ Ramond ground states:
+\be
+|s_0,s_1,s_2,s_3,s_4 ;k\rangle = |\mathbf{s};k\rangle
+\ee
+where each of the $s_i$ is $\pm\frac12$, and where
+\be
+\Gamma^{-}_{i} | -\tfrac12 , -\tfrac12 , -\tfrac12 , -\tfrac12 , -\tfrac12 ;k\rangle = 0  
+\ee
+while $\Gamma^{+}_i$ raises $s_i$ from $-\frac12$ to $\frac12$. One can further define the chirality operator
+$$
+\Gamma_{11}=(2)^{5} \psi_0^0\psi_0^1\psi_0^2\cdots\psi_0^9~,
+$$
+which acts on $|\mathbf{s}\rangle$ as
+$$
+\Gamma_{11}|\mathbf{s};k\rangle=(-1)^{ F}|\mathbf{s};k\rangle =\left\{\begin{array}{ll}+|\mathbf{s};k\rangle &\qquad\textrm{even \# of}\ -\frac12 \\ -|\mathbf{s};k\rangle &\qquad \textrm{odd \# of} \ -\frac12 \end{array} \right.~.
+$$
+Hence, the Dirac representation $\bf 32$ decomposes into a
+$\bf 16$ with an even number of $-\frac12$'s and $\bf 16'$ with an odd number.
+$$
+\bf 32=16\oplus16'~.
+$$
+
+
+
+
+
+
+
+
+\section{Type II string theories}
+
+
+\subsection*{Physical spectrum and the GSO Projection}
+
+Finally, let us study the physical spectrum of superstring theories. In principle, we can apply BRST quantization scheme. However, we do not need the full use of BRST quantization, indeed. To take shortcut, we can first impose to a physical state $|\psi\rangle$
+$$
+L_n^\textrm{m}|\psi\rangle=0 \quad (n>0)~,\qquad G_r^\textrm{m}|\psi\rangle=0 \quad (r\ge 0)~.
+$$
+Since one can check (See \cite[(10.5.23)]{Polchinski}) 
+$$
+\{Q_B,b_n\}=L_n~,\qquad [Q_B,\b_r]=G_r~,
+$$
+the physical states are defined modulo
+$$
+L_n^\textrm{m}|\chi\rangle\cong 0~,\qquad G_r^\textrm{m}|\chi\rangle\cong 0 ~,\qquad \textrm{for}\ \ n,r<0~.
+$$
+Note that the BRST current is defined 
+$$
+j_{B}=cT_B^{\rm m}+\gamma T_F^{\rm m}+{1\over 2}\left(
+cT_B^{\rm gh}+\gamma T_F^{\rm gh} \right)~.
+$$
+Furthermore, in the RNS theory, we need to impose the \textbf{GSO (Gliozzi-Scherk-Olive)  projection} in order to have an equal number of bosonic and fermionic states at each mass level.
+ 
+In NS sector, the GSO projection is just to remove states with odd fermion
+number so that the GSO projection operator on NS sector is expressed as
+$$
+ P_{\textrm{GSO}}=\frac{1+(-1)^F}{2} \qquad \textrm{NS sector}~.
+ $$
+ At  level 0, we have the Tachyon $|0;k\rangle_{\textrm{NS}}$. However, the GSO projection removes this state because it has odd fermion number as in \eqref{NS-vac}. At level $\frac12$, we have massless state with vector polarization
+$$
+|e;k\rangle_{\textrm{NS}}=e\cdot \psi_{-\frac12}|0;k\rangle_{\textrm{NS}}~,
+$$
+with even fermion number so we need to keep it in the spectrum. The physical state conditions are
+\begin{align}
+0&=L_0|e;k\rangle_{\textrm{NS}}=\a'k^2 |e;k\rangle_{\textrm{NS}}\cr
+0&=G_{\frac12}^\textrm{m}|e;k\rangle_{\textrm{NS}}=\sqrt{2\a'}~ k\cdot e|0;k\rangle_{\textrm{NS}}~.
+\end{align}
+while there is a $Q_B$-exact condition
+$$
+G_{-\frac12}^\textrm{m}|0;k\rangle_{\textrm{NS}}=\sqrt{2\a'}~ k\cdot \psi_{-\frac12}|0;k\rangle_{\textrm{NS}}~.
+$$
+Therefore, we have 
+$$
+k^2=0~,\quad  k\cdot e=0~,\quad e^\mu\cong e^\mu+k^\mu~.
+$$
+Thus, there are degrees of freedom for 8 spacelike polarizations which form the vector representation ${\bf 8_v}$ of $\SO(8)$. 
+
+
+In R sector, the GSO projection keeps one irreducible representation, and therefore the GSO projection operator can be written as
+$$
+P^\pm_{\textrm{GSO}}=\frac{1\pm(-1)^F}{2}\qquad \textrm{R sector}~.
+$$
+Hence, there are the two choices
+$\bf 16$ and $\bf 16'$ which differ by a spacetime parity redefinition. A Ramond ground state that is massless can be expressed with spinor polarization 
+$$
+|u;k\rangle_{\textrm{R}}= u_{\mathbf{s}}|\mathbf{s};k\rangle_{\textrm{R}}~.
+$$
+The physical condition
+$$
+0=G_{0}^\textrm{m}|u;k\rangle_{\textrm{R}}=\sqrt{\a'}~  u_{\mathbf{s}} k\cdot\G_{\mathbf{s}\mathbf{s}'} |\mathbf{s}';k\rangle_{\textrm{R}}
+$$
+leads to the Dirac equation
+$$
+u~ k\cdot\G=0~.
+$$
+By choosing the momentum vector $k^\mu=(k,k,0,\cdots,0)$, this amounts to
+$$
+\G_0^+u=0 \quad  \longrightarrow \quad s_0 =+ \tfrac12~,
+$$
+giving a 16 degeneracy $|+,s_1,s_2,s_3,s_4\rangle$ for the physical
+Ramond vacuum.  This is a representation of $\SO(8)$ which again
+decomposes into ${\bf 8_s}$ with an even number of $-\frac12$'s and ${\bf
+8_c}$ with an odd number.
+
+
+
+
+\subsection*{Type II Superstrings}
+Now let us determine the closed string spectrum. In the closed string, there are two inequivalent choices,
+taking the same (IIB) or opposite (IIA) projections on the right- and left-moving spectrum.
+These lead to the massless sectors
+\begin{align}
+{\rm Type ~ IIA\colon} & ({\bf 8_v}\oplus{\bf 8_s}) \otimes
+   ({\bf 8_v}\oplus{\bf 8_{c}}) \nonumber\\
+{\rm Type ~ IIB\colon} & ({\bf 8_v}\oplus{\bf 8_s}) \otimes
+   ({\bf 8_v}\oplus{\bf 8_{s}}) 
+\end{align}
+of $\SO(8)$. Although one can also choose
+\begin{align}
+{\rm Type ~ IIA'\colon} & ({\bf 8_v}\oplus{\bf 8_c}) \otimes
+   ({\bf 8_v}\oplus{\bf 8_{s}}) \nonumber\\
+{\rm Type ~ IIB'\colon} & ({\bf 8_v}\oplus{\bf 8_c}) \otimes
+   ({\bf 8_v}\oplus{\bf 8_{c}}) 
+\end{align}
+they are equivalent after the spacetime parity redefinition.
+
+\begin{table}[h] \centering
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ IIA & ${\bf 8_v}$ & ${\bf 8_c}$ \\ \hline
+ ${\bf 8_v}$ & ${\bf 1} \oplus {\bf 28}  \oplus {\bf 35}$ & ${\bf 8_s}\oplus{\bf 56_c}$ \\ 
+  & $\phi \ \ B_{\mu\nu} \ \ G_{\mu\nu}$ & $\lambda^+ \ \ \psi^-_m$ \\ \hline
+  ${\bf 8_s}$ & ${\bf 8_c}\oplus{\bf 56_s}$ & ${\bf 8_v} \oplus
+{\bf 56_t}$ \\ 
+    & $\lambda^- \ \ \psi^+_m$ & $C_n \ \ C_{nmp}$ \\ 
+ \hline
+\end{tabular}
+\hspace{2cm} 
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ IIB & ${\bf 8_v}$ & ${\bf 8_s}$ \\ \hline
+ ${\bf 8_v}$ & ${\bf 1} \oplus {\bf 28}  \oplus {\bf 35}$ & ${\bf 8_c}\oplus{\bf 56_s} $ \\ 
+  & $\phi \ \ B_{\mu\nu} \ \ G_{\mu\nu}$ & $\lambda^+ \ \ \psi^-_m$  \\ \hline
+  ${\bf 8_s}$ & ${\bf 8_c}\oplus{\bf 56_s} $ & ${\bf 1} \oplus {\bf 28}  \oplus {\bf 35}_+$ \\ 
+    & $\lambda^+ \ \ \psi^-_m$  & $C \ \ C_{mn}\ \ C_{mnpq}$ \\ 
+ \hline
+\end{tabular}
+\end{table}
+
+
+The various products are as follows.  In the NS-NS sector,
+this is the same as bosonic string theory
+\be
+{\bf 8_v} \otimes {\bf 8_v} = \phi \oplus B_{\mu\nu} \oplus G_{\mu\nu}
+={\bf 1} \oplus {\bf 28}  \oplus {\bf 35} .
+\ee
+
+In the R-R sector, the IIA and IIB spectra are respectively
+\begin{align}
+{\bf 8_s} \otimes {\bf 8_c} &= [1] \oplus [3] = {\bf 8_v} \oplus
+{\bf 56_t} \nonumber\\
+{\bf 8_s} \otimes {\bf 8_s} &= [0] \oplus [2] \oplus [4]_+
+= {\bf 1} \oplus {\bf 28}  \oplus {\bf 35}_+ ~.
+\end{align}
+Here $[n]$ denotes the $n$-times antisymmetrized representation of
+$\SO(8)$, with $[4]_+$ being self-dual.  Note that the representations
+$[n]$ and $[8-n]$ are the same, being related by contraction with the
+8-dimensional $\epsilon$-tensor. As we will see in the subsequent lecture, these R-R fields are associated to \textbf{D-branes} in Type II theories.
+In addition, the NS-NS and R-R spectra
+together form the bosonic components of $D=10$ IIA (nonchiral) and IIB
+(chiral) supergravity respectively.   
+
+In the NS-R and R-NS sectors are
+the products
+\begin{align}
+{\bf 8_v} \otimes {\bf 8_c} &=
+{\bf 8_s}\oplus{\bf 56_c} \nonumber\\
+{\bf 8_v} \otimes {\bf 8_s} &=
+{\bf 8_c}\oplus{\bf 56_s}~.
+\end{align}
+The $\bf 56_{s,c}$ are gravitinos $\psi^\pm_{m,\a}$ with one
+vector and one spinor index that are superpartners of gravitons.  They must couple to conserved spacetime
+supercurrents.  In the IIA theory the two gravitinos (and
+supercharges) have opposite chirality, and in the IIB the same.
+The $\bf 8_{s,c}$ are dilatino $\lambda^\pm_{\a}$ which are superpartners of the dilaton field.
+
+
+
+\bibliography{string-lecture}
+\bibliographystyle{halpha}
+
+
+
+
+
+
+\end{document}

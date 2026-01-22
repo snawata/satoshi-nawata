@@ -1,0 +1,62 @@
+\begin{thebibliography}{DMW02}
+
+\bibitem[BCH73]{Bardeen:1973gs}
+J.~M. Bardeen, B.~Carter, and S.~W. Hawking.
+\newblock {The Four laws of black hole mechanics}.
+\newblock {\em Commun. Math. Phys.}, 31:161--170, 1973.
+
+\bibitem[Bek73]{Bekenstein:1973ur}
+J.~D. Bekenstein.
+\newblock {Black holes and entropy}.
+\newblock {\em Phys. Rev.}, D7:2333--2346, 1973.
+
+\bibitem[DMW02]{David:2002wn}
+J.~R. David, G.~Mandal, and S.~R. Wadia.
+\newblock {Microscopic formulation of black holes in string theory}.
+\newblock {\em Phys. Rept.}, 369:549--686, 2002,
+  \href{http://arxiv.org/abs/hep-th/0203048}{{\tt arXiv:hep-th/0203048}}.
+
+\bibitem[Haw75]{Hawking:1974sw}
+S.~W. Hawking.
+\newblock {Particle Creation by Black Holes}.
+\newblock {\em Commun. Math. Phys.}, 43:199--220, 1975.
+\newblock [,167(1975)].
+
+\bibitem[Haw76]{Hawking:1976ra}
+S.~W. Hawking.
+\newblock {Breakdown of Predictability in Gravitational Collapse}.
+\newblock {\em Phys. Rev.}, D14:2460--2473, 1976.
+
+\bibitem[Mal96]{Maldacena:1996ky}
+J.~M. Maldacena.
+\newblock {\em {Black holes in string theory}}.
+\newblock PhD thesis, Princeton U., 1996,
+  \href{http://arxiv.org/abs/hep-th/9607235}{{\tt arXiv:hep-th/9607235}}.
+
+\bibitem[Mal99]{Maldacena:1997re}
+J.~M. Maldacena.
+\newblock {The Large N limit of superconformal field theories and
+  supergravity}.
+\newblock {\em Int. J. Theor. Phys.}, 38:1113--1133, 1999,
+  \href{http://arxiv.org/abs/hep-th/9711200}{{\tt arXiv:hep-th/9711200}}.
+\newblock [Adv. Theor. Math. Phys.2,231(1998)].
+
+\bibitem[RT06]{Ryu:2006bv}
+S.~Ryu and T.~Takayanagi.
+\newblock {Holographic derivation of entanglement entropy from AdS/CFT}.
+\newblock {\em Phys. Rev. Lett.}, 96:181602, 2006,
+  \href{http://arxiv.org/abs/hep-th/0603001}{{\tt arXiv:hep-th/0603001}}.
+
+\bibitem[SV96]{Strominger:1996sh}
+A.~Strominger and C.~Vafa.
+\newblock {Microscopic origin of the Bekenstein-Hawking entropy}.
+\newblock {\em Phys. Lett.}, B379:99--104, 1996,
+  \href{http://arxiv.org/abs/hep-th/9601029}{{\tt arXiv:hep-th/9601029}}.
+
+\bibitem[Tow97]{Townsend:1997ku}
+P.~K. Townsend.
+\newblock {Black holes: Lecture notes}.
+\newblock 1997, \href{http://arxiv.org/abs/gr-qc/9707012}{{\tt
+  arXiv:gr-qc/9707012}}.
+
+\end{thebibliography}

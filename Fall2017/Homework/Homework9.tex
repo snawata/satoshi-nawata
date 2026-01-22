@@ -1,0 +1,476 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{fullpage}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+% \usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+% \usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+
+\usepackage{wrapfig}
+\usepackage{bm}
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\Lambda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%\parskip=1em
+%\parindent=0.3in
+%\setlength\oddsidemargin{0.5in} \setlength\evensidemargin{0.5in}
+%\setlength\textwidth{5.5in}
+%
+%\hfuzz6pt % Don't bother to report over-full boxes if over-edge is < 6pt
+%
+%\newlength{\defbaselineskip}
+%\setlength{\defbaselineskip}{\baselineskip}
+%\newcommand{\setlinespacing}[1]%
+%           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%
+%\newcommand{\properpagestyle}{\pagestyle{myheadings}\markboth{}{}\markright{}}
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+\def\tl{\tilde}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+
+
+
+
+
+\def\bea{\begin{align}}
+\def\eea{\end{align}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{align}}
+\def\ea{\end{align}}
+
+
+\usepackage{graphicx}
+
+
+%%% Yokoyama def %%%
+\newcommand{\ol}{\overline}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\nord}[1]{\vcentcolon\mathrel{#1}\vcentcolon}
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 9: Due at class on Nov 24}
+
+
+
+
+% \subsection*{Prob. 1 Cylinder partition function and torus partition function}
+
+% The torus partition function of bosonic string is given by
+% \begin{align}
+%  A_{0,T} = \frac{iV_{26}}{(2\pi l_s)^{26}} \int_F \frac{d^2\tau}{2\tau_2^2}
+%  \tau_2^{-12} |\eta(\tau)|^{-48} \ ,
+% \end{align}
+% where $F$ is the fundamental region of the torus moduli space.
+% \begin{itemize}
+%  \item Consider low energy region in $F$ and show that $\tau_1$ integration ($-\frac{1}{2} \le \tau_1 \le \frac{1}{2}$) leads level matching condition.
+%  \item Again, consider low energy region.
+%        Show that
+%        it can be identified with the cylinder partition function up to constant.
+%  \item Explain why an open string short 1-loop corresponds to
+%        a closed string long propergation.
+% \end{itemize}
+
+
+\subsection*{Prob. 1 Contribution from symplectic representation}
+
+
+Consider
+\begin{align}
+ P \Lambda^T P = \pm \Lambda
+\end{align}
+for $P = i
+\begin{pmatrix}
+ 0 & -\bm{1}_{k\times k} \\
+ \bm{1}_{k\times k} & 0
+\end{pmatrix}$
+where $n=2k$.
+Derive the dimension(degrees of freedom) of $\Lambda$ for $+$ and $-$, respectively,
+and show that $\tr[\Omega_\Lambda] = -n$.
+
+
+\subsection*{Prob. 2 Orientation flip in superstring}
+
+
+Consider the orientation flip operator $\Omega$ for world-sheet fermions of closed string.
+\begin{itemize}
+ \item Define the action of the orientation operator on the fermions
+       $\psi^\mu(t,\sigma)$, $\wt \psi^\mu(t,\sigma)$ in NS- and R-sector properly,
+       and derive the action on their modes.
+       (Hint: the orientation flip is define for $c$ as $\Omega: c(t,\sigma) \to -\ol c(t,2\pi-\sigma)$.
+       The minus sign in from of $\ol c$ is coming from relative phase of overall coefficient of the mode expansion in cylinder:
+       $c = i \sum c_n e^{in(it+\sigma)}$ and $\ol c = -i \sum \ol c_n e^{in(it+\sigma)}$.
+ \item Consider IIB RR-fields as in Prob. 2 of Homework 8, and show that only the 2-form
+       RR-field survives under the $\Omega$ projection $\frac{1+\Omega}{2}$.
+       (Hint: you have to consider field strength of $n$-form RR-fields because RR-fields themselves
+       are not physical degrees of freedom.
+       Note that RR-fields are real valued object so its complex conjugate is itself.
+       Also note that the complex conjugate of fermions gives minus sign
+       $(\psi^\dagger \chi)^\dagger =-\chi^\dagger\psi$ due to their statistics.
+       You can assume that gamma matrices are invariant under $\Omega$.
+       This is because zero modes are identical in L and R so $\Gamma$ is actually sum of L and R, i.e. $\Gamma = \Gamma^L +\Gamma^R$,
+       which is manifestly invariant under $\Omega$.)
+\end{itemize}
+
+
+
+
+
+\subsection*{Prob. 3 O$p$-plane}
+
+
+Let us consider so called orientifold action.
+It is a combination of the orientation flip $\Omega$ as well as
+a space-time parity ($\mathbb Z_2$-orbifold) $R_p$:
+\begin{align}
+ R_p :
+ \begin{cases}
+  X^i(t,\sigma) \quad\leftrightarrow\quad X^i(t,\sigma) \qquad &(i=0,1,\cdots,p) \ ,\\
+  X^a(t,\sigma) \quad\leftrightarrow\quad -X^a(t,\sigma) \qquad &(a=p+1,\cdots,D-1) \ .
+ \end{cases}
+\end{align}
+Note that $\Omega_{D-1}$ is $\Omega$ itself.
+The orientifold action $\Omega_p = \Omega \cdot R_p$ is associated to O$p$-plane
+(this is why we called the $\Omega$ action
+in superstring theory by O$9$-plane).
+\begin{itemize}
+ \item Write down the orientifold action for $X^i(t,\sigma)$ and $X^a(t,\sigma)$
+       of closed bosonic string, as well as their modes (do not forget $x$ and $p$).
+ \item Consider bosonic closed string ($D=26$) in an existence of O$23$-plane
+       located at $(X_{24}, X_{25})=(0,0)$.
+       Illustrate a closed string in $(X_{24}, X_{25})$-plane, as well as its mirror image.
+       Note that the closed string is either oriented, or unoriented.
+       State which is correct and explain why so.
+ \item Massless states of the oriented closed string are given by
+  \begin{align}
+   |\Phi\rangle = \int \prod_{i,a} dp^i dp^a \Phi^\pm_{IJ} (\tau,p^i,p^a)
+   \left( \alpha_{-1}^I \wt \alpha_{-1}^J \pm \alpha_{-1}^J \wt \alpha_{-1}^I \right)
+   |p^i,p^a\rangle \ ,
+  \end{align}
+       where $\Phi^\pm_{IJ} (\tau,p^i,p^a)$ are wavefunctions,
+       and $I,J$ runs over the values of both $a$ and $i$.
+       Find the conditions on $\Phi^\pm_{ab}, \Phi^\pm_{ia}, \Phi^\pm_{ij}$
+       so that they guarantee $\Omega_p$ invariance.
+       The result should be the form of
+  \begin{align}
+   \Phi^\pm_{IJ} (\tau,p^i,p^a) = (+ \textrm{ or } -)\cdot \Phi^\pm_{IJ} (\tau,p^i,-p^a) \ .
+  \end{align}
+\end{itemize}
+
+
+
+
+\subsection*{Prob. 4 Partition function on $S^1/\mathbb Z_2$}
+
+Let us consider a partition function on $S^1/\mathbb Z_2$ of closed bosonic string.
+We only consider the direction along the $S^1/\mathbb Z_2$.
+The partition function should naively be given by $\mathbb Z_2$-orbifold projection $\frac{R+1}{2}$
+\begin{align}
+ Z_\mathrm{orb} = \mathrm{tr}_\mathrm{circ} \left[ \frac{1+R}{2} q^{L_0-\frac{1}{24}} \ol q^{\ol L_0-\frac{1}{24}} \right] \ ,
+\end{align}
+where $R$ is defined
+\begin{align}
+ R:\ X(z,\ol z)\ \leftrightarrow\ R X(z,\ol z) R = -X(z,\ol z) \ .
+\end{align}
+$X$ on $S^1$ is given by
+\begin{align}
+ X(z) = x +i\sqrt{\frac{\alpha'}{2}} \left( -\alpha_0 \log z +\sum_{n\neq 0} \frac{1}{n} \frac{\alpha_n}{z^n} \right) \ , \\
+ \ol X(\ol z) = \wt x +i\sqrt{\frac{\alpha'}{2}} \left( -\wt \alpha_0 \log \ol z +\sum_{n\neq 0} \frac{1}{n} \frac{\wt \alpha_n}{\ol z^n} \right) \ ,
+\end{align}
+with
+\begin{align}
+ \alpha_0 = \sqrt{\frac{\alpha'}{2}}\left( \frac{n}{R} +\frac{wR}{\alpha'} \right) \ ,
+ \quad \wt \alpha_0 = \sqrt{\frac{\alpha'}{2}}\left( \frac{n}{R} -\frac{wR}{\alpha'} \right) \ ,
+\end{align}
+
+\begin{itemize}
+ \item Derive $S^1$ partition function: $Z_\mathrm{circ} = \mathrm{tr}_\mathrm{circ} \left[ q^{L_0-\frac{1}{24}} \ol q^{\ol L_0-\frac{1}{24}} \right]$,
+       where $L_0 = \frac{1}{2} \sum_{n\in \mathbb Z} \nord{\alpha_{-n} \alpha_{n}}$.
+ \item Write down the action of $R$ on $x$ and $\alpha_n$.
+       Show that the ground state transforms under $R$ as
+       $R |n,w\rangle = |-n,-w\rangle$.
+ \item Derive $\mathrm{tr}_\mathrm{circ} \left[ \frac{R}{2} q^{L_0-\frac{1}{24}} \ol q^{\ol L_0-\frac{1}{24}} \right]$, and express it using $\eta(\tau)$ and $\vartheta_2(\tau)$.
+       Confirm that it is modular non-invariant.
+\end{itemize}
+
+In order to get modular-invariant partition function on $S^1/\mathbb Z_2$,
+we need so called twisted sector, which satisfies following boundary condition.
+\begin{align}
+ X(e^{2\pi i}z) = R X(z) R = -X(z) \ ,
+\end{align}
+and similar for $\ol X(\ol z)$.
+\begin{itemize}
+ \item Derive mode expansion for $X$, which is similar to WS fermion in R-sector.
+       However note that $X$ has $0$-level ($h=0$).
+ \item Derive the partition function in twisted sector $Z_\mathrm{tw} = \mathrm{tr}_\mathrm{tw} \left[ \frac{1+R}{2} q^{L_0-\frac{1}{24}} \ol q^{\ol L_0-\frac{1}{24}} \right]$
+       using $\eta(\tau)$, $\vartheta_3(\tau)$, and $\vartheta_4(\tau)$,
+       where $L_0 = \frac{1}{2} (\sum_{n\in \mathbb Z +\frac{1}{2}} \nord{\alpha_{-n} \alpha_{n}}) +\frac{1}{16}$.
+ \item Confirm that the sum $Z_\mathrm{orb} +Z_\mathrm{tw}$ is modular invariant.
+       (You do not have to show $Z_\mathrm{circ}$ is modular invariant.)
+\end{itemize}
+
+\end{document}
+

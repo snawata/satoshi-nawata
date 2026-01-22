@@ -1,0 +1,30 @@
+\begin{thebibliography}{GSW87}
+
+\bibitem[BBS06]{BBS}
+K.~Becker, M.~Becker, and J.~H. Schwarz.
+\newblock {\em {String theory and M-theory: A modern introduction}}.
+\newblock Cambridge University Press, 2006.
+
+\bibitem[Ber04]{Berkovits:2004px}
+N.~Berkovits.
+\newblock {Multiloop amplitudes and vanishing theorems using the pure spinor
+  formalism for the superstring}.
+\newblock {\em JHEP}, 09:047, 2004,
+  \href{http://arxiv.org/abs/hep-th/0406055}{{\tt arXiv:hep-th/0406055}}.
+
+\bibitem[GSW87]{GSW}
+M.~B. Green, J.~H. Schwarz, and E.~Witten.
+\newblock {\em {Superstring Theory Vol. 1,2}}.
+\newblock Cambridge University Press, 1987.
+
+\bibitem[Mei13]{meinrenken2013clifford}
+E.~Meinrenken.
+\newblock {\em Clifford algebras and Lie theory}.
+\newblock Springer, 2013.
+
+\bibitem[Pol98]{Polchinski}
+J.~Polchinski.
+\newblock {\em {String theory. Vol. 1, 2}}.
+\newblock Cambridge University Press, 1998.
+
+\end{thebibliography}

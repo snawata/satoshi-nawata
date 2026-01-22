@@ -1,0 +1,796 @@
+ \documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{jheppub}
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{gensymb}
+\usepackage{simplewick}
+\usepackage{feynmp-auto}
+\usepackage{wrapfig}
+
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\lambdabda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%\parskip=1em
+%\parindent=0.3in
+%\setlength\oddsidemargin{0.5in} \setlength\evensidemargin{0.5in}
+%\setlength\textwidth{5.5in}
+%
+%\hfuzz6pt % Don't bother to report over-full boxes if over-edge is < 6pt
+%
+%\newlength{\defbaselineskip}
+%\setlength{\defbaselineskip}{\baselineskip}
+%\newcommand{\setlinespacing}[1]%
+%           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%
+%\newcommand{\properpagestyle}{\pagestyle{myheadings}\markboth{}{}\markright{}}
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+\def\tl{\tilde}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+\newcommand\bz{{\bar{z}}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+
+
+
+
+\def\bea{\begin{align}}
+\def\eea{\end{align}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{align}}
+\def\ea{\end{align}}
+
+
+%\title{ Lecture 4}
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf  Lecture 5}
+
+\vspace{.5cm}
+
+\section{Quantization via path integral}
+
+We have been studying bosonic string theory, but there are several caveats.
+
+\vspace{.3cm}
+\noindent$\bullet$ In the light-cone quantization, Lorentz invariance is not manifest.  Can we quantize strings in a way that is manifestly Lorentz invariant?
+
+\vspace{.3cm}
+
+\noindent$\bullet$ We have seen that the Weyl symmetry of the string sigma model is anomalous on a general curved background. How can the bosonic string be anomaly-free?
+
+
+\vspace{.3cm}
+
+\noindent$\bullet$ Although we learnt that string amplitude is expressed via Feynman path integral
+\begin{align}\label{amplitude}
+ A_n = \sum_g \int \left[\cD h_{ab}\right]_{g,n} \int \cD X^\mu e^{-S_\sigma [X^\mu,h_{ab}]}\,\wh V_1 \cdots \wh V_n  \ ,
+\end{align}
+we do not know how to perform this path integral. In particular, the path integral is endowed with huge gauge symmetries, WS diffeomorphism and Weyl symmetry. How can we treat integration measure and fix gauge in the path integral?
+
+\vspace{.3cm}
+
+
+To answer to these question, we will study quantization procedure via path integral, which is often called \textbf{modern covariant quantization}. This method uses  the analogue of the
+Faddeev-Popov method of gauge theories. Furthermore, the physical state condition is implemented via  the BRST symmetry.
+
+
+
+
+
+After gauge-fixing the reparametrization and Weyl symmetry, the integral over $h_{ab}$ turns into a path-integral over ghost CFT, which has $c=-26$. Therefore, in order for the theory to be anomaly-free, the original theory has to be a CFT with $c=26$. 
+
+\subsection*{Faddeev-Popov gauge fixing}
+
+
+
+\begin{wrapfigure}{R}{0.4\textwidth}\centering
+\includegraphics[width=4cm]{gphase}
+\caption{}\label{fig:gauge}
+\end{wrapfigure}
+
+The integration measure $\left[\cD h_{ab}\right]_{g,n}$ is over all the metric s on 2d surfaces with genus $g$ and $n$ marked points. However, this integral has Weyl symmetry and wold-sheet diffeomorphisms under which the world-sheet metric is transformed as
+\be\label{global}
+h_{ab}^\zeta(\wt\s)=e^{2\omega(\s)}  \frac{\partial \s^c}{\partial \wt\s^a}\frac{\partial \s^d}{\partial \wt\s^b} h_{cd}(\s)~.
+\ee
+%\be
+%\delta g_{\alpha\beta} =  \nabla_{\alpha} \xi_{\beta} + \nabla_{\beta}
+%\xi_{\alpha} + 2 \lambdabda g_{\alpha\beta}
+% =  (\hat{P}\xi)_{\alpha\beta} + 2 \tilde{\lambdabda} g_{\alpha\beta},
+%\ee
+%where $(\hat{P}\xi)_{\alpha\beta} = \nabla_{\alpha} \xi_{\beta} +
+%\nabla_{\beta} \xi_{\alpha} - (\nabla_{\gamma}
+%\xi^{\gamma})g_{\alpha\beta}$ and $\tilde{\lambdabda} = \lambdabda + \frac12
+%\nabla_{\gamma} \xi^{\gamma}$.
+%The integration measure can be written as
+%\be
+%{\cal D} g = {\cal D}(\hat P \xi){\cal D}(\tilde \lambdabda) =
+%{\cal D} \xi {\cal D} \lambdabda \left| \frac{ \partial (P\xi ,\tilde \lambdabda
+%) }{ \partial ( \xi , \lambdabda ) } \right| \,,
+%\ee
+%where the Jacobian is
+%\be
+% \left| \frac{\partial(P\xi,\tilde \lambdabda)}{\partial(\xi,\lambdabda)} \right| =
+%\left| \,\det \left( \begin{array}{cc} \hat P & 0 \\ {*} & 1
+%\end{array} \right) \right| = \left| \det P \right| = \sqrt{ \det
+%\hat P \hat P^\dagger } \,.
+%\ee
+%The $*$ here means some operator that is not important for the
+%determinant.
+These symmetries are redundant and integrating along these directions just gives rise to the volume of the symmetry group. (In Figure \ref{fig:gauge}, the solid arrows schematically draws gauge redundancy and  the dotted line shows physically distinct configurations.) Thus, we need to carry out gauge-fixing. Thankfully, there is a
+standard method to fix gauge, introduced by Faddeev and Popov. A basic idea is to insert the identity of the following form in the path integral:  
+\be1= \int {\cal D}\zeta\ \delta(h-\hat{h}{}^{\,\zeta}) \det \left(\frac{\delta \hat{h}{}^{\,\zeta} }{\delta \zeta}\right)\label{dfp}\ee
+where the Jacobian
+factor  $\det \left(\frac{\delta \hat{h}{}^{\,\zeta} }{\delta \zeta}\right)$ is called \textbf{Faddeev-Popov determinant} and we denote it by $\Delta_{FP}[\hat{h}]$. The insertion of this identity into the path integral fixes the metric as $\hat{h}$ because of the delta function. In addition, because $\int {\cal D}\zeta$ integral only contributes an infinite multiplicative factor, we can discard this integral. Therefore, after Faddeev-Popov gauge fixing, the 
+form of the path integral can be schematically written as
+\be Z[\hat{h}] = \int {\cal D}X\ \Delta_{FP}[\hat{h}]\,e^{-S_{\s}[X,\hat{h}]}\label{fullpf}\ee
+We should make several remarks about this procedure. 
+
+\vspace{.3cm}
+\noindent$\bullet$ First, the conformal Killing transformations are residual gauge symmetries not fixed above. We have to throw away these residual gauge symmetries in the path integral in order to avoid over-counting. Indeed we will be careful to fix this extra residual gauge freedom when computing string amplitudes. 
+
+\vspace{.3cm}
+\noindent$\bullet$ Second, there are caveats related to global properties of the world-sheet Riemann surface $\Sigma_{g,n}$. In fact, metrics on a Riemann surface encodes the information of ``shape'' of the Riemann surface $\Sigma_{g,n}$ called \textbf{complex moduli}, which is not accounted for by local gauge transformations $\zeta$. The space which parametrizes `shape'' of the Riemann surface is called \textbf{moduli space of Riemann surface} $\Sigma_{g,n}$ which is $(6g-6+2n)$-dim$_\bR$:
+$$
+\cM_{g,n}:=\frac{\left[\cD h_{ab}\right]_{g,n}}{\textrm{Diff}\times\textrm{Weyl}}
+$$
+Therefore the path integral actually involves integral over $\cM_{g,n}$ as well. At this moment, we postpone both the issues  and will come back to them in the next lecture on string amplitudes.
+
+\vspace{.3cm}
+Now let us take an infinitesimal version of \eqref{global} where 
+a Weyl transformation is parameterized by $\omega(\sigma)$ and an
+infinitesimal diffeomorphism by $\delta\sigma^\alpha = \e^\alpha(\sigma)$. Subsequently, the change of the metric is read off
+%
+$$ \delta \hat{h}_{ab}  = 2\omega\hat{h}_{ab} + \nabla_a \e_b + \nabla_b \e_a:=2\wt \omega \hat{h}_{ab} +(P\cdot \e)_{ab}$$
+%
+where we decompose it into
+\begin{align}
+(P\cdot \e)_{ab}&=\nabla_a \e_b + \nabla_b \e_a-h_{ab}(\nabla\cdot \e) \cr
+\wt \omega&=\omega+\frac12 (\nabla\cdot \e) ~.
+\end{align}
+Indeed, the operator $P$ maps vectors $\e_a$ to symmetric traceless 2-tensors $(P\cdot \e)_{ab}$. Thus, the Faddeev-Popov determinant can be written as
+$$
+\Delta_{FP}[\hat{h}]=\det \frac{\delta(P\cdot \e,\wt\omega)}{\delta(\e,\omega)}=\det \left| \begin{matrix}P&0\\\ast &1
+\end{matrix}
+\right|=\det P~.
+$$
+
+To compute $\det P$, we use \textbf{Faddeev-Popov ghosts}, which can be understood as an infinite-dimensional version of the following integral.
+Given a matrix $M_{ij}$, its determinant can be expressed as a Grassmann integral
+$$
+\int \prod_{i=1}^nd\psi_i d\theta_i  \exp(\theta_i M_{ij}\psi_j) = \det M~.
+$$
+where $\theta, \psi$ are Grassmann variables. Accordingly, we introduce anti-commuting fermionic fields, $c^a$ (ghosts) and $b_{ab}$ (anti-ghost) where $b_{ab}$ transforms as a symmetric traceless tensor  and $c^a$ as a vector. Then, we can express 
+$$
+\Delta_{FP}[\hat{h}] =\int {\cal D} b{\cal D} c\, \exp\left(\frac{i}{2\pi}\int d^2\sigma \sqrt{\hat{h}}\, b^{ab} (P\cdot c)_{ab}\right):= \int{\cal D}b{\cal D}c\ \exp[i S_{\rm gh}]~,
+$$
+where the ghost action can be written as
+%
+\be S_{\rm gh} = \frac{1}{2\pi}\int d^2\sigma \sqrt{-\hat h}\ b^{ab}\nabla_a c_b~.\label{ghost1}\ee
+Something lovely has happened. Although the ghost fields were introduced as some auxiliary
+constructs, they now appear on the same footing as the dynamical fields $X$. Consequently the Faddeev-Popov gauge fixing results in a fermionic 2d CFT, usually called \textbf{$bc$ ghost CFT}.
+
+Let us make some remarks about the equation of motion of $S_{\rm gh} $
+
+\vspace{.3cm}
+\noindent$\bullet$ The equation of motion for ca is given by $P \cdot c = 0$. Therefore the solutions for $c$ are in one-to-one correspondence with the \textbf{conformal Killing vectors}, which are the generators of the residual symmetry.
+
+\vspace{.3cm}
+\noindent$\bullet$ The equation of motion for $b_{ab}$ is $\nabla_a b^{ab}=0$.
+We will understand the geometric meaning of these equations when discussing the moduli
+space of Riemann surfaces.
+
+\vspace{.3cm}
+To understand the properties of $bc$ ghost CFT, it is convenient to use Euclidean signature so that we will perform Wick rotation in what follows. Then, the factor of $i$ in the action disappears.
+The expression for the full partition function \eqref{fullpf} is
+%
+\be Z[\hat{h}]=\int {\cal D}X{\cal D}b{\cal D}c\ \exp\left(-S_{\s}[X,\hat{h}] -
+S_{\rm gh}[b,c,\hat{h}]\right)~.\label{total}\ee
+%
+
+
+
+
+
+
+
+
+
+\subsection*{$bc$ ghost CFT}
+
+Now let us study the $bc$ ghost CFT more in detail. For this purpose, we pick the conformal gauge $\hat{h}_{ab}=e^{2\omega}\delta_{ab}$. In this metric, the non-trivial Christofell connections are $\G^z_{zz}=2\partial \omega$, $\G^{\bar{z}}_{\bar{z}\bar{z}}=2\overline\partial \omega$ so that the ghost action can be written as
+\begin{align}
+S_{\rm ghost}& = \frac{1}{2\pi}\int d^2z\ \left( b_{zz}\nabla_{\bz}c^z + b_{\bz\bz}\nabla_z c^{\bz}\right)\cr
+&=\frac{1}{2\pi} \int d^2z\ b_{zz}\,\partial_{\bz}c^z +
+b_{\bz\bz}\,\partial_zc^{\bz}\end{align} 
+For the sake of simplicity, let us define
+%
+\begin{align} b= b_{zz}~,\qquad \bar{b}=b_{\bar{z}\bar{z}}~,\qquad
+c=c^z~,\qquad \bar{c}=c^{\bar{z}}~.\nonumber\end{align}
+%
+Then, the action simplifies to
+%
+$$
+S_{\rm gh} = \frac{1}{2\pi}\int d^2z\ \left(b\,\overline \partial c + \bar{b}\,\partial\bar{c}
+\right)$$ 
+%
+Which gives the equations of motion
+%
+\be \overline \partial b = \partial\bar{b} = \overline \partial c = \partial\bar{c}=0\nonumber\ee
+%
+So we see that $b$ and $c$ are holomorphic fields, while $\bar{b}$ and $\bar{c}$ are
+anti-holomorphic.
+
+
+%Before moving onto quantization, there's one last bit of information we need from the
+%classical theory: the stress tensor for the $bc$ ghosts. The calculation
+%is a little bit fiddly. We use the general definition of the stress tensor \eqref{se},
+%which requires us to return to the theory \eqref{ghost1} on a general background and vary the
+%metric $g^{\alpha\beta}$. The complications are twofold. Firstly, we pick up a contribution
+%from the Christoffel symbol that is lurking inside the covariant derivative $\nabla^\alpha$.
+%Secondly, we must also remember that $b_{\alpha\beta}$ is traceless. But this is a condition
+%which itself depends on the metric: $b_{\alpha\beta}g^{\alpha\beta}=0$. To account for
+%this we should add a Lagrange multiplier to the action imposing tracelessness. After correctly
+%varying the metric, we may safely retreat back to flat space where the end result is
+%rather simple. 
+
+
+We can compute the OPEs of these fields using the standard path integral techniques
+that we learnt before. In what follows, we will just focus on the
+holomorphic piece of the CFT.  We have, for example,
+%
+\be 0 = \int {\cal D}b{\cal D}c\ \frac{\delta}{\delta b(z)}\ \left[e^{-S_{\rm gh}}
+\,b(w)\right ] = \int {\cal D}b{\cal D}c\ s^{-S_{\rm gh}}\left[
+-\frac{1}{2\pi}\,\overline \partial c(z)\,b(w)+\delta(z-w)\right]\nonumber\ee
+%
+which tells us that
+%
+\be \overline \partial c(z)\,b(w) = 2\pi \,\delta(z-w)\nonumber\ee
+%
+Similarly, looking at $\delta/\delta c(z)$ gives
+%
+\be \overline \partial b(z)\,c(w) = 2\pi\,\delta(z-w)\nonumber\ee
+%
+We can integrate both of these equations using our favorite formula
+$\bar\partial(1/z) = 2\pi \delta(z,\bar{z})$.  We learn that the OPEs between fields are given by
+%
+\begin{align} b(z)\,c(w) &= \frac{1}{z-w} + \ldots\nonumber\\ c(w)\,b(z) &= \frac{1}{w-z} + \ldots\nonumber\end{align}
+%
+In fact the second equation follows from the first equation and Fermi statistics. The
+OPEs of $b(z)\,b(w)$ and $c(z)\,c(w)$ have no singular parts because they vanish as $z\rightarrow
+w$.
+
+
+In any CFT, it is of most importance to find the form of the stress energy tensor. 
+The stress energy tensor is obtained via Noether's theorem with respect to world sheet transformations $\delta z = \e(z)$, under which 
+$$\delta b = (\e\partial+2(\partial\e))b~,\qquad \d c = (\e\partial-(\partial\e))c~.$$ 
+Indeed both $b$ and $c$ are primary fields with weights $h=2$ and $h=-1$, respectively, that can be easily seen from their index structure $b_{zz}$ and $c^z$. 
+From these rules, one can deduce the form of the stress-energy tensor
+\be T^{\rm gh}(z) =- 2:b(z)\partial c(z): + :c(z)\partial b(z):\nonumber\ee
+In fact, this form can be obtained from the first principle, namely the variation of the action under  the metric (Exercise).
+
+
+
+The OPEs of $b$ and $c$ with the stress tensor are
+%
+\begin{align} T^{\rm gh}(z)\,c(w) &= -\frac{c(w)}{(z-w)^2}+
+\frac{\partial c(w)}{z-w}+\ldots\cr
+T^{\rm gh}(z)\,b(w)  &= \frac{2b(w)}{(z-w)^2}+
+\frac{\partial b(w)}{z-w}+\ldots\nonumber\end{align}
+%
+confirming that $b$ and $c$ have weight $2$ and $-1$,
+
+Finally, we can compute the $TT$ OPE to determine can be written as (Exercise)
+%
+\be T^{\rm gh}(z)\,T^{\rm gh}(w) = \frac{-13}{(z-w)^4}+\frac{2T^{\rm gh}(w)}{(z-w)^2} + \frac{\partial T^{\rm gh}(w)}{z-w} +\ldots\nonumber\ee
+%
+Now one can read off the  central charge of the $bc$ ghost system which is
+%
+\be c^{\rm gh}=2(-13)=-26 ~.\nonumber\ee
+
+We learnt that the Weyl symmetry is anomalous unless $c=0$.
+Since the Weyl symmetry is a gauge symmetry, the theory must be Weyl anomaly-free. Since the total central charge of the string sigma model and ghost theory \eqref{total} is given by $c=c^X +c^{\rm gh}$, the dimension of the target space must be 
+$$
+D=26.
+$$
+Again, we obtain the critical dimension of the bosonic string theory!
+
+
+
+
+\section{BRST quantization}
+
+In 4d non-Abelian QFT, the Lagrangian with Faddeev-Popov ghosts has the continuous symmetry, called \textbf{BRST symmetry} (Becchi-Rouet-Stora-Tyupin). The BRST symmetry is generated by a nilpotent charge $Q_B$ with $Q_B^2=0$ that commutes with the Hamiltonian. The nilpotency of the BRST charge has strong
+consequences. Since all physical states must be BRST-invariant, we require a physical state is annihilated by $Q_B$
+$$
+Q_{B} |\textrm{phys}\rangle=0~.
+$$
+However, one can always add a state of the form $Q_{B} | \chi \rangle$ since this state will be annihilated by $Q_B$ because of the nilpotency. However, this state is orthogonal to all physical states and therefore it is a \textbf{null state}.
+Thus, two states related by
+\[ | \psi'\rangle = |\psi\rangle + Q_B |\chi\rangle \]
+have the same inner products and are indistinguishable.
+This is the remnant in the gauge-fixed version of the original
+gauge symmetry. As a result, the Hilbert
+space of physical states is isomorphic to the $Q_B$-cohomology, i.e.
+$$
+\cH^{\textrm{phys}}\cong\frac{\cH^{Q_B\textrm{-closed}}}{\cH^{Q_B\textrm{-exact}}}
+$$
+This elegant method to determine the physical Hilbert space in a gauge fixed action with ghosts is known as \textbf{BRST quantization}. 
+
+We are now ready to apply this formalism to the  bosonic string.
+Expressed in the world-sheet light-cone coordinates, we obtain the
+following BRST transformations (Exercise):
+\begin{align}\nonumber
+&\delta_B X^\mu = i \epsilon ( c \partial + \bar{c} \bar{\partial} ) X^\mu \,,
+\cr
+&\delta_B c=  i\epsilon  c \partial c  \qquad \delta_B \bar c=  i\epsilon \bar{c} \bar{\partial} \bar c \,,
+\\
+&\delta_B b =  i \epsilon ( T^X + T^{\rm gh} ) \qquad \delta_B \bar b =  i \epsilon ( \overline T^X + \overline T^{\rm gh} )\,. \nonumber
+\end{align}
+
+
+%We have to impose again the appropriate periodicity (closed strings)
+%or
+%boundary (open strings) conditions on the ghosts, and then we can
+%expand the fields in Fourier modes again:
+%\begin{align}
+%c = \sum \bar c_n e^{-in(\t+\s)}\,, & \bar{c} = \sum  c_n
+%e^{-in(\t-\s)}\,,
+%\cr
+%b = \sum \bar b_n e^{-in(\t+\s)}\,, & \bar{b} =\sum c_n
+%e^{-in(\t-\s)}\,. \nonumber
+%\end{align}
+%The Fourier modes can be shown to satisfy the following
+%anticommutation relations
+%\be
+%\{ b_m,c_n \} = \delta_{m+n,0}\;\;\;,\;\;\;
+%\{ b_m,b_n\} = \{ c_m,c_n\} =0 \,.
+%\label{24}\ee
+%
+%We can define the Virasoro operators for the ghost system as the
+%expansion modes of the stress-tensor. We then find
+%\be
+%L^{gh}_m = \sum_n (m-n) : b_{m+n} c_{-n} : \;\;\;,\;\;\;
+%\bar L^{gh}_m = \sum_n (m-n) : \bar b_{m+n} \bar c_{-n} : \,.
+%\ee
+% From this we can compute the algebra of Virasoro operators:
+%\be
+%[ L^{gh}_m,L^{gh}_n] = (m-n) L^{gh}_{m+n} + \tfrac{1}{6}(m-13m^3)
+%\delta_{m+n,0} \,.
+%\ee
+%The total Virasoro operators for the combined system of $X^\mu$
+%fields and ghost then become
+%\be
+%L_m = L_m^X + L_m^{gh} - a \delta_{m} \,,
+%\ee
+%where the constant term is due to normal ordering of $L_0$. The
+%algebra of the combined system can then be written as
+%\be
+%[L_m,L_n] = (m-n) L_{m+n} + A(m) \delta_{m+n} \,,
+%\ee
+%with
+%\be
+%A(m) = \frac{d}{12} m(m^2 -1) + \frac{1}{6} (m-13m^3) + 2 a m \,.
+%\ee
+%This anomaly vanishes, if and only if $d=26$ and $a=1$, which is
+%exactly the same result we obtained from requiring Lorentz invariance
+%after quantization in the light-cone gauge.
+
+Actually, this can also be shown using the BRST formalism \cite[\S4]{Polchinski}. The Noether theorem tells us the holomorphic part of the BRST current takes the form (Exercise)
+\begin{align}\label{jB}
+j_B &= c(z)T^X(z) + \frac12 : c(z)T^{\rm gh}(z): +\frac32:\partial^2c(z):\\
+&= c(z)T^X(z) + : b(z)c(z)\partial c(z) : +\frac32:\partial^2c(z):~.\nonumber
+\end{align}
+and the BRST charge is defined by
+\[ Q_B = \oint \frac{dz}{2\pi i} ~ j_B \,.\]
+Indeed the anomaly now shows up in $Q_B^2$ so that the BRST charge is
+nilpotent if and only if  $D=26$.
+Furthermore, using the mode expansions of $b$ and $c$
+$$
+b(z)=\sum_{b\in\bZ}\frac{b_m}{z^{m+2}}\qquad c(z)=\sum_{c\in\bZ}\frac{c_m}{z^{m-1}}~,
+$$
+we can express the BRST charge in terms of the $X^{\mu}$ Virasoro
+operators and the ghost oscillators as
+\be
+Q_B = \sum_n c_n (L^X_{-n}-\d_{n,0}) + \sum_{m,n} \frac{m-n}{2} : c_m c_n
+b_{-m-n} :  \,.\\
+\label{27}\ee
+In the case of closed strings, there is of course the anti-holomorphic part $\bar Q_B$, and the total
+BRST charge is $Q_B+\bar Q_B$.
+
+We will  find the physical spectrum in the BRST context.
+According to our previous discussion, the physical states will have
+to be annihilated by the BRST charge, and not be of the form
+$Q_B|\phantom{\chi}\rangle$.
+
+First we have to describe our extended Hilbert space that includes
+the ghosts.
+As far as the $X^{\mu}$ oscillators are concerned the situation is
+the same as in the previous sections, so we need only be concerned
+with the ghost Hilbert space.
+The full Hilbert space will be a tensor product of the two. Since 
+the ghosts generate a two-state spin system $|\uparrow\rangle, |\downarrow\rangle$, we can write all the states can be generated from $|k,\uparrow\rangle, |k,\downarrow\rangle$ by acting creation operators where $|k\rangle=|0;k\rangle$ denotes the vacuum of the matter theory.
+
+
+
+For the ghost system, we impose the positive ghost oscillator modes annihilate the states
+$$
+b_{n>0}|\uparrow\rangle=b_{n>0}|\downarrow\rangle=c_{n>0}|\uparrow\rangle=c_{n>0}|\downarrow\rangle=0
+\;$$
+However, there is a subtlety because of the presence of the zero
+modes
+$b_0$ and $c_0$ which
+satisfy
+$b_0^2 = c_0^2 = 0$ and $\{b_0,c_0\}=1$ (Exercise).
+
+
+From the light-cone quantization, we know that there is only one vacuum called Tachyon. So we have to pick the ghost vacuum among the two spin states.
+For this purpose, we further impose one more condition, namely
+\be
+b_0|{\rm phys}\rangle =0\,.
+\label{25}\ee
+This is sometimes called the \textbf{Siegel gauge} \cite[\S3.2]{GSW}.
+Thus, under this condition, we have
+\begin{align}
+b_0 | \downarrow \rangle = 0\,, \;\;\;&\;\;\; b_0 |\uparrow\rangle =
+|
+\downarrow
+\rangle\,, \cr
+c_0 | \uparrow \rangle
+= 0\,, \;\;\;&\;\;\; c_0 | \downarrow\rangle = |
+\uparrow
+\rangle \,.\nonumber
+\end{align}
+Imposing also (\ref{25}) implies that the correct ghost vacuum is
+$|\downarrow\rangle$.
+We can now create states from this vacuum by acting with the negative
+modes
+of the ghosts $b_m,c_n$.
+We cannot act with $c_0$ since the new state does not satisfy the
+Siegel condition (\ref{25}).
+Now, we are ready to describe the physical states in the open string.
+Note that since $Q_B$ in (\ref{27}) has ``level" zero, we can impose
+BRST invariance on physical states level by level.
+
+
+At level zero, there is only one state that is the total vacuum
+$|k,\downarrow\rangle$
+$$
+0 = Q_B | k,\downarrow \rangle = ( L^X_0 - 1 ) c_0 | k,\downarrow\rangle= ( L^X_0 - 1 ) | k,\uparrow\rangle\,.
+$$
+Because we have the mode expansion of the 0th Virasoro generator
+\begin{align}
+L^X_0&=\a'p^2+\a_{-1}\cdot\a_1+\cdots~,\cr
+L^{\textrm{gh}}_0&=b_{-1}c_{1}-c_{-1}b_{1}+\cdots~,
+\end{align}
+the only non-trivial condition at level zero is $m^2=-1/\a'$, which is the tachyon. Note that the Virasoro generators of the $bc$ ghost is
+$$
+L^{\textrm{gh}}_m=\sum_{m\in\bZ}(2m-n):b_nc_{m-n}:-~\delta_{m,0}~.
+$$
+
+At the first level, the possible operators that can act on the vacuum $| k,\downarrow\rangle$ are $\alpha^\mu_{-1}$,
+$b_{-1}$ and $c_{-1}$. The most general state of this form is then
+\be
+|\psi\rangle = ( \zeta \cdot \alpha_{-1} + \beta b_{-1} + \gamma c_{-1} )
+| k,\downarrow\rangle \,, \label{n=1}
+\ee
+which has 28 parameters: a 26-dimensional vector $\zeta_\mu$ and two more
+constants
+$\beta$, $\gamma$. From the definition of $j_B$, one can derive that 
+$$
+\{Q_B,b_0\}=L_0^X+L_0^{\textrm{gh}}-2.
+$$
+From $b_0|\psi\rangle=0$, we deduce $0=\{Q_B,b_0\}|\psi\rangle=(L_0^X+L_0^{\textrm{gh}}-2)|\psi\rangle$. This yields the mass shell 
+condition  $k^2 =0$. In addition,  the BRST condition demands
+$$
+ 0 = Q_B |\psi\rangle = 2 ( (k\cdot \zeta) c_{-1} + \beta
+k\cdot \alpha_{-1} ) | k,\downarrow \rangle \,.
+$$
+This only holds if $k\cdot\zeta=0$ and
+$\beta=0$. Therefore the BRST condition removes the unphysical anti-ghost excitations as well as all polarizations that are not orthogonal to the momentum, thereby eliminating 2 out the $26+2$ original states. So there are only 26 parameters left. 
+
+Next we have to make sure that this state is not $Q_B$-exact: a general state $|\chi\rangle$
+is of the same form as \eqref{n=1}, but with parameters
+$\zeta'^{\mu}$, $\b'$ and $\g'$. So the most general $Q_B$-exact state at
+this level
+with $k^2=0$ will be
+\[ Q_B |\chi \rangle = 2 ( k\cdot \zeta' c_{-1} + \beta'
+k\cdot\alpha_{-1} ) | k,\downarrow\rangle \,. \]
+This means that the $c_{-1}$ part in \eqref{n=1} is BRST-exact and that
+the polarization has the equivalence relation $\zeta_\mu \sim
+\zeta_\mu + 2 \beta' k_\mu $. This leaves us with the 24 physical
+degrees of freedom we expect for a massless vector particle
+ in 26 dimensions. In sum, the physical state at level 1 is
+ $$
+ \{|\zeta;k\rangle ~; \quad k\cdot\zeta=0\}/~ \zeta_\mu \sim
+\zeta_\mu + 2 \beta' k_\mu ~.
+ $$
+
+The same procedure can be followed for the higher  levels. In the
+case
+of the closed string we have to include the barred operators, and of
+course we have to use $Q_B+\bar Q_B$.
+
+
+
+
+
+\bibliography{string-lecture}
+\bibliographystyle{halpha}
+
+
+
+
+
+
+\end{document}

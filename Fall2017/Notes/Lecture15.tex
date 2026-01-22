@@ -1,0 +1,864 @@
+ \documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{jheppub}
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{gensymb}
+\usepackage{simplewick}
+\usepackage{feynmp-auto}
+\usepackage{wrapfig}
+
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\lambdabda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%
+%---------- mathbf font --------------------------------
+%
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+\newcommand{\bfa}{\ensuremath{\mathbf{a}}}
+\newcommand{\bfb}{\ensuremath{\mathbf{b}}}
+\newcommand{\bfc}{\ensuremath{\mathbf{c}}}
+\newcommand{\bfd}{\ensuremath{\mathbf{d}}}
+\newcommand{\bfe}{\ensuremath{\mathbf{e}}}
+\newcommand{\bff}{\ensuremath{\mathbf{f}}}
+\newcommand{\bfg}{\ensuremath{\mathbf{g}}}
+\newcommand{\bfh}{\ensuremath{\mathbf{h}}}
+\newcommand{\bfi}{\ensuremath{\mathbf{i}}}
+\newcommand{\bfj}{\ensuremath{\mathbf{j}}}
+\newcommand{\bfk}{\ensuremath{\mathbf{k}}}
+\newcommand{\bfl}{\ensuremath{\mathbf{l}}}
+\newcommand{\bfm}{\ensuremath{\mathbf{m}}}
+\newcommand{\bfn}{\ensuremath{\mathbf{n}}}
+\newcommand{\bfo}{\ensuremath{\mathbf{o}}}
+\newcommand{\bfp}{\ensuremath{\mathbf{p}}}
+\newcommand{\bfq}{\ensuremath{\mathbf{q}}}
+\newcommand{\bfr}{\ensuremath{\mathbf{r}}}
+\newcommand{\bfs}{\ensuremath{\mathbf{s}}}
+\newcommand{\bft}{\ensuremath{\mathbf{t}}}
+\newcommand{\bfu}{\ensuremath{\mathbf{u}}}
+\newcommand{\bfv}{\ensuremath{\mathbf{v}}}
+\newcommand{\bfw}{\ensuremath{\mathbf{w}}}
+\newcommand{\bfx}{\ensuremath{\mathbf{x}}}
+\newcommand{\bfy}{\ensuremath{\mathbf{y}}}
+\newcommand{\bfz}{\ensuremath{\mathbf{z}}}
+
+
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+\def\tl{\tilde}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+\newcommand\bz{{\bar{z}}}
+
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}[lemma]{Conjecture} 
+\newtheorem{corollary}[lemma]{Corollary} 
+\newtheorem{theorem}[lemma]{Theorem} 
+\newtheorem{definition}[lemma]{Definition} 
+\newtheorem{question}[lemma]{Question} 
+\newtheorem{proposition}[lemma]{Proposition} 
+
+\newcommand {\nod} [1] {\mbox {$:#1\!:$}}
+\newcommand	{\abs}	[1] {{\left| #1 \right|}}
+\newcommand {\brac} [1]	{{\left\{	#1 \right\}}}
+
+\def\ap{{\alpha^\prime}}
+\def\zb{\bar{z}}
+
+
+
+
+\def \be  {\begin{equation}}
+\def \ee  {\end{equation}}
+\def \bea {\begin{equation}\begin{aligned}}
+\def \eea {\end{aligned}\end{equation}}
+\def \ba  {\begin{eqnarray}}
+\def \ea  {\end{eqnarray}}
+
+%\title{ Lecture 4}
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf  Lecture 15}
+
+In the last lecture, we have seen that D-branes are dynamical objects and D-branes can end on others forming bound states. Moreover, they were ideally suited for studying black holes.
+
+
+A large number of D-branes is heavy enough to produce a black hole by wrapping a cycle in a compact manifold. There is a large degeneracy due to open strings attaching to D-branes, which gives
+a statistical interpretation of the thermodynamic entropy. This leads to a precise microscopic accounting for the Beckenstein-Hawking entropy of the supersymmetric black holes, as shown by Strominger-Vafa \cite{Strominger:1996sh}. 
+
+
+The study of black holes in string theory by using D-branes has led to the celebrated AdS/CFT correspondence \cite{Maldacena:1997re}. (See Maldacena's Ph.D. thesis \cite{Maldacena:1996ky} for instance.) 
+
+
+\section{Black hole thermodynamics}
+
+
+
+
+First let us briefly summarize basics of black holes in general relativity and the laws of black hole thermodynamics studied in the early 70s \cite{Bekenstein:1973ur,Bardeen:1973gs,Hawking:1974sw}. For more detail, I refer to a wonderful lecture note \cite{Townsend:1997ku}.
+
+
+\subsection{Black holes}
+
+To begin with, we consider the Einstein-Maxwell action
+\begin{equation}\label{action}
+{1 \over 16 \pi} \int  d^4x  \sqrt{g} (\frac1G R-  F_{\mu\nu}F^{\mu\nu})~,
+\end{equation}
+where $G$ is Newton's constant. In this subsection, we shall review black hole solutions to the action \eqref{action} and see that they are characterized by mass $M$, charge $Q$ and angular momentum $J$.
+
+
+\subsubsection*{Schwarzschild metric}
+ 
+If there is no electromagnetic fields $F=0$ in the action \eqref{action}, the equation of motion is $R_{\mu\nu}-{1\over
+2}g_{\mu\nu} = 0$, which has a spherically symmetric,
+static solution
+\[
+ds^2 \equiv g_{\mu\nu} dx^\mu dx^\nu =  - (1 - {2GM \over r}) dt^2
++ (1 - {2GM \over r})^{-1} dr^2 + r^2 d \Omega^2,
+\]
+where $t$ is the time, $r$ is the radial coordinate, and $d\Omega$
+is the canonical metric of a 2-sphere.
+This metric describes the spacetime outside a gravitationally collapsed
+non-rotating star with zero electric charge, called \textbf{Schwarzschild metric}.
+It is well-known that the \textbf{event horizon} appears at
+$$
+g^{rr} = 0 \,,
+$$ 
+and  the sphere $r = 2GM$ is indeed the {event horizon} of the
+Schwarzschild black hole with mass $M$. 
+
+It turns out that much of the interesting physics having to
+do with the quantum properties of black holes comes from the
+region near the event horizon.
+To examine the region \emph{near $r=2GM$}, we analytically continued to the Euclidean metric $t= -it_E$, and we set
+$$
+r-2GM=\frac{x^2}{8GM}~.
+$$
+Then, the metric near the event horizon $r=2GM$
+$$
+ds^2_{\textrm{E}} \approx  (\kappa x)^2dt_E^2+dx^2
++\frac{1}{4\kappa^2}d\Omega^2~,
+$$
+where $\kappa=\frac1{4GM}$ is called the \textbf{surface gravity} because it is indeed the acceleration of a static 
+particle near the horizon as measured at spatial infinity. Note that the surface gravity is defined by using Killing vector at the horizon, precisely speaking \cite{Townsend:1997ku}.
+The first part of the metric is just $\bR^2$ with polar coordinates if we make the 
+{periodic identification}
+$$
+t_E \sim t_E +\frac{2\pi}{\kappa}~.
+$$
+Using the relation between Euclidean periodicity and temperature,
+we can deduce \textbf{Hawking temperature} of the Schwarzschild black hole 
+\begin{equation}\label{hawktemp}
+T_H = {\hbar \kappa \over 2 \pi}={\hbar \over 8\pi GM}~.
+\end{equation}
+This is a very heuristic way to introduce the Hawking temperature which is not originally found in this way.
+
+
+
+\subsubsection*{Reissner-Nordstr\"om  black hole}
+
+The most general static, spherically symmetric, charged  solution
+of the Einstein-Maxwell theory (\ref{action}) is 
+\begin{equation}\label{rn}
+ds^2 = -\left(1 - {2GM \over r} + {G Q^2 \over r^2}\right) dt^2 +
+\left(1 - {2GM \over r} + {G Q^2 \over r^2}\right)^{-1} dr^2 + r^2 d
+\Omega^2,
+\end{equation}
+with the electromagnetic field strength
+\[
+F_{tr} = \frac{Q}{r^2}~.
+\]
+This solution is called the \textbf{
+Reissner-Nordstr\"om (RN) black hole} with mass $M$ and charge $Q$. 
+{}From the metric \eqref{rn} we see that there are two event horizon for this solution where
+$g^{rr} =0$ at
+\[
+r_\pm = GM \pm \sqrt{(GM)^2 - GQ^2}~.
+\]
+Thus, $r_+$ defines the outer horizon of the black hole and $r_-$
+defines the inner horizon of the black hole. The area of the black
+hole is  $4\pi r_+^2$. It turns out that the Hawking temperature of the RN black hole is
+%
+$$
+T_H = {{\sqrt{(GM)^2-GQ^2}}\over{2\pi G
+\left(GM+\sqrt{(GM)^2-GQ^2}\right)^2}} \,.
+$$
+%
+
+For a physically sensible definition of temperature, the mass must satisfy the bound $GM^2 \geq Q^2$, and  the two horizons
+coincide $r_+ = r_- =GM$ when  this bound is saturated. 
+In this case, the temperature of the black hole is zero and it is called \textbf{extremal black hole}.
+
+
+\subsubsection*{Kerr-Newman black hole}
+
+If we relax the static condition, black holes can have angular momentum. Hence, general stationary solutions, called \textbf{Kerr-Newman black holes}, to the action \eqref{action} 
+are described with three parameters. In \textbf{Boyer-Linquist
+coordinates}, the KN metric is
+\bea\nonumber
+ds^2 & =  -\frac{ \left(\Delta -a^2\sin^2\theta\right)}{\Sigma}dt^2 - 2 a 
+\sin^2\theta \frac{ \left(r^2+a^2-\Delta\right)}{\Sigma}dt\,d\phi \\
+ &  +\left( \frac{ \left(r^2+a^2\right)^2-\Delta a^2\sin^2\theta}{\Sigma}
+\right)\sin^2\theta d\phi^2 +\frac{\Sigma}{\Delta}dr^2+\Sigma d\theta^2 
+\eea
+where
+\bea\nonumber
+\Sigma & =  r^2+a^2\cos^2\theta \cr
+\Delta & =  r^2-2Mr+a^2+e^2~. \eea
+The three parameters are $M$, $a$, and $e$.  It can be shown that
+$$
+a=\frac{J}{M}
+$$
+where $J$ is the total angular momentum, while
+$$
+e = \sqrt{ Q^2+P^2}
+$$
+where $Q$ and $P$ are the electric and magnetic (monopole) charges, 
+respectively.  The Maxwell 1-form of the KN solution is 
+$$
+A_\mu dx^\mu= \frac{ Qr\left(dt-a\sin^2\theta d\phi\right)-P\cos\theta
+\left[a dt-\left(r^2+a^2\right)d\phi\right] }{\Sigma} ~.
+$$
+
+
+
+
+\subsection{Black hole thermodynamics}
+
+ Bardeen,
+Carter, and Hawking noticed that the laws of black hole mechanics with mass $M$,  angular momentum $J$,  and charge $Q$ bears  a striking resemblance with the
+three laws of thermodynamics. This is quite
+surprising because \emph{a priori} there is no reason to expect
+that the spacetime geometry of black holes has anything to do with
+thermal physics.
+
+\begin{enumerate}
+\item[{(0)}] Zeroth Law: In thermal physics, the zeroth law states
+that the temperature $T$ of a body at thermal equilibrium is
+constant throughout the body. Correspondingly for stationary black holes, one can
+show that surface gravity $\kappa$ is constant on the event
+horizon.
+
+\item[{(1)}] First Law: Energy is conserved, $dE = TdS + \mu dQ +
+\Omega dJ$,  where $E$ is the energy, $Q$ is the charge with chemical
+potential $\mu$ and  $J$ is the angular momentum with chemical potential
+$\Omega$. Correspondingly for black holes, one has $dM = {\kappa
+\over 8\pi G} dA + \mu dQ + \Omega dJ$. Here $A$ is the area of the horizon,  and $\kappa$ is the surface gravity, $\mu$ is the chemical potential conjugate to $Q$, and $\Omega$ is the angular velocity conjugate to $J$. 
+
+\item[{(2)}] Second Law: In a physical process the total entropy
+$S$ never decreases, $\Delta S \geq 0$. Correspondingly for black
+holes one can prove the area theorem that the net area in any process never
+decreases,  $\Delta A \geq 0$. For example,  two Schwarzschild
+black holes with masses $M_1$ and $M_2$  can coalesce to form a
+bigger black hole of mass $M$. This is consistent with the area
+theorem, since the area is proportional to the square of the mass,
+and $(M_1 + M_2)^2 \geq M^2_1 + M^2_2$. The opposite process where
+a bigger black hole fragments is however disallowed by this  law.
+\end{enumerate}
+
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4}...
+\hline
+\textbf{Laws of Thermodynamics} & \textbf{Laws of Black Hole Mechanics}\\
+ \hline Temperature is constant
+ & Surface gravity is constant
+ \\
+ throughout a body at equilibrium. &  on the event horizon.\\
+ $T$=
+constant. & $\kappa$ =constant.\\
+ \hline
+Energy is conserved.
+& Energy is conserved. \\
+$dE = T dS + \mu dQ + \Omega dJ. $& $dM = \frac{\kappa}{8\pi} dA + \mu dQ + \Omega dJ . $\\
+ \hline
+ Entropy never decrease.  & Area never decreases.\\
+ $\Delta S \geq 0$. & $ \Delta A \geq 0 $. \\
+ \hline
+\end{tabular}
+\caption{\small{Laws of Black Hole Thermodynamics}}
+\label{blackholelaws}
+\end{table}
+
+This result can be understood as one of the highlights of general relativity. 
+Moreover, Hawking has shown this is indeed more than an analogy \cite{Hawking:1974sw}. There is a deep connection
+between black hole geometry, thermodynamics and quantum mechanics.
+Quantum mechanically, a black hole is not quite black.
+
+
+
+
+
+
+
+\subsection{Bekenstein-Hawking entropy}
+
+Bekenstein asked a simple-minded but incisive question. If we throw a bucket of hot water
+into a black hole, then the net entropy of the world outside would
+seem to decrease, treating the black hole as a geometric object.  Do we have to give up  the second law of
+thermodynamics in the presence of black holes?
+
+Note that since the black hole carries mass, the total energy is conserved during the process so that it does not violate the first law of thermodynamics.
+ This suggests that one can save
+the second law of thermodynamics if somehow the black hole also
+has entropy. Following this reasoning with the 
+analogy between the area of the black hole and entropy, Bekenstein proposed that a black hole
+must have entropy proportional to its area \cite{Bekenstein:1973ur}.
+
+If a black hole
+has energy $E$ and entropy $S$, then it must also have temperature
+$T$ given by
+\[
+{1 \over T} = {\partial S \over \partial E}.
+\]
+For example, for  a Schwarzschild black hole, the area and the
+entropy scales as $ S \sim M^2$. Therefore, one would expect
+inverse temperature that scales as $M$
+$$
+{1 \over T} = {\partial S \over \partial M} \sim {\partial M^2
+\over
+\partial M} \sim M.
+$$
+Moreover, if the black hole has temperature like any hot body, it
+must thermally radiate. The understanding of thermal properties of black holes requires the treatment beyond classical general relativity.  
+
+Hawking has applied techniques of quantum field theories on a curved background to the near horizon region of a black hole and 
+showed that a black hole indeed radiates \cite{Hawking:1974sw}. In a
+quantum theory, particle-antiparticle are constantly being created
+and annihilated even in vacuum. Near the horizon, an antiparticle
+can fall  in once in a while and the particle can escapes to
+infinity. Although this lecture does not deal with Hawking's calculation unfortunately (see \cite{Townsend:1997ku}), it actually revealed that the spectrum
+emitted by the black hole is  precisely thermal with temperature
+\eqref{hawktemp}. With this
+precise relation between the temperature and surface gravity the
+laws of black hole mechanics discussed before
+become identical to the laws of thermodynamics. Using the formula
+for the Hawking temperature and the first law of thermodynamics
+\[
+dM = TdS = {\kappa \hbar \over 8\pi G\hbar} dA,
+\]
+one can then deduce the precise relation between entropy and the
+area of the black hole:
+\[
+ S = {A c^3 \over 4G\hbar} \, .
+\]
+This is a universal result for any black hole, and this remarkable relation between the thermodynamic properties
+of a black hole  and its geometric properties is called the celebrated \textbf{Bekenstein-Hawking entropy formula}. 
+This formula involves all three fundamental constants of
+nature, and this is the first place where the Newton constant $G$ meets with the Planck constant $\hbar$.
+
+
+
+
+For ordinary objects, Boltzmann has given statistical interpretation of the thermodynamic entropy of a system.
+We fix the macroscopic parameters (e.g. total electric
+charge, energy etc.) and count the number $\O$ of quantum
+states Ð known as microstates Ð each of which has the
+same values for the macroscopic parameters, and the entropy is expressed as
+\[
+S = k \log \O,
+\]
+where $k$ is Boltzmann constant. Since 
+the Bekenstein-Hawking entropy behaves in every other respect like
+the ordinary thermodynamic entropy, it is therefore natural to ask
+whether the entropy of a black hole has a similar
+statistical interpretation.
+
+
+
+Furthermore, one of the most dramatic results of Hawking's work was the implication that black holes are associated with information loss. Physically speaking, we can associate information with pure states in quantum mechanics. 
+If we throw in a pure quantum state in the s-wave to form a
+black hole, and after the black hole evaporates completely,
+it comes out as a thermal (mixed) state.  Thus the net result of this
+process is the evolution of a pure quantum state into a
+mixed state, which violates the law (unitarity) of quantum mechanics. This is called \textbf{information paradox}  \cite{Hawking:1976ra}. 
+In fact, the information paradox stems from the absence of such a microscopic description in case of thermal radiation from a black hole.
+
+
+In order to investigate the microscopic description of black hole
+entropy we need a quantum theory of gravity. This is precisely what string theorists have attempted to do and have been partially successful. 
+
+
+
+
+
+
+
+\section{Black holes in string theory}
+In string theory on a $d$-dimensional compact manifold, branes can be wrapped in a cycle of the compact manifold and it looks like a point-like object in $10-d$-dimensional space time. In the regime that supergravity approximation is valid, configurations of this kind  gives rise black hole solutions of the corresponding low-energy supergravity theory. Moreover, if a brane configuration preserves supersymmetry, then the corresponding solution will be an extremal supersymmetric black hole. Extremal black holes  are interesting because they are stable against Hawking radiation and nevertheless have a large entropy.
+On the other hand, configurations without supersymmetry yield non-extremal black holes.
+
+
+
+
+In general, the regime of the parameter space in which supergravity is valid is different from the regime in which weakly coupled string theory is valid where the microstates counting can be performed. Thus, even if we know that a given brane configuration becomes a black hole when we go from a weak to a strong coupling, it is generally difficult to extract microscopic information of the black hole  from the brane configuration.
+
+
+For supersymmetric black holes, however, one can count the number of states at weak coupling and extrapolate the result to the black hole phase due to the BPS property. We will see that in this way, one derives the Bekenstein-Hawking entropy formula (including the precise numerical coefficient) for a 5d supersymmetric black hole \cite{Strominger:1996sh}. (For more detail, I refer to \cite{David:2002wn}.)
+
+
+\subsection{D1-D5-P brane system}
+
+\begin{figure}[h]\centering
+\includegraphics{D1D5}
+\end{figure}
+
+
+
+Let us consider Type IIB compactified on a five-torus $T^5=T^4\times S^1$, which spans the $(x_5 \cdots x_9)$ coordinates, with $Q_1$ D1-branes and $Q_5$ D5-branes in the following configuration.
+\begin{table}[h]\centering\begin{tabular}{c|cccccccccc}
+ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\tabularnewline
+\hline
+$Q_1$ D1 & $\times$ &  &  &  & &  &  &  &  & $\times$\tabularnewline
+$Q_5$  D5& $\times$ &  &  &  &  & $\times$ & $\times$ & $\times$ & $\times$ & $\times$\tabularnewline
+$Q_P$ mom &  &  &  &  & &  &  &  &  & $\rightsquigarrow$\tabularnewline
+\end{tabular}\end{table}
+We consider that  the volume o  $T^4$ is $(2\pi)^4V$ and the radius of $S^1$ is $R$.
+Here we also assume that there is an excitation by open strings carrying momenta $Q_P/R$ in the $x_9$-direction.
+This system preserves 4 real supercharges since each constituent breaks a half of supersymmetry.  
+
+
+
+\subsection{Black hole in 5d supergravity}
+
+If there are large enough D-brane charges $(Q_1,Q_5,Q_P)$ and the five-torus is sufficiently small, the configuration produces a 5d black hole. We would like to compute the Beckenstein-Hawking entropy of the black hole by evaluating the area of the event horizon.
+In this regime, five-dimensional supergravity analysis can be used and it admits the corresponding $1/8$-BPS solution. Ignoring RR-field and $B$-field configuration, the 5d Einstein frame metric of this solution then becomes
+\bea\nonumber
+ds_5^2 = &\! 
+-\lambda(r)^{-2/3} dt^2 + \lambda(r)^{1/3} 
+\left[ dr^2 + r^2 d\Omega_3^2 \right] \,,
+\eea
+%
+where the harmonic functions are
+%
+$$
+\lambda(r)=H_1(r)H_5(r) K(r)  = \Big(1 + {{r_1^2}\over{r^2}} \Big)\Big( 1 + {{r_5^2}\over{r^2}}\Big)\Big(  1+{{r_m^2}\over{r^2}}\Big )\,,
+$$
+%
+with
+%
+$$
+r_1^2 = {\frac{g_{\rm{s}} Q_1\ell_{\rm{s}}^6}{V}} \,, \qquad 
+r_5^2 = g_{\rm{s}} Q_5 \ell_{\rm{s}}^2 \, \qquad
+r_m^2 = {\frac{g_{\rm{s}}^2 Q_P \ell_{\rm{s}}^8}{R^2 V}} \,.
+$$
+%
+Let us briefly evaluate the validity of the  supergravity analysis. In order for the $\alpha^\prime$ corrections to geometry  to be small, the radius parameters have to be large
+with respect to the string unit, $r_{1,5,m}\!\gg\!\ell_{\rm{s}}$. Since we assume $V,R$ are order of the string length, this 
+$$
+g_{\rm{s}} Q_1\gg1~, \qquad g_{\rm{s}} Q_5\gg1~, \qquad g_{\rm{s}}^2 Q_P\gg1~.
+$$
+To suppress string loop corrections, we need $g_{\rm{s}}$ to be small so that the D-brane charges must be sufficiently large for supergravity analysis. 
+
+
+It turns out that the surface gravity and therefore the Hawking temperature of this black hole is zero, $T_{{H}}=0$, as expected.  The metric shows that the event horizon is located at $r=0$ and 
+the Bekenstein-Hawking entropy is
+%
+\bea\label{sugra-result}
+S_{\textrm{BH}} &= {\displaystyle{
+ {\frac{A}{4 G_5}}  = {{1}\over{4G_5}}2
+\pi^2\left[r^2\lambda(r)^{\frac13}\right]^{\frac32} }}
+\ \ {\rm{at\ }} r=0 \,\cr
+&= {\displaystyle{
+ {2{\pi^2}\over{4\left[\pi g_{\rm{s}}^2\ell_{\rm{s}}^8/(4VR)\right]}}
+  \left(r_1 r_5 r_m\right)^{\frac12} 
+= {{2\pi{}VR}\over{g_{\rm{s}}^2\ell_{\rm{s}}^8}} 
+\left(
+{\frac{g_{\rm{s}}{}Q_1\ell_{\rm{s}}^6}{V}}\,g_{\rm{s}}{}Q_5\ell_{\rm{s}}^2\, 
+{\frac{g_{\rm{s}}^2{}Q_P\ell_{\rm{s}}^8}{R^2V}} \right)^{\frac12} }} \cr
+ &=  2\pi\sqrt{Q_1 Q_5 Q_P} \,,
+\eea
+where we use  $G_5=\frac{G_{10}}{(2\pi)^5VR}$ and $16\pi G_{10}=(2\pi)^7g_2^2\ell_s^8$.
+%
+Notice that it is also
+independent of $R$ and of $V$ whereas  the ADM
+mass depends on $R,V$ explicitly.
+%
+$$
+M = {{Q_P}\over{R}} + {{Q_1R}\over{g_{\rm{s}}\ell_{\rm{s}}^2}}
++ {{Q_5RV}\over{g_{\rm{s}}\ell_{\rm{s}}^6}}\,.
+$$
+%
+
+%--------------------------------------------------------------------+
+\subsection{Counting microstates}
+
+
+The next step is to identify the degeneracy of open string states of D1-D5-P system, which can be analyzed at weak coupling limit, i.e. $g_s Q_i \ll 1$. Further simplification can be made by taking the limit that the
+volume of $T^4$ is small as compared to the radius of the circle $S^1$,
+%
+$$
+V^{\frac14}\ll R \,.
+$$
+%
+In this limit,  the theory on the D-branes is effectively $2d$ theory on $(x_1,x_9)$-direction. Moreover,  the smeared D1-branes plus D5-branes have a
+symmetry group
+$SO(1,1)\!\times\!\SO(4)_\parallel\!\times\!\SO(4)_\perp$ where $\SO(4)_\perp\cong \SU(2)\times\SU(2)$ becomes $R$-symmetry of the $2d$ theory which we call $\cN=(4,4)$ 2d CFT. In the supersymmetric configuration, the right-movers are in their ground states so that we count excited left-movers. 
+
+Because the D1-branes are instantons in the D5-brane theory, the
+low-energy theory of interest is in fact a $\sigma$-model on the
+moduli space of instantons 
+$${\cal{M}}=\textrm{Sym}^{Q_1Q_5}(T^4)=(T^{4})^{Q_1Q_5}/S_{Q_1Q_5}~.$$  
+The central
+charge of this 2d CFT is $$c=n_{\rm
+bose}{+}{\frac12}n_{\rm fermi}=6Q_1Q_5~.$$   Roughly, this central
+charge $c$ can be thought of as coming from having $Q_1Q_5$ 1-5
+strings that can move in the 4 directions of $T^4$. Although this orbifold theory has many twisted sectors,  the special point of the moduli space corresponds to a single string wound $Q_1Q_5$ times. It turns out that counting the excitations of this \textbf{long string} is only relevant in the limit of large D-brane charges.  For this long string, the level-matching condition is 
+$$N - \wt N =  \frac{Q_P}{R} W  ~, \quad W=Q_1Q_5~, \quad \to \quad N= \frac{Q_PQ_1Q_5}{R}$$
+where the right-movers are in the ground states $\wt N=0$. 
+
+If $N_m^i$ and $n^i_m$ denote occupation numbers of the four transverse compact bosonic and fermionic oscillators, respectively,  then evaluation of $N$ gives
+\be\label{occupation}
+nW=\sum_{i=1}^4\sum_{m=1}^\infty m(N_m^i+n^i_m)
+\ee
+The degeneracy $\O(Q_1, Q_5, Q_P)$ is then given by  the number of choices for $N_m^i$ and $n^i_m$ subject to \eqref{occupation}.
+
+The partition function of this system is the partition function for
+4 bosons and an equal number of fermions
+%
+$$
+Z = \left[ \prod_{m=1}^\infty {\frac{1+q^{m}}{1-q^{m}}}
+\right]^{4} \equiv \sum \Omega(Q_1, Q_5, Q_P) q^{N} \,,
+$$
+%
+where $\Omega(Q_1,Q_5,Q_P)$ is the degeneracy of states at 
+energy $N= \frac{Q_PQ_1Q_5}{R}$.   At large charges, we can use the Cardy formula
+%
+$$
+\Omega(Q_1,Q_5,Q_P)\!\sim\!\exp\sqrt{{\pi\,c\,E\,(2\pi{}R)}\over{3}}
+= \exp\left(2\pi\sqrt{{{c}\over{6}}\,ER}\right) \,.
+$$
+%
+Therefore the microscopic D-brane statistical entropy is
+%
+$$
+S_{\rm{micro}} = \log\left(\Omega(Q_1,Q_5,Q_P)\right) = 2\pi\sqrt{Q_1Q_5Q_P}
+\,.
+$$
+%
+This agrees exactly with the black hole result \eqref{sugra-result}! 
+
+
+
+
+\begin{figure}[h]\centering
+\includegraphics[width=11cm]{protected}
+\end{figure}
+
+
+
+\subsection{More results}
+
+By coupling the low energy degrees of freedom in the D1-D5-p system to supergravity modes (therefore perturbing the extremal condition), one can also compute the rate of Hawking radiation from these black that agrees precisely with the Hawking calculation. Thus this provides a microscopic explanation of Hawking radiation. (See \cite[\S8]{David:2002wn}.)
+
+In fact, vigorous research in the last decade has shown that one can show the exact match between macroscopic and microscopic calculations of black hole entropy even in finite D-brane charges. 
+
+Moreover, a generalization of Bekenstein-Hawking entropy has been proposed in \cite{Ryu:2006bv} that connects quantum theory of gravity and quantum information theory.  Recent study has clearly suggested that quantum entanglement must have something to do with quantum physics of spacetime.
+
+
+
+
+\bibliography{string-lecture}
+\bibliographystyle{halpha}
+
+
+
+
+
+
+
+
+
+\end{document}

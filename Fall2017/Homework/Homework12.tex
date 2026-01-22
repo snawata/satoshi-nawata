@@ -1,0 +1,489 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{fullpage}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+% \usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+% \usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+
+
+
+%%%%%%%  Greek letters %%%%%%%%%%%%%%%%%%
+\def\a{\alpha}
+\def\b{\beta}
+\def\c{\gamma} \def\g{\gamma}
+\def\d{\delta}
+\def\e{\epsilon}
+\def\f{\phi}
+\def\vf{\varphi}  \def\tvf{\tilde{\varphi}}
+\def\vp{\varphi}
+\def\h{\eta}
+\def\i{\iota}
+\def\j{\psi}
+\def\k{\kappa}
+\def\m{\mu}
+\def\n{\nu}
+\def\o{\omega}  \def\w{\omega}
+\def\q{\theta}  \def\th{\theta}
+\def\r{\rho}
+\def\s{\sigma}
+\def\t{\tau}
+\def\u{\upsilon}
+\def\x{\xi}
+\def\z{\zeta}
+
+\def\A{\Alpha}
+\def\B{\Beta}
+\def\G{\Gamma}
+\def\D{\Delta}
+\def\E{\Epsilon}
+\def\F{Phi}
+\def\h{\eta}
+\def\I{\Iota}
+\def\J{Psi}
+\def\K{\Kappa}
+\def\L{\Lambda}
+\def\M{\Mu}
+\def\N{\Nu}
+\def\O{\Omega}  \def\w{\omega}
+\def\Q{\Theta}  \def\Th{\Theta}
+\def\R{\Rho}
+\def\Si{\Sigma}
+\def\T{\Tau}
+\def\Up{\Upsilon}
+\def\X{\Xi}
+\def\Z{\Zeta}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%% math fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%---------- mathbb font --------------------------------
+%
+
+\newcommand{\bA}{\ensuremath{\mathbb{A}}}
+\newcommand{\bB}{\ensuremath{\mathbb{B}}}
+\newcommand{\bC}{\ensuremath{\mathbb{C}}}
+\newcommand{\bD}{\ensuremath{\mathbb{D}}}
+\newcommand{\bE}{\ensuremath{\mathbb{E}}}
+\newcommand{\bF}{\ensuremath{\mathbb{F}}}
+\newcommand{\bG}{\ensuremath{\mathbb{G}}}
+\newcommand{\bH}{\ensuremath{\mathbb{H}}}
+\newcommand{\bI}{\ensuremath{\mathbb{I}}}
+\newcommand{\bJ}{\ensuremath{\mathbb{J}}}
+\newcommand{\bK}{\ensuremath{\mathbb{K}}}
+\newcommand{\bL}{\ensuremath{\mathbb{L}}}
+\newcommand{\bM}{\ensuremath{\mathbb{M}}}
+\newcommand{\bN}{\ensuremath{\mathbb{N}}}
+\newcommand{\bO}{\ensuremath{\mathbb{O}}}
+\newcommand{\bP}{\ensuremath{\mathbb{P}}}
+\newcommand{\bQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\bR}{\ensuremath{\mathbb{R}}}
+\newcommand{\bS}{\ensuremath{\mathbb{S}}}
+\newcommand{\bT}{\ensuremath{\mathbb{T}}}
+\newcommand{\bU}{\ensuremath{\mathbb{U}}}
+\newcommand{\bV}{\ensuremath{\mathbb{V}}}
+\newcommand{\bW}{\ensuremath{\mathbb{W}}}
+\newcommand{\bX}{\ensuremath{\mathbb{X}}}
+\newcommand{\bY}{\ensuremath{\mathbb{Y}}}
+\newcommand{\bZ}{\ensuremath{\mathbb{Z}}}
+
+
+%
+%---------- mathbf font --------------------------------
+%
+
+
+\newcommand{\bfA}{\ensuremath{\mathbf{A}}}
+\newcommand{\bfB}{\ensuremath{\mathbf{B}}}
+\newcommand{\bfC}{\ensuremath{\mathbf{C}}}
+\newcommand{\bfD}{\ensuremath{\mathbf{D}}}
+\newcommand{\bfE}{\ensuremath{\mathbf{E}}}
+\newcommand{\bfF}{\ensuremath{\mathbf{F}}}
+\newcommand{\bfG}{\ensuremath{\mathbf{G}}}
+\newcommand{\bfH}{\ensuremath{\mathbf{H}}}
+\newcommand{\bfI}{\ensuremath{\mathbf{I}}}
+\newcommand{\bfJ}{\ensuremath{\mathbf{J}}}
+\newcommand{\bfK}{\ensuremath{\mathbf{K}}}
+\newcommand{\bfL}{\ensuremath{\mathbf{L}}}
+\newcommand{\bfM}{\ensuremath{\mathbf{M}}}
+\newcommand{\bfN}{\ensuremath{\mathbf{N}}}
+\newcommand{\bfO}{\ensuremath{\mathbf{O}}}
+\newcommand{\bfP}{\ensuremath{\mathbf{P}}}
+\newcommand{\bfQ}{\ensuremath{\mathbf{Q}}}
+\newcommand{\bfR}{\ensuremath{\mathbf{R}}}
+\newcommand{\bfS}{\ensuremath{\mathbf{S}}}
+\newcommand{\bfT}{\ensuremath{\mathbf{T}}}
+\newcommand{\bfU}{\ensuremath{\mathbf{U}}}
+\newcommand{\bfV}{\ensuremath{\mathbf{V}}}
+\newcommand{\bfW}{\ensuremath{\mathbf{W}}}
+\newcommand{\bfX}{\ensuremath{\mathbf{X}}}
+\newcommand{\bfY}{\ensuremath{\mathbf{Y}}}
+\newcommand{\bfZ}{\ensuremath{\mathbf{Z}}}
+\newcommand{\bfa}{\ensuremath{\mathbf{a}}}
+\newcommand{\bfb}{\ensuremath{\mathbf{b}}}
+\newcommand{\bfc}{\ensuremath{\mathbf{c}}}
+\newcommand{\bfd}{\ensuremath{\mathbf{d}}}
+\newcommand{\bfe}{\ensuremath{\mathbf{e}}}
+\newcommand{\bff}{\ensuremath{\mathbf{f}}}
+\newcommand{\bfg}{\ensuremath{\mathbf{g}}}
+\newcommand{\bfh}{\ensuremath{\mathbf{h}}}
+\newcommand{\bfi}{\ensuremath{\mathbf{i}}}
+\newcommand{\bfj}{\ensuremath{\mathbf{j}}}
+\newcommand{\bfk}{\ensuremath{\mathbf{k}}}
+\newcommand{\bfl}{\ensuremath{\mathbf{l}}}
+\newcommand{\bfm}{\ensuremath{\mathbf{m}}}
+\newcommand{\bfn}{\ensuremath{\mathbf{n}}}
+\newcommand{\bfo}{\ensuremath{\mathbf{o}}}
+\newcommand{\bfp}{\ensuremath{\mathbf{p}}}
+\newcommand{\bfq}{\ensuremath{\mathbf{q}}}
+\newcommand{\bfr}{\ensuremath{\mathbf{r}}}
+\newcommand{\bfs}{\ensuremath{\mathbf{s}}}
+\newcommand{\bft}{\ensuremath{\mathbf{t}}}
+\newcommand{\bfu}{\ensuremath{\mathbf{u}}}
+\newcommand{\bfv}{\ensuremath{\mathbf{v}}}
+\newcommand{\bfw}{\ensuremath{\mathbf{w}}}
+\newcommand{\bfx}{\ensuremath{\mathbf{x}}}
+\newcommand{\bfy}{\ensuremath{\mathbf{y}}}
+\newcommand{\bfz}{\ensuremath{\mathbf{z}}}
+
+
+
+%
+%\parskip=1em
+%\parindent=0.3in
+%\setlength\oddsidemargin{0.5in} \setlength\evensidemargin{0.5in}
+%\setlength\textwidth{5.5in}
+%
+%\hfuzz6pt % Don't bother to report over-full boxes if over-edge is < 6pt
+%
+%\newlength{\defbaselineskip}
+%\setlength{\defbaselineskip}{\baselineskip}
+%\newcommand{\setlinespacing}[1]%
+%           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+%\newcommand{\doublespacing}{\setlength{\baselineskip}%
+%                           {2.0 \defbaselineskip}}
+%\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+%
+%\newcommand{\properpagestyle}{\pagestyle{myheadings}\markboth{}{}\markright{}}
+
+
+%---------- mathscript font -----------------------------
+%
+
+\newcommand{\scA}{\ensuremath{\mathscr{A}}}
+\newcommand{\scB}{\ensuremath{\mathscr{B}}}
+\newcommand{\scC}{\ensuremath{\mathscr{C}}}
+\newcommand{\scD}{\ensuremath{\mathscr{D}}}
+\newcommand{\scE}{\ensuremath{\mathscr{E}}}
+\newcommand{\scF}{\ensuremath{\mathscr{F}}}
+\newcommand{\scG}{\ensuremath{\mathscr{G}}}
+\newcommand{\scH}{\ensuremath{\mathscr{H}}}
+\newcommand{\scI}{\ensuremath{\mathscr{I}}}
+\newcommand{\scJ}{\ensuremath{\mathscr{J}}}
+\newcommand{\scK}{\ensuremath{\mathscr{K}}}
+\newcommand{\scL}{\ensuremath{\mathscr{L}}}
+\newcommand{\scM}{\ensuremath{\mathscr{M}}}
+\newcommand{\scN}{\ensuremath{\mathscr{N}}}
+\newcommand{\scO}{\ensuremath{\mathscr{O}}}
+\newcommand{\scP}{\ensuremath{\mathscr{P}}}
+\newcommand{\scQ}{\ensuremath{\mathscr{Q}}}
+\newcommand{\scR}{\ensuremath{\mathscr{R}}}
+\newcommand{\scS}{\ensuremath{\mathscr{S}}}
+\newcommand{\scT}{\ensuremath{\mathscr{T}}}
+\newcommand{\scU}{\ensuremath{\mathscr{U}}}
+\newcommand{\scV}{\ensuremath{\mathscr{V}}}
+\newcommand{\scW}{\ensuremath{\mathscr{W}}}
+\newcommand{\scX}{\ensuremath{\mathscr{X}}}
+\newcommand{\scY}{\ensuremath{\mathscr{Y}}}
+\newcommand{\scZ}{\ensuremath{\mathscr{Z}}}
+\newcommand{\scAH}{\ensuremath{\mathscr{A}\!\!\scH}}
+
+%
+%---------- mathfrak font -----------------------------
+%
+
+\newcommand{\frakA}{\ensuremath{\mathfrak{A}}}
+\newcommand{\frakB}{\ensuremath{\mathfrak{B}}}
+\newcommand{\frakC}{\ensuremath{\mathfrak{C}}}
+\newcommand{\frakD}{\ensuremath{\mathfrak{D}}}
+\newcommand{\frakE}{\ensuremath{\mathfrak{E}}}
+\newcommand{\frakF}{\ensuremath{\mathfrak{F}}}
+\newcommand{\frakG}{\ensuremath{\mathfrak{G}}}
+\newcommand{\frakH}{\ensuremath{\mathfrak{H}}}
+\newcommand{\frakI}{\ensuremath{\mathfrak{I}}}
+\newcommand{\frakJ}{\ensuremath{\mathfrak{J}}}
+\newcommand{\frakK}{\ensuremath{\mathfrak{K}}}
+\newcommand{\frakL}{\ensuremath{\mathfrak{L}}}
+\newcommand{\frakM}{\ensuremath{\mathfrak{M}}}
+\newcommand{\frakN}{\ensuremath{\mathfrak{N}}}
+\newcommand{\frakO}{\ensuremath{\mathfrak{O}}}
+\newcommand{\frakP}{\ensuremath{\mathfrak{P}}}
+\newcommand{\frakQ}{\ensuremath{\mathfrak{Q}}}
+\newcommand{\frakR}{\ensuremath{\mathfrak{R}}}
+\newcommand{\frakS}{\ensuremath{\mathfrak{S}}}
+\newcommand{\frakT}{\ensuremath{\mathfrak{T}}}
+\newcommand{\frakU}{\ensuremath{\mathfrak{U}}}
+\newcommand{\frakV}{\ensuremath{\mathfrak{V}}}
+\newcommand{\frakW}{\ensuremath{\mathfrak{W}}}
+\newcommand{\frakX}{\ensuremath{\mathfrak{X}}}
+\newcommand{\frakY}{\ensuremath{\mathfrak{Y}}}
+\newcommand{\frakZ}{\ensuremath{\mathfrak{Z}}}
+\newcommand{\fraka}{\ensuremath{\mathfrak{a}}}
+\newcommand{\frakb}{\ensuremath{\mathfrak{b}}}
+\newcommand{\frakc}{\ensuremath{\mathfrak{c}}}
+\newcommand{\frakd}{\ensuremath{\mathfrak{d}}}
+\newcommand{\frake}{\ensuremath{\mathfrak{e}}}
+\newcommand{\frakf}{\ensuremath{\mathfrak{f}}}
+\newcommand{\frakg}{\ensuremath{\mathfrak{g}}}
+\newcommand{\frakh}{\ensuremath{\mathfrak{h}}}
+\newcommand{\fraki}{\ensuremath{\mathfrak{i}}}
+\newcommand{\frakj}{\ensuremath{\mathfrak{j}}}
+\newcommand{\frakk}{\ensuremath{\mathfrak{k}}}
+\newcommand{\frakl}{\ensuremath{\mathfrak{l}}}
+\newcommand{\frakm}{\ensuremath{\mathfrak{m}}}
+\newcommand{\frakn}{\ensuremath{\mathfrak{n}}}
+\newcommand{\frako}{\ensuremath{\mathfrak{o}}}
+\newcommand{\frakp}{\ensuremath{\mathfrak{p}}}
+\newcommand{\frakq}{\ensuremath{\mathfrak{q}}}
+\newcommand{\frakr}{\ensuremath{\mathfrak{r}}}
+\newcommand{\fraks}{\ensuremath{\mathfrak{s}}}
+\newcommand{\frakt}{\ensuremath{\mathfrak{t}}}
+\newcommand{\fraku}{\ensuremath{\mathfrak{u}}}
+\newcommand{\frakv}{\ensuremath{\mathfrak{v}}}
+\newcommand{\frakw}{\ensuremath{\mathfrak{w}}}
+\newcommand{\frakx}{\ensuremath{\mathfrak{x}}}
+\newcommand{\fraky}{\ensuremath{\mathfrak{y}}}
+\newcommand{\frakz}{\ensuremath{\mathfrak{z}}}
+\newcommand{\fraksl}{\ensuremath{\mathfrak{sl}}}
+\newcommand{\frakso}{\ensuremath{\mathfrak{so}}}
+\newcommand{\fraksp}{\ensuremath{\mathfrak{sp}}}
+
+%%%%%%%%%%%%  Calligraphic, Roman and Maths integers %%%%%%%%%%%%%%%%%%
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\su}{\mathrm{su}}
+\newcommand{\so}{\mathrm{so}}
+\newcommand{\spl}{\mathrm{sp}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\sll}{\mathrm{sl}}
+\newcommand{\U}{\mathrm{U}}
+\newcommand{\ul}{\mathrm{u}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Pin}{\mathrm{Pin}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\Im}{{\rm Im}}
+\renewcommand{\Re}{{\rm Re}}
+\newcommand{\Tr}{\mbox{Tr}}
+\newcommand{\Pf}{\mbox{Pf}}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\Vir}{{\rm Vir}}
+\newcommand{\Li}{{\rm Li}}
+
+\def\tl{\tilde}
+\def\wt{\widetilde}
+\def\wh{\widehat}
+\def\bar{\overline}
+
+
+\def\ap{{\alpha^\prime}}
+\def\bz{\bar{z}}
+
+
+
+\def\bea{\begin{align}}
+\def\eea{\end{align}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{align}}
+\def\ea{\end{align}}
+
+
+\usepackage{graphicx}
+
+
+%%% Yokoyama def %%%
+\newcommand{\ol}{\overline}
+\newcommand{\nord}[1]{\vcentcolon\mathrel{#1}\vcentcolon}
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}\thispagestyle{empty}
+
+\centerline{\Large \bf Homework 12 (Due at class on Dec 15)}
+
+
+\subsection*{Prob. 1 (S-duality)}
+
+In the lecture, the low-energy effective action of Type I string is given by
+\begin{align}\label{TypeI}
+S_{\textrm{I}}&=S_{\textrm{grav}}+S_{\textrm{YM}}\cr
+S_{\textrm{grav}}&= \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G}   \,\left[
+e^{-2\Phi}( R +4 \partial_\mu \Phi \partial^\mu \Phi )-\frac{1}{2}| \wt G_{3}|^{2} \right] \cr
+S_{\textrm{YM}}&=- \frac{1}{2g_{10}^2} \int d^{10}x \sqrt{ -G}\,  e^{-\Phi} \Tr_{V} |F_2|^2~.
+\end{align}
+Also, the low-energy effective action of 
+Heterotic $\SO(32)$ is given by
+\begin{align}\label{Het}
+S_{\textrm{Het}}&=S_{\textrm{grav}}+S_{\textrm{YM}}\cr
+S_{\textrm{grav}}&= \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G}   \,e^{-2\Phi}\left[
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2}| \wt H_{3}|^{2} \right] \cr
+S_{\textrm{YM}}&=- \frac{1}{2g_{10}^2} \int d^{10}x \sqrt{ -G}\,  e^{-2\Phi} \Tr_{V} |F_2|^2
+\end{align}
+
+\noindent\textbf{1.1} Explain why the Yang-Mills action $S_{\textrm{YM}}$ in Type I \eqref{TypeI} has $e^{-\Phi}$ whereas $S_{\textrm{YM}}$ in Heterotic $\SO(32)$  \eqref{Het} has $e^{-2\Phi}$.
+
+\vspace{.3cm}
+\noindent\textbf{1.2} Show that Type I \eqref{TypeI} and Heterotic SO(32) \eqref{Het} actions are related by the following the field definitions 
+\begin{align}
+G_{\m\n}^{I} = e^{-\Phi^{H}} G_{\m\n}^{H} ~,&\qquad  \Phi^I = -\Phi^{H} \cr
+\wt G_{3}^I = \wt  H_{3}^{H}~ ,&\qquad  A^I = A^{H} ~.\nonumber
+\end{align}
+
+
+\subsection*{Prob. 2 (Heterotic M-theory)}
+\noindent\textbf{2.1} 
+Show that the length of a line interval $S^1/\bZ_2$ in Heterotic M-theory is $R=g_{\textrm{Het}}^{\frac23}\ell_p$ by using the following duality chain in the lecture note:
+$$\textrm{HE} \xrightarrow{T} \textrm{HO} \xrightarrow{S} \textrm{Type I} \xrightarrow{T}  \textrm{Type I'}  \xrightarrow{\textrm{strong coupling}} \textrm{M-theory}  $$
+Note that T-duality on a circle $S^1$  relate radii and string coupling constants as
+$$
+\wt R= \ell_s^2/R~,\qquad \wt g_s=\ell_s g_s/R~,
+$$
+whereas S-duality on a circle $S^1$ relate them as
+$$
+\wt R=R/\sqrt{g_s}~,\qquad \wt g_s=1/ g_s~,
+$$
+where $\ell_s=\sqrt{\a'}$ and the definition of $\ell_p$ is as in Lecture note 12. Note that tilde denotes parameters in the dual theory.
+
+\vspace{.3cm}
+\noindent\textbf{2.2} 
+Give an explanation how Heterotic strings and fivebranes are related to M2 and M5-branes in Heterotic M-theory up on the compactification on a segment $S^1/\bZ_2$. Namely, argue how Heterotic strings and fivebranes become M2 and M5-branes in the strong coupling regime and vice versa.
+
+
+\subsection*{Prob. 3 (Type I with D1-brane)}
+Let us consider the massless spectrum of string excitations in the D1-D1 and the D1-D9 sector of a D1-brane along directions $X^0, X^1$ in Type I string theory and compare this to the massless fields on the worldsheet of the SO(32) heterotic string.
+
+
+\vspace{.3cm}
+\noindent\textbf{3.1} 
+Let us first consider  the D1-D1 strings.
+Here $X^I,\psi^I_{\pm}$, $I=2,\ldots,9$ have DD boundary
+conditions while $X^{\m},\psi^{\m}_{\pm}$, $\m=0,1$ have NN
+boundary conditions. 
+
+
+
+As in the bosonic open string, the NN boundary condition identifies the right  and left fermion modes $\psi_n^\mu=\wt\psi_n^\mu$ so that
+$$
+\psi^\mu(\t, \s)=\sum\limits_{n\in\bZ+\nu}\psi_n^\mu  ( e^{-in(\t-\s)}+e^{-in(\t+\s)})~,
+$$
+where $\nu$ takes the values 0 (R) or $\frac12$ (NS). On the other hand,  the DD boundary condition identifies the right  and left fermion modes by sign $\psi_n^I=-\wt\psi_n^I$ so that
+$$
+\psi^I(\t, \s)=\sum\limits_{n\in\bZ+\nu}\psi_n^I  ( e^{-in(\t-\s)}-e^{-in(\t+\s)})~.
+$$
+Show that worldsheet parity $\Omega:\s\to \pi-\s$ acts on the modes as 
+$$\Omega \psi_n  \Omega^{-1}  = \pm e^{i\pi n} \psi_n  ~, \qquad +/-:\textrm{NN/DD}~.$$
+
+The actions of the orientifold $\Omega$ on the vacua of the D1-string  given by
+$$\Omega |0\rangle_{NS} =-i|0\rangle_{NS}~,\qquad \Omega |s_0=\tfrac12, \mathbf{s}\rangle_{R} =- e^{i\pi(s_1+s_2+s_3+s_4)}|s_0=\tfrac12,  \mathbf{s}\rangle_{R}$$
+with $s_0$ the spin in directions $X^0, X^1$ and $s_1,\cdots, s_4$ the spin in the normal directions. Then, show that the orientifold projection $(1+\Omega)/2$ keeps $\psi_{-\frac12}^I |0\rangle$ for the normal directions and removes  $\psi_{-\frac12}^\mu |0\rangle$ for the tangent directions in the NS sector. In the R sector, show that the ground states $\textbf{16}$ spanned by $|s_0=\tfrac12,  \mathbf{s}\rangle$ are projected  onto $\bf 8_c$ by the orientifold action.
+
+
+%
+%
+%Consider now the DN fluctuations. In this case, the boundary conditions for the transverse bosons and
+%fermions become
+%\be
+%{\rm DN~~NS~~sector}~~~~~~~~~\left.\psi_++\psi_-\right|_{\s=0}=\left.
+%\psi_++\psi_-\right|_{\s=\pi}=0
+%\,,\label{590}\ee
+%\be
+%{\rm DN~~R~~sector}~~~~~~~~~\left.\psi_+-\psi_-\right|_{\s=0}=
+%\left.\psi_++\psi_-\right|_{\s=\pi}=0
+%\,,\label{591}\ee
+%while they are NN in the longitudinal directions.
+%
+%
+%
+%
+
+
+\vspace{.3cm}
+\noindent\textbf{3.2} Next, let us consider D1-D9 string. Here $X^I,\psi^I_{\pm}$, $I=2,\ldots,9$ have DN boundary
+conditions while $X^{\m},\psi^{\m}_{\pm}$, $\m=0,1$ have NN
+boundary conditions as before.  In Homework 7 Problem 1, we have seen that the bosonic open string with DN boundary condition admits the following mode expansion
+$$
+ X = c+i\sqrt{\frac{\alpha'}{2}} \sum_{n \in \mathbb Z+1/2} \frac{\alpha_{n}}{n}
+ \left( e^{-i{n}\sigma^-} -e^{-i{n}\sigma^+}  \right) \,.
+$$
+In fact, the supersymmetry requires the periodicity of fermion $\psi(\t,\s)$ (or mode $\psi_n$) in the R sector to be the same as for  $X(\t,\s)$ (or mode $\a_n$). In the NS sector, it is the opposite (modes differ by $\frac12$). Using this fact, compute the zero point energy in the NS and R sector. In addition, find the massless spectrum in the D1-D9 string after the GSO projection.
+Note that since Chan-Patton factors are allowed in the free string end, there are 32 of
+them.
+
+
+
+\end{document}
+

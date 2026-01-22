@@ -1,0 +1,36 @@
+\begin{thebibliography}{GHMR85b}
+
+\bibitem[GHMR85a]{Gross:1985fr}
+D.~J. Gross, J.~A. Harvey, E.~J. Martinec, and R.~Rohm.
+\newblock {Heterotic String Theory. 1. The Free Heterotic String}.
+\newblock {\em Nucl. Phys.}, B256:253, 1985.
+
+\bibitem[GHMR85b]{Gross:1984dd}
+D.~J. Gross, J.~A. Harvey, E.~J. Martinec, and R.~Rohm.
+\newblock {The Heterotic String}.
+\newblock {\em Phys. Rev. Lett.}, 54:502--505, 1985.
+
+\bibitem[GHMR86]{Gross:1985rr}
+D.~J. Gross, J.~A. Harvey, E.~J. Martinec, and R.~Rohm.
+\newblock {Heterotic String Theory. 2. The Interacting Heterotic String}.
+\newblock {\em Nucl. Phys.}, B267:75--124, 1986.
+
+\bibitem[GSW87]{GSW}
+M.~B. Green, J.~H. Schwarz, and E.~Witten.
+\newblock {\em {Superstring Theory Vol. 1,2}}.
+\newblock Cambridge University Press, 1987.
+
+\bibitem[Kir08]{kirillov2008introduction}
+A.~Kirillov.
+\newblock {\em
+  \href{https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf}{An
+  introduction to Lie groups and Lie algebras}}, volume 113.
+\newblock Cambridge University Press, 2008.
+
+\bibitem[Pol06]{Polchinski:2005bg}
+J.~Polchinski.
+\newblock {Open heterotic strings}.
+\newblock {\em JHEP}, 09:082, 2006,
+  \href{http://arxiv.org/abs/hep-th/0510033}{{\tt arXiv:hep-th/0510033}}.
+
+\end{thebibliography}

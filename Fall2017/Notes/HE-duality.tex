@@ -1,0 +1,83 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{amsfonts,amssymb,amsmath}
+
+\begin{document}
+\pagestyle{empty}
+%
+\tikzstyle{int}=[draw, fill=blue!20, minimum size=2em]
+\tikzstyle{init} = [pin edge={to-,thin,black}]
+%
+%\begin{tikzpicture}[->,auto,node distance=1.5cm,
+%  thick,gauge node/.style={circle,draw},matter node/.style={rectangle,draw}]
+%
+%  \node[gauge node] (1) {1};
+%  \node[gauge node] (2) [right of=1] {2};
+%  \node (3) [right of=2] {$\cdots$};
+%  \node[gauge node] (4) [ right of=3] {$N$};
+%  \node[matter node] (5) [ right of=4, minimum height=0.9cm] {$N+1$};
+%  
+%   \path[every node/.style={font=\sffamily\small}]
+%    (1) edge node [bend left]  {} (2)
+%    (2) edge node [right] {} (3)
+%    (3) edge node [right] {} (4)
+%    (4) edge node [left] {} (5);
+%\end{tikzpicture}
+
+\begin{tikzpicture}[auto,node distance=2cm,
+  thick,gauge node/.style={},matter node/.style={rectangle,draw}]
+
+
+   
+
+  \node[gauge node] (11) at (0,0) {HO on $S^1$};
+   \node[gauge node] (12) [right of=11] {};
+    \node[gauge node] (21) [below of=11] {HE on $S^1$};
+    \node [gauge node] (31) at (4,-4) {M-theory on $S^1\times S^{1}/\mathbb{Z}_2$ with HW domain walls};
+  \node[gauge node] (14) at (8,0) {Type I on $S^1$};
+     \node[gauge node] (13) [left of=14] {};
+    \node[gauge node] (24)  [below of=14] {Type I'};
+
+
+%\begin{scope}
+%  \draw [->] (1,0) to node [midway] {$\Omega$} (11);
+%    \draw[->]   (01) to [ left] node [midway] {$S^1/\mathbb{Z}_2$} (12);
+%    \draw[->]   (01) to [ right] node [midway] {$S^1$} (15);
+  \draw [<->] (12) to  node [above]{S-dual} (13);
+    \draw [<->] (11) to  node [left]{T-dual} (21);
+        \draw [<->] (14) to  node [right]{T-dual} (24);
+                \draw [->] (24) to  node [right]{$g_s\gg0 $} (31);
+                \draw [->] (21) to  node [left]{$g_s\gg0$} (31);
+%   \draw[->]   (12) to [ left] node [midway] {$S_R^1$} (21);
+%      \draw[->]   (13) to [ right] node [midway] {$S_{\frac1R}^1$} (21);
+%         \draw[->]   (14) to [ left] node [midway] {$S_R^1$} (22);
+%      \draw[->]   (15) to [ right] node [midway] {$S_{\frac1R}^1$} (22);
+%               \draw[->]   (13) to [ left] node [midway] {$T^4$} (31);
+%      \draw[->]   (14) to [ right] node [midway] {K3} (31);
+%    \draw (11) to  node [right,scale=.7]{$Q_1$} (22);
+%  \draw (21) to  node [right,scale=.7]{$P_1$} (11);
+%  \draw [<->] (14) to node [above,scale=.7]{$B_2$} (15);
+%    \draw (12) to node [right,scale=.7]{$Q_2$} (23);
+%  \draw (22) to  node [right,scale=.7]{$P_2$} (12);
+%    \draw (13) to node [above,scale=.7]{$B_{M-1}$} (14);
+%        \draw (13) to node [ right,scale=.7]{$Q_{M-1}$} (24);
+%       \draw (14) to  node [above,scale=.7]{$B_{M}$} (15);
+%  \draw (24) to  node [right,scale=.7]{$P_{M}$} (14);
+%    \draw (14) to  node [right,scale=.7]{$Q_{1}$} (25);
+% \draw (25) to  node [right,scale=.7]{$P_{1}$} (15);
+%     \draw[<-] (15) to  node [midway]  {$\Omega$} (11.3,0);
+%          \draw (15) to  node [midway]  {} (26);
+ 
+%  \end{scope}
+%   \path[]
+%    (11) edge [ loop above] node [above,scale=.7]{$A_1$} (11)
+%       (12)     edge [loop above] node [above,scale=.7]{$A_2$} (12)
+%           (14) edge [loop above] node [above,scale=.7]{$A_M$} (14)
+% (15) edge [loop above] node [above,scale=.7]{S-dual} (15);
+\end{tikzpicture}
+
+
+
+\end{document}

@@ -1,0 +1,40 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{AGM{\etalchar{+}}00}
+
+\bibitem[AGM{\etalchar{+}}00]{Aharony:1999ti}
+O.~Aharony, S.~S. Gubser, J.~M. Maldacena, H.~Ooguri, and Y.~Oz.
+\newblock {Large N field theories, string theory and gravity}.
+\newblock {\em Phys. Rept.}, 323:183--386, 2000,
+  \href{http://arxiv.org/abs/hep-th/9905111}{{\tt arXiv:hep-th/9905111}}.
+
+\bibitem[GKP98]{Gubser:1998bc}
+S.~S. Gubser, I.~R. Klebanov, and A.~M. Polyakov.
+\newblock {Gauge theory correlators from noncritical string theory}.
+\newblock {\em Phys. Lett.}, B428:105--114, 1998,
+  \href{http://arxiv.org/abs/hep-th/9802109}{{\tt arXiv:hep-th/9802109}}.
+
+\bibitem[Mal99]{Maldacena:1997re}
+J.~M. Maldacena.
+\newblock {The Large N limit of superconformal field theories and
+  supergravity}.
+\newblock {\em Int. J. Theor. Phys.}, 38:1113--1133, 1999,
+  \href{http://arxiv.org/abs/hep-th/9711200}{{\tt arXiv:hep-th/9711200}}.
+\newblock [Adv. Theor. Math. Phys.2,231(1998)].
+
+\bibitem[Qua15]{Qualls:2015qjb}
+J.~D. Qualls.
+\newblock {Lectures on Conformal Field Theory}.
+\newblock 2015, \href{http://arxiv.org/abs/1511.04074}{{\tt arXiv:1511.04074}}.
+
+\bibitem[tH74]{tHooft:1973alw}
+G.~t.~Hooft.
+\newblock {A Planar Diagram Theory for Strong Interactions}.
+\newblock {\em Nucl. Phys.}, B72:461, 1974.
+
+\bibitem[Wit98]{Witten:1998qj}
+E.~Witten.
+\newblock {Anti-de Sitter space and holography}.
+\newblock {\em Adv. Theor. Math. Phys.}, 2:253--291, 1998,
+  \href{http://arxiv.org/abs/hep-th/9802150}{{\tt arXiv:hep-th/9802150}}.
+
+\end{thebibliography}

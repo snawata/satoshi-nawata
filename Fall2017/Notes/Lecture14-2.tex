@@ -1,0 +1,915 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{hyperref} % Use the Charter font for the document text
+%\usepackage[UTF8]{ctex}
+\usepackage{jheppub}
+
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage{gensymb}
+\usepackage{simplewick}
+\usepackage{feynmp-auto}
+\usepackage{wrapfig}
+
+
+
+%%%今村セッテッティング%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\HH}{\mathbb{H}}
+
+\newcommand{\hf}{\frac{1}{2}}
+\newcommand{\tr}{{\rm tr}}
+\newcommand{\ind}{{\rm ind}}
+\newcommand{\ol}{\overline}
+\newcommand{\ul}{\underline}
+\newcommand{\up}{\uparrow}
+\newcommand{\dn}{\downarrow}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\wh}{\widehat}
+
+
+%%%横山セッティング%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\NN}{\mathcal{N}\!}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\UU}{U(1)}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\SS}{\mathbf{S}}
+\renewcommand{\Im}{\mathrm{Im}}
+\renewcommand{\Re}{\mathrm{Re}}
+%\renewcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\Tr}{{\rm Tr}}
+
+\renewcommand{\r}{\mathrm}
+
+\newcommand{\sign}{\mathrm{sign}}
+
+\newcommand{\stimes}{\hspace{-1pt}\times\hspace{-1pt}}
+
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\la}{\leftarrow}
+\newcommand{\ro}{\sqrt}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\Pexp}{\mathrm{Pexp}}
+
+\newcommand{\nn}{\nonumber \\}
+%\newcommand{\1}{\mbox{1}\hspace{-0.25em}\mbox{l}}
+
+%数字のみ対応
+\newcommand{\Maru}[1]{\ooalign{
+\ifnum#1<10 \hfil\resizebox{.9\width}{.85\height}{#1}\hfil
+\else
+\hfil\resizebox{.6\width}{.8\height}{#1}\hfil
+\fi
+\crcr
+\raise.1ex\hbox{$\bigcirc$}}}
+
+%全文字対応
+\newcommand{\maru}[1]{\ooalign{
+\hfil\resizebox{.8\width}{\height}{#1}\hfil
+\crcr
+\raise.1ex\hbox{\large$\bigcirc$}}}
+
+
+\newcommand{\nord}[1]{\vcentcolon\mathrel{#1}\vcentcolon}
+\providecommand{\vcentcolon}{\mathrel{\mathop{:}}}
+
+
+\def\P{\mathop{\cal P}}
+\def\diag{\mathop{\rm diag}}
+
+
+\def\Re{\mathop{\rm Re}\nolimits}
+\def\Im{\mathop{\rm Im}\nolimits}
+\def\Det{\mathop{\rm Det}\nolimits}
+\def\sign{\mathop{\rm sign}\nolimits}
+
+
+%%% rap %%% - make two letters overlap
+\newcommand{\rap}[2]
+{\setbox1=\hbox{#1}%
+\setbox2=\hbox to\wd1{\hss #2\hss}%
+\mbox{\rlap{\box1}\box2}}
+
+%\newcommand{\sla}[1]{\rap{$#1$}{/}}
+\newcommand{\sla}[1]{\rap{$#1$}{$\backslash$}}
+
+
+\def\DY#1{{\MyGreen [DY: #1]}}
+\newcommand{\MyGreen}{\color [rgb]{0,0.7,0}}
+
+\usepackage[vcentermath]{youngtab}
+% \Yboxdim4pt
+\newcommand{\Y}{\yng}
+\newcommand{\Young}{}
+
+
+%%%title def%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\def\maketitle{
+\noindent
+{\Large \@title \par\vskip 2pt}
+\noindent
+{\large \@date \hspace{4pt} \@author}
+%\\[-2pt]
+%\noindent------------------------------------------------------------------------------------------
+\par\vskip 1.5em
+}
+
+\author{横山 大輔}
+\date{\today}
+%%%本文%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \title{\centerline{Lecture 2}}
+\begin{document}
+% \maketitle
+% \begin{abstract}
+
+% \end{abstract}
+% \tableofcontents
+
+%  \pagestyle{fancy}
+%  \renewcommand{\headrulewidth}{0.0pt}
+%  \rhead{}
+%  \lhead{}
+%  \cfoot{[\ \scshape\oldstylenums{\thepage}\ / %
+%    \scshape\oldstylenums{\pageref{lastpage}} ]}
+%  \rfoot{\@author}
+
+% \setcounter{section}{}
+% \setcounter{subsection}{}
+% \setcounter{subsubsection}{}
+
+\centerline{\Large \bf  Lecture 14}
+
+% \vspace{12pt}
+% \DY{なにかコメント}
+
+% \vspace{-12pt}
+
+% \vspace{-4pt}
+% \begin{itemize}
+%  \setlength{\itemsep}{0pt}
+%  \item Type I superstring theory.
+%  \item In type I theory, we only have D$1$-, D$5$-, and D$9$-, branes.
+%  \item O$9^-$-plane is needed for type I to be consistent theory.
+%  \item T-duality of type I theory.
+% \end{itemize}
+% \vspace{-4pt}
+
+
+
+\section{D-brane dynamics}
+
+
+So far we treated D-branes as a static solid object that is associated to boundary conditions.
+On the other hand, it actually has dynamics as like a fundamental string.
+We will learn the dynamics mainly through their action.
+Therefore, the first half is devoted to derive the action for D$p$-branes.
+Later half is devoted for connection between D-branes, F1-string, and NS5-brane.
+
+
+\subsection{D-brane action}
+
+We assume D-branes action is something similar to Nambu-Goto action.
+Note that when we quantize the string action we used a string sigma action instead of Nambu-Goto action,
+so that we can evade complexity of the square root.
+There, the dimension of the world-sheet to be $2$ was crucial for quantization.
+Therefore, we cannot follow the quantization procedure for the fundamental string to quantize D$p$-brane, in general.
+Namely, the action we will learn here is an effective action of D-branes.
+
+
+What we expect for the action is that
+\vspace{-4pt}
+\begin{itemize}
+ \setlength{\itemsep}{0pt}
+ \item it contains scalars that is a map from the world-sheet to space-time,
+ \item it also contains vectors living on the D-branes, which arises from an open string massless spectrum,
+ \item it involves B-field because open strings end on D-branes,
+ \item it has supersymmetry (though we only talk about bosonic part in this lecture).
+\end{itemize}
+\vspace{-4pt}
+The proposed effective action is called \textbf{Dirac-Born-Infeld(DBI) action}.
+There are several approach to the action.
+We assume Nambu-Goto action for D-branes and generalize it by utilizing T-duality.
+Hence, \textit{the action is T-duality manifest}.
+
+We will describe a world-sheet of D$p$-branes by $\sigma^a (a=0,1,\cdots,p)$.
+$X^\mu(\sigma^a)$ are the scalars.
+% Gauge field and its field strength are described by $A_\mu$ and $F_{\mu\nu}$, respectively.
+Then, the Nambu-Goto action is
+\begin{align*}
+ S_\textrm{D$p$} &= -T_\textrm{D$p$} \int d^{p+1}\sigma
+ \sqrt{-\det \left( G_{\mu\nu} \frac{\partial X^\mu}{\partial \sigma^a} \frac{\partial X^\nu}{\partial \sigma^b} \right)} \ ,
+\end{align*}
+where $T_\textrm{D$p$}$ is a D$p$-brane tension, which is discussed later.
+$x^\mu$, which will appear later, are used for space-time coordinate.
+
+
+
+Let us consider a simple set up (see Fig.~\ref{D1D2.eps}).
+\begin{figure}[htb]
+\centerline{\includegraphics[width=250pt]{D1D2.eps}}
+\caption{D$1$-brane and its T-dual D$2$-brane on $\RR \stimes S^1$.}
+\label{D1D2.eps}
+\end{figure}
+The space-time is $\RR_t \stimes \RR \stimes S^1$
+and the metric is $ds^2 = \eta_{\mu\nu} dx^\mu dx^\nu$ (i.e. $G_{\mu\nu} = \eta_{\mu\nu}$).
+D$1$-brane locates at $X_2$ ($\sim X_2 +2\pi R$),
+and D$2$-brane has Wilson line $A_2$ ($\sim A_2 +\frac{1}{\wt R}$).
+Note that here $A_2$ is not a 2-form but $A_{\mu=2}$.
+T-duality relates these quantities (see Lecture note 9):
+\begin{align*}
+ X_2 = 2\pi \alpha' A_2 \ .
+\end{align*}
+Now consider vibrating D$1$-brane $X^2 = X^2(X^1)$ (see Fig.~\ref{vibD1.eps}).
+\begin{figure}[htb]
+\centerline{\includegraphics[width=120pt]{vibD1.eps}}
+\caption{Vibrating D$1$-brane.}
+\label{vibD1.eps}
+\end{figure}
+It maps to a field strength $F_{12} = \partial_1 X_2(X^1) \neq 0$ on D2-brane.
+Suppose the vibrating D$1$-brane is described by the Nambu-Goto action
+\begin{align*}
+ S_\textrm{D1} &= -T_\textrm{D1} \int d^2\sigma \sqrt{-\det \left( G_{\mu\nu} \frac{\partial X^\mu}{\partial \sigma^a}
+ \frac{\partial X^\nu}{\partial \sigma^b} \right)} \quad\textrm{with}\quad
+ X^0 = \sigma^0 \ , \quad X^1 = \sigma^1 \ , \nn
+ &= -T_\textrm{D1} \int d\sigma^0 d\sigma^1 \sqrt{1 +\left(\frac{\partial X^2}{\partial \sigma^1} \right)^2} \ .
+\end{align*}
+This expression seems to coincide with
+\begin{align*}
+ S_\textrm{D2} &= -T_\textrm{D2} \int d^3\sigma \sqrt{-\det \left( G_{\mu\nu} \frac{\partial X^\mu}{\partial \sigma^a}
+ \frac{\partial X^\nu}{\partial \sigma^b} +2\pi \alpha' F_{ab} \right)}  \nn
+ &= -T_\textrm{D2} \cdot 2\pi \wt R\cdot \int d\sigma^0 d\sigma^1 \sqrt{1 +\left(2\pi\alpha'F_{12} \right)^2} \ .
+\end{align*}
+
+
+\subsubsection*{D-brane tension}
+
+From the dimension analysis D-brane tension should be the following form.
+\begin{align*}
+ T_{\mathrm Dp} \sim \frac{\mathrm{mass}}{p\textrm{-dim vol}} \quad\Rightarrow\quad
+ T_{\mathrm Dp} \sim \frac{1}{l_s^{p+1}} \ .
+\end{align*}
+From the argument above in order for the two action to coincide
+we need $T_\textrm{D1} = 2\pi \wt R T_\textrm{D2}$.
+On the other hand, we do not want $T_{\textrm{D}p}$ to depend on $R$ because
+$T_{\textrm{D}p}$ should be independent of space-time geometry.
+Note that D-brane effective theory is supposed to reproduce open string amplitude,
+whose leading contribution is the disk amplitude $\sim e^{-\langle \Phi \rangle}$. % \DY{homework ? see Lec. 4}
+Thus, we reach the following form
+\begin{align*}
+ S_{\textrm{D}p} &= -T_{\textrm{D}p} \int d^{p+1}\sigma\, e^{-\Phi(X)} \sqrt{-\det \left( G_{\mu\nu}
+ \partial_a X^\mu \partial_b X^\nu +2\pi \alpha' F_{ab} \right)} \ .
+\end{align*}
+The ratio of effective tensions of D1 and D2 branes is
+\begin{align*}
+ \frac{T_{\textrm{D}1}^\mathrm{eff}}{T_{\textrm{D}2}^\mathrm{eff}}
+ = \frac{T_{\textrm{D}1} e^{-\Phi}}{T_{\textrm{D}2} e^{-\wt\Phi}}
+ =  \frac{T_{\textrm{D}1}}{T_{\textrm{D}2}} \cdot \frac{\wt R}{l_s} = 2\pi \wt R
+ \quad\Rightarrow\quad T_{\textrm{D}1} = 2\pi l_s \cdot T_{\textrm{D}2} \ .
+\end{align*}
+Note that the dilation field transforms under T-duality as $e^{-\wt\Phi} = e^{-\Phi} \frac{\wt R}{l_s}$ (see Homework 11 Prob. 4).
+For D-branes in superstring theory the correct normalization is
+$T_{\textrm{D}p} = \frac{2\pi}{(2\pi l_s)^{p+1}}$. % \DY{Homework ? heavy calculation}
+
+
+
+\subsubsection*{RR charge and its normalization}
+
+We heavily used the fact that D$p$-branes couples to $C_{p+1}$ in previous lectures.
+Let us consider a concrete coupling.
+It should be the following form.
+\begin{align*}
+ S_{\textrm{D}p} = \cdots + q_{\textrm{D}p} \cdot \int d^{p+1}\sigma\, e^{-\Phi}
+ C_{\mu_1\cdots\mu_{p+1}}(X) \frac{\partial X^{\mu_1}}{\partial \sigma^1 } \cdots
+ \frac{\partial X^{\mu_{p+1}}}{\partial \sigma^{p+1} }
+ = \cdots +q_{\textrm{D}p} \cdot \int_{\textrm{D}p} e^{-\Phi} C_{(p+1)} \ .
+\end{align*}
+By considering T-duality we can conclude that
+$q_{\textrm{D}p} = \frac{2\pi}{(2\pi l_s)^{p+1}} = T_{\textrm{D}p}$ (up to a constant). % \DY{Homework ?}
+Note that the equality of the charge and the tension is crucial for multiple D$p$-branes to co-exist statically.
+This is because the tension induce gravitational force (graviton \& dilaton) between D$p$-branes, which is attractive,
+on the other hand, the RR charge induce repulsive force for positively(negatively) charged objects, which are D$p$-branes.
+
+
+Note that we have to use proper normalization for RR-fields.
+The convention used above is called \textbf{string normalization},
+and the one used in SUGRA is called \textbf{canonical normalization}.
+Let us recall the IIA SUGRA. Appropriate part is, for example,
+\begin{align*}
+ S_{A,R} = \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{-G} \left[ -\frac{1}{2} G_{(2)}^2 \right]
+ +q_{\textrm{D}0} \cdot \int_{\textrm{D}0} C_{(1)} \ .
+\end{align*}
+The same expression in the string normalization is
+\begin{align*}
+ S_{A,R} = \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{-G} e^{-2\Phi} \left[ -\frac{1}{2} G_{(2)}^2 \right]
+ +q_{\textrm{D}0} \cdot \int_{\textrm{D}0} e^{-\Phi} C_{(1)} \ .
+\end{align*}
+The Dirac quantization conditions(for the details see homework 11 Prob. 2.2) for these two expressions are the same:
+\begin{align*}
+ 2\kappa_{10}^2 q_e q_m \in 2\pi \ZZ \ .
+\end{align*}
+($q_e = q_{\mathrm{D}0}$ and $q_m = q_{\mathrm{D}(6)}$ for the above case.)
+However, we also define $q^\mathrm{eff} = q e^{-\Phi} = q g_s$ in the string normalization,
+then, the quantization condition is
+\begin{align*}
+ 2\kappa_{10}^2 q_e^\mathrm{eff} q_m^\mathrm{eff} g_s^2 \in 2\pi \ZZ \ .
+\end{align*}
+In this convention we always assume that $\Phi$ is non-dynamical.
+Confirm that $q_{\textrm{D}p}^\mathrm{eff} = T_{\textrm{D}p}^\mathrm{eff} = \frac{2\pi}{(2\pi l_s)^{p+1}g_s}$
+satisfies the quantization condition.
+Note that some references define $q e^{-\Phi}$ as $q$ (similarly $T_{\textrm{D}p}e^{-\Phi}$ as $T_{\textrm{D}p}$).
+The reason we used canonical normalization is simply that the expression is much simpler (especially kinetic terms).
+
+
+For the B-field, the normalization is different and the quantization condition is
+\begin{align*}
+ T_\mathrm{F1} \cdot T_\mathrm{NS5} \cdot 2\kappa_{10}^2 g_s^2 \in 2\pi \ZZ \ .
+\end{align*}
+Since $T_\mathrm{F1} = \frac{2\pi}{(2\pi l_s)^2}$,
+\begin{align*}
+ T_\mathrm{NS5} = \frac{2\pi}{T_\mathrm{F1} \cdot 2\kappa_{10}^2 g_s^2}
+ = \frac{2\pi}{(2\pi l_s)^6 g_s^2} \ .
+\end{align*}
+
+
+
+% \textbf{Dirac quantization condition}
+
+
+% % Let us consider D$p$-brane located at $\bm x_{\perp} = (x_{p+1},\cdots,x_9) = \bm 0$.
+% % Then, the RR-coupling becomes
+% % \begin{align*}
+% %  \mu_{\textrm{D}p} \cdot \int_{\bm x_{\perp} = \bm 0} C_{p+1}
+% %  = \mu_{\textrm{D}p} \cdot \int_{\bm x_{\perp} = \bm 0} C_{p+1} \wedge \delta(\bm x_{\perp})
+% %  dx^{p+1} \cdots dx^9 \ .
+% % \end{align*}
+% % With the kinetic term the action is
+% % \begin{align*}
+% %  S = -\frac{1}{4\kappa_{10}^2} \int F_{(p+2)} \wedge * F_{(p+2)}
+% %  +\mu_{\textrm{D}p} \int C_{p+1} \wedge \delta(\bm x_{\perp})
+% %  dx^{p+1} \cdots dx^9 \ ,
+% % \end{align*}
+% % and the E.O.M is
+% % \begin{align*}
+% %  d*F_{(p+2)} = 2\kappa_{10}^2 \mu_{\textrm{D}p} \delta(\bm x_{\perp})
+% %  dx^{p+1} \cdots dx^9 \ .
+% % \end{align*}
+% % Integration over ball that perpendicular to the world-line of the D$p$-brane leads
+% % \begin{align*}
+% %  2\kappa_{10}^2 \mu_{\textrm{D}p} = 
+% % \end{align*}
+
+
+% Let us consider a $(p+1)$-form RR field.
+% The electrically coupled object is D$p$-brane and the magnetic one is D$(6-p)$-brane.
+% The magnetic charge of the D$(6-p)$-brane is
+% \begin{align*}
+%  \mu_{6-p} = \frac{1}{2\kappa_{10}^2} \int_{B^{p+3}} d F_{(p+2)} =
+%  \frac{1}{2\kappa_{10}^2} \int_{\partial B^{p+3}} F_{(p+2)} \ .
+% \end{align*}
+% Now consider D$p$-brane moving around D$(6-p)$-brane.
+% \begin{align*}
+%  S \sim \mu_{p} \int_M C_{(p+1)} = \mu_{p} \int_{\partial^{-1}M} F_{(p+2)} \ ,
+% \end{align*}
+% where $\partial^{-1}M$ is manifolds whose boundary is $M$.
+% The choice of $\partial^{-1}M$ is arbitrary, and does not affect the result.
+% Consider $\partial^{-1}M_N -\partial^{-1}M_S$ surround the D$(6-p)$-brane.
+% \begin{align*}
+%  \mu_{p} \int_{\partial^{-1}M_N} F_{(p+2)} -\mu_{p} \int_{\partial^{-1}M_S} F_{(p+2)}
+%  = \mu_{p} \mu_{6-p} 2\kappa_{10}^2 \in 2\pi \ZZ \ .
+% \end{align*}
+% The values $\mu_{p} = \frac{2\pi}{(2\pi l_s)^{p+1}}$,
+% $2\kappa_{10}^2 = \frac{(2\pi l_s)^{8}}{2\pi}$ satisfy the quantization condition.
+
+
+
+% Assume the condition works also for F$1$-string and NS$5$-brane,
+% \begin{align*}
+%  T_\mathrm{F1} \cdot T_\mathrm{NS5} \cdot 2\kappa_{10}^2 g_s^2 = 2\pi \ ,
+% \end{align*}
+% where we are in the string frame.
+% Since $T_\mathrm{F1} = \frac{2\pi}{(2\pi l_s)^2}$,
+% \begin{align*}
+%  T_\mathrm{NS5} = \frac{2\pi}{T_\mathrm{F1} \cdot 2\kappa_{10}^2 g_s^2}
+%  = \frac{2\pi}{(2\pi l_s)^6 g_s^2} \ .
+% \end{align*}
+
+
+
+
+\subsubsection*{Generalization of RR coupling and the DBI action}
+
+Let us again consider vibrating D$1$-brane with the RR-coupling.
+T-duality connects the following two expression.
+\begin{align*}
+ &S_{\textrm{D}1} =
+ \cdots +q_{\textrm{D}1} \cdot \int dx^0 dx^1 e^{-\Phi}
+ \left( C_{01} +C_{02} \frac{\partial X^2}{\partial \sigma^1}\right) \ , \\
+ &S_{\textrm{D}2} =
+ \cdots +q_{\textrm{D}2} \cdot \int dx^0 dx^1 dx^2 e^{-\wt \Phi}
+ \left( \wt C_{012} +\wt C_{0} \cdot s\pi\alpha' F_{12} \right) \ ,
+\end{align*}
+where $C_{01} \lra \wt C_{012}$, $C_{02} \lra \wt C_{0}$, and $X^2 \lra 2\pi\alpha' A_2$.
+This can be understood as follows (see Fig.~\ref{D0D2.eps}).
+\begin{figure}[htb]
+\centerline{\includegraphics[width=250pt]{D0D2.eps}}
+\caption{D$0$-D$2$ bound state.}
+\label{D0D2.eps}
+\end{figure}
+The vibrating D$1$-brane consists of straight D$1$-brane along $x^1$
+and local vibration along $x^2$.
+After T-duality along $x^2$ the vibration part becomes D$0$-brane and gives
+$F_{12}\neq 0$.
+Generalization of the RR-coupling is
+\begin{align*}
+ S_{\textrm{D}p} =
+ \cdots +q_{\textrm{D}p} \cdot \int C_\mathrm{RR} \wedge \exp(2\pi\alpha' F_{(2)}) \ ,
+\end{align*}
+where $C_{RR} = \sum_{n} C_{(n)}$.
+
+
+Finally, full general form of D$p$-brane action is given as follows.
+\begin{align*}
+ S_{\textrm{D}p} &= -T_{\textrm{D}p} \int d^{p+1}\sigma\, e^{-\Phi(X)} \sqrt{-\det \left( G_{ab}
+ +2\pi \alpha' F_{ab} -B_{ab} \right)} \nn
+ &\qquad +q_{\textrm{D}p} \cdot \int C_{RR} \wedge \exp(2\pi\alpha' F_{(2)}-B_{(2)}) \ ,
+\end{align*}
+where $G_{ab} = G_{\mu\nu} \partial_a X^\mu \partial_b X^\nu$ and
+$B_{ab} = B_{\mu\nu} \partial_a X^\mu \partial_b X^\nu$.
+The first line is called \textbf{DBI action}.
+Note that we used canonical normalization for RR-fields.
+B-field should appear with $F_{(2)}$ due to the gauge invariance.
+
+
+Let us consider a fundamental string action that is coupled to D$p$-branes.
+\begin{align*}
+ S &= -\frac{1}{4\pi \alpha'} \int d^2\sigma \sqrt{-h} h^{ab} \partial_a X^\mu \partial_b X^\nu G_{\mu\nu}
+ +\epsilon^{ab} \partial_a X^\mu \partial_b X^\nu B_{\mu\nu} +\cdots \nn
+ &\qquad +\int_{\partial\Sigma} d\sigma^0 \partial_0 X^\mu A_\mu  \nn
+ &= \cdots -\frac{1}{2\pi\alpha'} \int_{\Sigma} B_{(2)} +\int_{\partial\Sigma} A_{(1)} \ .
+\end{align*}
+Important point here is that the gauge transformation of B-field $\delta_B B_{(2)} = d \lambda_{(1)}$ in the action is NOT invariant
+if there are boundaries, which is exactly the situation we consider now:
+\begin{align*}
+ \delta_B \int_{\Sigma} B_{(2)} = \int_{\Sigma} d \lambda_{(1)} = \int_{\partial\Sigma} \lambda_{(1)} \neq 0 \ .
+\end{align*}
+This is compensated if $A_{(1)}$ transform as follows:
+\begin{align*}
+ \delta_B A_{(1)} = \frac{\lambda_{(1)}}{2\pi\alpha'} \ .
+\end{align*}
+
+
+
+Though we focused on the bosonic part so far, there is a fermionic part
+so that they form space-time supersymmetry.
+Here we only write down the leading fluctuation:
+\begin{align*}
+ -i\int d^{p+1}\sigma\, \tr \left( \ol\psi \Gamma^a D_a \psi \right) \ .
+\end{align*}
+For the full nonlinear supersymmetric form one should consult with, for example \cite{Tseytlin:1999dj}.
+
+
+\subsection{Branes, Strings ending on Branes}
+
+We will look into the RR coupling further from a different view point.
+Maxwell equation leads charge conservation law as follows.
+\begin{align*}
+ \begin{array}{l}
+  d *\!F_{(2)} = J_e \\
+  d F_{(2)} = J_m
+ \end{array} \qquad\Rightarrow\qquad
+ \begin{array}{l}
+  d J_e = 0 \\
+  d J_m = 0
+ \end{array} \ .
+\end{align*}
+Charge conservation assure that a world-line of the charged particle does not end (closed path or infinitely long).
+If we apply this logic to branes we may find the same result for branes.
+However, charge conservation for SUGRA is quite non-trivial due to the non-linearity of the E.O.Ms.
+We will see the case of generalized type IIA SUGRA.
+
+
+\subsubsection*{Massive IIA SUGRA}
+
+When we saw the IIA SUGRA action
+you may wonder why there is no RR-field corresponding to D$8$-brane,
+which is $9$-form and its field strength is $10$-form $G_{(10)}$.
+Since it is non-dynamical ($d *\! G_{(10)} = 0$ leads $*G_{(10)} = G_{(0)} \equiv m$) it has constant contributions
+to the action, called \textbf{massive IIA SUGRA}.
+$m$ is called \textbf{Romans mass} because it is a constant and partly contributes as a mass term in the action.
+
+
+Let us see the massive IIA SUGRA action (we omit wedge product $\wedge$ in this lecture):
+\begin{align*}
+ &S_\mathrm{A,NS} = \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G} e^{-2\Phi} \left[
+ R +4 \partial_\mu \Phi \partial^\mu \Phi -\frac{1}{2} H_{(3)}^{2} \right] \ ,  \\
+ &S_\mathrm{A,R} = \frac{1}{2\kappa_{10}^2} \int d^{10}x \sqrt{ -G} \left[
+ -\frac{1}{2} m^{2} -\frac{1}{2} G_{(2)}^{2} -\frac{1}{2} G_{(4)}^{2} \right] \ ,  \\
+ &S_\mathrm{A,CS} = \frac{1}{2\kappa_{10}^2} \int \left[
+ -\frac{1}{2} B_{(2)} G_{(4)} G_{(4)}
+ +\frac{1}{2} B_{(2)}^2 G_{(2)} G_{(4)}
+ -\frac{1}{6} B_{(2)}^3 G_{(2)}^2 \right. \nn
+ &\hspace{100pt} \left.
+ -\frac{m}{6} B_{(2)}^3 G_{(4)}
+ +\frac{m}{8} B_{(2)}^4 G_{(2)}
+ -\frac{m^2}{40} B_{(2)}^5
+ \right] \ ,
+\end{align*}
+where
+\begin{align}
+ \begin{array}{l}
+  H_{(3)} = dB_{(2)} \ , \\
+  G_{(2)} = dC_{(1)} + m B_{(2)} \ , \\
+  % &\wt G_{(4)} = G_{(4)} +C_{(1)} \wedge H_{(3)} \ , \\
+  % &G_{(4)} =dC_{(3)} +\frac{1}{2} m B_{(2)} \wedge B_{(2)} \ .
+  G_{(4)} =dC_{(3)} +dC_{(1)} B_{(2)} +\frac{1}{2} m B_{(2)}^2 \ .
+ \end{array} \label{eq:fsGf}
+\end{align}
+
+
+% \subsection{Branes that have boundaries}
+
+\subsubsection*{RR- field}
+
+From the massive IIA action we have following equation of motion for $C_{(1)}$ and $C_{(3)}$:
+E.O.M
+\begin{align*}
+ -d*\!G_{(2)} &= H_{(3)} *\!G_{(4)} \ , \\
+ d*\!G_{(4)} &= H_{(3)} G_{(4)} \ .
+\end{align*}
+Since we know the relation between the field strengths and their gauge fields (\ref{eq:fsGf})
+we have following Bianchi identities:
+\begin{align*}
+ d G_{(2)} &= m H_{(3)} \ , \\
+ d G_{(4)} &= H_{(3)} G_{(2)} \ .
+\end{align*}
+Now we relabel $m$ by $G_{(0)}$ and define the dual field strengths:
+\begin{align*}
+ G_{(10)} = * G_{(0)} \ , \qquad
+ G_{(8)} = -*\! G_{(2)} \ , \qquad
+ G_{(6)} = * G_{(4)} \ .
+\end{align*}
+Then, the E.O.M and Bianchi ids are re-written as
+\begin{align}
+ d G_{(2n)} = G_{(2n-2)} H_{(3)} \ .
+ \label{eq:eom1}
+\end{align}
+Let us define following formal sum of RR-fields
+\begin{align*}
+ G_\mathrm{even} = G_{(0)} +G_{(2)} +G_{(4)} +G_{(6)} +G_{(8)} +G_{(10)} \ .
+\end{align*}
+Using the formal sum we can express (\ref{eq:eom1}) by single expression
+\begin{align*}
+ d G_\mathrm{even} =  H_{(3)} G_\mathrm{even} \ .
+\end{align*}
+This equation can be solved as follows.
+\begin{align*}
+ &G_\mathrm{even} = e^{B_{(2)}} \left( m +dC_\mathrm{odd} \right) \ , \\
+ &C_\mathrm{odd} = C_{(1)} +C_{(3)} +C_{(5)} +C_{(7)} +C_{(9)} \ .
+\end{align*}
+
+
+
+\subsubsection*{B-field}
+
+Field strength of the B-field is defined by
+\begin{align*}
+ H_{(3)} = d  B_{(2)} \ ,
+\end{align*}
+hence, the Bianchi id is $d  H_{(3)} = 0$.
+E.O.M is given as follows.
+\begin{align*}
+ d \left(e^{-2\Phi}*\!  H_{(3)} \right) = m *\!G_{(2)} +*G_{(4)}G_{(2)} -\frac{1}{2} G_{(4)}^2 \ .
+\end{align*}
+If we define the dual field strength $H_{(7)} = e^{-2\Phi}*\!  H_{(3)}$,
+then, the E.O.M becomes
+\begin{align*}
+ dH_{(7)} = -\frac{1}{2} \left[ (\mathcal T G_\mathrm{even}) G_\mathrm{even} \right]_{(8)}
+\end{align*}
+where
+\begin{align*}
+ \mathcal T (dx^{i_1} \cdots dx^{i_n}) = (dx^{i_n} \cdots dx^{i_1}) \ ,
+\end{align*}
+which is a ``transpose'' of differential forms.
+
+
+Note that those field strengths are invariant under the gauge transformations of B-field as well as RR-fields:
+\begin{align*}
+ &\delta_B B_{(2)} = d \lambda_{(1)} \ , \qquad \delta_B C_\mathrm{odd} = -\lambda_{(1)} \left(m+dC_\mathrm{odd}\right) \ , \\
+ &\delta_C B_{(2)} = 0 \ , \qquad \delta_C C_\mathrm{odd} = d \lambda_\mathrm{even} \ ,
+\end{align*}
+where we introduced a formal sum of gauge parameters
+\begin{align*}
+ \lambda_\mathrm{even} = \lambda_{(0)} +\lambda_{(2)} +\lambda_{(4)} +\lambda_{(6)} +\lambda_{(8)} \ .
+\end{align*}
+
+\subsubsection*{Brane currents}
+
+Let us introduce brane currents $J_{(8)}^\mathrm{F1}$, $J_{(4)}^\mathrm{NS5}$, and
+\begin{align*}
+ J_\mathrm{odd} = J_{(1)}^\mathrm{D8} +J_{(3)}^\mathrm{D6} +J_{(5)}^\mathrm{D4} +J_{(7)}^\mathrm{D2} +J_{(9)}^\mathrm{D0} \ ,
+\end{align*}
+and add to the E.O.Ms:
+\begin{align*}
+ d H_{(3)} &= J_{(4)}^\mathrm{NS5} \ , \\
+ d H_{(7)} &= J_{(8)}^\mathrm{F1} -\frac{1}{2} \mathcal (T G_\mathrm{even}) G_\mathrm{even} \ , \\
+ d G_\mathrm{even} &= J_\mathrm{odd} +H_{(3)} G_\mathrm{even} \ .
+\end{align*}
+From these equations we can derive following ``charge conservation'' law:
+\begin{align*}
+ d J_{(4)}^\mathrm{NS5} &= 0 \ , \\
+ d J_{(8)}^\mathrm{F1} &= \left[ J_\mathrm{odd} (\mathcal T G_\mathrm{even}) \right]_{(9)} \ , \\
+ d J_\mathrm{odd} &= -J_{(4)}^\mathrm{NS5} G_\mathrm{even} -J_\mathrm{odd} H_{(3)} \ .
+\end{align*}
+From the laws we can deduce several facts (see Table~\ref{table:001}):
+\vspace{-4pt}
+\begin{itemize}
+ \setlength{\itemsep}{0pt}
+ \item NS$5$-brane cannot have boundaries,
+ \item F$1$ string can end on any D-branes,
+ \item D$p$-brane can end on NS$5$-brane up to $p=6$ (D$8$ cannot),
+ \item D$p$-brane can end on D$(p+2)$-brane.
+\end{itemize}
+\vspace{-4pt}
+\begin{table}[htbp]
+ \begin{center}
+  \caption{Branes on which brane ends and branes that end on.}
+  \vspace{4pt}
+  \label{table:001}
+\begin{tabular}{c|c}
+ Brane & Branes end on \\\hline
+ F1 & nothing \\
+ NS5-brane & D0, D2, D4, D6 \\
+ D0-brane & F1 \\
+ D2-brane & F1, D0 \\
+ D4-brane & F1, D2 \\
+ D6-brane & F1, D4 \\
+ D8-brane & F1, D6
+\end{tabular}
+\end{center}
+\end{table}
+
+The fact that D-brane is coupled to RR-field requires that
+the brane action should include $S = \int C_\mathrm{odd}$.
+However, it is invariant under the gauge transformations.
+The invariant form is
+\begin{align*}
+ S = \int \left( e^{2\pi\alpha' F_{(2)} -B_{(2)}} C_\mathrm{odd} +m\omega\right) \ ,
+\end{align*}
+where
+\begin{align*}
+ \omega = \sum_{n} \frac{1}{(n+1)!} A_{(1)} F_{(2)}^n \ .
+\end{align*}
+This is consistent with the previous analysis.
+
+
+\subsection{Bound states of D-branes}
+
+As we saw D$p$-brane action has following term
+\begin{align*}
+ S \sim \int e^{2\pi\alpha' F_{(2)}} C_\mathrm{RR} = \int \delta_{D-p-1} (\mathrm Dp) e^{2\pi\alpha' F_{(2)}} C_\mathrm{RR} \ ,
+\end{align*}
+where we set $m=0=B_{(2)}$.
+The fact that the action includes not only $C_{(p+1)}$ but also $C_{(p+1-2n)}$ means that
+D$p$-brane can have D$(p-2n)$-brane charges for $n \in \ZZ_{+}$.
+
+\subsubsection*{D0-D2 bound state}
+
+Let us consider a concrete example of D$2$-brane case.
+The action include following term
+\begin{align*}
+ S \sim \frac{1}{2\pi} \int_{\RR_t \stimes \Sigma} \left( C_{(3)} + F_{(2)} C_{(1)}\right) \ ,
+\end{align*}
+where $\Sigma$ is an image of world-sheet space (not time).
+Note that the flux is quantized;
+\begin{align*}
+ \int_{\Sigma} F_{(2)} = 2\pi n \qquad n \in \ZZ \ .
+\end{align*}
+
+
+Now consider a process the $\Sigma$ shrinks to zero.
+In this process $C_{(3)}$ part becomes zero as the volume becomes zero.
+On the other hand, $C_{(1)}$ part remains finite because the flux $F_{(2)}$ is quantized and gives
+\begin{align*}
+ S \sim \frac{1}{2\pi} \int_{\RR_t \stimes \Sigma} \left( F_{(2)} C_{(1)}\right) \to n \int_{\RR_t} C_{(1)} \ .
+\end{align*}
+This is nothing but $n$ D$0$-branes.
+Namely, when D$2$-brane with $n$ flux shrinks to a point, $n$ D$0$-branes remains.
+The former state can be understood that it is a bound state of D$2$- and D$0$-branes (see Fig.~\ref{D0D2Bound.eps}).
+\begin{figure}[htb]
+\centerline{\includegraphics[width=300pt]{D0D2Bound.eps}}
+\caption{Transition of D$0$-D$2$ bound state and D$0$ + D$2$.}
+\label{D0D2Bound.eps}
+\end{figure}
+
+
+\subsubsection*{Myers effect}
+
+Let us consider the opposite process of the previous argument.
+When there are $n$ D$0$-branes they can become D$2$-brane.
+This situation can be accelerated by inducing background $C_{(3)}$ flux.
+If there is $C_{(3)}$ flux, then, being D$2$-brane is a lower energy state than being D$0$-branes (see Fig.~\ref{Myers.eps}).
+\begin{figure}[htb]
+\centerline{\includegraphics[width=200pt]{Myers.eps}}
+\caption{Myers effect: transition from D$0$-branes to D$0$-D$2$ bound state.}
+\label{Myers.eps}
+\end{figure}
+This is something similar to polarization phenomenon in electro-magnetism,
+and in this case, it is called \textbf{Myers effect}.
+
+
+\subsubsection*{Other bound states}
+
+Left it for homework.
+
+
+
+\subsubsection*{Hanany-Witten effect}
+
+There is so called Hanany-Witten effect,
+which is a brane creation/annihilation process when some branes cross each other.
+Typical example is a cross of NS$5$ and D$5$ create/annihilate D$3$-brane (see Fig.).
+\begin{figure}[htb]
+\centerline{\includegraphics[width=250pt]{HW.eps}}
+\caption{Hanany-Witten effect: crossing of D$5$- and NS$5$-branes.}
+\label{HW.eps}
+\end{figure}
+Another example is that D$p$ and D$p'$ for $p+p'=8$ create/annihilate F$1$-string.
+Crossing of two M$5$-branes create/annihilate M$2$-brane etc (look it up in the web if you are interested in).
+
+
+
+% \subsubsection*{Supersymmetric theories from branes}
+
+
+
+
+
+
+% \begin{thebibliography}{CDLOGP91}
+
+%  \bibitem[Pol98]{Pol98}
+%                 J. Polchinski.
+%                 String theory. Vol. 1.
+%                 Cambridge University Press, 1998.
+
+%  \bibitem[BP09]{Blumenhagen:2009zz}
+%                R.~Blumenhagen and E.~Plauschinn.
+%                \newblock {Introduction to conformal field theory}.
+%                \newblock {\em Lect. Notes Phys.}, 779:1--256, 2009.
+
+% \end{thebibliography}
+
+
+% \bibliography{string-lecture}
+% \bibliographystyle{halpha}
+% \bibliographystyle{JHEP}
+
+\begin{thebibliography}{CDLOGP91}
+
+% %\cite{AlvarezGaume:1981hn}
+% \bibitem[AFM81]{AlvarezGaume:1981hn}
+%   L.~Alvarez-Gaume, D.~Z.~Freedman and S.~Mukhi,
+%   ``The Background Field Method and the Ultraviolet Structure of the Supersymmetric Nonlinear Sigma Model,''
+%   Annals Phys.\  {\bf 134}, 85 (1981).
+%   %doi:10.1016/0003-4916(81)90006-3
+%   %%CITATION = doi:10.1016/0003-4916(81)90006-3;%%
+%   %525 citations counted in INSPIRE as of 09 Oct 2017
+
+
+
+% \bibitem[CT88]{Callan:1988xx}
+%  Curt Callan and Lárus Thorlacius.
+%  \textit{SIGMA MODELS AND STRING THEORY.}
+%  TASI Lecture, 1988.
+%  (The link below is a direct link to the pdf file of 45MB )
+%  \href{http://www.damtp.cam.ac.uk/user/tong/string/sigma.pdf}
+%  {http://www.damtp.cam.ac.uk/user/tong/string/sigma.pdf}.
+
+
+ %\cite{Tseytlin:1999dj}
+\bibitem{Tseytlin:1999dj} 
+  A.~A.~Tseytlin,
+  ``Born-Infeld action, supersymmetry and string theory,''
+  In *Shifman, M.A. (ed.): The many faces of the superworld* 417-452
+  % doi:10.1142/9789812793850_0025
+  [hep-th/9908105].
+  %%CITATION = doi:10.1142/9789812793850_0025;%%
+  %392 citations counted in INSPIRE as of 14 Dec 2017
+
+
+
+\end{thebibliography}
+
+
+\label{lastpage}
+
+% \begin{tikzpicture}[>=stealth,scale=1]
+%  \draw[->] (0,0)--(1,0);
+%  \draw[latex-stealth] (0,0.5)--(1,0.5);
+%  \draw[latex-stealthnew,arrowhead=2mm] (0,1)--(1,1);
+% \end{tikzpicture}
+
+% \begin{figure}[htb]
+% \centerline{\includegraphics[width=250pt]{.eps}}
+% \caption{}
+% \label{.eps}
+% \end{figure}
+
+
+
+% \begin{table}[htbp]
+%  \begin{center}
+%   \caption{}
+%   \vspace{4pt}
+%   \label{table:001}
+% \begin{tabular}{|c|c|c|c|c|}
+% \hline
+% \hline
+%   Category & Sector & $(h_A,h_B,h_T)$ & Mirror theory & ABJM model \\
+% \hline
+%  1 & & \parbox{40pt}{$(0,0,0)$ $(1,1,1)$} & $1.11906$ & $1.13290$ \\
+% \hline
+%  2 & & \parbox{40pt}{$(0,0,1)$ $(1,1,0)$} & $-0.10861$ & $-0.10861$ \\
+% \hline
+%  \multirow{2}{*}{\vspace{-15pt}3} & 3-1 & \parbox{40pt}{$(0,1,0)$ $(1,0,1)$} & $0.176777$ &
+%  \multirow{2}{*}{\vspace{-15pt}$0.176577$} \\
+% \cline{2-4}
+%  & 3-2 & \parbox{40pt}{$(1,0,0)$ $(0,1,1)$} & $0.176777$ & \\
+% \hline
+% \hline
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+
+% \begin{thebibliography}{99}
+
+% % \cite{Imamura:2012rq}
+% \bibitem{Imamura:2012rq}
+%   Y.~Imamura and D.~Yokoyama,
+%   %``S^3/Z_n partition function and dualities,''
+%   JHEP {\bf 1211}, 122 (2012)
+%   [arXiv:1208.1404 [hep-th]].
+%   %%CITATION = ARXIV:1208.1404;%%
+
+ % \bibitem{fnorio:legendre}
+ %         fnorio
+ %         ``ルジャンドル変換とは何か''
+ %         \url{http://fnorio.com/0146Legendre_transformation/Legendre_transformation.html}
+
+
+ % \bibitem{EMAN:dynamics}
+ %         EMAN物理学
+ %         ``ハミルトニアン''
+ %         \url{http://eman-physics.net/analytic/hamilton.html}
+
+
+ % \bibitem{Wiki:legendre}
+ %         Wiki
+ %         ``ルジャンドル変換''
+ %         \url{https://ja.wikipedia.org/wiki/ルジャンドル変換}
+
+ % \bibitem{mathtrain:legendre}
+ %         高校数学の美しい物語
+ %         ``ルジャンドル変換の意味と具体例''
+ %         \url{http://mathtrain.jp/legendrehenkan}
+
+% \end{thebibliography}
+
+
+% \bibliography{dd}
+
+\end{document}
