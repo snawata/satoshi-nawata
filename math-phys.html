@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>How to Study Mathematical Physics?</title>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <style>
         <link rel="stylesheet" href="styles.css">
+  <style>
    body {
       max-width: 950px;
       margin: 2rem auto;
@@ -29,6 +29,102 @@
   .kw-geo    { color: #34d399; font-weight: 600; }   /* geometry */
   .kw-cat    { color: #fbbf24; font-weight: 600; }   /* category / TQFT */
   .kw-core   { color: #fb7185; font-weight: 600; }   /* core themes */
+  
+  
+/* Mobile menu (no JS) */
+details.mobile{
+  display: none;
+  position: relative;
+}
+
+details.mobile summary{
+  list-style: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+  user-select: none;
+  color: var(--fg);
+}
+
+details.mobile summary::-webkit-details-marker{ display: none; }
+
+details.mobile .mobile-panel{
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  width: min(80vw, 320px);
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 10px;
+}
+
+.mobile-panel a{
+  display: block;
+  padding: 10px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.mobile-panel a:hover{ background: var(--hover); }
+
+.mobile-panel .section{
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px solid var(--borderSoft);
+}
+
+.mobile-panel .label{
+  font-size: 12px;
+  color: rgba(255,255,255,.75);
+  margin: 6px 10px 4px;
+}
+
+/* =========================
+   Main layout
+   ========================= */
+main{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 16px var(--pad) 70px; /* more concise top spacing */
+}
+
+/* Page title like "Home", "Teaching" etc. */
+.hero-title{
+  text-align: center;
+  font-size: clamp(22px, 4vw, 36px);
+  font-weight: 500;
+  letter-spacing: .3px;
+  margin: 6px 0 14px; /* higher */
+}
+
+/* Centered content block */
+.content{
+  display: grid;
+  place-items: center;
+}
+
+.info{
+  width: min(720px, 100%);
+  color: var(--fg);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.info p{ margin: 0 0 10px; }
+.info .spacer{ height: 26px; }
+
+/* On large screens, keep the content narrower like your screenshot */
+@media (min-width: 900px){
+  .info{ width: 660px; }
+}
+
+
   </style>
 </head>
 <body>
