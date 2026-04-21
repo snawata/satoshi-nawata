@@ -1,0 +1,228 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{bm}
+
+\geometry{margin=1in}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{aligned}}
+\newcommand{\eea}{\end{aligned}}
+
+\theoremstyle{plain}
+\newtheorem{claim}{Claim}
+
+\title{\textbf{Coupled Harmonic Oscillators on a Ring}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{Problem 2.} (Coupled harmonic oscillators)
+Consider a linear system of $N$ particles coupled by springs, governed by the Hamiltonian
+\be
+  H = \frac{1}{2}\sum_{i=1}^N p_i^2 + \frac{\omega^2}{2}\sum_{i=1}^N (q_i - q_{i+1})^2,
+  \qquad q_{N+1} \coloneqq q_1.
+\ee
+The Poisson brackets for the canonical variables are
+\be
+  \{q_k, q_l\} = 0, \qquad \{p_k, p_l\} = 0, \qquad \{p_k, q_l\} = -\delta_{k,l}.
+\ee
+
+\bigskip
+
+%------------------------------------------------------------
+\noindent\textbf{Part 1.} \textit{Hamiltonian equations, matrix $A$, its eigenvalues and eigenvectors.}
+
+\medskip
+\noindent The Hamiltonian equations read
+\be
+  \dot{q}_k = \{q_k, H\} = \frac{\partial H}{\partial p_k} = p_k, \qquad
+  \dot{p}_k = \{p_k, H\} = -\frac{\partial H}{\partial q_k}
+            = -\omega^2\bigl(2q_i - q_{i-1} - q_{i+1}\bigr).
+\ee
+In vector form these become
+\be
+  \dot{\bm{q}} = \bm{p}, \qquad \dot{\bm{p}} = -\omega^2 A\,\bm{q},
+\ee
+where the matrix $A$ encodes the nearest-neighbour coupling with periodic boundary conditions:
+\be
+  A = \begin{pmatrix}
+        2  & -1 &  0 & \cdots & \cdots & -1 \\
+       -1  &  2 & -1 &  0    & \cdots &  0 \\
+        0  & -1 &  2 & -1    & \cdots &  0 \\
+       \vdots & \vdots & & \ddots & & \vdots \\
+       \vdots & \vdots & & & \ddots & \vdots \\
+       -1  &  0 & \cdots & \cdots & -1 &  2
+      \end{pmatrix}.
+\ee
+
+\noindent\textbf{Eigenvalues and eigenvectors.}
+The matrix $A$ commutes with the cyclic permutation (translation) operator
+\be
+  T = \begin{pmatrix}
+       0 & 1 & 0 & \cdots & 0 \\
+       0 & 0 & 1 & \cdots & 0 \\
+       \vdots & & \ddots & & \vdots \\
+       \vdots & & & \ddots & \vdots \\
+       1 & 0 & 0 & \cdots & 0
+      \end{pmatrix},
+\ee
+so $A$ and $T$ share a common eigenbasis. Since $T^N = \mathbf{1}$, the eigenvalues of $T$ satisfy $\lambda_k^N = 1$, giving
+\be
+  \lambda_k = e^{i2\pi k/N}, \qquad k = 0, 1, \ldots, N-1.
+\ee
+The corresponding eigenvectors of $T$ (and hence of $A$) are the discrete Fourier modes
+\be
+  \bm{x}_k = \bigl(1,\; e^{i2\pi k/N},\; \ldots,\; e^{i2\pi k(N-1)/N}\bigr)^{\!\top}.
+\ee
+Applying $A$ to $\bm{x}_k$, the $j$-th component gives
+\be\bea
+  (A\bm{x}_k)_j
+    &= e^{i2\pi kj/N}\bigl(2 - e^{i2\pi k/N} - e^{-i2\pi k/N}\bigr) \\
+    &= 2e^{i2\pi kj/N}(1 - \cos(2\pi k/N)) \\
+    &= 4\sin^2\!\Bigl(\frac{\pi k}{N}\Bigr)\,(\bm{x}_k)_j.
+\eea\ee
+Therefore the eigenvalues of $A$ are
+\be
+  \mu_k = 4\sin^2\!\Bigl(\frac{\pi k}{N}\Bigr), \qquad k = 0, 1, \ldots, N-1.
+\ee
+Note that $\mu_0 = 0$ (the zero mode corresponding to uniform translation) and $\mu_k = \mu_{N-k}$
+(doubly degenerate for $k \neq 0, N/2$).
+
+\bigskip
+
+%------------------------------------------------------------
+\noindent\textbf{Part 2.} \textit{Normal coordinates, Hamiltonian, and solution.}
+
+\medskip
+\noindent Set $N = 2M+1$ and define the discrete Fourier transforms
+\be
+  Q_k = \frac{1}{\sqrt{N}}\sum_{i=1}^N e^{\frac{2\pi i}{N}ki}\,q_i, \qquad
+  P_k = \frac{1}{\sqrt{N}}\sum_{i=1}^N e^{\frac{2\pi i}{N}ki}\,p_i,
+  \qquad k = -M, \ldots, M.
+\ee
+The inverse transformation is
+\be
+  q_j = \frac{1}{\sqrt{N}}\sum_{k=-M}^M e^{\frac{-2\pi i}{N}kj}\,Q_k, \qquad
+  p_j = \frac{1}{\sqrt{N}}\sum_{k=-M}^M e^{\frac{-2\pi i}{N}kj}\,P_k.
+\ee
+
+\noindent\textbf{Hamiltonian in normal coordinates.}
+Using the discrete orthogonality relation $\frac{1}{N}\sum_j e^{i2\pi(k+m)j/N} = \delta_{k,-m}$, we compute
+\be\bea
+  \sum_j p_j^2
+    &= \frac{1}{N}\sum_{k,m,j} P_k P_m\,e^{\frac{i2\pi(k+m)j}{N}}
+     = \sum_k P_{-k}P_k = \sum_k |P_k|^2, \\[6pt]
+  \sum_{j=1}^N(q_j - q_{j+1})^2
+    &= \frac{1}{N}\sum_{k,m,j}Q_k Q_m\,
+       e^{-i\pi(k+m)(2j+1)/N}\,
+       \bigl(2i\sin\tfrac{\pi k}{N}\bigr)
+       \bigl(2i\sin\tfrac{\pi m}{N}\bigr) \\
+    &= 4\sum_k |Q_k|^2 \sin^2\!\Bigl(\frac{\pi k}{N}\Bigr).
+\eea\ee
+Hence the Hamiltonian becomes a sum of decoupled oscillators:
+\be
+  \boxed{H = \frac{1}{2}\sum_{k=-M}^M |P_k|^2
+             + 2\omega^2\sum_{k=-M}^M |Q_k|^2\sin^2\!\Bigl(\frac{\pi k}{N}\Bigr).}
+\ee
+
+\noindent\textbf{Equations of motion and their solution.}
+The Hamiltonian equations in normal coordinates are
+\be
+  \dot{Q}_k = P_k, \qquad
+  \dot{P}_k = -4\omega^2\sin^2\!\Bigl(\frac{\pi k}{N}\Bigr)Q_k,
+\ee
+which combine into $\ddot{Q}_k = -\omega(k)^2 Q_k$ with dispersion relation
+\be
+  \omega(k) = 2\omega\sin\frac{\pi k}{N}.
+\ee
+The general solution is
+\be
+  Q_k(t) = Ae^{i\omega(k)t} + Be^{-i\omega(k)t}, \qquad
+  P_k(t) = i\omega(k)\bigl(Ae^{i\omega(k)t} - Be^{-i\omega(k)t}\bigr).
+\ee
+The zero mode ($k=0$) satisfies $\dot{P}_0 = 0$, so $Q_0(t) = Q_0(0) + P_0 t$ describes free
+centre-of-mass motion.
+
+\bigskip
+
+%------------------------------------------------------------
+\noindent\textbf{Part 3.} \textit{Creation/annihilation variables, conserved quantities, involutivity.}
+
+\medskip
+\noindent For $k = \pm 1, \ldots, \pm M$, define
+\be
+  a_k = \frac{1}{\sqrt{2}}\bigl(P_{-k} + i\omega(k)Q_{-k}\bigr), \qquad
+  \bar{a}_k = \frac{1}{\sqrt{2}}\bigl(P_k + i\omega(k)Q_k\bigr).
+\ee
+
+\noindent\textbf{Hamiltonian in terms of $a_k$, $\bar{a}_k$.}
+A direct computation gives
+\be\bea
+  a_{-k}a_k &= \tfrac{1}{2}\bigl(|P_k|^2 + \omega(k)^2|Q_k|^2
+                + i\omega(k)(P_kQ_{-k} - P_{-k}Q_k)\bigr), \\
+  \bar{a}_{-k}\bar{a}_k &= \tfrac{1}{2}\bigl(|P_k|^2 + \omega(k)^2|Q_k|^2
+                + i\omega(k)(P_{-k}Q_k - P_kQ_{-k})\bigr),
+\eea\ee
+so that $a_{-k}a_k + \bar{a}_{-k}\bar{a}_k = |P_k|^2 + \omega(k)^2|Q_k|^2$. 
+Since $2\omega^2\sin^2(\pi k/N) = \frac{1}{2}\omega(k)^2$, the Hamiltonian becomes
+\be
+  \boxed{H = \frac{1}{2}P_0^2 + \sum_{k=1}^M (a_{-k}a_k + \bar{a}_{-k}\bar{a}_k)
+           = I_0 + \sum_{k=1}^M (I_k + I_{-k}).}
+\ee
+
+\noindent\textbf{Poisson brackets.}
+From $\{P_k, Q_l\} = -\frac{1}{N}\sum_j e^{i2\pi j(k+l)/N} = -\delta_{k,-l}/N$
+we derive the fundamental brackets of the normal coordinates, and from those:
+\be\bea
+  \{a_k, a_l\} &= \frac{i\omega(k)}{N}\,\delta_{k,-l}, \\[4pt]
+  \{\bar{a}_k, \bar{a}_l\} &= \frac{i\omega(k)}{N}\,\delta_{k,-l}, \\[4pt]
+  \{a_k, \bar{a}_l\} &= 0.
+\eea\ee
+The last bracket vanishes because the cross terms cancel:
+\be
+  2\{a_k, \bar{a}_l\}
+  = i\omega(k)\{Q_{-k}, P_l\} + i\omega(l)\{P_{-k}, Q_l\}
+  = \frac{i\omega(k)}{N}\delta_{k,l} - \frac{i\omega(l)}{N}\delta_{k,l} = 0.
+\ee
+
+\noindent\textbf{Conservation laws.}
+We show $\dot{I}_0 = \dot{I}_k = \dot{I}_{-k} = 0$ by verifying that $I_0$, $I_k$, $I_{-k}$
+each Poisson-commute with $H$.
+
+\begin{claim}
+$\{I_k, I_l\} = 0$ for all $k \neq l$, where $I_k = a_{-k}a_k$ and $I_{-k} = \bar{a}_{-k}\bar{a}_k$.
+\end{claim}
+\begin{proof}
+Using the Leibniz rule and the bracket relations computed above:
+\be\bea
+  \{a_{-k}a_k,\; a_{-l}a_l\}
+    &= a_{-k}\{a_k, a_{-l}\}a_l + a_{-k}a_{-l}\{a_k, a_l\}
+     + \{a_{-k}, a_{-l}\}a_ka_l + a_{-l}\{a_{-k}, a_l\}a_k \\
+    &= \frac{i\omega(k)a_{-k}a_k}{N}(\delta_{k,-l} + \delta_{k,l} - \delta_{k,l} - \delta_{k,-l})
+     = 0, \\[4pt]
+  \{\bar{a}_{-k}\bar{a}_k,\; \bar{a}_{-l}\bar{a}_l\}
+    &= 0 \quad \text{(same argument)}, \\[4pt]
+  \{a_{-k}a_k,\; \bar{a}_{-l}\bar{a}_l\}
+    &= 0 \quad \text{(since $\{a_\bullet, \bar{a}_\bullet\} = 0$)}.
+\eea\ee
+\end{proof}
+
+\noindent Since $H = I_0 + \sum_{k=1}^M(I_k + I_{-k})$ and $I_0 = \frac{1}{2}P_0^2$ trivially commutes
+with all $I_k$, we conclude
+\be
+  \{I_0, H\} = 0, \qquad
+  \{I_k, H\} = \sum_{l=1}^M\{I_k, I_l + I_{-l}\} = 0, \qquad
+  \{I_{-k}, H\} = 0,
+\ee
+hence $\dot{I}_0 = \dot{I}_k = \dot{I}_{-k} = 0$ for all $k = 1, \ldots, M$.
+
+\medskip
+\noindent The system therefore possesses $2M + 1 = N$ independent conserved quantities
+$\{I_0, I_1, \ldots, I_M, I_{-1}, \ldots, I_{-M}\}$ which are pairwise in involution,
+confirming complete integrability of the coupled oscillator chain.
+
+\end{document}
