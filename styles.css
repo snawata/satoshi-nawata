@@ -280,6 +280,12 @@ main{
   place-items: center;
 }
 
+.lecture-content{
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
  .space-list li{ margin: 4px 0; }
  
  .page-date {
