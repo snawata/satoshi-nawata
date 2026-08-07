@@ -6,7 +6,7 @@
 /* ---- Design tokens ---- */
 :root{
   --max: 1200px;
-  --pad: 24px;
+  --pad: 16px;
 
   --bg: #000;
   --fg: #fff;
@@ -300,4 +300,3 @@ main{
   .topbar{ padding: 14px var(--pad); }
   main{ padding-top: 12px; }
 }
-
