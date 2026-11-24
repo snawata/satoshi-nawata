@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Introduction to Differential Geometry for Physics, Spring 2027 — Satoshi Nawata</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="topbar">
+      <div class="brand">Satoshi Nawata</div>
+
+      <nav class="desktop" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <a href="teaching.html" class="dropdown-toggle">
+            Lectures <span class="chev" aria-hidden="true"></span>
+          </a>
+          <div class="dropdown-menu" role="menu" aria-label="Teaching submenu">
+            <a role="menuitem" aria-current="page" href="Spring2027_1.html">Diff. Geometry (S27)</a>
+            <a role="menuitem" href="Spring2027_2.html">Math Methods (S27)</a>
+            <a role="menuitem" href="Spring2026.html">Geom &amp; Topology (S26)</a>
+            <a role="menuitem" href="Fall2025.html">Stat Mech II (F25)</a>
+            <a role="menuitem" href="Spring2025.html">CFT (S25)</a>
+            <a role="menuitem" href="Fall2024.html">Gravity (F24)</a>
+            <a role="menuitem" href="Spring2024.html">String Theory (S24)</a>
+            <a role="menuitem" href="Spring2023.html">Geom &amp; Topology (S23)</a>
+            <a role="menuitem" href="Fall2022.html">QFT I (F22)</a>
+            <a role="menuitem" href="Fall2021.html">2d CFT (F21)</a>
+            <a role="menuitem" href="Spring2021_String.html">String Theory (S21)</a>
+            <a role="menuitem" href="Spring2021_DG.html">Geom &amp; Topology (S21)</a>
+            <a role="menuitem" href="Spring2020.html">QFT II (S20)</a>
+            <a role="menuitem" href="Fall2019.html">QFT I (F19)</a>
+            <a role="menuitem" href="Spring2019.html">Geom &amp; Topology (S19)</a>
+            <a role="menuitem" href="Fall2018.html">2d CFT (F18)</a>
+            <a role="menuitem" href="Fall2017.html">String Theory (F17)</a>
+            <a role="menuitem" href="Spring2017.html">Geom &amp; Topology (S17)</a>
+          </div>
+        </div>
+        <a href="talks.html">Talks</a>
+        <a href="students.html">Students</a>
+        <a href="others.html">Others</a>
+      </nav>
+
+      <details class="mobile">
+        <summary aria-label="Open menu">Menu</summary>
+        <div class="mobile-panel" role="menu" aria-label="Mobile menu">
+          <a role="menuitem" href="index.html">Home</a>
+          <a role="menuitem" href="teaching.html">Teaching</a>
+          <a role="menuitem" href="talks.html">Talks</a>
+          <a role="menuitem" href="students.html">Students</a>
+          <a role="menuitem" href="others.html">Others</a>
+        </div>
+      </details>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="course-title">Introduction to Differential Geometry for Physics, Spring 2027</h1>
+    <p><em>Fun and Joy when Physics Meets Differential Geometry and Topology</em></p>
+    <p><span lang="zh-Hans">物理中的微分几何</span> · PHYS70019.01 · 3 credits · 54 contact hours</p>
+    <p>Satoshi Nawata · Department of Physics, Fudan University · Taught in English</p>
+
+    <section class="course-grid" aria-labelledby="syllabus">
+      <h2 id="syllabus">Syllabus</h2>
+      <p class="intro">
+        This course develops geometry and topology from first principles through concrete problems in physics.
+        Beginning with the Euler characteristic and Kitaev’s toric code, we use homology to explain topological
+        ground-state degeneracy and quantum error correction. We then work from special relativity and
+        electromagnetism toward differential forms, connections, curvature, and Yang–Mills theory.
+      </p>
+
+      <h3>Assessment</h3>
+      <p>
+        Seven short in-class quizzes take the place of homework. They are held in the
+        last 10–15 minutes of class in even-numbered weeks. The open-book final exam
+        counts for 50% of the course grade.
+      </p>
+
+      <h3>Course materials</h3>
+      <p>The course uses lecture notes prepared by the instructor in place of a textbook.</p>
+
+      <h2>Weekly schedule</h2>
+      <h3>Part I · Topology and Quantum Matter</h3>
+      <ul class="lecture-list space-list">
+        <li class="lecture-item">
+          <span class="lec">Week 1</span> Euler characteristic and surfaces
+          <br>Euler's formula V − E + F, triangulations, orientability, genus, χ = 2 − 2g.
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 2</span> Toric code I (Quiz 1)
+          <br>Qubits, Pauli operators, stabilizers, the toric code Hamiltonian and its ground states.
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 3</span> Toric code II
+          <br>Ground-state degeneracy on a torus and on a genus-g surface, logical operators, anyonic excitations (e, m).
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 4</span> Homology theory (Quiz 2)
+          <br>Chain complexes, cycles and boundaries, ℤ₂ homology, Betti numbers, χ = Σ(−1)ᵏ bₖ.
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 5</span> Homology meets the toric code
+          <br>Ground-state degeneracy = |H₁(Σ; ℤ₂)|, a first look at cohomology, quantum error correction.
+        </li>
+      </ul>
+      <h3>Part II · Differential Geometry and Gauge Theory</h3>
+      <ul class="lecture-list space-list">
+        <li class="lecture-item">
+          <span class="lec">Week 6</span> Special relativity (Quiz 3)
+          <br>Lorentz transformations, Minkowski spacetime, tensors and index notation, the field-strength tensor F<sub>μν</sub>.
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 7</span> Differential forms
+          <br>Wedge product, exterior derivative, closed and exact forms, de Rham cohomology.
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 8</span> Maxwell theory in forms (Quiz 4)
+          <br>Stokes' theorem, Hodge star, dF = 0 and d⋆F = J, charge conservation.
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 9</span> Hyperbolic geometry
+          <br>Riemannian metrics, Poincaré disk and upper half-plane, geodesics and isometries, the hyperboloid model inside Minkowski space (rapidity space), Gauss–Bonnet and surfaces of genus g ≥ 2.
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 10</span> Lie groups and Lie algebras (Quiz 5)
+          <br>SO(3), SU(2), the Lorentz group SO(1,3) and SL(2,ℂ), PSL(2,ℝ) as hyperbolic isometries, generators, the exponential map, structure constants, representations.
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 11</span> Gauge symmetry
+          <br>U(1) gauge transformations, potential as a connection, Aharonov–Bohm effect, Dirac monopole and the first Chern number.
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 12</span> Connections and curvature (Quiz 6)
+          <br>Fiber bundles, covariant derivative, curvature as field strength.
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 13</span> Yang–Mills theory I
+          <br>Non-abelian field strength, Bianchi identity, Yang–Mills equations and action.
+        </li>
+        <li class="lecture-item">
+          <span class="lec">Week 14</span> Yang–Mills theory II (Quiz 7)
+          <br>Yang–Mills in the Standard Model, instantons and topological charge, where geometry and topology meet.
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
